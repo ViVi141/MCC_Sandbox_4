@@ -1,6 +1,4 @@
-以下是完全符合Markdown格式规范的重制版README.md：
 
-```markdown
 # MCC Sandbox 4 社区维护版 | MCC Sandbox 4 Community Edition
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
