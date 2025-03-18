@@ -1,67 +1,67 @@
 class general
 {
-	#ifdef MCCMODE
-	file = "\mcc_sandbox_mod\mcc\fnc\general";
-	class pre_init
-	{
-		preInit = 1;
-		description = "仅限模组的预初始化";
-	};
-	#else
-	file = "mcc\fnc\general";
-	#endif
+    #ifdef MCCMODE
+    file = "\mcc_sandbox_mod\mcc\fnc\general";
+    class pre_init
+    {
+        preInit = 1;
+        description = "STR_MCC_GENERAL_PRE_INIT";
+    };
+    #else
+    file = "mcc\fnc\general";
+    #endif
 
-	class login {};
-	class activateAddons {preInit = 1; description = "预初始化插件";};
-	class gear	{preInit = 1; description = "根据角色分配装备";};
+    class login {};
+    class activateAddons {preInit = 1; description = "STR_MCC_GENERAL_ACTIVATEADDONS";};
+    class gear {preInit = 1; description = "STR_MCC_GENERAL_GEAR";};
 
-	class mobileRespawn	{description = "当单位存活时，将重生标记移动到单位的当前位置；如果单位死亡，则将标记移动到之前的位置。";};
-	class buildingPosCount	{description = "返回建筑物中索引位置的数量。";};
-	class makeUnitsArray	{description = "返回一个单位数组，包含从给定函数和模拟中获取的所有单位，格式为[_cfgclass,_vehicleDisplayName]。";};
-	class countGroup	{description = "计算组中的步兵、车辆、坦克、飞机、船只的数量。";};
-	class PiPOpen	{description = "执行传输画面的动画。";};
-	class time2String	{description = "将时间转换为字符串。";};
-	class time	{description = "将时间转换为hh:mm:ss格式。";};
-	class setVehicleInit	{description = "设置车辆初始化。";};
-	class setVehicleName	{description = "设置车辆名称。";};
-	class setTime	{description = "在所有客户端上设置时间。";};
-	class setWeather	{description = "在所有客户端上设置天气 - 跳过一小时以使天气变化。";};
-	class globalSay3D	{description = "在所有客户端上播放3D声音。";};
-	class globalHint	{description = "在所有客户端上广播消息。";};
-	class globalExecute	{description = "在选定的客户端或服务器上全局执行命令。";};
-	class groupChat	{description = "在多人游戏中发送聊天消息。";};
-	class moveToPos		{description = "将对象移动到新位置。";};
-	class pickItem	{description = "使车辆类物品可拾取并为其添加变量。";};
-	class broadcast	{description = "创建一个虚拟摄像机，并向所有客户端广播15秒的画中画视频。";};
-	class paradrop	{description = "为给定单位创建HALO或常规跳伞。";};
-	class realParadrop	{description = "为给定单位创建HALO或常规跳伞，并模拟从飞机中跳出的过程。";};
-	class realParadropPlayer	{description = "从单位侧处理跳伞。";};
-	class countGroupHC	{description = "计算组中的步兵、车辆、坦克、飞机、船只的数量（扩展版）。";};
-	class manageWp	{description = "在地图上创建和控制AI路径点。";};
-	class sync	{description = "将玩家与服务器同步。";};
-	class objectMapper	{description = "获取动态对象模板的数据数组并创建对象。";};
-	class findRoadsLeadingZone	{description = "找到通向某个区域的道路段。";};
-	class nearestRoad	{description = "返回靠近位置的路径段数组";};
-	class garrison	{description = "在空房子内布置士兵";};
-	class saveToSQM	{description = "以SQM文件格式保存MCC的放置，并将其复制到剪贴板";};
-	class saveToMCC	{description = "准备mcc_output变量";};
-	class loadFromMCC	{description = "加载mcc_output变量";};
-	class saveToComp	{description = "以组合格式保存MCC的3D编辑器放置";};
-	class replaceString	{description = "过滤字符串并删除某些字符（_filter）";};
-	class dirToString	{description = "获取方向整数并将其返回为字符串（北、东等）";};
-	class startLocations	{description = "当找到起始位置时，传送玩家";};
-	class spawnGroup	{description = "MCC自定义组生成";};
-	class keyToName		{description = "获取idkKey并返回其名称的字符串";};
-	class makeBriefing	{description = "仅限服务器 - 创建基于逻辑的任务简报";};
-	class handleAddaction	{description = "处理重生后的添加动作 - 初始化";};
-	class ppEffects	{description = "为所有玩家创建效果";};
-	class SetPitchBankYaw	{};
-	class openArtillery {};
-	class deleteBrush{};
-	class crewCount {description = "返回特定车辆的空座位数，包括或不包括FFV（车载射击）";};
-	class addVelocity {description = "根据对象的当前速度为其添加速度";};
-	class makeTask {description = "在服务器上使用BI的setTask函数处理任务";};
-	class halt {description = "暂停游戏中的所有功能";};
+    class mobileRespawn {description = "STR_MCC_GENERAL_MOBILERESPAWN";};
+    class buildingPosCount {description = "STR_MCC_GENERAL_BUILDINGPOSCOUNT";};
+    class makeUnitsArray {description = "STR_MCC_GENERAL_MAKEUNITSARRAY";};
+    class countGroup {description = "STR_MCC_GENERAL_COUNTGROUP";};
+    class PiPOpen {description = "STR_MCC_GENERAL_PIPOPEN";};
+    class time2String {description = "STR_MCC_GENERAL_TIME2STRING";};
+    class time {description = "STR_MCC_GENERAL_TIME";};
+    class setVehicleInit {description = "STR_MCC_GENERAL_SETVEHICLEINIT";};
+    class setVehicleName {description = "STR_MCC_GENERAL_SETVEHICLENAME";};
+    class setTime {description = "STR_MCC_GENERAL_SETTIME";};
+    class setWeather {description = "STR_MCC_GENERAL_SETWEATHER";};
+    class globalSay3D {description = "STR_MCC_GENERAL_GLOBALSAY3D";};
+    class globalHint {description = "STR_MCC_GENERAL_GLOBALHINT";};
+    class globalExecute {description = "STR_MCC_GENERAL_GLOBALEXECUTE";};
+    class groupChat {description = "STR_MCC_GENERAL_GROUPCHAT";};
+    class moveToPos {description = "STR_MCC_GENERAL_MOVETOPOS";};
+    class pickItem {description = "STR_MCC_GENERAL_PICKITEM";};
+    class broadcast {description = "STR_MCC_GENERAL_BROADCAST";};
+    class paradrop {description = "STR_MCC_GENERAL_PARADROP";};
+    class realParadrop {description = "STR_MCC_GENERAL_REALPARADROP";};
+    class realParadropPlayer {description = "STR_MCC_GENERAL_REALPARADROPPLAYER";};
+    class countGroupHC {description = "STR_MCC_GENERAL_COUNTGROUPHC";};
+    class manageWp {description = "STR_MCC_GENERAL_MANAGEWP";};
+    class sync {description = "STR_MCC_GENERAL_SYNC";};
+    class objectMapper {description = "STR_MCC_GENERAL_OBJECTMAPPER";};
+    class findRoadsLeadingZone {description = "STR_MCC_GENERAL_FINDROADSLEADINGZONE";};
+    class nearestRoad {description = "STR_MCC_GENERAL_NEARESTROAD";};
+    class garrison {description = "STR_MCC_GENERAL_GARRISON";};
+    class saveToSQM {description = "STR_MCC_GENERAL_SAVETOSQM";};
+    class saveToMCC {description = "STR_MCC_GENERAL_SAVETOMCC";};
+    class loadFromMCC {description = "STR_MCC_GENERAL_LOADFROMMCC";};
+    class saveToComp {description = "STR_MCC_GENERAL_SAVETOCOMP";};
+    class replaceString {description = "STR_MCC_GENERAL_REPLACESTRING";};
+    class dirToString {description = "STR_MCC_GENERAL_DIRTOSTRING";};
+    class startLocations {description = "STR_MCC_GENERAL_STARTLOCATIONS";};
+    class spawnGroup {description = "STR_MCC_GENERAL_SPAWNGROUP";};
+    class keyToName {description = "STR_MCC_GENERAL_KEYTONAME";};
+    class makeBriefing {description = "STR_MCC_GENERAL_MAKEBRIEFING";};
+    class handleAddaction {description = "STR_MCC_GENERAL_HANDLEADDACTION";};
+    class ppEffects {description = "STR_MCC_GENERAL_PPEFFECTS";};
+    class SetPitchBankYaw {description = "STR_MCC_general_SetPitchBankYaw"};
+    class openArtillery {description = "STR_MCC_GENERAL_PPEFFECTS"};
+    class deleteBrush {description = "STR_MCC_GENERAL_PPEFFECTS"};
+    class crewCount {description = "STR_MCC_GENERAL_CREWCOUNT";};
+    class addVelocity {description = "STR_MCC_GENERAL_ADDVELOCITY";};
+    class makeTask {description = "STR_MCC_GENERAL_MAKETASK";};
+    class halt {description = "STR_MCC_GENERAL_HALT";};
 };
 
 class ied
@@ -72,19 +72,19 @@ class ied
 	file = "mcc\fnc\ied";
 	#endif
 
-	class IedFakeExplosion	{description = "创建一个假IED。";};
-	class IedDeadlyExplosion	{description = "创建一个致命的IED。";};
-	class IedDisablingExplosion	{description = "创建一个致残的IED。";};
-	class ACSingle	{description = "在给定位置创建一个武装平民。";};
-	class trapSingle	{description = "在给定位置创建IED。";};
-	class iedHit		{description = "确定当IED被击中时会发生什么。";};
-	class ambushSingle	{description = "创建一个伏击小组。";};
-	class createIED		{description = "创建IED机制。";};
-	class manageAmbush	{description = "管理小组中的伏击行为。";};
-	class manageAC		{description = "管理武装平民的行为。";};
-	class SBSingle		{description = "放置自杀式炸弹袭击者。";};
-	class manageSB		{description = "管理自杀式炸弹袭击者的行为。";};
-	class mineSingle	{description = "创建一个雷区。";};
+	class IedFakeExplosion	{description = "Create a fake explosion.";};
+	class IedDeadlyExplosion	{description = "Create a deadly explosion.";};
+	class IedDisablingExplosion	{description = "Create a disabling explosion.";};
+	class ACSingle	{description = "Create an armed civilian at the given position.";};
+	class trapSingle	{description = "Create an IED at the given position.";};
+	class iedHit		{description = "Determine what will happened when an IED got hit.";};
+	class ambushSingle	{description = "Create an ambush group.";};
+	class createIED		{description = "Create the IED mechanic.";};
+	class manageAmbush	{description = "Manage ambush behavior in a group.";};
+	class manageAC		{description = "Manage armed civilian behavior.";};
+	class SBSingle		{description = "Place suicide bomber.";};
+	class manageSB		{description = "Manage SB bomber behavior.";};
+	class mineSingle	{description = "Create a mine field.";};
 	class iedSync {};
 };
 
@@ -96,12 +96,12 @@ class cas
 	file = "mcc\fnc\cas";
 	#endif
 
-	class CreateAmmoDrop	{description = "从飞机上投下一个物体并为其附加降落伞，感谢BIS。";};
-	class createPlane		{description = "从给定类型创建一个飞行中的飞机，并返回飞机、飞行员和小组。";};
-	class deletePlane		{description = "设置飞机移动到某个位置，并在其接近800米时删除它。";};
-	class airDrop		{description = "在服务器上处理CAS和空投请求";};
+	class CreateAmmoDrop	{description = "drop an object from a plane and attach paracute to it, thanks to BIS.";};
+	class createPlane		{description = "create a flying plane from the given type and return the plane , pilot and group.";};
+	class deletePlane		{description = "set a plane to move to a location and delete it once it come closer then 800 meters.";};
+	class airDrop		{description = "Handles CAS and airdrop requests on the server";};
 	class uavDetect {};
-	class cas {description = "使用改装车辆模拟宙斯CAS";};
+	class cas {description = "Simulate Zeus CAS with moded vehicles";};
 };
 
 class artillery
@@ -112,15 +112,15 @@ class artillery
 	file = "mcc\fnc\artillery";
 	#endif
 
-	class CBU	{description = "投下一枚炸弹，爆炸后分裂成多个带降落伞的小炸弹，再次爆炸形成某种CBU。";};
-	class SADARM	{description = "投下一枚炸弹，爆炸后分裂成多个小炸弹，搜索并摧毁附近的装甲。";};
-	class artyBomb	{description = "在给定位置创建带有声音的炮击。";};
-	class artyFlare	{description = "创建一个照明弹。";};
-	class artyDPICM	{description = "创建DPICM炮击弹幕。";};
-	class amb_Art	{description = "创建环境炮击弹幕。";};
-	class calcSolution	{description = "计算炮击解决方案（高或低）";};
-	class artyGetSolution	{description = "广播炮击解决方案（高或低）";};
-	class consoleFireArtillery	{description = "向炮兵单位广播炮击";};
+	class CBU	{description = "drop a bomb that explode to some skeets with paracute the explode to some kind of CBU.";};
+	class SADARM	{description = "drop a bomb that explode to some skeets that will search and destroy near by armor.";};
+	class artyBomb	{description = "Create artillery strike with sounds on given spot.";};
+	class artyFlare	{description = "Create a flare.";};
+	class artyDPICM	{description = "Create DPICM artillery barage.";};
+	class amb_Art	{description = "Create ambient artillery barage.";};
+	class calcSolution	{description = "calculate artillery solution high or low";};
+	class artyGetSolution	{description = "Broadcast artillery solution high or low";};
+	class consoleFireArtillery	{description = "Broadcast artillery to artillery units";};
 	class artillery {};
 };
 
@@ -132,9 +132,9 @@ class groupGen
 	file = "mcc\fnc\groupGen";
 	#endif
 
-	class groupGenRefresh	{description = "刷新组生成标记";};
-	class groupSpawn		{description = "在服务器上创建一个小组";};
-	class groupGenUMRefresh	{description = "刷新组生成单位列表";};
+	class groupGenRefresh	{description = "Refresh the group gen markers";};
+	class groupSpawn		{description = "Create a group on the server";};
+	class groupGenUMRefresh	{description = "Refresh the group gen units lists";};
 };
 
 class console
@@ -145,7 +145,7 @@ class console
 	file = "mcc\fnc\console";
 	#endif
 
-	class consoleClickGroupIcon	{description = "定义MCC控制台中点击图标时的行为";};
+	class consoleClickGroupIcon	{description = "Define icon behaviot when clicked on the MCC Console";};
 };
 
 class mp
@@ -156,21 +156,21 @@ class mp
 	file = "mcc\fnc\mp";
 	#endif
 
-	class vote	{description = "启动投票过程。";};
-	class getActiveSides	{description = "返回角色选择游戏中活跃阵营的数组。";};
-	class PDAcreatemarker	{description = "在多人游戏中按阵营创建标记，并在一段时间后删除它们";};
-	class construction		{description = "在服务器端建造战术建筑";};
-	class construct_base	{description = "在基地中建造建筑";};
-	class addRating			{description = "为特定玩家添加评分";};
-	class radioSupport		{description = "向所有元素广播无线电支持，不包括广播者小组";};
+	class vote	{description = "Start a voting process.";};
+	class getActiveSides	{description = "Return an array of the active sides in a role selection game.";};
+	class PDAcreatemarker	{description = "Creates markers on mp per side and delete them after a period of time";};
+	class construction		{description = "Constract a tactical building on the server side";};
+	class construct_base	{description = "Constract a building in base";};
+	class addRating			{description = "Adds rating to a specific player";};
+	class radioSupport		{description = "Broadcast radio support to all elements not including the broadcaster group";};
 	class inidbGet	{};
 	class inidbSet 	{};
 	class handleDB {};
-	class saveServer {description = "将服务器的持久数据保存到服务器";};
-	class loadServer {description = "从服务器加载服务器的持久数据";};
-	class savePlayer {description = "将玩家的持久数据保存到服务器";};
-	class loadPlayer {description = "从服务器加载玩家的持久数据";};
-	class clearPersistentData {description = "清除所有保存文件中的数据";};
+	class saveServer {description = "Save persistent data about the server to the server";};
+	class loadServer {description = "Load persistent data about the server from the server";};
+	class savePlayer {description = "Save persistent data about the player to the server";};
+	class loadPlayer {description = "Load persistent data about the player from the server";};
+	class clearPersistentData {description = "Clear all data from saved files";};
 };
 
 class actions
@@ -181,26 +181,26 @@ class actions
 	file = "mcc\fnc\actions";
 	#endif
 
-	class ilsChilds		{description = "处理ILS子项";};
-	class dragObject	{description = "开始拖动动画，必须在拖动单位本地运行";};
-	class releaseObject	{description = "停止拖动动画，必须在拖动单位本地运行";};
-	class releasePod	{description = "从Taru直升机上释放吊舱";};
-	class attachPod		{description = "将吊舱附加到Taru直升机上";};
-	class vault			{description = "翻越障碍物";};
-	class cover			{description = "管理掩护机制";};
-	class coverInit		{preInit = 1; description = "初始化掩护系统";};
-	class weaponSelect	{description = "切换武器并投掷道具";};
-	class utilityUse	{description = "使用道具";};
-	class grenadeThrow	{description = "投掷手榴弹";};
-	class pickKit		{description = "拾取死亡单位的装备";};
-	class canAttachPod	{description = "检查是否可以附加吊舱";};
-	class addILSChildrenACE {description = "将ILS动作添加到ACE UI";};
-	class spotEnemy {description = "从ACE菜单中发现敌人";};
-	class callSupport {description = "从ACE菜单中呼叫支援";};
-	class callConstruct {description = "从ACE菜单中呼叫建造";};
-	class resupply {description = "从弹药箱中补充弹药";};
-	class breakdown {description = "将MCC箱子分解为补给";};
-	class ACEdropAmmobox {description = "在ACE中投放MCC弹药箱";};
+	class ilsChilds		{description = "Handles ILS childs";};
+	class dragObject	{description = "Start a dragging animation must be run local on the dragging unit";};
+	class releaseObject	{description = "stop a dragging animation must be run local on the dragging unit";};
+	class releasePod	{description = "Release a pod from Taru helicopter";};
+	class attachPod		{description = "Attach a pod to Taru helicopter";};
+	class vault			{description = "Vault over an obstacle";};
+	class cover			{description = "Manage cover mechanics";};
+	class coverInit		{preInit = 1; description = "Init Cover System";};
+	class weaponSelect	{description = "Change weapons and throw utility";};
+	class utilityUse	{description = "use utility";};
+	class grenadeThrow	{description = "Throw grenades";};
+	class pickKit		{description = "pick up dead unit kit";};
+	class canAttachPod	{description = "check if can attach pod";};
+	class addILSChildrenACE {description = "Add ILS actions to ACE ui";};
+	class spotEnemy {description = "spot an enmey from ACE menu";};
+	class callSupport {description = "Call support from ACE menu";};
+	class callConstruct {description = "Call construct from ACE menu";};
+	class resupply {description = "Resupply ammo from an ammo box";};
+	class breakdown {description = "Breakdown MCC crate into supplies";};
+	class ACEdropAmmobox {description = "Drop MCC ammbox in ACE";};
 };
 
 class evac
@@ -211,12 +211,12 @@ class evac
 	file = "mcc\fnc\evac";
 	#endif
 
-	class evacDelete {description = "删除给定的车辆或其驾驶员";};
-	class evacMove {description = "将车辆移动到选定的路点";};
-	class evacSpawn {description = "生成一辆载有机组人员和炮手的车辆，并将其标记为撤离车辆";};
-	class repairEvac {description = "修理撤离直升机";};
-	class setEvac {description = "将一辆无人驾驶汽车设置为特定侧的撤离车辆";};
-	class fastRopeLocal {description = "在客户端上处理快速绳降";};
+	class evacDelete {description = "Delete the given vehicle or it's driver";};
+	class evacMove {description = "Move a vehicle to selected WP";};
+	class evacSpawn {description = "Spawn a vehicle with crew and gunners, mark it as an evac vehicle";};
+	class repairEvac {description = "Repair evac helicopter";};
+	class setEvac {description = "Sets an empty ot AI vehicle into an ecav for a specific side";};
+	class fastRopeLocal {description = "handles fast rope on clients";};
 };
 
 class dynamicDialog
@@ -227,5 +227,5 @@ class dynamicDialog
 	file = "mcc\fnc\dynamicDialog";
 	#endif
 
-	class initDynamicDialog {description = "初始化动态对话框";};
+	class initDynamicDialog {description = "init the dynamic dialog";};
 };

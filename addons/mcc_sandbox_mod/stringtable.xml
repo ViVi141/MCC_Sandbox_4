@@ -526,47 +526,302 @@
             </Key>
         </Container>
     </Package>
-    <Package name="general">
-        <Container name="common">
-            <Key ID="STR_GENERAL_ENABLE">
-                <Original>Enable</Original>
-                <Chinesesimp>启用</Chinesesimp>
-                <Chinese>啟用</Chinese>
+    <Package name="cfgFunctions">
+        <Container name="general">
+                       <Key ID="STR_MCC_PREINIT">
+                <Original>Pre init mod only</Original>
+                <English>Pre init mod only</English>
+                <Chinese>仅预初始化模组</Chinese>
+                <Chinese_Traditional>僅預初始化模組</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_DISABLE">
-                <Original>Disable</Original>
-                <Chinesesimp>禁用</Chinesesimp>
-                <Chinese>禁用</Chinese>
+            <Key ID="STR_MCC_ACTIVATEADDONS">
+                <Original>Pre init addon</Original>
+                <English>Pre init addon</English>
+                <Chinese>预初始化插件</Chinese>
+                <Chinese_Traditional>預初始化插件</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ALL">
-                <Original>All</Original>
-                <Chinesesimp>所有</Chinesesimp>
-                <Chinese>所有</Chinese>
+            <Key ID="STR_MCC_GEAR">
+                <Original>Assign gear by roles</Original>
+                <English>Assign gear by roles</English>
+                <Chinese>按角色分配装备</Chinese>
+                <Chinese_Traditional>按角色分配裝備</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ERROR_NOUNITSELECTED">
-                <Original>No unit selected</Original>
-                <Chinesesimp>未选择单位</Chinesesimp>
-                <Chinese>未選擇單位</Chinese>
+            <Key ID="STR_MCC_MOBILERESPAWN">
+                <Original>will move the respawn marker to the current position of the unit while the unit is alive, if the unit dead will move the marker to the previous location.</Original>
+                <English>will move the respawn marker to the current position of the unit while the unit is alive, if the unit dead will move the marker to the previous location.</English>
+                <Chinese>单位存活时将重生标记移动到其当前位置，单位死亡后将标记移回之前的位置。</Chinese>
+                <Chinese_Traditional>單位存活時將重生標記移動到其當前位置，單位死亡後將標記移回之前的位置。</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ERROR_NOVEHICLESELECTED">
-                <Original>No vehicle selected</Original>
-                <Chinesesimp>未选择车辆</Chinesesimp>
-                <Chinese>未選擇車輛</Chinese>
+            <Key ID="STR_MCC_BUILDINGPOSCOUNT">
+                <Original>return the amount of indexed positions in a building.</Original>
+                <English>return the amount of indexed positions in a building.</English>
+                <Chinese>返回建筑物中索引位置的数量。</Chinese>
+                <Chinese_Traditional>返回建築物中索引位置的數量。</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ERROR_NOGROUPSELECTED">
-                <Original>No group selected</Original>
-                <Chinesesimp>未选择群组</Chinesesimp>
-                <Chinese>未選擇群組</Chinese>
+            <Key ID="STR_MCC_MAKEUNITSARRAY">
+                <Original>returns a unit array consist of all the units from the given function and simulation in format [_cfgclass,_vehicleDisplayName].</Original>
+                <English>returns a unit array consist of all the units from the given function and simulation in format [_cfgclass,_vehicleDisplayName].</English>
+                <Chinese>返回一个单位数组，包含来自给定函数和模拟的所有单位，格式为 [_cfgclass,_vehicleDisplayName]。</Chinese>
+                <Chinese_Traditional>返回一個單位數組，包含來自給定函數和模擬的所有單位，格式為 [_cfgclass,_vehicleDisplayName]。</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ERROR_NOOBJECTSELECTED">
-                <Original>No object selected</Original>
-                <Chinesesimp>未选择对象</Chinesesimp>
-                <Chinese>未選擇對象</Chinese>
+            <Key ID="STR_MCC_COUNTGROUP">
+                <Original>Count the number of infantry, vehicles, tank, air, ships in a group.</Original>
+                <English>Count the number of infantry, vehicles, tank, air, ships in a group.</English>
+                <Chinese>计算组中的步兵、车辆、坦克、飞机、船只数量。</Chinese>
+                <Chinese_Traditional>計算組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese_Traditional>
             </Key>
-            <Key ID="STR_GENERAL_ERROR_NOAMMOBOXSELECTED">
-                <Original>No ammobox selected</Original>
-                <Chinesesimp>未选择弹药盒</Chinesesimp>
-                <Chinese>未選擇彈藥盒</Chinese>
+            <Key ID="STR_MCC_PIPOPEN">
+                <Original>Do the transmitting feed animation.</Original>
+                <English>Do the transmitting feed animation.</English>
+                <Chinese>执行传输动画。</Chinese>
+                <Chinese_Traditional>執行傳輸動畫。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TIME2STRING">
+                <Original>convert time to string.</Original>
+                <English>convert time to string.</English>
+                <Chinese>将时间转换为字符串。</Chinese>
+                <Chinese_Traditional>將時間轉換為字符串。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TIME">
+                <Original>convert time to hh:mm:ss.</Original>
+                <English>convert time to hh:mm:ss.</English>
+                <Chinese>将时间转换为 hh:mm:ss。</Chinese>
+                <Chinese_Traditional>將時間轉換為 hh:mm:ss。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SETVEHICLEINIT">
+                <Original>Sets vehicle init.</Original>
+                <English>Sets vehicle init.</English>
+                <Chinese>设置载具初始化。</Chinese>
+                <Chinese_Traditional>設置載具初始化。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SETVEHICLENAME">
+                <Original>Sets vehicle name.</Original>
+                <English>Sets vehicle name.</English>
+                <Chinese>设置载具名称。</Chinese>
+                <Chinese_Traditional>設置載具名稱。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SETTIME">
+                <Original>Sets time on all clients.</Original>
+                <English>Sets time on all clients.</English>
+                <Chinese>在所有客户端上设置时间。</Chinese>
+                <Chinese_Traditional>在所有客戶端上設置時間。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SETWEATHER">
+                <Original>Sets weather on all clients - skip time by one hour to make the weather change.</Original>
+                <English>Sets weather on all clients - skip time by one hour to make the weather change.</English>
+                <Chinese>在所有客户端上设置天气 - 跳过一小时以使天气变化。</Chinese>
+                <Chinese_Traditional>在所有客戶端上設置天氣 - 跳過一小時以使天氣變化。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GLOBALSAY3D">
+                <Original>Say sound on 3D on all clients.</Original>
+                <English>Say sound on 3D on all clients.</English>
+                <Chinese>在所有客户端上播放3D声音。</Chinese>
+                <Chinese_Traditional>在所有客戶端上播放3D聲音。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GLOBALHINT">
+                <Original>Broadcast a message on all clients.</Original>
+                <English>Broadcast a message on all clients.</English>
+                <Chinese>在所有客户端上广播消息。</Chinese>
+                <Chinese_Traditional>在所有客戶端上廣播消息。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GLOBALEXECUTE">
+                <Original>Global execute a command on selected clients or server.</Original>
+                <English>Global execute a command on selected clients or server.</English>
+                <Chinese>在选定的客户端或服务器上全局执行命令。</Chinese>
+                <Chinese_Traditional>在選定的客戶端或伺服器上全局執行命令。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPCHAT">
+                <Original>Send chat across MP.</Original>
+                <English>Send chat across MP.</English>
+                <Chinese>在多人游戏中发送聊天。</Chinese>
+                <Chinese_Traditional>在多人遊戲中發送聊天。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MOVETOPOS">
+                <Original>move an object to a new location.</Original>
+                <English>move an object to a new location.</English>
+                <Chinese>将对象移动到新位置。</Chinese>
+                <Chinese_Traditional>將對象移動到新位置。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PICKITEM">
+                <Original>Make a vehicle class item pickable and add variable to it.</Original>
+                <English>Make a vehicle class item pickable and add variable to it.</English>
+                <Chinese>使载具类物品可拾取并为其添加变量。</Chinese>
+                <Chinese_Traditional>使載具類物品可拾取並為其添加變量。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BROADCAST">
+                <Original>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.</Original>
+                <English>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.</English>
+                <Chinese>创建一个虚拟摄像机并向所有客户端广播15秒的画中画视频。</Chinese>
+                <Chinese_Traditional>創建一個虛擬攝像機並向所有客戶端廣播15秒的畫中畫視頻。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PARADROP">
+                <Original>Create a HALO or regular parachute jump for the given unit.</Original>
+                <English>Create a HALO or regular parachute jump for the given unit.</English>
+                <Chinese>为指定单位创建HALO或常规跳伞。</Chinese>
+                <Chinese_Traditional>為指定單位創建HALO或常規跳傘。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_REALPARADROP">
+                <Original>Create a HALO or regular parachute jump for the given units with simulation of running out of an airplane.</Original>
+                <English>Create a HALO or regular parachute jump for the given units with simulation of running out of an airplane.</English>
+                <Chinese>为指定单位创建HALO或常规跳伞，并模拟从飞机跳出的过程。</Chinese>
+                <Chinese_Traditional>為指定單位創建HALO或常規跳傘，並模擬從飛機跳出的過程。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_REALPARADROPPLAYER">
+                <Original>Handle the paradrop from the unit side.</Original>
+                <English>Handle the paradrop from the unit side.</English>
+                <Chinese>从单位侧处理跳伞。</Chinese>
+                <Chinese_Traditional>從單位側處理跳傘。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_COUNTGROUPHC">
+                <Original>Count the number of infantry, vehicles, tank, air, ships in a group expand.</Original>
+                <English>Count the number of infantry, vehicles, tank, air, ships in a group expand.</English>
+                <Chinese>计算扩展组中的步兵、车辆、坦克、飞机、船只数量。</Chinese>
+                <Chinese_Traditional>計算擴展組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MANAGEWP">
+                <Original>Create and control AI WP on map.</Original>
+                <English>Create and control AI WP on map.</English>
+                <Chinese>在地图上创建和控制AI路径点。</Chinese>
+                <Chinese_Traditional>在地圖上創建和控制AI路徑點。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SYNC">
+                <Original>Sync the player with the server.</Original>
+                <English>Sync the player with the server.</English>
+                <Chinese>将玩家与服务器同步。</Chinese>
+                <Chinese_Traditional>將玩家與伺服器同步。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_OBJECTMAPPER">
+                <Original>Takes an array of data about a dynamic object template and creates the objects.</Original>
+                <English>Takes an array of data about a dynamic object template and creates the objects.</English>
+                <Chinese>获取动态对象模板的数据数组并创建对象。</Chinese>
+                <Chinese_Traditional>獲取動態對象模板的數據數組並創建對象。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FINDROADSLEADINGZONE">
+                <Original>Find Road segments leading to an area.</Original>
+                <English>Find Road segments leading to an area.</English>
+                <Chinese>查找通往某个区域的道路段。</Chinese>
+                <Chinese_Traditional>查找通往某個區域的道路段。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_NEARESTROAD">
+                <Original>Return a Road segments array near positions.</Original>
+                <English>Return a Road segments array near positions.</English>
+                <Chinese>返回位置附近的道路段数组。</Chinese>
+                <Chinese_Traditional>返回位置附近的道路段數組。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GARRISON">
+                <Original>Populate soldiers inside empty houses.</Original>
+                <English>Populate soldiers inside empty houses.</English>
+                <Chinese>在空房屋内放置士兵。</Chinese>
+                <Chinese_Traditional>在空房屋內放置士兵。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVETOSQM">
+                <Original>Save MCC's placements in SQM file format and copy it to clipboard.</Original>
+                <English>Save MCC's placements in SQM file format and copy it to clipboard.</English>
+                <Chinese>将MCC的放置保存为SQM文件格式并复制到剪贴板。</Chinese>
+                <Chinese_Traditional>將MCC的放置保存為SQM文件格式並複製到剪貼板。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVETOMCC">
+                <Original>prepare the mcc_output variable.</Original>
+                <English>prepare the mcc_output variable.</English>
+                <Chinese>准备 mcc_output 变量。</Chinese>
+                <Chinese_Traditional>準備 mcc_output 變量。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_LOADFROMMCC">
+                <Original>Load the mcc_output variable.</Original>
+                <English>Load the mcc_output variable.</English>
+                <Chinese>加载 mcc_output 变量。</Chinese>
+                <Chinese_Traditional>加載 mcc_output 變量。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVETOCOMP">
+                <Original>Save MCC's 3D editor placements in composition format.</Original>
+                <English>Save MCC's 3D editor placements in composition format.</English>
+                <Chinese>将MCC的3D编辑器放置保存为组合格式。</Chinese>
+                <Chinese_Traditional>將MCC的3D編輯器放置保存為組合格式。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_REPLACESTRING">
+                <Original>Filter a string and removes certain characters (_filter).</Original>
+                <English>Filter a string and removes certain characters (_filter).</English>
+                <Chinese>过滤字符串并删除特定字符（_filter）。</Chinese>
+                <Chinese_Traditional>過濾字符串並刪除特定字符（_filter）。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIRTOSTRING">
+                <Original>Get direction integer and return it as a string North, east etc.</Original>
+                <English>Get direction integer and return it as a string North, east etc.</English>
+                <Chinese>获取方向整数并将其返回为字符串（北、东等）。</Chinese>
+                <Chinese_Traditional>獲取方向整數並將其返回為字符串（北、東等）。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_STARTLOCATIONS">
+                <Original>Teleport the player when start location has been found.</Original>
+                <English>Teleport the player when start location has been found.</English>
+                <Chinese>找到起始位置时将玩家传送。</Chinese>
+                <Chinese_Traditional>找到起始位置時將玩家傳送。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SPAWNGROUP">
+                <Original>MCC Custom group spawning.</Original>
+                <English>MCC Custom group spawning.</English>
+                <Chinese>MCC自定义组生成。</Chinese>
+                <Chinese_Traditional>MCC自定義組生成。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_KEYTONAME">
+                <Original>get idkKey and return string with his name.</Original>
+                <English>get idkKey and return string with his name.</English>
+                <Chinese>获取 idkKey 并返回其名称的字符串。</Chinese>
+                <Chinese_Traditional>獲取 idkKey 並返回其名稱的字符串。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MAKEBRIEFING">
+                <Original>Server Only - create a Logic based briefing.</Original>
+                <English>Server Only - create a Logic based briefing.</English>
+                <Chinese>仅服务器 - 创建基于逻辑的任务简报。</Chinese>
+                <Chinese_Traditional>僅伺服器 - 創建基於邏輯的任務簡報。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_HANDLEADDACTION">
+                <Original>Handle addactions after respawn - init.</Original>
+                <English>Handle addactions after respawn - init.</English>
+                <Chinese>处理重生后的 addactions - 初始化。</Chinese>
+                <Chinese_Traditional>處理重生後的 addactions - 初始化。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PPEFFECTS">
+                <Original>Create effects to all players.</Original>
+                <English>Create effects to all players.</English>
+                <Chinese>为所有玩家创建效果。</Chinese>
+                <Chinese_Traditional>為所有玩家創建效果。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SETPITCHBANKYAW">
+                <Original>Set pitch, bank, and yaw.</Original>
+                <English>Set pitch, bank, and yaw.</English>
+                <Chinese>设置俯仰、滚转和偏航。</Chinese>
+                <Chinese_Traditional>設置俯仰、滾轉和偏航。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_OPENARTILLERY">
+                <Original>Open artillery.</Original>
+                <English>Open artillery.</English>
+                <Chinese>打开炮兵。</Chinese>
+                <Chinese_Traditional>打開炮兵。</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_PPEFFECTS">
+                <Original>Delete a brush</Original>
+                <Chinesesimp>删除一个刷子</Chinesesimp>
+                <Chinese>刪除一個刷子</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_CREWCOUNT">
+                <Original>return empty seats of a specific vehicle with or without FFV (firing From Vehicles)</Original>
+                <Chinesesimp>返回特定车辆的空座位，包括或不包括FFV（从车辆射击）。</Chinesesimp>
+                <Chinese>返回特定車輛的空座位，包括或不包括FFV（從車輛射擊）。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_ADDVELOCITY">
+                <Original>adds velocity to object depends on its current velocity</Original>
+                <Chinesesimp>根据对象的当前速度为其添加速度。</Chinesesimp>
+                <Chinese>根據對象的當前速度為其添加速度。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_MAKETASK">
+                <Original>Handles tasks on the server using BI setTask fnc</Original>
+                <Chinesesimp>使用BI的setTask函数处理服务器上的任务。</Chinesesimp>
+                <Chinese>使用BI的setTask函數處理伺服器上的任務。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_HALT">
+                <Original>halt all function in game</Original>
+                <Chinesesimp>暂停游戏中的所有功能。</Chinesesimp>
+                <Chinese>暫停遊戲中的所有功能。</Chinese>
             </Key>
         </Container>
     </Package>
