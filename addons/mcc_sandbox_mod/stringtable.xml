@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project name="MCC">
+    <Package name="Curator">
+        <Container name="Lights">
+            <Key ID="STR_DISP_CURATOR_LIGHTS">
+                <Original>灯</Original>
+                <English>Lights</English>
+                <Italian>Luci</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_LIGHTSON">
+                <Original>开灯</Original>
+                <English>Lights On</English>
+                <Italian>Luci Accese</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_LIGHTSOFF">
+                <Original>关灯</Original>
+                <English>Lights Off</English>
+                <Italian>Luci Spente</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_LIGHTSAUTO">
+                <Original>灯光自动</Original>
+                <English>Lights Auto</English>
+                <Italian>Luci Auto</Italian>
+            </Key>
+        </Container>
+        <Container name="Engine">
+            <Key ID="STR_DISP_CURATOR_ENGINE">
+                <Original>发动机</Original>
+                <English>Engine</English>
+                <Italian>Motore</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_ENGINEON">
+                <Original>引擎打开</Original>
+                <English>Engine On</English>
+                <Italian>Motore Acceso</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_ENGINEOFF">
+                <Original>发动机关闭</Original>
+                <English>Engine Off</English>
+                <Italian>Motore Spento</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_ENGINEAUTO">
+                <Original>发动机自动</Original>
+                <English>Engine Auto</English>
+                <Italian>Motore Auto</Italian>
+            </Key>
+        </Container>
+        <Container name="ammo">
+            <Key ID="STR_DISP_CURATOR_AMMO">
+                <Original>弹药</Original>
+                <English>Ammo</English>
+                <Italian>Munizioni</Italian>
+            </Key>
+        </Container>
+        <Container name="VehicleCargo">
+            <Key ID="STR_DISP_CURATOR_VEHICLECARGO">
+                <Original>货物</Original>
+                <English>Cargo</English>
+                <Italian>Cargo</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_VEHICLECARGOLIST">
+                <Original>双击卸载</Original>
+                <English>Double click to unload</English>
+                <Italian>Doppio click per scaricare</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_VEHICLECARGOLOAD">
+                <Original>载重车辆</Original>
+                <English>Load vehicle</English>
+                <Italian>Carica veicolo</Italian>
+            </Key>
+        </Container>
+        <Container name="Create Zone">
+            <Key ID="STR_DISP_CURATOR_ERROR_CREATEZONE_ZONECREATED">
+                <Original>区域创建/更新</Original>
+                <English>Zone created/updated</English>
+                <Italian>Zona creata/aggiornata</Italian>
+            </Key>
+        </Container>
+        <Container name="AssigenToZone">
+            <Key ID="STR_DISP_CURATOR_ERROR_CREATEZONE_NOUNIT">
+                <Original>未发现人工智能单位或团体</Original>
+                <English>No AI unit or group found</English>
+                <Italian>Nessuna unità AI o gruppo trovato</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_ERROR_ASSIGNTOZONE_SUCCESS">
+                <Original>区域更新-将在下一个航路点有效</Original>
+                <English>Zone updated - effect will be shown in a few minutes</English>
+                <Italian>Zona aggiornata - l'effetto verrà mostrato tra qualche minuto</Italian>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="pylonChange">
+        <Container name="display">
+            <Key ID="STR_DISP_VEHICLESPYLON_MIRROR">
+                <Original>镜</Original>
+                <English>Mirror</English>
+                <Italian>Specchio</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_REARM">
+                <Original>重新武装</Original>
+                <English>Rearm</English>
+                <Italian>Riarma</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_REFUEL">
+                <Original>加油</Original>
+                <English>Refuel</English>
+                <Italian>Fai benzina</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_HEADER">
+                <Original>装载管理</Original>
+                <English>Loadout Manager</English>
+                <Italian>Gestisci Loadout</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_CANCEL">
+                <Original>取消</Original>
+                <English>Cancel</English>
+                <Italian>Cancella</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_CONFIRM">
+                <Original>确认</Original>
+                <English>Confirm</English>
+                <Italian>Conferma</Italian>
+            </Key>
+            <Key ID="STR_DISP_VEHICLESPYLON_REPAIR">
+                <Original>修复</Original>
+                <English>Repair</English>
+                <Italian>Ripara</Italian>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="modules">
+        <Container name="AI_assignToZone">
+            <Key ID="STR_CURATOR_Module_AI_assignToZoneText">
+                <Original>将人工智能分配到区域</Original>
+                <English>Assign AI to zone</English>
+                <Italian>Assegna AI alla zona</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription1">
+                <Original>与组或单位和一个创建区域模块同步。</Original>
+                <English>sync with groups or units and one Create Zone module.</English>
+                <Italian>sincronizza con gruppi o unità e un modulo Crea Zona.</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription3">
+                <Original>创建区域模块</Original>
+                <English>Create Zone module</English>
+                <Italian>Crea Modulo zona</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription2">
+                <Original>单位将自动分配到MCC区域</Original>
+                <English>units will automatically will be assigned to the MCC zone</English>
+                <Italian>le unità verranno assegnate automaticamente alla zona MCC</Italian>
+            </Key>
+        </Container>
+        <Container name="ambientBirdsCurator">
+            <Key ID="STR_CURATOR_Module_AI_ambientBirdsCurator_displayName">
+                <Original>环境鸟类</Original>
+                <English>Ambient Birds</English>
+                <Italian>Uccelli d'ambiente</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientBirdsCurator_description">
+                <Original>当单位靠近树木时，可以随机生成鸟类</Original>
+                <English>Enables spawning random flocks of birds when units get close to trees</English>
+                <Italian>Abilita spawn di stormo di uccelli casuali quanto le unità si avvicinano agli alberi</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_AMBIENTBIRDSSPAWN_SUCCESS">
+                <Original>启用环境鸟类</Original>
+                <English>Ambient Birds Enabled</English>
+                <Italian>Uccelli d'ambiente abilitati</Italian>
+            </Key>
+        </Container>
+        <Container name="ambientCiviliansCurator">
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_displayName">
+                <Original>环境单位</Original>
+                <English>Ambient Unis</English>
+                <Italian>Unis Ambientale</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCiv_displayName">
+                <Original>环境巡逻</Original>
+                <English>Ambient Patrols</English>
+                <Italian>Pattuglia Ambientale</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCar_displayName">
+                <Original>环境汽车</Original>
+                <English>Ambient Cars</English>
+                <Italian>Auto Ambientali</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCiv_description">
+                <Original>单位将在建筑物之间移动</Original>
+                <English>Units will move between buildings</English>
+                <Italian>Le unità si muoveranno tra gli edifici</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCar_description">
+                <Original>汽车会生成并四处行驶</Original>
+                <English>Cars will spawn and drive around</English>
+                <Italian>Le auto spawneranno e si muoveranno in giro</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isParkedCar_displayName">
+                <Original>停放的汽车</Original>
+                <English>Parked Cars</English>
+                <Italian>Auto Parcheggiate</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isLocked_displayName">
+                <Original>停放的汽车上锁</Original>
+                <English>Parked Cars Locked</English>
+                <Italian>Auto Parcheggiate Bloccate</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isLocked_description">
+                <Original>停放的汽车将始终上锁</Original>
+                <English>Parked cars will always be locked</English>
+                <Italian>Le auto parcheggiate saranno sempre bloccate</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isParkedCar_description">
+                <Original>道路两侧会出现空车</Original>
+                <English>Empty cars will spawn on the road's sides</English>
+                <Italian>Le auto vuote spawneranno sui lati della strada</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCiv_displayName">
+                <Original>派</Original>
+                <English>Faction</English>
+                <Italian>Fazioni</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCivCar_displayName">
+                <Original>汽车派系</Original>
+                <English>Car's Faction</English>
+                <Italian>Fazione dell'Auto</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCiv_description">
+                <Original>条目名称</Original>
+                <English>Config name</English>
+                <Italian>Nome Config</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_displayName">
+                <Original>平民态度</Original>
+                <English>Civilians attitude</English>
+                <Italian>Atteggiamento dei Civili</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_bad">
+                <Original>坏（简易爆炸装置和自杀炸弹袭击者）</Original>
+                <English>Bad (IED &amp; Suicide Bombers)</English>
+                <Italian>Cattivo (IED &amp; Suicide Bombers)</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_average">
+                <Original>平均</Original>
+                <English>Average</English>
+                <Italian>Media</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_aboveAverage">
+                <Original>高于平均</Original>
+                <English>Above Average</English>
+                <Italian>Sopra la media</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_good">
+                <Original>好</Original>
+                <English>Good</English>
+                <Italian>Bene</Italian>
+            </Key>
+            <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_Very Good">
+                <Original>非常好</Original>
+                <English>Very Good</English>
+                <Italian>Molto Bene</Italian>
+            </Key>
+        </Container>
+        <Container name="moduleILS">
+            <Key ID="STR_Module__moduleILS_displayName">
+                <Original>“（ILS）仪表着陆系统</Original>
+                <English>"(ILS) Instrument Landing System</English>
+                <Italian>"(ILS) Sistema di atterraggio strumentale</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayName_displayName">
+                <Original>跑道名称</Original>
+                <English>Runway Name</English>
+                <Italian>Nome Pista</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayName_description">
+                <Original>ILS中显示跑道名称</Original>
+                <English>Runway Name display in ILS</English>
+                <Italian>Nome Pista mostrato in ILS</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayDis_displayName">
+                <Original>跑道长度</Original>
+                <English>Runway Length</English>
+                <Italian>Lunghezza Pista</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayDis_description">
+                <Original>跑道长度（米）</Original>
+                <English>Runway length in meters</English>
+                <Italian>Lunghezza pista in metri</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwaySide_displayName">
+                <Original>允许的一侧</Original>
+                <English>Allowed Sides</English>
+                <Italian>Fazioni ammesse</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwaySide_description">
+                <Original>只有特定派系才能使用该机场</Original>
+                <English>Only specific sides can use this airfield</English>
+                <Italian>Solo specifiche fazioni possono usare questo aeroporto</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayCircles_displayName">
+                <Original>街机模式</Original>
+                <English>Arcade Mode</English>
+                <Italian>Modalità Arcade</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayCircles_description">
+                <Original>创建圆形参考线以遵循着陆路径</Original>
+                <English>Create circles guides to following the landing path</English>
+                <Italian>Crea cerchi per seguire il percorso di atterraggio</Italian>
+            </Key>
+            <Key ID="STR_Module__moduleILS_runwayCircles_ModuleDescription">
+                <Original>在每条跑道的起点放置ILS模块，面向与跑道相同的方向</Original>
+                <English>Place ILS module on each runway's start facing the same direction as the runway</English>
+                <Italian>Piazza il modulo ILS all'inizio di ogni pista nella direzione di questa</Italian>
+            </Key>
+        </Container>
+        <Container name="AASSpawnAI">
+            <Key ID="STR_Module__AASSpawnAI_displayName">
+                <Original>AAS生成人工智能</Original>
+                <English>AAS Spawn AI</English>
+                <Italian>Spawn AI AAS</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_faction1_displayName">
+                <Original>生成派系</Original>
+                <English>Spawn Faction</English>
+                <Italian>Spawn Fazioni</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_faction1_description">
+                <Original>如cfgFaction中定义</Original>
+                <English>As defined in cfgFaction</English>
+                <Italian>Come definito in cfgFaction</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_enemySide_displayName">
+                <Original>敌方</Original>
+                <English>Enemy Side</English>
+                <Italian>Fazione Nemica</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_autoBalance_displayName">
+                <Original>自动平衡AI</Original>
+                <English>Auto balance AI</English>
+                <Italian>Auto bilancia AI</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_autoBalance_description">
+                <Original>自动平衡玩家的AI数量</Original>
+                <English>Auto balance the number of AI to players</English>
+                <Italian>Bilancia automaticamente il numero di AI ai giocatori</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_minAI_displayName">
+                <Original>每方人工智能的最低数量</Original>
+                <English>Minimum number of AI per side</English>
+                <Italian>Numero minimo di AI per fazione</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_minAI_description">
+                <Original>无论有多少玩家，AI的最低数量</Original>
+                <English>Minimum number of AI no matter how many players</English>
+                <Italian>Minimo numero di AI indipendentemente dai giocatori</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_spawnAIDefensive_displayName">
+                <Original>在扇区繁衍</Original>
+                <English>Spawn at Sectors</English>
+                <Italian>Spawn ai Settori</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_spawnAIDefensive_description">
+                <Original>在捕获的区域或仅在开始位置产生人工智能</Original>
+                <English>Spawn AI on captured sectors or just at start location</English>
+                <Italian>Spawn AI sui settori catturati o nel primo luogo</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_searchRadius_displayName">
+                <Original>搜索车辆半径</Original>
+                <English>Search Vehicles Radius</English>
+                <Italian>Raggio ricerca Veicoli</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_searchRadius_description">
+                <Original>人工智能会在生成点周围寻找空车辆多远</Original>
+                <English>How far AI will look for empty vehicles around the spawn point</English>
+                <Italian>Quanto lontano le AI cercheranno veicoli vuoti attorno al punto di spawn</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_useRoles_displayName">
+                <Original>使用MCC角色装备</Original>
+                <English>Use MCC roles gear</English>
+                <Italian>Usa equipaggiamento dei ruoli MCC</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_useRoles_description">
+                <Original>人工智能将使用MCC_loads中定义的角色套件</Original>
+                <English>AI will use roles kits as defined in MCC_loadouts</English>
+                <Italian>AI useranno i kit di ruolo definiti in MCC_loadouts</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_spawnVehicles_displayName">
+                <Original>生成车辆</Original>
+                <English>Spawn Vehicles</English>
+                <Italian>Spawna Veicoli</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_spawnVehicles_description">
+                <Original>人工智能将产生与敌方车辆相当的车辆</Original>
+                <English>AI will spawn vehicles equals to the enemy vehicles</English>
+                <Italian>AI spawneranno veicoli uguali a quelli nemici</Italian>
+            </Key>
+            <Key ID="STR_Module__AASSpawnAI_ModuleDescription_description">
+                <Original>生成人工智能，试图在MCC AAS中征服敌方区域</Original>
+                <English>Spawn AI that will try to conquer enemy sectors in MCC AAS</English>
+                <Italian>Spawn AI che proveranno a conquistare i settori nemici in MCC AAS</Italian>
+            </Key>
+        </Container>
+        <Container name="AAS">
+            <Key ID="STR_Module__AAS_displayName">
+                <Original>推进并保护初始化</Original>
+                <English>Advance And Secure init</English>
+                <Italian>Init Avanza e metti al Sicuro</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_side1_displayName">
+                <Original>阵营1</Original>
+                <English>side1</English>
+                <Italian>fazione1</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_side2_displayName">
+                <Original>阵营2</Original>
+                <English>side2</English>
+                <Italian>fazione2</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_bleedTickets_displayName">
+                <Original>复活票流失</Original>
+                <English>Tickets Bleed</English>
+                <Italian>Perdita Ticket</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_bleedTickets_description">
+                <Original>失去阵营的复活票每五秒失去多少张复活票</Original>
+                <English>How many tickets lost every 5 seconds to the loosing side</English>
+                <Italian>Quanti ticket persi ogni 5 secondi alla fazione perdente</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_ModuleDescription_description">
+                <Original>创建一个行进和营救任务，其中目标只能按照特定顺序捕获，与MCC捕获区或虚拟扇形模块同步，以确定目标被捕获的顺序。按照行业描述设置AAS任务</Original>
+                <English>Creates an Advance And Secure mission where objectives can only be captured in a specific order, Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured. Follow the sector description to set up the AAS mission</English>
+                <Italian>Crea una missione Avanza e metti al Sicuro dove gli obiettivi possono venir catturati solo in ordine specifico, Sincronizza con una Zona di cattura MCC o un modulo settore fittizio in modo che essi pensino che si debba catturare. Segui la descrizione del settore per impostare la missione AAS</Italian>
+            </Key>
+            <Key ID="STR_Module__AAS_ModuleDescription_description2">
+                <Original>与MCC捕获区或虚拟扇形模块同步，以确定捕获它们的顺序。按照行业描述设置AAS任务</Original>
+                <English>Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured. Follow the sector description to set up the AAS mission</English>
+                <Italian>Sincronizza con una Zona di cattura MCC o un modulo settore fittizio in modo che essi pensino che si debba catturare. Segui la descrizione del settore per impostare la missione AAS</Italian>
+            </Key>
+        </Container>
+        <Container name="ambientFire">
+            <Key ID="STR_Module__ambientFire_displayName">
+                <Original>环境火灾</Original>
+                <English>Ambient Fire</English>
+                <Italian>Fuoco Ambientale</Italian>
+            </Key>
+            <Key ID="STR_Module__ambientFire_description">
+                <Original>爆炸物和消防会引发随机火灾，火势会根据风力和方向蔓延</Original>
+                <English>Random fires will ignite from explosives and fire fights, the fire will spread according to wind strength and direction</English>
+                <Italian>Fuochi casuali si accenderanno da combattimenti a fuoco e esplosioni, questo si espanderà a dipendenza della forza e direzione del vento</Italian>
+            </Key>
+            <Key ID="STR_DISP_CURATOR_AMBIENTFIRE_SUCCESS">
+                <Original>启用环境火灾</Original>
+                <English>Ambient Fire Enabled</English>
+                <Italian>Fuoco Ambientale abilitato</Italian>
+            </Key>
+        </Container>
+        <Container name="atmosphere">
+            <Key ID="STR_Module__atmosphere_displayName">
+                <Original>气氛</Original>
+                <English>Atmosphere</English>
+                <Italian>Atmosfera</Italian>
+            </Key>
+            <Key ID="STR_Module__atmosphere_description">
+                <Original>创建预设或自定义氛围</Original>
+                <English>Create pre set or custom atmospheres</English>
+                <Italian>Crea da predefinito o atmosfera personalizzata</Italian>
+            </Key>
+        </Container>
+        <Container name="lockDoors">
+            <Key ID="STR_Module__lockDoors_displayName">
+                <Original>门锁/打开</Original>
+                <English>Doors Lock/Unlock</English>
+                <Italian>Porte Bloccate/Sbloccate</Italian>
+            </Key>
+            <Key ID="STR_Module__lockDoors_description">
+                <Original>锁定或解锁给定半径内的建筑物门，可以通过破坏装置或使用MCC交互进行撬锁打开上锁的门</Original>
+                <English>Lock or unlock buildings doors in the given radius, locked door can be opened with breaching charges or lockpicking using MCC interaction</English>
+                <Italian>Blocca o sblocca le porte degli edifici nel raggio dato, le porte bloccate possono essere aperte con cariche esplosive oppure scassinate usando le interazioni MCC</Italian>
+            </Key>
+        </Container>
+        <Container name="warZone">
+            <Key ID="STR_Module__warZone_displayName">
+                <Original>战区气氛</Original>
+                <English>War Zone Atmosphere</English>
+                <Italian>Atmosfera di Guerra</Italian>
+            </Key>
+            <Key ID="STR_Module_warzone_description">
+                <Original>在给定半径内摧毁建筑物、制造随机火灾和残骸</Original>
+                <English>Destroy buildings, create random fires and wreck in the given radius</English>
+                <Italian>Distruggi edifici, crea fuochi e rottami casuali nel raggio dato</Italian>
+            </Key>
+        </Container>
+        <Container name="GroupRespawns">
+            <Key ID="STR_Module__groupRespawns_displayName">
+                <Original>重生群组</Original>
+                <English>Respawn Group</English>
+                <Italian>Respawn Gruppo</Italian>
+            </Key>
+            <Key ID="STR_Module__groupRespawns_ModuleDescription_description">
+                <Original>当群中所有单位都死亡时，将其与任何单位或群同步以重生群组</Original>
+                <English>Sync it with any unit or group to respawn the group when all units in the group dead</English>
+                <Italian>Sincronizza con unità o gruppo per respawnare il gruppo quando tutte le unità sono morte</Italian>
+            </Key>
+            <Key ID="STR_Module__groupRespawns_Respawns_displayName">
+                <Original>重生</Original>
+                <English>Respawns</English>
+                <Italian>Respawna</Italian>
+            </Key>
+            <Key ID="STR_Module__groupRespawns_Respawns_description">
+                <Original>群组可以刷新多少次</Original>
+                <English>How many time can the group respawn</English>
+                <Italian>Quante volte può respawnare il gruppo</Italian>
+            </Key>
+        </Container>
+        <Container name="CapturePoint">
+            <Key ID="STR_CURATOR_Module_capturePoint_displayName">
+                <Original>捕获点</Original>
+                <English>Capture Point</English>
+                <Italian>Cattura Punto</Italian>
+            </Key>
+        </Container>
+        <Container name="curatorSetEvac">
+            <Key ID="STR_DISP_CURATOR_ERROR_CURATORSETEVAC_NOVEHICLE">
+                <Original>未选择车辆</Original>
+                <English>No vehicle selected</English>
+                <Italian>Nessun veicolo selezionato</Italian>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="general">
+        <Container name="common">
+            <Key ID="STR_GENERAL_ENABLE">
+                <Original>启用</Original>
+                <English>Enable</English>
+                <Italian>Abilita</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_DISABLE">
+                <Original>禁用</Original>
+                <English>Disable</English>
+                <Italian>Disabilita</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ALL">
+                <Original>所有</Original>
+                <English>All</English>
+                <Italian>Tutto</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ERROR_NOUNITSELECTED">
+                <Original>未选择单位</Original>
+                <English>No unit selected</English>
+                <Italian>Nessun unità selezionata</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ERROR_NOVEHICLESELECTED">
+                <Original>未选择车辆</Original>
+                <English>No vehicle selected</English>
+                <Italian>Nessun veicolo selezionato</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ERROR_NOGROUPSELECTED">
+                <Original>未选择群组</Original>
+                <English>No group selected</English>
+                <Italian>Nessun gruppo selezionato</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ERROR_NOOBJECTSELECTED">
+                <Original>未选择对象</Original>
+                <English>No object selected</English>
+                <Italian>Nessun oggetto selezionato</Italian>
+            </Key>
+            <Key ID="STR_GENERAL_ERROR_NOAMMOBOXSELECTED">
+                <Original>未选择弹药盒</Original>
+                <English>No ammobox selected</English>
+                <Italian>Nessun ammobox selezioanto</Italian>
+            </Key>
+        </Container>
+    </Package>
+</Project>

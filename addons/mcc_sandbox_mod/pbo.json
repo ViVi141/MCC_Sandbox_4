@@ -1,0 +1,16 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.txt$",
+            "\\.xml$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "mcc_sandbox_mod"
+        }
+    ]
+}
