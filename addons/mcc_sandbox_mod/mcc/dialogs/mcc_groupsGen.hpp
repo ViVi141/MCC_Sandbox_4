@@ -58,7 +58,7 @@ class mcc_groupGen
 		{
 			idc = -1;
 
-			text = "派系:";
+			text = "$STR_mcc_groupGen_factionTittle";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 
 			x = 0.184896 * safezoneW + safezoneX;
@@ -83,7 +83,7 @@ class mcc_groupGen
 		{
 			idc = -1;
 
-			text = "关闭";
+			text = "$STR_mcc_closeGeneratorButton";
 			action = "closeDialog 0;";
 
 			x = 0.84375 * safezoneW + safezoneX;
@@ -96,8 +96,8 @@ class mcc_groupGen
 		class mcc_groupGen_WestButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示西方阵营的单位";
-			text = "西方";
+			tooltip = "Show only West's side units";
+			text = "West";
 			colorText[] = {0,0,1,1};
 			onButtonClick = __EVAL("[west] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
@@ -110,8 +110,8 @@ class mcc_groupGen
 		class mcc_groupGen_EastButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示东方阵营的单位";
-			text = "东方";
+			tooltip = "Show only East's side units";
+			text = "East";
 			colorText[] = {1,0,0,1};
 			onButtonClick = __EVAL("[east] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
@@ -124,8 +124,8 @@ class mcc_groupGen
 		class mcc_groupGen_GuerButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示中立方阵营的单位";
-			text = "中立方";
+			tooltip = "Show only Guer's side units";
+			text = "Guer";
 			colorText[] = {0,1,0,1};
 			onButtonClick = __EVAL("[resistance] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
@@ -138,8 +138,8 @@ class mcc_groupGen
 		class mcc_groupGen_CivButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示平民单位";
-			text = "平民";
+			tooltip = "Show only civilian's side units";
+			text = "Civ";
 			onButtonClick = __EVAL("[civilian] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
 			x = 0.809375 * safezoneW + safezoneX;
@@ -151,10 +151,10 @@ class mcc_groupGen
 		class mcc_groupGen_PlayersButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示玩家";
+			tooltip = "Show players only";
 			onButtonClick = __EVAL("['players'] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
-			text = "玩家"; //--- ToDo: Localize;
+			text = "Players"; //--- ToDo: Localize;
 			x = 0.603125 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
@@ -164,10 +164,10 @@ class mcc_groupGen
 		class mcc_groupGen_AllButton: MCC_RscButton
 		{
 			idc = -1;
-			tooltip = "只展示所有单位";
+			tooltip = "Show all units";
 			onButtonClick = __EVAL("[west,east,resistance,civilian,'players'] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
-			text = "所有"; //--- ToDo: Localize;
+			text = "All"; //--- ToDo: Localize;
 			x = 0.551562 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
@@ -183,7 +183,7 @@ class mcc_groupGen
 		class MCC_MissionMakerTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "任务制作器:";
+			text = "Mission Maker:";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.3625 * safezoneW + safezoneX;
@@ -206,7 +206,7 @@ class mcc_groupGen
 		class MCC_clientFPSTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "客户端 FPS:";
+			text = "Client FPS:";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.488542 * safezoneW + safezoneX;
@@ -218,7 +218,7 @@ class mcc_groupGen
 		class MCC_ServerFPSTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "服务器 FPS:";
+			text = "Server FPS:";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.585938 * safezoneW + safezoneX;
@@ -253,8 +253,8 @@ class mcc_groupGen
 		class MCC_stopCapture: MCC_RscButton
 		{
 			idc = MCCSTOPCAPTURE;
-			text = "停止捕获";
-			tooltip = "一旦生成触发器，MCC执行的所有操作都不会执行，但会保存到触发器中，直到按下此按钮";
+			text = "Stop Capturing";
+			tooltip = "Once a trigger has been generated all the action done by MCC won't execute but will be saved to the trigger until this button is pressed";
 			onButtonClick = "ctrlEnable [1014,false];MCC_capture_state=false;";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 
@@ -268,8 +268,8 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{_x setVariable ['mcc_gaia_cache', !(_x getVariable ['mcc_gaia_cache',false]),true];}foreach MCC_GroupGenGroupSelected}};";
-			tooltip = "将所选组交给缓存系统";
-			text = "缓存组"; //--- ToDo: Localize;
+			tooltip = "Give the selected groups to caching system";
+			text = "Cache Group"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.391146 * safezoneW + safezoneX;
@@ -282,8 +282,8 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = "if (str (getmarkerpos str mcc_active_zone) != str [0,0,0]) then {[str mcc_active_zone] spawn GAIA_fnc_occupy} else {systemchat 'Create a zone first'}";
-			tooltip = "用所选派系的单位占领当前选定的区域";
-			text = "占领区"; //--- ToDo: Localize;
+			tooltip = "Occupy current selected zone with the selected faction's units";
+			text = "Occupy Zone"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.391146 * safezoneW + safezoneX;
@@ -296,8 +296,8 @@ class mcc_groupGen
 		{
 			idc = 1015;
 			onButtonClick = "_ctrl = _this select 0; if (ctrlText _ctrl == 'Ambient Warzone(on)') then {_ctrl ctrlSetText 'Ambient Warzone(off)';MCC_GAIA_AC = false;} else {_ctrl ctrlSetText 'Ambient Warzone(on)';MCC_GAIA_AC = true}; publicVariable 'MCC_GAIA_AC';";
-			tooltip = "在玩家周围生成随机环境战场";
-			text = "环境战区（关闭）"; //--- ToDo: Localize;
+			tooltip = "Spawn random ambient battlefield around the player";
+			text = "Ambient Warzone(off)"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.391146 * safezoneW + safezoneX;
@@ -309,7 +309,7 @@ class mcc_groupGen
 		class MCC_saveLoad: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "保存/加载";
+			text = "Save/Load";
 			x = 0.746354 * safezoneW + safezoneX;
 			y = 0.796884 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -321,7 +321,7 @@ class mcc_groupGen
 		class MCC_login: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "注销";
+			text = "Logout";
 			x = 0.648958 * safezoneW + safezoneX;
 			y = 0.796884 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -334,9 +334,9 @@ class mcc_groupGen
 		class MCC_ghostMode: MCC_RscButton
 		{
 			idc = -1;
-			text = "幽灵模式";
+			text = "Ghost Mode";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			tooltip = "让任务制造者对敌人隐形";
+			tooltip = "Make the mission maker invisible to enemies";
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {if (captive player) then {player setcaptive false;if (MCC_Chat) then {[['Mission maker is no longer cheating'],'MCC_fnc_globalHint',true,false] call BIS_fnc_MP;};} else {player setcaptive true; if (MCC_Chat) then {[['Mission maker is cheating'],'MCC_fnc_globalHint',true,false] spawn BIS_fnc_MP;}};} else {player globalchat 'Access Denied'};";
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.0491758 * safezoneH + safezoneY;
@@ -347,8 +347,8 @@ class mcc_groupGen
 		class MCC_spectator: MCC_RscButton
 		{
 			idc = -1;
-			text = "观众";
-			tooltip = "开放观众模式";
+			text = "Spectator";
+			tooltip = "Open Spectator Mode";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onButtonClick = __EVAL("[4] execVM '"+MCCPATH+"mcc\Pop_menu\mission_settings.sqf'");
 
@@ -361,8 +361,8 @@ class mcc_groupGen
 		class MCC_Teleport: MCC_RscButton
 		{
 			idc = -1;
-			text = "传送";
-			tooltip = "将任务制造者和他所在的任何车辆传送到新的位置";
+			text = "Teleport";
+			tooltip = "Teleport the mission maker and any vehicle he is in to a new location";
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {hint 'Click on the map';onMapSingleClick 'vehicle player setPos _pos;onMapSingleClick '''';true;'} else {player globalchat 'Access Denied'};";
 
 			x = 0.563021 * safezoneW + safezoneX;
@@ -375,9 +375,9 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[5] execVM '"+MCCPATH+"mcc\pop_menu\tasks_req.sqf'");
-			text = "任务获胜"; //--- ToDo: Localize;
+			text = "Mission Won"; //--- ToDo: Localize;
 			colorText[] = {0,1,0,0.8};
-			tooltip = "以完成任务结束任务"; //--- ToDo: Localize;
+			tooltip = "End mission with - Mission Accomplished"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.3625 * safezoneW + safezoneX;
@@ -390,9 +390,9 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[6] execVM '"+MCCPATH+"mcc\pop_menu\tasks_req.sqf'");
-			text = "任务失败"; //--- ToDo: Localize;
+			text = "Mission Failed"; //--- ToDo: Localize;
 			colorText[] = {1,0,0,0.8};
-			tooltip = "以结束任务-任务失败"; //--- ToDo: Localize;
+			tooltip = "End mission with - Mission Failed"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			x = 0.6375 * safezoneW + safezoneX;
@@ -405,8 +405,8 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = "createDialog 'MCCMWDialog'";
-			text = "任务生成器";
-			tooltip = "打开任务生成器";
+			text = "Mission Generator";
+			tooltip = "Open mission Generator";
 
 			x = 0.39 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
@@ -419,8 +419,8 @@ class mcc_groupGen
 		{
 			idc = -1;
 			onButtonClick = "createDialog 'MCCFrontLineDialog'";
-			text = "前线";
-			tooltip = "打开前线生成器";
+			text = "Front Lines";
+			tooltip = "Open Front Lines Generator";
 
 			x = 0.485 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;

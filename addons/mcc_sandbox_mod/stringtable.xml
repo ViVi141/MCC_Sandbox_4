@@ -818,11 +818,25 @@
                 <Chinesesimp>使用BI的setTask函数处理服务器上的任务。</Chinesesimp>
                 <Chinese>使用BI的setTask函數處理伺服器上的任務。</Chinese>
             </Key>
-            <Key ID="STR_MCC_GENERAL_HALT">
+        <Key ID="STR_MCC_GENERAL_HALT">
                 <Original>halt all function in game</Original>
                 <Chinesesimp>暂停游戏中的所有功能。</Chinesesimp>
                 <Chinese>暫停遊戲中的所有功能。</Chinese>
             </Key>
         </Container>
     </Package>
+    <package name="mcc_groupGen">
+            <container name="Faction">
+                   <Key ID="$STR_mcc_groupGen_factionTittle">
+                       <Original>Faction:</Original>
+                       <Chinesesimp>阵营：</Chinesesimp>
+                       <Chinese>陣營：</Chinese>
+                   </Key>
+                <Key ID="$STR_mcc_closeGeneratorButton">
+                       <Original>Close</Original>
+                       <Chinesesimp>关闭</Chinesesimp>
+                       <Chinese>關閉</Chinese>
+                   </Key>
+            </container>>
+    </package>>
 </Project>
