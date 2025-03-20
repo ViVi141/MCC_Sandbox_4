@@ -426,12 +426,21 @@
                 <Chinese>失去陣營的復活票每五秒失去多少張復活票</Chinese>
             </Key>
             <Key ID="STR_Module__AAS_ModuleDescription_description">
-                <Original>Creates an Advance And Secure mission where objectives can only be captured in a specific order, Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured. Follow the sector description to set up the AAS mission</Original>
-                <Chinesesimp>创建一个行进和营救任务，其中目标只能按照特定顺序捕获，与MCC捕获区或虚拟扇形模块同步，以确定目标被捕获的顺序。按照行业描述设置AAS任务</Chinesesimp>
-                <Chinese>創建一個行進和營救任務，其中目標只能按照特定順序捕獲，與MCC捕獲區或虛擬扇形模塊同步，以確定目標被捕獲的順序。按照行業描述設置AAS任務</Chinese>
+                <Original>Creates an Advance And Secure mission where objectives can only be captured in a specific
+                    order, Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
+                    Follow the sector description to set up the AAS mission
+                </Original>
+                <Chinesesimp>
+                    创建一个行进和营救任务，其中目标只能按照特定顺序捕获，与MCC捕获区或虚拟扇形模块同步，以确定目标被捕获的顺序。按照行业描述设置AAS任务
+                </Chinesesimp>
+                <Chinese>
+                    創建一個行進和營救任務，其中目標只能按照特定順序捕獲，與MCC捕獲區或虛擬扇形模塊同步，以確定目標被捕獲的順序。按照行業描述設置AAS任務
+                </Chinese>
             </Key>
             <Key ID="STR_Module__AAS_ModuleDescription_description2">
-                <Original>Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured. Follow the sector description to set up the AAS mission</Original>
+                <Original>Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
+                    Follow the sector description to set up the AAS mission
+                </Original>
                 <Chinesesimp>与MCC捕获区或虚拟扇形模块同步，以确定捕获它们的顺序。按照行业描述设置AAS任务</Chinesesimp>
                 <Chinese>與MCC捕獲區或虛擬扇形模塊同步，以確定捕獲它們的順序。按照行業描述設置AAS任務</Chinese>
             </Key>
@@ -443,7 +452,9 @@
                 <Chinese>環境火災</Chinese>
             </Key>
             <Key ID="STR_Module__ambientFire_description">
-                <Original>Random fires will ignite from explosives and fire fights, the fire will spread according to wind strength and direction</Original>
+                <Original>Random fires will ignite from explosives and fire fights, the fire will spread according to
+                    wind strength and direction
+                </Original>
                 <Chinesesimp>爆炸物和消防会引发随机火灾，火势会根据风力和方向蔓延</Chinesesimp>
                 <Chinese>爆炸物和消防會引發隨機火災，火勢會根據風力和方向蔓延</Chinese>
             </Key>
@@ -472,8 +483,11 @@
                 <Chinese>門鎖/打開</Chinese>
             </Key>
             <Key ID="STR_Module__lockDoors_description">
-                <Original>Lock or unlock buildings doors in the given radius, locked door can be opened with breaching charges or lockpicking using MCC interaction</Original>
-                <Chinesesimp>锁定或解锁给定半径内的建筑物门，可以通过破坏装置或使用MCC交互进行撬锁打开上锁的门</Chinesesimp>
+                <Original>Lock or unlock buildings doors in the given radius, locked door can be opened with breaching
+                    charges or lockpicking using MCC interaction
+                </Original>
+                <Chinesesimp>锁定或解锁给定半径内的建筑物门，可以通过破坏装置或使用MCC交互进行撬锁打开上锁的门
+                </Chinesesimp>
                 <Chinese>鎖定或解鎖給定半徑內的建築物門，可以通過破壞裝置或使用MCC交互進行撬鎖打開上鎖的門</Chinese>
             </Key>
         </Container>
@@ -496,7 +510,8 @@
                 <Chinese>重生群組</Chinese>
             </Key>
             <Key ID="STR_Module__groupRespawns_ModuleDescription_description">
-                <Original>Sync it with any unit or group to respawn the group when all units in the group dead</Original>
+                <Original>Sync it with any unit or group to respawn the group when all units in the group dead
+                </Original>
                 <Chinesesimp>当群中所有单位都死亡时，将其与任何单位或群同步以重生群组</Chinesesimp>
                 <Chinese>當群中所有單位都死亡時，將其與任何單位或群同步以重生群組</Chinese>
             </Key>
@@ -528,7 +543,7 @@
     </Package>
     <Package name="cfgFunctions">
         <Container name="general">
-                       <Key ID="STR_MCC_PREINIT">
+            <Key ID="STR_MCC_PREINIT">
                 <Original>Pre init mod only</Original>
                 <English>Pre init mod only</English>
                 <Chinese>仅预初始化模组</Chinese>
@@ -547,10 +562,15 @@
                 <Chinese_Traditional>按角色分配裝備</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MOBILERESPAWN">
-                <Original>will move the respawn marker to the current position of the unit while the unit is alive, if the unit dead will move the marker to the previous location.</Original>
-                <English>will move the respawn marker to the current position of the unit while the unit is alive, if the unit dead will move the marker to the previous location.</English>
+                <Original>will move the respawn marker to the current position of the unit while the unit is alive, if
+                    the unit dead will move the marker to the previous location.
+                </Original>
+                <English>will move the respawn marker to the current position of the unit while the unit is alive, if
+                    the unit dead will move the marker to the previous location.
+                </English>
                 <Chinese>单位存活时将重生标记移动到其当前位置，单位死亡后将标记移回之前的位置。</Chinese>
-                <Chinese_Traditional>單位存活時將重生標記移動到其當前位置，單位死亡後將標記移回之前的位置。</Chinese_Traditional>
+                <Chinese_Traditional>單位存活時將重生標記移動到其當前位置，單位死亡後將標記移回之前的位置。
+                </Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_BUILDINGPOSCOUNT">
                 <Original>return the amount of indexed positions in a building.</Original>
@@ -559,10 +579,17 @@
                 <Chinese_Traditional>返回建築物中索引位置的數量。</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MAKEUNITSARRAY">
-                <Original>returns a unit array consist of all the units from the given function and simulation in format [_cfgclass,_vehicleDisplayName].</Original>
-                <English>returns a unit array consist of all the units from the given function and simulation in format [_cfgclass,_vehicleDisplayName].</English>
-                <Chinese>返回一个单位数组，包含来自给定函数和模拟的所有单位，格式为 [_cfgclass,_vehicleDisplayName]。</Chinese>
-                <Chinese_Traditional>返回一個單位數組，包含來自給定函數和模擬的所有單位，格式為 [_cfgclass,_vehicleDisplayName]。</Chinese_Traditional>
+                <Original>returns a unit array consist of all the units from the given function and simulation in format
+                    [_cfgclass,_vehicleDisplayName].
+                </Original>
+                <English>returns a unit array consist of all the units from the given function and simulation in format
+                    [_cfgclass,_vehicleDisplayName].
+                </English>
+                <Chinese>返回一个单位数组，包含来自给定函数和模拟的所有单位，格式为 [_cfgclass,_vehicleDisplayName]。
+                </Chinese>
+                <Chinese_Traditional>返回一個單位數組，包含來自給定函數和模擬的所有單位，格式為
+                    [_cfgclass,_vehicleDisplayName]。
+                </Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_COUNTGROUP">
                 <Original>Count the number of infantry, vehicles, tank, air, ships in a group.</Original>
@@ -649,8 +676,10 @@
                 <Chinese_Traditional>使載具類物品可拾取並為其添加變量。</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_BROADCAST">
-                <Original>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.</Original>
-                <English>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.</English>
+                <Original>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.
+                </Original>
+                <English>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.
+                </English>
                 <Chinese>创建一个虚拟摄像机并向所有客户端广播15秒的画中画视频。</Chinese>
                 <Chinese_Traditional>創建一個虛擬攝像機並向所有客戶端廣播15秒的畫中畫視頻。</Chinese_Traditional>
             </Key>
@@ -661,8 +690,12 @@
                 <Chinese_Traditional>為指定單位創建HALO或常規跳傘。</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_REALPARADROP">
-                <Original>Create a HALO or regular parachute jump for the given units with simulation of running out of an airplane.</Original>
-                <English>Create a HALO or regular parachute jump for the given units with simulation of running out of an airplane.</English>
+                <Original>Create a HALO or regular parachute jump for the given units with simulation of running out of
+                    an airplane.
+                </Original>
+                <English>Create a HALO or regular parachute jump for the given units with simulation of running out of
+                    an airplane.
+                </English>
                 <Chinese>为指定单位创建HALO或常规跳伞，并模拟从飞机跳出的过程。</Chinese>
                 <Chinese_Traditional>為指定單位創建HALO或常規跳傘，並模擬從飛機跳出的過程。</Chinese_Traditional>
             </Key>
@@ -818,7 +851,7 @@
                 <Chinesesimp>使用BI的setTask函数处理服务器上的任务。</Chinesesimp>
                 <Chinese>使用BI的setTask函數處理伺服器上的任務。</Chinese>
             </Key>
-        <Key ID="STR_MCC_GENERAL_HALT">
+            <Key ID="STR_MCC_GENERAL_HALT">
                 <Original>halt all function in game</Original>
                 <Chinesesimp>暂停游戏中的所有功能。</Chinesesimp>
                 <Chinese>暫停遊戲中的所有功能。</Chinese>
@@ -826,17 +859,228 @@
         </Container>
     </Package>
     <package name="mcc_groupGen">
-            <container name="Faction">
-                   <Key ID="$STR_mcc_groupGen_factionTittle">
-                       <Original>Faction:</Original>
-                       <Chinesesimp>阵营：</Chinesesimp>
-                       <Chinese>陣營：</Chinese>
-                   </Key>
-                <Key ID="$STR_mcc_closeGeneratorButton">
-                       <Original>Close</Original>
-                       <Chinesesimp>关闭</Chinesesimp>
-                       <Chinese>關閉</Chinese>
-                   </Key>
-            </container>>
-    </package>>
+        <container name="Faction">
+            <Key ID="STR_mcc_groupGen_factionTittle">
+                <Original>Faction:</Original>
+                <Chinesesimp>阵营：</Chinesesimp>
+                <Chinese>陣營：</Chinese>
+            </Key>
+            <Key ID="STR_mcc_closeGeneratorButton">
+                <Original>Close</Original>
+                <Chinesesimp>关闭</Chinesesimp>
+                <Chinese>關閉</Chinese>
+            </Key>
+        </container>
+        >
+        <container name="Map">
+            <Key ID="STR_mcc_groupGen_WestButton_text">
+                <Original>West</Original>
+                <Chinesesimp>西方</Chinesesimp>
+                <Chinese>西方</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_WestButton_tooltips">
+                <Original>Show only West's side units</Original>
+                <Chinesesimp>只展示西方阵营的单位</Chinesesimp>
+                <Chinese>只顯示西方陣營的單位</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_EastButton_text">
+                <Original>East</Original>
+                <Chinesesimp>东方</Chinesesimp>
+                <Chinese>东方</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_EastButton_tooltips">
+                <Original>Show only East's side units</Original>
+                <Chinesesimp>只展示东方阵营的单位</Chinesesimp>
+                <Chinese>只顯示东方陣營的單位</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_GuerButton_text">
+                <Original>Guer</Original>
+                <Chinesesimp>独立方</Chinesesimp>
+                <Chinese>獨立方</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_GuerButton_tooltips">
+                <Original>Show only Guer's side units</Original>
+                <Chinesesimp>只展示独立方阵营的单位</Chinesesimp>
+                <Chinese>只顯示獨立方陣營的單位</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_CivButton_text">
+                <Original>Civ</Original>
+                <Chinesesimp>平民</Chinesesimp>
+                <Chinese>平民</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_CivButton_tooltips">
+                <Original>Show only Civ's side units</Original>
+                <Chinesesimp>只展示平民阵营的单位</Chinesesimp>
+                <Chinese>只顯示平民陣營的單位</Chinese>
+            </Key>
+            <key ID="STR_mcc_groupGen_PlayersButton_text">
+                <Original>Players</Original>
+                <Chinesesimp>玩家</Chinesesimp>
+                <Chinese>玩家</Chinese>
+            </key>
+            <key ID="STR_mcc_groupGen_PlayersButton_tooltips">
+                <Original>Show only Players' units</Original>
+                <Chinesesimp>只展示玩家的单位</Chinesesimp>
+                <Chinese>只顯示玩家的單位</Chinese>
+            </key>
+            <Key ID="STR_mcc_groupGen_AllButton_text">
+                <Original>All</Original>
+                <Chinesesimp>全部</Chinesesimp>
+                <Chinese>全部</Chinese>
+            </Key>
+            <Key ID="STR_mcc_groupGen_AllButton_tooltips">
+                <Original>Show all units</Original>
+                <Chinesesimp>展示全部的单位</Chinesesimp>
+                <Chinese>顯示全部的單位</Chinese>
+            </Key>
+        </container>
+        >
+        <container name="BENCHMARK">
+            <Key ID="STR_MCC_MissionMakerTittle_text">
+                <Original>Mission Maker:</Original>
+                <Chinesesimp>任务制作器：</Chinesesimp>
+                <Chinese>任務製作器：</Chinese>
+            </Key>
+            <Key ID="STR_MCC_clientFPSTittle_text">
+                <Original>Client FPS:</Original>
+                <Chinesesimp>客户端FPS：</Chinesesimp>
+                <Chinese>客戶端FPS：</Chinese>
+            </Key>
+            <Key ID="STR_MCC_serverFPSTittle_text">
+                <Original>Server FPS:</Original>
+                <Chinsesmp>服务器FPS：</Chinsesmp>
+                <Chinese>伺服器FPS：</Chinese>
+            </Key>
+        </container>
+        >
+        <container name="BUTTONS">
+            <Key ID="STR_MCC_stopCapture_text">
+                <Original>Stop Capturing</Original>
+                <Chinesesmp>停止捕捉</Chinesesmp>
+                <Chinese>停止捕獲</Chinese>
+            </Key>
+            <Key ID="STR_MCC_stopCapture_tooltip">
+                <Original>Once a trigger has been generated all the action done by MCC won't execute but will be saved
+                    to the trigger until this button is pressed
+                </Original>
+                <Chinsesmp>一旦生成了触发器，MCC所做的所有操作都不会执行，但会保存到触发器，直到按下此按钮</Chinsesmp>
+                <Chinese>一旦生成了觸發器，MCC所做的所有操作都不會執行，但會保存到觸發器，直到按下此按鈕</Chinese>
+            </Key>
+            <Key ID="STR_MCC_cacheButton_text">
+                <Original>Cache Group</Original>
+                <Chinesesmp>缓存组</Chinesesmp>
+                <Chinese>快取組</Chinese>
+            </Key>
+            <Key ID="STR_MCC_cacheButton_tooltip">
+                <Original>Give the selected groups to caching system</Original>
+                <Chinesesmp>将所选组提供给缓存系统</Chinesesmp>
+                <Chinese>將所選組提供給快取系統</Chinese>
+            </Key>
+            <Key ID="STR_MCC_occupyButton_text">
+                <Original>Occupy Zone</Original>
+                <Chinesesmp>占领区域</Chinesesmp>
+                <Chinese>佔據區域</Chinese>
+            </Key>
+            <Key ID="STR_MCC_occupyButton_tooltip">
+                <Original>Occupy current selected zone with the selected faction's units</Original>
+                <Chinesesmp>占领当前所选区域，使用所选阵营的单位</Chinesesmp>
+                <Chinese>佔據當前所選區域，使用所選陣營的單位</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ambientBFButton_text">
+                <Original>Ambient Warzone(off)</Original>
+                <Chinesesmp>环境战区(关闭)</Chinesesmp>
+                <Chinese>環境戰區(關閉)</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ambientBFButton_tooltip">
+                <Original>Spawn random ambient battlefield around the player</Original>
+                <Chinesesmp>在玩家周围生成随机的环境战区</Chinesesmp>
+                <Chinese>在玩家周圍生成隨機的環境戰區</Chinese>
+            </Key>
+            <Key ID="STR_MCC_saveLoad_text">
+                <Original>Save/Load</Original>
+                <Chinesesmp>保存/加载</Chinesesmp>
+                <Chinese>儲存/載入</Chinese>
+            </Key>
+            <Key ID="STR_MCC_login_text">
+                <Original>logout</Original>
+                <Chinesesmp>登出</Chinesesmp>
+                <Chinese>登出</Chinese>
+            </Key>
+            <Key ID="STR_MCC_login_tooltip">
+                <Original>Login or logout as the mission maker</Original>
+                <Chinesesmp>作为任务制作人登入或登出</Chinesesmp>
+                <Chinese>登入或登出為任務製作者</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ghostMode_text">
+                <Original>Ghost Mode</Original>
+                <Chinesesmp>幽灵模式</Chinesesmp>
+                <Chinese>幽靈模式</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ghostMode_tooltip">
+                <Original>Make the mission maker invisible to enemies</Original>
+                <Chinesesmp>使任务制作人对敌人不可见</Chinesesmp>
+                <Chinese>使任務製作者對敵人不可見</Chinese>
+            </Key>
+            <Key ID="STR_MCC_spectator_text">
+                <Original>Spectator</Original>
+                <Chinesesmp>旁观模式</Chinesesmp>
+                <Chinese>旁觀模式</Chinese>
+            </Key>
+            <Key ID="STR_MCC_spectator_tooltip">
+                <Original>Open Spectator Mode</Original>
+                <Chinesesmp>打开旁观模式</Chinesesmp>
+                <Chinese>開啟旁觀模式</Chinese>
+            </Key>
+            <Key ID="STR_MCC_Teleport_text">
+                <Original>Teleport</Original>
+                <Chinesesmp>传送</Chinesesmp>
+                <Chinese>傳送</Chinese>
+            </Key>
+            <Key ID="STR_MCC_Teleport_tooltip">
+                <Original>Teleport the mission maker and any vehicle he is in to a new location</Original>
+                <Chinesesmp>传送任务制作人及其所驾驶的车辆到新的位置</Chinesesmp>
+                <Chinese>傳送任務製作者及其所駕駛的車輛到新的位置</Chinese>
+            </Key>
+            <Key ID="STR_MCC_MissionWIn_text">
+                <Original>Mission Won</Original>
+                <Chinesesmp>任务胜利</Chinesesmp>
+                <Chinese>任務勝利</Chinese>
+            </Key>
+            <Key ID="STR_MCC_MissionWIn_tooltip">
+                <Original>End mission with - Mission Accomplished</Original>
+                <Chinesesmp>标记任务为胜利并结束游戏</Chinesesmp>
+                <Chinese>標記任務為勝利並結束遊戲</Chinese>
+            </Key>
+            <Key ID="STR_MCC_MissionLost_text">
+                <Original>Mission Failed</Original>
+                <Chinesesmp>任务失败</Chinesesmp>
+                <Chinese>任務失敗</Chinese>
+            </Key>
+            <Key ID="STR_MCC_MissionLost_tooltip">
+                <Original>End mission with - Mission Failed</Original>
+                <Chinesesmp>标记任务为失败并结束游戏</Chinesesmp>
+                <Chinese>標記任務為失敗並結束遊戲</Chinese>
+            </Key>
+            <Key ID="STR_MCC_openMWButton_text">
+                <Original>Mission Generator</Original>
+                <Chinesesmp>任务生成器</Chinesesmp>
+                <Chinese>任務生成器</Chinese>
+            </Key>
+            <Key ID="STR_MCC_openMWButton_tooltip">
+                <Original>Open mission Generator</Original>
+                <Chinesesmp>打开任务生成器</Chinesesmp>
+                <Chinese>開啟任務生成器</Chinese>
+            </Key>
+            <Key ID="STR_MCC_openFrontLineButton_text">
+                <Original>Front Lines</Original>
+                <Chinesesmp>前线</Chinesesmp>
+                <Chinese>前線</Chinese>
+            </Key>
+            <Key ID="STR_MCC_openFrontLineButton_tooltip">
+                <Original>Open Front Lines Generator</Original>
+                <Chinesesmp>打开前线生成器</Chinesesmp>
+                <Chinese>開啟前線生成器</Chinese>
+            </Key>
+        </container>
+    </package>
 </Project>
