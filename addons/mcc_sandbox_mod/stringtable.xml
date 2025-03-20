@@ -956,7 +956,7 @@
         <container name="BUTTONS">
             <Key ID="STR_MCC_stopCapture_text">
                 <Original>Stop Capturing</Original>
-                <Chinesesmp>停止捕捉</Chinesesmp>
+                <Chinesesimp>停止捕捉</Chinesesimp>
                 <Chinese>停止捕獲</Chinese>
             </Key>
             <Key ID="STR_MCC_stopCapture_tooltip">
@@ -968,117 +968,117 @@
             </Key>
             <Key ID="STR_MCC_cacheButton_text">
                 <Original>Cache Group</Original>
-                <Chinesesmp>缓存组</Chinesesmp>
+                <Chinesesimp>缓存组</Chinesesimp>
                 <Chinese>快取組</Chinese>
             </Key>
             <Key ID="STR_MCC_cacheButton_tooltip">
                 <Original>Give the selected groups to caching system</Original>
-                <Chinesesmp>将所选组提供给缓存系统</Chinesesmp>
+                <Chinesesimp>将所选组提供给缓存系统</Chinesesimp>
                 <Chinese>將所選組提供給快取系統</Chinese>
             </Key>
             <Key ID="STR_MCC_occupyButton_text">
                 <Original>Occupy Zone</Original>
-                <Chinesesmp>占领区域</Chinesesmp>
+                <Chinesesimp>占领区域</Chinesesimp>
                 <Chinese>佔據區域</Chinese>
             </Key>
             <Key ID="STR_MCC_occupyButton_tooltip">
                 <Original>Occupy current selected zone with the selected faction's units</Original>
-                <Chinesesmp>占领当前所选区域，使用所选阵营的单位</Chinesesmp>
+                <Chinesesimp>占领当前所选区域，使用所选阵营的单位</Chinesesimp>
                 <Chinese>佔據當前所選區域，使用所選陣營的單位</Chinese>
             </Key>
             <Key ID="STR_MCC_ambientBFButton_text">
                 <Original>Ambient Warzone(off)</Original>
-                <Chinesesmp>环境战区(关闭)</Chinesesmp>
+                <Chinesesimp>环境战区(关闭)</Chinesesimp>
                 <Chinese>環境戰區(關閉)</Chinese>
             </Key>
             <Key ID="STR_MCC_ambientBFButton_tooltip">
                 <Original>Spawn random ambient battlefield around the player</Original>
-                <Chinesesmp>在玩家周围生成随机的环境战区</Chinesesmp>
+                <Chinesesimp>在玩家周围生成随机的环境战区</Chinesesimp>
                 <Chinese>在玩家周圍生成隨機的環境戰區</Chinese>
             </Key>
             <Key ID="STR_MCC_saveLoad_text">
                 <Original>Save/Load</Original>
-                <Chinesesmp>保存/加载</Chinesesmp>
+                <Chinesesimp>保存/加载</Chinesesimp>
                 <Chinese>儲存/載入</Chinese>
             </Key>
             <Key ID="STR_MCC_login_text">
                 <Original>logout</Original>
-                <Chinesesmp>登出</Chinesesmp>
+                <Chinesesimp>登出</Chinesesimp>
                 <Chinese>登出</Chinese>
             </Key>
             <Key ID="STR_MCC_login_tooltip">
                 <Original>Login or logout as the mission maker</Original>
-                <Chinesesmp>作为任务制作人登入或登出</Chinesesmp>
+                <Chinesesimp>作为任务制作人登入或登出</Chinesesimp>
                 <Chinese>登入或登出為任務製作者</Chinese>
             </Key>
             <Key ID="STR_MCC_ghostMode_text">
                 <Original>Ghost Mode</Original>
-                <Chinesesmp>幽灵模式</Chinesesmp>
+                <Chinesesimp>幽灵模式</Chinesesimp>
                 <Chinese>幽靈模式</Chinese>
             </Key>
             <Key ID="STR_MCC_ghostMode_tooltip">
                 <Original>Make the mission maker invisible to enemies</Original>
-                <Chinesesmp>使任务制作人对敌人不可见</Chinesesmp>
+                <Chinesesimp>使任务制作人对敌人不可见</Chinesesimp>
                 <Chinese>使任務製作者對敵人不可見</Chinese>
             </Key>
             <Key ID="STR_MCC_spectator_text">
                 <Original>Spectator</Original>
-                <Chinesesmp>旁观模式</Chinesesmp>
+                <Chinesesimp>旁观模式</Chinesesimp>
                 <Chinese>旁觀模式</Chinese>
             </Key>
             <Key ID="STR_MCC_spectator_tooltip">
                 <Original>Open Spectator Mode</Original>
-                <Chinesesmp>打开旁观模式</Chinesesmp>
+                <Chinesesimp>打开旁观模式</Chinesesimp>
                 <Chinese>開啟旁觀模式</Chinese>
             </Key>
             <Key ID="STR_MCC_Teleport_text">
                 <Original>Teleport</Original>
-                <Chinesesmp>传送</Chinesesmp>
+                <Chinesesimp>传送</Chinesesimp>
                 <Chinese>傳送</Chinese>
             </Key>
             <Key ID="STR_MCC_Teleport_tooltip">
                 <Original>Teleport the mission maker and any vehicle he is in to a new location</Original>
-                <Chinesesmp>传送任务制作人及其所驾驶的车辆到新的位置</Chinesesmp>
+                <Chinesesimp>传送任务制作人及其所驾驶的车辆到新的位置</Chinesesimp>
                 <Chinese>傳送任務製作者及其所駕駛的車輛到新的位置</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionWIn_text">
                 <Original>Mission Won</Original>
-                <Chinesesmp>任务胜利</Chinesesmp>
+                <Chinesesimp>任务胜利</Chinesesimp>
                 <Chinese>任務勝利</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionWIn_tooltip">
                 <Original>End mission with - Mission Accomplished</Original>
-                <Chinesesmp>标记任务为胜利并结束游戏</Chinesesmp>
+                <Chinesesimp>标记任务为胜利并结束游戏</Chinesesimp>
                 <Chinese>標記任務為勝利並結束遊戲</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionLost_text">
                 <Original>Mission Failed</Original>
-                <Chinesesmp>任务失败</Chinesesmp>
+                <Chinesesimp>任务失败</Chinesesimp>
                 <Chinese>任務失敗</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionLost_tooltip">
                 <Original>End mission with - Mission Failed</Original>
-                <Chinesesmp>标记任务为失败并结束游戏</Chinesesmp>
+                <Chinesesimp>标记任务为失败并结束游戏</Chinesesimp>
                 <Chinese>標記任務為失敗並結束遊戲</Chinese>
             </Key>
             <Key ID="STR_MCC_openMWButton_text">
                 <Original>Mission Generator</Original>
-                <Chinesesmp>任务生成器</Chinesesmp>
+                <Chinesesimp>任务生成器</Chinesesimp>
                 <Chinese>任務生成器</Chinese>
             </Key>
             <Key ID="STR_MCC_openMWButton_tooltip">
                 <Original>Open mission Generator</Original>
-                <Chinesesmp>打开任务生成器</Chinesesmp>
+                <Chinesesimp>打开任务生成器</Chinesesimp>
                 <Chinese>開啟任務生成器</Chinese>
             </Key>
             <Key ID="STR_MCC_openFrontLineButton_text">
                 <Original>Front Lines</Original>
-                <Chinesesmp>前线</Chinesesmp>
+                <Chinesesimp>前线</Chinesesimp>
                 <Chinese>前線</Chinese>
             </Key>
             <Key ID="STR_MCC_openFrontLineButton_tooltip">
                 <Original>Open Front Lines Generator</Original>
-                <Chinesesmp>打开前线生成器</Chinesesmp>
+                <Chinesesimp>打开前线生成器</Chinesesimp>
                 <Chinese>開啟前線生成器</Chinese>
             </Key>
         </container>
