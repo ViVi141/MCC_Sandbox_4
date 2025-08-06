@@ -1,4 +1,4 @@
-@echo off
+    @echo off
 chcp 65001 >nul
 echo ========================================
 echo Git 提交工具
@@ -61,7 +61,7 @@ if errorlevel 1 (
 echo 提交成功！
 echo.
 echo 提示: 如需推送到远程仓库，请使用以下命令:
-echo git remote add origin https://gitee.com/your-username/space-planning-spider.git
+echo git remote add origin https://gitee.com/ViVi141/MCC_Sandbox_4.git
 echo git push -u origin master
 echo.
 pause
