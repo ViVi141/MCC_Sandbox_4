@@ -2,7 +2,7 @@
 # MCC Sandbox 4 社区维护版 | MCC Sandbox 4 Community Edition
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
-[![开源仓库](https://img.shields.io/badge/Gitee-开源仓库-C71D23?logo=gitee)](https://gitee.com/ViVi141/MCC_Sandbox_4)
+[![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)]([https://github.com/ViVi141](https://github.com/ViVi141/MCC_Sandbox_4))
 [![GPLv3协议](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 > 基于原版MCC Sandbox 4模组的社区维护版本 | Community-maintained fork of original MCC Sandbox 4 mod
