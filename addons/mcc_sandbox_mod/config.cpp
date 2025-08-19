@@ -21,7 +21,7 @@ class CfgPatches
 
 	class mcc_sandbox_curatorExp
 	{
-		units[] = {"MCC_Module_Base","MCC_Module_addUnitsToZeusCurator","MCC_Module_ambientCiviliansCurator","MCC_Module_MCCCASCurator","MCC_Module_createEvacCurator","MCC_Module_createIEDCurator","MCC_Module_createArmedCivilianCurator","MCC_Module_nightEffectsCurator","MCC_Module_lockDoorsCurator","MCC_Module_atmosphereCurator","MCC_Module_warZoneCurator","MCC_Module_garrisonBuildingsCurator","MCC_Module_damagePartCurator","MCC_Module_vehicleSpawnerCurator","MCC_Module_campaignInitCurator","MCC_Module_setResourcesCurator","MCC_Module_underCoverCurator","MCC_Module_settingsInGameUICurator","MCC_Module_settingsMedicSystemCurator","MCC_Module_settingsCurator","MCC_Module_settingsMechanicsCurator","MCC_Module_settingsRSCurator","MCC_Module_ambientBirdsCurator","MCC_module_ambientFireCurator","MCC_module_survivalSpawnCratesCurator","MCC_Module_settingsGAIACurator","MCC_Module_createIntelCurator","MCC_Module_LHDSpawnCurator","MCC_Module_LHDSpawnMenuCurator","MCC_Module_GAIARespawnsCurator","MCC_Module_RTSBuildingsCurator","MCC_Module_PylonsChange","MCC_Module_CapturePointCurator","MCC_Module_medicSetStateCurator","MCC_Module_createShopCurator","‏‏MCC_Module_addValorCurator","MCC_ModuleObjective_FCurator","MCC_ammoBox","MCC_crateAmmo","MCC_crateSupply","MCC_crateFuel","MCC_Module_cargoLoad","MCC_Module_AI_assignToZone","MCC_Module_ambientCiviliansCuratorDenied","MCC_Module_AASSpawnAI"};
+		units[] = {"MCC_Module_Base","MCC_Module_addUnitsToZeusCurator","MCC_Module_ambientCiviliansCurator","MCC_Module_MCCCASCurator","MCC_Module_createEvacCurator","MCC_Module_createIEDCurator","MCC_Module_createArmedCivilianCurator","MCC_Module_nightEffectsCurator","MCC_Module_lockDoorsCurator","MCC_Module_atmosphereCurator","MCC_Module_warZoneCurator","MCC_Module_garrisonBuildingsCurator","MCC_Module_damagePartCurator","MCC_Module_vehicleSpawnerCurator","MCC_Module_campaignInitCurator","MCC_Module_setResourcesCurator","MCC_Module_underCoverCurator","MCC_Module_settingsInGameUICurator","MCC_Module_settingsMedicSystemCurator","MCC_Module_settingsCurator","MCC_Module_settingsMechanicsCurator","MCC_Module_settingsRSCurator","MCC_Module_ambientBirdsCurator","MCC_module_ambientFireCurator","MCC_module_survivalSpawnCratesCurator","MCC_Module_settingsGAIACurator","MCC_Module_createIntelCurator","MCC_Module_LHDSpawnCurator","MCC_Module_LHDSpawnMenuCurator","MCC_Module_GAIARespawnsCurator","MCC_Module_RTSBuildingsCurator","MCC_Module_PylonsChange","MCC_Module_CapturePointCurator","MCC_Module_medicSetStateCurator","MCC_Module_createShopCurator","MCC_Module_addValorCurator","MCC_ModuleObjective_FCurator","MCC_ammoBox","MCC_crateAmmo","MCC_crateSupply","MCC_crateFuel","MCC_Module_cargoLoad","MCC_Module_AI_assignToZone","MCC_Module_ambientCiviliansCuratorDenied","MCC_Module_AASSpawnAI"};
 		weapons[] = {};
 		requiredVersion = 1.00;
 		author = "shay_gman";
@@ -40,17 +40,17 @@ class CfgMods
 		actionName = "Website";
 		tooltip = "MCC Sandbox";
 		overview = "Mission Control Center is a powerful game mode that let the ArmA player complete freedom as a mission maker. <br />With MCC you can build complected missions the way you wanted in few minutes and save them as a mission file or in your profile to share with friends. <br />MCC have a dynamic AI system that called GAIA that gives AI more human like tactics while they flank, support and use CAS or artillery.  MCC holds unique mission generator so if you can just push in some variables and MCC will generate a complete random mission set to your play-style and the amount of players and objectives needed. MCC holds much more as unique: IED, CAS, Evac Helicopters aproch, air drops, 3D editor, persistence database for players levels and achievements and many many more.";
-		picture = "mcc_sandbox_mod\data\mod.paa";
-		logo = "mcc_sandbox_mod\data\mod.paa";
-		logoOver = "mcc_sandbox_mod\data\mod.paa";
-		logoSmall = "mcc_sandbox_mod\data\mod.paa";
+		picture = "mcc_sandbox_mod\\data\\console_small.paa";
+		logo = "mcc_sandbox_mod\\data\\console_small.paa";
+		logoOver = "mcc_sandbox_mod\\data\\console_small.paa";
+		logoSmall = "mcc_sandbox_mod\\data\\console_small.paa";
 	};
 };
 
 //CBA
 class Extended_PreInit_EventHandlers {
     class MCC_PretInits {
-         init = call compile preprocessFileLineNumbers "mcc_sandbox_mod\XEH_preInit.sqf";
+         init = "call compile preprocessFileLineNumbers 'mcc_sandbox_mod\XEH_preInit.sqf'";
     };
 };
 
@@ -418,7 +418,7 @@ class CfgMissions
 		{
 			briefingName = "(MCC) Template";
 			directory = "mcc_sandbox_mod\sampleMissions\MCC_Template.Malden";
-		}
+		};
 	};
 };
 

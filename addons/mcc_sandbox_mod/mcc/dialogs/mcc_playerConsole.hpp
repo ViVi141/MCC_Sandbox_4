@@ -117,7 +117,7 @@ class mcc_consoleF1: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F1";
-	onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\console\conoleSwitchMenu.sqf'");
+	onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\\general_scripts\\console\\consoleSwitchMenu.sqf'");
 	tooltip = "Main Menu";
 };
 class mcc_consoleF2: MCC_RscButton
@@ -128,7 +128,7 @@ class mcc_consoleF2: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F2";
-	onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\console\conoleSwitchMenu.sqf'");
+	onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\\general_scripts\\console\\consoleSwitchMenu.sqf'");
 	tooltip = "UAV Control";
 };
 class mcc_consoleF3: MCC_RscButton
@@ -139,7 +139,7 @@ class mcc_consoleF3: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F3";
-	onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\console\conoleSwitchMenu.sqf'");
+	onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\\general_scripts\\console\\consoleSwitchMenu.sqf'");
 	tooltip = "AC-130 Control";
 };
 class mcc_consoleF4: MCC_RscButton
@@ -151,7 +151,7 @@ class mcc_consoleF4: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F4";
 	tooltip = "Forward Observer Artillery";
-	onButtonClick = __EVAL("[0,0,0,[1]] execVM '"+MCCPATH+"mcc\general_scripts\console\conoleOpenMenu.sqf'");
+	onButtonClick = __EVAL("[0,0,0,[1]] execVM '"+MCCPATH+"mcc\\general_scripts\\console\\consoleOpenMenu.sqf'");
 };
 class mcc_consoleF5: MCC_RscButton
 {

@@ -771,7 +771,7 @@ if ( isServer ) then {
 		{
 			_str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["%1 is no longer the commander",_name] + "</t>";
 			_command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-			[[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[2,compile _command] remoteExec ["MCC_fnc_globalExecute", true, false];
 
 			MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],"", true];
 		};
@@ -821,7 +821,8 @@ if ( isServer ) then {
 	publicVariable "MCC_iniDBenabled"
 } else {
 	if (isMultiplayer) then {
-		waituntil {!isnil "MCC_iniDBenabled"};
+		waitUntil { !isNil "MCC_iniDBenabled" || time > 30 };
+		if (isNil "MCC_iniDBenabled") then { MCC_iniDBenabled = false; };
 	} else {
 		MCC_iniDBenabled = false;
 	};
@@ -960,7 +961,7 @@ if (hasInterface) then {
 			_eh = player addEventHandler ["HandleHeal",{_this spawn {
 											params ["_unit","_healer"];
 											if ((_unit != _healer) && (missionNamespace getVariable ["CP_activated",false])) then {
-												[[getPlayerUID _healer,200,"For Healing"], "MCC_fnc_addRating", _healer, false] spawn BIS_fnc_MP;
+												[getPlayerUID _healer,200,"For Healing"] remoteExec ["MCC_fnc_addRating", _healer, false];
 											};
 
 											if (missionNamespace getVariable ["MCC_medicSystemEnabled",false]) then {

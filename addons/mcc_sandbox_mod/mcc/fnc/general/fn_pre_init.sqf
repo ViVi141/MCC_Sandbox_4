@@ -1,3 +1,5 @@
 
-if ( isClass (configFile >> "CfgPatches" >> "mcc_sandbox") ) then { mcc_sandbox = true;[] execVM "\mcc_sandbox_mod\init.sqf"};
-//if (isNil 'mcc_sandbox') then { mcc_sandbox = true;[] execVM "\mcc_sandbox_mod\init.sqf"};
+// Set flag only in preInit; heavy initialization moved to postInit to avoid load-time blocking
+if ( isClass (configFile >> "CfgPatches" >> "mcc_sandbox") ) then {
+    mcc_sandbox = true;
+};

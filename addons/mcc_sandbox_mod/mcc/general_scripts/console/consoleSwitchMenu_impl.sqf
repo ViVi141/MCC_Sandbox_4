@@ -24,4 +24,5 @@ switch (_type) do
 	};
 
 if (!_ok) then {hint "Failed to open dialog"};
-	
+
+

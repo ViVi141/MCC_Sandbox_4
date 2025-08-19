@@ -77,7 +77,7 @@ if (MCC_PrevHijacked_Group != "") then {
 	waituntil {group player == (groupFromNetID MCC_PrevHijacked_Group)};
 
 	if (isMultiplayer) then {
-		[[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group Player), netID player]], "MCC_fnc_globalExecute", leader group player, false] spawn BIS_fnc_MP;
+		[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group Player), netID player]] remoteExec ["MCC_fnc_globalExecute", leader group player, false];
 	} else {
 		(group player) selectLeader player;
 	};

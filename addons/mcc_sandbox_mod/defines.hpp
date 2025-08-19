@@ -161,8 +161,8 @@ class RscTitles
         };
 	};
 
-	#include "mcc\dialogs\mcc_InteractionRsc.hpp"
-	#include "mcc\dialogs\compass.hpp"
+	#include "mcc\\Dialogs\\mcc_InteractionRsc.hpp"
+	#include "mcc\\Dialogs\\compass.hpp"
 	#include "mcc\dialogs\mcc_3dObject.hpp"
 	#include "mcc\dialogs\sqlPDA\MCC_SQLPDA_rsc.hpp"
 	#include "mcc\survive\dialogs\mcc_rscSurviveStats.hpp"

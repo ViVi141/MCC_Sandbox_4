@@ -112,7 +112,7 @@ class ArtilleryDialog
 			h = 0.0329871 * safezoneH;
 			text = "F4";
 			tooltip = "Forward observer artillery's interface";
-			onButtonClick = __EVAL("nul=[0,0,0,[1]] execVM '"+MCCPATH+"mcc\general_scripts\console\conoleOpenMenu.sqf'");
+			onButtonClick = __EVAL("nul=[0,0,0,[1]] execVM '"+MCCPATH+"mcc\\general_scripts\\console\\consoleOpenMenu.sqf'");
 		};
 		class mcc_consoleF5: MCC_RscButton
 		{
@@ -493,7 +493,7 @@ class ArtilleryDialog
 			w = 0.0572917 * safezoneW;
 			h = 0.055 * safezoneH;
 			text = "Cancel";
-			onButtonClick = __EVAL("player execVM '"+MCCPATH+"bon_artillery\bon_arti_cancle.sqf'");
+			onButtonClick = __EVAL("player execVM '"+MCCPATH+"bon_artillery\\bon_arti_cancel.sqf'");
 		};
 
 

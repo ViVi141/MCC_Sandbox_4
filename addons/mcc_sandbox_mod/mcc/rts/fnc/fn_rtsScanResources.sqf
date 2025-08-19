@@ -191,7 +191,7 @@ missionNamespace setVariable [format ['MCC_rtsMissionObjects_%1', _side],_missio
 publicVariable format ['MCC_rtsMissionOn_%1', _side];
 
 //Send hint
-[[_missionText,true],"MCC_fnc_globalHint",_side,false] spawn BIS_fnc_MP;
+[_missionText,true] remoteExec ["MCC_fnc_globalHint",_side,false];
 
 //Cleanup
 deleteVehicle _trg;

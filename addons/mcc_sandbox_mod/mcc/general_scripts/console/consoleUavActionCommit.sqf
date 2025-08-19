@@ -23,6 +23,6 @@ if (_type == 0) then {											//open UAV
 	if (dialog) then {
 		closedialog 0; 
 		closedialog 0; 
-		_nul=[] execVM MCC_path + "general_scripts\console\conoleUavAction.sqf";
+		_nul=[] execVM MCC_path + "general_scripts\\console\\consoleUavAction.sqf";
 		};
 	};
