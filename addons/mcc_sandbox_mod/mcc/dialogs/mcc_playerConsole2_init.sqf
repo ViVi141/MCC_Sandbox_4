@@ -185,7 +185,7 @@ if ((str (finddisplay mcc_playerConsole2_IDD) != "no display") && (alive MCC_Con
 			camdestroy MCC_fakeUAV;
 			MCC_fakeUAV = nil;
 			[(_mccdialog displayctrl MCC_CONSOLE_UAVPIP)] call MCC_fnc_pipOpen;
-			_null = [1] execVM format ["%1mcc\\general_scripts\\console\\consoleSwitchMenu.sqf",MCC_path];
+			_null = [1] execVM format ["%1mcc\general_scripts\console\consoleSwitchMenu.sqf",MCC_path];
 		};
 	};
 

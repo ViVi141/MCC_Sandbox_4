@@ -70,7 +70,7 @@ if ((_index == 1) && _commander && (missionNamespace getVariable ["MCC_allowCons
 	if (dialog) then {
 		while {dialog} do {closeDialog 0};
 	} else {
-		_null = [nil,nil,nil,[0]] execVM  format ["%1mcc\\general_scripts\\console\\consoleOpenMenu.sqf",MCC_path];
+		_null = [nil,nil,nil,[0]] execVM  format ["%1mcc\general_scripts\console\consoleOpenMenu.sqf",MCC_path];
 	};
 };
 

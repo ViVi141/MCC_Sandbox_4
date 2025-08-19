@@ -85,7 +85,7 @@ class mcc_loginDialog
 		{
 			idc = 1006;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			onLBSelChanged =  __EVAL("[2] execVM '"+MCCPATH+"mcc\\pop_menu\\mission_settings.sqf'");
+			onLBSelChanged =  __EVAL("[2] execVM '"+MCCPATH+"mcc\pop_menu\mission_settings.sqf'");
 
 			x = 0.4 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
@@ -97,7 +97,7 @@ class mcc_loginDialog
 		{
 			idc = 1007;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			onLBSelChanged =  __EVAL("[1] execVM '"+MCCPATH+"mcc\\pop_menu\\mission_settings.sqf'");
+			onLBSelChanged =  __EVAL("[1] execVM '"+MCCPATH+"mcc\pop_menu\mission_settings.sqf'");
 			colorText[] = {1,1,1,1};
 
 			x = 0.4 * safezoneW + safezoneX;
