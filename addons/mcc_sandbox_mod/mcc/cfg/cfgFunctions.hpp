@@ -7,6 +7,11 @@ class general
         preInit = 1;
         description = "STR_MCC_GENERAL_PRE_INIT";
     };
+    class post_init
+    {
+        postInit = 1;
+        description = "STR_MCC_GENERAL_POST_INIT";
+    };
     #else
     file = "mcc\fnc\general";
     #endif

@@ -20,9 +20,9 @@ class GroupList;
 class UnitList;
 
 //--------------------------Dialogs----------------------------------------------------
-#include "\mcc_sandbox_mod\mcc\dialogs\mcc_dialogs.hpp"
-#include "\mcc_sandbox_mod\mcc\dialogs\mcc_saveLoadScreen.hpp"
-#include "\mcc_sandbox_mod\mcc\dialogs\mcc_3d_dialog.hpp"
+#include "\mcc_sandbox_mod\mcc\Dialogs\mcc_dialogs.hpp"
+#include "\mcc_sandbox_mod\mcc\Dialogs\mcc_saveLoadScreen.hpp"
+#include "\mcc_sandbox_mod\mcc\Dialogs\mcc_3d_dialog.hpp"
 #include "\mcc_sandbox_mod\mcc\Dialogs\mcc_boxGen.hpp"
 #include "\mcc_sandbox_mod\mcc\Dialogs\mcc_groupsGen.hpp"
 #include "\mcc_sandbox_mod\mcc\Dialogs\mcc_MWMainDialog.hpp"
@@ -116,7 +116,7 @@ class CfgFunctions
 class cfgRemoteExec {
 	class Functions {
 		// State of remoteExec: 0-turned off, 1-turned on, taking whitelist into account, 2-turned on, however, ignoring whitelists (default because of backward compatibility)
-		mode = 2;
+		mode = 1;
 		// Ability to send jip messages: 0-disabled, 1-enabled (default)
 		jip = 1;
 
@@ -150,8 +150,8 @@ class CfgNotifications
 
 class RscTitles
 {
-	#include "\mcc_sandbox_mod\mcc\dialogs\mcc_InteractionRsc.hpp"
-	#include "\mcc_sandbox_mod\mcc\dialogs\compass.hpp"
+	#include "\mcc_sandbox_mod\mcc\Dialogs\mcc_InteractionRsc.hpp"
+	#include "\mcc_sandbox_mod\mcc\Dialogs\compass.hpp"
 	#include "\mcc_sandbox_mod\hcam\hcam.hpp"
 	#include "\mcc_sandbox_mod\mcc\dialogs\mcc_3dObject.hpp"
 	#include "\mcc_sandbox_mod\mcc\dialogs\sqlPDA\MCC_SQLPDA_rsc.hpp"

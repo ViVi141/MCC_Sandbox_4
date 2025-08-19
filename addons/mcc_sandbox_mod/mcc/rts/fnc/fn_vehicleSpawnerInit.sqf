@@ -44,7 +44,7 @@ if (_object isKindOf "mcc_sandbox_modulevehicleSpawner" || _object isKindOf "MCC
 
         waitUntil {!isNil "MCC_curator"};
         {
-            [[[_x], {MCC_curator addCuratorEditableObjects [[_this select 0],false];}], "BIS_fnc_spawn", false, false, false] call BIS_fnc_MP;
+            [[[_x], {MCC_curator addCuratorEditableObjects [[_this select 0],false];}] remoteExec ["BIS_fnc_spawn", false, false, false];
         } forEach [_billboard,_helipad];
 
         [_billboard,[_type,_helipad],"init"] remoteExec ["MCC_fnc_vehicleSpawnerInit",0,_billboard];

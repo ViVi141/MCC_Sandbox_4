@@ -525,7 +525,7 @@ MCC_fnc_rtsSelectGroup = {
 			if (count _groups > 0) then {
 				player globalRadio "CuratorWaypointPlaced";
 				{
-					[[1,screentoworld _pos,[2,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_x],true],"MCC_fnc_manageWp", leader _x, false] spawn BIS_fnc_MP;
+					[1,screentoworld _pos,[2,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
 				} forEach _groups;
 			};
 		} forEach MCC_ConsoleGroupSelected;
@@ -684,7 +684,7 @@ _createBorderScope = [_startPos,_size] call MCC_fnc_baseBuildBorders;
 				if (_ratio && _group getVariable ["MCC_rtsHighlightedGroup",false]) then {
 					_value = 0;
 					{
-						_value = _value + getDammage vehicle _x;
+						_value = _value + damage vehicle _x;
 					} forEach (units _group);
 					_value = _value/count units _group;
 
@@ -718,7 +718,7 @@ _createBorderScope = [_startPos,_size] call MCC_fnc_baseBuildBorders;
 			//Show fuel and health
 			_value = 0;
 			{
-				_value = _value + getDammage vehicle _x;
+				_value = _value + damage vehicle _x;
 			} forEach (units _group);
 			_value = _value/((count units _group) max 1);
 
@@ -1080,7 +1080,7 @@ MCC_CONST_CAM_Handler =
 							};
 						};
 
-						[[if (_ctrlK) then {0} else {1},_wpPos,[_wpType,"YELLOW","NO CHANGE","FULL","AWARE","true",_string,0],[_x],true],"MCC_fnc_manageWp", leader _x, false] spawn BIS_fnc_MP;
+						[if (_ctrlK) then {0} else {1},_wpPos,[_wpType,"YELLOW","NO CHANGE","FULL","AWARE","true",_string,0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
 					} forEach _groups;
 				};
 			};
