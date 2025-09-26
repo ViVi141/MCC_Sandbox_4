@@ -49,7 +49,7 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 
 ### 手动安装 | Manual Installation
 ```bash
-git clone https://gitee.com/ViVi141/MCC_Sandbox_4.git
+git clone https://github.com/ViVi141/MCC_Sandbox_4.git
 # Windows路径示例：
 # Steam\steamapps\common\YourGame\Mods
 # 
@@ -62,14 +62,14 @@ git clone https://gitee.com/ViVi141/MCC_Sandbox_4.git
 ## 🤝 参与贡献 | Contribution
 
 **我们欢迎以下贡献方式：**  
-- 🐛 [提交问题报告](https://gitee.com/ViVi141/MCC_Sandbox_4/issues)
+- 🐛 [提交问题报告](https://github.com/ViVi141/MCC_Sandbox_4/issues)
 - 💡 [建议新功能](https://steamcommunity.com/workshop/discussions/?id=3439287971)
 - 👨💻 提交代码PR
 - 🌐 翻译改进
 
 **English Version:**  
 We welcome contributions through:  
-- 🐛 [Issue reporting](https://gitee.com/ViVi141/MCC_Sandbox_4/issues)
+- 🐛 [Issue reporting](https://github.com/ViVi141/MCC_Sandbox_4/issues)
 - 💡 [Feature suggestions](https://steamcommunity.com/workshop/discussions/?id=3439287971)
 - 👨💻 Code PRs
 - 🌐 Translation improvements
@@ -80,7 +80,7 @@ We welcome contributions through:
 
 本项目基于 [shay_gman](https://steamcommunity.com/profiles/76561198007956840) 的**GPL 3.0协议**开发，您可以在以下位置查看完整许可：   |   
 This project is developed under the **GPL 3.0 license** by [shay_gman](https://steamcommunity.com/profiles/76561198007956840). You can view the full license at:  
-- [原始许可文件](https://gitee.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE) | [Original license file](https://gitee.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE)
+- [原始许可文件](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE) | [Original license file](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE)
 - [GPLv3协议全文](https://www.gnu.org/licenses/gpl-3.0.html) | [GPLv3 license full text](https://www.gnu.org/licenses/gpl-3.0.html)
 
 **协议要求：**   |   
@@ -101,7 +101,7 @@ This project is developed under the **GPL 3.0 license** by [shay_gman](https://s
 ---
 
 **📢 社区讨论**  | **Community Discussion**  
-[Steam讨论区](https://steamcommunity.com/workshop/discussions/?id=3439287971) | [Gitee Issues](https://gitee.com/ViVi141/MCC_Sandbox_4/issues)
+[Steam讨论区](https://steamcommunity.com/workshop/discussions/?id=3439287971) | [GitHub Issues](https://github.com/ViVi141/MCC_Sandbox_4/issues)
 ```
 
 
