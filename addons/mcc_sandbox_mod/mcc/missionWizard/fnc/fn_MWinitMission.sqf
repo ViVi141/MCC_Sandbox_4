@@ -171,20 +171,20 @@ if (typeName _wholeMap == typeName true ) then {
 
 		//First time? Let's map the island
 		if (isnil "MCC_MWcityLocations") then {
-			MCC_MWcityLocations     = [getpos MWMissionArea,15000,"city"] call MCC_fnc_MWbuildLocations;
-			MCC_MWmilitaryLocations = [getpos MWMissionArea,15000,"mil"] call MCC_fnc_MWbuildLocations;
-			MCC_MWhillsLocations 	= [getpos MWMissionArea,15000,"hill"] call MCC_fnc_MWbuildLocations;
-			MCC_MWnatureLocations 	= [getpos MWMissionArea,15000,"nature"] call MCC_fnc_MWbuildLocations;
-			MCC_MWmarineLocations	= [getpos MWMissionArea,15000,"marine"] call MCC_fnc_MWbuildLocations;
+				MCC_MWcityLocations     = [getpos MWMissionArea,15000,"city"] call MCC_fnc_MWbuildLocations;
+				MCC_MWmilitaryLocations = [getpos MWMissionArea,15000,"mil"] call MCC_fnc_MWbuildLocations;
+				MCC_MWhillsLocations 	= [getpos MWMissionArea,15000,"hill"] call MCC_fnc_MWbuildLocations;
+				MCC_MWnatureLocations 	= [getpos MWMissionArea,15000,"nature"] call MCC_fnc_MWbuildLocations;
+				MCC_MWmarineLocations	= [getpos MWMissionArea,15000,"marine"] call MCC_fnc_MWbuildLocations;
 		};
 
 		//Find out if the map have locations in it.
 		MCC_MWBasedLocations = if ((count MCC_MWcityLocations)>2) then {true} else {false};
 
 		//Find mission center
-		_center = [getpos MWMissionArea,2000,_isCQB,MCC_MWBasedLocations] call MCC_fnc_MWFindMissionCenter;
+			_center = [getpos MWMissionArea,2000,_isCQB,MCC_MWBasedLocations] call MCC_fnc_MWFindMissionCenter;
 
-		_missionCenter = (_center select 0);
+			_missionCenter = (_center select 0);
 		if (isNil "_missionCenter") exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
 			["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
@@ -335,13 +335,10 @@ _sounds set [count _sounds, _missionName1 select 1];
 _sounds set [count _sounds, _missionName2 select 1];
 
 //Create the parent Task
-private ["_missionObjective","_taskId","_missionName","_multipleObjectives","_taskCreationResults"];
+private ["_missionObjective","_taskId","_missionName","_multipleObjectives"];
 
 //More then one objective
 _multipleObjectives = {_x != "None" && _x != ""} count [_obj1, _obj2, _obj3] > 1;
-
-// Initialize task creation results array
-_taskCreationResults = [];
 
 //If just one task no need to create parent
 if (_multipleObjectives) then {
@@ -504,8 +501,7 @@ _objectives = [];
 								[_group, _objPos] call bis_fnc_taskDefend;
 							};
 						//Land_WaterBottle_01_stack_F Land_FoodSacks_01_small_brown_idap_F
-						_result = [_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTask;
-						_taskCreationResults pushBack ["Logistics", _result];
+							[_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTask;
 						};
 
 						//prevent spawning garrison in houses
@@ -713,30 +709,38 @@ switch (true) do
 {
 	case (_stealth):
 	{
-		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
-		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		_name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
+		_name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
+		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",
+		 localize "STR_MCC_MISSION_BLACK_OPS",toupper _name1,toupper _name2];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_BLACK_OPS",toupper _name1,toupper _name2,_markerName];
+		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper _name1,toupper _name2],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper _name1,toupper _name2];
 	};
 
-	case ((_center select 1) != ""):
+	case (!isNil "_center" && count _center >= 2 && (_center select 1) != ""):
 	{
 		_tempText = [localize "STR_MCC_MISSION_ATTACK_ON",localize "STR_MCC_MISSION_BATTLE_FOR",localize "STR_MCC_MISSION_ASSAULT_ON",localize "STR_MCC_MISSION_FIGHT_FOR"] call BIS_fnc_selectRandom;
-        _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3. %4 %5</t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%6'>%2 %3. %4 %5</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1),_markerName];
-		_plainText = [[format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		_centerName = if (isNil "_center" || count _center < 2) then {"Unknown Location"} else {_center select 1};
+		_name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
+		_name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
+        _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3. %4 %5</t>",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2,_tempText,_centerName];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%6'>%2 %3. %4 %5</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2,_tempText,_centerName,_markerName];
+		_plainText = [[format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2,_tempText,_centerName],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
+		_missionText = format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2,_tempText,_centerName];
 	};
 
 	default
 	{
-		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
-		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		_name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
+		_name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
+		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2,_markerName];
+		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper _name1,toupper _name2];
 	};
 };
 
@@ -875,7 +879,9 @@ _music = MWinitMissionMusic call BIS_fnc_selectRandom;
 
 if (_playMusic > 0 ) then {_music = ""};
 
-[[_html2, ((_missionName1 select 0) +" " + (_missionName2  select 0)), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]],"MCC_fnc_makeBriefing",false,false] spawn BIS_fnc_MP;
+_name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
+_name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
+[[_html2, (_name1 +" " + _name2), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]],"MCC_fnc_makeBriefing",false,false] spawn BIS_fnc_MP;
 
 
 //Broadcast missionInfo to all side

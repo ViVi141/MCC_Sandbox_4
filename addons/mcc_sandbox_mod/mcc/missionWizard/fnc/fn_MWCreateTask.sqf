@@ -20,14 +20,14 @@ _this params [
   ["_maxObjectivesDistance",400,[400]]
 ];
 
-// 添加错误检查
+// Add error checking
 if (_task == "") then {
 	diag_log "MCC MW: Error - Task type is empty";
 	["MCC: Mission Wizard Error: Task type is empty"] spawn MCC_fnc_halt;
 	return [];
 };
 
-// 验证位置
+// Validate position
 if (count _pos < 2) then {
 	diag_log "MCC MW: Error - Invalid position";
 	return [];
