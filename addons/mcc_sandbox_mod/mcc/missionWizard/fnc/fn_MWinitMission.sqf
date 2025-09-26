@@ -91,25 +91,25 @@ _arrayAssets		= _this select 4;
 _reinforcement 			= _arrayAssets select 0;
 _artillery 				= _arrayAssets select 1;
 
-_objArray			 	= missionNamespace getVariable ["MCC_MWMissionType",["Secure HVT",
-																			   "Kill HVT",
-																			   "Destroy Vehicle",
-																			   "Destroy AA",
-																			   "Destroy Artillery",
-																			   "Destroy Weapon Cahce",
-																			   "Destroy Fuel Depot",
-																			   "Destroy Radar/Radio",
-																			   "Acquire Intel",
-																			   "Download Intel",
-																			   "Capture Area",
-																			   "Disarm IED",
-																			   "Logistics"
+_objArray			 	= missionNamespace getVariable ["MCC_MWMissionType",[localize "STR_MCC_MW_MISSION_SECURE_HVT",
+																			   localize "STR_MCC_MW_MISSION_KILL_HVT",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_VEHICLE",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_AA",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_ARTILLERY",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_WEAPON_CACHE",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_FUEL_DEPOT",
+																			   localize "STR_MCC_MW_MISSION_DESTROY_RADAR_RADIO",
+																			   localize "STR_MCC_MW_MISSION_ACQUIRE_INTEL",
+																			   localize "STR_MCC_MW_MISSION_DOWNLOAD_INTEL",
+																			   localize "STR_MCC_MW_MISSION_CAPTURE_AREA",
+																			   localize "STR_MCC_MW_MISSION_DISARM_IED",
+																			   localize "STR_MCC_MW_MISSION_LOGISTICS"
 																			  ]];
 
 //Remove random and none
 {
 	_objArray = _objArray - [_x];
-} forEach ["None","Random"];
+} forEach [localize "STR_MCC_MW_MISSION_NONE", localize "STR_MCC_MW_MISSION_RANDOM"];
 
 //Lets find the mission maker owner and make sure he'll get the zone markers too.
 private ["_missionMaker"];

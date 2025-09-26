@@ -57,7 +57,7 @@ class MCC_LHDSpawn
 				{
 					idc = 2400;
 
-					text = "Purchase"; //--- ToDo: Localize;
+					text = "$STR_MCC_PURCHASE";
 					x = 0.0773438 * safezoneW;
 					y = 0.275 * safezoneH;
 					w = 0.139219 * safezoneW;
@@ -67,7 +67,7 @@ class MCC_LHDSpawn
 				{
 					idc = 2401;
 
-					text = "X"; //--- ToDo: Localize;
+					text = "$STR_MCC_X";
 					x = 0.391875 * safezoneW;
 					y = 6.14673e-009 * safezoneH;
 					w = 0.0154689 * safezoneW;
@@ -77,48 +77,48 @@ class MCC_LHDSpawn
 				{
 					idc = 1100;
 
-					text = "\mcc_sandbox_mod\data\IconAmmo.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_AMMO_ICON";
 					x = 0.0103125 * safezoneW;
 					y = 0.033 * safezoneH;
 					w = 0.0257812 * safezoneW;
 					h = 0.044 * safezoneH;
 					colorText[] = {0.9,0,0,1};
-					tooltip = "Ammo"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_AMMO_TOOLTIP";
 				};
 				class repairPic: MCC_RscPicture
 				{
 					idc = 1101;
 
-					text = "\mcc_sandbox_mod\data\IconRepair.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_MATERIALS_ICON";
 					x = 0.113438 * safezoneW;
 					y = 0.033 * safezoneH;
 					w = 0.0257812 * safezoneW;
 					h = 0.044 * safezoneH;
 					colorText[] = {0,0.5,0.9,10};
-					tooltip = "Materials"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_MATERIALS_TOOLTIP";
 				};
 				class fuelPic: MCC_RscPicture
 				{
 					idc = 1102;
 
-					text = "\mcc_sandbox_mod\data\IconFuel.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_FUEL_ICON";
 					x = 0.216563 * safezoneW;
 					y = 0.033 * safezoneH;
 					w = 0.0257812 * safezoneW;
 					h = 0.044 * safezoneH;
 					colorText[] = {0,0.9,0.5,1};
-					tooltip = "Fuel"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_FUEL_TOOLTIP";
 				};
 				class ValorPic: MCC_RscPicture
 				{
 					idc = 1103;
 
-					text = "\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_CREDITS_ICON";
 					x = 0.113438 * safezoneW;
 					y = 0.033 * safezoneH;
 					w = 0.0257812 * safezoneW;
 					h = 0.044 * safezoneH;
-					tooltip = "Credits"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_LHD_CREDITS";
 				};
 				class ammoText: MCC_RscText
 				{
@@ -169,7 +169,7 @@ class MCC_LHDSpawn
 				{
 					idc = 80;
 
-					text = "Resources"; //--- ToDo: Localize;
+					text = "$STR_MCC_RESOURCES";
 					x = 0.309375 * safezoneW;
 					y = 0.165 * safezoneH;
 					w = 0.08 * safezoneW;
@@ -216,56 +216,56 @@ class MCC_LHDSpawn
 				{
 					idc = 91;
 
-					text = "\mcc_sandbox_mod\data\IconAmmo.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_AMMO_ICON";
 					x = 0.309375 * safezoneW;
 					y = 0.209 * safezoneH;
 					w = 0.0154689 * safezoneW;
 					h = 0.033 * safezoneH;
 					colorText[] = {0.9,0,0,1};
-					tooltip = "Ammo"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_AMMO_TOOLTIP";
 				};
 				class MCC_Repair: MCC_RscPicture
 				{
 					idc = 92;
 
-					text = "\mcc_sandbox_mod\data\IconRepair.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_MATERIALS_ICON";
 					x = 0.309375 * safezoneW;
 					y = 0.253 * safezoneH;
 					w = 0.0154689 * safezoneW;
 					h = 0.033 * safezoneH;
 					colorText[] = {0,0.5,0.9,10};
-					tooltip = "Materials"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_MATERIALS_TOOLTIP";
 				};
 				class MCC_Fuel: MCC_RscPicture
 				{
 					idc = 93;
 
-					text = "\mcc_sandbox_mod\data\IconFuel.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_FUEL_ICON";
 					x = 0.309375 * safezoneW;
 					y = 0.297 * safezoneH;
 					w = 0.0154689 * safezoneW;
 					h = 0.033 * safezoneH;
 					colorText[] = {0,0.9,0.5,1};
-					tooltip = "Fuel"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_FUEL_TOOLTIP";
 				};
 				class MCC_ValorPic: MCC_RscPicture
 				{
 					idc = 94;
 
-					text = "\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa"; //--- ToDo: Localize;
+					text = "$STR_MCC_CREDITS_ICON";
 					x = 0.309375 * safezoneW;
 					y = 0.253 * safezoneH;
 					w = 0.0154689 * safezoneW;
 					h = 0.033 * safezoneH;
 					colorText[] = {0.9,0.9,0,1};
-					tooltip = "Credits"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_LHD_CREDITS";
 				};
 				/*
 				class factionTxt: MCC_RscText
 				{
 					idc = 8007;
 
-					text = "Faction"; //--- ToDo: Localize;
+					text = "$STR_MCC_LHD_FACTION";
 					x = 0.0103125 * safezoneW;
 					y = 0.099 * safezoneH;
 					w = 0.061875 * safezoneW;
@@ -296,7 +296,7 @@ class MCC_LHDSpawn
 				{
 					idc = -1;
 
-					text = "Class"; //--- ToDo: Localize;
+					text = "$STR_MCC_LHD_CLASS";
 					x = 0.0103125 * safezoneW; //x = 0.159844 * safezoneW;
 					y = 0.099 * safezoneH;
 					w = 0.061875 * safezoneW;

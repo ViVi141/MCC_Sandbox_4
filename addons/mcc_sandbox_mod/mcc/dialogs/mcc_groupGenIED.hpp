@@ -131,7 +131,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "接近:"; //--- ToDo: Localize;
+			text = "$STR_MCC_IED_PROXIMITY";
 			x = 0.160417 * safezoneW;
 			y = 0.197923 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -142,7 +142,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "伏击群组:"; //--- ToDo: Localize;
+			text = "$STR_MCC_IED_AMBUSH_GROUP";
 			x = 0.160417 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -254,12 +254,12 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick =  __EVAL("[0] execVM '"+MCCPATH+"mcc\fnc\ied\scripts\trap_request.sqf'");
 
-			text = "创建简易爆炸装置"; //--- ToDo: Localize;
+			text = "$STR_MCC_CREATE_IED";
 			x = 0.154688 * safezoneW;
 			y = 0.263897 * safezoneH;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Create an IED on the given position"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CREATE_IED_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.65)";
 		};
 		class MCC_trapsCreateAmbush: MCC_RscButton
@@ -267,19 +267,19 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\fnc\ied\scripts\trap_request.sqf'");
 
-			text = "创建伏击"; //--- ToDo: Localize;
+			text = "$STR_MCC_CREATE_AMBUSH";
 			x = 0.229167 * safezoneW;
 			y = 0.263897 * safezoneH;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Place an ambush group on the map (Hold Shift and drag a line between a group or IED to sync it with each other) "; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CREATE_AMBUSH_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.65)";
 		};
 		class MCC_trapsExplainTittle: MCC_RscText
 		{
 			idc = -1;
 
-			text = "*按Ctrl+鼠标左键触发简易爆炸装置或伏击方"; //--- ToDo: Localize;
+			text = "$STR_MCC_IED_INSTRUCTIONS_1";
 			x = 0.00572965 * safezoneW;
 			y = 0.0301928 * safezoneH;
 			w = 0.3 * safezoneW;
@@ -290,7 +290,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "*H按住Shift键并单击鼠标左键，然后画一条线来链接IED和/或伏击方"; //--- ToDo: Localize;
+			text = "$STR_MCC_IED_INSTRUCTIONS_2";
 			x = 0.00572965 * safezoneW;
 			y = 0.0548928 * safezoneH;
 			w = 0.3 * safezoneW;
@@ -302,7 +302,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 508) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.00572965 * safezoneW;
 			y = 0.263897 * safezoneH;
 			w = 0.06799 * safezoneW;

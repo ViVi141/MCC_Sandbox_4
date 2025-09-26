@@ -117,7 +117,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 			y = 0.186927 * safezoneH;
 			w = 0.0859375 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Call Artillery on map position hold Ctrl for multi calls"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ARTILLERY_CALL_TOOLTIP";
 		};
 		class MCC_artilleryAdd: MCC_RscButton
 		{
@@ -129,7 +129,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 			y = 0.186927 * safezoneH;
 			w = 0.0859375 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "添加火炮到MCC控制台 "; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ARTILLERY_ADD_TOOLTIP";
 		};
 		class MCC_artilleryDialogClose: MCC_RscButtonMenu
 		{

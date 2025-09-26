@@ -21,7 +21,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 		class MCC_respawnDialogTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Start Locations:"; //--- ToDo: Localize;
+			text = "$STR_MCC_START_LOCATIONS";
 			colorText[] = {0,1,1,1};
 
 			x = 0.0744797 * safezoneW;
@@ -35,7 +35,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[MCC_currentSide] execVM '"+MCCPATH+"mcc\general_scripts\mcc_start_location.sqf'");
 
-			text = "Set"; //--- ToDo: Localize;
+			text = "$STR_MCC_SET";
 			x = 0.229167 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -44,7 +44,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 		class MCC_respawnSideTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Side:"; //--- ToDo: Localize;
+			text = "$STR_MCC_SIDE";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -68,7 +68,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 		class MCC_respawnteleportTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Insertion:"; //--- ToDo: Localize;
+			text = "$STR_MCC_INSERTION";
 
 			x = 0.00572965 * safezoneW;
 			y = 0.142944 * safezoneH;
@@ -87,7 +87,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 		class MCC_respawnFOBTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Start:"; //--- ToDo: Localize;
+			text = "$STR_MCC_START";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 
 			x = 0.00572965 * safezoneW;
@@ -102,7 +102,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 			y = 0.0989618 * safezoneH;
 			w = 0.12 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "如果启用了角色选择，则可以将该职位设置为FOB（可选重生地点）"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_FOB_TOOLTIP";
 		};
 
 		class MCC_respawnDialogStartRespawnMenu: MCC_RscButtonMenu
@@ -110,8 +110,8 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "closedialog 0;[] remoteExec ['MCC_fnc_startLocations',0]";
 
-			text = "激活重生"; //--- ToDo: Localize;
-			tooltip = "如果在MCC设置中启用，则在所有玩家上启用重生和强制对话框";
+			text = "$STR_MCC_ACTIVATE_RESPAWN";
+			tooltip = "$STR_MCC_ACTIVATE_RESPAWN_TOOLTIP";
 			x = 0.1 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.1 * safezoneW;
@@ -123,7 +123,7 @@ class MCC_respawnDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 503) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.00572965 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.0630208 * safezoneW;

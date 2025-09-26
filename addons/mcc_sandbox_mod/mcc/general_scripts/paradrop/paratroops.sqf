@@ -1,5 +1,5 @@
 /*
-ToDo:
+$STR_MCC_PARADROP_TODO
 
 for heli
 _exp = "(1 + meadows) * (1 - houses) * (1 - forest) * (1 - hills)";

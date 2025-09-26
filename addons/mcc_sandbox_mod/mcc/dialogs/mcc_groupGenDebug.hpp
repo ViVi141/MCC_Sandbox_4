@@ -22,7 +22,7 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 		class MCC_debugTitle: MCC_RscText
 		{
 			idc = -1;
-			text = "Debug:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DEBUG_TITLE";
 			colorText[] = {0,1,1,1};
 			
 			x = 0.45 * safezoneW + safezoneX;
@@ -36,30 +36,30 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {createDialog 'RscDisplayDebugPublic';} else {player globalchat 'Access Denied'};";
 
-			text = "Debug"; //--- ToDo: Localize;
+			text = "$STR_MCC_DEBUG";
 			x = 0.379688 * safezoneW + safezoneX;
 			y = 0.26909 * safezoneH + safezoneY;
 			w = 0.0764887 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Open BIS Debug Console"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_DEBUG_TOOLTIP";
 		};
 		class MCC_DebugExtra: MCC_RscButton
 		{
 			idc = -1;
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {createDialog 'RscDisplayDebug';} else {player globalchat 'Access Denied'};";
 
-			text = "Adv. Debug"; //--- ToDo: Localize;
+			text = "$STR_MCC_ADV_DEBUG";
 			x = 0.528646 * safezoneW + safezoneX;
 			y = 0.26909 * safezoneH + safezoneY;
 			w = 0.0764887 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Open BIS Advanced Debug Console"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ADV_DEBUG_TOOLTIP";
 		};
 		class MCC_CommandLineTittle: MCC_RscText
 		{
 			idc = -1;
 
-			text = "Command line:"; //--- ToDo: Localize;
+			text = "$STR_MCC_COMMAND_LINE";
 			x = 0.379688 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.0744792 * safezoneW;
@@ -91,12 +91,12 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick =  __EVAL ("[3] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\commandLine.sqf'");
 
-			text = "text"; //--- ToDo: Localize;
+			text = "$STR_MCC_TEXT";
 			x = 0.379688 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.033995 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Broadcast the command line fraze to all clients - small fonts"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_TEXT_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_commandlineTextBig: MCC_RscButton
@@ -104,12 +104,12 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick =  __EVAL ("[4] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\commandLine.sqf'");
 
-			text = "TEXT"; //--- ToDo: Localize;
+			text = "$STR_MCC_TEXT_BIG";
 			x = 0.419792 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.033995 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Broadcast the command line fraze to all clients - big fonts"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_TEXT_BIG_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_commandlineLocal: MCC_RscButton
@@ -117,12 +117,12 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick =  __EVAL ("[0] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\commandLine.sqf'");
 
-			text = "Local"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOCAL";
 			x = 0.528646 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.033995 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Execute the command line fraze only on the mission maker computer"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_LOCAL_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
 		};
 		class MCC_commandlineGlobal: MCC_RscButton
@@ -130,12 +130,12 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick =  __EVAL ("[1] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\commandLine.sqf'");
 
-			text = "Global"; //--- ToDo: Localize;
+			text = "$STR_MCC_GLOBAL";
 			x = 0.56875 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.033995 * safezoneW;
 			h = 0.0340016 * safezoneH;
-			tooltip = "Execute the command line fraze on all clients and sever"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_GLOBAL_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
 		};
 		class MCC_commandlineCloseButton: MCC_RscButtonMenu
@@ -143,7 +143,7 @@ class MCC_debugDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 504) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.467013 * safezoneH + safezoneY;
 			w = 0.0630208 * safezoneW;

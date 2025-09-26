@@ -541,9 +541,9 @@ systemChat "TabSelectLeft";
 				lbclear _ctrlListCrew;
 
 				if (getnumber (_cfg >> "isUAV") < 1) then {
-					//_lbAdd = _ctrlListCrew lbadd "All crew"; //--- ToDo: Localize
+                                        //_lbAdd = _ctrlListCrew lbadd localize "STR_MCC_BIS_ALL_CREW";
 					//_ctrlListCrew lbsetdata [_lbAdd,"Driver"];
-					//_lbAdd = _ctrlListCrew lbadd "All passengers"; //--- ToDo: Localize
+					//_lbAdd = _ctrlListCrew lbadd localize "STR_MCC_BIS_ALL_PASSENGERS";
 					//_ctrlListCrew lbsetdata [_lbAdd,"Driver"];
 					_colorMe = getarray (configfile >> "CfgInGameUI" >> "IslandMap" >> "colorMe");
 
@@ -575,7 +575,7 @@ systemChat "TabSelectLeft";
 
 						//--- Count number of cargo turrets
 						//if (gettext (_cfgTurret >> "proxyType") == "CPCargo") then {
-						if (getnumber (_cfgTurret >> "isPersonTurret") > 0 && getnumber (_cfg >> "hideProxyInCombat") == 0) then { // ToDo: onlyPersonTurret
+                                                if (getnumber (_cfgTurret >> "isPersonTurret") > 0 && getnumber (_cfg >> "hideProxyInCombat") == 0) then { // $STR_MCC_BIS_ONLY_PERSON_TURRET
 							//_proxyIndexes pushback (count _proxyIndexes + 1);
 							_proxyIndexes pushback getnumber (_cfgTurret >> "proxyIndex");
 						};
@@ -819,7 +819,7 @@ systemChat "TabSelectLeft";
 			_locked = false;
 			_unit = objnull;
 
-			//--- ToDo: lockCargoAnimationPhase
+                        //--- $STR_MCC_BIS_LOCK_CARGO_ANIMATION
 			switch (tolower _role) do {
 				case "cargo": {
 					_unit = objnull;
@@ -983,7 +983,7 @@ systemChat "TabSelectLeft";
 			_isVehicle = false;
 			{
 				if (_x == "createvehicle" && !_isVehicle) then {
-					_vehClass = _importArray select _foreachindex + 1; //--- ToDo: Detect old createVehicle syntax
+                                        _vehClass = _importArray select _foreachindex + 1; //--- $STR_MCC_BIS_DETECT_OLD_SYNTAX
 					_vehModel = tolower gettext (configfile >> "cfgvehicles" >> _vehClass >> "model");
 					if (is3DEN) then {
 
@@ -997,7 +997,7 @@ systemChat "TabSelectLeft";
 								[
 									_display,
 									format [
-										"Cannot import settings of %1 to %2!", // ToDo: Localize
+                                                                               localize "STR_MCC_BIS_IMPORT_ERROR",
 										gettext (configfile >> "cfgvehicles" >> _vehClass >> "displayName"),
 										gettext (_centerCfg >> "displayName")
 									]

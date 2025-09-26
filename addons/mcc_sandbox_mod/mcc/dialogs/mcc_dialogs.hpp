@@ -1310,7 +1310,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Interaction Self:"; //--- ToDo: Localize;
+			text = "$STR_MCC_INTERACTION_SELF";
 			x = 0.00515597 * safezoneW;
 			y = 0.242 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1320,7 +1320,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Cover System:"; //--- ToDo: Localize;
+			text = "$STR_MCC_COVER_SYSTEM";
 			x = 0.00515597 * safezoneW;
 			y = 0.275 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1416,7 +1416,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 			idc = 8499;
 			tooltip = "Click to disable client side";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Disabled"; //--- ToDo: Localize;
+			text = "$STR_MCC_DISABLED";
 			onMouseButtonUp =  __EVAL("[_this,7] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
 			x = 0.108281 * safezoneW;

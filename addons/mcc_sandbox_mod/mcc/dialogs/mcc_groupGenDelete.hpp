@@ -22,7 +22,7 @@ class MCC_deleteDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "使用刷子:"; //--- ToDo: Localize;
+			text = "$STR_MCC_USE_BRUSH";
 			x = 0.0401036 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.120313 * safezoneW;
@@ -44,18 +44,18 @@ class MCC_deleteDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "hint 'Mark the area you want to delete'; MCC_delete_drawing = true";
 
-			text = "刷子"; //--- ToDo: Localize;
+			text = "$STR_MCC_BRUSH";
 			x = 0.160417 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0515625 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "将刷子刷到某个区域"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_BRUSH_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_deleteClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 518) ctrlShow false";
 
 			x = 0.0744797 * safezoneW;

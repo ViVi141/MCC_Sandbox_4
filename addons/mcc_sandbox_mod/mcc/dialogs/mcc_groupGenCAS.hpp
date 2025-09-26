@@ -77,7 +77,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			y = 0.120953 * safezoneH;
 			w = 0.0802083 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "呼叫近距离空中支援-拖动并在小地图上画一条线以呼叫近距离空中支援"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CAS_CALL_TOOLTIP";
 		};
 		class MCC_CASAdd: MCC_RscButton
 		{
@@ -89,7 +89,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			y = 0.120953 * safezoneH;
 			w = 0.0802083 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "添加近距离空中支援到MCC控制台"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CAS_ADD_TOOLTIP";
 		};
 
 		class MCC_CASClose: MCC_RscButtonMenu
@@ -102,7 +102,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			y = 0.164936 * safezoneH;
 			w = 0.0802083 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "呼叫距离空中支援-拖动并在小地图上画一条线以呼叫距离空中支援"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CAS_CLOSE_TOOLTIP";
 		};
 	};
 };

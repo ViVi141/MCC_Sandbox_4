@@ -29,7 +29,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "标记生成器:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_GENERATOR";
 			x = 0.0286457 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.144375 * safezoneW;
@@ -41,7 +41,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Color:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_COLOR";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -52,7 +52,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Type:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_TYPE";
 			x = 0.00572965 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -63,7 +63,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Shape:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_SHAPE";
 			x = 0.00572965 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -74,7 +74,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Brush:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_BRUSH";
 			x = 0.00572965 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -85,7 +85,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Name:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_NAME";
 			x = 0.126042 * safezoneW;
 			y = 0.0769698 * safezoneH;
 			w = 0.0401042 * safezoneW;
@@ -148,12 +148,12 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[0] execVM '"+MCCPATH+"mcc\pop_menu\markers_req.sqf'");
 
-			text = "Marker"; //--- ToDo: Localize;
+			text = "$STR_MCC_MARKER_BUTTON";
 			x = 0.177605 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0401042 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			tooltip = "Create a marker"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_MARKER_BUTTON_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_markerSpawnBrush: MCC_RscButton
@@ -161,12 +161,12 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[1] execVM '"+MCCPATH+"mcc\pop_menu\markers_req.sqf'");
 
-			text = "Brush"; //--- ToDo: Localize;
+			text = "$STR_MCC_BRUSH_BUTTON";
 			x = 0.126042 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0401042 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			tooltip = "Create a brush"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_BRUSH_BUTTON_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_markerDeleteMarker: MCC_RscButton
@@ -174,12 +174,12 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[2] execVM '"+MCCPATH+"mcc\pop_menu\markers_req.sqf'");
 
-			text = "Delete"; //--- ToDo: Localize;
+			text = "$STR_MCC_DELETE_BUTTON";
 			x = 0.183334 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.034375 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "Delete marker or brush with the give name"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_DELETE_BUTTON_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
 		};
 		
@@ -199,7 +199,7 @@ class MCC_markersDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 511) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE_BUTTON";
 			x = 0.0687497 * safezoneW;
 			y = 0.197923 * safezoneH;
 			w = 0.0630208 * safezoneW;

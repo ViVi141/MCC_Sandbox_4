@@ -184,7 +184,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 			y = 0.131949 * safezoneH;
 			w = 0.0630208 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Spawn convoy and set WP"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CONVOY_SPAWN_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_convoyReset: MCC_RscButton
@@ -192,12 +192,12 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\convoy\reset_convoy_WP.sqf'");
 
-			text = "Reset"; //--- ToDo: Localize;
+			text = "$STR_MCC_RESET";
 			x = 0.154688 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0572917 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Reset convoy's waypoints"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_RESET_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_convoyStart: MCC_RscButton
@@ -205,12 +205,12 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\convoy\start_convoy.sqf'");
 
-			text = "开始"; //--- ToDo: Localize;
+			text = "$STR_MCC_START";
 			x = 0.229167 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0572917 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Start convoy movement"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_START_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_convoyClose: MCC_RscButtonMenu
@@ -218,7 +218,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 509) ctrlShow false";
 
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.120313 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.0572917 * safezoneW;

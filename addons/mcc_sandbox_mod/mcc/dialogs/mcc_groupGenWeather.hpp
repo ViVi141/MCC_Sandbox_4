@@ -22,7 +22,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_weatherDialogTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Weather:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WEATHER";
 			colorText[] = {0,1,1,1};
 
 			x = 0.0973957 * safezoneW;
@@ -35,7 +35,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_fogTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Fog:"; //--- ToDo: Localize;
+			text = "$STR_MCC_FOG";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -56,7 +56,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_rainTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Rain:"; //--- ToDo: Localize;
+			text = "$STR_MCC_RAIN";
 			x = 0.00572965 * safezoneW;
 			y = 0.0989618 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -78,7 +78,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Wind:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WIND";
 			x = 0.00572965 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -100,7 +100,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Waves:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WAVES";
 			x = 0.00572965 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -120,7 +120,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_overcastTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Overcast:"; //--- ToDo: Localize;
+			text = "$STR_MCC_OVERCAST";
 			x = 0.00572965 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -162,7 +162,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_weatherDialogClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 501) ctrlShow false";
 
 			x = 0.00572965 * safezoneW;
@@ -173,7 +173,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_weatherDialogConfirm: MCC_RscButton
 		{
 			idc = -1;
-			text = "Confirm"; //--- ToDo: Localize;
+			text = "$STR_MCC_CONFIRM";
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\pop_menu\mission_settings.sqf'");
 
 			x = 0.200521 * safezoneW;
@@ -185,7 +185,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -195,7 +195,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = 0.0989618 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -206,7 +206,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -216,7 +216,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -226,7 +226,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -236,7 +236,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "max"; //--- ToDo: Localize;
+			text = "$STR_MCC_MAX";
 			x = 0.229167 * safezoneW;
 			y = (0.23091+0.043983) * safezoneH;
 			w = 0.034375 * safezoneW;

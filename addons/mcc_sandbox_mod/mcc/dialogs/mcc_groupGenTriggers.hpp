@@ -30,7 +30,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Triggers Generator:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRIGGERS_GENERATOR";
 			x = 0.0916667 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.144375 * safezoneW;
@@ -41,7 +41,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenActivateTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Activate:"; //--- ToDo: Localize;
+			text = "$STR_MCC_ACTIVATE";
 			x = 0.00572965 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -52,7 +52,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenConditionTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Condition:"; //--- ToDo: Localize;
+			text = "$STR_MCC_CONDITION";
 			x = 0.00572965 * safezoneW;
 			y = 0.0769698 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -63,7 +63,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenShapeTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Shape:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRIGGER_SHAPE";
 			x = 0.00572965 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -74,7 +74,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenNameTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Name:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRIGGER_NAME";
 			x = 0.171875 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -85,7 +85,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenTriggerTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Available Triggers:"; //--- ToDo: Localize;
+			text = "$STR_MCC_AVAILABLE_TRIGGERS";
 			x = 0.00572965 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.0802083 * safezoneW;
@@ -150,32 +150,32 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		class MCC_triggerGenCreate: MCC_RscButton
 		{
 			idc = -1;
-			text = "Create"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRIGGER_CREATE";
 			x = 0.246355 * safezoneW;
 			y = 0.197923 * safezoneH;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
 			onButtonClick = __EVAL ("[0] execVM '"+MCCPATH+"mcc\general_scripts\triggers\triggers.sqf'");
-			tooltip = "Create trigger"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_TRIGGER_CREATE_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_triggerGenMove: MCC_RscButton
 		{
 			idc = -1;
-			text = "Move"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRIGGER_MOVE";
 			x = 0.177605 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.0515625 * safezoneW;
 			h = 0.0219914 * safezoneH;
 			onButtonClick = __EVAL ("[2] execVM '"+MCCPATH+"mcc\general_scripts\triggers\triggers.sqf'");
-			tooltip = "Move the selected trigger"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_TRIGGER_MOVE_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_triggerGenTimeMinTittle: MCC_RscText
 		{
 			idc = -1;
 			
-			text = "Time Min:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TIME_MIN";
 			x = 0.183334 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -186,7 +186,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Time Max:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TIME_MAX";
 			x = 0.252084 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0630208 * safezoneW;
@@ -237,7 +237,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Condition:"; //--- ToDo: Localize;
+			text = "$STR_MCC_CONDITION";
 			x = 0.00572965 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -289,7 +289,7 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "On Dea:"; //--- ToDo: Localize;
+			text = "$STR_MCC_ON_DEA";
 			x = 0.166146 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -302,12 +302,12 @@ class MCC_triggersDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 515) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.126042 * safezoneW;
 			y = 0.241906 * safezoneH;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Link the sound or music to the selected zone"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_LINK_SOUND_TOOLTIP";
 		};
 	};
 };

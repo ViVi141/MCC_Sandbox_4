@@ -82,7 +82,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			y = 0.0439828 * safezoneH;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "Spawn Evac Vehicle on map click"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_EVAC_SPAWN_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evacSelected: MCC_RscCombo
@@ -100,7 +100,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "撤退:"; //--- ToDo: Localize;
+			text = "$STR_MCC_EVAC_SELECTED";
 			x = 0.00572967 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0515625 * safezoneW;
@@ -117,7 +117,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			y = 0.197923 * safezoneH;
 			w = 0.0458333 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "添加撤离路点"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ADD_EVAC_WAYPOINT";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evac3Wp: MCC_RscButton
@@ -130,7 +130,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			y = 0.142944 * safezoneH;
 			w = 0.0458333 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Add 3 Evac way points"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ADD_3_EVAC_WAYPOINTS";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evacInsertionTitle: MCC_RscText
@@ -165,14 +165,14 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
 			colorText[] = {1,0,0,0.7};
-			tooltip = "Delete the evac vehicle"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_DELETE_EVAC_VEHICLE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evacFlightHightTitle: MCC_RscText
 		{
 			idc = -1;
 
-			text = "F. 高度:"; //--- ToDo: Localize;
+			text = "$STR_MCC_FLIGHT_HEIGHT";
 			x = 0.00572967 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.0515625 * safezoneW;
@@ -194,13 +194,13 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\evac\delete_heli.sqf'");
 
-			text = "Del. 驾驶员"; //--- ToDo: Localize;
+			text = "$STR_MCC_DELETE_DRIVER";
 			x = 0.131771 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
 			colorText[] = {1,0,0,0.7};
-			tooltip = "Delete the evac driver"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_DELETE_DRIVER_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evacResHeli: MCC_RscButton
@@ -208,13 +208,13 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\evac\delete_heli.sqf'");
 
-			text = "Res. 驾驶员"; //--- ToDo: Localize;
+			text = "$STR_MCC_REVIVE_DRIVER";
 			x = 0.171875 * safezoneW;
 			y = 0.07697 * safezoneH;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
 			colorText[] = {0,1,0,0.7};
-			tooltip = "Revive the evac driver"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_REVIVE_DRIVER_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_evacClose: MCC_RscButtonMenu
@@ -222,7 +222,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 507) ctrlShow false";
 
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.0859375 * safezoneW;
 			y = 0.241906 * safezoneH;
 			w = 0.0630208 * safezoneW;

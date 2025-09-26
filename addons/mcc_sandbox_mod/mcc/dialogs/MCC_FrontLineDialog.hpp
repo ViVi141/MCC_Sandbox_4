@@ -76,7 +76,7 @@ class MCCFrontLineDialog
 			y = 0.83 * safezoneH + safezoneY;
 			w = 0.085 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "单击并按住鼠标左键绘制前线"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_FRONTLINE_DRAW_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 
@@ -333,7 +333,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "雷区:"; //--- ToDo: Localize;
+					text = "$STR_MCC_MINE_FIELDS";
 					x = 0.00572965 * safezoneW;
 					y = 0.252902 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -365,7 +365,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "雷区标记:"; //--- ToDo: Localize;
+					text = "$STR_MCC_MINE_FIELDS_MARKERS";
 					x = 0.00572965 * safezoneW;
 					y = 0.28589 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -397,7 +397,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "防御工事:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FORTIFICATIONS";
 					x = 0.189063 * safezoneW;
 					y = 0.0549788 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -429,7 +429,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "防御工事 标识:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FORTIFICATIONS_MARKERS";
 					x = 0.189063 * safezoneW;
 					y = 0.0879658 * safezoneH;
 					w = 0.06875 * safezoneW;

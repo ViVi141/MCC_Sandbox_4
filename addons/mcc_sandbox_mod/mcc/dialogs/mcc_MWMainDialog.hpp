@@ -65,7 +65,7 @@ class MCCMWDialog
 			y = 0.83 * safezoneH + safezoneY;
 			w = 0.085 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Generate a mission "; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_MW_GENERATE_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 

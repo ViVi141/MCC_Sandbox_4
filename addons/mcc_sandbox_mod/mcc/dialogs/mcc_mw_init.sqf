@@ -138,7 +138,7 @@ lbClear _comboBox;
 {
 	_displayname = _x;
 	_comboBox lbAdd _displayname;
-} foreach ["No","Mortars","Self Propelled Artillery","Random"];
+} foreach [localize "STR_MCC_MW_ARTILLERY_NO", localize "STR_MCC_MW_ARTILLERY_MORTARS", localize "STR_MCC_MW_ARTILLERY_SELF_PROPELLED", localize "STR_MCC_MW_MISSION_RANDOM"];
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWArtilleryIndex",3]);
 
 //Music
@@ -163,7 +163,7 @@ lbClear _comboBox;
 {
 	_displayname = _x;
 	_comboBox lbAdd _displayname;
-} foreach ["No","Yes Without Civilians","Yes With Civilians","Random"];
+} foreach [localize "STR_MCC_MW_CQB_NO", localize "STR_MCC_MW_CQB_YES_NO_CIV", localize "STR_MCC_MW_CQB_YES_WITH_CIV", localize "STR_MCC_MW_MISSION_RANDOM"];
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWCQBIndex",3]);
 
 //Roadblocks
@@ -180,7 +180,7 @@ lbClear _comboBox;
 {
 	_displayname = _x;
 	_comboBox lbAdd _displayname;
-} foreach ["Don't change","Random","Sandstorm","Blizzard","Snow"];
+} foreach [localize "STR_MCC_MW_WEATHER_DONT_CHANGE", localize "STR_MCC_MW_MISSION_RANDOM", localize "STR_MCC_MW_WEATHER_SANDSTORM", localize "STR_MCC_MW_WEATHER_BLIZZARD", localize "STR_MCC_MW_WEATHER_SNOW"];
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWWeatherIndex",1]);
 
 //Mission Area

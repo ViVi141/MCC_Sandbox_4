@@ -31,7 +31,7 @@ class MCC_TimeDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "/"; //--- ToDo: Localize;
+			text = "$STR_MCC_SLASH";
 			x = 0.0572916 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0114583 * safezoneW;
@@ -41,7 +41,7 @@ class MCC_TimeDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\pop_menu\mission_settings.sqf'");
-			text = "Confirm"; //--- ToDo: Localize;
+			text = "$STR_MCC_CONFIRM";
 
 			x = 0.120313 * safezoneW;
 			y = 0.15394 * safezoneH;
@@ -52,7 +52,7 @@ class MCC_TimeDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 502) ctrlShow false";
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 
 			x = 0.00572965 * safezoneW;
 			y = 0.15394 * safezoneH;
@@ -106,7 +106,7 @@ class MCC_TimeDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "/"; //--- ToDo: Localize;
+			text = "$STR_MCC_SLASH";
 			x = 0.120313 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0114583 * safezoneW;
@@ -116,7 +116,7 @@ class MCC_TimeDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = ":"; //--- ToDo: Localize;
+			text = "$STR_MCC_COLON";
 			x = 0.0859376 * safezoneW;
 			y = 0.0989618 * safezoneH;
 			w = 0.0114583 * safezoneW;

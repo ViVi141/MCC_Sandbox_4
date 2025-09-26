@@ -196,7 +196,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			y = 0.0549786 * safezoneH;
 			w = 0.065625 * safezoneW;
 			h = 0.035 * safezoneH;
-			tooltip = "Add the selected unit to the list"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ADD_TO_LIST_TOOLTIP";
 		};
 		class mcc_groupGen_groupListBoxClearButton: MCC_RscButton
 		{
@@ -208,19 +208,19 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			y = 0.098962 * safezoneH;
 			w = 0.065625 * safezoneW;
 			h = 0.035 * safezoneH;
-			tooltip = "Remove all units from the list"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CLEAR_LIST_TOOLTIP";
 		};
 		class mcc_groupGen_groupListSaveButton: MCC_RscButton
 		{
 			idc = MCC_GGSAVE_GROUPIDC;
 			onButtonClick = __EVAL("[4] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_change.sqf'");
 
-			text = "Save as Custom"; //--- ToDo: Localize;
+			text = "$STR_MCC_SAVE_AS_CUSTOM";
 			x = 0.292188 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.065625 * safezoneW;
 			h = 0.035 * safezoneH;
-			tooltip = "Save the group as a custom group"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_SAVE_AS_CUSTOM_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class mcc_groupGen_groupListBoxCreaterButton: MCC_RscButton
@@ -228,12 +228,12 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			idc = MCC_GGVREATE_IDC;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\spawn_request.sqf'");
 
-			text = "Create"; //--- ToDo: Localize;
+			text = "$STR_MCC_CREATE";
 			x = 0.183334 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.065625 * safezoneW;
 			h = 0.035 * safezoneH;
-			tooltip = "Mouse click on the map to create the group/unit - Hold Ctrl for multi spawn"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CREATE_TOOLTIP";
 		};
 		class mcc_groupGen_groupListBoxAddToZoneButton: MCC_RscButton
 		{
@@ -241,18 +241,18 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\spawn_request.sqf'");
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 
-			text = "Spawn in zone"; //--- ToDo: Localize;
+			text = "$STR_MCC_SPAWN_IN_ZONE";
 			x = 0.183334 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.065625 * safezoneW;
 			h = 0.035 * safezoneH;
-			tooltip = "Create the group in the selected zone"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_SPAWN_IN_ZONE_TOOLTIP";
 		};
 		class MCC_zoneLocTittle: MCC_RscText
 		{
 			idc = -1;
 
-			text = "Location:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOCATION";
 			x = 0.00572967 * safezoneW;
 			y = 0.219914 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -275,7 +275,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Delayed:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DELAYED";
 			x = 0.00572967 * safezoneW;
 			y = 0.26 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -287,7 +287,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Cache:"; //--- ToDo: Localize;
+			text = "$STR_MCC_CACHE";
 			x = 0.09 * safezoneW;
 			y = 0.26 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -319,7 +319,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = "_mccdialog = (uiNamespace getVariable 'MCC_groupGen_Dialog');(_mccdialog displayCtrl 506) ctrlShow false; mcc_delayed_spawn = if (cbChecked  (_mccdialog displayctrl 3022)) then {true} else {false};mcc_caching = if (cbChecked  (_mccdialog displayctrl 3023)) then {true} else {false};";
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			
 			x = 0.166146 * safezoneW;
 			y = 0.263897 * safezoneH;

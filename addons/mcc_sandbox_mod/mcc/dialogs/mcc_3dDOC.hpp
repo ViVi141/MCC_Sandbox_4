@@ -90,7 +90,7 @@ class MCC_3dDOCControls:MCC_RscControlsGroup
 			y = 0.340867 * safezoneH;
 			w = 0.103125 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "将构图保存为玩家作为锚点，半径200米到配置文件名称空间-首先从上面的列表中选择一个插槽"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_3D_SAVE_TOOLTIP";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 		class MCC_3DComploadUIButton: MCC_RscButton
@@ -103,7 +103,7 @@ class MCC_3dDOCControls:MCC_RscControlsGroup
 			y = 0.340867 * safezoneH;
 			w = 0.0973958 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "将组合从配置文件名称空间加载到所选车辆的初始化行-首先从上述列表中选择一个插槽"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_3D_LOAD_TOOLTIP";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 	};

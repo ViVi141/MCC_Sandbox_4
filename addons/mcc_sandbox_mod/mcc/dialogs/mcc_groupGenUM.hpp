@@ -43,7 +43,7 @@ class MCC_UMDialogControls:MCC_RscControlsGroup
 		class MCC_UMUnits: MCC_RscToolbox
 		{
 			idc = -1;
-			strings[] = {"单位","小组"};
+			strings[] = {"$STR_MCC_UNITS","$STR_MCC_GROUPS"};
 			rows = 1;
 			columns = 2;
 			values[] = {0,1};
@@ -199,7 +199,7 @@ class MCC_UMDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "*Ctrl/Shift 多选"; // 汉化
+			text = "$STR_MCC_MULTI_SELECT";
 			x = 0.0791667 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.0916667 * safezoneW;
@@ -229,7 +229,7 @@ class MCC_UMDialogControls:MCC_RscControlsGroup
 		class MCC_PIPviewMod: MCC_RscToolbox
 		{
 			idc = -1;
-			strings[] = {"常规","夜视","热成像"};
+			strings[] = {"$STR_MCC_NORMAL","$STR_MCC_NIGHT_VISION","$STR_MCC_THERMAL"};
 			rows = 1;
 			columns = 3;
 			values[] = {0,1,3};

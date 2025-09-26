@@ -317,7 +317,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "目标 1:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_OBJECTIVE_1";
 			x = 0.189063 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -345,7 +345,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "目标 2:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_OBJECTIVE_2";
 			x = 0.189063 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -373,7 +373,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "目标 3:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_OBJECTIVE_3";
 			x = 0.189063 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -400,7 +400,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_VEHICLES";
 			x = 0.189063 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -434,7 +434,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "装甲:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ARMOR";
 			x = 0.189063 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -468,7 +468,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "工事:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_FORTIFICATIONS";
 			x = 0.189063 * safezoneW;
 			y = 0.219914 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -496,7 +496,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "火炮:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ARTILLERY";
 			x = 0.189063 * safezoneW;
 			y = 0.252902 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -523,7 +523,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "简介:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_BRIEFING";
 			x = 0.189063 * safezoneW;
 			y = 0.28589 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -555,7 +555,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "简易爆炸装置:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_IED";
 			x = 0.372396 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -588,7 +588,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "自杀式炸弹袭击者:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_SUICIDE_BOMBER";
 			x = 0.372396 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -620,7 +620,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "武装平民:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ARMED_CIVILIANS";
 			x = 0.372396 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -652,7 +652,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "路障:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ROADBLOCKS";
 			x = 0.372396 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -684,7 +684,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "动物:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ANIMALS";
 			x = 0.372396 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -716,7 +716,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "时间/天气:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_TIME_WEATHER";
 			x = 0.372396 * safezoneW;
 			y = 0.219914 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -742,7 +742,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "地区:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_AREA";
 			x = 0.372396 * safezoneW;
 			y = 0.252902 * safezoneH;
 			w = 0.06875 * safezoneW;

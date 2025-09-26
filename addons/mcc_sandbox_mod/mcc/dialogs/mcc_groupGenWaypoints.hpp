@@ -26,7 +26,7 @@ class MCC_waypointsDialogControls:MCC_RscControlsGroup
 		class MCC_GroupGenWPTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Way Points:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WAY_POINTS";
 			colorText[] = {0,1,1,1};
 			
 			x = 0.0630206 * safezoneW;
@@ -77,41 +77,41 @@ class MCC_waypointsDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\manageWP.sqf'");
 
-			text = "ADD"; //--- ToDo: Localize;
+			text = "$STR_MCC_ADD";
 			x = 0.0687497 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0515625 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Add a waypoint to all selected groups"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_ADD_WAYPOINT_TOOLTIP";
 		};
 		class MCC_GroupGenWPReplace: MCC_RscButton
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\manageWP.sqf'");
 
-			text = "Replace"; //--- ToDo: Localize;
+			text = "$STR_MCC_REPLACE";
 			x = 0.131771 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0515625 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Remove all waypoints from any selected groups and add a new waypoint"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_REPLACE_WAYPOINT_TOOLTIP";
 		};
 		class MCC_GroupGenWPClear: MCC_RscButton
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\manageWP.sqf'");
 
-			text = "Clear"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLEAR";
 			x = 0.00572965 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0515625 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "Remove all waypoints from any selected groups"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_CLEAR_WAYPOINT_TOOLTIP";
 		};
 		class MCC_GroupGenWPTypeTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Type:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TYPE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.85)";
 			
 			x = 0.00572965 * safezoneW;
@@ -122,7 +122,7 @@ class MCC_waypointsDialogControls:MCC_RscControlsGroup
 		class MCC_GroupGenWPFormationTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Formation:"; //--- ToDo: Localize;
+			text = "$STR_MCC_FORMATION";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.85)";
 			
 			x = 0.00572965 * safezoneW;
@@ -133,7 +133,7 @@ class MCC_waypointsDialogControls:MCC_RscControlsGroup
 		class MCC_GroupGenWPspeedTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Speed:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WP_SPEED";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.85)";
 			
 			x = 0.00572965 * safezoneW;
@@ -144,7 +144,7 @@ class MCC_waypointsDialogControls:MCC_RscControlsGroup
 		class MCC_GroupGenWPbehaviorTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Behavior:"; //--- ToDo: Localize;
+			text = "$STR_MCC_WP_BEHAVIOR";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.85)";
 			
 			x = 0.00572965 * safezoneW;

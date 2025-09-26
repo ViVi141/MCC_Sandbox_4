@@ -66,7 +66,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 
 			w = 0.0572917 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "将所选组与所选区域和行为交给GAIA控制"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_GAIA_CONTROL_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 
@@ -89,7 +89,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 
 			w = 0.06 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "重生超过0的组如果被取消，将继续重生"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_GAIA_RESPAWN_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 
@@ -101,7 +101,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 			text = "$STR_MCC_GROUPGEN_INFO_PLAYER";
 			w = 0.0572917 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "通过M-Tac MCC手持控制台将所选组交给玩家控制"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_GIVE_TO_PLAYER_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 		};
 
@@ -109,7 +109,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 		{
 			idc = MCC_GroupGenInfo_cacheButton_IDC;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{_x setVariable ['mcc_gaia_cache', !(_x getVariable ['mcc_gaia_cache',false]),true];}foreach MCC_GroupGenGroupSelected}};";
-			tooltip = "将所选组交给缓存系统";
+			tooltip = "$STR_MCC_CACHE_TOOLTIP";
 			text = "$STR_MCC_GROUPGEN_INFO_CACHE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 

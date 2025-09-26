@@ -27,7 +27,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "自动点唱机:"; //--- ToDo: Localize;
+			text = "$STR_MCC_JUKEBOX";
 			x = 0.0458336 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.0721875 * safezoneW;
@@ -40,12 +40,12 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[6] execVM '"+MCCPATH+"mcc\general_scripts\jukebox\jukebox.sqf'");
 
-			text = "Music"; //--- ToDo: Localize;
+			text = "$STR_MCC_MUSIC";
 			x = 0.00572965 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.06875 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "Switch to music tracks"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_MUSIC_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_JukeboxSound: MCC_RscButton
@@ -53,19 +53,19 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[7] execVM '"+MCCPATH+"mcc\general_scripts\jukebox\jukebox.sqf'");
 
-			text = "Sound"; //--- ToDo: Localize;
+			text = "$STR_MCC_SOUND";
 			x = 0.0859376 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0802083 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			tooltip = "Switch to sound tracks"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_SOUND_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_JukeboxTrackTittle: MCC_RscText
 		{
 			idc = -1;
 
-			text = "Track:"; //--- ToDo: Localize;
+			text = "$STR_MCC_TRACK";
 			x = 0.00572965 * safezoneW;
 			y = 0.0769698 * safezoneH;
 			w = 0.0459375 * safezoneW;
@@ -76,7 +76,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Volume:"; //--- ToDo: Localize;
+			text = "$STR_MCC_VOLUME";
 			x = 0.00572965 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0459375 * safezoneW;
@@ -87,7 +87,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "激活:"; //--- ToDo: Localize;
+			text = "$STR_MCC_ACTIVATE";
 			x = 0.00572965 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0459375 * safezoneW;
@@ -98,7 +98,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "条件:"; //--- ToDo: Localize;
+			text = "$STR_MCC_CONDITION";
 			x = 0.00572965 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0459375 * safezoneW;
@@ -109,7 +109,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "区:"; //--- ToDo: Localize;
+			text = "$STR_MCC_ZONE";
 			x = 0.00572965 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.0459375 * safezoneW;
@@ -121,12 +121,12 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[5] execVM '"+MCCPATH+"mcc\general_scripts\jukebox\jukebox.sqf'");
 
-			text = "Link"; //--- ToDo: Localize;
+			text = "$STR_MCC_LINK";
 			x = 0.126042 * safezoneW;
 			y = 0.208919 * safezoneH;
 			w = 0.039375 * safezoneW;
 			h = 0.0280063 * safezoneH;
-			tooltip = "Link the sound or music to the selected zone"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_LINK_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_JukeboxVolume: MCC_RscSlider
@@ -197,12 +197,12 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL ("[3] execVM '"+MCCPATH+"mcc\general_scripts\jukebox\jukebox.sqf'");
 
-			text = "[]"; //--- ToDo: Localize;
+			text = "$STR_MCC_STOP_TRACK";
 			x = 0.148959 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0196875 * safezoneW;
 			h = 0.0280063 * safezoneH;
-			tooltip = "Stop track"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_STOP_TRACK_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		
@@ -211,12 +211,12 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 514) ctrlShow false";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			x = 0.0572916 * safezoneW;
 			y = 0.241906 * safezoneH;
 			w = 0.0630208 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			tooltip = "将声音或音乐链接到所选区域"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_LINK_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 	};

@@ -282,7 +282,7 @@ class MCC3D_Dialog
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			tooltip = "打开 文件 生成器";
 
-			text = "文件 -->"; //--- ToDo: Localize;
+			text = "$STR_MCC_3D_FILE_ARROW";
 			x = 0.107708 * safezoneW + safezoneX;
 			y = 0.43 * safezoneH + safezoneY;
 			w = 0.0714583 * safezoneW;
@@ -297,7 +297,7 @@ class MCC3D_Dialog
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			tooltip = "打开 货物 生成器";
 
-			text = "货物-->"; //--- ToDo: Localize;
+			text = "$STR_MCC_CARGO_ARROW";
 			x = 0.107708 * safezoneW + safezoneX;
 			y = 0.465 * safezoneH + safezoneY;
 			w = 0.0714583 * safezoneW;
@@ -341,9 +341,9 @@ class MCC3D_Dialog
 			colorDisabled[] = {1,0.4,0.3,0.8};
 			onButtonClick = __EVAL("_this execVM '"+MCCPATH+"mcc\general_scripts\3Deditor\openZeus.sqf'");
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-			tooltip = "打开 宙斯";
+			tooltip = "$STR_MCC_ZEUS_TOOLTIP";
 
-			text = "宙斯"; //--- ToDo: Localize;
+			text = "$STR_MCC_ZEUS";
 			x = 0.0932292 * safezoneW + safezoneX;
 			y = 0.87 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -353,7 +353,7 @@ class MCC3D_Dialog
 		class MCC_3DClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "关闭";
+			text = "$STR_MCC_CLOSE";
 			action = "closeDialog 0";
 			x = 0.0932292 * safezoneW + safezoneX;
 			y = 0.928833 * safezoneH + safezoneY;

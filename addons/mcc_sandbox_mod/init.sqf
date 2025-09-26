@@ -514,20 +514,20 @@ if (isNil "MCC_MWArtillery") then {MCC_MWArtillery = ["B_MBT_01_arty_F","B_MBT_0
 
 
 MCC_MWDifficulty = ["Easy","Medium","Hard"];
-MCC_MWMissionType = ["None",
-                     "Random",
-					 "Secure HVT",
-					 "Kill HVT",
-					 "Destroy Vehicle",
-					 "Destroy AA",
-					 "Destroy Artillery",
-					 "Destroy Weapon Cahce",
-					 "Destroy Fuel Depot",
-					 "Destroy Radar/Radio",
-					 "Acquire Intel",
-					 "Download Intel",
-					 "Capture Area",
-					 "Disarm IED"//,"Logistics"
+MCC_MWMissionType = [localize "STR_MCC_MW_MISSION_NONE",
+                     localize "STR_MCC_MW_MISSION_RANDOM",
+					 localize "STR_MCC_MW_MISSION_SECURE_HVT",
+					 localize "STR_MCC_MW_MISSION_KILL_HVT",
+					 localize "STR_MCC_MW_MISSION_DESTROY_VEHICLE",
+					 localize "STR_MCC_MW_MISSION_DESTROY_AA",
+					 localize "STR_MCC_MW_MISSION_DESTROY_ARTILLERY",
+					 localize "STR_MCC_MW_MISSION_DESTROY_WEAPON_CACHE",
+					 localize "STR_MCC_MW_MISSION_DESTROY_FUEL_DEPOT",
+					 localize "STR_MCC_MW_MISSION_DESTROY_RADAR_RADIO",
+					 localize "STR_MCC_MW_MISSION_ACQUIRE_INTEL",
+					 localize "STR_MCC_MW_MISSION_DOWNLOAD_INTEL",
+					 localize "STR_MCC_MW_MISSION_CAPTURE_AREA",
+					 localize "STR_MCC_MW_MISSION_DISARM_IED"//,localize "STR_MCC_MW_MISSION_LOGISTICS"
 					 ];
 
 MCC_MWMissionTypeIcons = ["",

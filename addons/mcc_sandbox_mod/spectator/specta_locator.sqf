@@ -44,7 +44,7 @@
 					};
 
 					
-					//ToDo: check if (behaviour _unit) typeOf boolean instead of Array -> if so some error so do ignore
+					//$STR_MCC_SPECTATOR_TODO
 					_color = switch (side _unit) do 
 					{
 						case east: {[[1,0,0,1],[1,0,0,1]]};

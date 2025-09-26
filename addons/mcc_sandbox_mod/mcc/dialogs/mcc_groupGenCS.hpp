@@ -24,7 +24,7 @@ class MCC_csDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "客户端设置:"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLIENT_SETTINGS";
 			x = 0.0171876 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.127481 * safezoneW;
@@ -35,7 +35,7 @@ class MCC_csDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "视野距离:"; //--- ToDo: Localize;
+			text = "$STR_MCC_VIEW_DISTANCE";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.0572917 * safezoneW;
@@ -45,7 +45,7 @@ class MCC_csDialogControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "草地:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GRASS_DENSITY";
 			x = 0.00572965 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.0572917 * safezoneW;
@@ -81,7 +81,7 @@ class MCC_csDialogControls: MCC_RscControlsGroup
 		class MCC_CSClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_CLOSE";
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 516) ctrlShow false";
 			
 			x = 0.0401046 * safezoneW;
