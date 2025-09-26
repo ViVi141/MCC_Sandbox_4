@@ -263,6 +263,9 @@ MCC_fnc_getAIStats = {
 };
 
 // Initialize AI optimizer
+// TEMPORARILY DISABLED - May cause MCC console issues
+/*
 if (isServer) then {
 	[] call MCC_fnc_initAIOptimizer;
 };
+*/

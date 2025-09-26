@@ -32,7 +32,8 @@ MCC_performanceThresholds = [
 	["Network_Operations", 100], // Network operations per minute
 	["Object_Count", 500],  // Maximum objects
 	["AI_Count", 100],      // Maximum AI units
-	["Loop_Count", 50]      // Maximum active loops
+	["Loop_Count", 50],     // Maximum active loops
+	["Last_Update", 0]      // Last update threshold (0 means no threshold)
 ];
 
 // Performance monitoring loop
@@ -100,13 +101,13 @@ MCC_fnc_checkPerformanceIssues = {
 			};
 		} forEach MCC_performanceThresholds;
 		
-		// Check if threshold is exceeded
-		if (_value > _threshold) then {
-			diag_log format [localize "STR_MCC_PERFORMANCE_WARNING", _metric, _value, _threshold];
+		// Check if threshold is exceeded (skip Last_Update as it's not a performance metric)
+		if (_metric != "Last_Update" && _threshold > 0 && _value > _threshold) then {
+			diag_log format ["MCC性能警告：%1为%2（阈值：%3）", _metric, _value, _threshold];
 			
-			// Send warning to players
-			if (isServer) then {
-				[format [localize "STR_MCC_PERFORMANCE_WARNING_CHAT", _metric, _value]] remoteExec ["systemChat", 0];
+			// Send warning to players (only for critical metrics)
+			if (isServer && _metric in ["CPU_Usage", "Memory_Usage", "AI_Count"]) then {
+				[format ["MCC性能警告：%1为%2（阈值：%3）", _metric, _value, _threshold]] remoteExec ["systemChat", 0];
 			};
 		};
 	} forEach MCC_performanceData;
@@ -119,7 +120,7 @@ MCC_fnc_logPerformanceData = {
 		_logData = _logData + format ["%1: %2, ", _x select 0, _x select 1];
 	} forEach MCC_performanceData;
 	
-	diag_log format [localize "STR_MCC_PERFORMANCE_DATA", _logData];
+	diag_log format ["MCC性能数据：%1", _logData];
 };
 
 // Function to get performance recommendations
@@ -187,7 +188,10 @@ MCC_fnc_displayPerformanceInfo = {
 };
 
 // Initialize performance monitoring
+// TEMPORARILY DISABLED - May cause MCC console issues
+/*
 if (isServer) then {
 	[] call MCC_fnc_updatePerformanceData;
 	diag_log localize "STR_MCC_PERFORMANCE_MONITOR_INITIALIZED";
 };
+*/

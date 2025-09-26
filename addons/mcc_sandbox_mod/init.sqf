@@ -1131,6 +1131,8 @@ if (isnil "MCC_terrainPref") then
 
 //============= Performance Optimization System ===========================
 // Initialize performance optimization systems
+// TEMPORARILY DISABLED - May cause MCC console issues
+/*
 if (isServer) then {
 	// Load performance configuration
 	[] call MCC_fnc_loadPerformanceConfig;
@@ -1148,9 +1150,20 @@ if (isServer) then {
 		[] call MCC_fnc_initTaskManager;
 		
 		// Load compatibility layer
-		[] call MCC_fnc_MWCreateTaskCompat;
+		[] call MCC_fnc_MWCreateTaskWrapper;
 		
 		diag_log "MCC Performance Optimization System initialized";
+};
+*/
+
+//============= Task Manager Only ===========================
+// Initialize only task manager for task creation
+// Task manager will initialize itself from fn_taskManager.sqf
+if (isServer) then {
+	// Load compatibility layer
+	[] call MCC_fnc_MWCreateTaskWrapper;
+	
+	diag_log "MCC Task Manager compatibility layer loaded";
 };
 
 //============= Init MCC done===========================

@@ -1243,16 +1243,16 @@
                 <Chinesesimp>只展示平民阵营的单位</Chinesesimp>
                 <Chinese>只顯示平民陣營的單位</Chinese>
             </Key>
-            <key ID="STR_mcc_groupGen_PlayersButton_text">
+            <Key ID="STR_mcc_groupGen_PlayersButton_text">
                 <Original>Players</Original>
                 <Chinesesimp>玩家</Chinesesimp>
                 <Chinese>玩家</Chinese>
-            </key>
-            <key ID="STR_mcc_groupGen_PlayersButton_tooltips">
+            </Key>
+            <Key ID="STR_mcc_groupGen_PlayersButton_tooltips">
                 <Original>Show only Players' units</Original>
                 <Chinesesimp>只展示玩家的单位</Chinesesimp>
                 <Chinese>只顯示玩家的單位</Chinese>
-            </key>
+            </Key>
             <Key ID="STR_mcc_groupGen_AllButton_text">
                 <Original>All</Original>
                 <Chinesesimp>全部</Chinesesimp>

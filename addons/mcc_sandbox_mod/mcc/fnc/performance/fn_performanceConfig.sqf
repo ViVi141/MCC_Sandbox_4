@@ -317,7 +317,10 @@ MCC_fnc_applyPerformanceSettings = {
 };
 
 // Initialize performance configuration
+// TEMPORARILY DISABLED - May cause MCC console issues
+/*
 if (isServer) then {
 	[] call MCC_fnc_loadPerformanceConfig;
 	[] call MCC_fnc_addPerformanceMenu;
 };
+*/
