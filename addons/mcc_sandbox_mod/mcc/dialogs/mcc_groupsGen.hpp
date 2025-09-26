@@ -155,6 +155,7 @@ class mcc_groupGen
 			onButtonClick = __EVAL("['players'] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_manage.sqf'");
 
 			text = "$STR_mcc_groupGen_PlayersButton_text";
+			x = 0.860938 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0329871 * safezoneH;

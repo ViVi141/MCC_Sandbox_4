@@ -504,7 +504,7 @@ _objectives = [];
 								[_group, _objPos] call bis_fnc_taskDefend;
 							};
 						//Land_WaterBottle_01_stack_F Land_FoodSacks_01_small_brown_idap_F
-						_result = [_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTaskWrapper;
+						_result = [_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTask;
 						_taskCreationResults pushBack ["Logistics", _result];
 						};
 

@@ -1129,45 +1129,6 @@ if (isnil "MCC_terrainPref") then
 	profileNamespace setVariable ["MCC_terrainPref", MCC_terrainPref];
 };
 
-//============= Performance Optimization System ===========================
-// Initialize performance optimization systems
-// TEMPORARILY DISABLED - May cause MCC console issues
-/*
-if (isServer) then {
-	// Load performance configuration
-	[] call MCC_fnc_loadPerformanceConfig;
-	
-	// Initialize performance monitoring
-	[] call MCC_fnc_performanceMonitor;
-	
-	// Initialize AI optimizer
-	[] call MCC_fnc_initAIOptimizer;
-	
-		// Initialize object pools
-		[] call MCC_fnc_initObjectPools;
-		
-		// Initialize compatibility layer first
-		[] call MCC_fnc_MWCreateTaskCompat;
-		
-		// Initialize task manager
-		[] call MCC_fnc_initTaskManager;
-		
-		// Load wrapper functions
-		[] call MCC_fnc_MWCreateTaskWrapper;
-		
-		diag_log "MCC Performance Optimization System initialized";
-};
-*/
-
-//============= Task Manager Only ===========================
-// Initialize only task manager for task creation
-// Task manager will initialize itself from fn_taskManager.sqf
-if (isServer) then {
-	// Load compatibility layer
-	[] call MCC_fnc_MWCreateTaskWrapper;
-	
-	diag_log "MCC Task Manager compatibility layer loaded";
-};
 
 //============= Init MCC done===========================
 MCC_initDone = true;
