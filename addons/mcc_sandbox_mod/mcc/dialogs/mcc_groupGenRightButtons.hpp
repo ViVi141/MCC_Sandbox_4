@@ -21,8 +21,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		class MCC_MissionSettings: MCC_RscButton
 		{
 			idc = -1;
-			text = "任务设置";
-			tooltip = "打开任务设置菜单"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_MISSION_SETTINGS_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_MISSION_SETTINGS_TOOLTIP";
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {createDialog 'missionSettings';} else {player globalchat 'Access Denied'};";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
@@ -34,10 +34,10 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		class MCC_StartDisableRespawn: MCC_RscButton
 		{
 			idc = 2;
-			text = "禁用重生";
+			text = "$STR_MCC_GROUPGEN_DISABLE_RESPAWN_BUTTON";
 			colorText[] = {1,1,1,1};
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			tooltip = "Disable respawn to all players"; 
+			tooltip = "$STR_MCC_GROUPGEN_DISABLE_RESPAWN_TOOLTIP"; 
 			action = __EVAL("[4] execVM '"+MCCPATH+"mcc\general_scripts\mcc_start_location.sqf'");
 			
 			x = 0.0057 * safezoneW;
@@ -50,8 +50,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "设置天气"; //--- ToDo: Localize;
-			tooltip = "Open Weather Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_WEATHER_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_WEATHER_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -64,8 +64,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "设置时间"; //--- ToDo: Localize;
-			tooltip = "Open Time Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TIME_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_TIME_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -78,8 +78,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "开始地点"; //--- ToDo: Localize;
-			tooltip = "Open Locations Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_LOCATION_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_LOCATION_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -92,8 +92,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "调试"; //--- ToDo: Localize;
-			tooltip = "Open Debug Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_DEBUG_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_DEBUG_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -106,8 +106,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[10] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "标记"; //--- ToDo: Localize;
-			tooltip = "Open Markers Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_MARKERS_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_MARKERS_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -120,8 +120,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[11] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "简报"; //--- ToDo: Localize;
-			tooltip = "Open Briefing Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_BRIEFING_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_BRIEFING_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -134,8 +134,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[12] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "任务"; //--- ToDo: Localize;
-			tooltip = "Open Tasks Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TASKS_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_TASKS_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -148,8 +148,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[14] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "触发器"; //--- ToDo: Localize;
-			tooltip = "Open Triggers Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TRIGGERS_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_TRIGGERS_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -162,8 +162,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[13] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "自动点唱机"; //--- ToDo: Localize;
-			tooltip = "Open Jukebox Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_JUKEBOX_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_JUKEBOX_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.0057 * safezoneW;
@@ -176,8 +176,8 @@ class MCC_rightButtonsControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[15] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\controlsHandle.sqf'");
-			text = "客户端"; //--- ToDo: Localize;
-			tooltip = "Open Client Side Menu"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CLIENT_SIDE_BUTTON";
+			tooltip = "$STR_MCC_GROUPGEN_CLIENT_SIDE_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			
 			x = 0.0057 * safezoneW;

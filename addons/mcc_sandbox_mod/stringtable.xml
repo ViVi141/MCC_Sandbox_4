@@ -735,6 +735,390 @@
                 <Chinese>查找通往某个区域的道路段。</Chinese>
                 <Chinese_Traditional>查找通往某個區域的道路段。</Chinese_Traditional>
             </Key>
+            <Key ID="STR_MCC_ZONE_TITLE">
+                <Original>Zone:</Original>
+                <English>Zone:</English>
+                <Chinese>区域:</Chinese>
+                <Chinese_Traditional>區域:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_CREATE_ZONE">
+                <Original>Create Zone</Original>
+                <English>Create Zone</English>
+                <Chinese>创建区域</Chinese>
+                <Chinese_Traditional>創建區域</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_CREATE_ZONE_TOOLTIP">
+                <Original>Click and drag on the minimap to make a zone</Original>
+                <English>Click and drag on the minimap to make a zone</English>
+                <Chinese>在小地图上点击并拖拽来创建区域</Chinese>
+                <Chinese_Traditional>在小地圖上點擊並拖拽來創建區域</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BEHAVIOR_TITLE">
+                <Original>Behavior:</Original>
+                <English>Behavior:</English>
+                <Chinese>行为:</Chinese>
+                <Chinese_Traditional>行為:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GIVE_TO_GAIA">
+                <Original>Give to Gaia</Original>
+                <English>Give to Gaia</English>
+                <Chinese>交给GAIA</Chinese>
+                <Chinese_Traditional>交給GAIA</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GIVE_TO_GAIA_TOOLTIP">
+                <Original>Give the selected groups to GAIA control with the selected zone and behavior</Original>
+                <English>Give the selected groups to GAIA control with the selected zone and behavior</English>
+                <Chinese>将选中的组交给GAIA控制，使用选定的区域和行为</Chinese>
+                <Chinese_Traditional>將選中的組交給GAIA控制，使用選定的區域和行為</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GIVE_TO_PLAYER">
+                <Original>Give to Player</Original>
+                <English>Give to Player</English>
+                <Chinese>交给玩家</Chinese>
+                <Chinese_Traditional>交給玩家</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GIVE_TO_PLAYER_TOOLTIP">
+                <Original>Give the selected groups to player's control with the commander console</Original>
+                <English>Give the selected groups to player's control with the commander console</English>
+                <Chinese>将选中的组交给玩家控制，使用指挥官控制台</Chinese>
+                <Chinese_Traditional>將選中的組交給玩家控制，使用指揮官控制台</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_SPAWN_BUTTON">
+                <Original>Spawn</Original>
+                <English>Spawn</English>
+                <Chinese>重生</Chinese>
+                <Chinese_Traditional>重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_SPAWN_TOOLTIP">
+                <Original>Spawn units or groups</Original>
+                <English>Spawn units or groups</English>
+                <Chinese>生成单位或组</Chinese>
+                <Chinese_Traditional>生成單位或組</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_BUTTON">
+                <Original>Close Air Support</Original>
+                <English>Close Air Support</English>
+                <Chinese>近距离空中支援</Chinese>
+                <Chinese_Traditional>近距離空中支援</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_TOOLTIP">
+                <Original>Open Close Air Support Menu</Original>
+                <English>Open Close Air Support Menu</English>
+                <Chinese>打开近距离空中支援菜单</Chinese>
+                <Chinese_Traditional>打開近距離空中支援菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_AIRDROP_BUTTON">
+                <Original>Supply Drop</Original>
+                <English>Supply Drop</English>
+                <Chinese>支援投送</Chinese>
+                <Chinese_Traditional>支援投送</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_AIRDROP_TOOLTIP">
+                <Original>Open Supply Drop Menu</Original>
+                <English>Open Supply Drop Menu</English>
+                <Chinese>打开支援投送菜单</Chinese>
+                <Chinese_Traditional>打開支援投送菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_BUTTON">
+                <Original>Artillery</Original>
+                <English>Artillery</English>
+                <Chinese>火炮</Chinese>
+                <Chinese_Traditional>火炮</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_TOOLTIP">
+                <Original>Open artillery Menu</Original>
+                <English>Open artillery Menu</English>
+                <Chinese>打开火炮菜单</Chinese>
+                <Chinese_Traditional>打開火炮菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_BUTTON">
+                <Original>Evac</Original>
+                <English>Evac</English>
+                <Chinese>撤出</Chinese>
+                <Chinese_Traditional>撤出</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_TOOLTIP">
+                <Original>Open Evac Menu</Original>
+                <English>Open Evac Menu</English>
+                <Chinese>打开撤出菜单</Chinese>
+                <Chinese_Traditional>打開撤出菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_BUTTON">
+                <Original>IEDs</Original>
+                <English>IEDs</English>
+                <Chinese>简易爆炸装置</Chinese>
+                <Chinese_Traditional>簡易爆炸裝置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_TOOLTIP">
+                <Original>Open IEDs Menu</Original>
+                <English>Open IEDs Menu</English>
+                <Chinese>打开简易爆炸装置菜单</Chinese>
+                <Chinese_Traditional>打開簡易爆炸裝置菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_BUTTON">
+                <Original>Convoy</Original>
+                <English>Convoy</English>
+                <Chinese>车队</Chinese>
+                <Chinese_Traditional>車隊</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_TOOLTIP">
+                <Original>Open Convoy Menu</Original>
+                <English>Open Convoy Menu</English>
+                <Chinese>打开车队菜单</Chinese>
+                <Chinese_Traditional>打開車隊菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_AC130_BUTTON">
+                <Original>AC-130</Original>
+                <English>AC-130</English>
+                <Chinese>AC-130</Chinese>
+                <Chinese_Traditional>AC-130</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_AC130_TOOLTIP">
+                <Original>Spawn AC-130 (use MCC console to control it)</Original>
+                <English>Spawn AC-130 (use MCC console to control it)</English>
+                <Chinese>生成AC-130 (使用MCC控制台控制)</Chinese>
+                <Chinese_Traditional>生成AC-130 (使用MCC控制台控制)</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BRUSH_BUTTON">
+                <Original>Brush</Original>
+                <English>Brush</English>
+                <Chinese>刷子</Chinese>
+                <Chinese_Traditional>刷子</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BRUSH_TOOLTIP">
+                <Original>Brushes Menu</Original>
+                <English>Brushes Menu</English>
+                <Chinese>刷子菜单</Chinese>
+                <Chinese_Traditional>刷子菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ROLE_SELECTION_BUTTON">
+                <Original>Role Selection</Original>
+                <English>Role Selection</English>
+                <Chinese>角色选择</Chinese>
+                <Chinese_Traditional>角色選擇</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ROLE_SELECTION_TOOLTIP">
+                <Original>Enable/Disable Role Selection</Original>
+                <English>Enable/Disable Role Selection</English>
+                <Chinese>启用/禁用角色选择</Chinese>
+                <Chinese_Traditional>啟用/禁用角色選擇</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ZEUS_BUTTON">
+                <Original>Zeus</Original>
+                <English>Zeus</English>
+                <Chinese>宙斯</Chinese>
+                <Chinese_Traditional>宙斯</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ZEUS_TOOLTIP">
+                <Original>Click on map to open BIS Zeus</Original>
+                <English>Click on map to open BIS Zeus</English>
+                <Chinese>点击地图打开BIS宙斯</Chinese>
+                <Chinese_Traditional>點擊地圖打開BIS宙斯</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARSENAL_BUTTON">
+                <Original>Arsenal</Original>
+                <English>Arsenal</English>
+                <Chinese>军火库</Chinese>
+                <Chinese_Traditional>軍火庫</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARSENAL_TOOLTIP">
+                <Original>Click to open BIS arsenal</Original>
+                <English>Click to open BIS arsenal</English>
+                <Chinese>点击打开BIS军火库</Chinese>
+                <Chinese_Traditional>點擊打開BIS軍火庫</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_MISSION_SETTINGS_BUTTON">
+                <Original>Mission Settings</Original>
+                <English>Mission Settings</English>
+                <Chinese>任务设置</Chinese>
+                <Chinese_Traditional>任務設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_MISSION_SETTINGS_TOOLTIP">
+                <Original>Open mission settings menu</Original>
+                <English>Open mission settings menu</English>
+                <Chinese>打开任务设置菜单</Chinese>
+                <Chinese_Traditional>打開任務設置菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_DISABLE_RESPAWN_BUTTON">
+                <Original>Disable Respawn</Original>
+                <English>Disable Respawn</English>
+                <Chinese>禁用重生</Chinese>
+                <Chinese_Traditional>禁用重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_DISABLE_RESPAWN_TOOLTIP">
+                <Original>Disable respawn to all players</Original>
+                <English>Disable respawn to all players</English>
+                <Chinese>禁用所有玩家的重生</Chinese>
+                <Chinese_Traditional>禁用所有玩家的重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_WEATHER_BUTTON">
+                <Original>Weather</Original>
+                <English>Weather</English>
+                <Chinese>设置天气</Chinese>
+                <Chinese_Traditional>設置天氣</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_WEATHER_TOOLTIP">
+                <Original>Open Weather Menu</Original>
+                <English>Open Weather Menu</English>
+                <Chinese>打开天气菜单</Chinese>
+                <Chinese_Traditional>打開天氣菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TIME_BUTTON">
+                <Original>Time</Original>
+                <English>Time</English>
+                <Chinese>设置时间</Chinese>
+                <Chinese_Traditional>設置時間</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TIME_TOOLTIP">
+                <Original>Open Time Menu</Original>
+                <English>Open Time Menu</English>
+                <Chinese>打开时间菜单</Chinese>
+                <Chinese_Traditional>打開時間菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_LOCATION_BUTTON">
+                <Original>Start Location</Original>
+                <English>Start Location</English>
+                <Chinese>开始地点</Chinese>
+                <Chinese_Traditional>開始地點</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_LOCATION_TOOLTIP">
+                <Original>Open Locations Menu</Original>
+                <English>Open Locations Menu</English>
+                <Chinese>打开地点菜单</Chinese>
+                <Chinese_Traditional>打開地點菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_DEBUG_BUTTON">
+                <Original>Debug</Original>
+                <English>Debug</English>
+                <Chinese>调试</Chinese>
+                <Chinese_Traditional>調試</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_DEBUG_TOOLTIP">
+                <Original>Open Debug Menu</Original>
+                <English>Open Debug Menu</English>
+                <Chinese>打开调试菜单</Chinese>
+                <Chinese_Traditional>打開調試菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_MARKERS_BUTTON">
+                <Original>Markers</Original>
+                <English>Markers</English>
+                <Chinese>标记</Chinese>
+                <Chinese_Traditional>標記</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_MARKERS_TOOLTIP">
+                <Original>Open Markers Menu</Original>
+                <English>Open Markers Menu</English>
+                <Chinese>打开标记菜单</Chinese>
+                <Chinese_Traditional>打開標記菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BRIEFING_BUTTON">
+                <Original>Briefing</Original>
+                <English>Briefing</English>
+                <Chinese>简报</Chinese>
+                <Chinese_Traditional>簡報</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BRIEFING_TOOLTIP">
+                <Original>Open Briefing Menu</Original>
+                <English>Open Briefing Menu</English>
+                <Chinese>打开简报菜单</Chinese>
+                <Chinese_Traditional>打開簡報菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TASKS_BUTTON">
+                <Original>Tasks</Original>
+                <English>Tasks</English>
+                <Chinese>任务</Chinese>
+                <Chinese_Traditional>任務</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TASKS_TOOLTIP">
+                <Original>Open Tasks Menu</Original>
+                <English>Open Tasks Menu</English>
+                <Chinese>打开任务菜单</Chinese>
+                <Chinese_Traditional>打開任務菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TRIGGERS_BUTTON">
+                <Original>Triggers</Original>
+                <English>Triggers</English>
+                <Chinese>触发器</Chinese>
+                <Chinese_Traditional>觸發器</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TRIGGERS_TOOLTIP">
+                <Original>Open Triggers Menu</Original>
+                <English>Open Triggers Menu</English>
+                <Chinese>打开触发器菜单</Chinese>
+                <Chinese_Traditional>打開觸發器菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_JUKEBOX_BUTTON">
+                <Original>Jukebox</Original>
+                <English>Jukebox</English>
+                <Chinese>自动点唱机</Chinese>
+                <Chinese_Traditional>自動點唱機</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_JUKEBOX_TOOLTIP">
+                <Original>Open Jukebox Menu</Original>
+                <English>Open Jukebox Menu</English>
+                <Chinese>打开自动点唱机菜单</Chinese>
+                <Chinese_Traditional>打開自動點唱機菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CLIENT_SIDE_BUTTON">
+                <Original>Client Side</Original>
+                <English>Client Side</English>
+                <Chinese>客户端</Chinese>
+                <Chinese_Traditional>客戶端</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CLIENT_SIDE_TOOLTIP">
+                <Original>Open Client Side Menu</Original>
+                <English>Open Client Side Menu</English>
+                <Chinese>打开客户端菜单</Chinese>
+                <Chinese_Traditional>打開客戶端菜單</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_CANCEL_BUTTON">
+                <Original>Cancel</Original>
+                <English>Cancel</English>
+                <Chinese>取消</Chinese>
+                <Chinese_Traditional>取消</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_MISSION_BUTTON">
+                <Original>Mission Settings</Original>
+                <English>Mission Settings</English>
+                <Chinese>任务设置</Chinese>
+                <Chinese_Traditional>任務設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_UI_BUTTON">
+                <Original>UI Settings</Original>
+                <English>UI Settings</English>
+                <Chinese>UI设置</Chinese>
+                <Chinese_Traditional>UI設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_MECHANICS_BUTTON">
+                <Original>Mechanics Settings</Original>
+                <English>Mechanics Settings</English>
+                <Chinese>力学设置</Chinese>
+                <Chinese_Traditional>力學設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_MEDICAL_BUTTON">
+                <Original>Medical System Settings</Original>
+                <English>Medical System Settings</English>
+                <Chinese>医疗系统设置</Chinese>
+                <Chinese_Traditional>醫療系統設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_ROLE_SELECTION_BUTTON">
+                <Original>Role Selection Settings</Original>
+                <English>Role Selection Settings</English>
+                <Chinese>角色选择设置</Chinese>
+                <Chinese_Traditional>角色選擇設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MISSION_SETTINGS_GAIA_BUTTON">
+                <Original>GAIA Settings</Original>
+                <English>GAIA Settings</English>
+                <Chinese>GAIA设置</Chinese>
+                <Chinese_Traditional>GAIA設置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPS_GEN_HELP_BUTTON">
+                <Original>(?)</Original>
+                <English>(?)</English>
+                <Chinese>(?)</Chinese>
+                <Chinese_Traditional>(?)</Chinese_Traditional>
+            </Key>
             <Key ID="STR_MCC_NEARESTROAD">
                 <Original>Return a Road segments array near positions.</Original>
                 <English>Return a Road segments array near positions.</English>
@@ -2098,6 +2482,756 @@
                 <Original>Unlimited performance preset applied</Original>
                 <Chinesesimp>已应用无限制性能预设</Chinesesimp>
                 <Chinese>已應用無限制性能預設</Chinese>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_CPU_USAGE">
+                <Original>CPU Usage: 0</Original>
+                <English>CPU Usage: 0</English>
+                <Chinese>CPU使用率: 0</Chinese>
+                <Chinese_Traditional>CPU使用率: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_MEMORY_USAGE">
+                <Original>Memory Usage: 0</Original>
+                <English>Memory Usage: 0</English>
+                <Chinese>内存使用率: 0</Chinese>
+                <Chinese_Traditional>內存使用率: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_NETWORK_OPS">
+                <Original>Network Operations: 0</Original>
+                <English>Network Operations: 0</English>
+                <Chinese>网络操作: 0</Chinese>
+                <Chinese_Traditional>網絡操作: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_OBJECT_COUNT">
+                <Original>Object Count: 0</Original>
+                <English>Object Count: 0</English>
+                <Chinese>对象数量: 0</Chinese>
+                <Chinese_Traditional>對象數量: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_AI_COUNT">
+                <Original>AI Count: 0</Original>
+                <English>AI Count: 0</English>
+                <Chinese>AI数量: 0</Chinese>
+                <Chinese_Traditional>AI數量: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_LOOP_COUNT">
+                <Original>Loop Count: 0</Original>
+                <English>Loop Count: 0</English>
+                <Chinese>循环次数: 0</Chinese>
+                <Chinese_Traditional>循環次數: 0</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_PERFORMANCE_RECOMMENDATIONS">
+                <Original>Performance Recommendations:</Original>
+                <English>Performance Recommendations:</English>
+                <Chinese>性能建议:</Chinese>
+                <Chinese_Traditional>性能建議:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TASK_MONITOR_TITLE">
+                <Original>MCC Task Monitor</Original>
+                <English>MCC Task Monitor</English>
+                <Chinese>MCC任务监控</Chinese>
+                <Chinese_Traditional>MCC任務監控</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TASK_MONITOR_REFRESH">
+                <Original>Refresh</Original>
+                <English>Refresh</English>
+                <Chinese>刷新</Chinese>
+                <Chinese_Traditional>刷新</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TASK_MONITOR_CLEANUP">
+                <Original>Cleanup</Original>
+                <English>Cleanup</English>
+                <Chinese>清理</Chinese>
+                <Chinese_Traditional>清理</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_TASK_MONITOR_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVE_LOAD_TITLE">
+                <Original>Save / Load MCC configuration</Original>
+                <English>Save / Load MCC configuration</English>
+                <Chinese>保存/加载MCC配置</Chinese>
+                <Chinese_Traditional>保存/加載MCC配置</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVE_LOAD_PASTE_INSTRUCTION">
+                <Original>Paste (crtl-v) MCC configuration code here:</Original>
+                <English>Paste (crtl-v) MCC configuration code here:</English>
+                <Chinese>在此处粘贴(ctrl-v)MCC配置代码:</Chinese>
+                <Chinese_Traditional>在此處粘貼(ctrl-v)MCC配置代碼:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVE_TO_CLIPBOARD">
+                <Original>Save To Clipboard</Original>
+                <English>Save To Clipboard</English>
+                <Chinese>保存到剪贴板</Chinese>
+                <Chinese_Traditional>保存到剪貼板</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_LOAD_FROM_CLIPBOARD">
+                <Original>Load From Clipboard</Original>
+                <English>Load From Clipboard</English>
+                <Chinese>从剪贴板加载</Chinese>
+                <Chinese_Traditional>從剪貼板加載</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SAVE_LOAD_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_KEYBINDS_TITLE">
+                <Original>Key Binds:</Original>
+                <English>Key Binds:</English>
+                <Chinese>按键绑定:</Chinese>
+                <Chinese_Traditional>按鍵綁定:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_KEYBINDS_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_FACTION">
+                <Original>Faction:</Original>
+                <English>Faction:</English>
+                <Chinese>派系:</Chinese>
+                <Chinese_Traditional>派系:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_EDITOR_TITLE">
+                <Original>MCC 3D Editor</Original>
+                <English>MCC 3D Editor</English>
+                <Chinese>MCC 3D 编辑器</Chinese>
+                <Chinese_Traditional>MCC 3D 編輯器</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_TYPE">
+                <Original>Type:</Original>
+                <English>Type:</English>
+                <Chinese>类型:</Chinese>
+                <Chinese_Traditional>類型:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_CLASS">
+                <Original>Class:</Original>
+                <English>Class:</English>
+                <Chinese>类:</Chinese>
+                <Chinese_Traditional>類:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_EMPTY">
+                <Original>Empty:</Original>
+                <English>Empty:</English>
+                <Chinese>空:</Chinese>
+                <Chinese_Traditional>空:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_NAME">
+                <Original>Name:</Original>
+                <English>Name:</English>
+                <Chinese>名字:</Chinese>
+                <Chinese_Traditional>名字:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_INIT">
+                <Original>Init:</Original>
+                <English>Init:</English>
+                <Chinese>初始化:</Chinese>
+                <Chinese_Traditional>初始化:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_PRESET">
+                <Original>Preset:</Original>
+                <English>Preset:</English>
+                <Chinese>预设:</Chinese>
+                <Chinese_Traditional>預設:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_RESPAWN">
+                <Original>Respawn</Original>
+                <English>Respawn</English>
+                <Chinese>重生</Chinese>
+                <Chinese_Traditional>重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_SAMPLE_TEXT">
+                <Original>Sample Text</Original>
+                <English>Sample Text</English>
+                <Chinese>示例文本</Chinese>
+                <Chinese_Traditional>示例文本</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_HELLO">
+                <Original>Hello</Original>
+                <English>Hello</English>
+                <Chinese>你好</Chinese>
+                <Chinese_Traditional>你好</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_SAVE_TO_CONFIG">
+                <Original>Save to Config</Original>
+                <English>Save to Config</English>
+                <Chinese>保存到配置文件</Chinese>
+                <Chinese_Traditional>保存到配置文件</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_3D_LOAD_FROM_CONFIG">
+                <Original>Load from Config</Original>
+                <English>Load from Config</English>
+                <Chinese>从配置文件加载</Chinese>
+                <Chinese_Traditional>從配置文件加載</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_CURATOR_EDIT_INIT">
+                <Original>Edit Init Line (MCC)</Original>
+                <English>Edit Init Line (MCC)</English>
+                <Chinese>编辑初始化行 (MCC)</Chinese>
+                <Chinese_Traditional>編輯初始化行 (MCC)</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_TITLE">
+                <Original>Cargo Generator:</Original>
+                <English>Cargo Generator:</English>
+                <Chinese>货物生成器:</Chinese>
+                <Chinese_Traditional>貨物生成器:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_CLASS">
+                <Original>Class:</Original>
+                <English>Class:</English>
+                <Chinese>类:</Chinese>
+                <Chinese_Traditional>類:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_ADD_ALL">
+                <Original>>></Original>
+                <English>>></English>
+                <Chinese>>></Chinese>
+                <Chinese_Traditional>>></Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_ADD_ONE">
+                <Original>></Original>
+                <English>></English>
+                <Chinese>></Chinese>
+                <Chinese_Traditional>></Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_CLEAR">
+                <Original>Clear</Original>
+                <English>Clear</English>
+                <Chinese>清除</Chinese>
+                <Chinese_Traditional>清除</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BOX_GEN_ADD">
+                <Original>Add</Original>
+                <English>Add</English>
+                <Chinese>添加</Chinese>
+                <Chinese_Traditional>添加</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_TASK_GENERATOR">
+                <Original>Mission Generator</Original>
+                <English>Mission Generator</English>
+                <Chinese>任务生成器</Chinese>
+                <Chinese_Traditional>任務生成器</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_ENEMY_FACTION">
+                <Original>Enemy Faction:</Original>
+                <English>Enemy Faction:</English>
+                <Chinese>敌军派系:</Chinese>
+                <Chinese_Traditional>敵軍派系:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_CIVILIAN_FACTION">
+                <Original>Civilian Faction:</Original>
+                <English>Civilian Faction:</English>
+                <Chinese>平民派系:</Chinese>
+                <Chinese_Traditional>平民派系:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_NUM_PLAYERS">
+                <Original># Players:</Original>
+                <English># Players:</English>
+                <Chinese># 玩家:</Chinese>
+                <Chinese_Traditional># 玩家:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_DIFFICULTY">
+                <Original>Difficulty</Original>
+                <English>Difficulty</English>
+                <Chinese>难度</Chinese>
+                <Chinese_Traditional>難度</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_CQB">
+                <Original>Close Combat:</Original>
+                <English>Close Combat:</English>
+                <Chinese>近距离战斗:</Chinese>
+                <Chinese_Traditional>近距離戰鬥:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_STEALTH">
+                <Original>Stealth:</Original>
+                <English>Stealth:</English>
+                <Chinese>隐身:</Chinese>
+                <Chinese_Traditional>隱身:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_TARGET_MARKERS">
+                <Original>Target Markers:</Original>
+                <English>Target Markers:</English>
+                <Chinese>目标标记:</Chinese>
+                <Chinese_Traditional>目標標記:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_GENERAL_MARKERS">
+                <Original>General Markers:</Original>
+                <English>General Markers:</English>
+                <Chinese>通用标记:</Chinese>
+                <Chinese_Traditional>通用標記:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_MAIN_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_MAIN_GENERATE">
+                <Original>Generate Mission</Original>
+                <English>Generate Mission</English>
+                <Chinese>生成任务</Chinese>
+                <Chinese_Traditional>生成任務</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_MAIN_ZONE">
+                <Original>Zone:</Original>
+                <English>Zone:</English>
+                <Chinese>区域:</Chinese>
+                <Chinese_Traditional>區域:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_MW_MAIN_UPDATE_ZONE">
+                <Original>Update Zone</Original>
+                <English>Update Zone</English>
+                <Chinese>更新区域</Chinese>
+                <Chinese_Traditional>更新區域</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_SPAWN_TITLE">
+                <Original>Spawn:</Original>
+                <English>Spawn:</English>
+                <Chinese>生成:</Chinese>
+                <Chinese_Traditional>生成:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_TYPE">
+                <Original>Type:</Original>
+                <English>Type:</English>
+                <Chinese>类型:</Chinese>
+                <Chinese_Traditional>類型:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BRANCH">
+                <Original>Branch:</Original>
+                <English>Branch:</English>
+                <Chinese>分支:</Chinese>
+                <Chinese_Traditional>分支:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CLASS">
+                <Original>Class:</Original>
+                <English>Class:</English>
+                <Chinese>类:</Chinese>
+                <Chinese_Traditional>類:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_BEHAVIOR">
+                <Original>Behavior:</Original>
+                <English>Behavior:</English>
+                <Chinese>行为:</Chinese>
+                <Chinese_Traditional>行為:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EMPTY">
+                <Original>Empty:</Original>
+                <English>Empty:</English>
+                <Chinese>空:</Chinese>
+                <Chinese_Traditional>空:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_NAME">
+                <Original>Name:</Original>
+                <English>Name:</English>
+                <Chinese>名字:</Chinese>
+                <Chinese_Traditional>名字:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ADD_TO_LIST">
+                <Original>Add to List</Original>
+                <English>Add to List</English>
+                <Chinese>添加到列表</Chinese>
+                <Chinese_Traditional>添加到列表</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CLEAR_LIST">
+                <Original>Clear List</Original>
+                <English>Clear List</English>
+                <Chinese>清空列表</Chinese>
+                <Chinese_Traditional>清空列表</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_TITLE">
+                <Original>Close Air Support:</Original>
+                <English>Close Air Support:</English>
+                <Chinese>近距离空中支援:</Chinese>
+                <Chinese_Traditional>近距離空中支援:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_AIRCRAFT">
+                <Original>Aircraft:</Original>
+                <English>Aircraft:</English>
+                <Chinese>飞机:</Chinese>
+                <Chinese_Traditional>飛機:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_CALL">
+                <Original>Call</Original>
+                <English>Call</English>
+                <Chinese>呼叫</Chinese>
+                <Chinese_Traditional>呼叫</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_ADD">
+                <Original>Add</Original>
+                <English>Add</English>
+                <Chinese>添加</Chinese>
+                <Chinese_Traditional>添加</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CAS_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_TITLE">
+                <Original>Artillery</Original>
+                <English>Artillery</English>
+                <Chinese>火炮</Chinese>
+                <Chinese_Traditional>火炮</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_SPREAD">
+                <Original>Spread:</Original>
+                <English>Spread:</English>
+                <Chinese>散步:</Chinese>
+                <Chinese_Traditional>散步:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_SHELLS">
+                <Original>N. of Shells</Original>
+                <English>N. of Shells</English>
+                <Chinese>N. of 炮弹</Chinese>
+                <Chinese_Traditional>N. of 炮彈</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_DELAY">
+                <Original>Delay:</Original>
+                <English>Delay:</English>
+                <Chinese>延迟:</Chinese>
+                <Chinese_Traditional>延遲:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_CALL">
+                <Original>Call</Original>
+                <English>Call</English>
+                <Chinese>呼叫</Chinese>
+                <Chinese_Traditional>呼叫</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_ADD">
+                <Original>Add</Original>
+                <English>Add</English>
+                <Chinese>添加</Chinese>
+                <Chinese_Traditional>添加</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_ARTILLERY_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_TITLE">
+                <Original>Evacuation:</Original>
+                <English>Evacuation:</English>
+                <Chinese>撤退:</Chinese>
+                <Chinese_Traditional>撤退:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_RESPAWN">
+                <Original>Respawn</Original>
+                <English>Respawn</English>
+                <Chinese>重生</Chinese>
+                <Chinese_Traditional>重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_WAYPOINT_1">
+                <Original>1 Waypoint</Original>
+                <English>1 Waypoint</English>
+                <Chinese>1 路点</Chinese>
+                <Chinese_Traditional>1 路點</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_WAYPOINT_3">
+                <Original>3 Waypoints</Original>
+                <English>3 Waypoints</English>
+                <Chinese>3 路点</Chinese>
+                <Chinese_Traditional>3 路點</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_INSERT">
+                <Original>Insert:</Original>
+                <English>Insert:</English>
+                <Chinese>插入:</Chinese>
+                <Chinese_Traditional>插入:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_EVAC_DELETE">
+                <Original>Del. Evac</Original>
+                <English>Del. Evac</English>
+                <Chinese>Del. 撤离</Chinese>
+                <Chinese_Traditional>Del. 撤離</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_TITLE">
+                <Original>IEDs and Ambushes:</Original>
+                <English>IEDs and Ambushes:</English>
+                <Chinese>简易爆炸装置和伏击:</Chinese>
+                <Chinese_Traditional>簡易爆炸裝置和伏擊:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_OBJECT">
+                <Original>Object:</Original>
+                <English>Object:</English>
+                <Chinese>物体:</Chinese>
+                <Chinese_Traditional>物體:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_SIZE">
+                <Original>Explosion Size:</Original>
+                <English>Explosion Size:</English>
+                <Chinese>爆炸尺寸:</Chinese>
+                <Chinese_Traditional>爆炸尺寸:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_TYPE">
+                <Original>Explosion Type:</Original>
+                <English>Explosion Type:</English>
+                <Chinese>爆炸类型:</Chinese>
+                <Chinese_Traditional>爆炸類型:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_DISARM_TIME">
+                <Original>Disarm Duration:</Original>
+                <English>Disarm Duration:</English>
+                <Chinese>解除武装持续时间:</Chinese>
+                <Chinese_Traditional>解除武裝持續時間:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_JAMMABLE">
+                <Original>Jammable:</Original>
+                <English>Jammable:</English>
+                <Chinese>可干扰:</Chinese>
+                <Chinese_Traditional>可干擾:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_TARGET_FACTION">
+                <Original>Target Faction:</Original>
+                <English>Target Faction:</English>
+                <Chinese>目标派系:</Chinese>
+                <Chinese_Traditional>目標派系:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_IED_TRIGGER_TYPE">
+                <Original>Trigger Type:</Original>
+                <English>Trigger Type:</English>
+                <Chinese>触发类型:</Chinese>
+                <Chinese_Traditional>觸發類型:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_TITLE">
+                <Original>Convoy:</Original>
+                <English>Convoy:</English>
+                <Chinese>车队:</Chinese>
+                <Chinese_Traditional>車隊:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_VEHICLE_1">
+                <Original>Vehicle 1:</Original>
+                <English>Vehicle 1:</English>
+                <Chinese>车辆1:</Chinese>
+                <Chinese_Traditional>車輛1:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_VEHICLE_2">
+                <Original>Vehicle 2:</Original>
+                <English>Vehicle 2:</English>
+                <Chinese>车辆2:</Chinese>
+                <Chinese_Traditional>車輛2:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_VEHICLE_3">
+                <Original>Vehicle 3:</Original>
+                <English>Vehicle 3:</English>
+                <Chinese>车辆3:</Chinese>
+                <Chinese_Traditional>車輛3:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_VEHICLE_4">
+                <Original>Vehicle 4:</Original>
+                <English>Vehicle 4:</English>
+                <Chinese>车辆4:</Chinese>
+                <Chinese_Traditional>車輛4:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_VEHICLE_5">
+                <Original>Vehicle 5:</Original>
+                <English>Vehicle 5:</English>
+                <Chinese>车辆5:</Chinese>
+                <Chinese_Traditional>車輛5:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_HVT">
+                <Original>High Value Target</Original>
+                <English>High Value Target</English>
+                <Chinese>高价值目标</Chinese>
+                <Chinese_Traditional>高價值目標</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_HVT_VEHICLE">
+                <Original>HVT Vehicle:</Original>
+                <English>HVT Vehicle:</English>
+                <Chinese>高价值目标车辆:</Chinese>
+                <Chinese_Traditional>高價值目標車輛:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_CONVOY_SPAWN">
+                <Original>Spawn</Original>
+                <English>Spawn</English>
+                <Chinese>生成</Chinese>
+                <Chinese_Traditional>生成</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_GENERATE">
+                <Original>Generate Frontline</Original>
+                <English>Generate Frontline</English>
+                <Chinese>生成前线</Chinese>
+                <Chinese_Traditional>生成前線</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_TITLE">
+                <Original>Frontline Generator</Original>
+                <English>Frontline Generator</English>
+                <Chinese>前线生成器</Chinese>
+                <Chinese_Traditional>前線生成器</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_FACTION">
+                <Original>Faction:</Original>
+                <English>Faction:</English>
+                <Chinese>派系:</Chinese>
+                <Chinese_Traditional>派系:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_DIFFICULTY">
+                <Original>Difficulty:</Original>
+                <English>Difficulty:</English>
+                <Chinese>难度:</Chinese>
+                <Chinese_Traditional>難度:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_MARKERS">
+                <Original>Markers:</Original>
+                <English>Markers:</English>
+                <Chinese>标记:</Chinese>
+                <Chinese_Traditional>標記:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_VEHICLES">
+                <Original>Vehicles:</Original>
+                <English>Vehicles:</English>
+                <Chinese>载具:</Chinese>
+                <Chinese_Traditional>載具:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_ARMOR">
+                <Original>Armor:</Original>
+                <English>Armor:</English>
+                <Chinese>装甲:</Chinese>
+                <Chinese_Traditional>裝甲:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_FRONTLINE_ARTILLERY">
+                <Original>Artillery:</Original>
+                <English>Artillery:</English>
+                <Chinese>火炮:</Chinese>
+                <Chinese_Traditional>火炮:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_INFO_GAIA">
+                <Original>GAIA</Original>
+                <English>GAIA</English>
+                <Chinese>GAIA</Chinese>
+                <Chinese_Traditional>GAIA</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_INFO_RESPAWNS">
+                <Original>Respawns</Original>
+                <English>Respawns</English>
+                <Chinese>重生</Chinese>
+                <Chinese_Traditional>重生</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_INFO_PLAYER">
+                <Original>Player</Original>
+                <English>Player</English>
+                <Chinese>玩家</Chinese>
+                <Chinese_Traditional>玩家</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_GROUPGEN_INFO_CACHE">
+                <Original>Cache</Original>
+                <English>Cache</English>
+                <Chinese>缓存</Chinese>
+                <Chinese_Traditional>緩存</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_BRIEFING_MAP_CLOSE">
+                <Original>Close</Original>
+                <English>Close</English>
+                <Chinese>关闭</Chinese>
+                <Chinese_Traditional>關閉</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DYNAMIC_DIALOG_EDIT_INIT">
+                <Original>Edit Init Line (MCC)</Original>
+                <English>Edit Init Line (MCC)</English>
+                <Chinese>编辑初始化行 (MCC)</Chinese>
+                <Chinese_Traditional>編輯初始化行 (MCC)</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DYNAMIC_DIALOG_OK">
+                <Original>OK</Original>
+                <English>OK</English>
+                <Chinese>确定</Chinese>
+                <Chinese_Traditional>確定</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_VEHICLE_SPAWNER_PURCHASE">
+                <Original>Purchase</Original>
+                <English>Purchase</English>
+                <Chinese>购买</Chinese>
+                <Chinese_Traditional>購買</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_VEHICLE_SPAWNER_CLOSE">
+                <Original>X</Original>
+                <English>X</English>
+                <Chinese>X</Chinese>
+                <Chinese_Traditional>X</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_VEHICLE_SPAWNER_RESOURCES">
+                <Original>Resources</Original>
+                <English>Resources</English>
+                <Chinese>资源</Chinese>
+                <Chinese_Traditional>資源</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_SQLPDA_LIVE_FEED">
+                <Original>Live Feed</Original>
+                <English>Live Feed</English>
+                <Chinese>实时信息</Chinese>
+                <Chinese_Traditional>實時信息</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_OK">
+                <Original>OK</Original>
+                <English>OK</English>
+                <Chinese>确定</Chinese>
+                <Chinese_Traditional>確定</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_CANCEL">
+                <Original>Cancel</Original>
+                <English>Cancel</English>
+                <Chinese>取消</Chinese>
+                <Chinese_Traditional>取消</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_OPEN_MCC">
+                <Original>Open MCC:</Original>
+                <English>Open MCC:</English>
+                <Chinese>打开MCC:</Chinese>
+                <Chinese_Traditional>打開MCC:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_COMMANDER_CONSOLE">
+                <Original>Commander Console:</Original>
+                <English>Commander Console:</English>
+                <Chinese>指挥官控制台:</Chinese>
+                <Chinese_Traditional>指揮官控制台:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_TELEPORT_TEAM">
+                <Original>Teleport to team:</Original>
+                <English>Teleport to team:</English>
+                <Chinese>传送到队伍:</Chinese>
+                <Chinese_Traditional>傳送到隊伍:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_SQUAD_DIALOG">
+                <Original>Squad Dialog:</Original>
+                <English>Squad Dialog:</English>
+                <Chinese>小队对话框:</Chinese>
+                <Chinese_Traditional>小隊對話框:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_SQUAD_LEADER_PDA">
+                <Original>Squad leader PDA:</Original>
+                <English>Squad leader PDA:</English>
+                <Chinese>小队长PDA:</Chinese>
+                <Chinese_Traditional>小隊長PDA:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_INTERACTION_KEY">
+                <Original>Interaction Key:</Original>
+                <English>Interaction Key:</English>
+                <Chinese>交互键:</Chinese>
+                <Chinese_Traditional>交互鍵:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_CURATOR_VARIABLE_NAME">
+                <Original>Variable Name:</Original>
+                <English>Variable Name:</English>
+                <Chinese>变量名:</Chinese>
+                <Chinese_Traditional>變量名:</Chinese_Traditional>
+            </Key>
+            <Key ID="STR_MCC_CURATOR_INIT_PRESETS">
+                <Original>Init Presets:</Original>
+                <English>Init Presets:</English>
+                <Chinese>初始化预设:</Chinese>
+                <Chinese_Traditional>初始化預設:</Chinese_Traditional>
             </Key>
         </Container>
     </Package>

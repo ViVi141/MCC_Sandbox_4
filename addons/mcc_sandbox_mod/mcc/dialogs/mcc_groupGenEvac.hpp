@@ -21,7 +21,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "撤退:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_TITLE";
 			x = 0.0630208 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.108854 * safezoneW;
@@ -33,7 +33,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "类型:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TYPE";
 			x = 0.00572967 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0515625 * safezoneW;
@@ -44,7 +44,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "类:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CLASS";
 			x = 0.00572967 * safezoneW;
 			y = 0.07697 * safezoneH;
 			w = 0.0515625 * safezoneW;
@@ -77,7 +77,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\evac\request_heli.sqf'");
 
-			text = "重生"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_RESPAWN";
 			x = 0.171875 * safezoneW;
 			y = 0.0439828 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -112,7 +112,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[] execVM '"+MCCPATH+"mcc\general_scripts\evac\add_wp_heli.sqf'");
 
-			text = "1 路点"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_WAYPOINT_1";
 			x = 0.171875 * safezoneW;
 			y = 0.197923 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -125,7 +125,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[] execVM '"+MCCPATH+"mcc\general_scripts\evac\move_heli.sqf'");
 
-			text = "3 路点"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_WAYPOINT_3";
 			x = 0.171875 * safezoneW;
 			y = 0.142944 * safezoneH;
 			w = 0.0458333 * safezoneW;
@@ -137,7 +137,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "插入:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_INSERT";
 			x = 0.00572967 * safezoneW;
 			y = 0.175932 * safezoneH;
 			w = 0.0515625 * safezoneW;
@@ -159,7 +159,7 @@ class MCC_evacDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\evac\delete_heli.sqf'");
 
-			text = "Del. 撤离"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EVAC_DELETE";
 			x = 0.0572917 * safezoneW;
 			y = 0.109957 * safezoneH;
 			w = 0.0458333 * safezoneW;

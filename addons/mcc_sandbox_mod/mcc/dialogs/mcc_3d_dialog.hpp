@@ -153,7 +153,7 @@ class MCC3D_Dialog
 			y = 0.0491758 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text = "派系:";
+			text = "$STR_MCC_3D_FACTION";
 		};
 
 		class mcc3DTitle : MCC_RscText
@@ -165,7 +165,7 @@ class MCC3D_Dialog
 			y = 0.00519296 * safezoneH + safezoneY;
 			w = 0.0859375 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="MCC 3D 编辑器";
+			text="$STR_MCC_3D_EDITOR_TITLE";
 		};
 
 		class UnitTitle : MCC_RscText
@@ -177,7 +177,7 @@ class MCC3D_Dialog
 			y = 0.0821629 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="类型:";
+			text="$STR_MCC_3D_TYPE";
 		};
 
 		class UnitTypeTitle : MCC_RscText
@@ -189,7 +189,7 @@ class MCC3D_Dialog
 			y = 0.11515 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="类:";
+			text="$STR_MCC_3D_CLASS";
 		};
 		class EmptyTitle : MCC_RscText
 		{
@@ -200,7 +200,7 @@ class MCC3D_Dialog
 			y = 0.148137 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="空:";
+			text="$STR_MCC_3D_EMPTY";
 		};
 		class unitNameTitle : MCC_RscText
 		{
@@ -211,7 +211,7 @@ class MCC3D_Dialog
 			y = 0.181124 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="名字:";
+			text="$STR_MCC_3D_NAME";
 		};
 
 		class initTitle : MCC_RscText
@@ -223,7 +223,7 @@ class MCC3D_Dialog
 			y = 0.225107 * safezoneH + safezoneY;
 			w = 0.0401042 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="初始化:";
+			text="$STR_MCC_3D_INIT";
 		};
 
 		class presetsTitle : MCC_RscText
@@ -235,7 +235,7 @@ class MCC3D_Dialog
 			y = 0.291081 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="预设:";
+			text="$STR_MCC_3D_PRESET";
 		};
 
 		class Zone_LocTitle : MCC_RscText
@@ -247,7 +247,7 @@ class MCC3D_Dialog
 			y = 0.324069 * safezoneH + safezoneY;
 			w = 0.0458333 * safezoneW;
 			h = 0.0219914 * safezoneH;
-			text="重生";
+			text="$STR_MCC_3D_RESPAWN";
 		};
 
 		//-------------------------------------------Buttons----------------------------------------

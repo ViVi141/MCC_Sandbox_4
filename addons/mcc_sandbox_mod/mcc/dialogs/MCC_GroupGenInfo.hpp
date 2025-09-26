@@ -62,7 +62,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 			idc = MCC_GroupGenInfo_gaiaBehaviorButton_IDC;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{_x setVariable ['GAIA_ZONE_INTEND',[MCC_GAIAIntendZone ,((MCC_spawn_behaviors select MCC_behavior_index) select 1)], true]}foreach MCC_GroupGenGroupSelected}};";
 
-			text = "GAIA"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_INFO_GAIA";
 
 			w = 0.0572917 * safezoneW;
 			h = 0.0219914 * safezoneH;
@@ -85,7 +85,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 			idc = MCC_GroupGenInfo_gaiaRespawnComboButton_IDC;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{[_x,MCC_GAIARespawnNumberIndex] spawn GAIA_fnc_respawnSet}foreach MCC_GroupGenGroupSelected}};";
 
-			text = "Respawns"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_INFO_RESPAWNS";
 
 			w = 0.06 * safezoneW;
 			h = 0.0219914 * safezoneH;
@@ -98,7 +98,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 			idc = MCC_GroupGenInfo_giveToPlayer_IDC;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{_x setVariable ['MCC_canbecontrolled',true,true]; _x setVariable ['GAIA_ZONE_INTEND',[],true]}foreach MCC_GroupGenGroupSelected}};";
 
-			text = "Player"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_INFO_PLAYER";
 			w = 0.0572917 * safezoneW;
 			h = 0.0219914 * safezoneH;
 			tooltip = "通过M-Tac MCC手持控制台将所选组交给玩家控制"; //--- ToDo: Localize;
@@ -110,7 +110,7 @@ class MCC_GroupGenInfo:MCC_RscControlsGroup
 			idc = MCC_GroupGenInfo_cacheButton_IDC;
 			onButtonClick = "if (!isnil 'MCC_GroupGenGroupSelected') then {if (count MCC_GroupGenGroupSelected > 0) then {{_x setVariable ['mcc_gaia_cache', !(_x getVariable ['mcc_gaia_cache',false]),true];}foreach MCC_GroupGenGroupSelected}};";
 			tooltip = "将所选组交给缓存系统";
-			text = "Cache"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_INFO_CACHE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 
 			w = 0.0744792 * safezoneW;

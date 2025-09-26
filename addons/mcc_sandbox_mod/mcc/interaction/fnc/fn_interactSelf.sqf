@@ -94,6 +94,13 @@ if (((_server getVariable [format ["CP_commander%1",playerside],""]) == getPlaye
 	_array pushBack [format["_null = [nil,nil,nil,nil,1] execVM '%1mcc\dialogs\mcc_PopupMenu.sqf'",MCC_path],"Commander Console","\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa"];
 };
 
+// Performance and Task Management UI
+if (missionNamespace getVariable ["MCC_allowConsole",true]) then {
+	_array pushBack ["[] call MCC_fnc_openPerformancePresets;","Performance Presets","\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa"];
+	_array pushBack ["[] call MCC_fnc_openPerformanceSettings;","Performance Settings","\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa"];
+	_array pushBack ["[] call MCC_fnc_openTaskMonitor;","Task Monitor","\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa"];
+};
+
 //Radio Channels
 _array pushBack ["[(_this select 0),'radio'] spawn MCC_fnc_interactSelfClicked","Radio",format ["%1mcc\interaction\data\call_ca.paa", MCC_path]];
 

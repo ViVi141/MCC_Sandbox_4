@@ -72,9 +72,10 @@ MCC_fnc_processTaskQueue = {
 			MCC_taskCreationInProgress = true;
 			
 			_taskData = MCC_taskCreationQueue deleteAt 0;
-			[_taskData] call MCC_fnc_createTaskAsync;
+			[_taskData] spawn MCC_fnc_createTaskAsync;
 			
-			MCC_taskCreationInProgress = false;
+			// Wait for task creation to complete
+			waitUntil {!MCC_taskCreationInProgress};
 		};
 		
 		sleep 0.1; // Prevent blocking
@@ -99,6 +100,7 @@ MCC_fnc_createTaskAsync = {
 	if (time - _timestamp > 30) then {
 		diag_log "MCC Task Manager: Task expired, skipping";
 		MCC_taskCreationStats set ["failed", (MCC_taskCreationStats get "failed") + 1];
+		MCC_taskCreationInProgress = false;
 		return;
 	};
 	
@@ -110,7 +112,7 @@ MCC_fnc_createTaskAsync = {
 		_attempts = _attempts + 1;
 		
 		try {
-			_result = [_obj, _pos, _task, _preciseMarker, _side, _maxObjectivesDistance] call MCC_fnc_MWCreateTask;
+			_result = [_obj, _pos, _task, _preciseMarker, _side, _maxObjectivesDistance] call MCC_fnc_MWCreateTaskOriginal;
 			
 			if (!isNil "_result" && {count _result > 0}) then {
 				_success = true;
@@ -140,6 +142,9 @@ MCC_fnc_createTaskAsync = {
 		MCC_taskCreationStats set ["failed", (MCC_taskCreationStats get "failed") + 1];
 		diag_log format ["MCC Task Manager: Task creation failed after %1 attempts", _attempts];
 	};
+	
+	// Reset progress flag
+	MCC_taskCreationInProgress = false;
 };
 
 // Validate task

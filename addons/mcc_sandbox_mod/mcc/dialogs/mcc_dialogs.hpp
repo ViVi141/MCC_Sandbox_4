@@ -457,7 +457,7 @@ class RscButtonMenuOK : MCC_RscButtonMenu
   colorText[] = {1,1,1,1};
   default = 1;
   shortcuts[] = {"0x00050000 + 0",28,57,156};
-  text = "OK";
+  text = "$STR_MCC_DIALOGS_OK";
 };
 
 class RscButtonMenuCancel : RscButtonMenuOK
@@ -473,7 +473,7 @@ class RscButtonMenuCancel : RscButtonMenuOK
   colorText[] = {1,1,1,1};
   default = 0;
   shortcuts[] = {"0x00050000 + 1"};
-  text = "Cancel";
+  text = "$STR_MCC_DIALOGS_CANCEL";
 };
 
 class RscButtonMenu : MCC_RscButtonMenu
@@ -1250,7 +1250,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Open MCC:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_OPEN_MCC";
 			x = 0.00515597 * safezoneW;
 			y = 0.044 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1260,7 +1260,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Comander Console:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_COMMANDER_CONSOLE";
 			x = 0.00515625 * safezoneW;
 			y = 0.077 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1270,7 +1270,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Teleport to team:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_TELEPORT_TEAM";
 			x = 0.00515597 * safezoneW;
 			y = 0.143 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1280,7 +1280,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Squad Dialog:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_SQUAD_DIALOG";
 			x = 0.00515597 * safezoneW;
 			y = 0.176 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1290,7 +1290,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Squad leader PDA:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_SQUAD_LEADER_PDA";
 			x = 0.00515597 * safezoneW;
 			y = 0.11 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -1300,7 +1300,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Interaction Key:"; //--- ToDo: Localize;
+			text = "$STR_MCC_DIALOGS_INTERACTION_KEY";
 			x = 0.00515597 * safezoneW;
 			y = 0.209 * safezoneH;
 			w = 0.0973958 * safezoneW;

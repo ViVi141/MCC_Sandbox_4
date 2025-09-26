@@ -43,7 +43,7 @@ class mcc_groupGen
 		class MCC_Help: MCC_RscStructuredText
 		{
 			idc = -1;
-			text = "(?)";
+			text = "$STR_MCC_GROUPS_GEN_HELP_BUTTON";
 			colorBackground[] = { 0, 0, 0, 0.7};
 			onMouseEnter = "[_this, true,[13,13],'mccmain'] spawn MCC_fnc_help";
 

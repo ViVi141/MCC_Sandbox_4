@@ -32,7 +32,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "简易爆炸装置和伏击:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_TITLE";
 			x = 0.114584 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.09 * safezoneW;
@@ -43,7 +43,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "类型:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TYPE";
 			x = 0.00572965 * safezoneW;
 			y = 0.0989618 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -54,7 +54,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "物体:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_OBJECT";
 			x = 0.00572965 * safezoneW;
 			y = 0.131949 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -65,7 +65,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "爆炸尺寸:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_SIZE";
 			x = 0.00572965 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -76,7 +76,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "爆炸类型："; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_TYPE";
 			x = 0.00572965 * safezoneW;
 			y = 0.197923 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -87,7 +87,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "解除武装持续时间:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_DISARM_TIME";
 			x = 0.160417 * safezoneW;
 			y = 0.131949 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -98,7 +98,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "可干扰:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_JAMMABLE";
 			x = 0.160417 * safezoneW;
 			y = 0.0989618 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -109,7 +109,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "目标派系:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_TARGET_FACTION";
 			x = 0.00572965 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -120,7 +120,7 @@ class MCC_IEDDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "触发类型:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_IED_TRIGGER_TYPE";
 			x = 0.160417 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.06875 * safezoneW;

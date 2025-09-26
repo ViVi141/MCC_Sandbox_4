@@ -72,7 +72,7 @@ class MCC_3dDOCControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "名字:"; //--- ToDo: Localize;
+			text = "$STR_MCC_3D_NAME";
 			x = 0.00572965 * safezoneW;
 			y = 0.296884 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -85,7 +85,7 @@ class MCC_3dDOCControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\docobject\compositionManagerChnage.sqf'");
 
-			text = "保存到配置文件"; //--- ToDo: Localize;
+			text = "$STR_MCC_3D_SAVE_TO_CONFIG";
 			x = 0.00572965 * safezoneW;
 			y = 0.340867 * safezoneH;
 			w = 0.103125 * safezoneW;
@@ -98,7 +98,7 @@ class MCC_3dDOCControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\docobject\compositionManagerChnage.sqf'");
 
-			text = "从配置文件加载"; //--- ToDo: Localize;
+			text = "$STR_MCC_3D_LOAD_FROM_CONFIG";
 			x = 0.171875 * safezoneW;
 			y = 0.340867 * safezoneH;
 			w = 0.0973958 * safezoneW;

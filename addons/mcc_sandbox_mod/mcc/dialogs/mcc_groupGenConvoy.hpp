@@ -20,7 +20,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车队:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_TITLE";
 			x = 0.103125 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.0973958 * safezoneW;
@@ -31,7 +31,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆1:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_VEHICLE_1";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -42,7 +42,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆2:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_VEHICLE_2";
 			x = 0.00572965 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -53,7 +53,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆3:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_VEHICLE_3";
 			x = 0.00572965 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -64,7 +64,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆4:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_VEHICLE_4";
 			x = 0.00572965 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -75,7 +75,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "车辆5:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_VEHICLE_5";
 			x = 0.00572965 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -136,7 +136,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "高价值目标"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_HVT";
 			x = 0.154688 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.039375 * safezoneW;
@@ -147,7 +147,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "高价值目标车辆:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_HVT_VEHICLE";
 			x = 0.154688 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.0401042 * safezoneW;
@@ -179,7 +179,7 @@ class MCC_convoyDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\convoy\make_convoy_WP.sqf'");
 
-			text = "Spawn"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CONVOY_SPAWN";
 			x = 0.189063 * safezoneW;
 			y = 0.131949 * safezoneH;
 			w = 0.0630208 * safezoneW;

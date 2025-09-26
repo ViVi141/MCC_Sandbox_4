@@ -61,7 +61,7 @@ class MCC_VEHICLESPAWNER
 					idc = 102;
 					onButtonClick = "[1] spawn MCC_fnc_vehicleSpawner";
 
-					text = "Purchase"; //--- ToDo: Localize;
+					text = "$STR_MCC_VEHICLE_SPAWNER_PURCHASE";
 					x = 0.0773438 * safezoneW;
 					y = 0.275 * safezoneH;
 					w = 0.139219 * safezoneW;
@@ -72,7 +72,7 @@ class MCC_VEHICLESPAWNER
 					idc = -1;
 					onButtonClick = "closeDialog 0;";
 
-					text = "X"; //--- ToDo: Localize;
+					text = "$STR_MCC_VEHICLE_SPAWNER_CLOSE";
 					x = 0.391875 * safezoneW;
 					y = 6.14673e-009 * safezoneH;
 					w = 0.0154689 * safezoneW;
@@ -174,7 +174,7 @@ class MCC_VEHICLESPAWNER
 				{
 					idc = 80;
 
-					text = "Resources"; //--- ToDo: Localize;
+					text = "$STR_MCC_VEHICLE_SPAWNER_RESOURCES";
 					x = 0.309375 * safezoneW;
 					y = 0.165 * safezoneH;
 					w = 0.08 * safezoneW;

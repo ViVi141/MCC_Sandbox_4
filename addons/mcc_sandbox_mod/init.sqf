@@ -1146,10 +1146,13 @@ if (isServer) then {
 		// Initialize object pools
 		[] call MCC_fnc_initObjectPools;
 		
+		// Initialize compatibility layer first
+		[] call MCC_fnc_MWCreateTaskCompat;
+		
 		// Initialize task manager
 		[] call MCC_fnc_initTaskManager;
 		
-		// Load compatibility layer
+		// Load wrapper functions
 		[] call MCC_fnc_MWCreateTaskWrapper;
 		
 		diag_log "MCC Performance Optimization System initialized";

@@ -29,7 +29,7 @@ class MCC3D_RSC
 				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.5)";
 				colorBackground[] = {0,0,0,1};
 				colorText[] = {1,1,1,1};
-				text = "示例文本"
+				text = "$STR_MCC_3D_SAMPLE_TEXT"
 			};  
 		};	
 	};

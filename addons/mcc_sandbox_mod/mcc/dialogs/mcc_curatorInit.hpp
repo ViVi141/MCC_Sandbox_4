@@ -71,7 +71,7 @@ class MCCCuratorInit_Dialog {
 			moving = 1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"};
 			idc = 10002;
-			text = "Edit Init Line (MCC)";
+			text = "$STR_MCC_CURATOR_EDIT_INIT";
 			x = "6.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "8.4 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "27 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";

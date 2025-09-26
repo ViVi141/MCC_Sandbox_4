@@ -29,7 +29,7 @@ class mcc_rscKeyBinds
 		class keyBindstittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Key Binds:"; //--- ToDo: Localize;
+			text = "$STR_MCC_KEYBINDS_TITLE";
 			colorText[] = {0,1,1,1};
 
 			x = 0.345312 * safezoneW + safezoneX;
@@ -47,7 +47,7 @@ class mcc_rscKeyBinds
 		class close: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "close"; //--- ToDo: Localize;
+			text = "$STR_MCC_KEYBINDS_CLOSE";
 			action = "closeDialog 0";
 
 			x = 0.438125 * safezoneW + safezoneX;

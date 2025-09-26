@@ -44,7 +44,7 @@ class MCCMWDialog
 		class MCCMWDialogClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_MAIN_CLOSE";
 			action = "MCC_mcc_screen = 2;closeDialog 0;";
 
 			x = 0.694792 * safezoneW + safezoneX;
@@ -59,7 +59,7 @@ class MCCMWDialog
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\missionWizard\scripts\missionWizardInit.sqf'");
-			text = "Generate Mission"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_MAIN_GENERATE";
 
 			x = 0.45 * safezoneW + safezoneX;
 			y = 0.83 * safezoneH + safezoneY;
@@ -102,7 +102,7 @@ class MCCMWDialog
 		class MCCMWZoneTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Zone:";
+			text = "$STR_MCC_MW_MAIN_ZONE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 
 			x = 0.540104 * safezoneW + safezoneX;
@@ -126,7 +126,7 @@ class MCCMWDialog
 		class MCCMWZoneUpdateButton: MCC_RscButton
 		{
 			idc = -1;
-			text = "Update Zone";
+			text = "$STR_MCC_MW_MAIN_UPDATE_ZONE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			tooltip = "Click and drag on the minimap to make a zone";
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {MCC_zone_drawing= true;} else {player globalchat 'Access Denied'};";

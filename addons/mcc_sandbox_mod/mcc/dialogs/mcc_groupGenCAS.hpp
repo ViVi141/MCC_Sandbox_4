@@ -21,7 +21,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "近距离空中支援:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CAS_TITLE";
 			x = 0.0401046 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.160417 * safezoneW;
@@ -33,7 +33,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "飞机:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CAS_AIRCRAFT";
 			x = 0.00572967 * safezoneW;
 			y = 0.0549786 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -52,7 +52,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "类型:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TYPE";
 			x = 0.00572967 * safezoneW;
 			y = 0.0879657 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -72,7 +72,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\cas\cas_request.sqf'");
 
-			text = "呼叫"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CAS_CALL";
 			x = 0.00572967 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.0802083 * safezoneW;
@@ -84,7 +84,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			idc = 27; // idc set to allow hiding button when no mcc_console available
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\cas\cas_request.sqf'");
 
-			text = "Add"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CAS_ADD";
 			x = 0.148959 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.0802083 * safezoneW;
@@ -97,7 +97,7 @@ class MCC_CASDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 500) ctrlShow false";
 
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CAS_CLOSE";
 			x = 0.0744796 * safezoneW;
 			y = 0.164936 * safezoneH;
 			w = 0.0802083 * safezoneW;

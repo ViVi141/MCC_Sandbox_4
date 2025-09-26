@@ -21,7 +21,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 		class MCC_artilleryTitle: MCC_RscText
 		{
 			idc = -1;
-			text = "火炮"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_TITLE";
 			colorText[] = {0,1,1,1};
 			
 			x = 0.0802088 * safezoneW;
@@ -33,7 +33,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "类型:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TYPE";
 			x = 0.00572967 * safezoneW;
 			y = 0.0549786 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -43,7 +43,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "散步:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_SPREAD";
 			x = 0.00572967 * safezoneW;
 			y = 0.0879657 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -53,7 +53,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "N. of 炮弹"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_SHELLS";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			
 			x = 0.00572967 * safezoneW;
@@ -92,7 +92,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "延迟:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_DELAY";
 			x = 0.00572967 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -112,7 +112,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\artillery\artillery_request.sqf'");
 
-			text = "呼叫"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_CALL";
 			x = 0.00572967 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.0859375 * safezoneW;
@@ -124,7 +124,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 			idc = 27; // idc set to allow hiding button when no mcc_console available
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\artillery\artillery_request.sqf'");
 
-			text = "添加"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_ADD";
 			x = 0.114584 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.0859375 * safezoneW;
@@ -136,7 +136,7 @@ class MCC_artilleryDialogControls:MCC_RscControlsGroup
 			idc = -1;
 			onButtonClick = "((uiNamespace getVariable 'MCC_groupGen_Dialog') displayCtrl 505) ctrlShow false";
 
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_CLOSE";
 			x = 0.0572917 * safezoneW;
 			y = 0.23091 * safezoneH;
 			w = 0.0859375 * safezoneW;

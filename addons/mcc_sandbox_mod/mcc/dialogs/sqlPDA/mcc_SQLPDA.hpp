@@ -80,7 +80,7 @@ class MCC_SQLPDA
 	class MCC_ConsoleInfoLiveFeed: MCC_RscButton
 	{
 		idc = 3;
-		text = "Live Feed";
+		text = "$STR_MCC_SQLPDA_LIVE_FEED";
 		x = 0.217813 * safezoneW + safezoneX;
 		y = 0.668037 * safezoneH + safezoneY;
 		w = 0.06 * safezoneW;

@@ -93,7 +93,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class boxGeneratorTittle: MCC_RscText 
 		{
 			idc = -1;
-			text = "货物生成器:";
+			text = "$STR_MCC_BOX_GEN_TITLE";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {0,1,1,1};
 			colorBackground[] = {1,1,1,0};
@@ -107,7 +107,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class gearClassTitle:MCC_RscText
 		{
 			idc = -1;
-			text = "类:";
+			text = "$STR_MCC_BOX_GEN_CLASS";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,0};
@@ -122,7 +122,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class addAllButton: MCC_RscButton
 		{
 			idc = -1;
-			text = ">>";
+			text = "$STR_MCC_BOX_GEN_ADD_ALL";
 			onButtonClick =  __EVAL("[1,_this] execVM '"+MCCPATH+"mcc\general_scripts\boxGen\mcc_boxGen_change.sqf'");
 			tooltip = "添加当前武器和6个弹夹"; 
 			
@@ -135,7 +135,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class addOneButton: MCC_RscButton
 		{
 			idc = -1;
-			text = ">";
+			text = "$STR_MCC_BOX_GEN_ADD_ONE";
 			onButtonClick =  __EVAL("[2,_this] execVM '"+MCCPATH+"mcc\general_scripts\boxGen\mcc_boxGen_change.sqf'");
 			tooltip = "添加当前武器"; 
 			
@@ -148,7 +148,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class removeOneButtton: MCC_RscButton
 		{
 			idc = -1;
-			text = "清除";
+			text = "$STR_MCC_BOX_GEN_CLEAR";
 			onButtonClick =  __EVAL("[3,_this] execVM '"+MCCPATH+"mcc\general_scripts\boxGen\mcc_boxGen_change.sqf'");
 			
 			x = 0.183334 * safezoneW;
@@ -160,7 +160,7 @@ class MCC_3DCargoGenControls:MCC_RscControlsGroup
 		class generateBoxButton: MCC_RscButton
 		{
 			idc = -1;
-			text = "添加";
+			text = "$STR_MCC_BOX_GEN_ADD";
 			tooltip = "将所选项目添加到对象初始化行"; 
 			onButtonClick =  __EVAL("[4,_this] execVM '"+MCCPATH+"mcc\general_scripts\boxGen\mcc_boxGen_change.sqf'");
 			

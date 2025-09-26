@@ -37,7 +37,7 @@ class missionSettings
 			idc = -1;
 			action = "closeDialog 0";
 
-			text = "取消"; //--- ToDo: Localize;
+			text = "$STR_MCC_MISSION_SETTINGS_CANCEL_BUTTON";
 			x = 0.133906 * safezoneW + safezoneX;
 			y = 0.698 * safezoneH + safezoneY;
 			w = 0.120313 * safezoneW;
@@ -49,7 +49,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "任务设置";
+			text = "$STR_MCC_MISSION_SETTINGS_MISSION_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.2 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -61,7 +61,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "UI设置";
+			text = "$STR_MCC_MISSION_SETTINGS_UI_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.26 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -73,7 +73,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "力学设置";
+			text = "$STR_MCC_MISSION_SETTINGS_MECHANICS_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.32 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -85,7 +85,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "医疗系统设置";
+			text = "$STR_MCC_MISSION_SETTINGS_MEDICAL_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.38 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -97,7 +97,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[4] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "角色选择设置";
+			text = "$STR_MCC_MISSION_SETTINGS_ROLE_SELECTION_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.44 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
@@ -109,7 +109,7 @@ class missionSettings
 			idc = -1;
 			action = __EVAL("[5] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\mission_settings_change.sqf'");
 
-			text = "GAIA Settings";
+			text = "$STR_MCC_MISSION_SETTINGS_GAIA_BUTTON";
 			x = 0.3 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;

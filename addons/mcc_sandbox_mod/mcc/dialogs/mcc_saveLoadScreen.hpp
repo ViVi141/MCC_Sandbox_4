@@ -46,7 +46,7 @@ class MCC_SaveLoadScreen
 		{
 			style = MCCST_CENTER;
 			idc = -1;
-			text = "Save / Load MCC configuration";
+			text = "$STR_MCC_SAVE_LOAD_TITLE";
 			x = 0.276563 * safezoneW + safezoneX;
 			y = 0.247099 * safezoneH + safezoneY;
 			w = 0.446875 * safezoneW;
@@ -57,7 +57,7 @@ class MCC_SaveLoadScreen
 		class MCC_LoadHeader: MCC_RscText
 		{
 			idc = -1;
-			text = "Paste (crtl-v) MCC configuration code here:";
+			text = "$STR_MCC_SAVE_LOAD_PASTE_INSTRUCTION";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.434 * safezoneH + safezoneY;
@@ -91,7 +91,7 @@ class MCC_SaveLoadScreen
 		class MCC_SaveButton: MCC_RscButton		//Save to clipboard
 		{
 			idc = 0;
-			text = "Save To Clipboard";
+			text = "$STR_MCC_SAVE_TO_CLIPBOARD";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -104,7 +104,7 @@ class MCC_SaveLoadScreen
 		class MCC_LoadButton: MCC_RscButton		//Load from clipboard
 		{
 			idc = -1;
-			text = "Load From Clipboard";
+			text = "$STR_MCC_LOAD_FROM_CLIPBOARD";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -117,7 +117,7 @@ class MCC_SaveLoadScreen
 		class MCC_CancelButton: MCC_RscButton	//Close dialog
 		{
 			idc = -1;
-			text = "Close";
+			text = "$STR_MCC_SAVE_LOAD_CLOSE";
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			x = 0.6375 * safezoneW + safezoneX;
 			y = 0.719914 * safezoneH + safezoneY;

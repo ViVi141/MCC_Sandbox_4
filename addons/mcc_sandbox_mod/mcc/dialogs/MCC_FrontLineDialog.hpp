@@ -55,7 +55,7 @@ class MCCFrontLineDialog
 		class MCCMWDialogClose: MCC_RscButtonMenu
 		{
 			idc = -1;
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_FRONTLINE_CLOSE";
 			action = "MCC_mcc_screen = 2;closeDialog 0;";
 
 			x = 0.694792 * safezoneW + safezoneX;
@@ -70,7 +70,7 @@ class MCCFrontLineDialog
 		{
 			idc = -1;
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\missionWizard\scripts\FrontLineInit.sqf'");
-			text = "生成前线"; //--- ToDo: Localize;
+			text = "$STR_MCC_FRONTLINE_GENERATE";
 
 			x = 0.45 * safezoneW + safezoneX;
 			y = 0.83 * safezoneH + safezoneY;
@@ -135,7 +135,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "前线生成器"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_TITLE";
 					x = 0.189063 * safezoneW;
 					y = 0.0109958 * safezoneH;
 					w = 0.15 * safezoneW;
@@ -149,7 +149,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "派系:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_FACTION";
 					x = 0.00572965 * safezoneW;
 					y = 0.0549788 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -176,7 +176,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "难度:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_DIFFICULTY";
 					x = 0.00572965 * safezoneW;
 					y = 0.0879658 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -209,7 +209,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "标记:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_MARKERS";
 					x = 0.00572965 * safezoneW;
 					y = 0.120953 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -240,7 +240,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "载具:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_VEHICLES";
 					x = 0.00572965 * safezoneW;
 					y = 0.15394 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -274,7 +274,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "装甲:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_ARMOR";
 					x = 0.00572965 * safezoneW;
 					y = 0.186927 * safezoneH;
 					w = 0.06875 * safezoneW;
@@ -306,7 +306,7 @@ class MCCFrontLineDialog
 				{
 					idc = -1;
 
-					text = "火炮:"; //--- ToDo: Localize;
+					text = "$STR_MCC_FRONTLINE_ARTILLERY";
 					x = 0.00572965 * safezoneW;
 					y = 0.219914 * safezoneH;
 					w = 0.06875 * safezoneW;

@@ -101,7 +101,7 @@ class MCCMW_briefingMap {
 	class MCC_MWCloseDialog: MCC_RscButtonMenu
 	{
 		idc = -1;
-		text = "Close";
+		text = "$STR_MCC_BRIEFING_MAP_CLOSE";
 		onButtonClick = "closeDialog 0";
 		
 		x = 0.683333 * safezoneW + safezoneX;

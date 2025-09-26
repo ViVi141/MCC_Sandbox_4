@@ -106,5 +106,10 @@ MCC_fnc_MWCreateTaskDirect = {
 	_result
 };
 
-// Store original function
-MCC_fnc_MWCreateTaskOriginal = MCC_fnc_MWCreateTask;
+// Store original function (this will be set after the original function is loaded)
+if (isNil "MCC_fnc_MWCreateTaskOriginal") then {
+	MCC_fnc_MWCreateTaskOriginal = {
+		// Fallback to direct call if original not available
+		[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5] call MCC_fnc_MWCreateTask;
+	};
+};

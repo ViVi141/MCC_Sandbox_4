@@ -50,7 +50,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "任务生成器"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_TASK_GENERATOR";
 			x = 0.189063 * safezoneW;
 			y = 0.0109958 * safezoneH;
 			w = 0.15 * safezoneW;
@@ -64,7 +64,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "敌军派系:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_ENEMY_FACTION";
 			x = 0.00572965 * safezoneW;
 			y = 0.0549788 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -91,7 +91,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "平民派系:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_CIVILIAN_FACTION";
 			x = 0.00572965 * safezoneW;
 			y = 0.0879658 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -117,7 +117,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "# 玩家:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_NUM_PLAYERS";
 			x = 0.00572965 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -160,7 +160,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "难度"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_DIFFICULTY";
 			x = 0.00572965 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -192,7 +192,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "近距离战斗:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_CQB";
 			x = 0.00572965 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -219,7 +219,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "隐身:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_STEALTH";
 			x = 0.00572965 * safezoneW;
 			y = 0.219914 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -252,7 +252,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "目标标记:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_TARGET_MARKERS";
 			x = 0.00572965 * safezoneW;
 			y = 0.252902 * safezoneH;
 			w = 0.06875 * safezoneW;
@@ -284,7 +284,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "通用标记:"; //--- ToDo: Localize;
+			text = "$STR_MCC_MW_GENERAL_MARKERS";
 			x = 0.00572965 * safezoneW;
 			y = 0.28589 * safezoneH;
 			w = 0.06875 * safezoneW;

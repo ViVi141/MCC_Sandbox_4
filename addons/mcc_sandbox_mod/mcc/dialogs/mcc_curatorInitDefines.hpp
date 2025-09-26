@@ -14,7 +14,7 @@ class MCC_RscInitNameBox: MCC_RscControlsGroupNoScrollbars
 		class Title: MCC_RscText
 		{
 			idc = -1;
-			text = "Variable Name:";
+			text = "$STR_MCC_CURATOR_VARIABLE_NAME";
 			x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -47,7 +47,7 @@ class MCC_RscInitPresets: MCC_RscControlsGroupNoScrollbars
 		class Title: MCC_RscText
 		{
 			idc = -1;
-			text = "Init Presets:";
+			text = "$STR_MCC_CURATOR_INIT_PRESETS";
 			x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";

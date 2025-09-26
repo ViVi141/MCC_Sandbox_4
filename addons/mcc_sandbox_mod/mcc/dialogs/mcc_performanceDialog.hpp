@@ -29,7 +29,7 @@ class MCC_PerformanceDialog {
 	class controls {
 		class CPUUsage: MCC_RscText {
 			idc = 1000;
-			text = "CPU Usage: 0";
+			text = "$STR_MCC_PERFORMANCE_CPU_USAGE";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.32 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -39,7 +39,7 @@ class MCC_PerformanceDialog {
 		
 		class MemoryUsage: MCC_RscText {
 			idc = 1001;
-			text = "Memory Usage: 0";
+			text = "$STR_MCC_PERFORMANCE_MEMORY_USAGE";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.36 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -49,7 +49,7 @@ class MCC_PerformanceDialog {
 		
 		class NetworkOps: MCC_RscText {
 			idc = 1002;
-			text = "Network Operations: 0";
+			text = "$STR_MCC_PERFORMANCE_NETWORK_OPS";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.4 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -59,7 +59,7 @@ class MCC_PerformanceDialog {
 		
 		class ObjectCount: MCC_RscText {
 			idc = 1003;
-			text = "Object Count: 0";
+			text = "$STR_MCC_PERFORMANCE_OBJECT_COUNT";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.44 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -69,7 +69,7 @@ class MCC_PerformanceDialog {
 		
 		class AICount: MCC_RscText {
 			idc = 1004;
-			text = "AI Count: 0";
+			text = "$STR_MCC_PERFORMANCE_AI_COUNT";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.48 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -79,7 +79,7 @@ class MCC_PerformanceDialog {
 		
 		class LoopCount: MCC_RscText {
 			idc = 1005;
-			text = "Loop Count: 0";
+			text = "$STR_MCC_PERFORMANCE_LOOP_COUNT";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.52 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;
@@ -89,7 +89,7 @@ class MCC_PerformanceDialog {
 		
 		class Recommendations: MCC_RscStructuredText {
 			idc = 1006;
-			text = "Performance Recommendations:";
+			text = "$STR_MCC_PERFORMANCE_RECOMMENDATIONS";
 			x = 0.32 * safezoneW + safezoneX;
 			y = 0.56 * safezoneH + safezoneY;
 			w = 0.36 * safezoneW;

@@ -37,7 +37,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Spawn:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_SPAWN_TITLE";
 			colorText[] = {0,1,1,1};
 			
 			x = 0.103125 * safezoneW;
@@ -50,7 +50,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Type:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_TYPE";
 			x = 0.00572967 * safezoneW;
 			y = 0.0549786 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -72,7 +72,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Branch:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_BRANCH";
 			x = 0.00572967 * safezoneW;
 			y = 0.0879657 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -94,7 +94,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Class:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CLASS";
 			x = 0.00572967 * safezoneW;
 			y = 0.120953 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -115,7 +115,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = -1;
 
-			text = "Behavior:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_BEHAVIOR";
 			x = 0.00572967 * safezoneW;
 			y = 0.15394 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -136,7 +136,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = MCC_GGUNIT_EMPTYTITLE;
 
-			text = "Empty:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_EMPTY";
 			x = 0.00572967 * safezoneW;
 			y = 0.186927 * safezoneH;
 			w = 0.045 * safezoneW;
@@ -167,7 +167,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		{
 			idc = mcc_groupGen_CurrentgroupNameTittle_IDC;
 
-			text = "Name:"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_NAME";
 			x = 0.257813 * safezoneW;
 			y = 0.0549786 * safezoneH;
 			w = 0.034375 * safezoneW;
@@ -191,7 +191,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_change.sqf'");
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
 
-			text = "Add to List"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_ADD_TO_LIST";
 			x = 0.183334 * safezoneW;
 			y = 0.0549786 * safezoneH;
 			w = 0.065625 * safezoneW;
@@ -203,7 +203,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 			idc = MCC_GGCLEARIDC;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\groupGen\group_change.sqf'");
 
-			text = "Clear List"; //--- ToDo: Localize;
+			text = "$STR_MCC_GROUPGEN_CLEAR_LIST";
 			x = 0.183334 * safezoneW;
 			y = 0.098962 * safezoneH;
 			w = 0.065625 * safezoneW;

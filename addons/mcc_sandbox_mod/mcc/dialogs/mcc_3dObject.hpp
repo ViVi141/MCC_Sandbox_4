@@ -89,7 +89,7 @@ class mcc_3dObject
 		{
 			idc = 3;
 			style = MCCST_CENTER;
-			text = "Hello";
+			text = "$STR_MCC_3D_HELLO";
 			x = 0.365937 * safezoneW + safezoneX;
 			y = 0.9 * safezoneH + safezoneY;
 			w = 0.4 * safezoneW;
