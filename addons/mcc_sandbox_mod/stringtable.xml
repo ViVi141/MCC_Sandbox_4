@@ -4,21 +4,25 @@
         <Container name="Lights">
             <Key ID="STR_DISP_CURATOR_LIGHTS">
                 <Original>Lights</Original>
+                <English>Lights</English>
                 <Chinesesimp>灯</Chinesesimp>
                 <Chinese>燈</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_LIGHTSON">
                 <Original>Lights On</Original>
+                <English>Lights On</English>
                 <Chinesesimp>开灯</Chinesesimp>
                 <Chinese>開燈</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_LIGHTSOFF">
                 <Original>Lights Off</Original>
+                <English>Lights Off</English>
                 <Chinesesimp>关灯</Chinesesimp>
                 <Chinese>關燈</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_LIGHTSAUTO">
                 <Original>Lights Auto</Original>
+                <English>Lights Auto</English>
                 <Chinesesimp>灯光自动</Chinesesimp>
                 <Chinese>燈光自動</Chinese>
             </Key>
@@ -26,21 +30,25 @@
         <Container name="Engine">
             <Key ID="STR_DISP_CURATOR_ENGINE">
                 <Original>Engine</Original>
+                <English>Engine</English>
                 <Chinesesimp>发动机</Chinesesimp>
                 <Chinese>發動機</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_ENGINEON">
                 <Original>Engine On</Original>
+                <English>Engine On</English>
                 <Chinesesimp>引擎打开</Chinesesimp>
                 <Chinese>引擎打開</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_ENGINEOFF">
                 <Original>Engine Off</Original>
+                <English>Engine Off</English>
                 <Chinesesimp>发动机关闭</Chinesesimp>
                 <Chinese>發動機關閉</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_ENGINEAUTO">
                 <Original>Engine Auto</Original>
+                <English>Engine Auto</English>
                 <Chinesesimp>发动机自动</Chinesesimp>
                 <Chinese>發動機自動</Chinese>
             </Key>
@@ -48,6 +56,7 @@
         <Container name="ammo">
             <Key ID="STR_DISP_CURATOR_AMMO">
                 <Original>Ammo</Original>
+                <English>Ammo</English>
                 <Chinesesimp>弹药</Chinesesimp>
                 <Chinese>彈藥</Chinese>
             </Key>
@@ -55,16 +64,19 @@
         <Container name="VehicleCargo">
             <Key ID="STR_DISP_CURATOR_VEHICLECARGO">
                 <Original>Cargo</Original>
+                <English>Cargo</English>
                 <Chinesesimp>货物</Chinesesimp>
                 <Chinese>貨物</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_VEHICLECARGOLIST">
                 <Original>Double click to unload</Original>
+                <English>Double click to unload</English>
                 <Chinesesimp>双击卸载</Chinesesimp>
                 <Chinese>雙擊卸載</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_VEHICLECARGOLOAD">
                 <Original>Load vehicle</Original>
+                <English>Load vehicle</English>
                 <Chinesesimp>载重车辆</Chinesesimp>
                 <Chinese>載重車輛</Chinese>
             </Key>
@@ -72,6 +84,7 @@
         <Container name="Create Zone">
             <Key ID="STR_DISP_CURATOR_ERROR_CREATEZONE_ZONECREATED">
                 <Original>Zone created/updated</Original>
+                <English>Zone created/updated</English>
                 <Chinesesimp>区域创建/更新</Chinesesimp>
                 <Chinese>區域創建/更新</Chinese>
             </Key>
@@ -79,11 +92,13 @@
         <Container name="AssigenToZone">
             <Key ID="STR_DISP_CURATOR_ERROR_CREATEZONE_NOUNIT">
                 <Original>No AI unit or group found</Original>
+                <English>No AI unit or group found</English>
                 <Chinesesimp>未发现人工智能单位或团体</Chinesesimp>
                 <Chinese>未發現人工智能單位或團體</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_ERROR_ASSIGNTOZONE_SUCCESS">
                 <Original>Zone updated - effect will be shown in a few minutes</Original>
+                <English>Zone updated - effect will be shown in a few minutes</English>
                 <Chinesesimp>区域更新-将在下一个航路点有效</Chinesesimp>
                 <Chinese>區域更新-將在下一個航路點有效</Chinese>
             </Key>
@@ -93,36 +108,43 @@
         <Container name="display">
             <Key ID="STR_DISP_VEHICLESPYLON_MIRROR">
                 <Original>Mirror</Original>
+                <English>Mirror</English>
                 <Chinesesimp>镜</Chinesesimp>
                 <Chinese>鏡</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_REARM">
                 <Original>Rearm</Original>
+                <English>Rearm</English>
                 <Chinesesimp>重新武装</Chinesesimp>
                 <Chinese>重新武裝</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_REFUEL">
                 <Original>Refuel</Original>
+                <English>Refuel</English>
                 <Chinesesimp>加油</Chinesesimp>
                 <Chinese>加油</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_HEADER">
                 <Original>Loadout Manager</Original>
+                <English>Loadout Manager</English>
                 <Chinesesimp>装载管理</Chinesesimp>
                 <Chinese>裝載管理</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_CANCEL">
                 <Original>Cancel</Original>
+                <English>Cancel</English>
                 <Chinesesimp>取消</Chinesesimp>
                 <Chinese>取消</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_CONFIRM">
                 <Original>Confirm</Original>
+                <English>Confirm</English>
                 <Chinesesimp>确认</Chinesesimp>
                 <Chinese>確認</Chinese>
             </Key>
             <Key ID="STR_DISP_VEHICLESPYLON_REPAIR">
                 <Original>Repair</Original>
+                <English>Repair</English>
                 <Chinesesimp>修复</Chinesesimp>
                 <Chinese>修復</Chinese>
             </Key>
@@ -132,21 +154,25 @@
         <Container name="AI_assignToZone">
             <Key ID="STR_CURATOR_Module_AI_assignToZoneText">
                 <Original>Assign AI to zone</Original>
+                <English>Assign AI to zone</English>
                 <Chinesesimp>将人工智能分配到区域</Chinesesimp>
                 <Chinese>將人工智能分配到區域</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription1">
                 <Original>sync with groups or units and one Create Zone module.</Original>
+                <English>sync with groups or units and one Create Zone module.</English>
                 <Chinesesimp>与组或单位和一个创建区域模块同步。</Chinesesimp>
                 <Chinese>與組或單位和一個創建區域模塊同步。</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription3">
                 <Original>Create Zone module</Original>
+                <English>Create Zone module</English>
                 <Chinesesimp>创建区域模块</Chinesesimp>
                 <Chinese>創建區域模塊</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_AI_assignToZoneDescription2">
                 <Original>units will automatically will be assigned to the MCC zone</Original>
+                <English>units will automatically will be assigned to the MCC zone</English>
                 <Chinesesimp>单位将自动分配到MCC区域</Chinesesimp>
                 <Chinese>單位將自動分配到MCC區域</Chinese>
             </Key>
@@ -154,16 +180,19 @@
         <Container name="ambientBirdsCurator">
             <Key ID="STR_CURATOR_Module_AI_ambientBirdsCurator_displayName">
                 <Original>Ambient Birds</Original>
+                <English>Ambient Birds</English>
                 <Chinesesimp>环境鸟类</Chinesesimp>
                 <Chinese>環境鳥類</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientBirdsCurator_description">
                 <Original>Enables spawning random flocks of birds when units get close to trees</Original>
+                <English>Enables spawning random flocks of birds when units get close to trees</English>
                 <Chinesesimp>当单位靠近树木时，可以随机生成鸟类</Chinesesimp>
                 <Chinese>當單位靠近樹木時，可以隨機生成鳥類</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_AMBIENTBIRDSSPAWN_SUCCESS">
                 <Original>Ambient Birds Enabled</Original>
+                <English>Ambient Birds Enabled</English>
                 <Chinesesimp>启用环境鸟类</Chinesesimp>
                 <Chinese>啟用環境鳥類</Chinese>
             </Key>
@@ -171,91 +200,109 @@
         <Container name="ambientCiviliansCurator">
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_displayName">
                 <Original>Ambient Unis</Original>
+                <English>Ambient Unis</English>
                 <Chinesesimp>环境单位</Chinesesimp>
                 <Chinese>環境單位</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCiv_displayName">
                 <Original>Ambient Patrols</Original>
+                <English>Ambient Patrols</English>
                 <Chinesesimp>环境巡逻</Chinesesimp>
                 <Chinese>環境巡邏</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCar_displayName">
                 <Original>Ambient Cars</Original>
+                <English>Ambient Cars</English>
                 <Chinesesimp>环境汽车</Chinesesimp>
                 <Chinese>環境汽車</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCiv_description">
                 <Original>Units will move between buildings</Original>
+                <English>Units will move between buildings</English>
                 <Chinesesimp>单位将在建筑物之间移动</Chinesesimp>
                 <Chinese>單位將在建築物之間移動</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isCar_description">
                 <Original>Cars will spawn and drive around</Original>
+                <English>Cars will spawn and drive around</English>
                 <Chinesesimp>汽车会生成并四处行驶</Chinesesimp>
                 <Chinese>汽車會生成並四處行駛</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isParkedCar_displayName">
                 <Original>Parked Cars</Original>
+                <English>Parked Cars</English>
                 <Chinesesimp>停放的汽车</Chinesesimp>
                 <Chinese>停放的汽車</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isLocked_displayName">
                 <Original>Parked Cars Locked</Original>
+                <English>Parked Cars Locked</English>
                 <Chinesesimp>停放的汽车上锁</Chinesesimp>
                 <Chinese>停放的汽車上鎖</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isLocked_description">
                 <Original>Parked cars will always be locked</Original>
+                <English>Parked cars will always be locked</English>
                 <Chinesesimp>停放的汽车将始终上锁</Chinesesimp>
                 <Chinese>停放的汽車將始終上鎖</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_isParkedCar_description">
                 <Original>Empty cars will spawn on the road's sides</Original>
+                <English>Empty cars will spawn on the road's sides</English>
                 <Chinesesimp>道路两侧会出现空车</Chinesesimp>
                 <Chinese>道路兩側會出現空車</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCiv_displayName">
                 <Original>Faction</Original>
+                <English>Faction</English>
                 <Chinesesimp>派</Chinesesimp>
                 <Chinese>派</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCivCar_displayName">
                 <Original>Car's Faction</Original>
+                <English>Car's Faction</English>
                 <Chinesesimp>汽车派系</Chinesesimp>
                 <Chinese>汽車派系</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_factionCiv_description">
                 <Original>Config name</Original>
+                <English>Config name</English>
                 <Chinesesimp>条目名称</Chinesesimp>
                 <Chinese>條目名稱</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_displayName">
                 <Original>Civilians attitude</Original>
+                <English>Civilians attitude</English>
                 <Chinesesimp>平民态度</Chinesesimp>
                 <Chinese>平民態度</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_bad">
                 <Original>Bad (IED &amp; Suicide Bombers)</Original>
+                <English>Bad (IED &amp; Suicide Bombers)</English>
                 <Chinesesimp>坏（简易爆炸装置和自杀炸弹袭击者）</Chinesesimp>
                 <Chinese>壞（簡易爆炸裝置和自殺炸彈襲擊者）</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_average">
                 <Original>Average</Original>
+                <English>Average</English>
                 <Chinesesimp>平均</Chinesesimp>
                 <Chinese>平均</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_aboveAverage">
                 <Original>Above Average</Original>
+                <English>Above Average</English>
                 <Chinesesimp>高于平均</Chinesesimp>
                 <Chinese>高於平均</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_good">
                 <Original>Good</Original>
+                <English>Good</English>
                 <Chinesesimp>好</Chinesesimp>
                 <Chinese>好</Chinese>
             </Key>
             <Key ID="STR_CURATOR_Module_ambientCiviliansCurator_civRelations_Very Good">
                 <Original>Very Good</Original>
+                <English>Very Good</English>
                 <Chinesesimp>非常好</Chinesesimp>
                 <Chinese>非常好</Chinese>
             </Key>
@@ -263,51 +310,61 @@
         <Container name="moduleILS">
             <Key ID="STR_Module__moduleILS_displayName">
                 <Original>"(ILS) Instrument Landing System</Original>
+                <English>"(ILS) Instrument Landing System</English>
                 <Chinesesimp>“（ILS）仪表着陆系统</Chinesesimp>
                 <Chinese>「（ILS）儀表著陸系統</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayName_displayName">
                 <Original>Runway Name</Original>
+                <English>Runway Name</English>
                 <Chinesesimp>跑道名称</Chinesesimp>
                 <Chinese>跑道名稱</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayName_description">
                 <Original>Runway Name display in ILS</Original>
+                <English>Runway Name display in ILS</English>
                 <Chinesesimp>ILS中显示跑道名称</Chinesesimp>
                 <Chinese>ILS中顯示跑道名稱</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayDis_displayName">
                 <Original>Runway Length</Original>
+                <English>Runway Length</English>
                 <Chinesesimp>跑道长度</Chinesesimp>
                 <Chinese>跑道長度</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayDis_description">
                 <Original>Runway length in meters</Original>
+                <English>Runway length in meters</English>
                 <Chinesesimp>跑道长度（米）</Chinesesimp>
                 <Chinese>跑道長度（米）</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwaySide_displayName">
                 <Original>Allowed Sides</Original>
+                <English>Allowed Sides</English>
                 <Chinesesimp>允许的一侧</Chinesesimp>
                 <Chinese>允許的一側</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwaySide_description">
                 <Original>Only specific sides can use this airfield</Original>
+                <English>Only specific sides can use this airfield</English>
                 <Chinesesimp>只有特定派系才能使用该机场</Chinesesimp>
                 <Chinese>只有特定派系才能使用該機場</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayCircles_displayName">
                 <Original>Arcade Mode</Original>
+                <English>Arcade Mode</English>
                 <Chinesesimp>街机模式</Chinesesimp>
                 <Chinese>街機模式</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayCircles_description">
                 <Original>Create circles guides to following the landing path</Original>
+                <English>Create circles guides to following the landing path</English>
                 <Chinesesimp>创建圆形参考线以遵循着陆路径</Chinesesimp>
                 <Chinese>創建圓形參考線以遵循著陸路徑</Chinese>
             </Key>
             <Key ID="STR_Module__moduleILS_runwayCircles_ModuleDescription">
                 <Original>Place ILS module on each runway's start facing the same direction as the runway</Original>
+                <English>Place ILS module on each runway's start facing the same direction as the runway</English>
                 <Chinesesimp>在每条跑道的起点放置ILS模块，面向与跑道相同的方向</Chinesesimp>
                 <Chinese>在每條跑道的起點放置ILS模塊，面向與跑道相同的方向</Chinese>
             </Key>
@@ -315,86 +372,103 @@
         <Container name="AASSpawnAI">
             <Key ID="STR_Module__AASSpawnAI_displayName">
                 <Original>AAS Spawn AI</Original>
+                <English>AAS Spawn AI</English>
                 <Chinesesimp>AAS生成人工智能</Chinesesimp>
                 <Chinese>AAS生成人工智能</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_faction1_displayName">
                 <Original>Spawn Faction</Original>
+                <English>Spawn Faction</English>
                 <Chinesesimp>生成派系</Chinesesimp>
                 <Chinese>生成派系</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_faction1_description">
                 <Original>As defined in cfgFaction</Original>
+                <English>As defined in cfgFaction</English>
                 <Chinesesimp>如cfgFaction中定义</Chinesesimp>
                 <Chinese>如cfgFaction中定義</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_enemySide_displayName">
                 <Original>Enemy Side</Original>
+                <English>Enemy Side</English>
                 <Chinesesimp>敌方</Chinesesimp>
                 <Chinese>敵方</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_autoBalance_displayName">
                 <Original>Auto balance AI</Original>
+                <English>Auto balance AI</English>
                 <Chinesesimp>自动平衡AI</Chinesesimp>
                 <Chinese>自動平衡AI</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_autoBalance_description">
                 <Original>Auto balance the number of AI to players</Original>
+                <English>Auto balance the number of AI to players</English>
                 <Chinesesimp>自动平衡玩家的AI数量</Chinesesimp>
                 <Chinese>自動平衡玩家的AI數量</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_minAI_displayName">
                 <Original>Minimum number of AI per side</Original>
+                <English>Minimum number of AI per side</English>
                 <Chinesesimp>每方人工智能的最低数量</Chinesesimp>
                 <Chinese>每方人工智能的最低數量</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_minAI_description">
                 <Original>Minimum number of AI no matter how many players</Original>
+                <English>Minimum number of AI no matter how many players</English>
                 <Chinesesimp>无论有多少玩家，AI的最低数量</Chinesesimp>
                 <Chinese>無論有多少玩家，AI的最低數量</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_spawnAIDefensive_displayName">
                 <Original>Spawn at Sectors</Original>
+                <English>Spawn at Sectors</English>
                 <Chinesesimp>在扇区生成</Chinesesimp>
                 <Chinese>在扇區生成</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_spawnAIDefensive_description">
                 <Original>Spawn AI on captured sectors or just at start location</Original>
+                <English>Spawn AI on captured sectors or just at start location</English>
                 <Chinesesimp>在捕获的区域或仅在开始位置产生人工智能</Chinesesimp>
                 <Chinese>在捕獲的區域或僅在開始位置產生人工智能</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_searchRadius_displayName">
                 <Original>Search Vehicles Radius</Original>
+                <English>Search Vehicles Radius</English>
                 <Chinesesimp>搜索车辆半径</Chinesesimp>
                 <Chinese>搜索車輛半徑</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_searchRadius_description">
                 <Original>How far AI will look for empty vehicles around the spawn point</Original>
+                <English>How far AI will look for empty vehicles around the spawn point</English>
                 <Chinesesimp>人工智能会在生成点周围寻找空车辆多远</Chinesesimp>
                 <Chinese>人工智能會在生成點周圍尋找空車輛多遠</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_useRoles_displayName">
                 <Original>Use MCC roles gear</Original>
+                <English>Use MCC roles gear</English>
                 <Chinesesimp>使用MCC角色装备</Chinesesimp>
                 <Chinese>使用MCC角色裝備</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_useRoles_description">
                 <Original>AI will use roles kits as defined in MCC_loadouts</Original>
+                <English>AI will use roles kits as defined in MCC_loadouts</English>
                 <Chinesesimp>人工智能将使用MCC_loads中定义的角色套件</Chinesesimp>
                 <Chinese>人工智能將使用MCC_loads中定義的角色套件</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_spawnVehicles_displayName">
                 <Original>Spawn Vehicles</Original>
+                <English>Spawn Vehicles</English>
                 <Chinesesimp>生成车辆</Chinesesimp>
                 <Chinese>生成車輛</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_spawnVehicles_description">
                 <Original>AI will spawn vehicles equals to the enemy vehicles</Original>
+                <English>AI will spawn vehicles equals to the enemy vehicles</English>
                 <Chinesesimp>人工智能将产生与敌方车辆相当的车辆</Chinesesimp>
                 <Chinese>人工智能將產生與敵方車輛相當的車輛</Chinese>
             </Key>
             <Key ID="STR_Module__AASSpawnAI_ModuleDescription_description">
                 <Original>Spawn AI that will try to conquer enemy sectors in MCC AAS</Original>
+                <English>Spawn AI that will try to conquer enemy sectors in MCC AAS</English>
                 <Chinesesimp>生成人工智能，试图在MCC AAS中征服敌方区域</Chinesesimp>
                 <Chinese>生成人工智能，試圖在MCC AAS中征服敵方區域</Chinese>
             </Key>
@@ -402,26 +476,31 @@
         <Container name="AAS">
             <Key ID="STR_Module__AAS_displayName">
                 <Original>Advance And Secure init</Original>
+                <English>Advance And Secure init</English>
                 <Chinesesimp>推进并保护初始化</Chinesesimp>
                 <Chinese>推進並保護初始化</Chinese>
             </Key>
             <Key ID="STR_Module__AAS_side1_displayName">
                 <Original>side1</Original>
+                <English>side1</English>
                 <Chinesesimp>阵营1</Chinesesimp>
                 <Chinese>陣營1</Chinese>
             </Key>
             <Key ID="STR_Module__AAS_side2_displayName">
                 <Original>side2</Original>
+                <English>side2</English>
                 <Chinesesimp>阵营2</Chinesesimp>
                 <Chinese>陣營2</Chinese>
             </Key>
             <Key ID="STR_Module__AAS_bleedTickets_displayName">
                 <Original>Tickets Bleed</Original>
+                <English>Tickets Bleed</English>
                 <Chinesesimp>复活票流失</Chinesesimp>
                 <Chinese>復活票流失</Chinese>
             </Key>
             <Key ID="STR_Module__AAS_bleedTickets_description">
                 <Original>How many tickets lost every 5 seconds to the loosing side</Original>
+                <English>How many tickets lost every 5 seconds to the loosing side</English>
                 <Chinesesimp>失去阵营的复活票每五秒失去多少张复活票</Chinesesimp>
                 <Chinese>失去陣營的復活票每五秒失去多少張復活票</Chinese>
             </Key>
@@ -430,6 +509,9 @@
                     order, Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
                     Follow the sector description to set up the AAS mission
                 </Original>
+                <English>Creates an Advance And Secure mission where objectives can only be captured in a specific
+                    order, Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
+                    Follow the sector description to set up the AAS mission</English>
                 <Chinesesimp>
                     创建一个行进和营救任务，其中目标只能按照特定顺序捕获，与MCC捕获区或虚拟扇形模块同步，以确定目标被捕获的顺序。按照行业描述设置AAS任务
                 </Chinesesimp>
@@ -441,6 +523,8 @@
                 <Original>Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
                     Follow the sector description to set up the AAS mission
                 </Original>
+                <English>Sync with a MCC capture zone or a dummy sector module in order they supposed to be captured.
+                    Follow the sector description to set up the AAS mission</English>
                 <Chinesesimp>与MCC捕获区或虚拟扇形模块同步，以确定捕获它们的顺序。按照行业描述设置AAS任务</Chinesesimp>
                 <Chinese>與MCC捕獲區或虛擬扇形模塊同步，以確定捕獲它們的順序。按照行業描述設置AAS任務</Chinese>
             </Key>
@@ -448,6 +532,7 @@
         <Container name="ambientFire">
             <Key ID="STR_Module__ambientFire_displayName">
                 <Original>Ambient Fire</Original>
+                <English>Ambient Fire</English>
                 <Chinesesimp>环境火灾</Chinesesimp>
                 <Chinese>環境火災</Chinese>
             </Key>
@@ -455,11 +540,14 @@
                 <Original>Random fires will ignite from explosives and fire fights, the fire will spread according to
                     wind strength and direction
                 </Original>
+                <English>Random fires will ignite from explosives and fire fights, the fire will spread according to
+                    wind strength and direction</English>
                 <Chinesesimp>爆炸物和消防会引发随机火灾，火势会根据风力和方向蔓延</Chinesesimp>
                 <Chinese>爆炸物和消防會引發隨機火災，火勢會根據風力和方向蔓延</Chinese>
             </Key>
             <Key ID="STR_DISP_CURATOR_AMBIENTFIRE_SUCCESS">
                 <Original>Ambient Fire Enabled</Original>
+                <English>Ambient Fire Enabled</English>
                 <Chinesesimp>启用环境火灾</Chinesesimp>
                 <Chinese>啟用環境火災</Chinese>
             </Key>
@@ -467,11 +555,13 @@
         <Container name="atmosphere">
             <Key ID="STR_Module__atmosphere_displayName">
                 <Original>Atmosphere</Original>
+                <English>Atmosphere</English>
                 <Chinesesimp>气氛</Chinesesimp>
                 <Chinese>氣氛</Chinese>
             </Key>
             <Key ID="STR_Module__atmosphere_description">
                 <Original>Create pre set or custom atmospheres</Original>
+                <English>Create pre set or custom atmospheres</English>
                 <Chinesesimp>创建预设或自定义氛围</Chinesesimp>
                 <Chinese>創建預設或自定義氛圍</Chinese>
             </Key>
@@ -479,6 +569,7 @@
         <Container name="lockDoors">
             <Key ID="STR_Module__lockDoors_displayName">
                 <Original>Doors Lock/Unlock</Original>
+                <English>Doors Lock/Unlock</English>
                 <Chinesesimp>门锁/打开</Chinesesimp>
                 <Chinese>門鎖/打開</Chinese>
             </Key>
@@ -486,6 +577,8 @@
                 <Original>Lock or unlock buildings doors in the given radius, locked door can be opened with breaching
                     charges or lockpicking using MCC interaction
                 </Original>
+                <English>Lock or unlock buildings doors in the given radius, locked door can be opened with breaching
+                    charges or lockpicking using MCC interaction</English>
                 <Chinesesimp>锁定或解锁给定半径内的建筑物门，可以通过破坏装置或使用MCC交互进行撬锁打开上锁的门
                 </Chinesesimp>
                 <Chinese>鎖定或解鎖給定半徑內的建築物門，可以通過破壞裝置或使用MCC交互進行撬鎖打開上鎖的門</Chinese>
@@ -494,11 +587,13 @@
         <Container name="warZone">
             <Key ID="STR_Module__warZone_displayName">
                 <Original>War Zone Atmosphere</Original>
+                <English>War Zone Atmosphere</English>
                 <Chinesesimp>战区气氛</Chinesesimp>
                 <Chinese>戰區氣氛</Chinese>
             </Key>
             <Key ID="STR_Module_warzone_description">
                 <Original>Destroy buildings, create random fires and wreck in the given radius</Original>
+                <English>Destroy buildings, create random fires and wreck in the given radius</English>
                 <Chinesesimp>在给定半径内摧毁建筑物、制造随机火灾和残骸</Chinesesimp>
                 <Chinese>在給定半徑內摧毀建築物、製造隨機火災和殘骸</Chinese>
             </Key>
@@ -506,22 +601,26 @@
         <Container name="GroupRespawns">
             <Key ID="STR_Module__groupRespawns_displayName">
                 <Original>Respawn Group</Original>
+                <English>Respawn Group</English>
                 <Chinesesimp>重生群组</Chinesesimp>
                 <Chinese>重生群組</Chinese>
             </Key>
             <Key ID="STR_Module__groupRespawns_ModuleDescription_description">
                 <Original>Sync it with any unit or group to respawn the group when all units in the group dead
                 </Original>
+                <English>Sync it with any unit or group to respawn the group when all units in the group dead</English>
                 <Chinesesimp>当群中所有单位都死亡时，将其与任何单位或群同步以重生群组</Chinesesimp>
                 <Chinese>當群中所有單位都死亡時，將其與任何單位或群同步以重生群組</Chinese>
             </Key>
             <Key ID="STR_Module__groupRespawns_Respawns_displayName">
                 <Original>Respawns</Original>
+                <English>Respawns</English>
                 <Chinesesimp>重生</Chinesesimp>
                 <Chinese>重生</Chinese>
             </Key>
             <Key ID="STR_Module__groupRespawns_Respawns_description">
                 <Original>How many time can the group respawn</Original>
+                <English>How many time can the group respawn</English>
                 <Chinesesimp>群组可以刷新多少次</Chinesesimp>
                 <Chinese>群組可以刷新多少次</Chinese>
             </Key>
@@ -529,6 +628,7 @@
         <Container name="CapturePoint">
             <Key ID="STR_CURATOR_Module_capturePoint_displayName">
                 <Original>Capture Point</Original>
+                <English>Capture Point</English>
                 <Chinesesimp>捕获点</Chinesesimp>
                 <Chinese>捕獲點</Chinese>
             </Key>
@@ -536,6 +636,7 @@
         <Container name="curatorSetEvac">
             <Key ID="STR_DISP_CURATOR_ERROR_CURATORSETEVAC_NOVEHICLE">
                 <Original>No vehicle selected</Original>
+                <English>No vehicle selected</English>
                 <Chinesesimp>未选择车辆</Chinesesimp>
                 <Chinese>未選擇車輛</Chinese>
             </Key>
@@ -1547,26 +1648,31 @@
             </Key>
             <Key ID="STR_MCC_GENERAL_PPEFFECTS">
                 <Original>Delete a brush</Original>
+                <English>Delete a brush</English>
                 <Chinesesimp>删除一个刷子</Chinesesimp>
                 <Chinese>刪除一個刷子</Chinese>
             </Key>
             <Key ID="STR_MCC_GENERAL_CREWCOUNT">
                 <Original>return empty seats of a specific vehicle with or without FFV (firing From Vehicles)</Original>
+                <English>return empty seats of a specific vehicle with or without FFV (firing From Vehicles)</English>
                 <Chinesesimp>返回特定车辆的空座位，包括或不包括FFV（从车辆射击）。</Chinesesimp>
                 <Chinese>返回特定車輛的空座位，包括或不包括FFV（從車輛射擊）。</Chinese>
             </Key>
             <Key ID="STR_MCC_GENERAL_ADDVELOCITY">
                 <Original>adds velocity to object depends on its current velocity</Original>
+                <English>adds velocity to object depends on its current velocity</English>
                 <Chinesesimp>根据对象的当前速度为其添加速度。</Chinesesimp>
                 <Chinese>根據對象的當前速度為其添加速度。</Chinese>
             </Key>
             <Key ID="STR_MCC_GENERAL_MAKETASK">
                 <Original>Handles tasks on the server using BI setTask fnc</Original>
+                <English>Handles tasks on the server using BI setTask fnc</English>
                 <Chinesesimp>使用BI的setTask函数处理服务器上的任务。</Chinesesimp>
                 <Chinese>使用BI的setTask函數處理伺服器上的任務。</Chinese>
             </Key>
             <Key ID="STR_MCC_GENERAL_HALT">
                 <Original>halt all function in game</Original>
+                <English>halt all function in game</English>
                 <Chinesesimp>暂停游戏中的所有功能。</Chinesesimp>
                 <Chinese>暫停遊戲中的所有功能。</Chinese>
             </Key>
@@ -1576,11 +1682,13 @@
         <container name="Faction">
             <Key ID="STR_mcc_groupGen_factionTittle">
                 <Original>Faction:</Original>
+                <English>Faction:</English>
                 <Chinesesimp>阵营：</Chinesesimp>
                 <Chinese>陣營：</Chinese>
             </Key>
             <Key ID="STR_mcc_closeGeneratorButton">
                 <Original>Close</Original>
+                <English>Close</English>
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
@@ -1588,61 +1696,73 @@
         <container name="Map">
             <Key ID="STR_mcc_groupGen_WestButton_text">
                 <Original>West</Original>
+                <English>West</English>
                 <Chinesesimp>西方</Chinesesimp>
                 <Chinese>西方</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_WestButton_tooltips">
                 <Original>Show only West's side units</Original>
+                <English>Show only West's side units</English>
                 <Chinesesimp>只展示西方阵营的单位</Chinesesimp>
                 <Chinese>只顯示西方陣營的單位</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_EastButton_text">
                 <Original>East</Original>
+                <English>East</English>
                 <Chinesesimp>东方</Chinesesimp>
                 <Chinese>东方</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_EastButton_tooltips">
                 <Original>Show only East's side units</Original>
+                <English>Show only East's side units</English>
                 <Chinesesimp>只展示东方阵营的单位</Chinesesimp>
                 <Chinese>只顯示东方陣營的單位</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_GuerButton_text">
                 <Original>Guer</Original>
+                <English>Guer</English>
                 <Chinesesimp>独立方</Chinesesimp>
                 <Chinese>獨立方</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_GuerButton_tooltips">
                 <Original>Show only Guer's side units</Original>
+                <English>Show only Guer's side units</English>
                 <Chinesesimp>只展示独立方阵营的单位</Chinesesimp>
                 <Chinese>只顯示獨立方陣營的單位</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_CivButton_text">
                 <Original>Civ</Original>
+                <English>Civ</English>
                 <Chinesesimp>平民</Chinesesimp>
                 <Chinese>平民</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_CivButton_tooltips">
                 <Original>Show only Civ's side units</Original>
+                <English>Show only Civ's side units</English>
                 <Chinesesimp>只展示平民阵营的单位</Chinesesimp>
                 <Chinese>只顯示平民陣營的單位</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_PlayersButton_text">
                 <Original>Players</Original>
+                <English>Players</English>
                 <Chinesesimp>玩家</Chinesesimp>
                 <Chinese>玩家</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_PlayersButton_tooltips">
                 <Original>Show only Players' units</Original>
+                <English>Show only Players' units</English>
                 <Chinesesimp>只展示玩家的单位</Chinesesimp>
                 <Chinese>只顯示玩家的單位</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_AllButton_text">
                 <Original>All</Original>
+                <English>All</English>
                 <Chinesesimp>全部</Chinesesimp>
                 <Chinese>全部</Chinese>
             </Key>
             <Key ID="STR_mcc_groupGen_AllButton_tooltips">
                 <Original>Show all units</Original>
+                <English>Show all units</English>
                 <Chinesesimp>展示全部的单位</Chinesesimp>
                 <Chinese>顯示全部的單位</Chinese>
             </Key>
@@ -1650,16 +1770,19 @@
         <container name="BENCHMARK">
             <Key ID="STR_MCC_MissionMakerTittle_text">
                 <Original>Mission Maker:</Original>
+                <English>Mission Maker:</English>
                 <Chinesesimp>任务制作器：</Chinesesimp>
                 <Chinese>任務製作器：</Chinese>
             </Key>
             <Key ID="STR_MCC_clientFPSTittle_text">
                 <Original>Client FPS:</Original>
+                <English>Client FPS:</English>
                 <Chinesesimp>客户端FPS：</Chinesesimp>
                 <Chinese>客戶端FPS：</Chinese>
             </Key>
             <Key ID="STR_MCC_serverFPSTittle_text">
                 <Original>Server FPS:</Original>
+                <English>Server FPS:</English>
                 <Chinsesmp>服务器FPS：</Chinsesmp>
                 <Chinese>伺服器FPS：</Chinese>
             </Key>
@@ -1667,6 +1790,7 @@
         <container name="BUTTONS">
             <Key ID="STR_MCC_stopCapture_text">
                 <Original>Stop Capturing</Original>
+                <English>Stop Capturing</English>
                 <Chinesesimp>停止捕捉</Chinesesimp>
                 <Chinese>停止捕獲</Chinese>
             </Key>
@@ -1674,121 +1798,146 @@
                 <Original>Once a trigger has been generated all the action done by MCC won't execute but will be saved
                     to the trigger until this button is pressed
                 </Original>
+                <English>Once a trigger has been generated all the action done by MCC won't execute but will be saved
+                    to the trigger until this button is pressed</English>
                 <Chinsesmp>一旦生成了触发器，MCC所做的所有操作都不会执行，但会保存到触发器，直到按下此按钮</Chinsesmp>
                 <Chinese>一旦生成了觸發器，MCC所做的所有操作都不會執行，但會保存到觸發器，直到按下此按鈕</Chinese>
             </Key>
             <Key ID="STR_MCC_cacheButton_text">
                 <Original>Cache Group</Original>
+                <English>Cache Group</English>
                 <Chinesesimp>缓存组</Chinesesimp>
                 <Chinese>快取組</Chinese>
             </Key>
             <Key ID="STR_MCC_cacheButton_tooltip">
                 <Original>Give the selected groups to caching system</Original>
+                <English>Give the selected groups to caching system</English>
                 <Chinesesimp>将所选组提供给缓存系统</Chinesesimp>
                 <Chinese>將所選組提供給快取系統</Chinese>
             </Key>
             <Key ID="STR_MCC_occupyButton_text">
                 <Original>Occupy Zone</Original>
+                <English>Occupy Zone</English>
                 <Chinesesimp>占领区域</Chinesesimp>
                 <Chinese>佔據區域</Chinese>
             </Key>
             <Key ID="STR_MCC_occupyButton_tooltip">
                 <Original>Occupy current selected zone with the selected faction's units</Original>
+                <English>Occupy current selected zone with the selected faction's units</English>
                 <Chinesesimp>占领当前所选区域，使用所选阵营的单位</Chinesesimp>
                 <Chinese>佔據當前所選區域，使用所選陣營的單位</Chinese>
             </Key>
             <Key ID="STR_MCC_ambientBFButton_text">
                 <Original>Ambient Warzone(off)</Original>
+                <English>Ambient Warzone(off)</English>
                 <Chinesesimp>环境战区(关闭)</Chinesesimp>
                 <Chinese>環境戰區(關閉)</Chinese>
             </Key>
             <Key ID="STR_MCC_ambientBFButton_tooltip">
                 <Original>Spawn random ambient battlefield around the player</Original>
+                <English>Spawn random ambient battlefield around the player</English>
                 <Chinesesimp>在玩家周围生成随机的环境战区</Chinesesimp>
                 <Chinese>在玩家周圍生成隨機的環境戰區</Chinese>
             </Key>
             <Key ID="STR_MCC_saveLoad_text">
                 <Original>Save/Load</Original>
+                <English>Save/Load</English>
                 <Chinesesimp>保存/加载</Chinesesimp>
                 <Chinese>儲存/載入</Chinese>
             </Key>
             <Key ID="STR_MCC_login_text">
                 <Original>logout</Original>
+                <English>logout</English>
                 <Chinesesimp>登出</Chinesesimp>
                 <Chinese>登出</Chinese>
             </Key>
             <Key ID="STR_MCC_login_tooltip">
                 <Original>Login or logout as the mission maker</Original>
+                <English>Login or logout as the mission maker</English>
                 <Chinesesimp>作为任务制作人登入或登出</Chinesesimp>
                 <Chinese>登入或登出為任務製作者</Chinese>
             </Key>
             <Key ID="STR_MCC_ghostMode_text">
                 <Original>Ghost Mode</Original>
+                <English>Ghost Mode</English>
                 <Chinesesimp>幽灵模式</Chinesesimp>
                 <Chinese>幽靈模式</Chinese>
             </Key>
             <Key ID="STR_MCC_ghostMode_tooltip">
                 <Original>Make the mission maker invisible to enemies</Original>
+                <English>Make the mission maker invisible to enemies</English>
                 <Chinesesimp>使任务制作人对敌人不可见</Chinesesimp>
                 <Chinese>使任務製作者對敵人不可見</Chinese>
             </Key>
             <Key ID="STR_MCC_spectator_text">
                 <Original>Spectator</Original>
+                <English>Spectator</English>
                 <Chinesesimp>旁观模式</Chinesesimp>
                 <Chinese>旁觀模式</Chinese>
             </Key>
             <Key ID="STR_MCC_spectator_tooltip">
                 <Original>Open Spectator Mode</Original>
+                <English>Open Spectator Mode</English>
                 <Chinesesimp>打开旁观模式</Chinesesimp>
                 <Chinese>開啟旁觀模式</Chinese>
             </Key>
             <Key ID="STR_MCC_Teleport_text">
                 <Original>Teleport</Original>
+                <English>Teleport</English>
                 <Chinesesimp>传送</Chinesesimp>
                 <Chinese>傳送</Chinese>
             </Key>
             <Key ID="STR_MCC_Teleport_tooltip">
                 <Original>Teleport the mission maker and any vehicle he is in to a new location</Original>
+                <English>Teleport the mission maker and any vehicle he is in to a new location</English>
                 <Chinesesimp>传送任务制作人及其所驾驶的车辆到新的位置</Chinesesimp>
                 <Chinese>傳送任務製作者及其所駕駛的車輛到新的位置</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionWIn_text">
                 <Original>Mission Won</Original>
+                <English>Mission Won</English>
                 <Chinesesimp>任务胜利</Chinesesimp>
                 <Chinese>任務勝利</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionWIn_tooltip">
                 <Original>End mission with - Mission Accomplished</Original>
+                <English>End mission with - Mission Accomplished</English>
                 <Chinesesimp>标记任务为胜利并结束游戏</Chinesesimp>
                 <Chinese>標記任務為勝利並結束遊戲</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionLost_text">
                 <Original>Mission Failed</Original>
+                <English>Mission Failed</English>
                 <Chinesesimp>任务失败</Chinesesimp>
                 <Chinese>任務失敗</Chinese>
             </Key>
             <Key ID="STR_MCC_MissionLost_tooltip">
                 <Original>End mission with - Mission Failed</Original>
+                <English>End mission with - Mission Failed</English>
                 <Chinesesimp>标记任务为失败并结束游戏</Chinesesimp>
                 <Chinese>標記任務為失敗並結束遊戲</Chinese>
             </Key>
             <Key ID="STR_MCC_openMWButton_text">
                 <Original>Mission Generator</Original>
+                <English>Mission Generator</English>
                 <Chinesesimp>任务生成器</Chinesesimp>
                 <Chinese>任務生成器</Chinese>
             </Key>
             <Key ID="STR_MCC_openMWButton_tooltip">
                 <Original>Open mission Generator</Original>
+                <English>Open mission Generator</English>
                 <Chinesesimp>打开任务生成器</Chinesesimp>
                 <Chinese>開啟任務生成器</Chinese>
             </Key>
             <Key ID="STR_MCC_openFrontLineButton_text">
                 <Original>Front Lines</Original>
+                <English>Front Lines</English>
                 <Chinesesimp>前线</Chinesesimp>
                 <Chinese>前線</Chinese>
             </Key>
             <Key ID="STR_MCC_openFrontLineButton_tooltip">
                 <Original>Open Front Lines Generator</Original>
+                <English>Open Front Lines Generator</English>
                 <Chinesesimp>打开前线生成器</Chinesesimp>
                 <Chinese>開啟前線生成器</Chinese>
             </Key>
@@ -1799,281 +1948,337 @@
         <Container name="Main">
             <Key ID="STR_MCC_CONSOLE_MAIN_MENU">
                 <Original>Main Menu</Original>
+                <English>Main Menu</English>
                 <Chinesesimp>主菜单</Chinesesimp>
                 <Chinese>主選單</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_UAV_CONTROL">
                 <Original>UAV Control</Original>
+                <English>UAV Control</English>
                 <Chinesesimp>无人机控制</Chinesesimp>
                 <Chinese>無人機控制</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_AC130_CONTROL">
                 <Original>AC-130 Control</Original>
+                <English>AC-130 Control</English>
                 <Chinesesimp>AC-130控制</Chinesesimp>
                 <Chinese>AC-130控制</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_ARTILLERY_OBSERVER">
                 <Original>Forward Observer Artillery</Original>
+                <English>Forward Observer Artillery</English>
                 <Chinesesimp>前方观察员炮兵</Chinesesimp>
                 <Chinese>前方觀察員炮兵</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_RTS_INTERFACE">
                 <Original>RTS Interface</Original>
+                <English>RTS Interface</English>
                 <Chinesesimp>即时战略界面</Chinesesimp>
                 <Chinese>即時戰略介面</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FLEET_MANAGEMENT">
                 <Original>Fleet Management</Original>
+                <English>Fleet Management</English>
                 <Chinesesimp>舰队管理</Chinesesimp>
                 <Chinese>艦隊管理</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CLOSE">
                 <Original>Close the console</Original>
+                <English>Close the console</English>
                 <Chinesesimp>关闭控制台</Chinesesimp>
                 <Chinese>關閉控制台</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_OPEN_MAP">
                 <Original>Open Map</Original>
+                <English>Open Map</English>
                 <Chinesesimp>打开地图</Chinesesimp>
                 <Chinese>開啟地圖</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FULL_SCREEN">
                 <Original>Full Screen</Original>
+                <English>Full Screen</English>
                 <Chinesesimp>全屏</Chinesesimp>
                 <Chinese>全螢幕</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FLIGHT_HEIGHT">
                 <Original>Flight Height</Original>
+                <English>Flight Height</English>
                 <Chinesesimp>飞行高度</Chinesesimp>
                 <Chinese>飛行高度</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_TAKE_CONTROL">
                 <Original>Take Control</Original>
+                <English>Take Control</English>
                 <Chinesesimp>接管控制</Chinesesimp>
                 <Chinese>接管控制</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CANT_CALL_SUPPORT">
                 <Original>Can't call support to this location try again</Original>
+                <English>Can't call support to this location try again</English>
                 <Chinesesimp>无法在此位置呼叫支援，请重试</Chinesesimp>
                 <Chinese>無法在此位置呼叫支援，請重試</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_AIR_SUPPORT_INCOMING">
                 <Original>Air support incoming</Original>
+                <English>Air support incoming</English>
                 <Chinesesimp>空中支援即将到达</Chinesesimp>
                 <Chinese>空中支援即將到達</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_DIR">
                 <Original>Dir: %1</Original>
+                <English>Dir: %1</English>
                 <Chinesesimp>方向: %1</Chinesesimp>
                 <Chinese>方向: %1</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_DISTANCE">
                 <Original>Dis: %1m</Original>
+                <English>Dis: %1m</English>
                 <Chinesesimp>距离: %1米</Chinesesimp>
                 <Chinese>距離: %1米</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_CAS">
                 <Original>Call CAS</Original>
+                <English>Call CAS</English>
                 <Chinesesimp>呼叫近距离空中支援</Chinesesimp>
                 <Chinese>呼叫近距離空中支援</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_CAS_TOOLTIP">
                 <Original>Call selected CAS - Click and drag on the mini-map to define CAS's approach</Original>
+                <English>Call selected CAS - Click and drag on the mini-map to define CAS's approach</English>
                 <Chinesesimp>呼叫选定的近距离空中支援 - 在地图上点击并拖拽来定义接近路线</Chinesesimp>
                 <Chinese>呼叫選定的近距離空中支援 - 在地圖上點擊並拖拽來定義接近路線</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_AIRDROP_AVAILABLE">
                 <Original>Airdrop Available:</Original>
+                <English>Airdrop Available:</English>
                 <Chinesesimp>空投可用:</Chinesesimp>
                 <Chinese>空投可用:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_AIRDROP">
                 <Original>Call Airdrop</Original>
+                <English>Call Airdrop</English>
                 <Chinesesimp>呼叫空投</Chinesesimp>
                 <Chinese>呼叫空投</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_AIRDROP_TOOLTIP">
                 <Original>Call selected airdrop - Click and drag on the mini-map to define airdrop's approach</Original>
+                <English>Call selected airdrop - Click and drag on the mini-map to define airdrop's approach</English>
                 <Chinesesimp>呼叫选定的空投 - 在地图上点击并拖拽来定义空投路线</Chinesesimp>
                 <Chinese>呼叫選定的空投 - 在地圖上點擊並拖拽來定義空投路線</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_EVAC_MANAGEMENT">
                 <Original>Evac Management:</Original>
+                <English>Evac Management:</English>
                 <Chinesesimp>撤离管理:</Chinesesimp>
                 <Chinese>撤離管理:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_EVAC">
                 <Original>Evac:</Original>
+                <English>Evac:</English>
                 <Chinesesimp>撤离:</Chinesesimp>
                 <Chinese>撤離:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_INSERTION">
                 <Original>Insertion:</Original>
+                <English>Insertion:</English>
                 <Chinesesimp>插入:</Chinesesimp>
                 <Chinese>插入:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_EVAC">
                 <Original>Call EVAC</Original>
+                <English>Call EVAC</English>
                 <Chinesesimp>呼叫撤离</Chinesesimp>
                 <Chinese>呼叫撤離</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_EVAC_TOOLTIP">
                 <Original>Call selected EVAC - Mouse click on the mini-map to call it</Original>
+                <English>Call selected EVAC - Mouse click on the mini-map to call it</English>
                 <Chinesesimp>呼叫选定的撤离 - 在地图上点击鼠标来呼叫</Chinesesimp>
                 <Chinese>呼叫選定的撤離 - 在地圖上點擊滑鼠來呼叫</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CALL_EVAC_3WP">
                 <Original>Call EVAC 3 WP</Original>
+                <English>Call EVAC 3 WP</English>
                 <Chinesesimp>呼叫撤离 3 航点</Chinesesimp>
                 <Chinese>呼叫撤離 3 航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_AMMO">
                 <Original>Ammo</Original>
+                <English>Ammo</English>
                 <Chinesesimp>弹药</Chinesesimp>
                 <Chinese>彈藥</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_MATERIALS">
                 <Original>Materials</Original>
+                <English>Materials</English>
                 <Chinesesimp>材料</Chinesesimp>
                 <Chinese>材料</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FUEL">
                 <Original>Fuel</Original>
+                <English>Fuel</English>
                 <Chinesesimp>燃料</Chinesesimp>
                 <Chinese>燃料</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FOOD">
                 <Original>Food</Original>
+                <English>Food</English>
                 <Chinesesimp>食物</Chinesesimp>
                 <Chinese>食物</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_MEDS">
                 <Original>Meds</Original>
+                <English>Meds</English>
                 <Chinesesimp>医疗</Chinesesimp>
                 <Chinese>醫療</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_ADD_WAYPOINT_TOOLTIP">
                 <Original>Add a waypoint to all selected groups</Original>
+                <English>Add a waypoint to all selected groups</English>
                 <Chinesesimp>为所有选定的组添加航点</Chinesesimp>
                 <Chinese>為所有選定的組添加航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_REPLACE">
                 <Original>Replace</Original>
+                <English>Replace</English>
                 <Chinesesimp>替换</Chinesesimp>
                 <Chinese>替換</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_REPLACE_WAYPOINT_TOOLTIP">
                 <Original>Remove all waypoints from any selected groups and add a new waypoint</Original>
+                <English>Remove all waypoints from any selected groups and add a new waypoint</English>
                 <Chinesesimp>移除所有选定组的所有航点并添加新航点</Chinesesimp>
                 <Chinese>移除所有選定組的所有航點並添加新航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CLEAR">
                 <Original>Clear</Original>
+                <English>Clear</English>
                 <Chinesesimp>清除</Chinesesimp>
                 <Chinese>清除</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CLEAR_WAYPOINT_TOOLTIP">
                 <Original>Remove all waypoints from any selected groups</Original>
+                <English>Remove all waypoints from any selected groups</English>
                 <Chinesesimp>移除所有选定组的所有航点</Chinesesimp>
                 <Chinese>移除所有選定組的所有航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LIVE_FEED">
                 <Original>Live Feed</Original>
+                <English>Live Feed</English>
                 <Chinesesimp>实时画面</Chinesesimp>
                 <Chinese>即時畫面</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_RULER">
                 <Original>Ruler</Original>
+                <English>Ruler</English>
                 <Chinesesimp>标尺</Chinesesimp>
                 <Chinese>標尺</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_RULER_TOOLTIP">
                 <Original>Activate the map ruler - left click on the map and drag from one point to another to measure distance and direction</Original>
+                <English>Activate the map ruler - left click on the map and drag from one point to another to measure distance and direction</English>
                 <Chinesesimp>激活地图标尺 - 在地图上左键点击并从一个点拖拽到另一个点来测量距离和方向</Chinesesimp>
                 <Chinese>激活地圖標尺 - 在地圖上左鍵點擊並從一個點拖拽到另一個點來測量距離和方向</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_DIRECTION">
                 <Original>Direction:</Original>
+                <English>Direction:</English>
                 <Chinesesimp>方向:</Chinesesimp>
                 <Chinese>方向:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_DISTANCE_LABEL">
                 <Original>Distance:</Original>
+                <English>Distance:</English>
                 <Chinesesimp>距离:</Chinesesimp>
                 <Chinese>距離:</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_VIDEO">
                 <Original>Video</Original>
+                <English>Video</English>
                 <Chinesesimp>视频</Chinesesimp>
                 <Chinese>視頻</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CLOSE_FEED">
                 <Original>Close Feed</Original>
+                <English>Close Feed</English>
                 <Chinesesimp>关闭画面</Chinesesimp>
                 <Chinese>關閉畫面</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_REGULAR">
                 <Original>Regular</Original>
+                <English>Regular</English>
                 <Chinesesimp>常规</Chinesesimp>
                 <Chinese>常規</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_NV">
                 <Original>N/V</Original>
+                <English>N/V</English>
                 <Chinesesimp>夜视</Chinesesimp>
                 <Chinese>夜視</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_THERMAL">
                 <Original>Thermal</Original>
+                <English>Thermal</English>
                 <Chinesesimp>热成像</Chinesesimp>
                 <Chinese>熱成像</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_CHANGE_CAMERA_MODE">
                 <Original>Change UAV camera mode</Original>
+                <English>Change UAV camera mode</English>
                 <Chinesesimp>更改无人机摄像头模式</Chinesesimp>
                 <Chinese>更改無人機攝像頭模式</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_NO_EVAC_COMMAND">
                 <Original>No Evac is under your command</Original>
+                <English>No Evac is under your command</English>
                 <Chinesesimp>没有撤离单位在你的指挥下</Chinesesimp>
                 <Chinese>沒有撤離單位在你的指揮下</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LEFT_CLICK_ADD_WP">
                 <Original>Left click on the map to add one WP</Original>
+                <English>Left click on the map to add one WP</English>
                 <Chinesesimp>在地图上左键点击添加一个航点</Chinesesimp>
                 <Chinese>在地圖上左鍵點擊添加一個航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LEFT_CLICK_2ND_WP">
                 <Original>Left click on the map to put 2nd WP</Original>
+                <English>Left click on the map to put 2nd WP</English>
                 <Chinesesimp>在地图上左键点击放置第二个航点</Chinesesimp>
                 <Chinese>在地圖上左鍵點擊放置第二個航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LEFT_CLICK_3RD_WP">
                 <Original>Left click on the map to put 3rd WP</Original>
+                <English>Left click on the map to put 3rd WP</English>
                 <Chinesesimp>在地图上左键点击放置第三个航点</Chinesesimp>
                 <Chinese>在地圖上左鍵點擊放置第三個航點</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_MARKERS_PLACED">
                 <Original>Markers placed</Original>
+                <English>Markers placed</English>
                 <Chinesesimp>标记已放置</Chinesesimp>
                 <Chinese>標記已放置</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_NOT_ENOUGH_RESOURCES">
                 <Original>Not Enough Resources</Original>
+                <English>Not Enough Resources</English>
                 <Chinesesimp>资源不足</Chinesesimp>
                 <Chinese>資源不足</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LEFT_CLICK_CALL_SUPPORT">
                 <Original>Left click on the map to call support</Original>
+                <English>Left click on the map to call support</English>
                 <Chinesesimp>在地图上左键点击呼叫支援</Chinesesimp>
                 <Chinese>在地圖上左鍵點擊呼叫支援</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_LEFT_CLICK_DRAG_AIR_SUPPORT">
                 <Original>Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support</Original>
+                <English>Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support</English>
                 <Chinesesimp>在地图上左键点击，按住并拖拽光标来标记空中支援的区域和方向</Chinesesimp>
                 <Chinese>在地圖上左鍵點擊，按住並拖拽光標來標記空中支援的區域和方向</Chinese>
             </Key>
             <Key ID="STR_MCC_CONSOLE_FAILED_OPEN_DIALOG">
                 <Original>Failed to open dialog</Original>
+                <English>Failed to open dialog</English>
                 <Chinesesimp>打开对话框失败</Chinesesimp>
                 <Chinese>打開對話框失敗</Chinese>
             </Key>
@@ -2083,16 +2288,19 @@
         <Container name="RTS">
             <Key ID="STR_MCC_RTS_OFFLINE">
                 <Original>offline</Original>
+                <English>offline</English>
                 <Chinesesimp>离线</Chinesesimp>
                 <Chinese>離線</Chinese>
             </Key>
             <Key ID="STR_MCC_RTS_BUILD">
                 <Original>Build</Original>
+                <English>Build</English>
                 <Chinesesimp>建造</Chinesesimp>
                 <Chinese>建造</Chinese>
             </Key>
             <Key ID="STR_MCC_RTS_UNITS">
                 <Original>Units</Original>
+                <English>Units</English>
                 <Chinesesimp>单位</Chinesesimp>
                 <Chinese>單位</Chinese>
             </Key>
@@ -2102,36 +2310,43 @@
         <Container name="Role">
             <Key ID="STR_MCC_ROLE_DEPLOY">
                 <Original>Deploy</Original>
+                <English>Deploy</English>
                 <Chinesesimp>部署</Chinesesimp>
                 <Chinese>部署</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_DEPLOY_TOOLTIP">
                 <Original>Press Deploy to get into the action</Original>
+                <English>Press Deploy to get into the action</English>
                 <Chinesesimp>按部署按钮进入行动</Chinesesimp>
                 <Chinese>按部署按鈕進入行動</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_SQUAD">
                 <Original>Squad</Original>
+                <English>Squad</English>
                 <Chinesesimp>小队</Chinesesimp>
                 <Chinese>小隊</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_ROLE">
                 <Original>Role</Original>
+                <English>Role</English>
                 <Chinesesimp>角色</Chinesesimp>
                 <Chinese>角色</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_ARMOR">
                 <Original>Armor</Original>
+                <English>Armor</English>
                 <Chinesesimp>护甲</Chinesesimp>
                 <Chinese>護甲</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_LOAD">
                 <Original>Load</Original>
+                <English>Load</English>
                 <Chinesesimp>负载</Chinesesimp>
                 <Chinese>負載</Chinese>
             </Key>
             <Key ID="STR_MCC_ROLE_WEIGHT">
                 <Original>Weight</Original>
+                <English>Weight</English>
                 <Chinesesimp>重量</Chinesesimp>
                 <Chinese>重量</Chinese>
             </Key>
@@ -2141,21 +2356,25 @@
         <Container name="Logistics">
             <Key ID="STR_MCC_LOGISTICS_TITLE">
                 <Original>Logistics</Original>
+                <English>Logistics</English>
                 <Chinesesimp>后勤</Chinesesimp>
                 <Chinese>後勤</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_CLOSE">
                 <Original>Close</Original>
+                <English>Close</English>
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_EMPTY">
                 <Original></Original>
+                <English></English>
                 <Chinesesimp></Chinesesimp>
                 <Chinese></Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_X">
                 <Original>X</Original>
+                <English>X</English>
                 <Chinesesimp>X</Chinesesimp>
                 <Chinese>X</Chinese>
             </Key>
@@ -2165,41 +2384,49 @@
         <Container name="Login">
             <Key ID="STR_MCC_LOGIN_VIEW_DISTANCE">
                 <Original>视野距离:</Original>
+                <English>视野距离:</English>
                 <Chinesesimp>视野距离:</Chinesesimp>
                 <Chinese>視野距離:</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_GRASS">
                 <Original>草地:</Original>
+                <English>草地:</English>
                 <Chinesesimp>草地:</Chinesesimp>
                 <Chinese>草地:</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_CLOSE">
                 <Original>关闭</Original>
+                <English>关闭</English>
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_MISSION_MARKERS">
                 <Original>任务标记:</Original>
+                <English>任务标记:</English>
                 <Chinesesimp>任务标记:</Chinesesimp>
                 <Chinese>任務標記:</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_CLIENT_FPS">
                 <Original>客户端 FPS:</Original>
+                <English>客户端 FPS:</English>
                 <Chinesesimp>客户端 FPS:</Chinesesimp>
                 <Chinese>客戶端 FPS:</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_SERVER_FPS">
                 <Original>服务器 FPS:</Original>
+                <English>服务器 FPS:</English>
                 <Chinesesimp>服务器 FPS:</Chinesesimp>
                 <Chinese>服務器 FPS:</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_LOGIN">
                 <Original>登录</Original>
+                <English>登录</English>
                 <Chinesesimp>登录</Chinesesimp>
                 <Chinese>登錄</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGIN_LOGIN_TOOLTIP">
                 <Original>作为任务制作者登录</Original>
+                <English>作为任务制作者登录</English>
                 <Chinesesimp>作为任务制作者登录</Chinesesimp>
                 <Chinese>作為任務製作者登錄</Chinese>
             </Key>
@@ -2209,16 +2436,19 @@
         <Container name="Test">
             <Key ID="STR_MCC_TEST_FACTION">
                 <Original>Faction:</Original>
+                <English>Faction:</English>
                 <Chinesesimp>派系:</Chinesesimp>
                 <Chinese>派系:</Chinese>
             </Key>
             <Key ID="STR_MCC_TEST_SPAWN">
                 <Original>Spawn</Original>
+                <English>Spawn</English>
                 <Chinesesimp>生成</Chinesesimp>
                 <Chinese>生成</Chinese>
             </Key>
             <Key ID="STR_MCC_TEST_X">
                 <Original>X</Original>
+                <English>X</English>
                 <Chinesesimp>X</Chinesesimp>
                 <Chinese>X</Chinese>
             </Key>
@@ -2228,66 +2458,79 @@
         <Container name="SaveLoad">
             <Key ID="STR_MCC_SAVE_NAME">
                 <Original>Save Name:</Original>
+                <English>Save Name:</English>
                 <Chinesesimp>保存名称:</Chinesesimp>
                 <Chinese>保存名稱:</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_TO_PROFILE">
                 <Original>Save To Profile</Original>
+                <English>Save To Profile</English>
                 <Chinesesimp>保存到配置文件</Chinesesimp>
                 <Chinese>保存到配置文件</Chinese>
             </Key>
             <Key ID="STR_MCC_LOAD_FROM_PROFILE">
                 <Original>Load From Profile</Original>
+                <English>Load From Profile</English>
                 <Chinesesimp>从配置文件加载</Chinesesimp>
                 <Chinese>從配置文件加載</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_ALL_SQM_TOOLTIP">
                 <Original>Save all missions's object in SQM file format and copy it to clipboard.</Original>
+                <English>Save all missions's object in SQM file format and copy it to clipboard.</English>
                 <Chinesesimp>将所有任务对象保存为SQM文件格式并复制到剪贴板。</Chinesesimp>
                 <Chinese>將所有任務對象保存為SQM文件格式並複製到剪貼板。</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_ALL_SQM">
                 <Original>Save All (SQM)</Original>
+                <English>Save All (SQM)</English>
                 <Chinesesimp>保存全部 (SQM)</Chinesesimp>
                 <Chinese>保存全部 (SQM)</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_MCC_SQM_TOOLTIP">
                 <Original>Save only MCC/Zeus missions's object in SQM file format and copy it to clipboard.</Original>
+                <English>Save only MCC/Zeus missions's object in SQM file format and copy it to clipboard.</English>
                 <Chinesesimp>仅保存MCC/Zeus任务对象为SQM文件格式并复制到剪贴板。</Chinesesimp>
                 <Chinese>僅保存MCC/Zeus任務對象為SQM文件格式並複製到剪貼板。</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_MCC_SQM">
                 <Original>Save MCC (SQM)</Original>
+                <English>Save MCC (SQM)</English>
                 <Chinesesimp>保存MCC (SQM)</Chinesesimp>
                 <Chinese>保存MCC (SQM)</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_COMP_TOOLTIP">
                 <Original>Save MCC's 3D editor placments in a composition's format to clipboard and RPT file</Original>
+                <English>Save MCC's 3D editor placments in a composition's format to clipboard and RPT file</English>
                 <Chinesesimp>将MCC的3D编辑器放置以组合格式保存到剪贴板和RPT文件</Chinesesimp>
                 <Chinese>將MCC的3D編輯器放置以組合格式保存到剪貼板和RPT文件</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVE_COMP">
                 <Original>Save Comp</Original>
+                <English>Save Comp</English>
                 <Chinesesimp>保存组合</Chinesesimp>
                 <Chinese>保存組合</Chinese>
             </Key>
             <Key ID="STR_MCC_ACTIVATE_PERSISTENT">
                 <Original>Activate Persistent</Original>
+                <English>Activate Persistent</English>
                 <Chinesesimp>激活持久化</Chinesesimp>
                 <Chinese>激活持久化</Chinese>
             </Key>
             <Key ID="STR_MCC_ACTIVATE_PERSISTENT_TOOLTIP">
                 <Original>Activate Persistent data saving and loading from DB</Original>
+                <English>Activate Persistent data saving and loading from DB</English>
                 <Chinesesimp>激活从数据库的持久化数据保存和加载</Chinesesimp>
                 <Chinese>激活從數據庫的持久化數據保存和加載</Chinese>
             </Key>
             <Key ID="STR_MCC_CLEAR_PERSISTENT">
                 <Original>Clear Persistent</Original>
+                <English>Clear Persistent</English>
                 <Chinesesimp>清除持久化</Chinesesimp>
                 <Chinese>清除持久化</Chinese>
             </Key>
             <Key ID="STR_MCC_CLEAR_PERSISTENT_TOOLTIP">
                 <Original>Clear default persistent data from DB</Original>
+                <English>Clear default persistent data from DB</English>
                 <Chinesesimp>从数据库清除默认持久化数据</Chinesesimp>
                 <Chinese>從數據庫清除默認持久化數據</Chinese>
             </Key>
