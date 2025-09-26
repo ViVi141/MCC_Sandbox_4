@@ -546,20 +546,20 @@
             <Key ID="STR_MCC_PREINIT">
                 <Original>Pre init mod only</Original>
                 <English>Pre init mod only</English>
-                <Chinese>仅预初始化模组</Chinese>
-                <Chinese_Traditional>僅預初始化模組</Chinese_Traditional>
+                <Chinesesimp>仅预初始化模组</Chinesesimp>
+                <Chinese>僅預初始化模組</Chinese>
             </Key>
             <Key ID="STR_MCC_ACTIVATEADDONS">
                 <Original>Pre init addon</Original>
                 <English>Pre init addon</English>
-                <Chinese>预初始化插件</Chinese>
-                <Chinese_Traditional>預初始化插件</Chinese_Traditional>
+                <Chinesesimp>预初始化插件</Chinesesimp>
+                <Chinese>預初始化插件</Chinese>
             </Key>
             <Key ID="STR_MCC_GEAR">
                 <Original>Assign gear by roles</Original>
                 <English>Assign gear by roles</English>
-                <Chinese>按角色分配装备</Chinese>
-                <Chinese_Traditional>按角色分配裝備</Chinese_Traditional>
+                <Chinesesimp>按角色分配装备</Chinesesimp>
+                <Chinese>按角色分配裝備</Chinese>
             </Key>
             <Key ID="STR_MCC_MOBILERESPAWN">
                 <Original>will move the respawn marker to the current position of the unit while the unit is alive, if
@@ -568,15 +568,15 @@
                 <English>will move the respawn marker to the current position of the unit while the unit is alive, if
                     the unit dead will move the marker to the previous location.
                 </English>
-                <Chinese>单位存活时将重生标记移动到其当前位置，单位死亡后将标记移回之前的位置。</Chinese>
-                <Chinese_Traditional>單位存活時將重生標記移動到其當前位置，單位死亡後將標記移回之前的位置。
-                </Chinese_Traditional>
+                <Chinesesimp>单位存活时将重生标记移动到其当前位置，单位死亡后将标记移回之前的位置。</Chinesesimp>
+                <Chinese>單位存活時將重生標記移動到其當前位置，單位死亡後將標記移回之前的位置。
+                </Chinese>
             </Key>
             <Key ID="STR_MCC_BUILDINGPOSCOUNT">
                 <Original>return the amount of indexed positions in a building.</Original>
                 <English>return the amount of indexed positions in a building.</English>
-                <Chinese>返回建筑物中索引位置的数量。</Chinese>
-                <Chinese_Traditional>返回建築物中索引位置的數量。</Chinese_Traditional>
+                <Chinesesimp>返回建筑物中索引位置的数量。</Chinesesimp>
+                <Chinese>返回建築物中索引位置的數量。</Chinese>
             </Key>
             <Key ID="STR_MCC_MAKEUNITSARRAY">
                 <Original>returns a unit array consist of all the units from the given function and simulation in format
@@ -585,109 +585,109 @@
                 <English>returns a unit array consist of all the units from the given function and simulation in format
                     [_cfgclass,_vehicleDisplayName].
                 </English>
-                <Chinese>返回一个单位数组，包含来自给定函数和模拟的所有单位，格式为 [_cfgclass,_vehicleDisplayName]。
-                </Chinese>
-                <Chinese_Traditional>返回一個單位數組，包含來自給定函數和模擬的所有單位，格式為
+                <Chinesesimp>返回一个单位数组，包含来自给定函数和模拟的所有单位，格式为 [_cfgclass,_vehicleDisplayName]。
+                </Chinesesimp>
+                <Chinese>返回一個單位數組，包含來自給定函數和模擬的所有單位，格式為
                     [_cfgclass,_vehicleDisplayName]。
-                </Chinese_Traditional>
+                </Chinese>
             </Key>
             <Key ID="STR_MCC_COUNTGROUP">
                 <Original>Count the number of infantry, vehicles, tank, air, ships in a group.</Original>
                 <English>Count the number of infantry, vehicles, tank, air, ships in a group.</English>
-                <Chinese>计算组中的步兵、车辆、坦克、飞机、船只数量。</Chinese>
-                <Chinese_Traditional>計算組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese_Traditional>
+                <Chinesesimp>计算组中的步兵、车辆、坦克、飞机、船只数量。</Chinesesimp>
+                <Chinese>計算組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese>
             </Key>
             <Key ID="STR_MCC_PIPOPEN">
                 <Original>Do the transmitting feed animation.</Original>
                 <English>Do the transmitting feed animation.</English>
-                <Chinese>执行传输动画。</Chinese>
-                <Chinese_Traditional>執行傳輸動畫。</Chinese_Traditional>
+                <Chinesesimp>执行传输动画。</Chinesesimp>
+                <Chinese>執行傳輸動畫。</Chinese>
             </Key>
             <Key ID="STR_MCC_TIME2STRING">
                 <Original>convert time to string.</Original>
                 <English>convert time to string.</English>
-                <Chinese>将时间转换为字符串。</Chinese>
-                <Chinese_Traditional>將時間轉換為字符串。</Chinese_Traditional>
+                <Chinesesimp>将时间转换为字符串。</Chinesesimp>
+                <Chinese>將時間轉換為字符串。</Chinese>
             </Key>
             <Key ID="STR_MCC_TIME">
                 <Original>convert time to hh:mm:ss.</Original>
                 <English>convert time to hh:mm:ss.</English>
-                <Chinese>将时间转换为 hh:mm:ss。</Chinese>
-                <Chinese_Traditional>將時間轉換為 hh:mm:ss。</Chinese_Traditional>
+                <Chinesesimp>将时间转换为 hh:mm:ss。</Chinesesimp>
+                <Chinese>將時間轉換為 hh:mm:ss。</Chinese>
             </Key>
             <Key ID="STR_MCC_SETVEHICLEINIT">
                 <Original>Sets vehicle init.</Original>
                 <English>Sets vehicle init.</English>
-                <Chinese>设置载具初始化。</Chinese>
-                <Chinese_Traditional>設置載具初始化。</Chinese_Traditional>
+                <Chinesesimp>设置载具初始化。</Chinesesimp>
+                <Chinese>設置載具初始化。</Chinese>
             </Key>
             <Key ID="STR_MCC_SETVEHICLENAME">
                 <Original>Sets vehicle name.</Original>
                 <English>Sets vehicle name.</English>
-                <Chinese>设置载具名称。</Chinese>
-                <Chinese_Traditional>設置載具名稱。</Chinese_Traditional>
+                <Chinesesimp>设置载具名称。</Chinesesimp>
+                <Chinese>設置載具名稱。</Chinese>
             </Key>
             <Key ID="STR_MCC_SETTIME">
                 <Original>Sets time on all clients.</Original>
                 <English>Sets time on all clients.</English>
-                <Chinese>在所有客户端上设置时间。</Chinese>
-                <Chinese_Traditional>在所有客戶端上設置時間。</Chinese_Traditional>
+                <Chinesesimp>在所有客户端上设置时间。</Chinesesimp>
+                <Chinese>在所有客戶端上設置時間。</Chinese>
             </Key>
             <Key ID="STR_MCC_SETWEATHER">
                 <Original>Sets weather on all clients - skip time by one hour to make the weather change.</Original>
                 <English>Sets weather on all clients - skip time by one hour to make the weather change.</English>
-                <Chinese>在所有客户端上设置天气 - 跳过一小时以使天气变化。</Chinese>
-                <Chinese_Traditional>在所有客戶端上設置天氣 - 跳過一小時以使天氣變化。</Chinese_Traditional>
+                <Chinesesimp>在所有客户端上设置天气 - 跳过一小时以使天气变化。</Chinesesimp>
+                <Chinese>在所有客戶端上設置天氣 - 跳過一小時以使天氣變化。</Chinese>
             </Key>
             <Key ID="STR_MCC_GLOBALSAY3D">
                 <Original>Say sound on 3D on all clients.</Original>
                 <English>Say sound on 3D on all clients.</English>
-                <Chinese>在所有客户端上播放3D声音。</Chinese>
-                <Chinese_Traditional>在所有客戶端上播放3D聲音。</Chinese_Traditional>
+                <Chinesesimp>在所有客户端上播放3D声音。</Chinesesimp>
+                <Chinese>在所有客戶端上播放3D聲音。</Chinese>
             </Key>
             <Key ID="STR_MCC_GLOBALHINT">
                 <Original>Broadcast a message on all clients.</Original>
                 <English>Broadcast a message on all clients.</English>
-                <Chinese>在所有客户端上广播消息。</Chinese>
-                <Chinese_Traditional>在所有客戶端上廣播消息。</Chinese_Traditional>
+                <Chinesesimp>在所有客户端上广播消息。</Chinesesimp>
+                <Chinese>在所有客戶端上廣播消息。</Chinese>
             </Key>
             <Key ID="STR_MCC_GLOBALEXECUTE">
                 <Original>Global execute a command on selected clients or server.</Original>
                 <English>Global execute a command on selected clients or server.</English>
-                <Chinese>在选定的客户端或服务器上全局执行命令。</Chinese>
-                <Chinese_Traditional>在選定的客戶端或伺服器上全局執行命令。</Chinese_Traditional>
+                <Chinesesimp>在选定的客户端或服务器上全局执行命令。</Chinesesimp>
+                <Chinese>在選定的客戶端或伺服器上全局執行命令。</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPCHAT">
                 <Original>Send chat across MP.</Original>
                 <English>Send chat across MP.</English>
-                <Chinese>在多人游戏中发送聊天。</Chinese>
-                <Chinese_Traditional>在多人遊戲中發送聊天。</Chinese_Traditional>
+                <Chinesesimp>在多人游戏中发送聊天。</Chinesesimp>
+                <Chinese>在多人遊戲中發送聊天。</Chinese>
             </Key>
             <Key ID="STR_MCC_MOVETOPOS">
                 <Original>move an object to a new location.</Original>
                 <English>move an object to a new location.</English>
-                <Chinese>将对象移动到新位置。</Chinese>
-                <Chinese_Traditional>將對象移動到新位置。</Chinese_Traditional>
+                <Chinesesimp>将对象移动到新位置。</Chinesesimp>
+                <Chinese>將對象移動到新位置。</Chinese>
             </Key>
             <Key ID="STR_MCC_PICKITEM">
                 <Original>Make a vehicle class item pickable and add variable to it.</Original>
                 <English>Make a vehicle class item pickable and add variable to it.</English>
-                <Chinese>使载具类物品可拾取并为其添加变量。</Chinese>
-                <Chinese_Traditional>使載具類物品可拾取並為其添加變量。</Chinese_Traditional>
+                <Chinesesimp>使载具类物品可拾取并为其添加变量。</Chinesesimp>
+                <Chinese>使載具類物品可拾取並為其添加變量。</Chinese>
             </Key>
             <Key ID="STR_MCC_BROADCAST">
                 <Original>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.
                 </Original>
                 <English>Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds.
                 </English>
-                <Chinese>创建一个虚拟摄像机并向所有客户端广播15秒的画中画视频。</Chinese>
-                <Chinese_Traditional>創建一個虛擬攝像機並向所有客戶端廣播15秒的畫中畫視頻。</Chinese_Traditional>
+                <Chinesesimp>创建一个虚拟摄像机并向所有客户端广播15秒的画中画视频。</Chinesesimp>
+                <Chinese>創建一個虛擬攝像機並向所有客戶端廣播15秒的畫中畫視頻。</Chinese>
             </Key>
             <Key ID="STR_MCC_PARADROP">
                 <Original>Create a HALO or regular parachute jump for the given unit.</Original>
                 <English>Create a HALO or regular parachute jump for the given unit.</English>
-                <Chinese>为指定单位创建HALO或常规跳伞。</Chinese>
-                <Chinese_Traditional>為指定單位創建HALO或常規跳傘。</Chinese_Traditional>
+                <Chinesesimp>为指定单位创建HALO或常规跳伞。</Chinesesimp>
+                <Chinese>為指定單位創建HALO或常規跳傘。</Chinese>
             </Key>
             <Key ID="STR_MCC_REALPARADROP">
                 <Original>Create a HALO or regular parachute jump for the given units with simulation of running out of
@@ -696,854 +696,854 @@
                 <English>Create a HALO or regular parachute jump for the given units with simulation of running out of
                     an airplane.
                 </English>
-                <Chinese>为指定单位创建HALO或常规跳伞，并模拟从飞机跳出的过程。</Chinese>
-                <Chinese_Traditional>為指定單位創建HALO或常規跳傘，並模擬從飛機跳出的過程。</Chinese_Traditional>
+                <Chinesesimp>为指定单位创建HALO或常规跳伞，并模拟从飞机跳出的过程。</Chinesesimp>
+                <Chinese>為指定單位創建HALO或常規跳傘，並模擬從飛機跳出的過程。</Chinese>
             </Key>
             <Key ID="STR_MCC_REALPARADROPPLAYER">
                 <Original>Handle the paradrop from the unit side.</Original>
                 <English>Handle the paradrop from the unit side.</English>
-                <Chinese>从单位侧处理跳伞。</Chinese>
-                <Chinese_Traditional>從單位側處理跳傘。</Chinese_Traditional>
+                <Chinesesimp>从单位侧处理跳伞。</Chinesesimp>
+                <Chinese>從單位側處理跳傘。</Chinese>
             </Key>
             <Key ID="STR_MCC_COUNTGROUPHC">
                 <Original>Count the number of infantry, vehicles, tank, air, ships in a group expand.</Original>
                 <English>Count the number of infantry, vehicles, tank, air, ships in a group expand.</English>
-                <Chinese>计算扩展组中的步兵、车辆、坦克、飞机、船只数量。</Chinese>
-                <Chinese_Traditional>計算擴展組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese_Traditional>
+                <Chinesesimp>计算扩展组中的步兵、车辆、坦克、飞机、船只数量。</Chinesesimp>
+                <Chinese>計算擴展組中的步兵、車輛、坦克、飛機、船隻數量。</Chinese>
             </Key>
             <Key ID="STR_MCC_MANAGEWP">
                 <Original>Create and control AI WP on map.</Original>
                 <English>Create and control AI WP on map.</English>
-                <Chinese>在地图上创建和控制AI路径点。</Chinese>
-                <Chinese_Traditional>在地圖上創建和控制AI路徑點。</Chinese_Traditional>
+                <Chinesesimp>在地图上创建和控制AI路径点。</Chinesesimp>
+                <Chinese>在地圖上創建和控制AI路徑點。</Chinese>
             </Key>
             <Key ID="STR_MCC_SYNC">
                 <Original>Sync the player with the server.</Original>
                 <English>Sync the player with the server.</English>
-                <Chinese>将玩家与服务器同步。</Chinese>
-                <Chinese_Traditional>將玩家與伺服器同步。</Chinese_Traditional>
+                <Chinesesimp>将玩家与服务器同步。</Chinesesimp>
+                <Chinese>將玩家與伺服器同步。</Chinese>
             </Key>
             <Key ID="STR_MCC_OBJECTMAPPER">
                 <Original>Takes an array of data about a dynamic object template and creates the objects.</Original>
                 <English>Takes an array of data about a dynamic object template and creates the objects.</English>
-                <Chinese>获取动态对象模板的数据数组并创建对象。</Chinese>
-                <Chinese_Traditional>獲取動態對象模板的數據數組並創建對象。</Chinese_Traditional>
+                <Chinesesimp>获取动态对象模板的数据数组并创建对象。</Chinesesimp>
+                <Chinese>獲取動態對象模板的數據數組並創建對象。</Chinese>
             </Key>
             <Key ID="STR_MCC_FINDROADSLEADINGZONE">
                 <Original>Find Road segments leading to an area.</Original>
                 <English>Find Road segments leading to an area.</English>
-                <Chinese>查找通往某个区域的道路段。</Chinese>
-                <Chinese_Traditional>查找通往某個區域的道路段。</Chinese_Traditional>
+                <Chinesesimp>查找通往某个区域的道路段。</Chinesesimp>
+                <Chinese>查找通往某個區域的道路段。</Chinese>
             </Key>
             <Key ID="STR_MCC_ZONE_TITLE">
                 <Original>Zone:</Original>
                 <English>Zone:</English>
-                <Chinese>区域:</Chinese>
-                <Chinese_Traditional>區域:</Chinese_Traditional>
+                <Chinesesimp>区域:</Chinesesimp>
+                <Chinese>區域:</Chinese>
             </Key>
             <Key ID="STR_MCC_CREATE_ZONE">
                 <Original>Create Zone</Original>
                 <English>Create Zone</English>
-                <Chinese>创建区域</Chinese>
-                <Chinese_Traditional>創建區域</Chinese_Traditional>
+                <Chinesesimp>创建区域</Chinesesimp>
+                <Chinese>創建區域</Chinese>
             </Key>
             <Key ID="STR_MCC_CREATE_ZONE_TOOLTIP">
                 <Original>Click and drag on the minimap to make a zone</Original>
                 <English>Click and drag on the minimap to make a zone</English>
-                <Chinese>在小地图上点击并拖拽来创建区域</Chinese>
-                <Chinese_Traditional>在小地圖上點擊並拖拽來創建區域</Chinese_Traditional>
+                <Chinesesimp>在小地图上点击并拖拽来创建区域</Chinesesimp>
+                <Chinese>在小地圖上點擊並拖拽來創建區域</Chinese>
             </Key>
             <Key ID="STR_MCC_BEHAVIOR_TITLE">
                 <Original>Behavior:</Original>
                 <English>Behavior:</English>
-                <Chinese>行为:</Chinese>
-                <Chinese_Traditional>行為:</Chinese_Traditional>
+                <Chinesesimp>行为:</Chinesesimp>
+                <Chinese>行為:</Chinese>
             </Key>
             <Key ID="STR_MCC_GIVE_TO_GAIA">
                 <Original>Give to Gaia</Original>
                 <English>Give to Gaia</English>
-                <Chinese>交给GAIA</Chinese>
-                <Chinese_Traditional>交給GAIA</Chinese_Traditional>
+                <Chinesesimp>交给GAIA</Chinesesimp>
+                <Chinese>交給GAIA</Chinese>
             </Key>
             <Key ID="STR_MCC_GIVE_TO_GAIA_TOOLTIP">
                 <Original>Give the selected groups to GAIA control with the selected zone and behavior</Original>
                 <English>Give the selected groups to GAIA control with the selected zone and behavior</English>
-                <Chinese>将选中的组交给GAIA控制，使用选定的区域和行为</Chinese>
-                <Chinese_Traditional>將選中的組交給GAIA控制，使用選定的區域和行為</Chinese_Traditional>
+                <Chinesesimp>将选中的组交给GAIA控制，使用选定的区域和行为</Chinesesimp>
+                <Chinese>將選中的組交給GAIA控制，使用選定的區域和行為</Chinese>
             </Key>
             <Key ID="STR_MCC_GIVE_TO_PLAYER">
                 <Original>Give to Player</Original>
                 <English>Give to Player</English>
-                <Chinese>交给玩家</Chinese>
-                <Chinese_Traditional>交給玩家</Chinese_Traditional>
+                <Chinesesimp>交给玩家</Chinesesimp>
+                <Chinese>交給玩家</Chinese>
             </Key>
             <Key ID="STR_MCC_GIVE_TO_PLAYER_TOOLTIP">
                 <Original>Give the selected groups to player's control with the commander console</Original>
                 <English>Give the selected groups to player's control with the commander console</English>
-                <Chinese>将选中的组交给玩家控制，使用指挥官控制台</Chinese>
-                <Chinese_Traditional>將選中的組交給玩家控制，使用指揮官控制台</Chinese_Traditional>
+                <Chinesesimp>将选中的组交给玩家控制，使用指挥官控制台</Chinesesimp>
+                <Chinese>將選中的組交給玩家控制，使用指揮官控制台</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_SPAWN_BUTTON">
                 <Original>Spawn</Original>
                 <English>Spawn</English>
+                <Chinesesimp>重生</Chinesesimp>
                 <Chinese>重生</Chinese>
-                <Chinese_Traditional>重生</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_SPAWN_TOOLTIP">
                 <Original>Spawn units or groups</Original>
                 <English>Spawn units or groups</English>
-                <Chinese>生成单位或组</Chinese>
-                <Chinese_Traditional>生成單位或組</Chinese_Traditional>
+                <Chinesesimp>生成单位或组</Chinesesimp>
+                <Chinese>生成單位或組</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CAS_BUTTON">
                 <Original>Close Air Support</Original>
                 <English>Close Air Support</English>
-                <Chinese>近距离空中支援</Chinese>
-                <Chinese_Traditional>近距離空中支援</Chinese_Traditional>
+                <Chinesesimp>近距离空中支援</Chinesesimp>
+                <Chinese>近距離空中支援</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CAS_TOOLTIP">
                 <Original>Open Close Air Support Menu</Original>
                 <English>Open Close Air Support Menu</English>
-                <Chinese>打开近距离空中支援菜单</Chinese>
-                <Chinese_Traditional>打開近距離空中支援菜單</Chinese_Traditional>
+                <Chinesesimp>打开近距离空中支援菜单</Chinesesimp>
+                <Chinese>打開近距離空中支援菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_AIRDROP_BUTTON">
                 <Original>Supply Drop</Original>
                 <English>Supply Drop</English>
+                <Chinesesimp>支援投送</Chinesesimp>
                 <Chinese>支援投送</Chinese>
-                <Chinese_Traditional>支援投送</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_AIRDROP_TOOLTIP">
                 <Original>Open Supply Drop Menu</Original>
                 <English>Open Supply Drop Menu</English>
-                <Chinese>打开支援投送菜单</Chinese>
-                <Chinese_Traditional>打開支援投送菜單</Chinese_Traditional>
+                <Chinesesimp>打开支援投送菜单</Chinesesimp>
+                <Chinese>打開支援投送菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ARTILLERY_BUTTON">
                 <Original>Artillery</Original>
                 <English>Artillery</English>
+                <Chinesesimp>火炮</Chinesesimp>
                 <Chinese>火炮</Chinese>
-                <Chinese_Traditional>火炮</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ARTILLERY_TOOLTIP">
                 <Original>Open artillery Menu</Original>
                 <English>Open artillery Menu</English>
-                <Chinese>打开火炮菜单</Chinese>
-                <Chinese_Traditional>打開火炮菜單</Chinese_Traditional>
+                <Chinesesimp>打开火炮菜单</Chinesesimp>
+                <Chinese>打開火炮菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_EVAC_BUTTON">
                 <Original>Evac</Original>
                 <English>Evac</English>
+                <Chinesesimp>撤出</Chinesesimp>
                 <Chinese>撤出</Chinese>
-                <Chinese_Traditional>撤出</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_EVAC_TOOLTIP">
                 <Original>Open Evac Menu</Original>
                 <English>Open Evac Menu</English>
-                <Chinese>打开撤出菜单</Chinese>
-                <Chinese_Traditional>打開撤出菜單</Chinese_Traditional>
+                <Chinesesimp>打开撤出菜单</Chinesesimp>
+                <Chinese>打開撤出菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_IED_BUTTON">
                 <Original>IEDs</Original>
                 <English>IEDs</English>
-                <Chinese>简易爆炸装置</Chinese>
-                <Chinese_Traditional>簡易爆炸裝置</Chinese_Traditional>
+                <Chinesesimp>简易爆炸装置</Chinesesimp>
+                <Chinese>簡易爆炸裝置</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_IED_TOOLTIP">
                 <Original>Open IEDs Menu</Original>
                 <English>Open IEDs Menu</English>
-                <Chinese>打开简易爆炸装置菜单</Chinese>
-                <Chinese_Traditional>打開簡易爆炸裝置菜單</Chinese_Traditional>
+                <Chinesesimp>打开简易爆炸装置菜单</Chinesesimp>
+                <Chinese>打開簡易爆炸裝置菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CONVOY_BUTTON">
                 <Original>Convoy</Original>
                 <English>Convoy</English>
-                <Chinese>车队</Chinese>
-                <Chinese_Traditional>車隊</Chinese_Traditional>
+                <Chinesesimp>车队</Chinesesimp>
+                <Chinese>車隊</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CONVOY_TOOLTIP">
                 <Original>Open Convoy Menu</Original>
                 <English>Open Convoy Menu</English>
-                <Chinese>打开车队菜单</Chinese>
-                <Chinese_Traditional>打開車隊菜單</Chinese_Traditional>
+                <Chinesesimp>打开车队菜单</Chinesesimp>
+                <Chinese>打開車隊菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_AC130_BUTTON">
                 <Original>AC-130</Original>
                 <English>AC-130</English>
+                <Chinesesimp>AC-130</Chinesesimp>
                 <Chinese>AC-130</Chinese>
-                <Chinese_Traditional>AC-130</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_AC130_TOOLTIP">
                 <Original>Spawn AC-130 (use MCC console to control it)</Original>
                 <English>Spawn AC-130 (use MCC console to control it)</English>
+                <Chinesesimp>生成AC-130 (使用MCC控制台控制)</Chinesesimp>
                 <Chinese>生成AC-130 (使用MCC控制台控制)</Chinese>
-                <Chinese_Traditional>生成AC-130 (使用MCC控制台控制)</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_BRUSH_BUTTON">
                 <Original>Brush</Original>
                 <English>Brush</English>
+                <Chinesesimp>刷子</Chinesesimp>
                 <Chinese>刷子</Chinese>
-                <Chinese_Traditional>刷子</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_BRUSH_TOOLTIP">
                 <Original>Brushes Menu</Original>
                 <English>Brushes Menu</English>
-                <Chinese>刷子菜单</Chinese>
-                <Chinese_Traditional>刷子菜單</Chinese_Traditional>
+                <Chinesesimp>刷子菜单</Chinesesimp>
+                <Chinese>刷子菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ROLE_SELECTION_BUTTON">
                 <Original>Role Selection</Original>
                 <English>Role Selection</English>
-                <Chinese>角色选择</Chinese>
-                <Chinese_Traditional>角色選擇</Chinese_Traditional>
+                <Chinesesimp>角色选择</Chinesesimp>
+                <Chinese>角色選擇</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ROLE_SELECTION_TOOLTIP">
                 <Original>Enable/Disable Role Selection</Original>
                 <English>Enable/Disable Role Selection</English>
-                <Chinese>启用/禁用角色选择</Chinese>
-                <Chinese_Traditional>啟用/禁用角色選擇</Chinese_Traditional>
+                <Chinesesimp>启用/禁用角色选择</Chinesesimp>
+                <Chinese>啟用/禁用角色選擇</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ZEUS_BUTTON">
                 <Original>Zeus</Original>
                 <English>Zeus</English>
+                <Chinesesimp>宙斯</Chinesesimp>
                 <Chinese>宙斯</Chinese>
-                <Chinese_Traditional>宙斯</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ZEUS_TOOLTIP">
                 <Original>Click on map to open BIS Zeus</Original>
                 <English>Click on map to open BIS Zeus</English>
-                <Chinese>点击地图打开BIS宙斯</Chinese>
-                <Chinese_Traditional>點擊地圖打開BIS宙斯</Chinese_Traditional>
+                <Chinesesimp>点击地图打开BIS宙斯</Chinesesimp>
+                <Chinese>點擊地圖打開BIS宙斯</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ARSENAL_BUTTON">
                 <Original>Arsenal</Original>
                 <English>Arsenal</English>
-                <Chinese>军火库</Chinese>
-                <Chinese_Traditional>軍火庫</Chinese_Traditional>
+                <Chinesesimp>军火库</Chinesesimp>
+                <Chinese>軍火庫</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_ARSENAL_TOOLTIP">
                 <Original>Click to open BIS arsenal</Original>
                 <English>Click to open BIS arsenal</English>
-                <Chinese>点击打开BIS军火库</Chinese>
-                <Chinese_Traditional>點擊打開BIS軍火庫</Chinese_Traditional>
+                <Chinesesimp>点击打开BIS军火库</Chinesesimp>
+                <Chinese>點擊打開BIS軍火庫</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_MISSION_SETTINGS_BUTTON">
                 <Original>Mission Settings</Original>
                 <English>Mission Settings</English>
-                <Chinese>任务设置</Chinese>
-                <Chinese_Traditional>任務設置</Chinese_Traditional>
+                <Chinesesimp>任务设置</Chinesesimp>
+                <Chinese>任務設置</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_MISSION_SETTINGS_TOOLTIP">
                 <Original>Open mission settings menu</Original>
                 <English>Open mission settings menu</English>
-                <Chinese>打开任务设置菜单</Chinese>
-                <Chinese_Traditional>打開任務設置菜單</Chinese_Traditional>
+                <Chinesesimp>打开任务设置菜单</Chinesesimp>
+                <Chinese>打開任務設置菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_DISABLE_RESPAWN_BUTTON">
                 <Original>Disable Respawn</Original>
                 <English>Disable Respawn</English>
+                <Chinesesimp>禁用重生</Chinesesimp>
                 <Chinese>禁用重生</Chinese>
-                <Chinese_Traditional>禁用重生</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_DISABLE_RESPAWN_TOOLTIP">
                 <Original>Disable respawn to all players</Original>
                 <English>Disable respawn to all players</English>
+                <Chinesesimp>禁用所有玩家的重生</Chinesesimp>
                 <Chinese>禁用所有玩家的重生</Chinese>
-                <Chinese_Traditional>禁用所有玩家的重生</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_WEATHER_BUTTON">
                 <Original>Weather</Original>
                 <English>Weather</English>
-                <Chinese>设置天气</Chinese>
-                <Chinese_Traditional>設置天氣</Chinese_Traditional>
+                <Chinesesimp>设置天气</Chinesesimp>
+                <Chinese>設置天氣</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_WEATHER_TOOLTIP">
                 <Original>Open Weather Menu</Original>
                 <English>Open Weather Menu</English>
-                <Chinese>打开天气菜单</Chinese>
-                <Chinese_Traditional>打開天氣菜單</Chinese_Traditional>
+                <Chinesesimp>打开天气菜单</Chinesesimp>
+                <Chinese>打開天氣菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TIME_BUTTON">
                 <Original>Time</Original>
                 <English>Time</English>
-                <Chinese>设置时间</Chinese>
-                <Chinese_Traditional>設置時間</Chinese_Traditional>
+                <Chinesesimp>设置时间</Chinesesimp>
+                <Chinese>設置時間</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TIME_TOOLTIP">
                 <Original>Open Time Menu</Original>
                 <English>Open Time Menu</English>
-                <Chinese>打开时间菜单</Chinese>
-                <Chinese_Traditional>打開時間菜單</Chinese_Traditional>
+                <Chinesesimp>打开时间菜单</Chinesesimp>
+                <Chinese>打開時間菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_LOCATION_BUTTON">
                 <Original>Start Location</Original>
                 <English>Start Location</English>
-                <Chinese>开始地点</Chinese>
-                <Chinese_Traditional>開始地點</Chinese_Traditional>
+                <Chinesesimp>开始地点</Chinesesimp>
+                <Chinese>開始地點</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_LOCATION_TOOLTIP">
                 <Original>Open Locations Menu</Original>
                 <English>Open Locations Menu</English>
-                <Chinese>打开地点菜单</Chinese>
-                <Chinese_Traditional>打開地點菜單</Chinese_Traditional>
+                <Chinesesimp>打开地点菜单</Chinesesimp>
+                <Chinese>打開地點菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_DEBUG_BUTTON">
                 <Original>Debug</Original>
                 <English>Debug</English>
-                <Chinese>调试</Chinese>
-                <Chinese_Traditional>調試</Chinese_Traditional>
+                <Chinesesimp>调试</Chinesesimp>
+                <Chinese>調試</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_DEBUG_TOOLTIP">
                 <Original>Open Debug Menu</Original>
                 <English>Open Debug Menu</English>
-                <Chinese>打开调试菜单</Chinese>
-                <Chinese_Traditional>打開調試菜單</Chinese_Traditional>
+                <Chinesesimp>打开调试菜单</Chinesesimp>
+                <Chinese>打開調試菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_MARKERS_BUTTON">
                 <Original>Markers</Original>
                 <English>Markers</English>
-                <Chinese>标记</Chinese>
-                <Chinese_Traditional>標記</Chinese_Traditional>
+                <Chinesesimp>标记</Chinesesimp>
+                <Chinese>標記</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_MARKERS_TOOLTIP">
                 <Original>Open Markers Menu</Original>
                 <English>Open Markers Menu</English>
-                <Chinese>打开标记菜单</Chinese>
-                <Chinese_Traditional>打開標記菜單</Chinese_Traditional>
+                <Chinesesimp>打开标记菜单</Chinesesimp>
+                <Chinese>打開標記菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_BRIEFING_BUTTON">
                 <Original>Briefing</Original>
                 <English>Briefing</English>
-                <Chinese>简报</Chinese>
-                <Chinese_Traditional>簡報</Chinese_Traditional>
+                <Chinesesimp>简报</Chinesesimp>
+                <Chinese>簡報</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_BRIEFING_TOOLTIP">
                 <Original>Open Briefing Menu</Original>
                 <English>Open Briefing Menu</English>
-                <Chinese>打开简报菜单</Chinese>
-                <Chinese_Traditional>打開簡報菜單</Chinese_Traditional>
+                <Chinesesimp>打开简报菜单</Chinesesimp>
+                <Chinese>打開簡報菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TASKS_BUTTON">
                 <Original>Tasks</Original>
                 <English>Tasks</English>
-                <Chinese>任务</Chinese>
-                <Chinese_Traditional>任務</Chinese_Traditional>
+                <Chinesesimp>任务</Chinesesimp>
+                <Chinese>任務</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TASKS_TOOLTIP">
                 <Original>Open Tasks Menu</Original>
                 <English>Open Tasks Menu</English>
-                <Chinese>打开任务菜单</Chinese>
-                <Chinese_Traditional>打開任務菜單</Chinese_Traditional>
+                <Chinesesimp>打开任务菜单</Chinesesimp>
+                <Chinese>打開任務菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TRIGGERS_BUTTON">
                 <Original>Triggers</Original>
                 <English>Triggers</English>
-                <Chinese>触发器</Chinese>
-                <Chinese_Traditional>觸發器</Chinese_Traditional>
+                <Chinesesimp>触发器</Chinesesimp>
+                <Chinese>觸發器</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_TRIGGERS_TOOLTIP">
                 <Original>Open Triggers Menu</Original>
                 <English>Open Triggers Menu</English>
-                <Chinese>打开触发器菜单</Chinese>
-                <Chinese_Traditional>打開觸發器菜單</Chinese_Traditional>
+                <Chinesesimp>打开触发器菜单</Chinesesimp>
+                <Chinese>打開觸發器菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_JUKEBOX_BUTTON">
                 <Original>Jukebox</Original>
                 <English>Jukebox</English>
-                <Chinese>自动点唱机</Chinese>
-                <Chinese_Traditional>自動點唱機</Chinese_Traditional>
+                <Chinesesimp>自动点唱机</Chinesesimp>
+                <Chinese>自動點唱機</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_JUKEBOX_TOOLTIP">
                 <Original>Open Jukebox Menu</Original>
                 <English>Open Jukebox Menu</English>
-                <Chinese>打开自动点唱机菜单</Chinese>
-                <Chinese_Traditional>打開自動點唱機菜單</Chinese_Traditional>
+                <Chinesesimp>打开自动点唱机菜单</Chinesesimp>
+                <Chinese>打開自動點唱機菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CLIENT_SIDE_BUTTON">
                 <Original>Client Side</Original>
                 <English>Client Side</English>
-                <Chinese>客户端</Chinese>
-                <Chinese_Traditional>客戶端</Chinese_Traditional>
+                <Chinesesimp>客户端</Chinesesimp>
+                <Chinese>客戶端</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPGEN_CLIENT_SIDE_TOOLTIP">
                 <Original>Open Client Side Menu</Original>
                 <English>Open Client Side Menu</English>
-                <Chinese>打开客户端菜单</Chinese>
-                <Chinese_Traditional>打開客戶端菜單</Chinese_Traditional>
+                <Chinesesimp>打开客户端菜单</Chinesesimp>
+                <Chinese>打開客戶端菜單</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_CANCEL_BUTTON">
                 <Original>Cancel</Original>
                 <English>Cancel</English>
+                <Chinesesimp>取消</Chinesesimp>
                 <Chinese>取消</Chinese>
-                <Chinese_Traditional>取消</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_MISSION_BUTTON">
                 <Original>Mission Settings</Original>
                 <English>Mission Settings</English>
-                <Chinese>任务设置</Chinese>
-                <Chinese_Traditional>任務設置</Chinese_Traditional>
+                <Chinesesimp>任务设置</Chinesesimp>
+                <Chinese>任務設置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_UI_BUTTON">
                 <Original>UI Settings</Original>
                 <English>UI Settings</English>
-                <Chinese>UI设置</Chinese>
-                <Chinese_Traditional>UI設置</Chinese_Traditional>
+                <Chinesesimp>UI设置</Chinesesimp>
+                <Chinese>UI設置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_MECHANICS_BUTTON">
                 <Original>Mechanics Settings</Original>
                 <English>Mechanics Settings</English>
-                <Chinese>力学设置</Chinese>
-                <Chinese_Traditional>力學設置</Chinese_Traditional>
+                <Chinesesimp>力学设置</Chinesesimp>
+                <Chinese>力學設置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_MEDICAL_BUTTON">
                 <Original>Medical System Settings</Original>
                 <English>Medical System Settings</English>
-                <Chinese>医疗系统设置</Chinese>
-                <Chinese_Traditional>醫療系統設置</Chinese_Traditional>
+                <Chinesesimp>医疗系统设置</Chinesesimp>
+                <Chinese>醫療系統設置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_ROLE_SELECTION_BUTTON">
                 <Original>Role Selection Settings</Original>
                 <English>Role Selection Settings</English>
-                <Chinese>角色选择设置</Chinese>
-                <Chinese_Traditional>角色選擇設置</Chinese_Traditional>
+                <Chinesesimp>角色选择设置</Chinesesimp>
+                <Chinese>角色選擇設置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_SETTINGS_GAIA_BUTTON">
                 <Original>GAIA Settings</Original>
                 <English>GAIA Settings</English>
-                <Chinese>GAIA设置</Chinese>
-                <Chinese_Traditional>GAIA設置</Chinese_Traditional>
+                <Chinesesimp>GAIA设置</Chinesesimp>
+                <Chinese>GAIA設置</Chinese>
             </Key>
             <Key ID="STR_MCC_GROUPS_GEN_HELP_BUTTON">
                 <Original>(?)</Original>
                 <English>(?)</English>
+                <Chinesesimp>(?)</Chinesesimp>
                 <Chinese>(?)</Chinese>
-                <Chinese_Traditional>(?)</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_NEARESTROAD">
                 <Original>Return a Road segments array near positions.</Original>
                 <English>Return a Road segments array near positions.</English>
-                <Chinese>返回位置附近的道路段数组。</Chinese>
-                <Chinese_Traditional>返回位置附近的道路段數組。</Chinese_Traditional>
+                <Chinesesimp>返回位置附近的道路段数组。</Chinesesimp>
+                <Chinese>返回位置附近的道路段數組。</Chinese>
             </Key>
             <Key ID="STR_MCC_GARRISON">
                 <Original>Populate soldiers inside empty houses.</Original>
                 <English>Populate soldiers inside empty houses.</English>
-                <Chinese>在空房屋内放置士兵。</Chinese>
-                <Chinese_Traditional>在空房屋內放置士兵。</Chinese_Traditional>
+                <Chinesesimp>在空房屋内放置士兵。</Chinesesimp>
+                <Chinese>在空房屋內放置士兵。</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVETOSQM">
                 <Original>Save MCC's placements in SQM file format and copy it to clipboard.</Original>
                 <English>Save MCC's placements in SQM file format and copy it to clipboard.</English>
-                <Chinese>将MCC的放置保存为SQM文件格式并复制到剪贴板。</Chinese>
-                <Chinese_Traditional>將MCC的放置保存為SQM文件格式並複製到剪貼板。</Chinese_Traditional>
+                <Chinesesimp>将MCC的放置保存为SQM文件格式并复制到剪贴板。</Chinesesimp>
+                <Chinese>將MCC的放置保存為SQM文件格式並複製到剪貼板。</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVETOMCC">
                 <Original>prepare the mcc_output variable.</Original>
                 <English>prepare the mcc_output variable.</English>
-                <Chinese>准备 mcc_output 变量。</Chinese>
-                <Chinese_Traditional>準備 mcc_output 變量。</Chinese_Traditional>
+                <Chinesesimp>准备 mcc_output 变量。</Chinesesimp>
+                <Chinese>準備 mcc_output 變量。</Chinese>
             </Key>
             <Key ID="STR_MCC_LOADFROMMCC">
                 <Original>Load the mcc_output variable.</Original>
                 <English>Load the mcc_output variable.</English>
-                <Chinese>加载 mcc_output 变量。</Chinese>
-                <Chinese_Traditional>加載 mcc_output 變量。</Chinese_Traditional>
+                <Chinesesimp>加载 mcc_output 变量。</Chinesesimp>
+                <Chinese>加載 mcc_output 變量。</Chinese>
             </Key>
             <Key ID="STR_MCC_SAVETOCOMP">
                 <Original>Save MCC's 3D editor placements in composition format.</Original>
                 <English>Save MCC's 3D editor placements in composition format.</English>
-                <Chinese>将MCC的3D编辑器放置保存为组合格式。</Chinese>
-                <Chinese_Traditional>將MCC的3D編輯器放置保存為組合格式。</Chinese_Traditional>
+                <Chinesesimp>将MCC的3D编辑器放置保存为组合格式。</Chinesesimp>
+                <Chinese>將MCC的3D編輯器放置保存為組合格式。</Chinese>
             </Key>
             <Key ID="STR_MCC_REPLACESTRING">
                 <Original>Filter a string and removes certain characters (_filter).</Original>
                 <English>Filter a string and removes certain characters (_filter).</English>
-                <Chinese>过滤字符串并删除特定字符（_filter）。</Chinese>
-                <Chinese_Traditional>過濾字符串並刪除特定字符（_filter）。</Chinese_Traditional>
+                <Chinesesimp>过滤字符串并删除特定字符（_filter）。</Chinesesimp>
+                <Chinese>過濾字符串並刪除特定字符（_filter）。</Chinese>
             </Key>
             <Key ID="STR_MCC_DIRTOSTRING">
                 <Original>Get direction integer and return it as a string North, east etc.</Original>
                 <English>Get direction integer and return it as a string North, east etc.</English>
-                <Chinese>获取方向整数并将其返回为字符串（北、东等）。</Chinese>
-                <Chinese_Traditional>獲取方向整數並將其返回為字符串（北、東等）。</Chinese_Traditional>
+                <Chinesesimp>获取方向整数并将其返回为字符串（北、东等）。</Chinesesimp>
+                <Chinese>獲取方向整數並將其返回為字符串（北、東等）。</Chinese>
             </Key>
             <Key ID="STR_MCC_STARTLOCATIONS">
                 <Original>Teleport the player when start location has been found.</Original>
                 <English>Teleport the player when start location has been found.</English>
-                <Chinese>找到起始位置时将玩家传送。</Chinese>
-                <Chinese_Traditional>找到起始位置時將玩家傳送。</Chinese_Traditional>
+                <Chinesesimp>找到起始位置时将玩家传送。</Chinesesimp>
+                <Chinese>找到起始位置時將玩家傳送。</Chinese>
             </Key>
             <Key ID="STR_MCC_SPAWNGROUP">
                 <Original>MCC Custom group spawning.</Original>
                 <English>MCC Custom group spawning.</English>
-                <Chinese>MCC自定义组生成。</Chinese>
-                <Chinese_Traditional>MCC自定義組生成。</Chinese_Traditional>
+                <Chinesesimp>MCC自定义组生成。</Chinesesimp>
+                <Chinese>MCC自定義組生成。</Chinese>
             </Key>
             <Key ID="STR_MCC_KEYTONAME">
                 <Original>get idkKey and return string with his name.</Original>
                 <English>get idkKey and return string with his name.</English>
-                <Chinese>获取 idkKey 并返回其名称的字符串。</Chinese>
-                <Chinese_Traditional>獲取 idkKey 並返回其名稱的字符串。</Chinese_Traditional>
+                <Chinesesimp>获取 idkKey 并返回其名称的字符串。</Chinesesimp>
+                <Chinese>獲取 idkKey 並返回其名稱的字符串。</Chinese>
             </Key>
             <Key ID="STR_MCC_MAKEBRIEFING">
                 <Original>Server Only - create a Logic based briefing.</Original>
                 <English>Server Only - create a Logic based briefing.</English>
-                <Chinese>仅服务器 - 创建基于逻辑的任务简报。</Chinese>
-                <Chinese_Traditional>僅伺服器 - 創建基於邏輯的任務簡報。</Chinese_Traditional>
+                <Chinesesimp>仅服务器 - 创建基于逻辑的任务简报。</Chinesesimp>
+                <Chinese>僅伺服器 - 創建基於邏輯的任務簡報。</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_GENERATOR">
                 <Original>Briefing Generator:</Original>
                 <English>Briefing Generator:</English>
-                <Chinese>简报生成器:</Chinese>
-                <Chinese_Traditional>簡報生成器:</Chinese_Traditional>
+                <Chinesesimp>简报生成器:</Chinesesimp>
+                <Chinese>簡報生成器:</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_SITUATION">
                 <Original>Situation</Original>
                 <English>Situation</English>
-                <Chinese>情况</Chinese>
-                <Chinese_Traditional>情況</Chinese_Traditional>
+                <Chinesesimp>情况</Chinesesimp>
+                <Chinese>情況</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_SITUATION_TOOLTIP">
                 <Original>Add the given text to the mission briefing</Original>
                 <English>Add the given text to the mission briefing</English>
-                <Chinese>将给定文本添加到任务简报中</Chinese>
-                <Chinese_Traditional>將給定文本添加到任務簡報中</Chinese_Traditional>
+                <Chinesesimp>将给定文本添加到任务简报中</Chinesesimp>
+                <Chinese>將給定文本添加到任務簡報中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_ENEMY_FORCES">
                 <Original>Enemy Forces</Original>
                 <English>Enemy Forces</English>
-                <Chinese>敌军</Chinese>
-                <Chinese_Traditional>敵軍</Chinese_Traditional>
+                <Chinesesimp>敌军</Chinesesimp>
+                <Chinese>敵軍</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_ENEMY_FORCES_TOOLTIP">
                 <Original>Add the given text to the mission's enemy intelligence</Original>
                 <English>Add the given text to the mission's enemy intelligence</English>
-                <Chinese>将给定的文本添加到任务的敌军情报中</Chinese>
-                <Chinese_Traditional>將給定的文本添加到任務的敵軍情報中</Chinese_Traditional>
+                <Chinesesimp>将给定的文本添加到任务的敌军情报中</Chinesesimp>
+                <Chinese>將給定的文本添加到任務的敵軍情報中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_FRIENDLY_FORCES">
                 <Original>Friendly Forces</Original>
                 <English>Friendly Forces</English>
-                <Chinese>友军</Chinese>
-                <Chinese_Traditional>友軍</Chinese_Traditional>
+                <Chinesesimp>友军</Chinesesimp>
+                <Chinese>友軍</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_FRIENDLY_FORCES_TOOLTIP">
                 <Original>Add the given text to the mission's friendly information</Original>
                 <English>Add the given text to the mission's friendly information</English>
-                <Chinese>将给定的文本添加到任务的友军信息中</Chinese>
-                <Chinese_Traditional>將給定的文本添加到任務的友軍信息中</Chinese_Traditional>
+                <Chinesesimp>将给定的文本添加到任务的友军信息中</Chinesesimp>
+                <Chinese>將給定的文本添加到任務的友軍信息中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_MISSION">
                 <Original>Mission</Original>
                 <English>Mission</English>
-                <Chinese>任务</Chinese>
-                <Chinese_Traditional>任務</Chinese_Traditional>
+                <Chinesesimp>任务</Chinesesimp>
+                <Chinese>任務</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_MISSION_TOOLTIP">
                 <Original>Add the given text to the mission overview</Original>
                 <English>Add the given text to the mission overview</English>
-                <Chinese>将给定文本添加到任务概述中</Chinese>
-                <Chinese_Traditional>將給定文本添加到任務概述中</Chinese_Traditional>
+                <Chinesesimp>将给定文本添加到任务概述中</Chinesesimp>
+                <Chinese>將給定文本添加到任務概述中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_SPECIAL_TASKS">
                 <Original>Special Tasks</Original>
                 <English>Special Tasks</English>
-                <Chinese>特殊任务</Chinese>
-                <Chinese_Traditional>特殊任務</Chinese_Traditional>
+                <Chinesesimp>特殊任务</Chinesesimp>
+                <Chinese>特殊任務</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_SPECIAL_TASKS_TOOLTIP">
                 <Original>Add the given text to the mission's special tasks</Original>
                 <English>Add the given text to the mission's special tasks</English>
-                <Chinese>将给定文本添加到任务的特殊任务中</Chinese>
-                <Chinese_Traditional>將給定文本添加到任務的特殊任務中</Chinese_Traditional>
+                <Chinesesimp>将给定文本添加到任务的特殊任务中</Chinesesimp>
+                <Chinese>將給定文本添加到任務的特殊任務中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_FIRE_SUPPORT">
                 <Original>Fire Support</Original>
                 <English>Fire Support</English>
+                <Chinesesimp>火力支援</Chinesesimp>
                 <Chinese>火力支援</Chinese>
-                <Chinese_Traditional>火力支援</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_BRIEFING_FIRE_SUPPORT_TOOLTIP">
                 <Original>Add the given text to the mission's support information</Original>
                 <English>Add the given text to the mission's support information</English>
-                <Chinese>将给定的文本添加到任务的支持信息中</Chinese>
-                <Chinese_Traditional>將給定的文本添加到任務的支持信息中</Chinese_Traditional>
+                <Chinesesimp>将给定的文本添加到任务的支持信息中</Chinesesimp>
+                <Chinese>將給定的文本添加到任務的支持信息中</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_CLOSE">
                 <Original>Close</Original>
                 <English>Close</English>
-                <Chinese>关闭</Chinese>
-                <Chinese_Traditional>關閉</Chinese_Traditional>
+                <Chinesesimp>关闭</Chinesesimp>
+                <Chinese>關閉</Chinese>
             </Key>
             <Key ID="STR_MCC_BRIEFING_DIARY_UPDATED">
                 <Original>Diary updated</Original>
                 <English>Diary updated</English>
-                <Chinese>日记已更新</Chinese>
-                <Chinese_Traditional>日記已更新</Chinese_Traditional>
+                <Chinesesimp>日记已更新</Chinesesimp>
+                <Chinese>日記已更新</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_TIME_MORNING">
                 <Original>This morning</Original>
                 <English>This morning</English>
+                <Chinesesimp>今天早上</Chinesesimp>
                 <Chinese>今天早上</Chinese>
-                <Chinese_Traditional>今天早上</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MISSION_TIME_NIGHT">
                 <Original>Last night</Original>
                 <English>Last night</English>
+                <Chinesesimp>昨晚</Chinesesimp>
                 <Chinese>昨晚</Chinese>
-                <Chinese_Traditional>昨晚</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MISSION_TIME_YESTERDAY">
                 <Original>Yesterday</Original>
                 <English>Yesterday</English>
+                <Chinesesimp>昨天</Chinesesimp>
                 <Chinese>昨天</Chinese>
-                <Chinese_Traditional>昨天</Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MISSION_TIME_DAYS_AGO">
                 <Original>A few days ago</Original>
                 <English>A few days ago</English>
-                <Chinese>几天前</Chinese>
-                <Chinese_Traditional>幾天前</Chinese_Traditional>
+                <Chinesesimp>几天前</Chinesesimp>
+                <Chinese>幾天前</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_TIME_WEEK">
                 <Original>Last week</Original>
                 <English>Last week</English>
-                <Chinese>上周</Chinese>
-                <Chinese_Traditional>上週</Chinese_Traditional>
+                <Chinesesimp>上周</Chinesesimp>
+                <Chinese>上週</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_INTEL_GATHERED">
                 <Original>From gathered intel</Original>
                 <English>From gathered intel</English>
-                <Chinese>根据收集的情报</Chinese>
-                <Chinese_Traditional>根據收集的情報</Chinese_Traditional>
+                <Chinesesimp>根据收集的情报</Chinesesimp>
+                <Chinese>根據收集的情報</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_INTEL_SATELLITE">
                 <Original>According to satellite photos</Original>
                 <English>According to satellite photos</English>
-                <Chinese>根据卫星照片</Chinese>
-                <Chinese_Traditional>根據衛星照片</Chinese_Traditional>
+                <Chinesesimp>根据卫星照片</Chinesesimp>
+                <Chinese>根據衛星照片</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_INTEL_INFORMANT">
                 <Original>According to intel from a local informant</Original>
                 <English>According to intel from a local informant</English>
-                <Chinese>根据当地线人的情报</Chinese>
-                <Chinese_Traditional>根據當地線人的情報</Chinese_Traditional>
+                <Chinesesimp>根据当地线人的情报</Chinesesimp>
+                <Chinese>根據當地線人的情報</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_INTEL_HIGH_COMMAND">
                 <Original>According to info from High Command</Original>
                 <English>According to info from High Command</English>
-                <Chinese>根据最高指挥部的信息</Chinese>
-                <Chinese_Traditional>根據最高指揮部的信息</Chinese_Traditional>
+                <Chinesesimp>根据最高指挥部的信息</Chinesesimp>
+                <Chinese>根據最高指揮部的信息</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_WHEREABOUTS_LOCATION">
                 <Original>in this location</Original>
                 <English>in this location</English>
-                <Chinese>在这个位置</Chinese>
-                <Chinese_Traditional>在這個位置</Chinese_Traditional>
+                <Chinesesimp>在这个位置</Chinesesimp>
+                <Chinese>在這個位置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_WHEREABOUTS_AREA">
                 <Original>in this area</Original>
                 <English>in this area</English>
-                <Chinese>在这个区域</Chinese>
-                <Chinese_Traditional>在這個區域</Chinese_Traditional>
+                <Chinesesimp>在这个区域</Chinesesimp>
+                <Chinese>在這個區域</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_WHEREABOUTS_SOMEWHERE">
                 <Original>somewhere in this area</Original>
                 <English>somewhere in this area</English>
-                <Chinese>在这个区域的某个地方</Chinese>
-                <Chinese_Traditional>在這個區域的某個地方</Chinese_Traditional>
+                <Chinesesimp>在这个区域的某个地方</Chinesesimp>
+                <Chinese>在這個區域的某個地方</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_WHEREABOUTS_CLOSE">
                 <Original>close to this location</Original>
                 <English>close to this location</English>
-                <Chinese>靠近这个位置</Chinese>
-                <Chinese_Traditional>靠近這個位置</Chinese_Traditional>
+                <Chinesesimp>靠近这个位置</Chinesesimp>
+                <Chinese>靠近這個位置</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_WHEREABOUTS_AROUND">
                 <Original>around here</Original>
                 <English>around here</English>
-                <Chinese>在这附近</Chinese>
-                <Chinese_Traditional>在這附近</Chinese_Traditional>
+                <Chinesesimp>在这附近</Chinesesimp>
+                <Chinese>在這附近</Chinese>
             </Key>
             <Key ID="STR_MCC_TASK_UNKNOWN">
                 <Original>Unknown Task</Original>
                 <English>Unknown Task</English>
-                <Chinese>未知任务</Chinese>
-                <Chinese_Traditional>未知任務</Chinese_Traditional>
+                <Chinesesimp>未知任务</Chinesesimp>
+                <Chinese>未知任務</Chinese>
             </Key>
             <Key ID="STR_MCC_TASK_DESCRIPTION_UNAVAILABLE">
                 <Original>Task description not available</Original>
                 <English>Task description not available</English>
-                <Chinese>任务描述不可用</Chinese>
-                <Chinese_Traditional>任務描述不可用</Chinese_Traditional>
+                <Chinesesimp>任务描述不可用</Chinesesimp>
+                <Chinese>任務描述不可用</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_OPERATION">
                 <Original>Operation:</Original>
                 <English>Operation:</English>
-                <Chinese>行动:</Chinese>
-                <Chinese_Traditional>行動:</Chinese_Traditional>
+                <Chinesesimp>行动:</Chinesesimp>
+                <Chinese>行動:</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_GENERAL_PRESENCE">
                 <Original>presence in the area has been increased</Original>
                 <English>presence in the area has been increased</English>
-                <Chinese>在该地区的存在感有所增加</Chinese>
-                <Chinese_Traditional>在該地區的存在感有所增加</Chinese_Traditional>
+                <Chinesesimp>在该地区的存在感有所增加</Chinesesimp>
+                <Chinese>在該地區的存在感有所增加</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_GENERAL_FOOTHOLD">
                 <Original>have established a foothold in the area</Original>
                 <English>have established a foothold in the area</English>
-                <Chinese>已在该地区建立了立足点</Chinese>
-                <Chinese_Traditional>已在該地區建立了立足點</Chinese_Traditional>
+                <Chinesesimp>已在该地区建立了立足点</Chinesesimp>
+                <Chinese>已在該地區建立了立足點</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_GENERAL_ACTIVE">
                 <Original>forces are active in the area</Original>
                 <English>forces are active in the area</English>
-                <Chinese>部队在该地区活跃</Chinese>
-                <Chinese_Traditional>部隊在該地區活躍</Chinese_Traditional>
+                <Chinesesimp>部队在该地区活跃</Chinesesimp>
+                <Chinese>部隊在該地區活躍</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_CQB_DEFENSIVE">
                 <Original> and they have taken up defensive positions inside buildings.</Original>
                 <English> and they have taken up defensive positions inside buildings.</English>
-                <Chinese>，他们已经在建筑物内建立了防御阵地。</Chinese>
-                <Chinese_Traditional>，他們已經在建築物內建立了防禦陣地。</Chinese_Traditional>
+                <Chinesesimp>，他们已经在建筑物内建立了防御阵地。</Chinesesimp>
+                <Chinese>，他們已經在建築物內建立了防禦陣地。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_CQB_FORTIFY">
                 <Original> and they are using civilian buildings to fortify themselves.</Original>
                 <English> and they are using civilian buildings to fortify themselves.</English>
-                <Chinese>，他们正在使用民用建筑来加固自己。</Chinese>
-                <Chinese_Traditional>，他們正在使用民用建築來加固自己。</Chinese_Traditional>
+                <Chinesesimp>，他们正在使用民用建筑来加固自己。</Chinesesimp>
+                <Chinese>，他們正在使用民用建築來加固自己。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_VEHICLES_WARNING">
                 <Original>You may also encounter technicals or soft vehicles.</Original>
                 <English>You may also encounter technicals or soft vehicles.</English>
-                <Chinese>您可能还会遇到技术车辆或软目标车辆。</Chinese>
-                <Chinese_Traditional>您可能還會遇到技術車輛或軟目標車輛。</Chinese_Traditional>
+                <Chinesesimp>您可能还会遇到技术车辆或软目标车辆。</Chinesesimp>
+                <Chinese>您可能還會遇到技術車輛或軟目標車輛。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ARMOR_WARNING">
                 <Original>Be aware that there may be armored vehicles or even MBT's operating in the OP.</Original>
                 <English>Be aware that there may be armored vehicles or even MBT's operating in the OP.</English>
-                <Chinese>请注意，可能有装甲车辆甚至主战坦克在行动中。</Chinese>
-                <Chinese_Traditional>請注意，可能有裝甲車輛甚至主戰坦克在行動中。</Chinese_Traditional>
+                <Chinesesimp>请注意，可能有装甲车辆甚至主战坦克在行动中。</Chinesesimp>
+                <Chinese>請注意，可能有裝甲車輛甚至主戰坦克在行動中。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ARTILLERY_WARNING">
                 <Original>may also have artillery operating in the area.</Original>
                 <English>may also have artillery operating in the area.</English>
-                <Chinese>可能还有炮兵在该地区活动。</Chinese>
-                <Chinese_Traditional>可能還有炮兵在該地區活動。</Chinese_Traditional>
+                <Chinesesimp>可能还有炮兵在该地区活动。</Chinesesimp>
+                <Chinese>可能還有炮兵在該地區活動。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_GO_MESSAGE">
                 <Original>Go over your objectives, gear up and get ready. Mission is a go!</Original>
                 <English>Go over your objectives, gear up and get ready. Mission is a go!</English>
-                <Chinese>检查你的目标，装备好并准备就绪。任务开始！</Chinese>
-                <Chinese_Traditional>檢查你的目標，裝備好並準備就緒。任務開始！</Chinese_Traditional>
+                <Chinesesimp>检查你的目标，装备好并准备就绪。任务开始！</Chinesesimp>
+                <Chinese>檢查你的目標，裝備好並準備就緒。任務開始！</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ROADBLOCKS_WARNING">
                 <Original>forces have established hasty checkpoints on some of the roads leading in and out of the area.</Original>
                 <English>forces have established hasty checkpoints on some of the roads leading in and out of the area.</English>
-                <Chinese>部队已在进出该地区的一些道路上建立了临时检查站。</Chinese>
-                <Chinese_Traditional>部隊已在進出該地區的一些道路上建立了臨時檢查站。</Chinese_Traditional>
+                <Chinesesimp>部队已在进出该地区的一些道路上建立了临时检查站。</Chinesesimp>
+                <Chinese>部隊已在進出該地區的一些道路上建立了臨時檢查站。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_QRF_WARNING">
                 <Original>The enemy have</Original>
                 <English>The enemy have</English>
-                <Chinese>敌军有</Chinese>
-                <Chinese_Traditional>敵軍有</Chinese_Traditional>
+                <Chinesesimp>敌军有</Chinesesimp>
+                <Chinese>敵軍有</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_QRF_FORCES">
                 <Original>QRF forces nearby.</Original>
                 <English>QRF forces nearby.</English>
-                <Chinese>快速反应部队在附近。</Chinese>
-                <Chinese_Traditional>快速反應部隊在附近。</Chinese_Traditional>
+                <Chinesesimp>快速反应部队在附近。</Chinesesimp>
+                <Chinese>快速反應部隊在附近。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_QRF_REINFORCEMENTS">
                 <Original>Expect enemy reinforcements should they become aware of your presence.</Original>
                 <English>Expect enemy reinforcements should they become aware of your presence.</English>
-                <Chinese>如果他们察觉到你的存在，请期待敌军增援。</Chinese>
-                <Chinese_Traditional>如果他們察覺到你的存在，請期待敵軍增援。</Chinese_Traditional>
+                <Chinesesimp>如果他们察觉到你的存在，请期待敌军增援。</Chinesesimp>
+                <Chinese>如果他們察覺到你的存在，請期待敵軍增援。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_BLACK_OPS">
                 <Original>Black Ops:</Original>
                 <English>Black Ops:</English>
-                <Chinese>黑色行动:</Chinese>
-                <Chinese_Traditional>黑色行動:</Chinese_Traditional>
+                <Chinesesimp>黑色行动:</Chinesesimp>
+                <Chinese>黑色行動:</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ATTACK_ON">
                 <Original>Attack On</Original>
                 <English>Attack On</English>
-                <Chinese>攻击</Chinese>
-                <Chinese_Traditional>攻擊</Chinese_Traditional>
+                <Chinesesimp>攻击</Chinesesimp>
+                <Chinese>攻擊</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_BATTLE_FOR">
                 <Original>The Battle For</Original>
                 <English>The Battle For</English>
-                <Chinese>争夺</Chinese>
-                <Chinese_Traditional>爭奪</Chinese_Traditional>
+                <Chinesesimp>争夺</Chinesesimp>
+                <Chinese>爭奪</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ASSAULT_ON">
                 <Original>Assault On</Original>
                 <English>Assault On</English>
-                <Chinese>突袭</Chinese>
-                <Chinese_Traditional>突襲</Chinese_Traditional>
+                <Chinesesimp>突袭</Chinesesimp>
+                <Chinese>突襲</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_FIGHT_FOR">
                 <Original>The Fight For</Original>
                 <English>The Fight For</English>
-                <Chinese>为...而战</Chinese>
-                <Chinese_Traditional>為...而戰</Chinese_Traditional>
+                <Chinesesimp>为...而战</Chinesesimp>
+                <Chinese>為...而戰</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_IED_WARNING">
                 <Original>Keep an eye out for anything that might look suspicious, as we believe that may employ IEDs, or even suicide attacks.</Original>
                 <English>Keep an eye out for anything that might look suspicious, as we believe that may employ IEDs, or even suicide attacks.</English>
-                <Chinese>请留意任何可疑的东西，因为我们相信可能会使用简易爆炸装置，甚至自杀式袭击。</Chinese>
-                <Chinese_Traditional>請留意任何可疑的東西，因為我們相信可能會使用簡易爆炸裝置，甚至自殺式襲擊。</Chinese_Traditional>
+                <Chinesesimp>请留意任何可疑的东西，因为我们相信可能会使用简易爆炸装置，甚至自杀式袭击。</Chinesesimp>
+                <Chinese>請留意任何可疑的東西，因為我們相信可能會使用簡易爆炸裝置，甚至自殺式襲擊。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_ARMED_CIVILIANS_WARNING">
                 <Original>The local civilians support, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass don't want to draw unnecessary attention.</Original>
                 <English>The local civilians support, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass don't want to draw unnecessary attention.</English>
-                <Chinese>当地平民支持，所以要留意任何奇怪的行为。但请将平民伤亡降到最低，因为高层不想引起不必要的注意。</Chinese>
-                <Chinese_Traditional>當地平民支持，所以要留意任何奇怪的行為。但請將平民傷亡降到最低，因為高層不想引起不必要的注意。</Chinese_Traditional>
+                <Chinesesimp>当地平民支持，所以要留意任何奇怪的行为。但请将平民伤亡降到最低，因为高层不想引起不必要的注意。</Chinesesimp>
+                <Chinese>當地平民支持，所以要留意任何奇怪的行為。但請將平民傷亡降到最低，因為高層不想引起不必要的注意。</Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_REINFORCEMENT_AERIAL">
                 <Original> aerial </Original>
                 <English> aerial </English>
+                <Chinesesimp> 空中 </Chinesesimp>
                 <Chinese> 空中 </Chinese>
-                <Chinese_Traditional> 空中 </Chinese_Traditional>
             </Key>
             <Key ID="STR_MCC_MISSION_REINFORCEMENT_MOTORIZED">
                 <Original> motorized </Original>
                 <English> motorized </English>
-                <Chinese> 机械化 </Chinese>
-                <Chinese_Traditional> 機械化 </Chinese_Traditional>
+                <Chinesesimp> 机械化 </Chinesesimp>
+                <Chinese> 機械化 </Chinese>
             </Key>
             <Key ID="STR_MCC_MISSION_REINFORCEMENT_BOTH">
                 <Original> aerial and motorized </Original>
                 <English> aerial and motorized </English>
-                <Chinese> 空中和机械化 </Chinese>
-                <Chinese_Traditional> 空中和機械化 </Chinese_Traditional>
+                <Chinesesimp> 空中和机械化 </Chinesesimp>
+                <Chinese> 空中和機械化 </Chinese>
             </Key>
             <Key ID="STR_MCC_HANDLEADDACTION">
                 <Original>Handle addactions after respawn - init.</Original>
                 <English>Handle addactions after respawn - init.</English>
-                <Chinese>处理重生后的 addactions - 初始化。</Chinese>
-                <Chinese_Traditional>處理重生後的 addactions - 初始化。</Chinese_Traditional>
+                <Chinesesimp>处理重生后的 addactions - 初始化。</Chinesesimp>
+                <Chinese>處理重生後的 addactions - 初始化。</Chinese>
             </Key>
             <Key ID="STR_MCC_PPEFFECTS">
                 <Original>Create effects to all players.</Original>
                 <English>Create effects to all players.</English>
-                <Chinese>为所有玩家创建效果。</Chinese>
-                <Chinese_Traditional>為所有玩家創建效果。</Chinese_Traditional>
+                <Chinesesimp>为所有玩家创建效果。</Chinesesimp>
+                <Chinese>為所有玩家創建效果。</Chinese>
             </Key>
             <Key ID="STR_MCC_SETPITCHBANKYAW">
                 <Original>Set pitch, bank, and yaw.</Original>
                 <English>Set pitch, bank, and yaw.</English>
-                <Chinese>设置俯仰、滚转和偏航。</Chinese>
-                <Chinese_Traditional>設置俯仰、滾轉和偏航。</Chinese_Traditional>
+                <Chinesesimp>设置俯仰、滚转和偏航。</Chinesesimp>
+                <Chinese>設置俯仰、滾轉和偏航。</Chinese>
             </Key>
             <Key ID="STR_MCC_OPENARTILLERY">
                 <Original>Open artillery.</Original>
                 <English>Open artillery.</English>
-                <Chinese>打开炮兵。</Chinese>
-                <Chinese_Traditional>打開炮兵。</Chinese_Traditional>
+                <Chinesesimp>打开炮兵。</Chinesesimp>
+                <Chinese>打開炮兵。</Chinese>
             </Key>
             <Key ID="STR_MCC_GENERAL_PPEFFECTS">
                 <Original>Delete a brush</Original>
