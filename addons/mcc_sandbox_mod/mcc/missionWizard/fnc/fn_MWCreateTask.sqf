@@ -1,12 +1,15 @@
-/*================================================MCC_fnc_MWCreateTask====================================================================================================
-// Find the mission Wizard's center
-// Example:[_obj,_task,_preciseMarker] call MCC_fnc_MWCreateTask;
+/*================================================MCC_fnc_MWCreateTaskOriginal====================================================================================================
+// Find the mission Wizard's center - IMPROVED VERSION
+// Example:[_obj,_task,_preciseMarker] call MCC_fnc_MWCreateTaskOriginal;
 // _obj = position, objectice position
 //_task = string, objective type
 //_preciseMarker = Boolean, true - precise task marker
 // Return - [taskName,Task pos]
 //===================================================================================================================================================================*/
-private ["_type","_stringName","_stringDescription","_pos","_objectName","_missionTime","_missionIntel","_indecator","_capturVar","_stateCond","_missionWherabouts","_pic","_sides","_taskId","_taskType"];
+private ["_type","_stringName","_stringDescription","_pos","_objectName","_missionTime","_missionIntel","_indecator","_capturVar","_stateCond","_missionWherabouts","_pic","_sides","_taskId","_taskType","_vehicle","_group","_missionName"];
+
+// Rename function to original
+MCC_fnc_MWCreateTaskOriginal = {
 
 _this params [
   ["_obj",objNull,[objNull]],
@@ -17,34 +20,47 @@ _this params [
   ["_maxObjectivesDistance",400,[400]]
 ];
 
+// 添加错误检查
+if (_task == "") then {
+	diag_log "MCC MW: Error - Task type is empty";
+	["MCC: Mission Wizard Error: Task type is empty"] spawn MCC_fnc_halt;
+	return [];
+};
+
+// 验证位置
+if (count _pos < 2) then {
+	diag_log "MCC MW: Error - Invalid position";
+	return [];
+};
+
 //define contesting sides
 _sides = [east,west,resistance] - [_side];
 
 //Global defines for briefings.
 _missionTime =
    [
-     "This morning",
-     "Last night",
-     "Yesterday",
-     "A few days ago",
-     "Last week"
+     localize "STR_MCC_MISSION_TIME_MORNING",
+     localize "STR_MCC_MISSION_TIME_NIGHT",
+     localize "STR_MCC_MISSION_TIME_YESTERDAY",
+     localize "STR_MCC_MISSION_TIME_DAYS_AGO",
+     localize "STR_MCC_MISSION_TIME_WEEK"
    ];
 
 _missionIntel =
    [
-     "From gathered intel",
-     "According to satellite photos",
-     "According to intel from a local informant",
-     "According to info from High Command"
+     localize "STR_MCC_MISSION_INTEL_GATHERED",
+     localize "STR_MCC_MISSION_INTEL_SATELLITE",
+     localize "STR_MCC_MISSION_INTEL_INFORMANT",
+     localize "STR_MCC_MISSION_INTEL_HIGH_COMMAND"
    ];
 
 _missionWherabouts =
    [
-      "in this location",
-      "in this area",
-      "somewhere in this area",
-      "close to this location",
-      "around here"
+      localize "STR_MCC_MISSION_WHEREABOUTS_LOCATION",
+      localize "STR_MCC_MISSION_WHEREABOUTS_AREA",
+      localize "STR_MCC_MISSION_WHEREABOUTS_SOMEWHERE",
+      localize "STR_MCC_MISSION_WHEREABOUTS_CLOSE",
+      localize "STR_MCC_MISSION_WHEREABOUTS_AROUND"
    ];
 
 if (_pos isEqualTo []) then {_pos = getPos _obj};
@@ -57,31 +73,29 @@ _pic = "";
 
 switch (_task) do {
    //Hostage
-   case "Secure_HVT": {
-      if (side _obj != civilian) then {
-         _objectName = ([_obj,"displayName"] call BIS_fnc_rankParams) + " " + name _obj;
+   case "secure_hvt": {
+      if (isNull _obj) then {
+         _objectName = "HVT";
       } else {
          _objectName = name _obj;
       };
 
-      _stringName   = FORMAT ["Rescue %1", _objectName];
-
-      _stringDescription =  FORMAT ["Rescue %2. <br/><br/>%1 %2 was captured by enemy forces operating in the area.<br/>%3 we believe that he is held captive %4.<br/>Find %2 and bring him home.
-                              "
+      _stringName   = FORMAT ["Secure %1", _objectName];
+      _stringDescription =  FORMAT ["Secure %2. <br/><br/>%3, HQ in their wisdom believe that since %1 %2 has been hiding %4.<br/>%2 is a most wanted HVT and should be considered armed and dangerous.<br/>Secure him alive and bring him back to base."
                              , _missionTime call BIS_fnc_selectRandom
                              , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
-                             ];
-      _pic = "a3\Missions_F_BOOTCAMP\data\img\Bootcamp_overview_CA.paa";
+							];
+      _pic = "\A3\ui_f\data\igui\cfg\simpleTasks\types\walk_ca.paa";
       _taskType = "help";
    };
 
-   //Kill
-   case "Kill_HVT": {
-      if (side _obj != civilian) then {
-         _objectName = ([_obj,"displayName"] call BIS_fnc_rankParams) + " " + name _obj;
+   //kill_hvt
+   case "kill_hvt": {
+      if (isNull _obj) then {
+         _objectName = "HVT";
       } else {
          _objectName = name _obj;
       };
@@ -100,7 +114,7 @@ switch (_task) do {
 
    //destroy_tanks
    case "destroy_tanks": {
-      _objectName = getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname");
+      _objectName = if (isNull _obj) then {"Vehicle"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
       _stringName   = FORMAT ["Destroy the prototype %1", _objectName];
       _stringDescription =  FORMAT ["Destroy the prototype %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a prototype %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
@@ -115,165 +129,172 @@ switch (_task) do {
 
    //destroy_aa
    case "destroy_aa": {
-      _objectName = getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname");
-      _stringName   = FORMAT ["Destroy %1", _objectName];
-      _stringDescription =  FORMAT ["Destroy %2.<br/><br/>%1 one of our planes got shot down.<br/>HQ believes that a %2 is behind it.<br/>This threat must be eliminated.<br/>%3 the AA is operating %4. Find and destroy it, soldier."
+      _objectName = if (isNull _obj) then {"AA Vehicle"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Destroy the %1", _objectName];
+      _stringDescription =  FORMAT ["Destroy the %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
                              , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-
-      _pic = "\a3\Missions_F_EPA\data\img\B_m02_2_overview_CA.paa";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
       _taskType = "destroy";
    };
 
    //destroy_artillery
    case "destroy_artillery": {
-      _objectName = getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname");
-      _stringName   = FORMAT ["Destroy %1", _objectName];
-      _stringDescription =  FORMAT ["Destroy %2.<br/><br/>%1 enemy artillery began pounding our troops. This threat must be eliminated.<br/>%3 the %2 is operating %4.<br/>Find and destroy it ASAP."
+      _objectName = if (isNull _obj) then {"Artillery"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Destroy the %1", _objectName];
+      _stringDescription =  FORMAT ["Destroy the %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
                              , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-      _pic = "\a3\Missions_F_EPA\data\img\B_out2_overview_CA.paa";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
       _taskType = "destroy";
-  };
+   };
 
    //destroy_cache
    case "destroy_cache": {
-      _stringName = "Destroy the enemy weapons cache";
-      _stringDescription =  FORMAT ["Destroy the enemy weapons cache.<br/><br/>%2 received %1, we believe that the enemy is hiding a weapons cache %3.<br/>Destroying it will severely damage the enemy war effort.<br/>Find and destroy it ASAP."
+      _objectName = if (isNull _obj) then {"Weapon Cache"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Destroy the %1", _objectName];
+      _stringDescription =  FORMAT ["Destroy the %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
+                             , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-        _pic = "\a3\Missions_F_EPA\data\img\B_m01_overview_CA.paa";
-        _taskType = "destroy";
-
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
+      _taskType = "destroy";
    };
 
    //destroy_fuel
    case "destroy_fuel": {
-      _stringName   = "Destroy the enemy fuel depot";
-      _stringDescription =  FORMAT ["Destroy the enemy fuel depot.<br/><br/>%2 received %1, we believe that the enemy have a fuel depot %3.<br/>Destroying it will severely damage the enemy war effort.<br/>Find and destroy it ASAP."
+      _objectName = if (isNull _obj) then {"Fuel Depot"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Destroy the %1", _objectName];
+      _stringDescription =  FORMAT ["Destroy the %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
+                             , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-      _pic = "\a3\Missions_F_EPA\data\img\B_m03_overview_CA.paa";
-      _taskType = "destroy";
-
-   };
-
-   //destroy_radio
-   case "destroy_radio": {
-      _stringName   = "Destroy the enemy radio tower";
-      _stringDescription =  FORMAT ["Destroy the enemy radio tower.<br/><br/>%2 received %1 the enemy have a radio tower %3. They are using it to coordinate their attacks.<br/>Destroying it will severely damage the enemy war effort.<br/>Find and destroy it ASAP."
-                             , _missionTime call BIS_fnc_selectRandom
-                             , _missionIntel call BIS_fnc_selectRandom
-                             , _missionWherabouts call BIS_fnc_selectRandom
-                             , _stringName
-                             ];
-      _pic = "\a3\Missions_F_EPA\data\img\B_m06_overview_CA.paa";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
       _taskType = "destroy";
    };
 
    //destroy_radar
    case "destroy_radar": {
-      _stringName   = "Destroy the enemy radar";
-      _stringDescription =  FORMAT ["Destroy the enemy radar.<br/><br/>%2 received %1 the enemy have a radar installation %3. They are using it to pinpoint the location of our troops.<br/>By destroying it we can regain the element of surprise.<br/>Find and destroy it ASAP."
+      _objectName = if (isNull _obj) then {"Radar Station"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Destroy the %1", _objectName];
+      _stringDescription =  FORMAT ["Destroy the %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
+                             , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-      _pic = "\a3\Missions_F_EPA\data\img\A_m04_overview_CA.paa";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
       _taskType = "destroy";
    };
 
-   //pick_intel
-   case "pick_intel": {
-      _objectName = getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname");
-      _stringName   = FORMAT ["Acquire the %1", _objectName];
-      _stringDescription =  FORMAT ["Acquire Intel.<br/><br/>HQ believe that we have an opportunity to acquire top notch information about enemy forces operating in the area.<br/>%3 the target data is in a %2, located %4.<br/>Retrieve the information and bring it back for analysis."
+   //acquire_intel
+   case "acquire_intel": {
+      _objectName = if (isNull _obj) then {"Intel"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Acquire %1", _objectName];
+      _stringDescription =  FORMAT ["Acquire %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
                              , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-      _pic = "\a3\Missions_F_EPA\data\img\A_hub02_overview_CA.paa";
-      _taskType = "search";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
+      _taskType = "help";
    };
 
-   //Download Intel
-   case "downloadIntel":
-   {
-      _objectName = getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname");
-      _stringName   = FORMAT ["Hack and download intel from %1", _objectName];
-      _stringDescription =  FORMAT ["Download Intel.<br/><br/>HQ believe that we have an opportunity to acquire top notch information about enemy forces operating in the area.<br/>%3 the target data is in a %2, located %4.<br/>Retrieve the information and bring it back for analysis."
+   //download_intel
+   case "download_intel": {
+      _objectName = if (isNull _obj) then {"Intel"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Download %1", _objectName];
+      _stringDescription =  FORMAT ["Download %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
                              , _missionTime call BIS_fnc_selectRandom
                              , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-      _pic = "\a3\Missions_F_EPA\data\img\A_hub02_overview_CA.paa";
-      _taskType = "download";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
+      _taskType = "help";
    };
 
-   //disableIED
-   case "disableIED": {
-      _stringName   = "Disable IED";
-      _stringDescription =  FORMAT ["Disable IED.<br/><br/>%1 enemy forces managed to put their hands on a massive Improvised Explosive Device (IED) %2.<br/>We must disable it before they will be able to use it against civilian population.<br/>Tread carefully, find the IED and disarm it."
+   //capture_area
+   case "capture_area": {
+      _objectName = if (isNull _obj) then {"Area"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Capture %1", _objectName];
+      _stringDescription =  FORMAT ["Capture %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
+                             , _missionTime call BIS_fnc_selectRandom
+                             , _objectName
                              , _missionIntel call BIS_fnc_selectRandom
                              , _missionWherabouts call BIS_fnc_selectRandom
                              , _stringName
                              ];
-
-      _pic = "\a3\Missions_F_EPA\data\img\C_m02_overview_CA.paa";
-      _taskType = "mine";
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
+      _taskType = "help";
    };
 
-   //Logistics
-   case "Logistics": {
-      _stringName   = "Deliver supplies";
-
-      _stringDescription =  "Deliver supplies. <br/><br/>Local population are in needs for food and water supplies.<br/>Top brass belive that delivering them this supplies is in our favor.<br/>Get the supply track and deliver it to the designated area.";
-
-      _pic = "a3\Missions_F_BOOTCAMP\data\img\Bootcamp_overview_CA.paa";
-      _taskType = "logistic";
+   //disarm_ied
+   case "disarm_ied": {
+      _objectName = if (isNull _obj) then {"IED"} else {getText(configFile >> "CfgVehicles" >> typeof _obj >> "displayname")};
+      _stringName   = FORMAT ["Disarm %1", _objectName];
+      _stringDescription =  FORMAT ["Disarm %2.<br/><br/>%1 HQ received intel suggesting that the enemy has obtained a %2.<br/>This is a game-changer and we must eliminate it by any means necessary.<br/>%3 the vehicle is hidden %4."
+                             , _missionTime call BIS_fnc_selectRandom
+                             , _objectName
+                             , _missionIntel call BIS_fnc_selectRandom
+                             , _missionWherabouts call BIS_fnc_selectRandom
+                             , _stringName
+                             ];
+      _pic = "\a3\Missions_F_EPA\data\img\B_skirmish01_overview_CA.paa";
+      _taskType = "help";
    };
 
-   //clear_area
    default {
-      _stringName   = "Clear Area";
-      _stringDescription =  FORMAT ["Capture Area.<br/><br/>%1 enemy forces established a foothold %2.<br/>We can not allow this to continue!<br/>Go there and kick them out!!"
-                             , _missionTime call BIS_fnc_selectRandom
-                             , _missionWherabouts call BIS_fnc_selectRandom
-                             , _stringName
-                             ];
-      _pic = "\a3\Missions_F_EPA\data\img\A_m02_overview_CA.paa";
-      _taskType = "attack";
+      _stringName = localize "STR_MCC_TASK_UNKNOWN";
+      _stringDescription = localize "STR_MCC_TASK_DESCRIPTION_UNAVAILABLE";
+      _pic = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
+      _taskType = "unknown";
    };
 };
 
-private ["_group","_vehicle"];
+_missionName = _stringName;
 
-_group = group ((allMissionObjects "logic") select 0);
+// 创建任务组
+_group = createGroup sideLogic;
 
-//clear area mission
-private _missionName = missionNamespace getVariable ["MCC_fnc_MWinitMission_missionName",""];
+// 检查任务模块类是否存在
+if (!isClass (configFile >> "CfgVehicles" >> "MCC_ModuleObjective_FCurator")) then {
+	diag_log "MCC MW: Error - MCC_ModuleObjective_FCurator class not found";
+	["MCC: Mission Wizard Error: Task module class not found"] spawn MCC_fnc_halt;
+	return [];
+};
 
 if (_task == "clear_area") then {
     _vehicle = _group createunit ["MCC_ModuleObjective_FCurator", _pos,[],0.5,"NONE"];
+    
+    // 检查车辆是否成功创建
+    if (isNull _vehicle) then {
+		diag_log "MCC MW: Error - Failed to create task module";
+		["MCC: Mission Wizard Error: Failed to create task module"] spawn MCC_fnc_halt;
+		return [];
+	};
+	
+	// 设置创建时间用于清理
+	_vehicle setVariable ["MCC_creationTime", time, true];
+    
     _vehicle setVariable ["BIS_fnc_initModules_disableAutoActivation", false,true];
     _taskId = str _vehicle + str (["MCC_fnc_moduleObjective_id",1] call bis_fnc_counter);
     _vehicle setvariable ["RscAttributeOwners",_sides,true];
@@ -290,7 +311,6 @@ if (_task == "clear_area") then {
     _vehicle setvariable ["OnOwnerChange",format ["if (str (_this select 1) in %1) then {(_this select 0) enableSimulation false};", _sidesStr],true];
     _vehicle setvariable ["type",4,true];
     _vehicle setvariable ["radius",_maxObjectivesDistance,true];
-    //_vehicle setvariable ["enableHUD",false];
     _vehicle setvariable ["sides",[east,west,resistance],true];
     _vehicle setvariable ["owner",_side,true];
 
@@ -300,6 +320,16 @@ if (_task == "clear_area") then {
   //spawn task for each side
   {
     _vehicle = _group createunit ["MCC_ModuleObjective_FCurator", _pos,[],0.5,"NONE"];
+    
+    // 检查车辆是否成功创建
+    if (isNull _vehicle) then {
+		diag_log "MCC MW: Error - Failed to create task module for side";
+		continue; // 跳过这个阵营，继续处理下一个
+	};
+	
+	// 设置创建时间用于清理
+	_vehicle setVariable ["MCC_creationTime", time, true];
+    
     _vehicle setVariable ["BIS_fnc_initModules_disableAutoActivation", false,true];
     _taskId = str _vehicle + str (["MCC_fnc_moduleObjective_id",1] call bis_fnc_counter);
     _vehicle setvariable ["RscAttributeOwners",[_x],true];
@@ -320,7 +350,6 @@ if (_task == "clear_area") then {
     _vehicle setvariable ["proiority",0,true];
     _vehicle setvariable ["notification",true,true];
 
-
     {_x addCuratorEditableObjects [[_vehicle],false]} forEach allCurators;
     _vehicle setvariable ["updated",true,true];
   } foreach _sides;
@@ -328,3 +357,7 @@ if (_task == "clear_area") then {
 
 MCC_MWObjectivesNames = [_pos,"",_stringName,_stringDescription,"",_pic,1,[],_vehicle];
 publicVariable "MCC_MWObjectivesNames";
+
+// 返回任务信息
+[_pos,"",_stringName,_stringDescription,"",_pic,1,[],_vehicle]
+};

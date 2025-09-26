@@ -1,7 +1,7 @@
 #define MCC_BRIEFING_TEXT 3055
 disableSerialization;
 private ["_type","_dlg","_string"];
-hint "Diary updated";
+hint localize "STR_MCC_BRIEFING_DIARY_UPDATED";
 
 _type = _this select 0;
 

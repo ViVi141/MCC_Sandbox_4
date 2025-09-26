@@ -599,7 +599,7 @@ systemChat "TabSelectLeft";
 							if !(_x in _proxyIndexes) then {_cargoProxyIndexes pushback (_foreachindex + 1);};
 						} foreach _getInProxyOrder;
 					};
-					_cargoProxyIndexes resize (_transportSoldier min (count _cargoProxyIndexes)); //--- Do not let cargoProxyIndexes be larger than transportSoldier. Added because of misconfigured HEMTTs
+					_cargoProxyIndexes = _cargoProxyIndexes select [0, _transportSoldier min (count _cargoProxyIndexes)]; //--- Do not let cargoProxyIndexes be larger than transportSoldier. Added because of misconfigured HEMTTs
 					{
 						_locked = _center lockedcargo (_x - 1);
 						_lbAdd = _ctrlListCrew lbadd format ["%1 #%2",localize "STR_GETIN_POS_PASSENGER",_foreachindex + 1];

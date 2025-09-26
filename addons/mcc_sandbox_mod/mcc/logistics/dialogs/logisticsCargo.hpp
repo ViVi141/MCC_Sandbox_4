@@ -46,7 +46,7 @@ class MCC_logisticsCargo
 			idc = -1;
 			action = "closeDialog 0";
 
-			text = "X"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGISTICS_X";
 			x = 0.56 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.033 * safezoneW;

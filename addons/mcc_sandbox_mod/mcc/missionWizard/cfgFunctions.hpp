@@ -31,6 +31,9 @@ class missionWizard
 	class MWinitMission			{description = "Init generated mission.";};
 	class populateObjective		{description = "Populate a zone with enemies.";};
 	class createConfigs			{description = "Create configs class for the MW";};
+	class taskManager			{description = "Advanced task management system";};
+	class MWCreateTaskWrapper	{description = "Enhanced task creation wrapper";};
+	class MWCreateTaskCompat	{description = "Compatibility layer for existing modules";};
 	class campaignInit			{description = "Init campaign";};
 	class missionDone			{description = "Mission Done and allocate resources";};
 	class dayCycle				{description = "Control day and night cycle gain tickets and change weather every day";};

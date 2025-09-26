@@ -118,7 +118,7 @@ class mcc_consoleF1: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F1";
 	onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleSwitchMenu.sqf'");
-	tooltip = "Main Menu";
+	tooltip = "$STR_MCC_CONSOLE_MAIN_MENU";
 };
 class mcc_consoleF2: MCC_RscButton
 {
@@ -129,7 +129,7 @@ class mcc_consoleF2: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F2";
 	onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleSwitchMenu.sqf'");
-	tooltip = "UAV Control";
+	tooltip = "$STR_MCC_CONSOLE_UAV_CONTROL";
 };
 class mcc_consoleF3: MCC_RscButton
 {
@@ -140,7 +140,7 @@ class mcc_consoleF3: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F3";
 	onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleSwitchMenu.sqf'");
-	tooltip = "AC-130 Control";
+	tooltip = "$STR_MCC_CONSOLE_AC130_CONTROL";
 };
 class mcc_consoleF4: MCC_RscButton
 {
@@ -150,7 +150,7 @@ class mcc_consoleF4: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F4";
-	tooltip = "Forward Observer Artillery";
+	tooltip = "$STR_MCC_CONSOLE_ARTILLERY_OBSERVER";
 	onButtonClick = __EVAL("[0,0,0,[1]] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleOpenMenu.sqf'");
 };
 class mcc_consoleF5: MCC_RscButton
@@ -161,7 +161,7 @@ class mcc_consoleF5: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F5";
-	tooltip = "RTS interface";
+	tooltip = "$STR_MCC_CONSOLE_RTS_INTERFACE";
 	onButtonClick ="while {dialog} do {closeDialog 0}; createDialog 'MCC_LOGISTICS_BASE_BUILD'";
 };
 class mcc_consoleF6: MCC_RscButton
@@ -172,7 +172,7 @@ class mcc_consoleF6: MCC_RscButton
 	w = 0.0229167 * safezoneW;
 	h = 0.0329871 * safezoneH;
 	text = "F6";
-	tooltip = "Fleet Management";
+	tooltip = "$STR_MCC_CONSOLE_FLEET_MANAGEMENT";
 	onButtonClick ="while {dialog} do {closeDialog 0}; [0,0,0] spawn MCC_fnc_LHDspawnMenuInit";
 };
  //===========================================Map==============================================
@@ -255,12 +255,12 @@ class mcc_consoleF6: MCC_RscButton
 				idc = -1;
 				onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\console\console_request.sqf'");
 
-				text = "Call CAS";
+				text = "$STR_MCC_CONSOLE_CALL_CAS";
 				x = 0.154688 * safezoneW;
 				y = 0.011 * safezoneH;
 				w = 0.0773437 * safezoneW;
 				h = 0.033 * safezoneH;
-				tooltip = "Call selected CAS - Click and drag on the mini-map to define CAS's approach";
+				tooltip = "$STR_MCC_CONSOLE_CALL_CAS_TOOLTIP";
 			};
 
 			class MCC_ConsoleCASFolderIn: MCC_RscButtonMenu
@@ -329,7 +329,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "Airdrop Available:";
+				text = "$STR_MCC_CONSOLE_AIRDROP_AVAILABLE";
 				x = 0.00515602 * safezoneW;
 				y = 0.011 * safezoneH;
 				w = 0.113437 * safezoneW;
@@ -361,12 +361,12 @@ class mcc_consoleF6: MCC_RscButton
 				idc = -1;
 				onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\console\console_request.sqf'");
 
-				text = "Call Airdrop";
+				text = "$STR_MCC_CONSOLE_CALL_AIRDROP";
 				x = 0.154688 * safezoneW;
 				y = 0.011 * safezoneH;
 				w = 0.0773437 * safezoneW;
 				h = 0.033 * safezoneH;
-				tooltip = "Call selected airdrop - Click and drag on the mini-map to define airdrop's approach";
+				tooltip = "$STR_MCC_CONSOLE_CALL_AIRDROP_TOOLTIP";
 			};
 
 			class MCC_ConsoleADFolderIn: MCC_RscButtonMenu
@@ -435,7 +435,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "Evac Management:";
+				text = "$STR_MCC_CONSOLE_EVAC_MANAGEMENT";
 				x = 0.004635 * safezoneW;
 				y = 0.008222 * safezoneH;
 				w = 0.165 * safezoneW;
@@ -448,7 +448,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "Evac:";
+				text = "$STR_MCC_CONSOLE_EVAC";
 				x = 0.004635 * safezoneW;
 				y = 0.052222 * safezoneH;
 				w = 0.0567187 * safezoneW;
@@ -470,7 +470,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "Flight Hight:";
+				text = "$STR_MCC_CONSOLE_FLIGHT_HEIGHT";
 				x = 0.004635 * safezoneW;
 				y = 0.118222 * safezoneH;
 				w = 0.0567187 * safezoneW;
@@ -491,7 +491,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "Insertion:";
+				text = "$STR_MCC_CONSOLE_INSERTION";
 				x = 0.004635 * safezoneW;
 				y = 0.085222 * safezoneH;
 				w = 0.0567187 * safezoneW;
@@ -512,12 +512,12 @@ class mcc_consoleF6: MCC_RscButton
 				idc = -1;
 				onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\console\evacwp.sqf'");
 
-				text = "Call EVAC";
+				text = "$STR_MCC_CONSOLE_CALL_EVAC";
 				x = 0.174791 * safezoneW;
 				y = 0.041222 * safezoneH;
 				w = 0.06 * safezoneW;
 				h = 0.044 * safezoneH;
-				tooltip = "Call selected EVAC - Mouse click on the mini-map to call it";
+				tooltip = "$STR_MCC_CONSOLE_CALL_EVAC_TOOLTIP";
 				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			};
 			class MCC_ConsoleCallEvac3WPButton: MCC_RscButton
@@ -525,12 +525,12 @@ class mcc_consoleF6: MCC_RscButton
 				idc = -1;
 				onButtonClick = __EVAL("nul=[1] execVM '"+MCCPATH+"mcc\general_scripts\console\evacwp.sqf'");
 
-				text = "Call EVAC 3 WP";
+				text = "$STR_MCC_CONSOLE_CALL_EVAC_3WP";
 				x = 0.174791 * safezoneW;
 				y = 0.096222 * safezoneH;
 				w = 0.06 * safezoneW;
 				h = 0.044 * safezoneH;
-				tooltip = "Call selected EVAC - Mouse click on the mini-map to call it";
+				tooltip = "$STR_MCC_CONSOLE_CALL_EVAC_TOOLTIP";
 				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			};
 
@@ -657,7 +657,7 @@ class mcc_consoleF6: MCC_RscButton
 			class MCC_Ammo: MCC_RscPicture
 			{
 				idc = 91;
-				tooltip = "Ammo";
+				tooltip = "$STR_MCC_CONSOLE_AMMO";
 				text =  __EVAL(MCCPATH +"data\IconAmmo.paa");
 				colorText[] = { 0.9, 0, 0, 1 };
 
@@ -669,7 +669,7 @@ class mcc_consoleF6: MCC_RscButton
 			class MCC_Repair: MCC_RscPicture
 			{
 				idc = 92;
-				tooltip = "Materials";
+				tooltip = "$STR_MCC_CONSOLE_MATERIALS";
 				text = __EVAL(MCCPATH +"data\IconRepair.paa");
 				colorText[] = { 0, 0.5, 0.9, 1 };
 
@@ -681,7 +681,7 @@ class mcc_consoleF6: MCC_RscButton
 			class MCC_Fuel: MCC_RscPicture
 			{
 				idc = 93;
-				tooltip = "Fuel";
+				tooltip = "$STR_MCC_CONSOLE_FUEL";
 				text = __EVAL(MCCPATH +"data\IconFuel.paa");
 				colorText[] = { 0, 0.9, 0.5, 1 };
 
@@ -693,7 +693,7 @@ class mcc_consoleF6: MCC_RscButton
 			class MCC_FoodPic: MCC_RscPicture
 			{
 				idc = 94;
-				tooltip = "Food";
+				tooltip = "$STR_MCC_CONSOLE_FOOD";
 				text = __EVAL(MCCPATH +"data\IconFood.paa");
 				colorText[] = { 0.9, 0.5, 0, 1 };
 
@@ -705,7 +705,7 @@ class mcc_consoleF6: MCC_RscButton
 			class MCC_MedPic: MCC_RscPicture
 			{
 				idc = 95;
-				tooltip = "Meds";
+				tooltip = "$STR_MCC_CONSOLE_MEDS";
 				text = __EVAL(MCCPATH +"data\IconMed.paa");
 				colorText[] = { 0, 0.9, 0.9, 1 };
 
@@ -766,27 +766,27 @@ class mcc_consoleF6: MCC_RscButton
 		y = 0.1 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
 		h = 0.1 * safezoneH;
-		tooltip = "Add a waypoint to all selected groups";
+		tooltip = "$STR_MCC_CONSOLE_ADD_WAYPOINT_TOOLTIP";
 		onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\console\manageWP.sqf'");
 	};
 	class MCC_ConsoleWPReplace: MCC_RscButton {
 		idc = MCC_CONSOLEWPREPLACE;
-		text = "Replace";
+		text = "$STR_MCC_CONSOLE_REPLACE";
 		x = 0.1 * safezoneW + safezoneX;
 		y = 0.1 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
 		h = 0.1 * safezoneH;
-		tooltip = "Remove all waypoints from any selected groups and add a new waypoint";
+		tooltip = "$STR_MCC_CONSOLE_REPLACE_WAYPOINT_TOOLTIP";
 		onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\console\manageWP.sqf'");
 	};
 	class MCC_ConsoleWPClear: MCC_RscButton {
 		idc = MCC_CONSOLEWPCLEAR;
-		text = "Clear";
+		text = "$STR_MCC_CONSOLE_CLEAR";
 		x = 0.1 * safezoneW + safezoneX;
 		y = 0.1 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
 		h = 0.1 * safezoneH;
-		tooltip = "Remove all waypoints from any selected groups";
+		tooltip = "$STR_MCC_CONSOLE_CLEAR_WAYPOINT_TOOLTIP";
 		onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\console\manageWP.sqf'");
 	};
 	class MCC_ConsoleInfoText: MCC_RscStructuredText
@@ -801,7 +801,7 @@ class mcc_consoleF6: MCC_RscButton
 		};
 	class MCC_ConsoleInfoLiveFeed: MCC_RscButton {
 		idc = MCC_CONSOLEINFOLIVEFEED;
-		text = "Live Feed";
+		text = "$STR_MCC_CONSOLE_LIVE_FEED";
 		x = 0.217813 * safezoneW + safezoneX;
 		y = 0.668037 * safezoneH + safezoneY;
 		w = 0.06 * safezoneW;
@@ -811,7 +811,7 @@ class mcc_consoleF6: MCC_RscButton
 
 	class MCC_ConsoleInfoUAVControl: MCC_RscButton {
 		idc = MCC_CONSOLEINFOUAVCONTROL;
-		text = "Take Control";
+		text = "$STR_MCC_CONSOLE_TAKE_CONTROL";
 		x = 0.1 * safezoneW + safezoneX;
 		y = 0.1 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;
@@ -821,8 +821,8 @@ class mcc_consoleF6: MCC_RscButton
 
 	class MCC_ConsoleMapRulerButton: MCC_RscButton {
 		idc = MCC_ConsoleMapRulerButton;
-		text = "Ruler";
-		tooltip = "Activate the map ruler - left click on the map and drag from one point to another to measure distance and direction";
+		text = "$STR_MCC_CONSOLE_RULER";
+		tooltip = "$STR_MCC_CONSOLE_RULER_TOOLTIP";
 		x = 0.4 * safezoneW + safezoneX;
 		y = 0.763 * safezoneH + safezoneY;
 		w = 0.06 * safezoneW;
@@ -832,7 +832,7 @@ class mcc_consoleF6: MCC_RscButton
 
 	class MCC_ConsoleMapRulerDir: MCC_RscText {
 		idc = MCC_ConsoleMapRulerDir;
-		text = "Direction:";
+		text = "$STR_MCC_CONSOLE_DIRECTION";
 		x = (0.4 * safezoneW + safezoneX) + (0.065 * safezoneW);
 		y = 0.763 * safezoneH + safezoneY;
 		w = 0.08 * safezoneW;
@@ -840,7 +840,7 @@ class mcc_consoleF6: MCC_RscButton
 	};
 	class MCC_ConsoleMapRulerDis: MCC_RscText {
 		idc = MCC_ConsoleMapRulerDis;
-		text = "Distance:";
+		text = "$STR_MCC_CONSOLE_DISTANCE_LABEL";
 		x = (0.4 * safezoneW + safezoneX) + (0.195 * safezoneW);
 		y = 0.763 * safezoneH + safezoneY;
 		w = 0.08 * safezoneW;
@@ -848,7 +848,7 @@ class mcc_consoleF6: MCC_RscButton
 	};
 	class MCC_ConsoleInfoLiveFeedNormal: MCC_RscButton {
 		idc = MCC_CONSOLEINFOLIVEFEEDNORMAL;
-		text = "Video";
+		text = "$STR_MCC_CONSOLE_VIDEO";
 		x = 0.37 * safezoneW + safezoneX;
 		y = (0.213012 * safezoneH + safezoneY) + (0.494807 * safezoneH);
 		w = 0.06 * safezoneW;
@@ -877,7 +877,7 @@ class mcc_consoleF6: MCC_RscButton
 
 	class MCC_ConsoleInfoLiveFeedClose: MCC_RscButton {
 		idc = MCC_CONSOLEINFOLIVEFEEDCLOSE;
-		text = "Close Feed";
+		text = "$STR_MCC_CONSOLE_CLOSE_FEED";
 		x = (0.37 * safezoneW + safezoneX) + (0.195 * safezoneW);
 		y = (0.213012 * safezoneH + safezoneY) + (0.494807 * safezoneH);
 		w = 0.06 * safezoneW;
@@ -912,7 +912,7 @@ class mcc_consoleF6: MCC_RscButton
 		colorBackgroundActive[] = {0,0,0,0};
 		colorDisabled[] = {0,0,0,0};
 		colorBackgroundDisabled[] = {0,0,0,0};
-		tooltip = "Close the conosle";
+		tooltip = "$STR_MCC_CONSOLE_CLOSE";
 		onButtonClick = "closedialog 0;";
 	};
 };

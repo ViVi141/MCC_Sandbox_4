@@ -47,7 +47,10 @@ switch (_channelID select 1) do {
 
 	_c = 0;
 
-	while {player getVariable ["MCC_radioBroadcasting",true] && alive player} do {
+	_maxBroadcastTime = 30; // Maximum broadcast time in seconds
+	_startTime = time;
+	
+	while {player getVariable ["MCC_radioBroadcasting",true] && alive player && (time - _startTime) < _maxBroadcastTime} do {
 		sleep 0.1;
 		if (missionNameSpace getVariable ["MCC_vonRadioKickIdle",true]) then {
 			if (_allowed) then {

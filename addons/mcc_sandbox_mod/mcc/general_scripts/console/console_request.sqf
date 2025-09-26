@@ -34,7 +34,7 @@ switch (_type) do {
 			if (count _cost > 0) then {
 				{
 					_available = [playerSide, _x] call MCC_fnc_checkRes;
-					if (!_available) exitWith {hint "Not Enough Resources"; sleep 5; hintSilent ""};
+					if (!_available) exitWith {hint localize "STR_MCC_CONSOLE_NOT_ENOUGH_RESOURCES"; sleep 5; hintSilent ""};
 				} foreach _cost;
 			} else {
 				//Remove the action we just used
@@ -54,9 +54,9 @@ switch (_type) do {
 
 				//supply drop with no helicopter simulation
 				if ((toLower (MCC_planeType select 0)) == "") then {
-					hint "Left click on the map to call support";
+					hint localize "STR_MCC_CONSOLE_LEFT_CLICK_CALL_SUPPORT";
 				} else {
-					hint "Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support";
+					hint localize "STR_MCC_CONSOLE_LEFT_CLICK_DRAG_AIR_SUPPORT";
 				};
 
 				MCC_CASrequestMarker = true;
@@ -117,7 +117,7 @@ switch (_type) do {
 			if (count _cost > 0) then {
 				{
 					_available = [playerSide, _x] call MCC_fnc_checkRes;
-					if (!_available) exitWith {hint "Not Enough Resources"; sleep 5; hintSilent ""};
+					if (!_available) exitWith {hint localize "STR_MCC_CONSOLE_NOT_ENOUGH_RESOURCES"; sleep 5; hintSilent ""};
 				} foreach _cost;
 			} else {
 				//Remove the action we just used
@@ -133,9 +133,9 @@ switch (_type) do {
 				//remove resources
 				[_cost] spawn MCC_fnc_baseResourceReduce;
 				if ((toLower (MCC_spawnkind select 0)) in ["cruise missile","uav","ac-130"]) then {
-					hint "Left click on the map to call support";
+					hint localize "STR_MCC_CONSOLE_LEFT_CLICK_CALL_SUPPORT";
 				} else {
-					hint "Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support";
+					hint localize "STR_MCC_CONSOLE_LEFT_CLICK_DRAG_AIR_SUPPORT";
 				};
 
 				MCC_CASrequestMarker = true;

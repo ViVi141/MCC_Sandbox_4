@@ -23,6 +23,6 @@ switch (_type) do
 		};
 	};
 
-if (!_ok) then {hint "Failed to open dialog"};
+if (!_ok) then {hint localize "STR_MCC_CONSOLE_FAILED_OPEN_DIALOG"};
 
 

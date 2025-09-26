@@ -38,7 +38,7 @@ class mcc_test
 				class factionText: MCC_RscText
 				{
 					idc = -1;
-					text = "Faction:"; //--- ToDo: Localize;
+					text = "$STR_MCC_TEST_FACTION";
 					sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 					x = 0.00515648 * safezoneW;
 					y = 0.011 * safezoneH;
@@ -86,7 +86,7 @@ class mcc_test
 				class spawnButton: MCC_RscButton
 				{
 					idc = 2400;
-					text = "Spawn"; //--- ToDo: Localize;
+					text = "$STR_MCC_TEST_SPAWN";
 					x = 0.051563 * safezoneW;
 					y = 0.077 * safezoneH;
 					w = 0.0773437 * safezoneW;
@@ -95,7 +95,7 @@ class mcc_test
 				class closeButton: MCC_RscButtonMenu
 				{
 					idc = 2401;
-					text = "X"; //--- ToDo: Localize;
+					text = "$STR_MCC_TEST_X";
 					action = "['close'] spawn MCC_fnc_LHDspawnVehicle;";
 					x = 0.252656 * safezoneW;
 					y = 0.011 * safezoneH;

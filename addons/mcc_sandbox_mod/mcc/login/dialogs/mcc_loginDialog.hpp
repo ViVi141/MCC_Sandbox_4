@@ -65,7 +65,7 @@ class mcc_loginDialog
 		{
 			idc = -1;
 
-			text = "视野距离:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_VIEW_DISTANCE";
 			x = 0.305208 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -75,7 +75,7 @@ class mcc_loginDialog
 		{
 			idc = -1;
 
-			text = "草地:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_GRASS";
 			x = 0.305208 * safezoneW + safezoneX;
 			y = 0.379047 * safezoneH + safezoneY;
 			w = 0.06 * safezoneW;
@@ -110,7 +110,7 @@ class mcc_loginDialog
 			idc = -1;
 			onButtonClick = "closeDialog 0";
 
-			text = "关闭"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_CLOSE";
 			x = 0.305208 * safezoneW + safezoneX;
 			y = 0.564 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
@@ -121,7 +121,7 @@ class mcc_loginDialog
 		{
 			idc = -1;
 
-			text = "任务标记:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_MISSION_MARKERS";
 			x = 0.305208 * safezoneW + safezoneX;
 			y = 0.302077 * safezoneH + safezoneY;
 			w = 0.07 * safezoneW;
@@ -141,7 +141,7 @@ class mcc_loginDialog
 		{
 			idc = -1;
 
-			text = "客户端 FPS:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_CLIENT_FPS";
 			x = 0.305208 * safezoneW + safezoneX;
 			y = 0.423 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -152,7 +152,7 @@ class mcc_loginDialog
 		{
 			idc = -1;
 
-			text = "服务器 FPS:"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_SERVER_FPS";
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.423 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -191,13 +191,13 @@ class mcc_loginDialog
 			idc = -1;
 			action = "_null = [] spawn MCC_fnc_loginDialog";
 
-			text = "登录"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGIN_LOGIN";
 			x = 0.6375 * safezoneW + safezoneX;
 			y = 0.564 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.032987 * safezoneH;
 			colorBackground[] = {0.219,0.147,0.112,1};
-			tooltip = "作为任务制作者登录"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_LOGIN_LOGIN_TOOLTIP";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 

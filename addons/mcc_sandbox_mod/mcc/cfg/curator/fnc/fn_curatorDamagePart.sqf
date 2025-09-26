@@ -51,13 +51,13 @@ _resualtCount = count _resualt;
 if (_resualt select (_resualtCount - 1)) then {
 	_pos = [getpos _object, 5, random 360] call bis_fnc_relPos;
 	_null = [_pos,"small"] spawn MCC_fnc_IedFakeExplosion;
-	_resualt resize (_resualtCount-1);
+	_resualt = _resualt select [0, _resualtCount-1];
 };
 
 //Set Damage
 {
 	if (_x) then {
-		[[[_object, _selectionsNames select _foreachIndex], {(_this select 0) setHit [(_this select 1), 1];}], "BIS_fnc_spawn", _object] call BIS_fnc_MP;
+		[[_object, _selectionsNames select _foreachIndex], {(_this select 0) setHit [(_this select 1), 1];}] remoteExec ["spawn", _object];
 	}
 } forEach _resualt;
 

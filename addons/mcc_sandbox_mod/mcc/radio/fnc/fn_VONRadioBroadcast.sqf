@@ -69,7 +69,10 @@ if (_channelIndex >= 0) then {
 		_helper attachto [player,[0,0,0],"head"];
 
 		_t = time + 5;
-		while {(player getVariable ["MCC_radioIncommingBroadcast",true]) && time <_t} do {
+		_maxWaitTime = 10; // Maximum wait time in seconds
+		_startTime = time;
+		
+		while {(player getVariable ["MCC_radioIncommingBroadcast",true]) && time <_t && (time - _startTime) < _maxWaitTime} do {
 			if (_speaker != player) then {
 					_helper say [_static,5];
 			};
@@ -102,7 +105,10 @@ if (_channelIndex >= 0) then {
 		_helper attachto [player,[0,0,0],"head"];
 
 		_t = time + 10;
-		while {(player getVariable ["MCC_radioIncommingBroadcast",true]) && time <_t} do {
+		_maxWaitTime = 15; // Maximum wait time in seconds
+		_startTime = time;
+		
+		while {(player getVariable ["MCC_radioIncommingBroadcast",true]) && time <_t && (time - _startTime) < _maxWaitTime} do {
 			if (_speaker != player) then {
 				if (_static) then {
 					_helper say [format ["MCC_radioHardStatic_%1",floor random 3],10];

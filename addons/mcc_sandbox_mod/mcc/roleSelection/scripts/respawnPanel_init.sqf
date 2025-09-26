@@ -116,7 +116,7 @@ MCC_fnc_CPMapOpen_draw =
 			_dir = 0;
 
 			//Animate if selected
-			if (str (missionNamespace getVariable ["CP_activeSpawn",objNull])== str _x) then {
+			if ((missionNamespace getVariable ["CP_activeSpawn",objNull]) isEqualTo _x) then {
 				_textureAnimPhase = abs(6 - floor (_time * 16) % 12);
 				_color = [0,1,1,_alpha];
 			} else {

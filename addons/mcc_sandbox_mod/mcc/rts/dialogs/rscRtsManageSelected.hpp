@@ -11,7 +11,7 @@ class interactionControlsGroup: MCC_RscControlsGroupNoScrollbars
 		{
 			idc = 950;
 
-			text = "offline"; //--- ToDo: Localize;
+			text = "$STR_MCC_RTS_OFFLINE";
 			x = 0.283594 * safezoneW;
 			y = 0.011 * safezoneH;
 			w = 0.05 * safezoneW;
@@ -22,7 +22,7 @@ class interactionControlsGroup: MCC_RscControlsGroupNoScrollbars
 		{
 			idc = 951;
 
-			text = "offline"; //--- ToDo: Localize;
+			text = "$STR_MCC_RTS_OFFLINE";
 			x = 0.309375 * safezoneW;
 			y = 0.011 * safezoneH;
 			w = 0.020625 * safezoneW;
@@ -33,7 +33,7 @@ class interactionControlsGroup: MCC_RscControlsGroupNoScrollbars
 		{
 			idc = 952;
 
-			text = "Build"; //--- ToDo: Localize;
+			text = "$STR_MCC_RTS_BUILD";
 			x = 0.190781 * safezoneW;
 			y = 0.011 * safezoneH;
 			w = 0.020625 * safezoneW;
@@ -43,7 +43,7 @@ class interactionControlsGroup: MCC_RscControlsGroupNoScrollbars
 		{
 			idc = 953;
 
-			text = "Units"; //--- ToDo: Localize;
+			text = "$STR_MCC_RTS_UNITS";
 			x = 0.216563 * safezoneW;
 			y = 0.011 * safezoneH;
 			w = 0.020625 * safezoneW;

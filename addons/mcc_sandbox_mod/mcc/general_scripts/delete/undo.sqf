@@ -21,9 +21,9 @@
 				deleteVehicle (MCC_lastSpawn select ((count MCC_lastSpawn)-1));
 			};
 			
-			MCC_lastSpawn resize ((count MCC_lastSpawn)-1); 
+			MCC_lastSpawn = MCC_lastSpawn select [0, (count MCC_lastSpawn)-1]; 
 		};
-	}] , "MCC_fnc_globalExecute", true, false] call BIS_fnc_MP;
+	}] remoteExec ["MCC_fnc_globalExecute", 0, true];
 	
  
  

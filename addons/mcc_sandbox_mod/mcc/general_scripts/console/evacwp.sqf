@@ -13,7 +13,7 @@ private ["_type","_flyInHight","_landing","_point1","_convoy_wp1","_convoy_wp2",
 _type = _this select 0;
 _evacVehicles = missionNamespace getvariable [format ["MCC_evacVehicles_%1",playerside],[]];
 
-if (count _evacVehicles == 0) exitwith {hint "No Evac is under your command"};
+if (count _evacVehicles == 0) exitwith {hint localize "STR_MCC_CONSOLE_NO_EVAC_COMMAND"};
 _evac = _evacVehicles select (lbCurSel MCC_ConsoleEvacTypeText_IDD);
 if (_evac iskindof "helicopter") then	{							//Incase we moving helicopter
 		_flyInHight =  MCC_evacFlyInHight_array select (lbCurSel MCC_ConsoleEvacFlyHightComboBox_IDD) select 1;
@@ -26,7 +26,7 @@ deletemarkerlocal "evac_marker3";
 
 _landing = lbCurSel MCC_ConsoleEvacApproachComboBox_IDD;
 
-hint  "Left click on the map to add one WP";
+hint localize "STR_MCC_CONSOLE_LEFT_CLICK_ADD_WP";
 
 click = false;
 onMapSingleClick "point1 = _pos;
@@ -45,9 +45,9 @@ _point1 =getmarkerpos "evac_marker1";
 
 if (_type == 0) then {														// 1 WP
 	//hint "Markers placed";
-	[[[_point1], _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove", _evac, false] call BIS_fnc_MP;
+	[[_point1, _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove"] remoteExec ["call", _evac];
 	} else {																// 3 WP
-		hint  "Left click on the map to put 2nd WP";
+		hint localize "STR_MCC_CONSOLE_LEFT_CLICK_2ND_WP";
 
 		onMapSingleClick "point2 = _pos;
 		click = true;
@@ -64,7 +64,7 @@ if (_type == 0) then {														// 1 WP
 		_point2 =getmarkerpos "evac_marker2";
 		sleep 0.5;
 
-		hint  "Left click on the map to put 3rd WP";
+		hint localize "STR_MCC_CONSOLE_LEFT_CLICK_3RD_WP";
 
 		onMapSingleClick "point3 = _pos;
 		click = true;
@@ -81,7 +81,7 @@ if (_type == 0) then {														// 1 WP
 		_point3 =getmarkerpos "evac_marker3";
 		sleep 0.5;
 
-		hint "Markers placed";
-		[[[_point1, _point2, _point3], _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove", _evac, false] call BIS_fnc_MP;
+		hint localize "STR_MCC_CONSOLE_MARKERS_PLACED";
+		[[_point1, _point2, _point3, _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove"] remoteExec ["call", _evac];
 		};
 

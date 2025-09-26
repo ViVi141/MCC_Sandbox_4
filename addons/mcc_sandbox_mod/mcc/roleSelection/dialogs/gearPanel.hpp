@@ -394,14 +394,14 @@ class CP_GEARPANEL {
 				class CP_deployPanelButton: CP_RscButton
 				{
 					idc = 32;
-					text = "Deploy"; //--- ToDo: Localize;
+					text = "$STR_MCC_ROLE_DEPLOY";
 					colorBackground[] = {1,0,0,0.3};
 
 					x = 0.675468 * safezoneW;
 					y = 0.011 * safezoneH;
 					w = 0.139219 * safezoneW;
 					h = 0.066 * safezoneH;
-					tooltip = "Press Deploy to get into the action"; //--- ToDo: Localize;
+					tooltip = "$STR_MCC_ROLE_DEPLOY_TOOLTIP";
 					sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.5)";
 					action = __EVAL("[1] execVM '"+CPPATH+"mcc\roleSelection\scripts\respawnPanel_cmd.sqf'");
 				};
@@ -461,7 +461,7 @@ class CP_GEARPANEL {
 		{
 			idc = 28;
 			type = 16;
-			text = "Squad"; //--- ToDo: Localize;
+			text = "$STR_MCC_ROLE_SQUAD";
 			x = 0.0101562 * safezoneW + safezoneX;
 			y = 0.126 * safezoneH + safezoneY;
 			w = 0.0670311 * safezoneW;
@@ -473,7 +473,7 @@ class CP_GEARPANEL {
 		{
 			idc = 29;
 			type = 16;
-			text = "Role"; //--- ToDo: Localize;
+			text = "$STR_MCC_ROLE_ROLE";
 			x = 0.0823437 * safezoneW + safezoneX;
 			y = 0.126 * safezoneH + safezoneY;
 			w = 0.0670311 * safezoneW;
@@ -508,7 +508,7 @@ class CP_GEARPANEL {
 		class CP_armor: MCC_RscText
 		{
 			idc = -1;
-			text = "Armor"; //--- ToDo: Localize;
+			text = "$STR_MCC_ROLE_ARMOR";
 			x = 0.0101562 * safezoneW + safezoneX;
 			y = 0.929 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
@@ -518,7 +518,7 @@ class CP_GEARPANEL {
 		class CP_load: MCC_RscText
 		{
 			idc = -1;
-			text = "Load"; //--- ToDo: Localize;
+			text = "$STR_MCC_ROLE_LOAD";
 			x = 0.0101562 * safezoneW + safezoneX;
 			y = 0.951 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
@@ -528,7 +528,7 @@ class CP_GEARPANEL {
 		class CP_Weight: MCC_RscText
 		{
 			idc = -1;
-			text = "Weight"; //--- ToDo: Localize;
+			text = "$STR_MCC_ROLE_WEIGHT";
 			x = 0.0101562 * safezoneW + safezoneX;
 			y = 0.973 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;

@@ -335,10 +335,13 @@ _sounds set [count _sounds, _missionName1 select 1];
 _sounds set [count _sounds, _missionName2 select 1];
 
 //Create the parent Task
-private ["_missionObjective","_taskId","_missionName","_multipleObjectives"];
+private ["_missionObjective","_taskId","_missionName","_multipleObjectives","_taskCreationResults"];
 
 //More then one objective
 _multipleObjectives = {_x != "None" && _x != ""} count [_obj1, _obj2, _obj3] > 1;
+
+// Initialize task creation results array
+_taskCreationResults = [];
 
 //If just one task no need to create parent
 if (_multipleObjectives) then {
@@ -500,8 +503,9 @@ _objectives = [];
 								_group = [_objPos, _units, 1, _enemySide, false, false] call MCC_fnc_groupSpawn;
 								[_group, _objPos] call bis_fnc_taskDefend;
 							};
-							//Land_WaterBottle_01_stack_F Land_FoodSacks_01_small_brown_idap_F
-							[_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTask;
+						//Land_WaterBottle_01_stack_F Land_FoodSacks_01_small_brown_idap_F
+						_result = [_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTaskWrapper;
+						_taskCreationResults pushBack ["Logistics", _result];
 						};
 
 						//prevent spawning garrison in houses
@@ -709,38 +713,38 @@ switch (true) do
 {
 	case (_stealth):
 	{
-		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>Black Ops: </t><t size='1.1' color='#a8e748' underline='true' align='center'>%1 %2.</t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>Black Ops: </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%3'>%1 %2.</marker></t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
-		_plainText = [[format ["Black Ops: %1 %2.",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
+		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["Black Ops: %1 %2.",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_BLACK_OPS",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
 	};
 
 	case ((_center select 1) != ""):
 	{
-		_tempText = ["Attack On","The Battle For","Assault On","The Fight For"] call BIS_fnc_selectRandom;
-        _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >Operation: </t><t size='1.1' color='#a8e748' underline='true' align='center'>%1 %2. %3 %4</t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >Operation: </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%5'>%1 %2. %3 %4</marker></t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1),_markerName];
-		_plainText = [[format ["Operation: %1 %2. %3 %4.",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		_tempText = [localize "STR_MCC_MISSION_ATTACK_ON",localize "STR_MCC_MISSION_BATTLE_FOR",localize "STR_MCC_MISSION_ASSAULT_ON",localize "STR_MCC_MISSION_FIGHT_FOR"] call BIS_fnc_selectRandom;
+        _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3. %4 %5</t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center' >%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%6'>%2 %3. %4 %5</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1),_markerName];
+		_plainText = [[format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["Operation: %1 %2. %3 %4.",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
+		_missionText = format ["%1 %2 %3. %4 %5.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_tempText,(_center select 1)];
 	};
 
 	default
 	{
-		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>Operation: </t><t size='1.1' color='#a8e748' underline='true' align='center'>%1 %2.</t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
-		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>Operation: </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%3'>%1 %2.</marker></t>",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
-		_plainText = [[format ["Operation: %1 %2.",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
+		 _html = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'>%2 %3.</t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionTittle = format ["<t size='1.1' color='#a8e748' underline='true' align='center'>%1 </t><t size='1.1' color='#a8e748' underline='true' align='center'><marker name='%4'>%2 %3.</marker></t>",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0),_markerName];
+		_plainText = [[format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)],"<t size='1.0' color='#a8e748' font='PuristaBold'>%1</t><br/>",3]];
 
-		_missionText = format ["Operation: %1 %2.",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
+		_missionText = format ["%1 %2 %3.",localize "STR_MCC_MISSION_OPERATION",toupper (_missionName1 select 0),toupper (_missionName2 select 0)];
 	};
 };
 
 //General
 _tempText = [
-              ["presence in the area has been increased",["general1",2.67]],
-			  ["have established a foothold in the area",["general2",2.73]],
-			  ["forces are active in the area",["general3",2.2]]
+              [localize "STR_MCC_MISSION_GENERAL_PRESENCE",["general1",2.67]],
+			  [localize "STR_MCC_MISSION_GENERAL_FOOTHOLD",["general2",2.73]],
+			  [localize "STR_MCC_MISSION_GENERAL_ACTIVE",["general3",2.2]]
 			] call BIS_fnc_selectRandom;
 _html = _html + format ["<br/><br/><t size='0.8' color='#E2EEE0'>%1 %2. </t>",_factionName, _tempText select 0];
 _html2 = format ["<br/><br/><t>%1 %2.</t>",_factionName,_tempText select 0];
@@ -752,8 +756,8 @@ _sounds set [count _sounds, _tempText select 1];
 //_isCQB
 if (_isCQB) then {
     _tempText = [
-	              [" and they have taken up defensive positions inside buildings.",["isCQB1",3.49]],
-				  [" and they are using civilian buildings to fortify themselves.",["isCQB2",3.69]]
+	              [localize "STR_MCC_MISSION_CQB_DEFENSIVE",["isCQB1",3.49]],
+				  [localize "STR_MCC_MISSION_CQB_FORTIFY",["isCQB2",3.69]]
 				] call BIS_fnc_selectRandom;
     _html = _html + format ["<t size='0.8' color='#E2EEE0'> %1.</t>",_tempText select 0];
 	_html2 = _html2 + format ["%1",_tempText select 0];
@@ -771,55 +775,55 @@ _sounds set [count _sounds, ["infantrypresent",3]];
 
 //_vehicles
 if (_vehicles) then {
-    _html = _html + format ["<t size='0.8' color='#E2EEE0'>You may also encounter %1 technicals or soft vehicles. </t>",_factionName];
-	_html2 = _html2 + format ["<br/>You may also encounter %1 technicals or soft vehicles.",_factionName];
-	_missionText =  _missionText + format ["<br/>You may also encounter %1 technicals or soft vehicles.<br/>",_factionName];
+    _html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 %2. </t>",localize "STR_MCC_MISSION_VEHICLES_WARNING",_factionName];
+	_html2 = _html2 + format ["<br/>%1 %2.",localize "STR_MCC_MISSION_VEHICLES_WARNING",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2.<br/>",localize "STR_MCC_MISSION_VEHICLES_WARNING",_factionName];
 	//_plainText pushback [format ["You may also encounter %1 technicals or soft vehicles.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isVehicles",2.88]];
 };
 
 //_armor
 if (_armor) then {
-    _html = _html + format ["<t size='0.8' color='#E2EEE0'>Be aware that there may be %1 armored vehicles or even MBT's operating in the OP. </t>",_factionName];
-	_html2 = _html2 + format ["<br/>Be aware that there may be %1 armored vehicles or even MBT operating in the OP.",_factionName];
-	_missionText =  _missionText + format ["<br/>Be aware that there may be %1 armored vehicles or even MBT operating in the OP.<br/>",_factionName];
+    _html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 %2. </t>",localize "STR_MCC_MISSION_ARMOR_WARNING",_factionName];
+	_html2 = _html2 + format ["<br/>%1 %2.",localize "STR_MCC_MISSION_ARMOR_WARNING",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2.<br/>",localize "STR_MCC_MISSION_ARMOR_WARNING",_factionName];
 	//_plainText pushback [format ["Be aware that there may be %1 armored vehicles or even MBT operating in the OP.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isArmor",4.68]];
 };
 
 //Artillery
 if (_artillery != 0) then {
-	_html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 may also have artillery operating in the area. </t>",_factionName];
-	_html2 = _html2 + format ["<br/>%1 may also have artillery operating in the area.",_factionName];
-	_missionText =  _missionText + format ["<br/>%1 may also have artillery operating in the area.<br/>",_factionName];
+	_html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 %2. </t>",localize "STR_MCC_MISSION_ARTILLERY_WARNING",_factionName];
+	_html2 = _html2 + format ["<br/>%1 %2.",localize "STR_MCC_MISSION_ARTILLERY_WARNING",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2.<br/>",localize "STR_MCC_MISSION_ARTILLERY_WARNING",_factionName];
 	//_plainText pushback [format ["%1 may also have artillery operating in the area.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isArtillery",2.96]];
 };
 
 //_isRoadblocks
 if (_isRoadblocks) then {
-    _html = _html + format ["<br/><t size='0.8' color='#E2EEE0'>%1 forces have established hasty checkpoints on some of the roads leading in and out of the area. </t>",_factionName];
-	_html2 = _html2 + format ["<br/>%1 forces have established hasty checkpoints on some of the roads leading in and out of the area.",_factionName];
+    _html = _html + format ["<br/><t size='0.8' color='#E2EEE0'>%1 %2</t>",_factionName, localize "STR_MCC_MISSION_ROADBLOCKS_WARNING"];
+	_html2 = _html2 + format ["<br/>%1 %2",_factionName, localize "STR_MCC_MISSION_ROADBLOCKS_WARNING"];
 
-	_missionText =  _missionText + format ["<br/>%1 forces have established hasty checkpoints on some of the roads leading in and out of the area.<br/>",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2<br/>",_factionName, localize "STR_MCC_MISSION_ROADBLOCKS_WARNING"];
 	//_plainText pushback [format ["%1 forces have established hasty checkpoints on some of the roads leading in and out of the area.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isRoadblocks",4.33]];
 };
 
 //_isIED
 if (_isIED || _isSB) then {
-    _html = _html + format ["<t size='0.8' color='#E2EEE0'>Keep an eye out for anything that might look suspicious, as we believe that %1 may employ IEDs, or even suicide attacks. </t>",_factionName];
-	_html2 = _html2 + format ["<br/>Keep an eye out for anything that might look suspicious, as we believe that %1 may employ IEDs, or even suicide attacks.",_factionName];
-	_missionText =  _missionText + format ["<br/>Keep an eye out for anything that might look suspicious, as we believe that %1 may employ IEDs, or even suicide attacks.<br/>",_factionName];
+    _html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 %2</t>",localize "STR_MCC_MISSION_IED_WARNING",_factionName];
+	_html2 = _html2 + format ["<br/>%1 %2",localize "STR_MCC_MISSION_IED_WARNING",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2<br/>",localize "STR_MCC_MISSION_IED_WARNING",_factionName];
 	//_plainText pushback [format ["Keep an eye out for anything that might look suspicious, as we believe that %1 may employ IEDs, or even suicide attacks.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isIED",6.4]];
 };
 //_isAS
 if (_isAS) then {
-    _html = _html + format ["<t size='0.8' color='#E2EEE0'>The local civilians support %1, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass don't want to draw unnecessary attention. </t>",_factionName];
-	_html2 = _html2 + format ["The local civilians support %1, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass do not want to draw unnecessary attention.",_factionName];
+    _html = _html + format ["<t size='0.8' color='#E2EEE0'>%1 %2</t>",localize "STR_MCC_MISSION_ARMED_CIVILIANS_WARNING",_factionName];
+	_html2 = _html2 + format ["%1 %2",localize "STR_MCC_MISSION_ARMED_CIVILIANS_WARNING",_factionName];
 
-	_missionText =  _missionText + format ["<br/>The local civilians support %1, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass do not want to draw unnecessary attention.",_factionName];
+	_missionText =  _missionText + format ["<br/>%1 %2",localize "STR_MCC_MISSION_ARMED_CIVILIANS_WARNING",_factionName];
 	//_plainText pushback [format ["The local civilians support %1, so be on the look out for any strange behavior. But keep civilian casualties to a minimum as the top Brass do not want to draw unnecessary attention.",_factionName],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 	_sounds set [count _sounds, ["isAS",10.77]];
 };
@@ -834,30 +838,30 @@ if (_reinforcement in [1,2,3] || _stealth) then {
 		};
 
 		case 1: {
-			_text = " aerial ";
+			_text = localize "STR_MCC_MISSION_REINFORCEMENT_AERIAL";
 			_sounds set [count _sounds, ["isReinforcement1",8.56]];
 		};
 
 		case 2: {
-			_text = " motorized ";
+			_text = localize "STR_MCC_MISSION_REINFORCEMENT_MOTORIZED";
 			_sounds set [count _sounds, ["isReinforcement2",8.4]];
 		};
 
 		case 3: {
-			_text = " aerial and motorized ";
+			_text = localize "STR_MCC_MISSION_REINFORCEMENT_BOTH";
 			_sounds set [count _sounds, ["isReinforcement3",9.12]];
 		};
 	};
 
 
-	_html = _html +"<br/><t size='0.8' color='#E2EEE0'>The enemy have" + _text + "QRF forces nearby. Expect enemy reinforcements should they become aware of your presence. </t>";
-	_html2 = _html2 +"<br/>The enemy have" + _text + "QRF forces nearby. Expect enemy reinforcements should they become aware of your presence.";
+	_html = _html +"<br/><t size='0.8' color='#E2EEE0'>" + localize "STR_MCC_MISSION_QRF_WARNING" + _text + localize "STR_MCC_MISSION_QRF_FORCES" + localize "STR_MCC_MISSION_QRF_REINFORCEMENTS" + "</t>";
+	_html2 = _html2 +"<br/>" + localize "STR_MCC_MISSION_QRF_WARNING" + _text + localize "STR_MCC_MISSION_QRF_FORCES" + localize "STR_MCC_MISSION_QRF_REINFORCEMENTS";
 
-	_missionText =  _missionText + format ["<br/><br/>The enemy have %1 QRF forces nearby. Expect enemy reinforcements should they become aware of your presence.",_text];
+	_missionText =  _missionText + format ["<br/><br/>%1 %2 %3 %4",localize "STR_MCC_MISSION_QRF_WARNING",_text,localize "STR_MCC_MISSION_QRF_FORCES",localize "STR_MCC_MISSION_QRF_REINFORCEMENTS"];
 	//_plainText pushback [format ["The enemy have%1QRF forces nearby. Expect enemy reinforcements should they become aware of your presence",_text],"<t size='0.7' color='#E2EEE0' font='PuristaMedium'>%1</t>",0];
 };
 
-_html = _html + format ["<br/><t size='0.8' color='#E2EEE0'>Go over your objectives, gear up and get ready. Mission is a go!</t>",_factionName];
+_html = _html + format ["<br/><t size='0.8' color='#E2EEE0'>%1</t>",localize "STR_MCC_MISSION_GO_MESSAGE"];
 _sounds set [count _sounds, ["isMissiongo",6.2]];
 
 //Update parent module

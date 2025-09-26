@@ -123,7 +123,8 @@ if (isNull _trg) then {
 		};
 
 	//Repair loop
-	while {true} do {
+	_workshopActive = true;
+	while {_workshopActive} do {
 	   	sleep 1;
 
 		_list = list _trg;
@@ -143,6 +144,11 @@ if (isNull _trg) then {
 				};
 			};
 		} forEach _list;
+		
+		// Check if workshop should stop (e.g., no players nearby or building destroyed)
+		if (count _list == 0 || !alive _object) then {
+			_workshopActive = false;
+		};
 	};
 };
 

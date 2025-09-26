@@ -234,3 +234,17 @@ class dynamicDialog
 
 	class initDynamicDialog {description = "init the dynamic dialog";};
 };
+
+class performance
+{
+	#ifdef MCCMODE
+	file = "\mcc_sandbox_mod\mcc\fnc\performance";
+	#else
+	file = "mcc\fnc\performance";
+	#endif
+
+	class performanceMonitor {description = "Performance monitoring and optimization system";};
+	class aiOptimizer {description = "AI performance optimization system";};
+	class objectPool {description = "Object pooling system for performance";};
+	class performanceConfig {description = "Performance configuration and settings";};
+};

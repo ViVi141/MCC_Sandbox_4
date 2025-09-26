@@ -73,7 +73,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 		class MCC_loadTruckTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Logistics"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGISTICS_TITLE";
 			colorText[] = {0,1,1,1};
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2)";
 
@@ -152,7 +152,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 			idc = -1;
 			action = "closeDialog 0;";
 
-			text = "Close"; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGISTICS_CLOSE";
 			x = 0.442708 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
 			w = 0.0802083 * safezoneW;
@@ -163,7 +163,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 			idc = 4;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			colorBackground[] = { 0.21, 0.21, 0.21,0.9};
-			text = ""; //--- ToDo: Localize;
+			text = "$STR_MCC_LOGISTICS_EMPTY";
 			x = 0.34 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
 			w = 0.1 * safezoneW;

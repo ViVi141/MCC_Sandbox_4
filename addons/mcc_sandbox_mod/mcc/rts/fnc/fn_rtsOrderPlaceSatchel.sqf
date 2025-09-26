@@ -14,7 +14,7 @@ if !(vehicle leader _group isKindOf "man") exitWith {"not a man unit"};
 
 [9989,"Left click to place",5,true] spawn MCC_fnc_setIDCText;
 
-waitUntil {str (uiNamespace getVariable ["MCC_rtsMenuLeftClickXYpos",[0,0]]) != str _pos};
+waitUntil {!(uiNamespace getVariable ["MCC_rtsMenuLeftClickXYpos",[0,0]] isEqualTo _pos)};
 _pos = screenToWorld (uiNamespace getVariable ["MCC_rtsMenuLeftClickXYpos",[0,0]]);
 
 //remove resources
@@ -35,4 +35,4 @@ _statment = {
 	_mine spawn {sleep 30; _this setDamage 1};
 };
 
-[[[_pos, _leader], _statment], "BIS_fnc_spawn", _leader, false] call BIS_fnc_MP;
+[[_pos, _leader], _statment] remoteExec ["spawn", _leader];

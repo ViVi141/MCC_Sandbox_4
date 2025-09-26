@@ -33,12 +33,12 @@ if (typeName _type == "STRING") then
 } else {
 	_tittle = switch (_type) do
 				{
-				   case 0: {"Situation"};
-				   case 1: {"Enemy Forces"};
-				   case 2: {"Friendly Forces"};
-				   case 3: {"Mission"};
-				   case 4: {"Special Tasks"};
-				   case 5: {"Fire Support"};
+				   case 0: {localize "STR_MCC_BRIEFING_SITUATION"};
+				   case 1: {localize "STR_MCC_BRIEFING_ENEMY_FORCES"};
+				   case 2: {localize "STR_MCC_BRIEFING_FRIENDLY_FORCES"};
+				   case 3: {localize "STR_MCC_BRIEFING_MISSION"};
+				   case 4: {localize "STR_MCC_BRIEFING_SPECIAL_TASKS"};
+				   case 5: {localize "STR_MCC_BRIEFING_FIRE_SUPPORT"};
 				};
 };
 

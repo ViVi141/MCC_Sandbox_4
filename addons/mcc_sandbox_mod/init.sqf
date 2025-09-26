@@ -1129,6 +1129,30 @@ if (isnil "MCC_terrainPref") then
 	profileNamespace setVariable ["MCC_terrainPref", MCC_terrainPref];
 };
 
+//============= Performance Optimization System ===========================
+// Initialize performance optimization systems
+if (isServer) then {
+	// Load performance configuration
+	[] call MCC_fnc_loadPerformanceConfig;
+	
+	// Initialize performance monitoring
+	[] call MCC_fnc_performanceMonitor;
+	
+	// Initialize AI optimizer
+	[] call MCC_fnc_initAIOptimizer;
+	
+		// Initialize object pools
+		[] call MCC_fnc_initObjectPools;
+		
+		// Initialize task manager
+		[] call MCC_fnc_initTaskManager;
+		
+		// Load compatibility layer
+		[] call MCC_fnc_MWCreateTaskCompat;
+		
+		diag_log "MCC Performance Optimization System initialized";
+};
+
 //============= Init MCC done===========================
 MCC_initDone = true;
 endLoadingScreen;

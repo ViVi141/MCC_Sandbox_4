@@ -83,9 +83,9 @@ if (MCC_CASrequestMarker && _pressed==0) exitWith {
 		} forEach _trg;
 	} forEach allMissionObjects "logic";
 
-	if !(_ok) exitWith {hint "Can't call support to this location try again"};
+	if !(_ok) exitWith {hint localize "STR_MCC_CONSOLE_CANT_CALL_SUPPORT"};
 
-	hint "Air support incomming.";
+	hint localize "STR_MCC_CONSOLE_AIR_SUPPORT_INCOMING";
 
 	[_ammount, MCC_spawnkind , getmarkerpos _marker, MCC_planeType, _spawn,_away,(missionNamespace getVariable ["MCC_airdropIsParachute",0])] spawn MCC_fnc_airDrop;
 
@@ -109,7 +109,7 @@ if (_pressed==0 && MCC_ConsoleRuler) exitWith
 			sleep 0.25;
 		};
 
-	sleep 0.01;
+	sleep 0.1;
 	deletemarkerLocal _marker;
 
 	//get distance and directio
@@ -120,8 +120,8 @@ if (_pressed==0 && MCC_ConsoleRuler) exitWith
 	MCC_ConsoleRulerData set [1,floor (MCC_pointA distance MCCConsoleDispPosXY)];
 
 	//Set control
-	ctrlSetText [MCC_ConsoleMapRulerDir,format ["Dir: %1",MCC_ConsoleRulerData select 0]];
-	ctrlSetText [MCC_ConsoleMapRulerDis,format ["Dis: %1m",MCC_ConsoleRulerData select 1]];
+	ctrlSetText [MCC_ConsoleMapRulerDir,format [localize "STR_MCC_CONSOLE_DIR",MCC_ConsoleRulerData select 0]];
+	ctrlSetText [MCC_ConsoleMapRulerDis,format [localize "STR_MCC_CONSOLE_DISTANCE",MCC_ConsoleRulerData select 1]];
 	ctrlSetText [BON_ARTY_DIRECTION,format["%1",MCC_ConsoleRulerData select 0]]; //degrees
 	ctrlSetText [BON_ARTY_DISTANCE,format["%1",MCC_ConsoleRulerData select 1]]; //distance
 

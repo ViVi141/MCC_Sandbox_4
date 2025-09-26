@@ -1,11 +1,13 @@
 
-# MCC Sandbox 4 社区维护版 | MCC Sandbox 4 Community Edition
+# MCC Sandbox 4 社区维护版 v2.0.0-pre | MCC Sandbox 4 Community Edition v2.0.0-pre
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
-[![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)](https://github.com/ViVi141/MCC_Sandbox_4))
+[![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)](https://github.com/ViVi141/MCC_Sandbox_4)
 [![GPLv3协议](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![版本](https://img.shields.io/badge/Version-2.0.0--pre-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
+[![预发布](https://img.shields.io/badge/Pre--Release-2025--09--26-yellow.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
 
-> 基于原版MCC Sandbox 4模组的社区维护版本 | Community-maintained fork of original MCC Sandbox 4 mod
+> 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.0-pre预发布版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.0-pre pre-release)
 
 ---
 
@@ -17,6 +19,7 @@
 - 🛠️ 修复已知问题与崩溃
 - ✨ 添加社区建议的新功能
 - 📦 改善模组部署体验
+- 🚀 **v2.0.0-pre重大更新**：全面性能优化与本地化支持（预发布版本）
 
 **English Version:**  
 The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) mod has been unmaintained since 2020. Under the **GPLv3 license**, we created this community edition to:
@@ -25,6 +28,26 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - 🛠️ Fix known issues and crashes
 - ✨ Implement community-requested features
 - 📦 Improve mod deployment experience
+- 🚀 **v2.0.0-pre Major Update**: Comprehensive performance optimization and localization support (Pre-release)
+
+### 🎯 v2.0.0-pre 更新亮点 | v2.0.0-pre Update Highlights
+
+本次更新是MCC Sandbox 4社区版历史上最大的一次升级（预发布版本），包含：
+
+**性能革命** | **Performance Revolution**
+- 全新的性能监控和管理系统 | Brand new performance monitoring and management system
+- 智能AI优化，显著提升游戏流畅度 | Intelligent AI optimization for significantly improved game smoothness
+- 对象池化技术，减少内存占用 | Object pooling technology to reduce memory usage
+
+**本地化突破** | **Localization Breakthrough**
+- 指挥官控制台完全中文化 | Fully localized commander console
+- 任务简报系统多语言支持 | Multi-language support for mission briefing system
+- 新增100+本地化键值 | Added 100+ localization keys
+
+**稳定性提升** | **Stability Improvements**
+- 修复15个已知问题 | Fixed 15 known issues
+- 优化代码质量，提升兼容性 | Optimized code quality and improved compatibility
+- 增强错误处理和调试功能 | Enhanced error handling and debugging capabilities
 
 ---
 
@@ -34,13 +57,135 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - ✅ 支持最新版游戏语法 |Support the latest version of game syntax
 - ✅ 修复已知问题 | Fix known issues
 - ✅ 中英双语本地化支持 | Support both Chinese and English localizations
+- ✅ 性能优化系统 | Performance optimization system
+- ✅ 任务生成优化 | Task generation optimization
+- ✅ 指挥官控制台修复 | Commander console fixes
+- ✅ 全面本地化支持 | Comprehensive localization support
 
+### 🆕 最新重大更新 | Latest Major Updates
+
+#### v2.0.0 - 性能与本地化全面升级 | Performance & Localization Overhaul
+
+**🔧 性能优化系统 | Performance Optimization System**
+- 新增实时性能监控 | Added real-time performance monitoring
+- 智能AI优化管理 | Intelligent AI optimization management
+- 对象池化系统 | Object pooling system
+- 可配置性能预设 | Configurable performance presets
+- 用户友好的性能管理界面 | User-friendly performance management UI
+
+**🌐 全面本地化支持 | Comprehensive Localization Support**
+- 指挥官控制台完全中文化 | Fully localized commander console
+- 任务简报系统多语言支持 | Multi-language support for mission briefing system
+- 自动生成内容本地化 | Localized auto-generated content
+- 性能监控界面本地化 | Localized performance monitoring interface
+- 新增30+本地化键值 | Added 30+ localization keys
+
+**🛠️ 任务生成系统优化 | Task Generation System Optimization**
+- 异步任务创建队列 | Asynchronous task creation queue
+- 任务创建重试机制 | Task creation retry mechanism
+- 任务验证和清理系统 | Task validation and cleanup system
+- 兼容性层确保向后兼容 | Compatibility layer ensures backward compatibility
+
+**🐛 问题修复 | Bug Fixes**
+- 修复任务生成超时问题 | Fixed task generation timeout issues
+- 修复指挥官控制台显示问题 | Fixed commander console display issues
+- 修复过时语法警告 | Fixed outdated syntax warnings
+- 修复无限循环问题 | Fixed infinite loop issues
+- 修复网络同步问题 | Fixed network synchronization issues
+
+**📈 代码质量提升 | Code Quality Improvements**
+- 替换过时的BIS_fnc_MP为remoteExec | Replaced outdated BIS_fnc_MP with remoteExec
+- 优化短睡眠操作 | Optimized short sleep operations
+- 改进错误处理机制 | Improved error handling mechanisms
+- 增强调试和日志记录 | Enhanced debugging and logging
 
 ### 计划功能 | Roadmap
-- 无 |  No plan yet
+- 更多性能优化选项 | More performance optimization options
+- 扩展多语言支持 | Extended multi-language support
+- 社区功能建议 | Community feature suggestions
+
+---
+
+## 📋 更新日志 | Changelog
+
+### v2.0.0-pre (2025-09-26) - 性能与本地化全面升级 | Performance & Localization Overhaul
+
+#### 🆕 新增功能 | New Features
+- **性能监控系统** | **Performance Monitoring System**
+  - 实时CPU、内存、网络监控 | Real-time CPU, memory, network monitoring
+  - 智能性能警告和建议 | Intelligent performance warnings and suggestions
+  - 可配置的性能阈值 | Configurable performance thresholds
+  - 用户友好的性能管理界面 | User-friendly performance management interface
+
+- **AI优化系统** | **AI Optimization System**
+  - 智能AI单位数量限制 | Intelligent AI unit count limiting
+  - 距离基础模拟优化 | Distance-based simulation optimization
+  - 动态AI技能调整 | Dynamic AI skill adjustment
+  - 性能统计和监控 | Performance statistics and monitoring
+
+- **对象池化系统** | **Object Pooling System**
+  - 车辆、单位、标记对象池 | Vehicle, unit, marker object pools
+  - 效果和辅助对象管理 | Effect and helper object management
+  - 减少对象创建/销毁开销 | Reduced object creation/destruction overhead
+
+- **任务管理系统** | **Task Management System**
+  - 异步任务创建队列 | Asynchronous task creation queue
+  - 任务创建重试机制 | Task creation retry mechanism
+  - 任务验证和清理 | Task validation and cleanup
+  - 兼容性层确保向后兼容 | Compatibility layer for backward compatibility
+
+#### 🌐 本地化改进 | Localization Improvements
+- **指挥官控制台** | **Commander Console**
+  - 完全中文化界面 | Fully localized interface
+  - 所有按钮和提示文本本地化 | All buttons and tooltips localized
+  - 新增59个本地化键值 | Added 59 localization keys
+
+- **任务简报系统** | **Mission Briefing System**
+  - 简报类型本地化 | Briefing types localized
+  - 自动生成内容多语言支持 | Multi-language support for auto-generated content
+  - 新增30个简报相关本地化键值 | Added 30 briefing-related localization keys
+
+- **性能监控界面** | **Performance Monitoring Interface**
+  - 性能预设界面本地化 | Performance preset interface localized
+  - 性能警告消息本地化 | Performance warning messages localized
+  - 新增15个性能相关本地化键值 | Added 15 performance-related localization keys
+
+#### 🐛 问题修复 | Bug Fixes
+- 修复任务生成超时导致只生成部分实体的问题 | Fixed task generation timeout causing only partial entity generation
+- 修复指挥官控制台滚轮菜单选项消失的问题 | Fixed commander console wheel menu option disappearing
+- 修复过时语法警告（str比较、resize操作）| Fixed outdated syntax warnings (str comparison, resize operations)
+- 修复4个无限循环问题 | Fixed 4 infinite loop issues
+- 修复6个短睡眠操作优化 | Optimized 6 short sleep operations
+- 修复过时网络调用（BIS_fnc_MP替换为remoteExec）| Fixed outdated network calls (BIS_fnc_MP replaced with remoteExec)
+
+#### 📈 代码质量提升 | Code Quality Improvements
+- 替换所有过时的BIS_fnc_MP为modern remoteExec | Replaced all outdated BIS_fnc_MP with modern remoteExec
+- 优化短睡眠操作从0.01秒提升到0.1秒 | Optimized short sleep operations from 0.01s to 0.1s
+- 改进错误处理机制和调试输出 | Improved error handling mechanisms and debug output
+- 增强日志记录和性能统计 | Enhanced logging and performance statistics
+- 添加任务创建统计和监控 | Added task creation statistics and monitoring
+
+#### 🔧 技术改进 | Technical Improvements
+- 新增性能配置系统 | Added performance configuration system
+- 实现智能AI管理 | Implemented intelligent AI management
+- 添加对象池管理 | Added object pool management
+- 创建任务队列系统 | Created task queue system
+- 实现兼容性层 | Implemented compatibility layer
+
+#### 📊 统计信息 | Statistics
+- **新增文件**: 8个 | **New files**: 8
+- **修改文件**: 25个 | **Modified files**: 25
+- **新增本地化键值**: 104个 | **New localization keys**: 104
+- **修复问题**: 15个 | **Fixed issues**: 15
+- **性能优化**: 10个 | **Performance optimizations**: 10
+
 ---
 
 ## 📥 安装指南 | Installation
+
+> ⚠️ **预发布版本说明** | **Pre-release Notice**  
+> 当前版本为 v2.0.0-pre 预发布版本，可能存在未发现的问题。建议在测试环境中使用，并反馈遇到的问题。  
+> Current version is v2.0.0-pre pre-release, may contain undiscovered issues. Recommended for testing environments, please report any issues encountered.
 
 ### Steam订阅（推荐）| Steam Subscription (Recommended)
 1. 访问 [Steam创意工坊页面](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971) | Visit the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
