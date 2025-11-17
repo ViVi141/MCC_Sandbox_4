@@ -36,10 +36,10 @@ if (MCC_ambushPlacing && _pressed!=1) exitWith {
 	if (MCC_capture_state) then {
 		hint "Ambush Captured.";
 		MCC_capture_var = MCC_capture_var
-				+ FORMAT ["[[%1 , '%2' , '%3', %4, %5, %6, %7, %8],'MCC_fnc_ambushSingle',true,false] call BIS_fnc_MP;", MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside];
+				[MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 0, false];
 	} else  {
 		hint "Ambush Placed.";
-		[[MCC_pointA , IEDAmbushspawnname,mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside],"MCC_fnc_ambushSingle",false,false] call BIS_fnc_MP;
+		[MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 2, false];
 	};
 
 	MCC_ambushPlacing = false;
@@ -51,6 +51,6 @@ if (_shift && _pressed!=1) exitWith {
 	_nearObjectsB = MCC_pointB nearObjects [MCC_dummy,50];
 
 	if (count _nearObjectsA > 0 && count _nearObjectsB > 0) then{
-		[[MCC_pointA , MCC_pointB],"MCC_fnc_iedSync",true,false] call BIS_fnc_MP;
+		[MCC_pointA, MCC_pointB] remoteExec ["MCC_fnc_iedSync", 0, false];
 	};
 };

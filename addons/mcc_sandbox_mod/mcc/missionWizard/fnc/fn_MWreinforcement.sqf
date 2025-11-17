@@ -120,7 +120,7 @@ for "_i" from 0 to (count _cond) step 1 do
 				_dir 	= [_missionCenterTriggerPos, _newPos] call BIS_fnc_dirTo;
 				_strDir = "<t size='1' t font = 'puristaLight' color='#FFFFFF'> HQ: Enemy aerial QRF is moving in from the " + ([_dir] call MCC_fnc_dirToString) + "</t>";
 				_command = format ['["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_strDir];
-				[[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+				[2, compile _command] remoteExec ["MCC_fnc_globalExecute", 0, false];
 			};
 		};
 
@@ -133,7 +133,7 @@ for "_i" from 0 to (count _cond) step 1 do
 				_dir 	= [_missionCenterTriggerPos, _newPos] call BIS_fnc_dirTo;
 				_strDir = "<t size='1' t font = 'puristaLight' color='#FFFFFF'> HQ: Enemy motorized QRF is moving in from the " + ([_dir] call MCC_fnc_dirToString) + "</t>";
 				_command = format ['["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_strDir];
-				[[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+				[2, compile _command] remoteExec ["MCC_fnc_globalExecute", 0, false];
 			};
 
 		};
@@ -170,7 +170,7 @@ for "_i" from 0 to (count _cond) step 1 do
 				, false
 				];
 
-	[_ar, "mcc_setup", false, false] spawn BIS_fnc_MP;
+	[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
 };
 
 //Clean up

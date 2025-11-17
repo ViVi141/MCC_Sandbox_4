@@ -163,7 +163,7 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 		waitUntil {!isNull (missionNamespace getVariable ["MCC_fakeUAV",objNull]) && !isNull (missionNamespace getVariable ["MCC_fakeUAVCenter",objNull])};
 
 		playSound "missileLunch";
-		[[[netid _missile,_missile], "missileLunch"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+		[[netid _missile,_missile], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 		[(missionNamespace getVariable ["MCC_fakeUAVCenter",objNull]), [ getpos _missile, 100, random 360] call BIS_fnc_relPos, _missile,80,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
 	};
 
@@ -178,10 +178,10 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 			missionNamespace setVariable ["MCC_ACConsoleUp",objNull];
 			publicVariable "MCC_ACConsoleUp";
 
-			[[2,compile format ['["MCCNotifications",["AC-130 Left the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]], "MCC_fnc_globalExecute", playerSide, false] spawn BIS_fnc_MP;
+			[2,compile format ['["MCCNotifications",["AC-130 Left the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
 		} else {
 
-			[[2,compile format ['["MCCNotifications",["AC-130 Entered the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]], "MCC_fnc_globalExecute", playerSide, false] spawn BIS_fnc_MP;
+			[2,compile format ['["MCCNotifications",["AC-130 Entered the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
 
 			_pos set [2,(_pos select 2)+400];
 
@@ -392,7 +392,7 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 						_velocity set [2,-30];
 						_bomb setVelocity _velocity;
 
-						[[[netid _bomb,_bomb], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+						[[netid _bomb,_bomb], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 						sleep 0.5;
 					};
 			};
@@ -406,7 +406,7 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 				for [{_x=1},{_x<=_ammount*2},{_x=_x+1}] do
 					{
 						_nul=[[(_pos select 0)+50 - random 100,(_pos select 1)+50 - random 100,_pos select 2], getpos _plane1,"M_AT",200,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
-						[[[netid _plane1,_plane1], "missileLunch"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+						[[netid _plane1,_plane1], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D", _plane1, true, false];
 						sleep 0.2;
 					};
 

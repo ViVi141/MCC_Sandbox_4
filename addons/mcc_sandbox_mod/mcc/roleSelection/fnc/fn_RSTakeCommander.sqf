@@ -9,23 +9,23 @@ _commander = MCC_server getVariable [format ["CP_commander%1",side player],""];
 if (_commander == "") then {
     _str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["%1 logged in as the commander",name player] + "</t>";
     _command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-    [[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+    [2, compile _command] remoteExec ["MCC_fnc_globalExecute", 0, true];
 
     MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],getPlayerUID player, true];
 
     //Handle radio channel side
-    [[player, true, (missionNamespace getVariable ["MCC_radioChannel_1",1])], "MCC_fnc_assignChannelServer", false, false] spawn BIS_fnc_MP;
+    [player, true, (missionNamespace getVariable ["MCC_radioChannel_1",1])] remoteExec ["MCC_fnc_assignChannelServer", 0, false, false];
 } else {
     //Leave commander
     if (_commander == getPlayerUID player) then {
         _str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["%1 is no longer the commander",name player] + "</t>";
         _command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-        [[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+        [2, compile _command] remoteExec ["MCC_fnc_globalExecute", 0, true];
 
         MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],"", true];
 
         //Handle radio channel side
-        [[player, false, (missionNamespace getVariable ["MCC_radioChannel_1",1])], "MCC_fnc_assignChannelServer", false, false] spawn BIS_fnc_MP;
+        [player, false, (missionNamespace getVariable ["MCC_radioChannel_1",1])] remoteExec ["MCC_fnc_assignChannelServer", 2, false];
 
     } else  {
         private ["_lastMutiny","_numberPlayers","_previousCommander"];
@@ -39,26 +39,26 @@ if (_commander == "") then {
             CP_mutiny = 0;
             publicVariable "CP_mutiny";
             sleep 1;
-            [[format ["%1 have started a mutiny. do you want to kick the commander - %2?", name player, _previousCommander], "MUTINY" , "CP_mutiny"] ,"MCC_fnc_vote",(player getVariable ["CP_side",  playerside]),false] spawn BIS_fnc_MP;
+            [format ["%1 have started a mutiny. do you want to kick the commander - %2?", name player, _previousCommander], "MUTINY", "CP_mutiny"] remoteExec ["MCC_fnc_vote", (player getVariable ["CP_side", playerside]), false];
             sleep 30;
             _numberPlayers = (player getVariable ["CP_side",  playerside]) countSide allplayers;
-            [[{publicVariable "CP_mutiny"}], "BIS_fnc_spawn", false, false] spawn BIS_fnc_MP;
+            [{publicVariable "CP_mutiny"}] remoteExec ["BIS_fnc_spawn", 2, false];
             sleep 2;
 
             if (CP_mutiny > (_numberPlayers/2)) then {
                 _str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["Mutiny succeed, the commander has been kicked. %1 is the new commander",name player] + "</t>";
                 _command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-                [[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+                [2, compile _command] remoteExec ["MCC_fnc_globalExecute", 0, true];
 
                 MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],getPlayerUID player, true];
 
                 //Handle radio channel side
-                [[player, false, (missionNamespace getVariable ["MCC_radioChannel_1",1])], "MCC_fnc_assignChannelServer", false, false] spawn BIS_fnc_MP;
-                [[player, true, (missionNamespace getVariable ["MCC_radioChannel_1",1])], "MCC_fnc_assignChannelServer", false, false] spawn BIS_fnc_MP;
+                [player, false, (missionNamespace getVariable ["MCC_radioChannel_1",1])] remoteExec ["MCC_fnc_assignChannelServer", 0, false];
+                [player, true, (missionNamespace getVariable ["MCC_radioChannel_1",1])] remoteExec ["MCC_fnc_assignChannelServer", 0, true];
             } else {
                 _str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + "Mutiny failed" + "</t>";
                 _command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-                [[2,compile _command], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+                [2,compile _command] remoteExec ["MCC_fnc_globalExecute", 0, false];
             }
         }
         else {

@@ -53,43 +53,78 @@
 private ["_missionCenter","_missionCenterTrigger","_totalEnemyUnits","_isCQB","_objType","_objArray","_minObjectivesDistance","_maxObjectivesDistance","_objPos","_timeStart","_enemySide","_enemyfaction","_sidePlayer","_factionPlayer","_obj1","_obj2","_obj3","_pos","_center","_wholeMap","_armor","_vehicles","_stealth","_roadPositions","_script_handler","_isIED","_isAS","_isSB","_spawnbehavior","_isRoadblocks","_objectives","_isCiv","_weatherChange","_preciseMarkers","_reinforcement","_artillery","_civFaction","_playMusic","_animals","_markerName","_missionMaker","_campaignMission","_markers"];
 
 private ["_arrayGeneral","_arraySides","_arrayObjectives","_arrayDefines","_arrayAssets"];
-_arrayGeneral		= _this select 0;
-_wholeMap 				= _arrayGeneral select 0;
-_totalEnemyUnits 		= _arrayGeneral select 1;
-_minObjectivesDistance 	= _arrayGeneral select 2;
-_maxObjectivesDistance	= _arrayGeneral select 3;
-_weatherChange 			= _arrayGeneral select 4;
-_preciseMarkers 		= _arrayGeneral select 5;
-_playMusic 				= _arrayGeneral select 6;
-_markers 				= _arrayGeneral param [7,true,[true]];
 
-_arraySides			= _this select 1;
-_enemySide 				= _arraySides select 0;
-_enemyfaction 			= _arraySides select 1;
-_sidePlayer 			= _arraySides select 2;
-_factionPlayer 			= _arraySides select 3;
-_civFaction 			= _arraySides select 4;
+// Validate input parameters
+if (isNil "_this" || {count _this < 5}) exitWith {
+	diag_log "MCC: Mission Wizard Error: Invalid parameters passed to MWinitMission";
+	MCC_MWisGenerating = false;
+	publicVariable "MCC_MWisGenerating";
+};
 
-_arrayObjectives	= _this select 2;
-_obj1 					= _arrayObjectives select 0;
-_obj2 					= _arrayObjectives select 1;
-_obj3 					= _arrayObjectives select 2;
+_arrayGeneral		= _this param [0, [], [[]]];
+if (count _arrayGeneral < 7) exitWith {
+	diag_log "MCC: Mission Wizard Error: Invalid general parameters array";
+	MCC_MWisGenerating = false;
+	publicVariable "MCC_MWisGenerating";
+};
 
-_arrayDefines		= _this select 3;
-_isCQB 					= _arrayDefines select 0;
-_isCiv 					= _arrayDefines select 1;
-_armor 					= _arrayDefines select 2;
-_vehicles 				= _arrayDefines select 3;
-_stealth 				= _arrayDefines select 4;
-_isIED 					= _arrayDefines select 5;
-_isAS 					= _arrayDefines select 6;
-_isSB 					= _arrayDefines select 7;
-_isRoadblocks 			= _arrayDefines select 8;
-_animals 				= _arrayDefines select 9;
+_wholeMap 				= _arrayGeneral param [0, false, [true]];
+_totalEnemyUnits 		= _arrayGeneral param [1, 20, [0]];
+_minObjectivesDistance 	= _arrayGeneral param [2, 100, [0]];
+_maxObjectivesDistance	= _arrayGeneral param [3, 500, [0]];
+_weatherChange 			= _arrayGeneral param [4, 0, [0]];
+_preciseMarkers 		= _arrayGeneral param [5, false, [true]];
+_playMusic 				= _arrayGeneral param [6, 0, [0]];
+_markers 				= _arrayGeneral param [7, true, [true]];
 
-_arrayAssets		= _this select 4;
-_reinforcement 			= _arrayAssets select 0;
-_artillery 				= _arrayAssets select 1;
+_arraySides			= _this param [1, [], [[]]];
+if (count _arraySides < 5) exitWith {
+	diag_log "MCC: Mission Wizard Error: Invalid sides parameters array";
+	MCC_MWisGenerating = false;
+	publicVariable "MCC_MWisGenerating";
+};
+
+_enemySide 				= _arraySides param [0, east, [sideUnknown]];
+_enemyfaction 			= _arraySides param [1, "OPF_F", [""]];
+_sidePlayer 			= _arraySides param [2, west, [sideUnknown]];
+_factionPlayer 			= _arraySides param [3, "BLU_F", [""]];
+_civFaction 			= _arraySides param [4, "CIV_F", [""]];
+
+_arrayObjectives	= _this param [2, [], [[]]];
+_obj1 					= _arrayObjectives param [0, "None", [""]];
+_obj2 					= _arrayObjectives param [1, "None", [""]];
+_obj3 					= _arrayObjectives param [2, "None", [""]];
+
+_arrayDefines		= _this param [3, [], [[]]];
+if (count _arrayDefines < 10) exitWith {
+	diag_log "MCC: Mission Wizard Error: Invalid defines parameters array";
+	MCC_MWisGenerating = false;
+	publicVariable "MCC_MWisGenerating";
+};
+
+_isCQB 					= _arrayDefines param [0, false, [true]];
+_isCiv 					= _arrayDefines param [1, false, [true]];
+_armor 					= _arrayDefines param [2, false, [true]];
+_vehicles 				= _arrayDefines param [3, false, [true]];
+_stealth 				= _arrayDefines param [4, false, [true]];
+_isIED 					= _arrayDefines param [5, false, [true]];
+_isAS 					= _arrayDefines param [6, false, [true]];
+_isSB 					= _arrayDefines param [7, false, [true]];
+_isRoadblocks 			= _arrayDefines param [8, false, [true]];
+_animals 				= _arrayDefines param [9, false, [true]];
+
+_arrayAssets		= _this param [4, [], [[]]];
+_reinforcement 			= _arrayAssets param [0, 0, [0]];
+_artillery 				= _arrayAssets param [1, 0, [0]];
+
+// Validate critical parameters
+if (_totalEnemyUnits <= 0) then {_totalEnemyUnits = 20};
+if (_minObjectivesDistance <= 0) then {_minObjectivesDistance = 100};
+if (_maxObjectivesDistance <= _minObjectivesDistance) then {_maxObjectivesDistance = _minObjectivesDistance * 1.5};
+if (_enemyfaction == "") then {_enemyfaction = "OPF_F"};
+
+// Initialize marker name early so it can be used in error handling
+_markerName = "";
 
 _objArray			 	= missionNamespace getVariable ["MCC_MWMissionType",[localize "STR_MCC_MW_MISSION_SECURE_HVT",
 																			   localize "STR_MCC_MW_MISSION_KILL_HVT",
@@ -151,11 +186,11 @@ if (typeName _wholeMap == typeName true ) then {
 		if (isnil "MCC_worldArea") then {
 			_worldPath = configfile >> "cfgworlds" >> worldname;
 			_mapSize = getnumber (_worldPath >> "mapSize");
-			if (_mapSize == 0) exitWith {
-				diag_log FORMAT ["MCC: Mission Wizard Error: mapSize param not defined for '%1'",worldname];
-				[["mapSize param not defined for '%1'",worldname],"bis_fnc_halt",MCC_fnc_halt, false] call BIS_fnc_MP;
-				[[_markerName]] call MCC_MWCleanup;
-			};
+		if (_mapSize == 0) exitWith {
+			diag_log FORMAT ["MCC: Mission Wizard Error: mapSize param not defined for '%1'",worldname];
+			["mapSize param not defined for '%1'",worldname] remoteExec ["bis_fnc_halt", MCC_fnc_halt, false];
+			[[]] call MCC_MWCleanup;
+		};
 
 			_mapSize = _mapSize / 2;
 
@@ -184,18 +219,30 @@ if (typeName _wholeMap == typeName true ) then {
 		//Find mission center
 			_center = [getpos MWMissionArea,2000,_isCQB,MCC_MWBasedLocations] call MCC_fnc_MWFindMissionCenter;
 
-			_missionCenter = (_center select 0);
-		if (isNil "_missionCenter") exitWith {
+			if (isNil "_center" || {count _center < 1}) exitWith {
+				diag_log "MCC: Mission Wizard Error: Can't find mission center - MWFindMissionCenter returned invalid result";
+				if (!isNil "_missionMaker") then {
+					["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+				};
+				[[]] call MCC_MWCleanup;
+			};
+			
+			_missionCenter = _center select 0;
+		if (isNil "_missionCenter" || {count _missionCenter < 3} || {_missionCenter isEqualTo [0,0,0]}) exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
-			["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
-			[[_markerName]] call MCC_MWCleanup;
+			if (!isNil "_missionMaker") then {
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
+			[[]] call MCC_MWCleanup;
 		};
 	} else {
 		//--------------------------------------------------------------Create a ceneter trigger --------------------------------------------------------------------------
 		if (count mcc_zone_markposition == 0) exitWith {
 			diag_log "MCC: Mission Wizard Error: Create a zone first";
-			[["MCC: Mission Wizard Error: Create a zone first"],"MCC_fnc_halt",_missionMaker, false] call BIS_fnc_MP;
-			[[_markerName]] call MCC_MWCleanup;
+			if (!isNil "_missionMaker") then {
+				["MCC: Mission Wizard Error: Create a zone first"] remoteExec ["MCC_fnc_halt", _missionMaker, false];
+			};
+			[[]] call MCC_MWCleanup;
 		};
 
 		MWMissionArea = createtrigger ["emptydetector",mcc_zone_markposition];
@@ -223,26 +270,51 @@ if (typeName _wholeMap == typeName true ) then {
 		//Find mission center
 		_center = [getpos MWMissionArea,_radius,_isCQB,MCC_MWBasedLocations] call MCC_fnc_MWFindMissionCenter;
 
-		//If we stray too far from the center cancel the mission
-		_missionCenter = (_center select 0);
+		if (isNil "_center" || {count _center < 1}) exitWith {
+			diag_log "MCC: Mission Wizard Error: Can't find mission center - MWFindMissionCenter returned invalid result";
+			if (!isNil "_missionMaker") then {
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
+			[[]] call MCC_MWCleanup;
+		};
 
-		if (isNil "_missionCenter") exitWith {
+		//If we stray too far from the center cancel the mission
+		_missionCenter = _center select 0;
+
+		if (isNil "_missionCenter" || {count _missionCenter < 3} || {_missionCenter isEqualTo [0,0,0]}) exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
-			["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
-			[[_markerName]] call MCC_MWCleanup;
+			if (!isNil "_missionMaker") then {
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
+			[[]] call MCC_MWCleanup;
 		};
 
 		if (_missionCenter distance2D _markerPos > _radius) exitWith {
 			_missionCenter = nil;
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
-			["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
-			[[_markerName]] call MCC_MWCleanup;
+			if (!isNil "_missionMaker") then {
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
+			[[]] call MCC_MWCleanup;
 		};
 	};
 } else {
-	_center = _wholeMap;
-	_missionCenter = _center select 0;
-	_campaignMission = true;
+	if (typeName _wholeMap == typeName []) then {
+		_center = _wholeMap;
+		if (count _center >= 1) then {
+			_missionCenter = _center param [0, [0,0,0], [[]]];
+			if (count _missionCenter < 3 || {_missionCenter isEqualTo [0,0,0]}) then {
+				_missionCenter = nil;
+			};
+		} else {
+			_missionCenter = nil;
+		};
+		_campaignMission = true;
+	} else {
+		_missionCenter = nil;
+		_campaignMission = false;
+		diag_log "MCC: Mission Wizard Error: Invalid campaign mission center format";
+	};
 };
 
 if (isNil "_missionCenter") exitWith {};
@@ -380,18 +452,32 @@ _objectives = [];
 
 		_objPos = [];
 		_timeStart = time;
-		while {(count _objPos == 0) && (time < _timeStart +5)} do {
+		_maxAttempts = 50;
+		_attempts = 0;
+		
+		while {(count _objPos == 0) && (time < _timeStart + 10) && (_attempts < _maxAttempts)} do {
 			_objPos = [_missionCenterTrigger,_isCQB, _minObjectivesDistance, _maxObjectivesDistance] call MCC_fnc_MWfindObjectivePos;
+			if (isNil "_objPos") then {_objPos = []};
+			if (count _objPos < 3) then {_objPos = []};
+			_attempts = _attempts + 1;
 			sleep 0.1;
 		};
 
-		//Lets try again
-		if (count _objPos == 0) then {
+		//Lets try again with relaxed conditions
+		if (count _objPos == 0 || count _objPos < 3) then {
 			_isCQB = false;
 			_objPos = [_missionCenter,_isCQB,0, _maxObjectivesDistance*3] call MCC_fnc_MWfindObjectivePos;
+			if (isNil "_objPos") then {_objPos = []};
+			if (count _objPos < 3) then {_objPos = []};
 		};
 
-		if (count _objPos > 0 && ((_objPos distance2D _missionCenter) < (_maxObjectivesDistance*3))) then {
+		// Final validation
+		if (count _objPos < 3 || {_objPos isEqualTo [0,0,0]}) then {
+			diag_log format ["MCC: Mission Wizard Error: Could not find valid objective position for %1", _objType];
+			_objPos = nil;
+		};
+
+		if (!isNil "_objPos" && count _objPos >= 3 && ((_objPos distance2D _missionCenter) < (_maxObjectivesDistance*3))) then {
 
 			if (["Destroy", _objType] call BIS_fnc_inString) then {
 				[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_objType,_campaignMission,_sidePlayer] remoteExec ["MCC_fnc_MWObjectiveDestroy",2];
@@ -459,7 +545,8 @@ _objectives = [];
 
 							if (count _startPos <= 0) exitWith {
 								diag_log "MCC_fnc_MCCMissioWizard: Error Can't find a start location position";
-								[[_markerName]] call MCC_MWCleanup;
+								// Use empty array since marker might not be created yet in spawn context
+								[[]] call MCC_MWCleanup;
 							};
 
 							_supplyTruck = _supplyTruckClass createVehicle _startPos;
@@ -527,14 +614,25 @@ _objectives = [];
 				_alarm setVariable ["vehicleinit",_init];
 				{_x addCuratorEditableObjects [[_alarm],false]} forEach allCurators;
 
-				[["", getpos _alarm, 100, 100, _activate, _cond,"AlarmSfx",false],"MCC_fnc_MusicTrigger",true,false] spawn BIS_fnc_MP;
+				["", getpos _alarm, 100, 100, _activate, _cond,"AlarmSfx",false] remoteExec ["MCC_fnc_MusicTrigger", 0, false];
 			};
 			*/
 
 			sleep 1;
 
-			waituntil {!isnil "MCC_MWObjectivesNames"};
-			_objPos = MCC_MWObjectivesNames select 0;
+			_timeout = time + 30;
+			waituntil {!isnil "MCC_MWObjectivesNames" || time > _timeout};
+			
+			if (isNil "MCC_MWObjectivesNames" || {count MCC_MWObjectivesNames < 1}) then {
+				diag_log "MCC: Mission Wizard Error: Objective creation failed - MCC_MWObjectivesNames not set";
+				continue;
+			};
+			
+			_objPos = MCC_MWObjectivesNames param [0, [], [[]]];
+			if (count _objPos < 3) then {
+				diag_log "MCC: Mission Wizard Error: Invalid objective position returned";
+				continue;
+			};
 
 			//Lets create a zone
 			_zoneNumber = (count (missionNamespace getVariable ["MCC_zones_numbers",[]])) + 1;
@@ -548,12 +646,12 @@ _objectives = [];
 
 			// Is CQB
 			if (_isCQB) then {
-				[[_objPos,(_maxObjectivesDistance*0.5),0,(_totalEnemyUnits*0.05) min 2,_enemyfaction, _enemySide],"MCC_fnc_garrison",false,false] spawn BIS_fnc_MP;
+				[_objPos,(_maxObjectivesDistance*0.5),0,(_totalEnemyUnits*0.05) min 2,_enemyfaction, _enemySide] remoteExec ["MCC_fnc_garrison", 0, false];
 			};
 
 			// Is _isCiv
 			if (_isCiv) then {
-				[[_objPos,(_maxObjectivesDistance*0.5),1,(_totalEnemyUnits*0.05) min 2,_civFaction,"CIV"],"MCC_fnc_garrison",false,false] spawn BIS_fnc_MP;
+				[_objPos,(_maxObjectivesDistance*0.5),1,(_totalEnemyUnits*0.05) min 2,_civFaction,"CIV"] remoteExec ["MCC_fnc_garrison", 0, false];
 			};
 
 
@@ -568,7 +666,7 @@ _objectives = [];
 						_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
 						_pos = [[[_objPos,(_maxObjectivesDistance*0.7)]],["water"],{true}] call BIS_fnc_randomPos;
 
-						[[_pos,_objectType,"large",floor (random 2),_sidePlayer],"MCC_fnc_SBSingle",false,false] spawn BIS_fnc_MP;
+						[_pos,_objectType,"large",floor (random 2),_sidePlayer] remoteExec ["MCC_fnc_SBSingle", 0, false];
 
 						//Debug
 						if (MCC_debug) then {
@@ -637,7 +735,7 @@ if (_weatherChange != 0) then {
 	MCC_date	= [(MCC_date select 0) + floor (random 10 - random 10), floor ((random 12)+1)  ,  floor ((random 28)+1), _hour,  floor (random 60)];
 	publicVariable "MCC_date";
 
-	[[MCC_date],"MCC_fnc_setTime",true,false] call BIS_fnc_MP;
+	[MCC_date] remoteExec ["MCC_fnc_setTime", 0, false];
 
 
 	//------------------- Weather ---------------------------------------------------------------------------------
@@ -665,7 +763,7 @@ if (_weatherChange != 0) then {
 			publicVariable "MCC_Lightnings";
 			publicVariable "MCC_Fog";
 
-			[[[MCC_Overcast, MCC_WindForce, MCC_Waves, MCC_Rain, MCC_Lightnings, MCC_Fog]],"MCC_fnc_setWeather",true,false] call BIS_fnc_MP;
+			[[MCC_Overcast, MCC_WindForce, MCC_Waves, MCC_Rain, MCC_Lightnings, MCC_Fog]] remoteExec ["MCC_fnc_setWeather", 0, false];
 		} else {
 			[[MCC_Overcast, MCC_WindForce, MCC_Waves]] remoteExec ["MCC_fnc_setWeather",0];
 			publicVariable "MCC_Overcast";
@@ -881,7 +979,7 @@ if (_playMusic > 0 ) then {_music = ""};
 
 _name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
 _name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
-[[_html2, (_name1 +" " + _name2), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]],"MCC_fnc_makeBriefing",false,false] spawn BIS_fnc_MP;
+[_html2, (_name1 +" " + _name2), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]] remoteExec ["MCC_fnc_makeBriefing", 0, false];
 
 
 //Broadcast missionInfo to all side

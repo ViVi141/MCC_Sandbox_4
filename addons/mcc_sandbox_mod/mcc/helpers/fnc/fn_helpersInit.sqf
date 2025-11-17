@@ -73,7 +73,7 @@ if (player == player && !( isDedicated) && !(missionNamespace getVariable ["MCC_
 		};
 
 		//Squad Leader
-		0 spawn {
+0 spawn {
 			waituntil {leader player == player && count units group player > 1 && !dialog && cameraOn == vehicle player};
 			if (profileNamespace getVariable ["MCC_FCtutorialSQL",true]) then {
 				_answer = ["<img size='10' img image=" + format ["'%1mcc\helpers\data\sqlPic.paa'", MCC_path] + "align='center'/>

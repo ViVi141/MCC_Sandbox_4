@@ -94,13 +94,13 @@ for "_i" from 0 to (count _CfgWeapons - 1) do
 			} else {
 			switch (getNumber(_CfgWeapon>>"Type")) do { 
 					case 16: {
-						U_UNDERBARREL set [count U_UNDERBARREL, _weaponDisplayName,_picture]];
+U_UNDERBARREL set [count U_UNDERBARREL, [_weaponDisplayName,_picture]];
 					};
 					case 256: {
-						U_GRENADE set [count U_GRENADE, _weaponDisplayName,_picture]];
+U_GRENADE set [count U_GRENADE, _weaponDisplayName,_picture];
 					};
-					default {
-						U_EXPLOSIVE set [count U_EPLOSIVE, _weaponDisplayName,_picture]];
+default {
+U_EXPLOSIVE set [count U_EPLOSIVE, [_weaponDisplayName,_picture]]];
 					};
 				};
 			};

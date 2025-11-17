@@ -14,8 +14,8 @@ _missionMaker = missionNamespace getVariable ["mcc_missionmaker",""];
 
 //MM is logging out
 if (_missionMaker == _p_mcc_player_name) exitWith {
-	if (_mccChat) then {
-		[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> %2 Logged out as Misson Maker.",_p_mcc_request,mcc_missionMaker], false],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+	if (_mccChat && !(isNil "_p_mcc_player") && !(isNull _p_mcc_player)) then {
+		[[if (isMultiplayer) then {netId _p_mcc_player} else {""},_p_mcc_player], format["MCC ID %1-> %2 Logged out as Misson Maker.",_p_mcc_request,mcc_missionMaker], false] remoteExec ["MCC_fnc_groupchat", 0, false];
 	};
 	missionNamespace setVariable ["mcc_missionmaker",""];
 	unassignCurator MCC_curator;
@@ -27,12 +27,14 @@ if (_missionMaker == _p_mcc_player_name) exitWith {
 if ((_missionMaker == "") || _isAdmin) exitWith {
 	missionNamespace setVariable ["mcc_missionmaker",_p_mcc_player_name];
 	_missionMaker = missionNamespace getVariable ["mcc_missionmaker",""];
-	if (_mccChat) then {
-		[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Access granted to: %2",_p_mcc_request,mcc_missionMaker], false],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+	if (_mccChat && !(isNil "_p_mcc_player") && !(isNull _p_mcc_player)) then {
+		[[if (isMultiplayer) then {netId _p_mcc_player} else {""},_p_mcc_player], format["MCC ID %1-> Access granted to: %2",_p_mcc_request,mcc_missionMaker], false] remoteExec ["MCC_fnc_groupchat", 0, true, false];
 	};
 	unassignCurator MCC_curator;
 	sleep 0.1;
-	_p_mcc_player assignCurator MCC_curator;
+	if (!(isNil "_p_mcc_player") && !(isNull _p_mcc_player)) then {
+		_p_mcc_player assignCurator MCC_curator;
+	};
 
 	publicVariable "mcc_missionmaker";
 	publicVariable "mcc_zone_pos";

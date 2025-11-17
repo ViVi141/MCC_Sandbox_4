@@ -448,7 +448,7 @@ if ( _paraMode == 2 ) then {
 
 							_unit action ["GETOUT", vehicle _unit];
 							unassignVehicle _unit;
-							[compile format ["objectFromNetID '%1' switchmove 'crew_tank01_out'", netID _unit], "BIS_fnc_spawn", true, false] call BIS_fnc_MP;
+							[compile format ["objectFromNetID '%1' switchmove 'crew_tank01_out'", netID _unit] ] remoteExec ["BIS_fnc_spawn", 0, false];
 							//_unit switchmove "crew_tank01_out";
 
 							_unit setpos [(getpos _unit select 0), (getpos _unit select 1), 0 max ((getpos _unit select 2) - 3)];
@@ -460,7 +460,7 @@ if ( _paraMode == 2 ) then {
 								sleep 0.1;
 							};
 
-							[compile format ["objectFromNetID '%1' switchmove ''", netID _unit], "BIS_fnc_spawn", true, false] call BIS_fnc_MP;
+							[compile format ["objectFromNetID '%1' switchmove ''", netID _unit] remoteExec ["BIS_fnc_spawn", 0, false]];
 							//_unit switchmove "";
 							detach _unit;
 						};

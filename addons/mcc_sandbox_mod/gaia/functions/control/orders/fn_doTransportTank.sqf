@@ -5,7 +5,7 @@ Description:
 	Organise transport Car
 
 Parameters:
-	- group (to be transported
+- group (to be transported)
 	- group (transporter)
 
 Returns:

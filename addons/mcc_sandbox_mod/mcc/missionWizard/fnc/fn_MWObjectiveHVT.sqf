@@ -110,7 +110,7 @@ if (_isCQB) then {
 			_unitPlaced = true;
 
 			//Lets spawn some body guards
-			[[getpos _unit,30,0,2,_faction, _side],"MCC_fnc_garrison",false,false] spawn BIS_fnc_MP;
+			[getpos _unit,30,0,2,_faction, _side] remoteExec ["MCC_fnc_garrison", 0, false];
 		};
 	};
 } else {
@@ -160,7 +160,7 @@ if (_isCQB) then {
 			MCC_tempName = format ["MCC_objectUnits_%1", ["MCC_objectUnitsCounter",1] call bis_fnc_counter];
 			_init = FORMAT [";%1 = _this;",MCC_tempName];
 
-			[[[netid _unit,_unit], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
+			[[netid _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 
 		} else {
 			_unit = [_spawnPos, _type, _sidePlayer,"Armed Civilian",random 360,true] call MCC_fnc_ACSingle;

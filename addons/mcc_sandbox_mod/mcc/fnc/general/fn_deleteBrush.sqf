@@ -211,37 +211,37 @@ switch _type do {
 				};
 			};
 
-			[["bf",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["bf",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"sandstorm"
 	case 14:
 		{
-			[["sandstorm",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["sandstorm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"storm"
 	case 15:
 		{
-			[["storm",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["storm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"snow"
 	case 16:
 		{
-			[["snow",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["snow",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"heatwave"
 	case 17:
 		{
-			[["heatwave",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["heatwave",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"clear"
 	case 18:
 		{
-			[["clear",false],"MCC_fnc_ppEffects",true,false] call BIS_fnc_MP;
+			["clear",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"N/V"

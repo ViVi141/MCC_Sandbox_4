@@ -3,6 +3,7 @@ find_hardcoded_text.py
 translate_with_lmstudio.py
 test_lmstudio_connection.py
 apply_localization.py
+analyze_mission_wizard_with_lmstudio.py
 
 # Python 缓存
 __pycache__/
@@ -15,6 +16,7 @@ __pycache__/
 find_hardcoded_text_README.md
 translate_with_lmstudio_README.md
 apply_localization_README.md
+analyze_mission_wizard_README.md
 hardcoded_text_report.md
 hardcoded_text_report.json
 本地化映射关系分析.md
@@ -22,6 +24,9 @@ hardcoded_text_report.json
 translated_stringtable.xml
 translation_report.md
 localization_apply_report.md
+mission_wizard_context.md
+mission_wizard_analysis_report.md
+mission_wizard_analysis_conversation.json
 
 # 备份文件
 *.bak

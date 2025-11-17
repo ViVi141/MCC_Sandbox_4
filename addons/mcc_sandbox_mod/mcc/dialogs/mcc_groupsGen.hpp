@@ -337,7 +337,7 @@ class mcc_groupGen
 			text = "$STR_MCC_ghostMode_text";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			tooltip = "$STR_MCC_ghostMode_tooltip";
-			onButtonClick = "if (mcc_missionmaker == (name player)) then {if (captive player) then {player setcaptive false;if (MCC_Chat) then {[['Mission maker is no longer cheating'],'MCC_fnc_globalHint',true,false] call BIS_fnc_MP;};} else {player setcaptive true; if (MCC_Chat) then {[['Mission maker is cheating'],'MCC_fnc_globalHint',true,false] spawn BIS_fnc_MP;}};} else {player globalchat 'Access Denied'};";
+			onButtonClick = "if (mcc_missionmaker == (name player)) then {if (captive player) then {player setcaptive false;if (MCC_Chat) then {['Mission maker is no longer cheating'] remoteExec ['MCC_fnc_globalHint', 0, false];};} else {player setcaptive true; if (MCC_Chat) then {['Mission maker is cheating'] remoteExec ['MCC_fnc_globalHint', 0, false];}};} else {player globalchat 'Access Denied'};";
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.0491758 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;

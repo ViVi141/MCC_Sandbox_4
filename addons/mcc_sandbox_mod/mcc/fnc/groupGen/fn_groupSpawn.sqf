@@ -1,6 +1,6 @@
 //===================================================================MCC_fnc_groupSpawn=========================================================================================
 // Create a group on the server
-//[[_pos,_unitsArray,_loc, _side, _isEmpty, _cache],"MCC_fnc_groupSpawn",false,false] spawn BIS_fnc_MP;
+//Example: [_pos,_unitsArray,_loc, _side, _isEmpty, _cache] remoteExec ["MCC_fnc_groupSpawn", 2, false];
 //	<in>
 //		_pos: Array		Position to spawn
 //		_unitsArray		Array of units or Cfg path

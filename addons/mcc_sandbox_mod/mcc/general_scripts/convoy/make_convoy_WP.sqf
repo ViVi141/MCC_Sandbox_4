@@ -6,7 +6,7 @@
 #define MCC_CONVOY_HVT 55
 #define MCC_CONVOY_HVTCAR 56
 private ["_convoy_wp1","_point1","_convoy_wp2","_point2","_convoy_wp3","_point3","_convoy_wp4","_point4","_convoy_wp5","_point5"];
-if !mcc_isloading then {
+if (!mcc_isloading) then {
 	if (mcc_missionmaker == (name player)) then {
 		deletemarkerlocal "marker1";	//delete precious markers
 		deletemarkerlocal "marker2";
@@ -75,7 +75,7 @@ if !mcc_isloading then {
 		_point2 =getmarkerpos "marker2";
 		sleep 0.5;
 
-		hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>
+hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>"];
 					<t color='#00CCFF'>Left click on the map to set the 2nd waypoint for the convoy</t><br/>
 					<t color='#33CC00'>Waypoints done: 2</t><br/>
 					<t color='#FF0000'>Waypoints to go: 3</t><br/>--------------------------<br/>"];
@@ -119,7 +119,7 @@ if !mcc_isloading then {
 		_point4 =getmarkerpos "marker4";
 		sleep 0.5;
 
-		hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>
+hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>"];
 					<t color='#00CCFF'>Left click on the map to set the last waypoint for the convoy</t><br/>
 					<t color='#33CC00'>Waypoints done: 4</t><br/>
 					<t color='#FF0000'>Waypoints to go: 1</t><br/>--------------------------<br/>"];
@@ -141,7 +141,7 @@ if !mcc_isloading then {
 		_point5 =getmarkerpos "marker5";
 		sleep 0.5;
 
-		hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>
+hint parseText format["Add waypoints for convoy:<br/>--------------------------<br/>%1", "All waypoint for the convoy have been set<br/><t color='#33CC00'>Waypoints done: 5</t><br/><t color='#FF0000'>Waypoints to go: 0</t><br/>--------------------------<br/>"];
 					<t color='#00CCFF'>All waypoint for the convoy have been set</t><br/>
 					<t color='#33CC00'>Waypoints done: 5</t><br/>
 					<t color='#FF0000'>Waypoints to go: 0</t><br/>--------------------------<br/>"];
@@ -154,7 +154,7 @@ if !mcc_isloading then {
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-									[[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0],""MCC_fnc_placeConvoy"",false,false] spawn BIS_fnc_MP;
+									[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
 								    "
 								  , convoy_car1
 								  , convoy_car2
@@ -172,14 +172,14 @@ if !mcc_isloading then {
 								  ];
 		} else {
 			hint "Convoy placed";
-			[[convoy_car1 select 0, convoy_car2 select 0, convoy_car3 select 0, convoy_car4 select 0, convoy_car5 select 0,_point1, _point2,[mcc_sidename] select 0, vip select 0, vipCar select 0],"MCC_fnc_placeConvoy",false,false] spawn BIS_fnc_MP;
+			[convoy_car1 select 0, convoy_car2 select 0, convoy_car3 select 0, convoy_car4 select 0, convoy_car5 select 0,_point1, _point2,[mcc_sidename] select 0, vip select 0, vipCar select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
 			mcc_safe = mcc_safe + FORMAT ["
 									point2 =%7;
 									point3 =%8;
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-									[[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0],""MCC_fnc_placeConvoy"",false,false] spawn BIS_fnc_MP;
+									[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
 								    sleep 1;
 								  "
 								  , convoy_car1

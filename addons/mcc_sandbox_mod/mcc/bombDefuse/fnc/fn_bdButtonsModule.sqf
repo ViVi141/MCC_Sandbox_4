@@ -65,7 +65,22 @@ _ctrl = _display ctrlCreate ["RscButtonMenu", _idc+10,_ctrlGroup];
 _ctrl ctrlSetPosition [0.08*_ratio, 0.16*_ratio, 0.08*_ratio, 0.05*_ratio];
 _ctrl ctrlSetTextColor [0,0.8,0,0.8];
 _ctrl ctrlsetText "Submit";
-_ctrl ctrlAddEventHandler ["MouseButtonUp",format [
+_ctrl ctrlAddEventHandler ['MouseButtonUp',format [
+        '
+        _display = (ctrlParent (_this select 0));
+        _input = [];
+        {
+            _input pushback (cbChecked (_display displayctrl _x));
+        } forEach %1;
+
+        if (str _input == str %2) then {
+            (_display displayctrl %3) ctrlshow false;
+            playsound ''RscDisplayCurator_ping02'';
+        } else {
+            player setVariable [''MCC_bombDefuseStrikes'',(player getVariable [''MCC_bombDefuseStrikes'',0])+1];
+            playsound ''AlarmCar'';
+        };
+    ',_ctrls,_answers,ctrlIDC _ctrlGroup]];
         "
         _display = (ctrlParent (_this select 0));
         _input = [];

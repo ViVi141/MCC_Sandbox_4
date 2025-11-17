@@ -373,9 +373,9 @@ switch (_function) do
 
 				// For each vehicle add an action to detach from the ship - MP compliant
 				[
-					[_cargo,[format ["%1 %2",localize "STR_CUP_CFG_RELEASEVEHICLE", _displayName], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] call BIS_fnc_MP},nil, 1.5, false, true]],
+					[_cargo, [format ["%1 %2", localize "STR_CUP_CFG_RELEASEVEHICLE", _displayName], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] remoteExec ["CUP_fnc_detachFromShip", 0, true]}, nil, 1.5, false, true]] remoteExec ["addAction", _cargo, 0, true];
 					"addAction", true, true
-				] call BIS_fnc_MP;
+				] remoteExec ["addAction", _cargo, 0, true];
 			};
 			*/
 		};

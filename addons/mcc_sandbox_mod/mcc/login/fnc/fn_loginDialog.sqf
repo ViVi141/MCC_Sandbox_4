@@ -15,7 +15,7 @@ _ar = [
 	];
 
 // Send data over the network, or when on server, execute directly
-_null = [_ar,"mcc_fnc_login",false,false] call BIS_fnc_MP;
+_null = [_ar,"mcc_fnc_login",false,false] remoteExec ["mcc_fnc_login", 2, false];
 
 //Close dialog
 _t = time + 5;

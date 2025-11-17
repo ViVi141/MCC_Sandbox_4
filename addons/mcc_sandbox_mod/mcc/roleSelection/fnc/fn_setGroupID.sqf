@@ -1,6 +1,6 @@
 //==================================================================MCC_fnc_setGroupID======================================================================================
 //Set group ID - SERVER ONLY
-// Example: [[group,groupID], "MCC_fnc_setGroupID", false, false] spawn BIS_fnc_MP;
+[[group,groupID], "MCC_fnc_setGroupID", false, false] remoteExec ["MCC_fnc_setGroupID", 2, false];
 // Params: 
 //==============================================================================================================================================================================	
 private ["_group","_groupID"];

@@ -47,9 +47,9 @@ if !mcc_isloading then
 			{
 				hint "Evac Vehicle spawned on LHD";
 				_pos = getmarkerpos "pos4";
-				[[MCCEvacHeliType, _pos],"MCC_fnc_evacSpawn",false,false] spawn BIS_fnc_MP;
+				[MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 2, false];
 				mcc_safe = mcc_safe + FORMAT ["
-											[['%1',%2],'MCC_fnc_evacSpawn',false,false] spawn BIS_fnc_MP;
+											['%1',%2] remoteExec ["MCC_fnc_evacSpawn", 2, false];
 											"
 											, MCCEvacHeliType
 											, _pos
@@ -66,9 +66,9 @@ if !mcc_isloading then
 		{
 			hint "click on map to spawn evac vechicle";
 			onMapSingleClick " 	hint localize "STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED";
-								[[MCCEvacHeliType, _pos],""MCC_fnc_evacSpawn"",false,false] spawn BIS_fnc_MP;
+								[MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 0, false, false];
 								mcc_safe=mcc_safe + FORMAT ['
-									[[""%1"",%2],""MCC_fnc_evacSpawn"",false,false] spawn BIS_fnc_MP;
+									[["%1",%2],"MCC_fnc_evacSpawn",false,false] remoteExec ["MCC_fnc_evacSpawn", 2];
 									sleep 1;'
 									, MCCEvacHeliType
 									, _pos

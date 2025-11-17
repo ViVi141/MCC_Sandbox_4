@@ -1,6 +1,6 @@
 //==================================================================MCC_fnc_globalExecute======================================================================================
 // Global execute a command on selected clients or server
-// Example: [[mode,code], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+[[mode,code], "MCC_fnc_globalExecute", true, false] remoteExec ["MCC_fnc_globalExecute", 0, false];
 // Params:
 //	mode: number, 0:clients only, 1: server only 2: all clients and server
 //	code: code, code to be executed

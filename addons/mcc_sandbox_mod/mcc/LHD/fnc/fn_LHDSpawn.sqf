@@ -318,9 +318,9 @@ switch (_LHDType) do
 			/*
 			// For each vehicle add an action to detach from the ship - MP compliant
 			[
-				[_vehicle,[format ["%1 %2",localize "STR_CUP_CFG_RELEASEVEHICLE", (getText (configFile >> "CfgVehicles" >> "CUP_B_TowingTractor_USMC" >> "displayName"))], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] call BIS_fnc_MP},nil, 1.5, false, true]],
+				[_vehicle, format ["%1 %2", localize "STR_CUP_CFG_RELEASEVEHICLE", (getText (configFile >> "CfgVehicles" >> "CUP_B_TowingTractor_USMC" >> "displayName"))], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] remoteExec ["CUP_fnc_detachFromShip", 0, true]}, nil, 1.5, false, true]
 				"addAction", true, true
-			] call BIS_fnc_MP;
+			] remoteExec ["CUP_fnc_detachFromShip", _this select 0, false, true];
 			*/
 
 			{_x addCuratorEditableObjects [[_vehicle],false]} forEach allCurators;

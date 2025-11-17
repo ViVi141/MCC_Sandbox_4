@@ -248,7 +248,7 @@ _decks = switch (_shipClass) do
 	_ctrl ctrlsetText _x;
 
 
-	_ctrl ctrlAddEventHandler ["MouseButtonUp",format [
+_ctrl ctrlAddEventHandler ['MouseButtonUp',format [
 	    "
 	   closeDialog 0;
 	   [%1,%2,%3,false] spawn MCC_fnc_LHDspawnMenuInit;
@@ -265,7 +265,7 @@ if (_operator <=1) then {
 		_ctrl ctrlsetText (_x getVariable ["MCC_LHDDisplayName","Ship"]);
 
 
-		_ctrl ctrlAddEventHandler ["MouseButtonUp",format [
+_ctrl ctrlAddEventHandler ['MouseButtonUp',format ["closeDialog 0;[%1, %2, %3] spawn MCC_fnc_LHDspawnMenuInit;"] ,0,(_availableLHD find _x),_operator]];
 		    "
 		   closeDialog 0;
 		   [%1, %2, %3] spawn MCC_fnc_LHDspawnMenuInit;

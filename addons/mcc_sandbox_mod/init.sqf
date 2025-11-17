@@ -959,10 +959,10 @@ if (hasInterface) then {
 
 			//Handle Heal
 			_eh = player addEventHandler ["HandleHeal",{_this spawn {
-											params ["_unit","_healer"];
-											if ((_unit != _healer) && (missionNamespace getVariable ["CP_activated",false])) then {
-												[getPlayerUID _healer,200,"For Healing"] remoteExec ["MCC_fnc_addRating", _healer, false];
-											};
+										params ["_unit","_healer"];
+										if ((_unit != _healer) && (missionNamespace getVariable ["CP_activated",false]) && !(isNull _healer)) then {
+											[getPlayerUID _healer,200,"For Healing"] remoteExec ["MCC_fnc_addRating", _healer, false];
+										};
 
 											if (missionNamespace getVariable ["MCC_medicSystemEnabled",false]) then {
 												_unit setVariable ["MCC_medicBleeding",0,true];
@@ -1002,7 +1002,7 @@ if (hasInterface) then {
 
 			//Curator
 			if(isMultiplayer) then {
-				[compile format ["MCC_curator addCuratorEditableObjects [[objectFromNetID '%1'],true]", netID player], "BIS_fnc_spawn", false, false] call BIS_fnc_MP;
+				_null = [(compile format ["MCC_curator addCuratorEditableObjects [[objectFromNetId '%1'],false];",netid player])] remoteExec ["BIS_fnc_spawn", 2, false];
 			};
 		};
 
