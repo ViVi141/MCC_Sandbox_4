@@ -19,7 +19,7 @@ VM_SpectatorCamerasEnabled = False;
 
 f_var_debugMode = 0;
 
-cutText ["Initializing Spectator Script...","BLACK IN", 2];
+cutText [localize "STR_MCC_INITIALIZING_SPECTATOR_SCRIPT","BLACK IN", 2];
 
 // Globals etc.
 vm_count = 0; //Debug loop counter

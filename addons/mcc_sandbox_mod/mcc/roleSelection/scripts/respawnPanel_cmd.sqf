@@ -128,7 +128,7 @@ if (((_activeSpawn getVariable ["type","FOB"]) == "Rally_Point") && ((player == 
 };
 
 //Lets spawn
-cutText ["Deploying ....","BLACK IN",5];
+cutText [localize "STR_MCC_ROLESELECTION_DEPLOYING","BLACK IN",5];
 
 private _teleportAtStart = _activeSpawn getVariable ["teleport",1];
 

@@ -65,7 +65,7 @@ if !mcc_isloading then
 		if (_option == 1) then
 		{
 			hint "click on map to spawn evac vechicle";
-			onMapSingleClick " 	hint ""Evac Vehicle spawned."";
+			onMapSingleClick " 	hint localize "STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED";
 								[[MCCEvacHeliType, _pos],""MCC_fnc_evacSpawn"",false,false] spawn BIS_fnc_MP;
 								mcc_safe=mcc_safe + FORMAT ['
 									[[""%1"",%2],""MCC_fnc_evacSpawn"",false,false] spawn BIS_fnc_MP;

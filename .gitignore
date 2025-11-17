@@ -1,0 +1,62 @@
+# Python 辅助脚本（根目录）
+find_hardcoded_text.py
+translate_with_lmstudio.py
+test_lmstudio_connection.py
+apply_localization.py
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 辅助文档和报告
+find_hardcoded_text_README.md
+translate_with_lmstudio_README.md
+apply_localization_README.md
+hardcoded_text_report.md
+hardcoded_text_report.json
+本地化映射关系分析.md
+本地化映射示例.md
+translated_stringtable.xml
+translation_report.md
+localization_apply_report.md
+
+# 备份文件
+*.bak
+*.backup
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows 特定
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS 特定
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux 特定
+*~
+
+# 编译输出（如果存在）
+*.pbo
+*.bisign
+
+# 但保留项目主 README
+!README.md
+

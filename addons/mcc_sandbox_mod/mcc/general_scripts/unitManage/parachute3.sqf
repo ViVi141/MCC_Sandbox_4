@@ -19,7 +19,7 @@ if (!local _unit || _unit getVariable ["mcc_isparajuming", false]) exitWith {};
 _unit setVariable ["mcc_isparajuming", true]; 
 
 if (isPlayer _unit) then {							//If is player make some effects
-	cutText ["Get ready to jump","BLACK OUT",1];
+	cutText [localize "STR_MCC_GENERAL_SCRIPTS_GET_READY_TO_JUMP","BLACK OUT",1];
 	sleep 3; 
 	playmusic "ac130";
 }; 
@@ -123,7 +123,7 @@ if (_halo) then
 			if ( !(alive _unit) || ( time > _timeOut )) exitwith {}; 
 			
 			//Remove HALO gear and add normal gear
-			cutText ["Changing Gear","BLACK OUT",0.5];	
+			cutText [localize "STR_MCC_FNC_CHANGING_GEAR","BLACK OUT",0.5];	
 
 			if (_headgear != "") then { removeHeadgear _unit; _unit addHeadgear _headgear };
 			if (_uniform != "") then { removeUniform _unit; _unit forceAddUniform  _uniform };

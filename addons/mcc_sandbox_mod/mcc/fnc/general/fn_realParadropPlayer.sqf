@@ -111,7 +111,7 @@ while {!_jumpReady} do {
 /*
 //Make them stand on the ramp
 if (isplayer _unit) then {
-	titleText ["Get Ready To Jump","BLACK FADED",2];
+	titleText [localize "STR_MCC_FNC_GET_READY_TO_JUMP","BLACK FADED",2];
 };
 
 while {vehicle _unit != _unit} do {
@@ -174,7 +174,7 @@ waituntil {(_plane getVariable "MCCJumperNumber") == _unitNumber || time > _time
 /*
 
 if (isplayer _unit) then {
-	titleText ["Jump Jump Jump !!!","BLACK FADED",1];
+	titleText [localize "STR_MCC_FNC_JUMP_JUMP_JUMP","BLACK FADED",1];
 	sleep 1;
 	titleText ["","BLACK IN",1];
 };

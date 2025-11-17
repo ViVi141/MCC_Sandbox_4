@@ -1943,7 +1943,6 @@
             </Key>
         </container>
     </package>
-    
     <Package name="Console">
         <Container name="Main">
             <Key ID="STR_MCC_CONSOLE_MAIN_MENU">
@@ -2283,8 +2282,6 @@
                 <Chinese>打開對話框失敗</Chinese>
             </Key>
         </Container>
-        
-        <!-- RTS Interface Localization -->
         <Container name="RTS">
             <Key ID="STR_MCC_RTS_OFFLINE">
                 <Original>offline</Original>
@@ -2305,8 +2302,6 @@
                 <Chinese>單位</Chinese>
             </Key>
         </Container>
-        
-        <!-- Role Selection Interface Localization -->
         <Container name="Role">
             <Key ID="STR_MCC_ROLE_DEPLOY">
                 <Original>Deploy</Original>
@@ -2351,8 +2346,6 @@
                 <Chinese>重量</Chinese>
             </Key>
         </Container>
-        
-        <!-- Logistics Interface Localization -->
         <Container name="Logistics">
             <Key ID="STR_MCC_LOGISTICS_TITLE">
                 <Original>Logistics</Original>
@@ -2367,10 +2360,10 @@
                 <Chinese>關閉</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_EMPTY">
-                <Original></Original>
-                <English></English>
-                <Chinesesimp></Chinesesimp>
-                <Chinese></Chinese>
+                <Original />
+                <English />
+                <Chinesesimp />
+                <Chinese />
             </Key>
             <Key ID="STR_MCC_LOGISTICS_X">
                 <Original>X</Original>
@@ -2379,8 +2372,6 @@
                 <Chinese>X</Chinese>
             </Key>
         </Container>
-        
-        <!-- Login Dialog Localization -->
         <Container name="Login">
             <Key ID="STR_MCC_LOGIN_VIEW_DISTANCE">
                 <Original>视野距离:</Original>
@@ -2431,8 +2422,6 @@
                 <Chinese>作為任務製作者登錄</Chinese>
             </Key>
         </Container>
-        
-        <!-- Test Dialog Localization -->
         <Container name="Test">
             <Key ID="STR_MCC_TEST_FACTION">
                 <Original>Faction:</Original>
@@ -2453,8 +2442,6 @@
                 <Chinese>X</Chinese>
             </Key>
         </Container>
-        
-        <!-- Save/Load Screen Localization -->
         <Container name="SaveLoad">
             <Key ID="STR_MCC_SAVE_NAME">
                 <Original>Save Name:</Original>
@@ -2534,7 +2521,7 @@
                 <Chinesesimp>从数据库清除默认持久化数据</Chinesesimp>
                 <Chinese>從數據庫清除默認持久化數據</Chinese>
             </Key>
-        </Container> 
+        </Container>
         <Container name="MCC_Menu">
             <Key ID="STR_MCC_SAVE_LOAD_TITLE">
                 <Original>Save / Load MCC configuration</Original>
@@ -2675,16 +2662,16 @@
                 <Chinese>類:</Chinese>
             </Key>
             <Key ID="STR_MCC_BOX_GEN_ADD_ALL">
-                <Original>>></Original>
-                <English>>></English>
-                <Chinesesimp>>></Chinesesimp>
-                <Chinese>>></Chinese>
+                <Original>&gt;&gt;</Original>
+                <English>&gt;&gt;</English>
+                <Chinesesimp>&gt;&gt;</Chinesesimp>
+                <Chinese>&gt;&gt;</Chinese>
             </Key>
             <Key ID="STR_MCC_BOX_GEN_ADD_ONE">
-                <Original>></Original>
-                <English>></English>
-                <Chinesesimp>></Chinesesimp>
-                <Chinese>></Chinese>
+                <Original>&gt;</Original>
+                <English>&gt;</English>
+                <Chinesesimp>&gt;</Chinesesimp>
+                <Chinese>&gt;</Chinese>
             </Key>
             <Key ID="STR_MCC_BOX_GEN_CLEAR">
                 <Original>Clear</Original>
@@ -3220,7 +3207,6 @@
                 <Chinesesimp>初始化预设:</Chinesesimp>
                 <Chinese>初始化預設:</Chinese>
             </Key>
-            <!-- Mission Wizard Control Panel Localization -->
             <Key ID="STR_MCC_MW_OBJECTIVE_1">
                 <Original>Objective 1:</Original>
                 <English>Objective 1:</English>
@@ -3311,7 +3297,6 @@
                 <Chinesesimp>地区:</Chinesesimp>
                 <Chinese>地區:</Chinese>
             </Key>
-            <!-- Mission Type Localization -->
             <Key ID="STR_MCC_MW_MISSION_NONE">
                 <Original>None</Original>
                 <English>None</English>
@@ -3402,7 +3387,6 @@
                 <Chinesesimp>后勤</Chinesesimp>
                 <Chinese>後勤</Chinese>
             </Key>
-            <!-- Additional Mission Wizard Options Localization -->
             <Key ID="STR_MCC_MW_ARTILLERY_NO">
                 <Original>No</Original>
                 <English>No</English>
@@ -3463,7 +3447,6 @@
                 <Chinesesimp>雪</Chinesesimp>
                 <Chinese>雪</Chinese>
             </Key>
-            <!-- Marker Generator Localization -->
             <Key ID="STR_MCC_MARKER_GENERATOR">
                 <Original>Marker Generator:</Original>
                 <English>Marker Generator:</English>
@@ -3542,7 +3525,6 @@
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
-            <!-- Task Generator Localization -->
             <Key ID="STR_MCC_TASK_GENERATOR">
                 <Original>Task Generator:</Original>
                 <English>Task Generator:</English>
@@ -3657,7 +3639,6 @@
                 <Chinesesimp>删除选定任务</Chinesesimp>
                 <Chinese>刪除選定任務</Chinese>
             </Key>
-            <!-- Front Line Dialog Localization -->
             <Key ID="STR_MCC_MINE_FIELDS">
                 <Original>Mine Fields:</Original>
                 <English>Mine Fields:</English>
@@ -3676,7 +3657,6 @@
                 <Chinesesimp>单击并按住鼠标左键绘制前线</Chinesesimp>
                 <Chinese>單擊並按住滑鼠左鍵繪製前線</Chinese>
             </Key>
-            <!-- Waypoints Generator Localization -->
             <Key ID="STR_MCC_WP_SPEED">
                 <Original>Speed:</Original>
                 <English>Speed:</English>
@@ -3689,7 +3669,6 @@
                 <Chinesesimp>行为:</Chinesesimp>
                 <Chinese>行為:</Chinese>
             </Key>
-            <!-- Vehicle Spawner Localization -->
             <Key ID="STR_MCC_AMMO_ICON">
                 <Original>\mcc_sandbox_mod\data\IconAmmo.paa</Original>
                 <English>\mcc_sandbox_mod\data\IconAmmo.paa</English>
@@ -3750,14 +3729,12 @@
                 <Chinesesimp>类别</Chinesesimp>
                 <Chinese>類別</Chinese>
             </Key>
-            <!-- 3D Document Localization -->
             <Key ID="STR_MCC_3D_SAVE_TOOLTIP">
                 <Original>Save composition as player as anchor point, radius 200m to config file namespace - first select a slot from the list above</Original>
                 <English>Save composition as player as anchor point, radius 200m to config file namespace - first select a slot from the list above</English>
                 <Chinesesimp>将构图保存为玩家作为锚点，半径200米到配置文件名称空间-首先从上面的列表中选择一个插槽</Chinesesimp>
                 <Chinese>將構圖保存為玩家作為錨點，半徑200米到配置文件名稱空間-首先從上面的列表中選擇一個插槽</Chinese>
             </Key>
-            <!-- Airdrop Generator Localization -->
             <Key ID="STR_MCC_AIRDROP_SUPPLY">
                 <Original>Airdrop Supply:</Original>
                 <English>Airdrop Supply:</English>
@@ -3824,7 +3801,6 @@
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
-            <!-- Artillery Generator Localization -->
             <Key ID="STR_MCC_ARTILLERY_CALL_TOOLTIP">
                 <Original>Call Artillery on map position hold Ctrl for multi calls</Original>
                 <English>Call Artillery on map position hold Ctrl for multi calls</English>
@@ -3837,7 +3813,6 @@
                 <Chinesesimp>添加火炮到MCC控制台</Chinesesimp>
                 <Chinese>添加火炮到MCC控制台</Chinese>
             </Key>
-            <!-- CAS Generator Localization -->
             <Key ID="STR_MCC_CAS_CALL_TOOLTIP">
                 <Original>Call Close Air Support - drag and draw a line on the minimap to call close air support</Original>
                 <English>Call Close Air Support - drag and draw a line on the minimap to call close air support</English>
@@ -3856,7 +3831,6 @@
                 <Chinesesimp>呼叫距离空中支援-拖动并在小地图上画一条线以呼叫距离空中支援</Chinesesimp>
                 <Chinese>呼叫距離空中支援-拖動並在小地圖上畫一條線以呼叫距離空中支援</Chinese>
             </Key>
-            <!-- Convoy Generator Localization -->
             <Key ID="STR_MCC_CONVOY_SPAWN_TOOLTIP">
                 <Original>Spawn convoy and set WP</Original>
                 <English>Spawn convoy and set WP</English>
@@ -3887,7 +3861,6 @@
                 <Chinesesimp>开始车队移动</Chinesesimp>
                 <Chinese>開始車隊移動</Chinese>
             </Key>
-            <!-- IED Generator Localization -->
             <Key ID="STR_MCC_IED_PROXIMITY">
                 <Original>Proximity:</Original>
                 <English>Proximity:</English>
@@ -3936,7 +3909,6 @@
                 <Chinesesimp>*按住Shift键并单击鼠标左键，然后画一条线来链接IED和/或伏击方</Chinesesimp>
                 <Chinese>*按住Shift鍵並單擊滑鼠左鍵，然後畫一條線來鏈接IED和/或伏擊方</Chinese>
             </Key>
-            <!-- Spawn Generator Localization -->
             <Key ID="STR_MCC_CLEAR_LIST_TOOLTIP">
                 <Original>Remove all units from the list</Original>
                 <English>Remove all units from the list</English>
@@ -3979,7 +3951,6 @@
                 <Chinesesimp>在选定区域创建群组</Chinesesimp>
                 <Chinese>在選定區域創建群組</Chinese>
             </Key>
-            <!-- Weather Generator Localization -->
             <Key ID="STR_MCC_WEATHER">
                 <Original>Weather:</Original>
                 <English>Weather:</English>
@@ -4034,7 +4005,6 @@
                 <Chinesesimp>最大</Chinesesimp>
                 <Chinese>最大</Chinese>
             </Key>
-            <!-- Time Generator Localization -->
             <Key ID="STR_MCC_SLASH">
                 <Original>/</Original>
                 <English>/</English>
@@ -4047,7 +4017,6 @@
                 <Chinesesimp>:</Chinesesimp>
                 <Chinese>:</Chinese>
             </Key>
-            <!-- Triggers Generator Localization -->
             <Key ID="STR_MCC_TRIGGERS_GENERATOR">
                 <Original>Triggers Generator:</Original>
                 <English>Triggers Generator:</English>
@@ -4078,7 +4047,6 @@
                 <Chinesesimp>将声音或音乐链接到选定区域</Chinesesimp>
                 <Chinese>將聲音或音樂鏈接到選定區域</Chinese>
             </Key>
-            <!-- Delete Generator Localization -->
             <Key ID="STR_MCC_USE_BRUSH">
                 <Original>Use Brush:</Original>
                 <English>Use Brush:</English>
@@ -4097,7 +4065,6 @@
                 <Chinesesimp>将刷子刷到某个区域</Chinesesimp>
                 <Chinese>將刷子刷到某個區域</Chinese>
             </Key>
-            <!-- Evac Generator Localization -->
             <Key ID="STR_MCC_EVAC_SPAWN_TOOLTIP">
                 <Original>Spawn Evac Vehicle on map click</Original>
                 <English>Spawn Evac Vehicle on map click</English>
@@ -4158,7 +4125,6 @@
                 <Chinesesimp>复活撤离驾驶员</Chinesesimp>
                 <Chinese>復活撤離駕駛員</Chinese>
             </Key>
-            <!-- Debug Generator Localization -->
             <Key ID="STR_MCC_DEBUG_TITLE">
                 <Original>Debug:</Original>
                 <English>Debug:</English>
@@ -4243,7 +4209,6 @@
                 <Chinesesimp>在所有客户端和服务器上执行命令行短语</Chinesesimp>
                 <Chinese>在所有客戶端和服務器上執行命令行短語</Chinese>
             </Key>
-            <!-- Respawn Generator Localization -->
             <Key ID="STR_MCC_START_LOCATIONS">
                 <Original>Start Locations:</Original>
                 <English>Start Locations:</English>
@@ -4292,7 +4257,6 @@
                 <Chinesesimp>如果在MCC设置中启用，则在所有玩家上启用重生和强制对话框</Chinesesimp>
                 <Chinese>如果在MCC設置中啟用，則在所有玩家上啟用重生和強制對話框</Chinese>
             </Key>
-            <!-- Jukebox Generator Localization -->
             <Key ID="STR_MCC_JUKEBOX">
                 <Original>Jukebox:</Original>
                 <English>Jukebox:</English>
@@ -4371,12 +4335,11 @@
                 <Chinesesimp>停止曲目</Chinesesimp>
                 <Chinese>停止曲目</Chinese>
             </Key>
-            <!-- 3D Dialog Localization -->
             <Key ID="STR_MCC_CARGO_ARROW">
-                <Original>Cargo--></Original>
-                <English>Cargo--></English>
-                <Chinesesimp>货物--></Chinesesimp>
-                <Chinese>貨物--></Chinese>
+                <Original>Cargo--&gt;</Original>
+                <English>Cargo--&gt;</English>
+                <Chinesesimp>货物--&gt;</Chinesesimp>
+                <Chinese>貨物--&gt;</Chinese>
             </Key>
             <Key ID="STR_MCC_ZEUS">
                 <Original>Zeus</Original>
@@ -4390,14 +4353,12 @@
                 <Chinesesimp>打开 宙斯</Chinesesimp>
                 <Chinese>打開 宙斯</Chinese>
             </Key>
-            <!-- Main Dialog Localization -->
             <Key ID="STR_MCC_DISABLED">
                 <Original>Disabled</Original>
                 <English>Disabled</English>
                 <Chinesesimp>已禁用</Chinesesimp>
                 <Chinese>已禁用</Chinese>
             </Key>
-            <!-- Group Gen Info Localization -->
             <Key ID="STR_MCC_GIVE_TO_PLAYER_TOOLTIP">
                 <Original>Give the selected group to player control via M-Tac MCC handheld console</Original>
                 <English>Give the selected group to player control via M-Tac MCC handheld console</English>
@@ -4410,7 +4371,6 @@
                 <Chinesesimp>将所选组交给缓存系统</Chinesesimp>
                 <Chinese>將所選組交給緩存系統</Chinese>
             </Key>
-            <!-- Unit Management Localization -->
             <Key ID="STR_MCC_UNITS">
                 <Original>Units</Original>
                 <English>Units</English>
@@ -4447,21 +4407,18 @@
                 <Chinesesimp>热成像</Chinesesimp>
                 <Chinese>熱成像</Chinese>
             </Key>
-            <!-- Paradrop Script Localization -->
             <Key ID="STR_MCC_PARADROP_TODO">
                 <Original>ToDo:</Original>
                 <English>ToDo:</English>
                 <Chinesesimp>待办:</Chinesesimp>
                 <Chinese>待辦:</Chinese>
             </Key>
-            <!-- Spectator Module Localization -->
             <Key ID="STR_MCC_SPECTATOR_TODO">
-                <Original>ToDo: check if (behaviour _unit) typeOf boolean instead of Array -> if so some error so do ignore</Original>
-                <English>ToDo: check if (behaviour _unit) typeOf boolean instead of Array -> if so some error so do ignore</English>
-                <Chinesesimp>待办: 检查 (behaviour _unit) 类型是否为布尔值而不是数组 -> 如果是则忽略错误</Chinesesimp>
-                <Chinese>待辦: 檢查 (behaviour _unit) 類型是否為布爾值而不是數組 -> 如果是則忽略錯誤</Chinese>
+                <Original>ToDo: check if (behaviour _unit) typeOf boolean instead of Array -&gt; if so some error so do ignore</Original>
+                <English>ToDo: check if (behaviour _unit) typeOf boolean instead of Array -&gt; if so some error so do ignore</English>
+                <Chinesesimp>待办: 检查 (behaviour _unit) 类型是否为布尔值而不是数组 -&gt; 如果是则忽略错误</Chinesesimp>
+                <Chinese>待辦: 檢查 (behaviour _unit) 類型是否為布爾值而不是數組 -&gt; 如果是則忽略錯誤</Chinese>
             </Key>
-            <!-- LHD Module Localization -->
             <Key ID="STR_MCC_LHD_CREDITS">
                 <Original>Credits</Original>
                 <English>Credits</English>
@@ -4480,7 +4437,6 @@
                 <Chinesesimp>类别</Chinesesimp>
                 <Chinese>類別</Chinese>
             </Key>
-            <!-- Client Settings Dialog Localization -->
             <Key ID="STR_MCC_CLIENT_SETTINGS">
                 <Original>客户端设置:</Original>
                 <English>Client Settings:</English>
@@ -4505,21 +4461,18 @@
                 <Chinesesimp>关闭</Chinesesimp>
                 <Chinese>關閉</Chinese>
             </Key>
-            <!-- 3D Document Tooltip Localization -->
             <Key ID="STR_MCC_3D_LOAD_TOOLTIP">
                 <Original>将组合从配置文件名称空间加载到所选车辆的初始化行-首先从上述列表中选择一个插槽</Original>
                 <English>Load composition from config file namespace to selected vehicle's initialization line - first select a slot from the list above</English>
                 <Chinesesimp>将组合从配置文件名称空间加载到所选车辆的初始化行-首先从上述列表中选择一个插槽</Chinesesimp>
                 <Chinese>將組合從配置文件名稱空間加載到所選車輛的初始化行-首先從上述列表中選擇一個插槽</Chinese>
             </Key>
-            <!-- Mission Wizard Main Dialog Localization -->
             <Key ID="STR_MCC_MW_GENERATE_TOOLTIP">
                 <Original>Generate a mission</Original>
                 <English>Generate a mission</English>
                 <Chinesesimp>生成任务</Chinesesimp>
                 <Chinese>生成任務</Chinese>
             </Key>
-            <!-- BIS Garage Script Localization -->
             <Key ID="STR_MCC_BIS_ALL_CREW">
                 <Original>All crew</Original>
                 <English>All crew</English>
@@ -4538,14 +4491,12 @@
                 <Chinesesimp>无法将%1的设置导入到%2！</Chinesesimp>
                 <Chinese>無法將%1的設置導入到%2！</Chinese>
             </Key>
-            <!-- 3D Dialog Additional Localization -->
             <Key ID="STR_MCC_3D_FILE_ARROW">
-                <Original>文件 --></Original>
-                <English>File --></English>
-                <Chinesesimp>文件 --></Chinesesimp>
-                <Chinese>文件 --></Chinese>
+                <Original>文件 --&gt;</Original>
+                <English>File --&gt;</English>
+                <Chinesesimp>文件 --&gt;</Chinesesimp>
+                <Chinese>文件 --&gt;</Chinese>
             </Key>
-            <!-- Main Dialog Additional Localization -->
             <Key ID="STR_MCC_INTERACTION_SELF">
                 <Original>Interaction Self:</Original>
                 <English>Interaction Self:</English>
@@ -4558,7 +4509,6 @@
                 <Chinesesimp>掩护系统:</Chinesesimp>
                 <Chinese>掩護系統:</Chinese>
             </Key>
-            <!-- Front Line Dialog Additional Localization -->
             <Key ID="STR_MCC_FORTIFICATIONS">
                 <Original>防御工事:</Original>
                 <English>Fortifications:</English>
@@ -4571,7 +4521,6 @@
                 <Chinesesimp>防御工事 标识:</Chinesesimp>
                 <Chinese>防禦工事 標識:</Chinese>
             </Key>
-            <!-- Group Gen Info Additional Localization -->
             <Key ID="STR_MCC_GAIA_CONTROL_TOOLTIP">
                 <Original>将所选组与所选区域和行为交给GAIA控制</Original>
                 <English>Give selected group with selected zone and behavior to GAIA control</English>
@@ -4584,7 +4533,6 @@
                 <Chinesesimp>重生超过0的组如果被取消，将继续重生</Chinesesimp>
                 <Chinese>重生超過0的組如果被取消，將繼續重生</Chinese>
             </Key>
-            <!-- Spawn Generator Additional Localization -->
             <Key ID="STR_MCC_ADD_TO_LIST_TOOLTIP">
                 <Original>Add the selected unit to the list</Original>
                 <English>Add the selected unit to the list</English>
@@ -4609,7 +4557,6 @@
                 <Chinesesimp>缓存:</Chinesesimp>
                 <Chinese>緩存:</Chinese>
             </Key>
-            <!-- Triggers Generator Additional Localization -->
             <Key ID="STR_MCC_TRIGGER_SHAPE">
                 <Original>Shape:</Original>
                 <English>Shape:</English>
@@ -4664,7 +4611,6 @@
                 <Chinesesimp>时间最大:</Chinesesimp>
                 <Chinese>時間最大:</Chinese>
             </Key>
-            <!-- Waypoints Generator Additional Localization -->
             <Key ID="STR_MCC_WAY_POINTS">
                 <Original>Way Points:</Original>
                 <English>Way Points:</English>
@@ -4719,7 +4665,6 @@
                 <Chinesesimp>队形:</Chinesesimp>
                 <Chinese>隊形:</Chinese>
             </Key>
-            <!-- LHD Module Additional Localization -->
             <Key ID="STR_MCC_PURCHASE">
                 <Original>Purchase</Original>
                 <English>Purchase</English>
@@ -4780,7 +4725,6 @@
                 <Chinesesimp>资源</Chinesesimp>
                 <Chinese>資源</Chinese>
             </Key>
-            <!-- BIS Garage Script Additional Localization -->
             <Key ID="STR_MCC_BIS_ONLY_PERSON_TURRET">
                 <Original>onlyPersonTurret</Original>
                 <English>onlyPersonTurret</English>
@@ -4799,12 +4743,189 @@
                 <Chinesesimp>检测旧的createVehicle语法</Chinesesimp>
                 <Chinese>檢測舊的createVehicle語法</Chinese>
             </Key>
-            <!-- Jukebox Generator Additional Localization -->
             <Key ID="STR_MCC_ACTIVATE">
                 <Original>激活:</Original>
                 <English>Activate:</English>
                 <Chinesesimp>激活:</Chinesesimp>
                 <Chinese>激活:</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="HardcodedTextTranslations">
+        <Container name="Translations">
+            <Key ID="STR_MCC_YOU_DIED">
+                <Original>You Died...</Original>
+                <English>You Died...</English>
+                <Chinesesimp>你死了...</Chinesesimp>
+                <Chinese>你死了...</Chinese>
+            </Key>
+            <Key ID="STR_MCC_CFG_WILL_BE_USED_IN_THE_MISSION_WIZARD">
+                <Original>will be used in the mission wizard</Original>
+                <English>will be used in the mission wizard</English>
+                <Chinesesimp>将在任务向导中使用</Chinesesimp>
+                <Chinese>將在任務向導中使用</Chinese>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_MCC_DELETE_DRAWING_TRUE">
+                <Original>; MCC_delete_drawing = true</Original>
+                <English>; MCC_delete_drawing = true</English>
+                <Chinesesimp>删除绘图</Chinesesimp>
+                <Chinese>刪除繪圖</Chinese>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_ONMAPSINGLECLICK">
+                <Original>;onMapSingleClick</Original>
+                <English>;onMapSingleClick</English>
+                <Chinesesimp>地图单击</Chinesesimp>
+                <Chinese>地圖單擊</Chinese>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_TRUE">
+                <Original>;true;</Original>
+                <English>;true;</English>
+                <Chinesesimp>true;</Chinesesimp>
+                <Chinese>true;</Chinese>
+            </Key>
+            <Key ID="STR_MCC_DIALOGS_ACCESS_DENIED">
+                <Original>Access Denied</Original>
+                <English>Access Denied</English>
+                <Chinesesimp>访问被拒</Chinesesimp>
+                <Chinese>訪問被拒</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_MARKER_ADDED">
+                <Original>Marker Added</Original>
+                <English>Marker Added</English>
+                <Chinesesimp>标记已添加</Chinesesimp>
+                <Chinese>標記已添加</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_NAVCOM_ACTIVATED">
+                <Original>NavCom activated</Original>
+                <English>NavCom activated</English>
+                <Chinesesimp>导航通讯已激活</Chinesesimp>
+                <Chinese>導航通訊已啟動</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_GET_READY_TO_JUMP">
+                <Original>Get Ready to jump</Original>
+                <English>Get Ready to jump</English>
+                <Chinesesimp>准备跳跃</Chinesesimp>
+                <Chinese>準備跳躍</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_CHANGING_GEAR">
+                <Original>Changing Gear</Original>
+                <English>Changing Gear</English>
+                <Chinesesimp>换挡</Chinesesimp>
+                <Chinese>換擋</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_JUMP_JUMP_JUMP">
+                <Original>Jump Jump Jump !!!</Original>
+                <English>Jump Jump Jump !!!</English>
+                <Chinesesimp>跳跳跳！！！</Chinesesimp>
+                <Chinese>跳跳跳！！！</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_CP_CREATE_RESPAWN_DIALOG_FAILED">
+                <Original>CP: create respawn Dialog failed</Original>
+                <English>CP: create respawn Dialog failed</English>
+                <Chinesesimp>重生对话框创建失败</Chinesesimp>
+                <Chinese>重生對話框建立失敗</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_TRAP_CAPTURED">
+                <Original>trap captured.</Original>
+                <English>trap captured.</English>
+                <Chinesesimp>陷阱已捕获。</Chinesesimp>
+                <Chinese>陷阱已捕獲。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_FNC_TRAP_PLACED">
+                <Original>trap placed.</Original>
+                <English>trap placed.</English>
+                <Chinesesimp>陷阱已布置。</Chinesesimp>
+                <Chinese>陷阱已佈置。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED">
+                <Original>Evac Vehicle spawned.</Original>
+                <English>Evac Vehicle spawned.</English>
+                <Chinesesimp>撤离车辆已生成。</Chinesesimp>
+                <Chinese>撤離車輛已生成。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_START_WEST_LOCATION_UPDATED">
+                <Original>Start WEST location updated.</Original>
+                <English>Start WEST location updated.</English>
+                <Chinesesimp>西部起点位置已更新。</Chinesesimp>
+                <Chinese>西部起點位置已更新。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_START_EAST_LOCATION_UPDATED">
+                <Original>Start East location updated.</Original>
+                <English>Start East location updated.</English>
+                <Chinesesimp>东起点位置已更新。</Chinesesimp>
+                <Chinese>東起點位置已更新。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_START_GUER_LOCATION_UPDATED">
+                <Original>Start Guer location updated.</Original>
+                <English>Start Guer location updated.</English>
+                <Chinesesimp>开始游击点已更新。</Chinesesimp>
+                <Chinese>開始遊擊點已更新。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_FOB_PLACED">
+                <Original>FOB placed.</Original>
+                <English>FOB placed.</English>
+                <Chinesesimp>已放置F.O.B。</Chinesesimp>
+                <Chinese>已放置F.O.B。</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_GET_READY_TO_JUMP">
+                <Original>Get Ready To Jump</Original>
+                <English>Get Ready To Jump</English>
+                <Chinesesimp>准备跳跃</Chinesesimp>
+                <Chinese>準備跳躍</Chinese>
+            </Key>
+            <Key ID="STR_MCC_GENERAL_SCRIPTS_CHANGING_GEAR">
+                <Original>Changing Gear</Original>
+                <English>Changing Gear</English>
+                <Chinesesimp>换挡</Chinesesimp>
+                <Chinese>換擋</Chinese>
+            </Key>
+            <Key ID="STR_MCC_INTERACTION_MARK_YOUR_DROPOFF_POINT">
+                <Original>Mark your drop-off point</Original>
+                <English>Mark your drop-off point</English>
+                <Chinesesimp>标记你的投递点</Chinesesimp>
+                <Chinese>標記你的投遞點</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ROLESELECTION_CP_CREATE_RESPAWN_DIALOG_FAILED">
+                <Original>CP: create respawn Dialog failed</Original>
+                <English>CP: create respawn Dialog failed</English>
+                <Chinesesimp>重生对话框创建失败</Chinesesimp>
+                <Chinese>重生對話框建立失敗</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ROLESELECTION_DEPLOYING">
+                <Original>Deploying ....</Original>
+                <English>Deploying ....</English>
+                <Chinesesimp>正在部署...</Chinesesimp>
+                <Chinese>正在部署...</Chinese>
+            </Key>
+            <Key ID="STR_MCC_ROLESELECTION_CP_CREATE_GEAR_DIALOG_FAILED">
+                <Original>CP: create gear Dialog failed</Original>
+                <English>CP: create gear Dialog failed</English>
+                <Chinesesimp>创建装备对话框失败</Chinesesimp>
+                <Chinese>創建裝備對話框失敗</Chinese>
+            </Key>
+            <Key ID="STR_MCC_RTS_WORKSHOP_OFFLINE">
+                <Original>Workshop Offline</Original>
+                <English>Workshop Offline</English>
+                <Chinesesimp>工作坊离线</Chinesesimp>
+                <Chinese>工作坊離線</Chinese>
+            </Key>
+            <Key ID="STR_MCC_SURVIVE_YOU_FEEL_BETTER">
+                <Original>You feel better...</Original>
+                <English>You feel better...</English>
+                <Chinesesimp>你感觉好多了...</Chinesesimp>
+                <Chinese>你感覺好多了...</Chinese>
+            </Key>
+            <Key ID="STR_MCC_SURVIVE_YOU_FEEL_SICK">
+                <Original>You feel sick...</Original>
+                <English>You feel sick...</English>
+                <Chinesesimp>你感到恶心...</Chinesesimp>
+                <Chinese>你感到噁心...</Chinese>
+            </Key>
+            <Key ID="STR_MCC_INITIALIZING_SPECTATOR_SCRIPT">
+                <Original>Initializing Spectator Script...</Original>
+                <English>Initializing Spectator Script...</English>
+                <Chinesesimp>正在初始化观战脚本...</Chinesesimp>
+                <Chinese>正在初始化觀戰腳本...</Chinese>
             </Key>
         </Container>
     </Package>

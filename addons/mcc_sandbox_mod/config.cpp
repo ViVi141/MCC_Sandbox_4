@@ -15,8 +15,8 @@ class CfgPatches
 					        };
 		author = "shay_gman";
 		name = "MCC Sandbox";
-		versionDesc = "MCC Sandbox 4";
-		version = "1.1";
+		versionDesc = "MCC Sandbox 4 Community Edition";
+		version = "2.0.1";
 	};
 
 	class mcc_sandbox_curatorExp

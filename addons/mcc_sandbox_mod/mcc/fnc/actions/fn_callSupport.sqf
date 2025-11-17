@@ -92,5 +92,5 @@ switch (_type) do {
 player globalRadio "CuratorWaypointPlacedAttack";
 [[_markerName, _path, _pos, _markerClass, _text, time, "default"] ,"MCC_fnc_PDAcreatemarker", playerside,false] call BIS_fnc_MP;
 
-titleText ["Marker Added","PLAIN DOWN"];
+titleText [localize "STR_MCC_FNC_MARKER_ADDED","PLAIN DOWN"];
 titleFadeOut 10;

@@ -43,7 +43,7 @@ titleText ["","BLACK IN",5];
 if (!alive _unit || !alive _plane) exitWith {};
 
 while {!_jumpReady} do {sleep 1;_jumpReady = _plane getvariable "MCCjumpReady"}; 	//let them sit for a while
-titleText ["Get Ready To Jump","BLACK FADED",2];												//Make them stand on the ramp		
+titleText [localize "STR_MCC_FNC_GET_READY_TO_JUMP","BLACK FADED",2];												//Make them stand on the ramp		
 _unit allowdamage false; 		
 _unit enablesimulation false;
 _unit action ["getout",vehicle _unit];

@@ -4,7 +4,7 @@
 //=================================================================================================================================================================================
 private ["_prePos","_command","_vehicPlayer"];
  openMap true;
- cutText ["Mark your drop-off point", "PLAIN DOWN",1,true];
+ cutText [localize "STR_MCC_INTERACTION_MARK_YOUR_DROPOFF_POINT", "PLAIN DOWN",1,true];
  MCC_mapClick 	= nil; 
  _vehicPlayer 	= vehicle player;
  _prePos 		= getpos _vehicPlayer; 

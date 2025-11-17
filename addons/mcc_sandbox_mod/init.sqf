@@ -985,7 +985,7 @@ if (hasInterface) then {
 			                [] spawn MCC_fnc_startLocations;
 			              } else {
 			                //If repsawn in off
-			                  cutText ["You Died...","BLACK OUT",2];
+			                  cutText [localize "STR_MCC_YOU_DIED","BLACK OUT",2];
 			                  player setCaptive true;
 			                  if (isnil "MCC_deadGroup") then {MCC_deadGroup = createGroup civilian; publicVariable "MCC_deadGroup"};
 			                  [player] join MCC_deadGroup;

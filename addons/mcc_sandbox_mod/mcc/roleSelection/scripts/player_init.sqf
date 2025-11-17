@@ -126,7 +126,7 @@
 	waituntil {!dialog};
 	//Respawning
 
-	cutText ["Deploying ....","BLACK IN",5];
+	cutText [localize "STR_MCC_ROLESELECTION_DEPLOYING","BLACK IN",5];
 	camUseNVG false;
 	sleep 2;
 	player setVariable ["cpReady",true,true];

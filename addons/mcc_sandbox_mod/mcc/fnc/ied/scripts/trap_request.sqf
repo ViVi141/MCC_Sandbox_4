@@ -220,7 +220,7 @@ if (mcc_missionmaker == (name player)) then 	{
 				trapkind = [(_trapsArray select (lbCurSel MCC_TRAPS_OBJECT)) select 1];
 				hint "click on the map to place the trap";
 				if (MCC_capture_state) then {
-						onMapSingleClick " 	hint ""trap captured."";
+						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_CAPTURED";
 								MCC_capture_var=MCC_capture_var + FORMAT ['
 								[[%1 , %2 select 0, %3 select 0, %4, %5],""MCC_fnc_SBSingle"",true,false] call BIS_fnc_MP;
 								'
@@ -232,7 +232,7 @@ if (mcc_missionmaker == (name player)) then 	{
 								];
 								onMapSingleClick """";";
 					} else {
-						onMapSingleClick " 	hint ""trap placed."";
+						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_PLACED";
 								[[_pos , trapkind select 0,MCC_trapvolume select 0, IEDExplosionType, iedside],""MCC_fnc_SBSingle"",true,false] call BIS_fnc_MP;
 								onMapSingleClick """";";
 					};

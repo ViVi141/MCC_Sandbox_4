@@ -1,13 +1,12 @@
 
-# MCC Sandbox 4 社区维护版 v2.0.0-pre | MCC Sandbox 4 Community Edition v2.0.0-pre
+# MCC Sandbox 4 社区维护版 v2.0.1 | MCC Sandbox 4 Community Edition v2.0.1
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
 [![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)](https://github.com/ViVi141/MCC_Sandbox_4)
 [![GPLv3协议](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![版本](https://img.shields.io/badge/Version-2.0.0--pre-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
-[![预发布](https://img.shields.io/badge/Pre--Release-2025--09--26-yellow.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
+[![版本](https://img.shields.io/badge/Version-2.0.1-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
 
-> 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.0-pre预发布版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.0-pre pre-release)
+> 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.1版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.1)
 
 ---
 
@@ -19,7 +18,7 @@
 - 🛠️ 修复已知问题与崩溃
 - ✨ 添加社区建议的新功能
 - 📦 改善模组部署体验
-- 🚀 **v2.0.0-pre重大更新**：全面性能优化与本地化支持（预发布版本）
+- 🚀 **v2.0.1重大更新**：全面性能优化与本地化支持
 
 **English Version:**  
 The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) mod has been unmaintained since 2020. Under the **GPLv3 license**, we created this community edition to:
@@ -28,11 +27,11 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - 🛠️ Fix known issues and crashes
 - ✨ Implement community-requested features
 - 📦 Improve mod deployment experience
-- 🚀 **v2.0.0-pre Major Update**: Comprehensive performance optimization and localization support (Pre-release)
+- 🚀 **v2.0.1 Major Update**: Comprehensive performance optimization and localization support
 
-### 🎯 v2.0.0-pre 更新亮点 | v2.0.0-pre Update Highlights
+### 🎯 v2.0.1 更新亮点 | v2.0.1 Update Highlights
 
-本次更新是MCC Sandbox 4社区版历史上最大的一次升级（预发布版本），包含：
+本次更新是MCC Sandbox 4社区版历史上最大的一次升级，包含：
 
 **性能革命** | **Performance Revolution**
 - 全新的性能监控和管理系统 | Brand new performance monitoring and management system
@@ -58,13 +57,13 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - ✅ 修复已知问题 | Fix known issues
 - ✅ 中英双语本地化支持 | Support both Chinese and English localizations
 - ✅ 性能优化系统 | Performance optimization system
-- ✅ 任务生成优化 | Task generation optimization
 - ✅ 指挥官控制台修复 | Commander console fixes
 - ✅ 全面本地化支持 | Comprehensive localization support
+- ⚠️ **任务生成器（Mission Wizard）暂未正常使用** | **Mission Wizard is currently not functioning properly**
 
 ### 🆕 最新重大更新 | Latest Major Updates
 
-#### v2.0.0 - 性能与本地化全面升级 | Performance & Localization Overhaul
+#### v2.0.1 - 性能与本地化全面升级 | Performance & Localization Overhaul
 
 **🔧 性能优化系统 | Performance Optimization System**
 - 新增实时性能监控 | Added real-time performance monitoring
@@ -107,6 +106,27 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 ---
 
 ## 📋 更新日志 | Changelog
+
+### v2.0.1 (2025-01-XX) - 本地化完善更新 | Localization Enhancement Update
+
+#### 🌐 本地化改进 | Localization Improvements
+- **硬编码文本本地化** | **Hardcoded Text Localization**
+  - 检测并本地化所有硬编码显示文本 | Detected and localized all hardcoded display texts
+  - 新增30+本地化键值（cutText, titleText, hint, description）| Added 30+ localization keys (cutText, titleText, hint, description)
+  - 自动替换硬编码文本为本地化键值 | Automatically replaced hardcoded texts with localization keys
+  - 支持简体中文和繁体中文翻译 | Support for Simplified and Traditional Chinese translations
+
+#### ⚠️ 已知问题 | Known Issues
+- **任务生成器（Mission Wizard）暂未正常使用** | **Mission Wizard is currently not functioning properly**
+  - 任务生成器功能存在兼容性问题 | Mission Wizard has compatibility issues
+  - 我们正在积极修复中 | We are actively working on fixing it
+  - 预计在下一版本中修复 | Expected to be fixed in the next version
+
+#### 🐛 问题修复 | Bug Fixes
+- 修复硬编码文本导致的本地化问题 | Fixed localization issues caused by hardcoded texts
+- 优化本地化键值命名规范 | Optimized localization key naming conventions
+
+---
 
 ### v2.0.0-pre (2025-09-26) - 性能与本地化全面升级 | Performance & Localization Overhaul
 
@@ -183,9 +203,9 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 
 ## 📥 安装指南 | Installation
 
-> ⚠️ **预发布版本说明** | **Pre-release Notice**  
-> 当前版本为 v2.0.0-pre 预发布版本，可能存在未发现的问题。建议在测试环境中使用，并反馈遇到的问题。  
-> Current version is v2.0.0-pre pre-release, may contain undiscovered issues. Recommended for testing environments, please report any issues encountered.
+> ⚠️ **重要提示** | **Important Notice**  
+> - 当前版本为 v2.0.1，任务生成器（Mission Wizard）功能暂未正常使用，我们正在修复中。  
+> - Current version is v2.0.1, Mission Wizard feature is currently not functioning properly and we are working on fixing it.
 
 ### Steam订阅（推荐）| Steam Subscription (Recommended)
 1. 访问 [Steam创意工坊页面](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971) | Visit the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)

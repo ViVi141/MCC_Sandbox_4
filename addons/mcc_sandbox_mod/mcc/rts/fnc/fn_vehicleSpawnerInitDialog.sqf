@@ -21,7 +21,7 @@ _rtsAnchor = if (MCC_isMode) then {
     };
 
 if ((attachedTo _spawnPad) isKindOf _rtsAnchor && !((missionNamespace getVariable [format ["MCC_rtsElecOn_%1", playerSide],false]) || (missionNamespace getVariable [format ["MCC_rtsAllowPlayersPurchase_%1", playerSide],false]))) exitWith {
-   titleText ["Workshop Offline","PLAIN"];
+   titleText [localize "STR_MCC_RTS_WORKSHOP_OFFLINE","PLAIN"];
 };
 
 createDialog "MCC_VEHICLESPAWNER";
