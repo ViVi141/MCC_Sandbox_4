@@ -1,6 +1,9 @@
 //===================================================================MCC_fnc_evacSpawn======================================================================================
 // Spawn a vehicle with crew and gunners, mark it as an evac vehicle
-[[vehicleClass, position],"MCC_fnc_evacSpawn",true,false] remoteExec ["MCC_fnc_evacSpawn", 0, false];
+if (!(isNull _evac)) then {
+[[vehicleClass, position], "MCC_fnc_evacSpawn", true, false] remoteExec ["MCC_fnc_evacSpawn", 0, false];
+};
+
 // Params:
 // 	vehicleClass: string, vehicleClass to spawn
 // 	position: array, spawn position

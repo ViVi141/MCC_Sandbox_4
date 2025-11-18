@@ -161,10 +161,10 @@ while {dialog} do {closedialog 0; sleep 0.2};
 
 
 //Build the mission on the server
-[
+[]
 	[_wholeMap, _totalEnemyUnits,  _minObjectivesDistance, _maxObjectivesDistance, _weatherChange, _preciseMarkers, _playMusic,_markers],
 	[_enemySide, _enemyfaction, _sidePlayer, _factionPlayer, _civFaction],
 	[_obj1, _obj2, _obj3],
 	[_isCQB, _isCiv, _armor, _vehicles, _stealth, _isIED, _isAS, _isSB, _isRoadblocks, _animals],
 	[_reinforcement, _artillery]
-] remoteExec ["MCC_fnc_MWinitMission",2];
+if (!(isNull _wholeMap) && !(isNull _totalEnemyUnits) && !(isNull _minObjectivesDistance) && !(isNull _maxObjectivesDistance) && !(isNull _weatherChange) && !(isNull _preciseMarkers) && !(isNull _playMusic) && !(isNull _markers) && !(isNull _enemySide) && !(isNull _enemyfaction) && !(isNull _sidePlayer) && !(isNull _factionPlayer) && !(isNull _civFaction) && !(isNull _obj1) && !(isNull _obj2) && !(isNull _obj3) && !(isNull _isCQB) && !(isNull _isCiv) && !(isNull _armor) && !(isNull _vehicles) && !(isNull _stealth) && !(isNull _isIED) && !(isNull _isAS) && !(isNull _isSB) && !(isNull _isRoadblocks) && !(isNull _animals) && !(isNull _reinforcement) && !(isNull _artillery)) then { [ [_wholeMap, _totalEnemyUnits,  _minObjectivesDistance, _maxObjectivesDistance, _weatherChange, _preciseMarkers, _playMusic,_markers], [_enemySide, _enemyfaction, _sidePlayer, _factionPlayer, _civFaction], [_obj1, _obj2, _obj3], [_isCQB, _isCiv, _armor, _vehicles, _stealth, _isIED, _isAS, _isSB, _isRoadblocks, _animals], [_reinforcement, _artillery] ] remoteExec ["MCC_fnc_MWinitMission",2]; };

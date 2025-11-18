@@ -16,8 +16,10 @@ switch _mode do {
 		_ctrlSlider = _display displayctrl 23702;
 		_ammo = sliderposition _ctrlSlider * 0.1;
 		_unit setVariable ["MCC_ammoCountCurator",_ammo,true];
-		[_unit,_ammo] remoteExec ["setVehicleAmmo", _unit];
+if (!(isNull _unit)) then {
+[_unit,_ammo] remoteExec ["setVehicleAmmo", _unit];
+};
+};
 	};
 	case "onUnload": {
 	};
-};

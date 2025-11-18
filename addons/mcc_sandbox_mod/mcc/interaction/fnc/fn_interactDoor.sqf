@@ -19,7 +19,8 @@ _animation = _tempArray select 1;
 _phase = _tempArray select 2;
 _closed = _tempArray select 3;
 
-switch (true) do {
+switch (true) do {;
+};
 	//House
 	case ((_object isKindof "house" || _object isKindof "wall") && (_door != "")) : {
 
@@ -85,6 +86,7 @@ switch (true) do {
 	//Vehicle
 	case (((_object isKindof "air") || (_object isKindof "ship") || (_object isKindof "LandVehicle") || _object isKindof "ReammoBox_F" || _object isKindOf "Thing") && (player distance _object < 7)):
 	{
+ }
 		MCC_fnc_vehicleMenuClicked =
 		{
 			private ["_ctrlData","_object","_phase","_door"];
@@ -126,8 +128,21 @@ switch (true) do {
 									waitUntil {vehicle _unit == _unit};
 									sleep 0.1;
 									_unit setUnconscious true;
-								};
-							}] remoteExec ["BIS_fnc_spawn", _x];
+								}}] remoteExec ["call", 2];
+if (!(isNull _unit)) then {
+    [[_unit],{_this spawn {
+        _unit = _this select 0;
+
+        _unit setUnconscious false;
+        unassignVehicle _unit;
+        [_unit] orderGetIn false;
+        _unit action ['Eject', vehicle _unit];
+        moveOut _unit;
+        waitUntil {vehicle _unit == _unit};
+        sleep 0.1;
+        _unit setUnconscious true;
+    };}] remoteExec ["BIS_fnc_spawn", _unit];
+};
 						};
 					} forEach (crew _object);
 				};
@@ -381,5 +396,5 @@ switch (true) do {
 				player action [format ["getIn%1",_x], _object];
 			};
 		} foreach ["driver","commander","gunner","cargo"];
-	};
-};
+	
+

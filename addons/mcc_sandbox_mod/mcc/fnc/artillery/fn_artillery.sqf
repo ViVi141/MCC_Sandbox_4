@@ -1,6 +1,8 @@
 //===================================================================MCC_fnc_artillery======================================================================================
 // Create an artillery shell above the location
-// Example: [_pos, shelltype, shellspread, nshell, simulate] remoteExec ["MCC_fnc_artillery", 0, false];
+if (!(isNull _pos)) then {
+    [_pos, _shelltype, _shellspread, _nshell, simulate] remoteExec ["MCC_fnc_artillery", 0, false];
+};
 // Params:
 // 	_pos: array, position
 // 	shelltype: string, vehicleClass ["GrenadeHand","Sh_120_HE","Cluster_120mm_AMOS","Mo_cluster_AP","Mine_120mm_AMOS_range","Sh_120mm_AMOS_LG","Sh_82mm_AMOS","Fire_82mm_AMOS","Smoke_120mm_AMOS_White","Smoke_82mm_AMOS_White","G_40mm_SmokeGreen","G_40mm_SmokeRed","F_40mm_White""F_40mm_Green","F_40mm_Red"];

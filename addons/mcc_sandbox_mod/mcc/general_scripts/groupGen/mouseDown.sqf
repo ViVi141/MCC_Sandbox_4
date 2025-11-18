@@ -168,7 +168,9 @@ if ((missionNameSpace getVariable ["MCC_artilleryEnabled",false]) &&  _pressed =
 	{
 		hint "Artillery captured.";
 		MCC_capture_var = MCC_capture_var + FORMAT ["
-		[%1, '%2', %3, %4, %5, %6] remoteExec ["MCC_fnc_artillery", 0, false];
+if (!(isNull _ctrl)) then {
+    [%1, '%2', %3, %4, %5, %6] remoteExec ['MCC_fnc_artillery', 0, false];
+};
 		"
 		,_ctrl ctrlMapScreenToWorld [_posX,_posY]
 		,shelltype
@@ -181,11 +183,14 @@ if ((missionNameSpace getVariable ["MCC_artilleryEnabled",false]) &&  _pressed =
 	else
 	{
 		hint "Artillery inbound.";
-		[_ctrl ctrlMapScreenToWorld [_posX,_posY], shelltype, shellspread, nshell,MCCSimulate,MCC_artyDelay] remoteExec ["MCC_fnc_artillery",2];
+if (!(isNull _ctrl)) then {
+[_ctrl ctrlMapScreenToWorld [_posX,_posY], shelltype, shellspread, nshell,MCCSimulate,MCC_artyDelay] remoteExec ["MCC_fnc_artillery",2];
+};
+};
 	};
 	sleep 0.5;
 	deleteMarkerLocal "mcc_arty";
-};
+
 
 //Spawn
 if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0) exitWith
@@ -195,7 +200,9 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	{
 		hint "Spawned Captured";
 		MCC_capture_var = MCC_capture_var + FORMAT ["
-								[%1 , %2, %3, %4, %5] remoteExec ["MCC_fnc_groupSpawn", 2, false];
+if (!(isNull _ctrl)) then {
+    [[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]],"MCC_fnc_groupSpawn",false,false] remoteExec ["MCC_fnc_groupSpawn", 2, false];
+};
 								"
 								, _ctrl ctrlMapScreenToWorld [_posX,_posY]
 								, MCC_groupBroadcast
@@ -208,11 +215,14 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	{
 		hint "Spawned";
 
-		[[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]],"MCC_fnc_groupSpawn",false,false] remoteExec ["MCC_fnc_groupSpawn", 2, false];
+if (!(isNull _ctrl)) then {
+[[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]],"MCC_fnc_groupSpawn",false,false] remoteExec ["MCC_fnc_groupSpawn", 2, false];
+};
+};
 	};
 	sleep 0.5;
 	deleteMarkerLocal "mcc_spawnMarker";
-};
+
 
 
 //Manually detonate IED
@@ -259,7 +269,10 @@ if (MCC_CASrequestMarker && _pressed==0) then
 	if (MCC_capture_state) then {
 		hint "Air support captured.";
 		MCC_capture_var=MCC_capture_var + FORMAT ['
-			[%1, %2 , %3, %4, %5, %6] remoteExec ["MCC_fnc_airDrop", 2, false];
+if (!(isNull _ctrl)) then {
+[%1, %2 , %3, %4, %5, %6] remoteExec ["MCC_fnc_airDrop", 2, false];
+};
+};
 			'
 			,_ammount
 			,MCC_spawnkind
@@ -300,12 +313,15 @@ if (MCC_UMParadropRequestMarker && _pressed==0) then
 
 	//[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away] execVM "mcc\fnc\general\fn_realParadrop.sqf";
 
-	[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away] remoteExec ["MCC_fnc_realParadrop", 2];
+if (!(isNull _marker)) then {
+[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away] remoteExec ["MCC_fnc_realParadrop", 2];
+};
+};
 
 	MCC_UMParadropRequestMarker = false;			//Wait and delete the marker
 	sleep 40;
 	deletemarkerlocal _marker;
-};
+
 
 
 //Zone drawing
@@ -418,13 +434,15 @@ if (MCC_delete_drawing && _pressed==0) then
 	MCC_delete_drawing = false;
 
 	mcc_safe=mcc_safe + FORMAT ['
-							[%1, %2, %3] remoteExec ["MCC_fnc_deleteBrush",2];
+if (!isnil "_pos" && !isnil "_size" && !isnil "_type") then {[_pos, _size, _type] remoteExec ["MCC_fnc_deleteBrush", 2];};
 							sleep 1;'
 							, _pos
 							, _size
 							, _type
 							];
-	[_pos, _size select 0, _type] remoteExec ["MCC_fnc_deleteBrush",2];
+if (!(isNull _marker)) then {
+    [_pos, _size select 0, _type] remoteExec ["MCC_fnc_deleteBrush",2];
+};
 };
 
 //Line drawing

@@ -18,7 +18,10 @@
 	player addRating (-1 * (rating player));
 
 	//Get rank from the server
-	["MCCplayerRank", player, "N/A", "STRING"] remoteExec ["MCC_fnc_getVariable",2];
+if (!(isNull player)) then {
+["MCCplayerRank", player, "N/A", "STRING"] remoteExec ["MCC_fnc_getVariable", 2];
+};
+};
 	waituntil {! isnil "MCCplayerRank"};
 	if (MCC_debug) then {systemchat format ["player Rank : %1",MCCplayerRank]};
 
@@ -29,10 +32,13 @@
 
 	for "_i" from 0 to (count _cfg -1) do {
 		_cfgName = format ["%1Level", configName (_cfg select _i)];
-		[_cfgName, player, CP_defaultLevel, "ARRAY"] remoteExec ["MCC_fnc_getVariable",2];
+if (!(isNull player)) then {
+[_cfgName, player, CP_defaultLevel, "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
+};
+};
 		waituntil {! isnil _cfgName};
 		if (MCC_debug) then {systemchat format ["%2 : %1",missionNamespace getVariable [_cfgName,-1],_cfgName]};
-	};
+	
 
 
 	//******************************************************************************************************************************
@@ -131,4 +137,3 @@
 	sleep 2;
 	player setVariable ["cpReady",true,true];
 
-};

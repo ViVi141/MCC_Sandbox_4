@@ -173,13 +173,19 @@ if (_available) then {
 		_const setPosASL _pos;
 		_const setVariable ["MCC_CONST_FORT",true, true];
 	} else {
-		[_conType, _pos, playerside, str _dir] remoteExec ["MCC_fnc_construction", 2, false];
+if (!(isNull _pos) && !(isNull playerside)) then {
+[_conType, _pos, playerside, str _dir] remoteExec ["MCC_fnc_construction", 2, false];
+};
+};
 	};
 
 	//broadcast
 	player globalRadio "SentAssemble";
-	[player, (if (side player == west) then {format["mp_groundsupport_01_slingloadrequested_BHQ_%1",floor random 3]} else {format["mp_groundsupport_01_slingloadrequested_IHQ_%1",floor random 3]})] remoteExec ["MCC_fnc_radioSupport", playerside, false];
-} else {
+if (!(isNull player)) then {
+[player, (if (side player == west) then {format["mp_groundsupport_01_slingloadrequested_BHQ_%1",floor random 3]} else {format["mp_groundsupport_01_slingloadrequested_IHQ_%1",floor random 3]})] remoteExec ["MCC_fnc_radioSupport", playerside, false];
+};
+
+else {
 	private ["_str"];
 	_str = "<t size='1' t font = 'puristaLight' color='#FFFFFF'>" + _error + "</t>";
 	[_str,0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;

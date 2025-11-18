@@ -32,7 +32,10 @@ if (missionNamespace getvariable ["MCC_medicBleedingEnabled",false]) then {
 		if ((_unit getVariable ["MCC_clientEffectsTime",time-5]) < time  && isPlayer _unit) then
 		{
 			[_bleeding * 100] spawn BIS_fnc_bloodEffect;
-			[[netid _unit,_unit], format ["WoundedGuyA_0%1",(floor (random 8))+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _unit)) then {
+[[netid _unit,_unit], format ["WoundedGuyA_0%1",(floor (random 8))+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 			_unit setVariable ["MCC_clientEffectsTime",time+5+random 10];
 		};
 
@@ -76,7 +79,7 @@ if (missionNamespace getvariable ["MCC_medicBleedingEnabled",false]) then {
 			MCC_medicBleedingPPEffectBlur ppEffectEnable false;
 		};
 	};
-};
+
 
 //Self heal for AI
 if !(isPlayer _unit) then {
@@ -135,7 +138,10 @@ if ((_bleeding > 0.1 || (_unit getVariable ["MCC_medicUnconscious",false]) || da
 		_unit setVariable ["MCC_medicSavior",_savior,true];
 		_savior setVariable ["MCC_medicSavingUnit",_unit,true];
 
-		[_savior,_unit] remoteExec ["MCC_fnc_AIHeal", _savior];
-	};
+if (!(isNull _savior)) then {
+[_savior,_unit] remoteExec ["MCC_fnc_AIHeal", _savior];
 };
+};
+	};
+
 

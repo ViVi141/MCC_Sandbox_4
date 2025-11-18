@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_setVehicleInit======================================================================================
 // Sets vehicle init
-// Example: [[[netID _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false]];
+if (!(isNull _unit)) then {
+    [[[netID _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false]];
+};
 // Params: 
 //	_unit: object, vehicle we want to set its init. 
 //	_init: string, the new init command (use _this instead of this)

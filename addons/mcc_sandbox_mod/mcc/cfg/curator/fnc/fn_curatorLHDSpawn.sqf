@@ -52,6 +52,9 @@ _displayName = _resualt param [3,""];
 _store = _resualt param [4,true];
 _rearm = _resualt param [5,true];
 
-[_pos, _dir, _side, _hq, _lhdType, _displayName, _store, _rearm] remoteExec ["MCC_fnc_LHDspawn",2];
+if (!(isNull _module)) then {
+[_pos, _dir, _side, _hq, _lhdType, _displayName, _store, _rearm] remoteExec ["MCC_fnc_LHDspawn", 2];
+};
+};
 
 deleteVehicle _module;

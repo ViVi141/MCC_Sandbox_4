@@ -110,17 +110,22 @@ if (_isCQB) then {
 			_unitPlaced = true;
 
 			//Lets spawn some body guards
-			[getpos _unit,30,0,2,_faction, _side] remoteExec ["MCC_fnc_garrison", 0, false];
+if (!(isNull _unit)) then {
+[getpos _unit,30,0,2,_faction, _side] remoteExec ["MCC_fnc_garrison", 0, false];
+};
+};
 		};
 	};
-} else {
+else {
 
 	//Clear area
 	[_objPos,50,true] call MCC_fnc_hideTerrainObjectsArea;
 
 	//Open area
 	_objPos = [_objPos] call MCC_fnc_buildRandomComposition;
-	[_objPos,30,0,4,_faction, _side] remoteExec ["MCC_fnc_garrison",2];
+if (!(isNull _unit)) then {
+    [getpos _unit,30,0,4,_faction, _side] remoteExec ["MCC_fnc_garrison",2];
+};
 
 	_group = creategroup _side;
 
@@ -155,12 +160,17 @@ if (_isCQB) then {
 			waituntil {alive _unit};
 
 			//Add to zeus
-			{[[_x,_unit],{(_this select 0) addCuratorEditableObjects [[_this select 1],true];}] remoteExec ["BIS_fnc_spawn",_x]} forEach allCurators;
+if (!(isNull _unit)) then {
+    {[_x,_unit],{(_this select 0) addCuratorEditableObjects [[_this select 1],true];}} remoteExec ["BIS_fnc_spawn",_x];
+};
 
 			MCC_tempName = format ["MCC_objectUnits_%1", ["MCC_objectUnitsCounter",1] call bis_fnc_counter];
 			_init = FORMAT [";%1 = _this;",MCC_tempName];
 
-			[[netid _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
+if (!(isNull _unit)) then {
+[[netid _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
+};
+};
 
 		} else {
 			_unit = [_spawnPos, _type, _sidePlayer,"Armed Civilian",random 360,true] call MCC_fnc_ACSingle;
@@ -181,8 +191,10 @@ if (_isCQB) then {
 		waituntil {alive _unit};
 
 		//Add to zeus
-		{[[_x,_unit],{(_this select 0) addCuratorEditableObjects [[_this select 1],true];}] remoteExec ["BIS_fnc_spawn",_x]} forEach allCurators;
-	};
+if (!(isNull _unit)) then {
+    {[_x,_unit],{(_this select 0) addCuratorEditableObjects [[_this select 1],true];}}] remoteExec ["BIS_fnc_spawn",_x];
+} forEach allCurators;
+	
 
 	_group setFormDir (round(random 360));
 
@@ -191,4 +203,3 @@ if (_isCQB) then {
 	} else {
 		[_group, _spawnPos] call bis_fnc_taskDefend;
 	};
-};

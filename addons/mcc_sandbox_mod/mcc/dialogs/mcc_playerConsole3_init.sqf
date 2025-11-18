@@ -222,7 +222,10 @@ if (dialog && !isNull(missionNamespace getVariable ["MCC_ACConsoleUp",objNull]))
 					[(_mccdialog displayctrl MCC_CONSOLE_ACPIP)] call MCC_fnc_pipOpen;
 					_null = [1] execVM format ["%1mcc\general_scripts\console\consoleSwitchMenu.sqf",MCC_path];
 
-					[2,{["MCCNotifications",["AC-130 Left the scene",format ["%1data\AC130_icon.paa",MCC_path],""]] call bis_fnc_showNotification;}] remoteExec ["MCC_fnc_globalExecute", side player, false];
+if (!(isNull _uav)) then {
+[2,{["MCCNotifications",["AC-130 Left the scene",format ["%1data\AC130_icon.paa",MCC_path],""]] call bis_fnc_showNotification;}] remoteExec ["MCC_fnc_globalExecute", side player, false];
+};
+};
 				};
 
 				sleep 0.1;
@@ -256,4 +259,4 @@ if (dialog && !isNull(missionNamespace getVariable ["MCC_ACConsoleUp",objNull]))
 				_cam camcommit 0.01;
 			};
 		};
-	};
+	

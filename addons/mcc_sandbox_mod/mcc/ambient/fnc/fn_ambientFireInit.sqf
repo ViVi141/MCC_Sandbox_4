@@ -9,9 +9,54 @@ Starts a Init ambient fire - MUST RUN ON SERVER
 _module = param [0, objNull, [objNull]];
 
 //If we came here from Zeus run on the server
-if (!isnull curatorcamera  && (local _module)) then {
+if (!isnull curatorcamera  && (local _module)) then {;
+};
 	[objNull, localize "STR_DISP_CURATOR_AMBIENTFIRE_SUCCESS"] call bis_fnc_showCuratorFeedbackMessage;
-	if (!isServer) then {[] remoteExec ["MCC_fnc_ambientFireInit", 2]};
+if (!(isNull _unit)) then {[_class,_vehicle] spawn {;
+};
+	#define FIRE_OBJECTSMALL "IncinerateShell"
+	#define FIRE_OBJECTBIG "test_EmptyObjectForFireBig"
+
+	params ["_class","_vehicle"];
+	private ["_unit","_pos","_effect","_group","_dir","_time"];
+
+	_dir = if (random 1 > 0.5) then {(direction _vehicle)-(70 + random 40)} else {(direction _vehicle)+(70 + random 40)};
+	_pos =  [(getpos _vehicle),3,_dir] call BIS_fnc_relPos;
+
+	if (_pos isEqualTo []) exitWith {};
+
+	_group = createGroup ([(getNumber(configFile >> "cfgVehicles" >> _class >> "side"))] call BIS_fnc_sideType);
+	//_unit = createAgent [_class, _pos, [], 0, "FORM"];
+	_unit = _group createUnit [_class, _pos, [], 0, "NONE"];
+	_unit disableAI "ALL";
+	_unit allowDamage false;
+	removeAllWeapons _unit;
+	_unit switchMove "";
+	_unit setdir _dir;
+	_effect = FIRE_OBJECTBIG createVehicle [0,0,0];
+	_effect attachTo [_unit,[0,0,-1]];
+
+	_unit setpos _pos;
+
+	_unit doMove (_unit modelToWorld [0,50,0]);
+	_unit playmovenow "ApanPknlMsprSnonWnonDf";
+	_time = time + (3 + (random 2));
+	while {time < _time} do {
+		[_unit,format ["MCC_manScream_%1",(floor (random 7))+1],"say3d"] remoteExec ["bis_fnc_sayMessage", 0];
+		sleep 1 + (random 1);
+	};
+
+	_unit setDamage 1;
+	deleteGroup _group;
+
+	//Start a new fire center
+	if (random 100 < (missionNamespace getVariable ["MCC_fnc_ambientFireInitCrewNewFireChance",50])) then {
+		[_unit] spawn MCC_fnc_ambientFireStart;
+	};
+
+	//Delte fire
+	sleep 20 + random 30;
+	while {!isnull (attachedTo _effect)} do {detach _effect};
 	deleteVehicle (param [0,objNull,[objNull]]);
 };
 
@@ -76,7 +121,9 @@ MCC_fnc_ambientFireEntityKilled = {
 				_unit playmovenow "ApanPknlMsprSnonWnonDf";
 				_time = time + (3 + (random 2));
 				while {time < _time} do	{
-					[_unit,format ["MCC_manScream_%1",(floor (random 7))+1],"say3d"] remoteExec ["bis_fnc_sayMessage", 0];
+if (!(isNull _unit)) then {
+	[_unit,format ["MCC_manScream_%1",(floor (random 7))+1],"say3d"] remoteExec ["bis_fnc_sayMessage", 0];
+};
 					sleep 1 + (random 1);
 				};
 
@@ -116,4 +163,6 @@ if ((missionNamespace getVariable ["MCC_fnc_ambientFireInitEH",-1]) <=0) then {
 
 
 //Add explosive rounds fire
-[] remoteExec ["MCC_fnc_ambientFirePlayerFiredEH",0];
+if (!(isNull _unit)) then {
+    [] remoteExec ["MCC_fnc_ambientFirePlayerFiredEH", 0];
+};

@@ -160,7 +160,10 @@ if (_isHalo == 0) then  {
 
 	for "_x" from 0 to (count _unitsArray -1) step 1 do {
 		_unit = _unitsArray select _x;
-		_null = [_plane, _unit,_x] remoteExec ["MCC_fnc_realParadropPlayer", _unit];
+if (!(isNull _unit)) then {
+_null = [_plane, _unit,_x] remoteExec ["MCC_fnc_realParadropPlayer", _unit];
+};
+};
 		waitUntil {_unit in crew _plane};
 	};
 
@@ -198,4 +201,4 @@ if (_isHalo == 0) then  {
 	};
 
 	sleep 5;
-} foreach _chockArray;
+foreach _chockArray;

@@ -31,7 +31,10 @@ if (typeName (_module getVariable ["atmosphere",true]) == typeName 0) exitWith {
             MCC_date    = [(MCC_date select 0) + floor (random 10 - random 10), floor ((random 12)+1)  ,  floor ((random 28)+1), floor ((random 24)+1),  floor (random 60)];
             publicVariable "MCC_date";
 
-            [MCC_date] remoteExec ["MCC_fnc_setTime",0];
+if (!(isNull MCC_date)) then {
+[MCC_date] remoteExec ["MCC_fnc_setTime",0];
+};
+};
         };
 
         if (_effect == "random") then {
@@ -63,7 +66,7 @@ if (typeName (_module getVariable ["atmosphere",true]) == typeName 0) exitWith {
 
     	[_effect,false,_dust,_snow,_papers,_mist,_fog,_leaves,_wind,_color,_grain,_weather] spawn MCC_fnc_ppEffects;
     };
-};
+
 
 //Not curator exit
 if (!(local _module) || isnull curatorcamera) exitWith {};
@@ -109,8 +112,11 @@ if (_changeTime) then {
     MCC_date    = [(MCC_date select 0) + floor (random 10 - random 10), floor ((random 12)+1)  ,  floor ((random 28)+1), floor ((random 24)+1),  floor (random 60)];
     publicVariable "MCC_date";
 
-    [MCC_date] remoteExec ["MCC_fnc_setTime",0];
+if (!(isNull MCC_date)) then {
+[MCC_date] remoteExec ["MCC_fnc_setTime",0];
 };
+};
+
 
 if (_effect == "random") then {
 	_effect = [["clearWeather","cloudy","rain","stormy","sandstorm","storm","snow","heatwave"],[0.4,0.15,0.15,0.15,0.045,0.045,0.045,0.045]] call bis_fnc_selectRandomWeighted;
@@ -138,7 +144,10 @@ switch (_effect) do {
     };
 };
 
+if (!(isNull _effect)) then {
 [_effect,false,_dust,_snow,_papers,_mist,_fog,_leaves,_wind,_color,_grain,_weather] remoteExec ["MCC_fnc_ppEffects", 0, true];
+};
+
 
 
 deleteVehicle _module;

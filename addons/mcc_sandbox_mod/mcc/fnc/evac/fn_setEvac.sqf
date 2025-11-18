@@ -1,6 +1,8 @@
 //===================================================================MCC_fnc_setEvac======================================================================================
 //	Sets an empty ot AI vehicle into an ecav for a specific side
-// Example: [[_object, _side, _addGunners, _campaignEvac] remoteExec ["MCC_fnc_setEvac", 0, false]];
+if (!(isNull _object)) then {
+	[[_object, _side, _addGunners, _campaignEvac], "MCC_fnc_setEvac", 0, false] remoteExec ["MCC_fnc_setEvac", 0, false];
+};
 // Params:
 //	_object:		OBJECT the evac vehicle can be empty
 // 	_side: 			SIDE, Evac Side
@@ -96,7 +98,7 @@ if (_campaignEvac) then {
 	} forEach _evacVehicles;
 
 	_evacVehicles = _evacVehicles - [-1];
-	["MCCNotificationBad",["Evac",format ["%1 Evac is down",_displayName],""]] remoteExec ["bis_fnc_showNotification", _side];
+if (!(isNull _side)) then { ["MCCNotificationBad",["Evac",format ["%1 Evac is down",_displayName],""]] remoteExec ["bis_fnc_showNotification", _side]; };
 
 	missionNamespace setvariable ([format ["MCC_evacVehicles_%1",_side],_evacVehicles]);
 	publicvariable (format ["MCC_evacVehicles_%1",_side]);

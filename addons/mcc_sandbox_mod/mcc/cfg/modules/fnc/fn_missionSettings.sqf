@@ -156,8 +156,8 @@ if (count _resualt == 0) exitWith {deleteVehicle _module};
            "MCC_reduceTicketsOnDeath"
            ];
 
-(_resualt select 19) remoteExec ["enableEngineArtillery",0];
-(_resualt select 20) remoteExec ["setTimeMultiplier",2];
+if (!(isNull (_resualt select 19))) then { (_resualt select 19) remoteExec ["enableEngineArtillery",0]; };
+if (!(isNull (_resualt select 20))) then { (_resualt select 20) remoteExec ["setTimeMultiplier",2]; };
 
 //Resistance Hostility
 switch (_resualt select 21) do {
@@ -165,29 +165,57 @@ switch (_resualt select 21) do {
 	//East
 	case 1:
 	{
-		[resistance,[east, 0]] remoteExec ["setfriend",2];
-		[resistance,[west, 0.8]] remoteExec ["setfriend",2];
-		[east,[resistance, 0]] remoteExec ["setfriend",2];
-		[west,[resistance, 0.8]] remoteExec ["setfriend",2];
+if (!(isNull resistance)) then {
+    [resistance,[east, 0]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+    [resistance,[west, 0.8]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+    [east,[resistance, 0]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+[west,[resistance, 0.8]] remoteExec ["setfriend",2];
+};
+};
 	};
 
 	//West
 	case 2:
 	{
-		[resistance,[east, 0.8]] remoteExec ["setfriend",2];
-		[resistance,[west, 0]] remoteExec ["setfriend",2];
-		[east,[resistance, 0.8]] remoteExec ["setfriend",2];
-		[west,[resistance, 0]] remoteExec ["setfriend",2];
-	};
+if (!(isNull resistance)) then {
+    [resistance,[east, 0.8]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+[resistance,[west, 0]] remoteExec ["setfriend",2];
+};
+};
+if (!(isNull east)) then {
+    [east,[resistance, 0.8]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+[west,[resistance, 0]] remoteExec ["setfriend",2];
+};
+
+	
 
 	//All
 	default
 	{
-		[resistance,[east, 0.8]] remoteExec ["setfriend",2];
-		[resistance,[west, 0]] remoteExec ["setfriend",2];
-		[east,[resistance, 0.8]] remoteExec ["setfriend",2];
-		[west,[resistance, 0]] remoteExec ["setfriend",2];
-	};
+if (!(isNull resistance)) then {
+    [resistance,[east, 0.8]] remoteExec ['setfriend',2];
 };
+if (!(isNull resistance)) then {
+[resistance,[west, 0]] remoteExec ["setfriend",2];
+};
+};
+if (!(isNull east)) then {
+    [east,[resistance, 0.8]] remoteExec ['setfriend',2];
+};
+if (!(isNull resistance)) then {
+    [west,[resistance, 0]] remoteExec ['setfriend',2];
+};
+	
+
 
 deleteVehicle _module;

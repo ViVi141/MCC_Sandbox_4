@@ -95,7 +95,9 @@ while {true} do {
 
 			//Send hint
 			if (_showText) then {
-				[[_CompleteText,true],"MCC_fnc_globalHint",_side,false] remoteExec ["MCC_fnc_globalHint",_side,false];
+if (!(isNull _side)) then {
+	[[_CompleteText,true],'MCC_fnc_globalHint',_side,false] remoteExec ['MCC_fnc_globalHint',_side,false];
+};
 			};
 
 		} forEach _sides;
@@ -210,7 +212,10 @@ while {true} do {
 					_Lightnings = (Lightnings -0.2) max 0;
 					_fog = (fog -0.2) max 0;
 				};
-				[_overcast, _WindForce, _Waves, _Rain, _Lightnings, _fog, _time] remoteExec ["MCC_fnc_setWeather", 0, false];
+if (!isNull _overcast && !isNull _WindForce && !isNull _Waves && !isNull _Rain && !isNull _Lightnings && !isNull _fog) then {
+[_overcast, _WindForce, _Waves, _Rain, _Lightnings, _fog, _time] remoteExec ["MCC_fnc_setWeather", 0, false];
+};
+};
 
 
 				_CompleteText = _CompleteText 	+  "<t align='center' size='1.2' color='#FFCF11'> Weather</t><br/>"
@@ -219,8 +224,10 @@ while {true} do {
 
 
 			//Send hint
-			[_CompleteText,true] remoteExec ["MCC_fnc_globalHint",_x];
-		} forEach _sides;
-	};
-	sleep 1;
+if (!(isNull _x)) then {
+[_CompleteText,true] remoteExec ["MCC_fnc_globalHint",_x];
 };
+};
+		} forEach _sides;
+	
+	sleep 1;

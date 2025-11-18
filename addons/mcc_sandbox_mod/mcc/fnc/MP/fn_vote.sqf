@@ -15,5 +15,8 @@ waituntil {!isnil "_answer"};
 
 if (_answer) exitWith
 {
-	[[_variable, missionNameSpace],1] remoteExec ["bis_fnc_counter", 2, false];
+if (!(isNull _variable)) then {
+[[_variable, missionNameSpace],1] remoteExec ["bis_fnc_counter", 2, false];
 };
+};
+

@@ -220,5 +220,11 @@ _CompleteText = _CompleteText  	+ "____________________<br/><br/>"
 								+ format ["<t align='center'><img image='%2data\IconMed.paa'/> Meds: %1</t><br/><br/>",_allocatedResources select 4,MCC_path];
 
 //Send hint
+if (!(isNull _sidePlayer)) then {
 [_CompleteText,true] remoteExec ["MCC_fnc_globalHint",_sidePlayer];
+};
+
+if (!(isNull player)) then {
 [player, (_sumResource min 3000)] remoteExec ["addRating", _sidePlayer];
+};
+

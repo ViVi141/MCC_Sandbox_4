@@ -217,7 +217,10 @@ MCC_fnc_pylonApply = {
 		    speed _vehicle < 5) then {
 
 			[_vehicle,[_weapon,"",true,(_turrets select _forEachIndex)]] remoteexec ["setPylonLoadOut",0];
-			[_vehicle,  [_weapon, _magType,true,(_turrets select _forEachIndex)]] remoteExecCall ["setPylonLoadOut", 0];
+if (!(isNull _vehicle)) then {
+[_vehicle,  [_weapon, _magType,true,(_turrets select _forEachIndex)]] remoteExecCall ["setPylonLoadOut", 0];
+};
+};
 
 		} else {
 			_exit = true;
@@ -231,7 +234,7 @@ MCC_fnc_pylonApply = {
 	if (isNull curatorCamera) then {
 		[_vehicle,_repair,_rearm,_refuel] spawn MCC_fnc_vehicleService;
 	};
-};
+
 
 //No pylons just rearm
 if (count _pylonsAvailable == 0) exitWith {[_vehicle,true,true,true] spawn MCC_fnc_vehicleService};

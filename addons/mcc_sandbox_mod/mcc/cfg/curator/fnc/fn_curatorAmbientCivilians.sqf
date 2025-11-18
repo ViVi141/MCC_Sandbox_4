@@ -61,5 +61,8 @@ missionNamespace setVariable ["MCC_civRelationsIgnore",(_resualt select 9)];
 publicVariable "MCC_civRelationsIgnore";
 
 //Start ambient civilians
-_resualt remoteExec ["MCC_fnc_ambientInit",2];
+if (!(isNull _resualt)) then {
+_resualt remoteExec ["MCC_fnc_ambientInit", 2];
+};
+
 deleteVehicle _module;

@@ -36,5 +36,8 @@ _groupUnits = _resualt select 5;
 _side = [(getNumber (configfile >> "CfgFactionClasses" >> _faction >> "side"))] call BIS_fnc_sideType;
 
 //Start ambient civilians
+if (!(isNull _pos)) then {
 [_pos, _radius, _spawnVehicles, _intanse, _faction, _side, _groupUnits, _locked] remoteExec ["MCC_fnc_garrison", 2, false];
+};
+
 deleteVehicle _module;

@@ -38,5 +38,8 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _dist*2, _dist*2, 0, false
 
 {
 	_relVel = (_vel * (1 - ((_pos distance2D vehicle _x)/_dist))) max 1;
-	[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
-} forEach _effected;
+if (!(isNull _x)) then {
+[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
+};
+};
+forEach _effected;

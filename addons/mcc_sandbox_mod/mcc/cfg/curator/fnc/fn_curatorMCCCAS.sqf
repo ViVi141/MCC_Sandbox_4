@@ -41,7 +41,9 @@ _casPlane = (_unitsArray select (_resualt select 0)) select 0;
 if (toLower _casSelected isEqualTo "cruise missile") then {
 	[6, [_casSelected] , _pos, [_casPlane], _spawn,_away] spawn MCC_fnc_airDrop;
 } else {
-	[6, [_casSelected] , _pos, [_casPlane], _spawn,_away] remoteExec ["MCC_fnc_airDrop",2];
+if (!(isNull _casPlane)) then {
+    [6, [_casSelected], _pos, [_casPlane], _spawn, _away] remoteExec ['MCC_fnc_airDrop', 2];
+};
 };
 
 deleteVehicle _module;

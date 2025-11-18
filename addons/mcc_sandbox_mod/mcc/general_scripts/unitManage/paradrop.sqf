@@ -25,7 +25,10 @@ _pilot2 assignAsCargo _plane;
 _pilot2 MoveInCargo _plane;
 _plane setpos _spawn;
 _init =  format ["_this setBehaviour 'CARELESS';_this flyInHeight %1;",_flightHight];
+if (!(isNull _plane)) then {
 [[netid _plane,_plane], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
+};
+
 
 //Set plane variables
 _plane setVariable ["MCCJumperNumber",-1,true];																		//Number of unit to jump		
@@ -61,9 +64,12 @@ _count = 0;
 for [{_x=0},{_x < count _unitsArray},{_x=_x+1}] do {
 		_unit = _unitsArray select _x;
 		_init = format[" if (local _this) then {[%1,_this,%2,%3] execVM ""\mcc_sandbox_mod\mcc\general_scripts\unitManage\paraStart.sqf"";}",_planeName,_count,_pos];
-		[[netid _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
+if (!(isNull _unit)) then {
+[[netid _unit,_unit], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
+};
+};
 		_count = _count + 1;
-	};
+	
 	
 //Set waypoint
 _plane move _dropPos;

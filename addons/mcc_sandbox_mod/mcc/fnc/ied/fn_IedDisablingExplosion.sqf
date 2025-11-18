@@ -62,7 +62,10 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 {
 	//Add val
 	_relVel = (_vel * (1 - ((_pos distance2D vehicle _x)/_hitRadius))) max 1;
-	[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
+if (!(isNull _x)) then {
+[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
+};
+};
 
 	_random = random 10;
 	if (_x isKindOf "Man") then
@@ -85,7 +88,9 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 			[2, compile format ["objectFromNetId '%1' setHit ['glass1', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
 			[2, compile format ["objectFromNetId '%1' setHit ['glass2', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
 			[2, compile format ["objectFromNetId '%1' setHit ['glass3', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass4', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
+if (!(isNull _x)) then {
+    [2, compile format ["objectFromNetId '%1' setHit ['glass4', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
+};
 			[2, compile format ["objectFromNetId '%1' setHit ['glass5', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
 			[2, compile format ["objectFromNetId '%1' setHit ['glass6', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
 			if (isServer) then {_x spawn _burningEffects};
@@ -120,5 +125,5 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 			_x setdamage 1;
 		};
 	};
-} forEach _effected;
+forEach _effected;
 

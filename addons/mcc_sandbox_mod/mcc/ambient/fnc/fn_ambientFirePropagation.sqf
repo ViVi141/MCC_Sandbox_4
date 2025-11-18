@@ -51,7 +51,10 @@ if (random 1 < rain) exitWith {};
 		_effect attachTo [_dummy,[0,0,0]];
 
 		//Spawn light
-		[_effect,10] remoteExec ["MCC_fnc_ambientFireClientSide",0];
+if (!(isNull _effect)) then {
+[_effect,10] remoteExec ["MCC_fnc_ambientFireClientSide",0];
+};
+};
 
 		//Each tree have a chance create new fire source
 		if (random 10 > 6) then {
@@ -73,7 +76,7 @@ if (random 1 < rain) exitWith {};
 
 		sleep random 10;
 	};
-} foreach ((nearestTerrainObjects [_pos, ["Tree","Bush","SMALL TREE"], 8]) + (nearestObjects [_pos, ["House", "Building"], 15]));
+foreach ((nearestTerrainObjects [_pos, ["Tree","Bush","SMALL TREE"], 8]) + (nearestObjects [_pos, ["House", "Building"], 15]));
 
 //Propagation on land
 if (["grass", tolower (surfaceType _pos)] call BIS_fnc_inString ||
@@ -85,12 +88,15 @@ if (["grass", tolower (surfaceType _pos)] call BIS_fnc_inString ||
 	_fire setPosATL _pos;
 
 	//Spawn light
-	[_fire,5] remoteExec ["MCC_fnc_ambientFireClientSide",0];
+if (!(isNull _fire)) then {
+[_fire,5] remoteExec ["MCC_fnc_ambientFireClientSide",0];
+};
+};
 
 	//Next step
 	_fireDistance = _fireDistance - _fireSpread;
 
 	sleep 10 + (random 30);
 	[_pos,_fireDistance,_dir] spawn MCC_fnc_ambientFirePropagation;
-};
+
 

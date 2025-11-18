@@ -76,24 +76,4 @@ for "_i" from 0 to (count _answers)-1 do {
 {
     _ctrl = _display displayctrl _x;
 _ctrl ctrlAddEventHandler ['MouseButtonUp',format ["_ctrl = _this select 0;\n_display = ctrlParent _ctrl;\n_index = 0;\n_answers = %2;\n{\n    if !(ctrlEnabled (_display displayctrl _x)) then {_index = _index+1};\n} forEach %1;\n\nif (ctrlText _ctrl == _answers select _index) then {\n    _ctrl ctrlEnable false;\n     playsound 'RscDisplayCurator_ping02';\n    if (count _answers -1 == _index) then {\n        (_display displayctrl %3) ctrlshow false;\n    };\n} else {\n    player setVariable ['MCC_bombDefuseStrikes',(player getVariable ['MCC_bombDefuseStrikes',0])+1];\n    playsound 'AlarmCar';\n};",_ctrls,_answers,ctrlIDC _ctrlGroup]];
-        "
-        _ctrl = _this select 0;
-        _display = ctrlParent _ctrl;
-        _index = 0;
-        _answers = %2;
-        {
-            if !(ctrlEnabled (_display displayctrl _x)) then {_index = _index+1};
-        } forEach %1;
-
-        if (ctrlText _ctrl == _answers select _index) then {
-            _ctrl ctrlEnable false;
-             playsound 'RscDisplayCurator_ping02';
-            if (count _answers -1 == _index) then {
-                (_display displayctrl %3) ctrlshow false;
-            };
-        } else {
-            player setVariable ['MCC_bombDefuseStrikes',(player getVariable ['MCC_bombDefuseStrikes',0])+1];
-            playsound 'AlarmCar';
-        };
-    ",_ctrls,_answers,ctrlIDC _ctrlGroup]];
 } forEach _ctrls;

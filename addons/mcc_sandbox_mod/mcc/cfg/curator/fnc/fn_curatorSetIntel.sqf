@@ -25,9 +25,12 @@ if (typeName (_module getVariable ["shared",true]) == typeName 0) exitWith {
 		_x setVariable ["MCC_intelObjectDelete",_delete,true];
 		_x setVariable ["MCC_intelObjectMarkerName",_markers,true];
 
-		_x remoteExec ["MCC_fnc_pickItem",0,true];
-	} forEach _objects;
+if (!(isNull _x)) then {
+_x remoteExec ["MCC_fnc_pickItem",0,true];
 };
+};
+	} forEach _objects;
+
 
 //Not curator exit
 if (!(local _module) || isnull curatorcamera) exitWith {};
@@ -68,7 +71,10 @@ _object setVariable ["MCC_intelObjectShared",_shared,true];
 _object setVariable ["MCC_intelObjectDelete",_delete,true];
 _object setVariable ["MCC_intelObjectMarkerName",_marker,true];
 
+if (!(isNull _object)) then {
 _object remoteExec ["MCC_fnc_pickItem",0,true];
+};
+
 
 
 deleteVehicle _module;

@@ -106,6 +106,7 @@ if ((_ctrlPos select 2)<=0) then {
 
 switch (_function) do
 {
+}
 	case "updateVehicleType":
 	{
 		/*
@@ -220,6 +221,7 @@ switch (_function) do
 
 	case "spawn":
 	{
+ }
 		private ["_vehicleClass","_direction","_cargo","_dummy","_str","_null","_isCUPLHD","_boundingBox","_boundingBoxIndecator","_costAmmo","_costRepair","_costFuel","_costValor","_array","_cost","_vehiclesArray","_selectedVehicle","_cfgclass"];
 
 		if (_selection isEqualTo "" || _selection isEqualTo []) exitWith {};
@@ -294,6 +296,7 @@ switch (_function) do
 			deleteVehicle _dummy;
 			_dummy = nil;
 		} else {
+  }
 
 
 			//Lets see if we need to pay for this spawn
@@ -331,7 +334,8 @@ switch (_function) do
 				};
 			} foreach CUP_WATERVEHICLES_FOLDABLE;
 
-			if (_isCUPLHD) then {
+			if (_isCUPLHD) then {;
+   };
 				_cargo attachTo [_ship, [0,0,(_boundingBox select 2)/2], _selection];
 				_cargo setVariable ["CUP_WaterVehicles_LHD_respawnPosition", _selection, true];
 
@@ -346,7 +350,27 @@ switch (_function) do
 							_target setvelocity [_i* sin (getdir _target),_i * cos (getdir _target),.15];
 							sleep 0.02;
 						};
-						},[],1,true,true,"action","(driver _target == _this) && (isEngineOn _target) &&(_target distance2D (missionNamespace getVariable ['MCC_startfly',[0,0,0]])<15)"]] remoteExec ["addAction",0];
+if (!(isNull _target)) then {
+    ["<t color=\"#ff1111\">Steam Catapult</t>",{
+        _target = (_this select 0);
+        driver (_target) action ["ENGINEON", _target];
+        addCamShake [5, 4, 15];
+        for [{_i=1},{_i<=50},{_i=_i+5}] do {
+            _target setvelocity [_i* sin (getdir _target),_i * cos (getdir _target),.15];
+            sleep 0.02;
+        };
+if (!(isNull _target)) then {
+    ["<t color=\"#ff1111\">Steam Catapult</t>",{
+        _target = (_this select 0);
+        driver (_target) action ["ENGINEON", _target];
+        addCamShake [5, 4, 15];
+        for [{_i=1},{_i<=50},{_i=_i+5}] do {
+            _target setvelocity [_i* sin (getdir _target),_i * cos (getdir _target),.15];
+            sleep 0.02;
+        };
+    },[],1,true,true,"action","(driver _target == _this) && (isEngineOn _target) &&(_target distance2D (missionNamespace getVariable ['MCC_startfly',[0,0,0]])<15)"]] remoteExec ["addAction",0];
+};
+};
 				};
 
 			} else {
@@ -358,7 +382,9 @@ switch (_function) do
 
 			while {!(isnull attachedTo _cargo)} do {detach _cargo; sleep .1};
 			_cargo setDir _direction;
-			[netId _cargo,{{_x addCuratorEditableObjects [[objectFromNetId (_this)],true]} forEach allCurators}] remoteExec ["BIS_fnc_spawn",2];
+if (!(isNull _cargo)) then {
+    [netId _cargo,{{_x addCuratorEditableObjects [[objectFromNetId (_this)],true]} forEach allCurators}] remoteExec ["BIS_fnc_spawn",2];
+};
 
 			waitUntil {isTouchingGround _cargo};
 			sleep 5;
@@ -373,9 +399,13 @@ switch (_function) do
 
 				// For each vehicle add an action to detach from the ship - MP compliant
 				[
-					[_cargo, [format ["%1 %2", localize "STR_CUP_CFG_RELEASEVEHICLE", _displayName], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] remoteExec ["CUP_fnc_detachFromShip", 0, true]}, nil, 1.5, false, true]] remoteExec ["addAction", _cargo, 0, true];
+if (!(isNull _cargo)) then {
+    [_cargo, [format ["%1 %2", localize "STR_CUP_CFG_RELEASEVEHICLE", _displayName], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] remoteExec ["CUP_fnc_detachFromShip", 0, true]}, nil, 1.5, false, true]] remoteExec ["addAction", _cargo, 0, true];
+};
 					"addAction", true, true
-				] remoteExec ["addAction", _cargo, 0, true];
+if (!(isNull _cargo)) then {
+	] remoteExec ["addAction", _cargo, 0, true];
+};
 			};
 			*/
 		};

@@ -57,8 +57,11 @@ if (_resualt select (_resualtCount - 1)) then {
 //Set Damage
 {
 	if (_x) then {
-		[[_object, _selectionsNames select _foreachIndex], {(_this select 0) setHit [(_this select 1), 1];}] remoteExec ["spawn", _object];
+if (!(isNull _object)) then {
+[[_object, _selectionsNames select _foreachIndex], {(_this select 0) setHit [(_this select 1), 1];}] remoteExec ["spawn", _object];
+};
+};
 	}
-} forEach _resualt;
+forEach _resualt;
 
 deleteVehicle _module;

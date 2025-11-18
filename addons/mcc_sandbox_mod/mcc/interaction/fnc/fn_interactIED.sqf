@@ -83,7 +83,10 @@ if (_men distance _ied <4) then {
 	if (_isEngineer) then {
 		if (_rand > 0.20) then {
 			hint "disarmed";
-			[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 
 			sleep 1;
 			if (_isEngineer) then {player addrating 500};
@@ -94,11 +97,17 @@ if (_men distance _ied <4) then {
 			if (_rand >0.05) then {
 				hint "Fail to disarm";
 
-				[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 			} else {
 				hint "Critical fail start runing";
 
-				[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
@@ -106,23 +115,31 @@ if (_men distance _ied <4) then {
 				sleep 10 + random 10;
 				_ied setvariable ["iedTrigered",true,true];
 			};
-		}
-	} else {
+		
+	else {
 		//If it isn't a bomb expert <*Kaboom*>
 		if (_rand > 0.70) then {
 			hint "disarmed";
-			[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 
 			sleep 1;
 			_ied setvariable ["armed",false,true];
 		} else {
 			hint "Fail to disarm";
 			if (_rand >0.3) then {
-				[netid _men,_men], format ["disarmfail%1", (floor random 3)+1] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+[netid _men,_men], format ["disarmfail%1", (floor random 3)+1] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 			} else {
 				hint "Critical fail start runing";
 
-				[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _men)) then {
+    [[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
 
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
@@ -130,12 +147,12 @@ if (_men distance _ied <4) then {
 				sleep 10 + random 10;
 				_ied setvariable ["iedTrigered",true,true];
 			};
-		};
-	};
+		
+	
 
 	player setVariable ["MCC_interactionActive",false];
 	_ied setVariable ["MCC_isInteracted",false,true];
-}
+
 else {hint "To far to disarm"};
 _ied setVariable ["MCC_isInteracted",false,true];
 sleep _waitTime;

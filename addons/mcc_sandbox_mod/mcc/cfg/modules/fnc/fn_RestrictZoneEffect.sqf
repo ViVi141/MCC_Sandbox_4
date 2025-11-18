@@ -9,7 +9,7 @@ Example: [trigger,10,true,false] call PRA3_fnc_RestrictZoneEffect
 
 ************************************************************/
 /*
-{[_x, [west,east],10,false,false, false] remoteExec ["MCC_fnc_createRestrictedZones", 0, false, false];} foreach ["r1","r2","r3","r4"]
+{if !(isNull _x) then {[_x, [west,east],10,false,false, false] remoteExec ['MCC_fnc_createRestrictedZones', 0, false, false];};} foreach ['r1','r2','r3','r4'];
 */
 #define var(x) private #x; x
 

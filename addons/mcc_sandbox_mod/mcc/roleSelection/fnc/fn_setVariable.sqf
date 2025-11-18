@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_setVariable======================================================================================
 // Global execute a command on server only  - SERVER ONLY
-[[varName,playerID,VarValue], "MCC_fnc_setVariable", false, false] remoteExec ["MCC_fnc_setVariable", 2, false];
+if (!(isNull _player)) then {
+    [[varName, if (isMultiplayer) then {netId _player} else {""}, VarValue], "MCC_fnc_setVariable", false, false] remoteExec ["MCC_fnc_setVariable", 2, false];
+};
 //==============================================================================================================================================================================
 
 private ["_varName","_id","_value","_player","_varType","_name"];

@@ -48,7 +48,10 @@ _animals spawn {
 };
 
 
+if (!(isNull _tree)) then {
 [_tree,"moduleSeagulls","say3d"] remoteExec ["bis_fnc_sayMessage", 0];
+};
+
 
 [_animals,_maxHeight] spawn {
 	params ["_animals","_maxHeight"];

@@ -55,6 +55,9 @@ _newLevel = _level select 0;
 if (MCC_debug) then {systemchat format ["level: %1",_level]};
 
 missionNameSpace setVariable [format ["%1Level",_role], _level];
+if (!(isNull player)) then {
 [format ["%1Level",_role], player, _level, "ARRAY"] remoteExec ["MCC_fnc_setVariable", 2, false];
+};
+
 
 _rating

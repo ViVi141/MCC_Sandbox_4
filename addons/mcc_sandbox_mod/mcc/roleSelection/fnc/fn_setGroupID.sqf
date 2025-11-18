@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_setGroupID======================================================================================
 //Set group ID - SERVER ONLY
-[[group,groupID], "MCC_fnc_setGroupID", false, false] remoteExec ["MCC_fnc_setGroupID", 2, false];
+if (!(isNull _group)) then {
+    [[_group, groupID], "MCC_fnc_setGroupID", false, false] remoteExec ["MCC_fnc_setGroupID", 2, false];
+};
 // Params: 
 //==============================================================================================================================================================================	
 private ["_group","_groupID"];

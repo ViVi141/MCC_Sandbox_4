@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_groupchat======================================================================================
 // Send chat across MP
-// Example: [[[netid _unit,_unit],_text,_local] remoteExec ["MCC_fnc_groupchat", 0, false]];
+if (!(isNull _unit)) then {
+    [[[netid _unit,_unit],_text,_local] remoteExec ["MCC_fnc_groupchat", 0, false]];
+};
 // Params: 
 //	_unit: object, brocadcasting unit
 //	_text: string, text to broadcast

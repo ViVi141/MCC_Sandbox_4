@@ -62,9 +62,12 @@ if (_object isKindOf "Man") then {
 	_IEDExplosionType 	= (_resualt select 1);
 	_iedside 			= (_resualt select 2) call BIS_fnc_sideType;
 
-	[[_object, _iedside, _trapvolume, _IEDExplosionType] remoteExec ["MCC_fnc_manageSB", _object, false]];
+if (!(isNull _object)) then {
+[[_object, _iedside, _trapvolume, _IEDExplosionType] remoteExec ["MCC_fnc_manageSB", _object, false]];
+};
+};
 
-} else {
+else {
 	_resualt = ["Make an object act as an IED",[
 	 						["Explosion Size",["Small","Medium","large"]],
 	 						["Explosion Effect",["Deadly","Disabling","Fake","None"]],
@@ -88,7 +91,9 @@ if (_object isKindOf "Man") then {
 
 
 	_ok = [_object, _trapvolume, _IEDExplosionType, _IEDDisarmTime, _IEDJammable, _IEDTriggerType, _trapdistance, _iedside] execVM "mcc_sandbox_mod\mcc\fnc\ied\fn_createIED.sqf";
-	//[_object, _trapvolume, _IEDExplosionType, _IEDDisarmTime, _IEDJammable, _IEDTriggerType, _trapdistance, _iedside] remoteExec ["MCC_fnc_createIED",2];
+if (!(isNull _object)) then {
+	[_object, _trapvolume, _IEDExplosionType, _IEDDisarmTime, _IEDJammable, _IEDTriggerType, _trapdistance, _iedside] remoteExec ["MCC_fnc_createIED", 2];
+};
 };
 
 

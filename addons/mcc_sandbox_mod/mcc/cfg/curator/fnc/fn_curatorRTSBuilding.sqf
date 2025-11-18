@@ -49,6 +49,9 @@ if (count _resualt == 0) exitWith {};
 
 _index = _resualt select 0;
 
+if (!(isNull _module)) then {
 [getpos _module, getDir _module, (_buildingsCfg select _index),0,((_resualt select 1) call BIS_fnc_sideType)] remoteExec ["MCC_fnc_construct_base",2];
+};
+
 
 deleteVehicle _module;

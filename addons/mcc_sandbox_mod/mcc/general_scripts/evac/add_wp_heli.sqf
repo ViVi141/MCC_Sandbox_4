@@ -9,8 +9,10 @@ private ["_point1","_convoy_wp1","_flyInHight","_landing","_evac","_evacVehicles
 _evacVehicles = missionNamespace getvariable [format ["MCC_evacVehicles_%1",playerside],[]];
 if !mcc_isloading then
 {
+}
 	if (mcc_missionmaker == (name player)) then
 	{
+ }
 		deletemarkerlocal "evac_marker1";
 		deletemarkerlocal "evac_marker2";
 		deletemarkerlocal "evac_marker3";
@@ -51,8 +53,12 @@ if !mcc_isloading then
 
 		if (MCC_capture_state) then
 		{
-			MCC_capture_var = MCC_capture_var + FORMAT ['
-								[[%1, %2, %3, [%4, %5]], "MCC_fnc_evacMove", false, false] remoteExec ["MCC_fnc_evacMove", 2, false];
+  }
+			MCC_capture_var = MCC_capture_var + FORMAT []'
+if (!(isNull _evac)) then {
+[[%1, %2, %3, [%4, %5]], "MCC_fnc_evacMove", false, false] remoteExec ["MCC_fnc_evacMove", 2, false];
+};
+};
 								,_point1
 								,_flyInHight
 								,_landing
@@ -62,7 +68,10 @@ if !mcc_isloading then
 		}
 		else
 		{
-			[[_point1, _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove", _evac, false] remoteExec ["MCC_fnc_evacMove", _evac, false];
+if (!(isNull _evac)) then {
+[[_point1, _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove", _evac, false] remoteExec ["MCC_fnc_evacMove", _evac, false];
+};
+};
 		};
 	}
 	else

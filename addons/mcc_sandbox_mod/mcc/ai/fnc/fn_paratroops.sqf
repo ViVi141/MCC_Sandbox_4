@@ -304,9 +304,9 @@ if (_cargoNum > 0) then {
 				removeBackpack _x;
 				_x addBackpack "B_Parachute";
 			*/
-		} forEach (units _unitspawned);
-	};
-};
+		forEach (units _unitspawned);
+	
+
 
 _dropPos = _pos findEmptyPosition [10,150,_heliType];
 if ( count _dropPos == 0 ) then { _dropPos = _pos; };
@@ -460,7 +460,9 @@ if ( _paraMode == 2 ) then {
 								sleep 0.1;
 							};
 
-							[compile format ["objectFromNetID '%1' switchmove ''", netID _unit] remoteExec ["BIS_fnc_spawn", 0, false]];
+if (!(isNull _unit)) then {
+    [compile format ['objectFromNetID '%1' switchmove ''', netID _unit], 'BIS_fnc_spawn'] remoteExec ['BIS_fnc_spawn', 0, false];
+};
 							//_unit switchmove "";
 							detach _unit;
 						};

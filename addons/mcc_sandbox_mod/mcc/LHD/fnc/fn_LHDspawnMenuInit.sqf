@@ -269,11 +269,11 @@ _ctrl ctrlAddEventHandler ['MouseButtonUp',format ["closeDialog 0;[%1, %2, %3] s
 		    "
 		   closeDialog 0;
 		   [%1, %2, %3] spawn MCC_fnc_LHDspawnMenuInit;
-		",0,(_availableLHD find _x),_operator]];
+		",0,(_availableLHD find _x),_operator];
 
 		_ctrl ctrlCommit 0;
-	} forEach _availableLHD;
-};
+	forEach _availableLHD;
+
 
 //Add exit ctrl
 _ctrl = _display ctrlCreate ["RscButtonMenu", -1];

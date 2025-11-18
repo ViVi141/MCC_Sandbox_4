@@ -18,7 +18,10 @@ switch (true) do {
 				[_suspect, true] call ACE_captives_fnc_setHandcuffed;
 			} else {
 				sleep 1.5;
-				[[_suspect, "Acts_ExecutionVictim_Loop", false, 0], "MCC_fnc_setUnitAnim", _suspect, false] remoteExec ["MCC_fnc_setUnitAnim", _suspect, false];
+if (!(isNull _suspect)) then {
+[[_suspect, "Acts_ExecutionVictim_Loop", false, 0], "MCC_fnc_setUnitAnim", _suspect, false] remoteExec ["MCC_fnc_setUnitAnim", _suspect, false];
+};
+};
 			};
 
 			_suspect setVariable ["MCC_disarmed",false,true];
@@ -168,6 +171,8 @@ switch (true) do {
 
 	case (["load",_ctrlData] call bis_fnc_inString): {
 		closeDialog 0;
-		[_suspect,_ctrlData,true] remoteExec ["MCC_fnc_loadWounded",_suspect];
-	};
+if (!(isNull _suspect)) then {
+[_suspect,_ctrlData,true] remoteExec ["MCC_fnc_loadWounded",_suspect];
 };
+};
+	

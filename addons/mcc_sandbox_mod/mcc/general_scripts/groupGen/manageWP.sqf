@@ -22,7 +22,10 @@ _wpBehavior = ["UNCHANGED", "CARELESS", "SAFE", "AWARE", "COMBAT", "STEALTH"] se
 } foreach MCC_GroupGenGroupSelected;
 
 //Call the server to handle WP
-[_action,MCC_ConsoleWPpos,[_wpType,"NO CHANGE",_wpFormation,_wpSpeed,_wpBehavior,"true","",0],_groups] remoteExec ["MCC_fnc_manageWp", 2, false];	
+if (!(isNull _groups)) then {
+[_action,MCC_ConsoleWPpos,[_wpType,"NO CHANGE",_wpFormation,_wpSpeed,_wpBehavior,"true","",0],_groups] remoteExec ["MCC_fnc_manageWp", 2, false];
+};
+
 	
 ctrlShow [510,false];
 

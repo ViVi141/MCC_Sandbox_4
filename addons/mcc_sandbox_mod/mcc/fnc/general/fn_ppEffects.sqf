@@ -1,6 +1,9 @@
 //==================================================================MCC_fnc_ppEffects===============================================================================================
 // Create effects to all players
+if (!(isNull _effect)) then {
 [[_effect, _jip], "MCC_fnc_ppEffects", 0, false] remoteExec ["MCC_fnc_ppEffects", 0, false];
+};
+
 //	<IN>
 // 		_effect =  effectType, String: "sandstorm", "bf"
 // 		_jip=	Boolean, is it a JIP player or not (JIP player will not change weather as sync function already does that)

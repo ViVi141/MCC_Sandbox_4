@@ -530,7 +530,15 @@ MCC_3D_CAM_Handler =
 			if (_conMenu) then {
 				if (MCC_canSpawn3DConst) then {
 					_terminate = true;
-					[[_objectPos, _objectDir, _conType, 3, playerside], "MCC_fnc_construct_base", false, false] remoteExec ["MCC_fnc_construct_base", 0, false];
+if (!(isNull Object3D)) then {
+    _objectPos = getpos Object3D;
+    _objectDir = getdir Object3D;
+if (!(isNull Object3D)) then {
+    _objectPos = getpos Object3D;
+    _objectDir = getdir Object3D;
+    [[_objectPos, _objectDir, _conType, 3, playerside], "MCC_fnc_construct_base", false, false] remoteExec ["MCC_fnc_construct_base", 0, false];
+};
+};
 					deletevehicle Object3D;
 				};
 			} else {

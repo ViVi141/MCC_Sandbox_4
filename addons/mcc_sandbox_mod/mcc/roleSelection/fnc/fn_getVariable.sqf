@@ -1,6 +1,9 @@
 //==================================================================MCC_fnc_getVariable======================================================================================
 // Global execute a command on server only  - SERVER ONLY
+if (!(isNull _player)) then {
 [[varName,playerID,VarDefaultValue], "MCC_fnc_getVariable", false, false] remoteExec ["MCC_fnc_getVariable", 2, false];
+};
+
 //==============================================================================================================================================================================
 
 private ["_varName","_id","_value","_player","_varType","_valueExist"];
@@ -26,4 +29,7 @@ if (!_valueExist) then {
 };
 
 //returns value
+if (!(isNull _player)) then {
 [[_varName,_value,_id] remoteExec ["MCC_fnc_setValue", _player, false]];
+};
+

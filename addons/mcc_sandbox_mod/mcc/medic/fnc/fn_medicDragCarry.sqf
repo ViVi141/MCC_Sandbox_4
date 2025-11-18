@@ -11,17 +11,20 @@ if (_carry) then
 	_targetUnit attachTo [_unit,[0.3, 0, -1.4], "water_surface"];
 	_targetUnit setdir 180;
 	_unit playMoveNow "acinpknlmstpsraswrfldnon_acinpercmrunsraswrfldnon";
-	[[_targetUnit, {(_this select 0) playactionNow "grabCarried"}], "BIS_fnc_spawn", _targetUnit, false] remoteExec ["BIS_fnc_spawn", _targetUnit, false];
+if (!(isNull _targetUnit)) then {
+[[_targetUnit, {(_this select 0) playactionNow "grabCarried"}], "BIS_fnc_spawn", _targetUnit, false] remoteExec ["BIS_fnc_spawn", _targetUnit, false];
+};
+};
 	WaitUntil {!(alive _unit) || (animationstate player in ["acinpercmstpsraswrfldnon","acinpercmrunsraswrfldf","acinpercmrunsraswrfldr","acinpercmrunsraswrfldl"])};
 	detach _targetUnit;
 	_targetUnit attachTo [_unit,[0.7, -0.1, -1.25], "LeftShoulder"];
 	_targetUnit setdir 180;
 	_unit setVariable ["mcc_draggedObject", _targetUnit];
-}
+
 else
 {
 	[_targetUnit] call MCC_fnc_dragObject;
-	[_targetUnit, {(_this select 0) switchMove "AinjPpneMrunSnonWnonDb_still"}] remoteExec ["BIS_fnc_spawn", 0, false];
+if (!(isNull _targetUnit)) then { [_targetUnit, {(_this select 0) switchMove "AinjPpneMrunSnonWnonDb_still"}] remoteExec ["BIS_fnc_spawn", 0, false]; };
 };
 
 sleep 1;
@@ -34,13 +37,22 @@ waituntil
 
 [] call MCC_fnc_releaseObject;
 
+if (!(isNull _targetUnit)) then {
 [[_targetUnit, {(_this select 0) playactionNow "released"}], "BIS_fnc_spawn", _targetUnit, false] remoteExec ["BIS_fnc_spawn", _targetUnit, false];
-
-if (_targetUnit getVariable ["MCC_medicUnconscious",false]) then
-{
-	[[_targetUnit, {(_this select 0) playactionNow "Unconscious"}], "BIS_fnc_spawn", _targetUnit, false] remoteExec ["BIS_fnc_spawn", _targetUnit, false];
 };
 
 
+if (_targetUnit getVariable ["MCC_medicUnconscious",false]) then
+{
+if (!(isNull _targetUnit)) then {
+[[_targetUnit, {(_this select 0) playactionNow "Unconscious"}], "BIS_fnc_spawn", _targetUnit, false] remoteExec ["BIS_fnc_spawn", _targetUnit, false];
+};
+};
+
+
+
+if (!(isNull _unit)) then {
 [_unit, {(_this select 0) playactionNow "released"}] remoteExec ["BIS_fnc_spawn", _unit, false];
+};
+
 if (_carry && !(_unit getVariable ["MCC_medicUnconscious",false])) then {sleep 2; _unit switchMove ""};

@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_addWeapon======================================================================================
 // Sets gear to role
-// Example: [_currentWeapon] remoteExec ["MCC_fnc_addWeapon", _unit, 0];
+if (!(isNull _unit)) then {
+    [_currentWeapon] remoteExec ["MCC_fnc_addWeapon", _unit, 0];
+};
 //==============================================================================================================================================================================
 private ["_magazines","_currentWeapon","_mag","_unit"];
 _currentWeapon = _this select 0;

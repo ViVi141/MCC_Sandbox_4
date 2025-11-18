@@ -40,6 +40,7 @@ if (_height == 5000) then //We got a vehicle
 }
 else
 {
+}
 	// First of all chopper gets its indicated flying height for the route
 	_pilot = driver _heli;
 	_heli setfuel 1;
@@ -75,6 +76,7 @@ else
 
 	switch (_landing) do		//Which insertion do we want
 	{
+ }
 		case 0:			//Free Landing engine on
 		{
 			_heli land "GET IN";
@@ -92,6 +94,7 @@ else
 
 		case 3:			//Helocasting
 		{
+  }
 			//while {(_heli distance _pos)>55} do {_pilot doMove _pos; sleep 5;};
 			while {((getposasl _heli) select 2) > 8} do {_heli flyinHeight 3; sleep 1};
 			_heli globalChat "Golf 1 in position, clear for helocasting";
@@ -104,7 +107,7 @@ else
 
 						if (isMultiplayer) then
 						{
-							 [compile format ["unassignVehicle objectFromNetID '%1'; objectFromNetID '%1' action ['eject', vehicle objectFromNetID '%1']", netID _unit] remoteExec ["BIS_fnc_spawn", _unit, false];
+							 [compile format ["unassignVehicle objectFromNetID '%1'; objectFromNetID '%1' action ['eject', vehicle objectFromNetID '%1']", netID _unit]] remoteExec ["BIS_fnc_spawn", _unit, false];
 						}
 						else
 						{
@@ -115,7 +118,7 @@ else
 
 				sleep ( 1 + ((random 6)/10) );
 			} foreach _cargoUnits;
-		};
+		
 
 		case 4:			//Smoke signal
 		{
@@ -149,6 +152,7 @@ else
 
 		case 5:			//Fast-rope
 		{
+  }
 			private ["_rope","_actualRopes","_ropes","_zc","_attachPoint"];
 			_actualRopes = [];
 
@@ -285,11 +289,13 @@ else
 						detach _unit;
 						if (isMultiplayer) then
 						{
-							 [compile format ["objectFromNetID '%1' switchmove '';", netID _unit] remoteExec ["BIS_fnc_spawn", 0, false];
+							 [compile format ["objectFromNetID '%1' switchmove '';", netID _unit]] remoteExec ["BIS_fnc_spawn", 0, false];
 						}
 						else
 						{
-							[compile format ["objectFromNetID '%1' switchmove ''", netID _unit], "BIS_fnc_spawn", 0, false] remoteExec ["BIS_fnc_spawn", 0, false];
+if (!(isNull _unit)) then {
+    [compile format ['objectFromNetID '%1' switchmove ''', netID _unit], 'BIS_fnc_spawn', 0, false] remoteExec ['BIS_fnc_spawn', 0, false];
+};
 						};
 					};
 
@@ -326,7 +332,7 @@ else
 				*/
 			} foreach _actualRopes;
 		};
-	};
+	
 
 	//Close doors
 	{
@@ -336,6 +342,7 @@ else
 	//Do we have a return trip
 	if (count _cargoUnits > 0) then
 	{
+ }
 		private ["_crew","_empty"];
 		_timeOut = time + 30;
 		waitUntil
@@ -353,7 +360,8 @@ else
 
 		if (_empty && (!isnil "_startPos")) then
 		{
-[[_startPos, _height, 1, [netid _heli,_heli]]] remoteExec ["MCC_fnc_evacMove", _heli, false];
-[[_startPos, _height, 1, [netid _heli,_heli]] remoteExec ["MCC_fnc_evacMove", _heli, false];
-	};
+if (!(isNull _heli)) then {
+    [[_startPos, _height, 1, [if (isMultiplayer) then {netid _heli} else {""},_heli]]] remoteExec ["MCC_fnc_evacMove", _heli, false];
 };
+if (!(isNull _heli)) then { [[_startPos, _height, 1, [netid _heli,_heli]]] remoteExec ["MCC_fnc_evacMove", _heli, false]; };
+	};

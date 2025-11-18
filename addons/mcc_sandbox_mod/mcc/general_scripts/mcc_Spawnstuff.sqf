@@ -305,7 +305,10 @@ else
 
 				if ( (isServer) && ( (mcc_hc == 0) || !(MCC_isHC) ) ) then
 				{
-					[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+if (!(isNull player)) then {
+[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+};
+};
 
 					diag_log "MCC: attemping to spawn";
 
@@ -319,15 +322,23 @@ else
 				{
 					if ( ( mcc_hc == 0 ) || !(MCC_isHC) ) then
 					{
-						[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 0, false];
-						[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+if (!(isNull player)) then {[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 0, false];};
+if (!(isNull player)) then {[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];};
 						diag_log format ["Called 'mcc_setup' Remote Event on Server - isServer [%1] - isHC: [%2] - MCC_HC: [%3]", isServer, MCC_isHC, mcc_hc];
 					};
 
 					if (( mcc_hc == 1 ) && (MCC_isHC)) then
 					{
-						[_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", MCC_ownerHC, false];
-						[_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", MCC_ownerHC, false];
+if (!(isNull MCC_ownerHC)) then {
+if (!(isNull MCC_ownerHC)) then {
+if (!(isNull MCC_ownerHC)) then {
+    [_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", MCC_ownerHC, false];
+};
+};
+};
+if (!(isNull MCC_ownerHC)) then {
+    [_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", MCC_ownerHC, false];
+};
 						diag_log format ["Called 'mcc_setup_hc' Remote Event on Headless Client - isServer [%1] - isHC: [%2] - MCC_HC: [%3] - MCC_HC_Owner: [%4]", isServer, MCC_isHC, mcc_hc, MCC_ownerHC];
 					};
 				};
@@ -340,4 +351,4 @@ else
 	mcc_spawnname = "";
 	mcc_spawnfaction ="";
 	mcc_resetmissionmaker = false;
-};
+

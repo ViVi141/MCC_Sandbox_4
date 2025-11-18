@@ -154,7 +154,10 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-									[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+if (!(isNull %1 select 0) && !(isNull %2 select 0) && !(isNull %3 select 0) && !(isNull %4 select 0) && !(isNull %5 select 0)) then {
+[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+};
+};
 								    "
 								  , convoy_car1
 								  , convoy_car2
@@ -172,14 +175,20 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 								  ];
 		} else {
 			hint "Convoy placed";
-			[convoy_car1 select 0, convoy_car2 select 0, convoy_car3 select 0, convoy_car4 select 0, convoy_car5 select 0,_point1, _point2,[mcc_sidename] select 0, vip select 0, vipCar select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+if (!(isNull convoy_car1 select 0) && !(isNull convoy_car2 select 0) && !(isNull convoy_car3 select 0) && !(isNull convoy_car4 select 0) && !(isNull convoy_car5 select 0)) then {
+[convoy_car1 select 0, convoy_car2 select 0, convoy_car3 select 0, convoy_car4 select 0, convoy_car5 select 0,_point1, _point2,[mcc_sidename] select 0, vip select 0, vipCar select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+};
+};
 			mcc_safe = mcc_safe + FORMAT ["
 									point2 =%7;
 									point3 =%8;
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-									[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+if (!(isNull _1) && !(isNull _2) && !(isNull _3) && !(isNull _4) && !(isNull _5) && !(isNull _6) && !(isNull _7) && !(isNull _11) && !(isNull _12) && !(isNull _13)) then {
+[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+};
+
 								    sleep 1;
 								  "
 								  , convoy_car1

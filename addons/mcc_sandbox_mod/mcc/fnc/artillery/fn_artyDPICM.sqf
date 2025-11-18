@@ -21,7 +21,10 @@ for [{_i=0},{_i<_nshell},{_i=_i+1}] do
 	{
 		_shell = _shelltype createVehicle [(_pos select 0) + _shellspread - 2*(random _shellspread) ,(_pos select 1) + _shellspread - 2*(random _shellspread), _hgt];
 		sleep 2; 
-		[netid _shell,_shell],format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6] remoteExec ["MCC_fnc_globalSay3D", 0, false]; 
+if (!(isNull _shell)) then {
+[netid _shell,_shell],format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 		WaitUntil{(position _shell select 2)<100};
 		_bombpos = getpos _shell;
 		_burst = "HelicopterExploSmall" createVehicle _bombpos;
@@ -44,4 +47,4 @@ for [{_i=0},{_i<_nshell},{_i=_i+1}] do
 			sleep (0.05 + random 0.05);
 			};
 		sleep _delay; 
-	};
+	

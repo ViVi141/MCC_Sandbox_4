@@ -66,7 +66,10 @@ _module setVariable ["mcc_delete",false,true];
 _markerName = format ["ConstCounter_%1",["MCC_ConstCounter_",1] call bis_fnc_counter];
 _module setVariable ["mcc_markerName",_markerName,true];
 
+if (!(isNull _side)) then {
 [[_markerName, _pos, "colorGreen", "loc_Bunker", _displayName, false] remoteExec ["BIS_fnc_markerCreate", _side, false]];
+};
+
 
 //Building anim
 if !(_instant) then {
@@ -121,14 +124,21 @@ if (_constType != "hq") then {
 
 										{detach _x; deleteVehicle _x} foreach attachedObjects _obj;
 										deleteVehicle _obj;
-										[[_side, {player addRating (if (playerside != (_this select 0)) then {500} else {-1000})}], "BIS_fnc_spawn", _source, false] remoteExec ["BIS_fnc_spawn", _source, false];
+if (!(isNull _source)) then {
+[[_side, {player addRating (if (playerside != (_this select 0)) then {500} else {-1000})}], "BIS_fnc_spawn", _source, false] remoteExec ["BIS_fnc_spawn", _source, false];
+};
+};
+}];
 
-										[_text,true] remoteExec ["MCC_fnc_globalHint", _side, false];
+if (!(isNull _side)) then {
+[_text,true] remoteExec ["MCC_fnc_globalHint", _side, false];
+};
+};
 
-									} else {0};
-								}
-							];
-} else {
+									else {0};
+								
+							;
+else {
 	_anchor AddEventHandler ["HandleDamage",{}];
 };
 
@@ -158,5 +168,7 @@ if (_constType == "hq") then {
 };
 
 if (_constType in ["workshop","barracks"]) then {
-	[_side, _module,_constType] remoteExec ["MCC_fnc_initWorkshop",2];
+if (!(isNull _module)) then {
+[_side, _module,_constType] remoteExec ["MCC_fnc_initWorkshop",2];
+};
 };

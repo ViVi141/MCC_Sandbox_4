@@ -26,4 +26,7 @@ clearMagazineCargoGlobal _object;
 clearWeaponCargoGlobal _object;
 clearBackpackCargoGlobal _object;
 _object setVariable ["MCC_virtual_cargo",_boxArray,true];
+if (!(isNull _object)) then {
 [_object,"Hold %1 to open"] remoteExec ["MCC_fnc_createHelper", false];
+};
+

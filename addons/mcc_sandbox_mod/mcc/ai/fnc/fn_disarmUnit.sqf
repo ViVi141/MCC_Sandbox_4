@@ -33,7 +33,10 @@ if (MCC_isACE) then {
 	_npc disableAI "AUTOTARGET";
 
 	_npc setVariable ["MCC_disarmed",true,true];
-	[_npc, "Hold %1 to interact"] remoteExec ["MCC_fnc_createHelper", false, 2];
+if (!(isNull _npc)) then {
+[_npc, "Hold %1 to interact"] remoteExec ["MCC_fnc_createHelper", false, 2];
+};
+};
 
 	if (_anim != "") then
 	{
@@ -48,7 +51,7 @@ if (MCC_isACE) then {
 		};
 		_npc enableAI "ANIM";
 	};
-};
+
 
 
 

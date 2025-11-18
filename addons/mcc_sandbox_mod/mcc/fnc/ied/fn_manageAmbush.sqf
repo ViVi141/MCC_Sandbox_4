@@ -75,8 +75,11 @@ else //If not all prone
 //Sync it with pre-sync IED
 if (str (_leader getVariable ["syncedObject", [0,0,0]]) != "[0,0,0]") then
 {
-	[getpos _leader, (_leader getVariable ["syncedObject", [0,0,0]])] remoteExec ["MCC_fnc_iedSync", 2, false];
+if (!(isNull _leader)) then {
+[getpos _leader, (_leader getVariable ["syncedObject", [0,0,0]])] remoteExec ["MCC_fnc_iedSync", 2, false];
 };
+};
+
 
 [_dummyAmbush,_leader,_group,_isSpotter,_pointB] spawn
 {

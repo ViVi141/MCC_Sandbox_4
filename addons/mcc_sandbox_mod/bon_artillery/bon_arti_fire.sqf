@@ -44,9 +44,15 @@ diag_log format["Cannon to fire: %1, Cannon avilable: %2",_cannons_to_fire, _can
 				{
 					MCC_bonFire = false;
 					publicVariable "MCC_bonFire";
-					[[netid _requestor,_requestor], "shoutS5"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _requestor)) then {
+[[netid _requestor,_requestor], "shoutS5"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 					sleep 2;
-					[[netid _requestor,_requestor], "shoutO5"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _requestor)) then {
+[[netid _requestor,_requestor], "shoutO5"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 				};
 
 			//MCC stuff
@@ -63,9 +69,15 @@ diag_log format["Cannon to fire: %1, Cannon avilable: %2",_cannons_to_fire, _can
 				{
 					MCC_bonSplash = false;
 					publicVariable "MCC_bonSplash";
-					[[netid _requestor,_requestor], "splashS6"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _requestor)) then {
+[[netid _requestor,_requestor], "splashS6"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 					sleep 2;
-					[[netid _requestor,_requestor], "splashO6"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+if (!(isNull _requestor)) then {
+[[netid _requestor,_requestor], "splashO6"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
+};
+};
 				};
 
 				_lasertarget = _requestor call arti_func_getLaser;
@@ -114,14 +126,14 @@ diag_log format["Cannon to fire: %1, Cannon avilable: %2",_cannons_to_fire, _can
 					};
 
 				sleep 5;
-			};
+			
 
 			sleep (20 * _nrshells);
 			MCC_server SetVariable [format["Arti_%2_Cannon%1_available",_cannon,_side],true,true];
-		};
-	}
+		
+	
 	else {_cannons_available = _cannons_available - [_x]};
-} foreach _cannons_to_fire;
+foreach _cannons_to_fire;
 
 for "_i" from 1 to HW_Arti_CannonNumber do
 {

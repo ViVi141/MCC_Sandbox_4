@@ -37,7 +37,10 @@ _cannonsObjects = [];
 
 	if (isPlayer _cannon) then
 	{
-		[_cannon,_splashpos,_firedelay,_artitype,_nrshells,_spread] remoteExec ["MCC_fnc_artyGetSolution", _cannon, false];
+if (!(isNull _cannon)) then {
+[_cannon,_splashpos,_firedelay,_artitype,_nrshells,_spread] remoteExec ["MCC_fnc_artyGetSolution", _cannon, false];
+};
+};
 	}
 	else
 	{
@@ -60,4 +63,4 @@ _cannonsObjects = [];
 			};
 		};
 	};
-} foreach _cannonsObjects;
+foreach _cannonsObjects;

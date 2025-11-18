@@ -26,20 +26,32 @@ _ignorePlayers = _resualt select 4;
 
 //Lights
 if (_resualt select 1) then {
-	[_pos, _radius, 8,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
-} else {
-	[_pos, _radius, 9,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
+if (!(isNull _pos)) then {
+[_pos, _radius, 8,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
 };
+};
+else {
+if (!(isNull _pos)) then {
+[_pos, _radius, 9,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
+};
+};
+
 
 //NV
 if (_resualt select 2) then {
-	[_pos, _radius, 19,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
+if (!(isNull _pos)) then {
+[_pos, _radius, 19,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
 };
+};
+
 
 //Flashlights
 if (_resualt select 3) then {
-	[_pos, _radius, 20,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
+if (!(isNull _pos)) then {
+[_pos, _radius, 20,_ignorePlayers] remoteExec ["MCC_fnc_deleteBrush",2];
 };
+};
+
 
 
 deleteVehicle _module;

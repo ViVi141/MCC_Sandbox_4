@@ -7,8 +7,10 @@
     false,
     true,
     {
-    	[] remoteExec ["MCC_fnc_vonRadio",0];
-    }
+if (!(isNull player)) then {
+[] remoteExec ["MCC_fnc_vonRadio", 0];
+};
+}
 ] call CBA_Settings_fnc_init;
 
 //Global radio distance

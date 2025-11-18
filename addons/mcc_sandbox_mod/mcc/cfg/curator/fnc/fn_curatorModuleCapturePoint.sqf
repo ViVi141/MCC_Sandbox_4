@@ -37,4 +37,7 @@ _module setvariable ["radius",_radius,true];
 _module setvariable ["enableHUD",_enableHUD,true];
 
 sleep 1;
-[_module] remoteExec ["MCC_fnc_moduleCapturePoint",2];
+if (!(isNull _module)) then {
+[_module] remoteExec ["MCC_fnc_moduleCapturePoint", 2];
+};
+

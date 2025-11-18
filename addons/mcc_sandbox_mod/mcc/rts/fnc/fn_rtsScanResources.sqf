@@ -42,8 +42,11 @@ if (_delete) exitWith {
 					+ "____________________<br/><br/>";
 
 	//Send hint
-	[_missionText,true] remoteExec ["MCC_fnc_globalHint", _side, false];
+if (!(isNull _side)) then {
+[_missionText,true] remoteExec ["MCC_fnc_globalHint", _side, false];
 };
+};
+
 
 //Start mission
 _missionTittle = if (_dif == 10) then {"Basic Resource Mission"} else {"Advanced Resource Mission"};
@@ -191,7 +194,10 @@ missionNamespace setVariable [format ['MCC_rtsMissionObjects_%1', _side],_missio
 publicVariable format ['MCC_rtsMissionOn_%1', _side];
 
 //Send hint
+if (!(isNull _side)) then {
 [_missionText,true] remoteExec ["MCC_fnc_globalHint",_side,false];
+};
+
 
 //Cleanup
 deleteVehicle _trg;

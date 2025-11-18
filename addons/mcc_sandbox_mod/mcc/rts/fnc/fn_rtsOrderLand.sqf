@@ -20,5 +20,8 @@ _vehicles = [];
 player globalRadio "CuratorWaypointPlaced";
 {
 	_vehicle = _x;
-	[1,getpos _vehicle,[17,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[group _x],true] remoteExec ["MCC_fnc_manageWp", leader group _x, false];
-} forEach _vehicles;
+if (!(isNull _vehicle)) then {
+[1,getpos _vehicle,[17,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[group _x],true] remoteExec ["MCC_fnc_manageWp", leader group _x, false];
+};
+};
+forEach _vehicles;

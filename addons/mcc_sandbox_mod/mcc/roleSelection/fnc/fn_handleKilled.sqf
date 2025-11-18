@@ -44,13 +44,18 @@ if ((missionNamespace getVariable ["CP_activated",true]) && (typeOf _unit isKind
 	if (typeName _killer isequalto typename []) then {
 		{
 			if (isPlayer _x && (side _x getFriend ([_unit,true] call BIS_fnc_objectSide) < 0.6)) then {
-				[getplayeruid _x, (100*_xpFactor),_string] remoteExec ["MCC_fnc_addRating",_x];
+if (!(isNull _x)) then {
+[getplayeruid _x, (100*_xpFactor),_string] remoteExec ["MCC_fnc_addRating",_x];
+};
+};
 			};
 		} forEach _killer;
 
 	} else {
 		if (side _killer getFriend ([_unit,true] call BIS_fnc_objectSide) < 0.6) then {
-			[getplayeruid _killer, (100*_xpFactor),_string] remoteExec ["MCC_fnc_addRating",_killer];
-		};
-	};
+if (!(isNull _killer)) then {
+[getplayeruid _killer, (100*_xpFactor),_string] remoteExec ["MCC_fnc_addRating",_killer];
 };
+};
+		};
+	

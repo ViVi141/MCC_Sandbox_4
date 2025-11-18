@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_assignGear===============================================================================
 // Sets gear to role
-// Example: [roleNumber, gear/uniform/select, _id] remoteExec ["MCC_fnc_assignGear", 0, false];
+if (!(isNull player)) then {
+    [roleNumber, gear/uniform/select, _id] remoteExec ["MCC_fnc_assignGear", 0, false];
+};
 //roleNumber: 0-officer, 1-AR, 2-Rifleman, 3-AT, 4-medic, 5-marksman, 6- specialist, 7- crewman, 8-pilot
 // Gear: 0- select, 1-gear, 2-uniform
 //======================================================================================================================================================================

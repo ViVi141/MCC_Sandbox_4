@@ -7,7 +7,8 @@ with uinamespace do
 	_params = _this select 0;
 	_class = _this select 1;
 	
-	_path =  if (isClass (configFile >> "CfgPatches" >> "mcc_sandbox")) then {"\mcc_sandbox_mod\"} 	else {""};
+	_path =  if (isClass (configFile >> "CfgPatches" >> "mcc_sandbox")) then {"\mcc_sandbox_mod\"} 	else {""}};
+};
 	
 	//Work around for not showing sides
 	_fncName = _class;

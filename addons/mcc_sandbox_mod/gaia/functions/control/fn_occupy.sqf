@@ -51,7 +51,9 @@ if (str _safepos != "[-500,-500,0]") then
 
 		_unitPlaced = [_points, _zoneNumber, _spawnbehavior,mcc_sidename] call MCC_fnc_MWSpawnInfantry;
 
-		[[_zoneNumber], "MCC_fnc_MWspawnAnimals", false, false] remoteExec ["MCC_fnc_MWspawnAnimals", 2, false];
+if (!isNil '_zoneNumber') then {
+	[[_zoneNumber], "MCC_fnc_MWspawnAnimals", false, false] remoteExec ["MCC_fnc_MWspawnAnimals", 2, false];
+};
 
 		if (random(1) >0.5) then
 		{_unitPlaced = [(_points*.6),_zoneNumber,MCC_MWGroupArrayCar,MCC_MWunitsArrayCar,5,15,"LAND",mcc_sidename] call MCC_fnc_MWSpawnVehicles;};

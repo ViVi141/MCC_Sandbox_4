@@ -315,13 +315,19 @@ _counter = 0;
 waituntil {!dialog};
 if (MCC_unitName != "") then
 {
-	[[netid _target,_target], MCC_unitName] remoteExec ["MCC_fnc_setVehicleName", 0, true];
+if (!(isNull _target)) then {
+[[netid _target,_target], MCC_unitName] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 };
+};
+
 
 if (MCC_unitInit != "" && (MCC_unitInit != (_target getVariable ["vehicleInit",""]))) then
 {
-	[[netid _target,_target], MCC_unitInit] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
+if (!(isNull _target)) then {
+[[netid _target,_target], MCC_unitInit] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 };
+};
+
 
 /*
 _keyUp = (findDisplay 312) displayRemoveEventHandler  ["KeyUp",_keyUp];

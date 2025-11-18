@@ -25,7 +25,10 @@ player playAction "grabDrag";
 player forceWalk true;
 _worldPos = player worldToModel getpos _object;
 _object attachTo [player,[_worldPos select 0, _worldPos select 1, 0.0 +((_object modelToWorld[0,0,0])select 2)-((getpos _object) select 2)]];
+if (!(isNull _object)) then {
 [_object, {(_this select 0) setDir 180;}] remoteExec ["BIS_fnc_spawn", _object, false];
+};
+
 player setVariable ["mcc_draggedObject", _object];
 
 player setVariable ["mcc_draggedObjectID", player addAction ["<t color='#FF0000'>Release</t>", {_this call MCC_fnc_releaseObject},[],6,true,true,"","(vehicle _target == vehicle _this) && !isNull(_this getVariable ['mcc_draggedObject', objNull])"]];

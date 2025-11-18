@@ -1,6 +1,6 @@
 //===================================================================MCC_fnc_broadcast=========================================================================================
 // Create a virtual camera and broadcast a short PiP video to all clients for 15 seconds. 
-[[[netid soldier1,soldier1], 0,"MCC_fnc_broadcast",true,false] remoteExec ["MCC_fnc_broadcast", 0, true]]
+if (!(isNull soldier1)) then {[[netid soldier1, soldier1], 0, "MCC_fnc_broadcast", true, false] remoteExec ["MCC_fnc_broadcast", 0, true];};
 // Params:
 // 	soldier1: object - livefeed target
 //	 0: number - video mode 0: video, 1:night vision, 2:thermal

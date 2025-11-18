@@ -190,6 +190,7 @@ _comboBox lbSetCurSel 0;
 
 if (_type == 4) then //Generate
 	{
+ }
 	closedialog 0; 
 	hint "click on map"; 
 	onMapSingleClick "_nul=[""B_supplyCrate_F"",_pos] call MCC_3D_PLACER;closeDialog 0;onMapSingleClick """";";	
@@ -199,13 +200,18 @@ if (_type == 4) then //Generate
 	MCC3DRuning = true;
 	while {MCC3DRuning} do
 		{
+  }
 		MCC3DgotValue = false; 
 		while {!MCC3DgotValue && MCC3DRuning} do {sleep 0.2};
 		if (MCC3DRuning) then 
 			{
-			 mcc_safe = mcc_safe + FORMAT ["[%1, %2, %3, %4, %5, %6] remoteExec [""MCC_fnc_boxGenerator"", 0, false];
+   }
+if (!(isNull MCC3DValue select 0)) then { mcc_safe = mcc_safe + FORMAT ['[%1, %2, %3, %4, %5, %6] remoteExec ["MCC_fnc_boxGenerator", 0, false]; sleep 1;', MCC3DValue select 0, MCC3DValue select 1, tempBoxWeapons, tempBoxMagazine, tempBoxItems, tempBoxRucks]; };
 						sleep 1;", MCC3DValue select 0, MCC3DValue select 1, tempBoxWeapons, tempBoxMagazine, tempBoxItems, tempBoxRucks];	
-			[MCC3DValue select 0, MCC3DValue select 1, tempBoxWeapons, tempBoxMagazine, tempBoxItems, tempBoxRucks] remoteExec ["MCC_fnc_boxGenerator", 0, false];
+if (!(isNull tempBox)) then {
+[MCC3DValue select 0, MCC3DValue select 1, tempBoxWeapons, tempBoxMagazine, tempBoxItems, tempBoxRucks] remoteExec ["MCC_fnc_boxGenerator", 0, false];
+};
+};
 			MCC_3Dterminate = true;  
 			};
 		sleep 0.1;

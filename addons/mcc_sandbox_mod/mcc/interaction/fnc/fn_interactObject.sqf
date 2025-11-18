@@ -86,7 +86,10 @@ if ((player distance _object < 7) && ((missionNamespace getVariable ["MCC_intera
 		//create the random loot
 		player setVariable ["MCC_readValue",nil];
 
-		[format ["SERVER_%1",toupper worldName], "Loot Positions", format ["Object_%1",(getpos _object)], "ARRAY",player,true,[]] remoteExec ["MCC_fnc_inidbGet", 0, false, false];
+if (!(isNull _object)) then {
+[format ["SERVER_%1",toupper worldName], "Loot Positions", format ["Object_%1",(getpos _object)], "ARRAY",player,true,[]] remoteExec ["MCC_fnc_inidbGet", 0, false, false];
+};
+};
 
 		while {isnil "_loot"} do {sleep 0.1;_loot = player getVariable ["MCC_readValue",nil]};
 
@@ -154,10 +157,17 @@ if ((player distance _object < 7) && ((missionNamespace getVariable ["MCC_intera
 
 		//Update server
 		//[format ["SERVER_%1",toupper worldName], "Loot Positions", format ["Object_%1",(getpos _object)], "ARRAY",player,false,_array] call MCC_fnc_inidbGet;
+if (!(isNull _object)) then {
 [format ['SERVER_%1',toupper worldName], 'Loot Positions', format ['Object_%1', (getpos _object)]] remoteExec [0, true];
-[format ["SERVER_%1",toupper worldName]] remoteExec ["Loot Positions", format ["Object_%1", (getpos _object)]];
+};
+};
+if (!(isNull _object)) then {
+    [format ['SERVER_%1',toupper worldName], 'Loot Positions', format ['Object_%1', (getpos _object)]] remoteExec [0, true];
+};
 
-[format ["SERVER_%1",toupper worldName] remoteExec ["Loot Positions", format ["Object_%1", (getpos _object)]]];
+if (!(isNull _object)) then {
+    [format ['SERVER_%1',toupper worldName], 'Loot Positions', format ['Object_%1', (getpos _object)]] remoteExec [0, true];
+};
 missionNameSpace setVariable [format ["MCC_isInteracted%1",getpos _object], false];
 publicvariable format ["MCC_isInteracted%1",getpos _object];
 player setVariable ["MCC_interactionActive",false];

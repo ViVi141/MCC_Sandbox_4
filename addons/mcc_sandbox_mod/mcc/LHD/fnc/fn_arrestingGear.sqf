@@ -55,7 +55,10 @@ if (((abs (_glidepath1x-_planeposx)<=30) && (abs (_glidepath1y-_planeposy)<=30))
 	_planepostempxB=_planepostempxA+100;
 	_planepostempyB=_planepostempyA+100;
 	_hooked=false;
-	[_plane,"MCC_Landing"] remoteExec ["say3D", -2, false];
+if (!(isNull _plane)) then {
+[_plane,"MCC_Landing"] remoteExec ["say3D", -2, false];
+};
+};
 
 	while {_landing} do {
 		_planeposdiffx=_planepostempxB-_planepostempxA;
@@ -115,4 +118,3 @@ if (((abs (_glidepath1x-_planeposx)<=30) && (abs (_glidepath1y-_planeposy)<=30))
 	_inbound=false;
 
 	_plane setVariable ["MCC_isArrestingGear",false,true];
-};

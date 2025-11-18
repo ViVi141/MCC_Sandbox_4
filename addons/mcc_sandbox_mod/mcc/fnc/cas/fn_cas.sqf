@@ -219,7 +219,10 @@ waituntil {
 					for [{_x=1},{_x<=12},{_x=_x+1}] do
 					{
 						_nul=[[(_pos select 0)+50 - random 100,(_pos select 1)+50 - random 100,_pos select 2], getpos _plane,"M_AT",200,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
-						[[netid _plane,_plane], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D",0];
+if (!(isNull _plane)) then {
+[[netid _plane,_plane], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D",0];
+};
+};
 						sleep 0.2;
 					};
 				};
@@ -237,7 +240,10 @@ waituntil {
 						_velocity set [2,-30];
 						_bomb setVelocity _velocity;
 
-						[[netid _plane,_plane], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]] remoteExec ["MCC_fnc_globalSay3D",0];
+if (!(isNull _plane)) then {
+[[netid _plane,_plane], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]] remoteExec ["MCC_fnc_globalSay3D",0];
+};
+};
 						sleep 0.3;
 					};
 				};

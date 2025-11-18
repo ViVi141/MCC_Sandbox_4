@@ -36,14 +36,20 @@ if (MCC_ambushPlacing && _pressed!=1) exitWith {
 	if (MCC_capture_state) then {
 		hint "Ambush Captured.";
 		MCC_capture_var = MCC_capture_var
-				[MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 0, false];
+if (!(isNull MCC_pointA) && !(isNull IEDAmbushspawnname) && !(isNull mcc_sidename) && !(isNull IedName) && !(isNull MCC_pointB)) then {
+[MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 0, false];
+};
+};
 	} else  {
 		hint "Ambush Placed.";
-		[MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 2, false];
-	};
+if (!(isNull MCC_pointA) && !(isNull IEDAmbushspawnname) && !(isNull mcc_sidename) && !(isNull IedName) && !(isNull MCC_pointB)) then {
+[MCC_pointA,IEDAmbushspawnname,mcc_sidename,IedName,IEDDir,MCC_pointB,MCC_IEDisSpotter,iedside] remoteExec ["MCC_fnc_ambushSingle",2,false];
+};
+};
+	
 
 	MCC_ambushPlacing = false;
-};
+
 
 //Sync with shift key
 if (_shift && _pressed!=1) exitWith {
@@ -51,6 +57,9 @@ if (_shift && _pressed!=1) exitWith {
 	_nearObjectsB = MCC_pointB nearObjects [MCC_dummy,50];
 
 	if (count _nearObjectsA > 0 && count _nearObjectsB > 0) then{
-		[MCC_pointA, MCC_pointB] remoteExec ["MCC_fnc_iedSync", 0, false];
-	};
+if (!(isNull MCC_pointA) && !(isNull MCC_pointB)) then {
+[MCC_pointA, MCC_pointB] remoteExec ["MCC_fnc_iedSync", 0, false];
 };
+};
+	};
+

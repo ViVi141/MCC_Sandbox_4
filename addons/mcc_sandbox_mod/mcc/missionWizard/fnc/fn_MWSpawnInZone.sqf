@@ -97,16 +97,25 @@ _ar =	[ 		  _spawnType
 
 // Send data over the network, or when on server, execute directly
 if ( (isServer) && ( (mcc_hc == 0) || !(MCC_isHC) ) ) then {
-	[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+if (!(isNull _ar select 0)) then {
+[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+};
+};
+
 	diag_log "MCC: attemping to spawn";
 
-} else {
+else {
 	if ( ( mcc_hc == 0 ) || !(MCC_isHC) ) then	{
-		[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+if (!(isNull _ar select 0)) then {
+	[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 2, false];
+};
 	};
 
 	if (( mcc_hc == 1 ) && (MCC_isHC)) then	{
 
-		[_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", 2];
-	};
+if (!(isNull MCC_ownerHC)) then {
+[_ar, "mcc_setup_hc", MCC_ownerHC, false] remoteExec ["mcc_setup_hc", 2];
 };
+};
+	};
+

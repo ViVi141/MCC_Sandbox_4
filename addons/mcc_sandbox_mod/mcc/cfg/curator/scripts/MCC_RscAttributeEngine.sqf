@@ -51,11 +51,13 @@ switch _mode do {
 		_entities = if (typename _entity == typename grpnull) then {vehicle leader _entity} else {[_entity]};
 
 		{
-			[_x, _selected] remoteExec ["MCC_fnc_vehicleEngine", _x];
+if (!(isNull _x)) then {
+[_x, _selected] remoteExec ["MCC_fnc_vehicleEngine", _x];
+};
+};
 		} foreach _entities;
 		false
 	};
 	case "onUnload": {
 		MCC_RscAttributeEngine_selected = nil;
 	};
-};

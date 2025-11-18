@@ -100,7 +100,7 @@ U_UNDERBARREL set [count U_UNDERBARREL, [_weaponDisplayName,_picture]];
 U_GRENADE set [count U_GRENADE, _weaponDisplayName,_picture];
 					};
 default {
-U_EXPLOSIVE set [count U_EPLOSIVE, [_weaponDisplayName,_picture]]];
+U_EXPLOSIVE set [count U_EXPLOSIVE, [_weaponDisplayName,_picture]];
 					};
 				};
 			};

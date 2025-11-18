@@ -1,6 +1,8 @@
 //===================================================================MCC_fnc_evacDelete======================================================================================
 // Delete the given vehicle or it's driver
-// Example: [option, evac] remoteExec ["MCC_fnc_evacDelete", 0, false];
+if (!(isNull _evac)) then {
+    [option, evac] remoteExec ["MCC_fnc_evacDelete", 0, false];
+};
 // Params:
 // 	option number, 0- delete driver, 1 - spawn driver, 2- delete vehicle, driver and gunners.
 // 	evac: object, the evac vehicle

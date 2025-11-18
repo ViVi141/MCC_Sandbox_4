@@ -80,7 +80,9 @@ switch (_type) do {
 				 +   'MCC_settingsVars = ' + (str((call compile _temp) select 5)) + ';' + _br
 				 +   'MCC_savedZones = ' + MCC_savedZones + ';' + _br
 				 +   '[MCC_savedZones] spawn MCC_fn_loadZones;' + _br
-				 +   '[MCC_savedObjectives, MCC_savedGroups, MCC_savedVehicles, MCC_savedWeather, MCC_savedTime,MCC_settingsVars] remoteExec ["MCC_fnc_loadFromMCC", 2, false];' + _br;
+if (!(isNull MCC_savedObjectives) && !(isNull MCC_savedGroups) && !(isNull MCC_savedVehicles) && !(isNull MCC_savedWeather) && !(isNull MCC_savedTime) && !(isNull MCC_settingsVars)) then {
+[MCC_savedObjectives, MCC_savedGroups, MCC_savedVehicles, MCC_savedWeather, MCC_savedTime, MCC_settingsVars] remoteExec ["MCC_fnc_loadFromMCC", 2, false];
+};
 
 
 		MCC_output = MCC_output + mcc_safe;
@@ -151,7 +153,10 @@ switch (_type) do {
 			sleep 0.5;
 			closeDialog 0;
 			sleep 0.3;
-			[[_array select 0, _array select 1, _array select 2, _array select 3, _array select 4, _array select 5], "MCC_fnc_loadFromMCC", false, false] remoteExec ["MCC_fnc_loadFromMCC", 2, false, false];
+if (!(isNull _array)) then {
+[[_array select 0, _array select 1, _array select 2, _array select 3, _array select 4, _array select 5], "MCC_fnc_loadFromMCC", false, false] remoteExec ["MCC_fnc_loadFromMCC", 2, false, false];
+};
+};
 			[(_array select 6)] spawn MCC_fn_loadZones;
 			_command = 'mcc_isloading=true;closedialog 0;titleText ["Loading Mission","BLACK FADED",5];' + _string + 'mcc_isloading=false;titleText ["Mission Loaded","BLACK IN",5];';
 
@@ -183,27 +188,40 @@ switch (_type) do {
 	case 8:
 	{
 		//load server
-		["MCC_campaign",true,true,true,true,true,true,true,true,true] remoteExec ["MCC_fnc_loadServer", 2];
+if (!(isNull _object)) then {
+["MCC_campaign",true,true,true,true,true,true,true,true,true] remoteExec ["MCC_fnc_loadServer", 2];
+};
+};
 
 		//load players
-		[true,true,true] remoteExec ["MCC_fnc_loadPlayer", 0];
+if (!(isNull _unit)) then {
+[true,true,true] remoteExec ["MCC_fnc_loadPlayer", 0];
+};
+
 
 		sleep 20;
 
 		//Save server
-		["MCC_campaign",600,false,true,true,true,true,true,true,true,true] remoteExec ["MCC_fnc_saveServer", 2];
+if (!(isNull MCC_campaign)) then {
+    ['MCC_campaign', 600, false, true, true, true, true, true, true, true] remoteExec ['MCC_fnc_saveServer', 2];
+};
 
 		//save players
-		[300,true,true,true] remoteExec ["MCC_fnc_savePlayer", 2];
+if (!(isNull _unit)) then {
+[300,true,true,true] remoteExec ["MCC_fnc_savePlayer", 2];
+};
+
 
 		systemChat "DB Activated";
-	};
+	
 
 	//Delete data
 	case 9:
 	{
-		[] remoteExec ["MCC_fnc_clearPersistentData",2];
+if (!isNil {player}) then {
+    [] remoteExec ["MCC_fnc_clearPersistentData", 2];
+};
 		systemChat "DB cleared";
 	};
-};
+
 

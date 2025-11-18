@@ -25,7 +25,10 @@ switch (true) do {
 		if (MCC_capture_state) then {
 			hint "Task Captured";
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-							[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask",2];
+if (!(isNull _unit)) then {
+[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask", 2];
+};
+};
 							'
 							,_actionID
 							,_stringName
@@ -36,7 +39,10 @@ switch (true) do {
 							];
 		} else {
 			mcc_safe=mcc_safe + FORMAT ['
-									[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask",2];
+if (!(isNull _dlg) && !(isNull _mccTasks)) then {
+[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask", 2];
+};
+};
 									sleep 1;'
 									,_actionID
 									,_stringName
@@ -46,7 +52,10 @@ switch (true) do {
 									,str _taskType
 									];
 			hint "Task updated";
-			[_actionID, _stringName, _stringDescription, _pos,0, _taskType] remoteExec ["MCC_fnc_makeTask",2];
+if (!(isNull _pos)) then {
+[_actionID, _stringName, _stringDescription, _pos, 0, _taskType] remoteExec ["MCC_fnc_makeTask", 2];
+};
+};
 
 			sleep 1;
 
@@ -71,7 +80,9 @@ switch (true) do {
 		if (MCC_capture_state) then {
 			onMapSingleClick " 	hint 'Wp captured.';
 									MCC_capture_var = MCC_capture_var + FORMAT ['
-										[%1,%2, %3, %4] remoteExec [""MCC_fnc_makeTask"",2];
+if (!(isNull _unit)) then {
+    [%1,%2, %3, %4] remoteExec ["MCC_fnc_makeTask",2];
+};
 										'
 										,typ
 										,str stringName
@@ -81,10 +92,14 @@ switch (true) do {
 									onMapSingleClick """";";
 		} else {
 			onMapSingleClick " 	hint 'Wp added.';
-								[typ, stringName, stringDescription, _pos] remoteExec [""MCC_fnc_makeTask"",2];
+if (!(isNull _pos)) then {
+    [typ, stringName, stringDescription, _pos] remoteExec ["MCC_fnc_makeTask", 2];
+};
 
 								mcc_safe=mcc_safe + FORMAT [""
-									[%1,%2, %3, %4] remoteExec ['MCC_fnc_makeTask',2];
+if (!(isNull _unit)) then {
+    [%1,%2, %3, %4] remoteExec ['MCC_fnc_makeTask',2];
+};
 									sleep 1;""
 									,typ
 									,str stringName
@@ -127,7 +142,10 @@ switch (true) do {
 		if (MCC_capture_state) then
 		{
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-							["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+if (!(isNull _unit)) then {
+["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+};
+};
 							'
 							];
 		} else {
@@ -136,7 +154,9 @@ switch (true) do {
 			waituntil {!isnil "_answer"};
 
 			if (_answer) then {
-				["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+if (!(isNull _unit)) then {
+	["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+};
 			};
 		};
 	};
@@ -146,7 +166,7 @@ switch (true) do {
 	{
 		if (MCC_capture_state) then {
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-								["everyonelost"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+if (!(isNull _unit)) then { ["everyonelost"] remoteExec ["BIS_fnc_endMissionServer", 2, false]; };
 								'
 								];
 		} else {
@@ -155,7 +175,9 @@ switch (true) do {
 			waituntil {!isnil "_answer"};
 
 			if (_answer) then {
-				[["everyonelost"], "BIS_fnc_endMissionServer", false, false] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+if (!(isNull _unit)) then {
+	[[_unit], "BIS_fnc_endMissionServer", false, false] remoteExec ["BIS_fnc_endMissionServer", 2, false];
+};
 			};
 		};
 	};
@@ -167,7 +189,9 @@ switch (true) do {
 		if (MCC_capture_state) then {
 			hint "Task Captured";
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-							[%1,%2] remoteExec ["MCC_fnc_makeTask",2];
+if (!(isNull _unit)) then {
+    [%1,%2] remoteExec ["MCC_fnc_makeTask",2];
+};
 							'
 							,_actionID
 							,str _taskID
@@ -175,7 +199,9 @@ switch (true) do {
 		} else {
 			private _tasks = str _mccTasks;
 
-			[_actionID, _taskID] remoteExec ["MCC_fnc_makeTask",2];
+if (!(isNull _taskID)) then {
+    [_actionID, _taskID] remoteExec ["MCC_fnc_makeTask", 2];
+};
 
 			waituntil {_tasks != str _mccTasks};
 
@@ -189,4 +215,4 @@ switch (true) do {
 			_comboBox lbSetCurSel 0;
 		};
 	};
- };
+ 

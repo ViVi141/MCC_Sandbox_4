@@ -1,6 +1,6 @@
 /*================================================================MCC_fnc_mineSingle======================================================================================
 	Create a mine field
-	[["IEDkind","IEDMarkerName",centerPos,minefieldSize] remoteExec ["MCC_fnc_mineSingle",0,false];
+if (!(isNull _this select 2) && !(isNull _this select 3)) then { ["IEDkind","IEDMarkerName",centerPos,minefieldSize] remoteExec ["MCC_fnc_mineSingle",0,false]; };
  	Params:
  		IEDkind: string, minefield type: "apv" - AP minefield with warining signs, "ap" - AP minefield without warining signs. "apbv" -  AP bouncing minefield with
  		warining signs, "apb"-  AP bouncing minefield without warining signs, "atv" - AT minefield with warining signs, "at"-  AT minefield without warining signs

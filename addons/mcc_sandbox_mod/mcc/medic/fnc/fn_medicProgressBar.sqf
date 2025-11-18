@@ -14,7 +14,11 @@ _fail = false;
 _medicAnims = ["ainvpknlmstpsnonwrfldnon_medic0s","ainvpknlmstpsnonwrfldnon_medic","ainvpknlmstpsnonwrfldnon_medicend","ainvpknlmstpsnonwrfldnon_ainvpknlmstpsnonwrfldnon_medic"];
 
 //If self then no need for wounded anim
-if (!_self && !_unitUnconcious) then {[_unit, {(_this select 0) playactionNow "agonyStart"}] remoteExec ["BIS_fnc_spawn", _unit, false];};
+if (!_self && !_unitUnconcious) then {
+    if (!(isNull _unit)) then {
+        [_unit, {(_this select 0) playactionNow "agonyStart"}] remoteExec ["BIS_fnc_spawn", _unit, false];
+    };
+};
 
 player playactionNow "medicStart";
 
@@ -36,6 +40,6 @@ for [{_x=1},{_x<_time},{_x=_x+0.1}]  do
 player playactionNow "medicStop";
 
 //If self then no need for wounded anim
-if (!_self && !_unitUnconcious) then {[_unit, {(_this select 0) playactionNow "agonyStop"}] remoteExec ["BIS_fnc_spawn", _unit, false];};
+if (!_self && !_unitUnconcious) then { if (!(isNull _unit)) then {[_unit, {(_this select 0) playactionNow "agonyStop"}] remoteExec ["BIS_fnc_spawn", _unit, false];}; };
 
 _fail

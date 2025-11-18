@@ -8,7 +8,8 @@ MCC_GUI1initDone = false;
 //Debug
 MCC_debug = missionNamespace getVariable ["MCC_debug",false];
 
-if (MCC_isMode) then {
+if (MCC_isMode) then {;
+};
 	MCC_path = "\mcc_sandbox_mod\";
 } else {
 	MCC_path = "";
@@ -771,7 +772,10 @@ if ( isServer ) then {
 		{
 			_str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["%1 is no longer the commander",_name] + "</t>";
 			_command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-			[2,compile _command] remoteExec ["MCC_fnc_globalExecute", true, false];
+if (!(isNull _command)) then {
+[2, compile _command] remoteExec ["MCC_fnc_globalExecute", true, false];
+};
+};
 
 			MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],"", true];
 		};
@@ -961,7 +965,10 @@ if (hasInterface) then {
 			_eh = player addEventHandler ["HandleHeal",{_this spawn {
 										params ["_unit","_healer"];
 										if ((_unit != _healer) && (missionNamespace getVariable ["CP_activated",false]) && !(isNull _healer)) then {
-											[getPlayerUID _healer,200,"For Healing"] remoteExec ["MCC_fnc_addRating", _healer, false];
+if (!(isNull _healer)) then {
+[getPlayerUID _healer,200,"For Healing"] remoteExec ["MCC_fnc_addRating", _healer, false];
+};
+};
 										};
 
 											if (missionNamespace getVariable ["MCC_medicSystemEnabled",false]) then {
@@ -1002,7 +1009,10 @@ if (hasInterface) then {
 
 			//Curator
 			if(isMultiplayer) then {
-				_null = [(compile format ["MCC_curator addCuratorEditableObjects [[objectFromNetId '%1'],false];",netid player])] remoteExec ["BIS_fnc_spawn", 2, false];
+if (!(isNull player)) then {
+_null = [(compile format ["MCC_curator addCuratorEditableObjects [[objectFromNetId '%1'],false];",netid player])] remoteExec ["BIS_fnc_spawn", 2, false];
+};
+};
 			};
 		};
 
@@ -1045,7 +1055,10 @@ if (hasInterface) then {
 														_unit 	= cursorTarget;
 														if (_unit isKindof "CAManBase" && ((_this select 0) distance _unit < 30)) then {
 															deleteVehicle (_this select 6);
-															[_unit, 5] remoteExec ["MCC_fnc_stunBehav",_unit];
+if (!(isNull _unit)) then {
+[_unit, 5] remoteExec ["MCC_fnc_stunBehav",_unit];
+};
+};
 														};
 													};
 												}];

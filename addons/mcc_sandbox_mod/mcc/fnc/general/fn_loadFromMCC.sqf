@@ -72,7 +72,10 @@ if (count _arrayGroups > 0) then
 			if (_objectData select 7 != "") then
 			{
 				_vehicle setVariable ["vehicleinit",(_objectData select 7),true];
-				[[netID _vehicle,_vehicle], _objectData select 7] remoteExec ["MCC_fnc_setVehicleInit",0];
+if (!(isNull _vehicle)) then {
+[[netID _vehicle,_vehicle], _objectData select 7] remoteExec ["MCC_fnc_setVehicleInit",0];
+};
+};
 			};
 
 			if (_objectData select 8) then
@@ -125,7 +128,7 @@ if (count _arrayGroups > 0) then
 			};
 		};
 	} forEach _arrayGroups;
-};
+
 
 
 if ((count _arrayVehicles) > 0) then
@@ -157,7 +160,10 @@ if ((count _arrayVehicles) > 0) then
 		if (_objectData select 4 != "") then
 		{
 			_vehicle setVariable ["vehicleinit",(_objectData select 4),true];
-			[[netID _vehicle,_vehicle], (_objectData select 4)] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
+if (!(isNull _vehicle)) then {
+[[netID _vehicle,_vehicle], (_objectData select 4)] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
+};
+};
 		};
 
 		clearWeaponCargoGlobal _vehicle;
@@ -169,7 +175,7 @@ if ((count _arrayVehicles) > 0) then
 		{_vehicle addMagazineCargoGlobal [_x,1]} forEach (_objectData select 7);
 
 	} forEach _arrayVehicles;
-};
+
 
 if ((count _allCuratorObjectives) > 0) then
 {
@@ -313,12 +319,18 @@ publicVariable "MCC_Rain";
 publicVariable "MCC_Lightnings";
 publicVariable "MCC_Fog";
 
-[MCC_Overcast,MCC_WindForce,MCC_Waves,MCC_Rain,MCC_Lightnings,MCC_Fog] remoteExec ["MCC_fnc_setWeather", 0, false];
+if (!(isNull MCC_Overcast) && !(isNull MCC_WindForce) && !(isNull MCC_Waves) && !(isNull MCC_Rain) && !(isNull MCC_Lightnings) && !(isNull MCC_Fog)) then {
+[MCC_Overcast, MCC_WindForce, MCC_Waves, MCC_Rain, MCC_Lightnings, MCC_Fog] remoteExec ["MCC_fnc_setWeather", 0, false];
+};
+
 
 //Time
 MCC_date = [_arrayTime select 0, _arrayTime select 1, _arrayTime select 2, _arrayTime select 3, _arrayTime select 4];
 publicVariable "MCC_date";
+if (!(isNull MCC_date)) then {
 [MCC_date] remoteExec ["MCC_fnc_setTime", 0, false];
+};
+
 
 //Mission settings
 {
@@ -332,4 +344,7 @@ private "_name";
 _name = _arrayTime select 5;
 missionnamespace setvariable ["bis_fnc_moduleMissionName_name",_name];
 publicvariable "bis_fnc_moduleMissionName_name";
+if (!(isNull true)) then {
 [true,"bis_fnc_moduleMissionName"] remoteExec ["bis_fnc_moduleMissionName", 0];
+};
+

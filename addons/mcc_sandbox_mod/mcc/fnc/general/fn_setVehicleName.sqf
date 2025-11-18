@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_setVehicleName======================================================================================
 // Sets vehicle name
-// Example: [[[netid _unit,_unit], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true]];
+if (!(isNull _unit)) then {
+    [[[netid _unit,_unit], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true]];
+};
 // Params:
 //	_unit: object, vehicle we want to set its init.
 //	_name: string, the new name

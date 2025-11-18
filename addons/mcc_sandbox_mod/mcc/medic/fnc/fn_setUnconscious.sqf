@@ -15,11 +15,14 @@ if (typeName (_module getVariable ["enableBleeding",0]) == typeName true) exitWi
 		//Who synced with the module
 		{
 			if (_x isKindOf "Man") then {
-				[_x,objnull,_enableBleeding,_forceUnconscious] remoteExec ["MCC_fnc_unconscious",_x];
+if (!(isNull _x)) then {
+[_x, objnull, _enableBleeding, _forceUnconscious] remoteExec ["MCC_fnc_unconscious", _x];
+};
+};
 			};
 		} forEach (synchronizedobjects _module);
 	};
-};
+
 
 _object = missionNamespace getVariable ["MCC_curatorMouseOver",[]];
 
@@ -44,6 +47,8 @@ if (count _resualt == 0) exitWith {deleteVehicle _module};
 _enableBleeding = _resualt select 0;
 _forceUnconscious = _resualt select 1;
 
-[_object,objnull,_enableBleeding,_forceUnconscious] remoteExec ["MCC_fnc_unconscious",_object];
+if (!(isNull _object)) then {
+    [_object, objNull, _enableBleeding, _forceUnconscious] remoteExec ["MCC_fnc_unconscious", _object];
+};
 
 deleteVehicle _module;

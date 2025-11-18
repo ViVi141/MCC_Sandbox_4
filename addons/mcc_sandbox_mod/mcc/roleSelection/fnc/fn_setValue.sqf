@@ -7,7 +7,9 @@
 //
 //Outout: <NOTHING>
 //
-// Example: [_varName, _value, _id] remoteExec ["MCC_fnc_setValue", 0, false];
+if (!(isNull (player select {getPlayerUID _x == _id}))) then {
+    [_varName, _value, _id] remoteExec ["MCC_fnc_setValue", 0, false];
+};
 //==============================================================================================================================================================================
 private ["_varName","_id","_value"];
 _varName 	= _this select 0;

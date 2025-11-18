@@ -4,9 +4,10 @@ _type = _this select 1;
 
 if (_type ==0) then 
 	{
+ }
 	if (isnil {_commander getvariable "commander"}) then //if the unit isn't the commander
 		{	
-		if !((name _commander) == mcc_missionmaker) then { [format ["%1 assigned as %2 commander",name _commander, side _commander], "MCC_fnc_globalHint", 0, true] remoteExec ["remoteExec", 0, true]; };
+if !((name _commander) == mcc_missionmaker) then { if !(isNull _commander) then { [format ['%1 assigned as %2 commander', name _commander, side _commander], 'MCC_fnc_globalHint', 0, true] remoteExec ['remoteExec', 0, true]; }; };
 		_commander setvariable ["commander", true, true];
 		_dummyGroup = creategroup civilian; 
 		switch (format ["%1", side _commander]) do 
@@ -58,7 +59,7 @@ if (_type ==0) then
 				};
 			} forEach  (switchableUnits + playableUnits);
 			};
-		[format ["%1 is allready assigned as %2 commander",name _commander, side _commander]] remoteExec ["MCC_fnc_globalHint", 0, true];
+if (!(isNull _commander)) then { [format ['%1 is allready assigned as %2 commander', name _commander, side _commander]] remoteExec ['MCC_fnc_globalHint', 0, true]; };
 	};
 
 if (_type == 1) then 	//Remove all

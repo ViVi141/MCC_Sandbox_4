@@ -25,12 +25,17 @@ if (typeName (_module getVariable ["factionPlayer",true]) == typeName "") exitWi
 	_playMusic = _module getVariable ["playMusic",1];
 
 	//Start ambient civilians
-	[_sidePlayer,_factionPlayer,_sideEnemy,_factionEnemy,_factionCiv,_missionMax,_difficulty,_sidePlayer2,_tickets,_missionRotation,_tileSize,_loadDb,_playMusic] remoteExec ["MCC_fnc_campaignInit",2];
+if (!(isNull _sidePlayer) && !(isNull _factionPlayer) && !(isNull _sideEnemy) && !(isNull _factionEnemy) && !(isNull _factionCiv) && !(isNull _missionMax) && !(isNull _difficulty) && !(isNull _sidePlayer2) && !(isNull _tickets) && !(isNull _missionRotation) && !(isNull _tileSize) && !(isNull _loadDb) && !(isNull _playMusic)) then {
+[_sidePlayer,_factionPlayer,_sideEnemy,_factionEnemy,_factionCiv,_missionMax,_difficulty,_sidePlayer2,_tickets,_missionRotation,_tileSize,_loadDb,_playMusic] remoteExec ["MCC_fnc_campaignInit",2];
+};
+};
 
 
 	//Start day/night cycle
-	[[_sidePlayer,_sidePlayer2],"MCC_fnc_dayCycle",false,false] remoteExec ["MCC_fnc_dayCycle",2];
+if (!(isNull _sidePlayer) && !(isNull _sidePlayer2)) then {
+    [[_sidePlayer,_sidePlayer2],'MCC_fnc_dayCycle',false,false] remoteExec ['MCC_fnc_dayCycle',2];
 };
+
 
 //Not curator exit
 if (!(local _module) || isnull curatorcamera) exitWith {};
@@ -73,9 +78,14 @@ _loadDb = _resualt select 9;
 _playMusic = _resualt select 10;
 
 //Start ambient civilians
+if (!(isNull _sidePlayer) && !(isNull _factionPlayer) && !(isNull _sideEnemy) && !(isNull _factionEnemy) && !(isNull _factionCiv) && !(isNull _missionMax) && !(isNull _difficulty) && !(isNull _sidePlayer2) && !(isNull _tickets) && !(isNull _missionRotation) && !(isNull _tileSize) && !(isNull _loadDb) && !(isNull _playMusic)) then {
 [_sidePlayer,_factionPlayer,_sideEnemy,_factionEnemy,_factionCiv,_missionMax,_difficulty,_sidePlayer2,_tickets,_missionRotation,_tileSize,_loadDb, _playMusic] remoteExec ["MCC_fnc_campaignInit",2];
+};
+
 
 //Start day/night cycle
-[[_sidePlayer,_sidePlayer2],"MCC_fnc_dayCycle",false,false] remoteExec ["MCC_fnc_dayCycle",2,false,false];
+if (!(isNull _sidePlayer) && !(isNull _sidePlayer2)) then {
+    [[_sidePlayer,_sidePlayer2],'MCC_fnc_dayCycle',false,false] remoteExec ['MCC_fnc_dayCycle',2,false,false];
+};
 
 deleteVehicle _module;

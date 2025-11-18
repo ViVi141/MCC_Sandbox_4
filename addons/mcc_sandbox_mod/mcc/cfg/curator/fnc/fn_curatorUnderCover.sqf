@@ -37,6 +37,9 @@ _resualt = ["Undercover Agents",[
 if (count _resualt == 0) exitWith {deleteVehicle _module};
 _removeGear = _resualt select 0;
 
+if (!(isNull _object)) then {
 [_object,_removeGear] remoteExec ["MCC_fnc_undercoverInit",_object];
+};
+
 
 deleteVehicle _module;

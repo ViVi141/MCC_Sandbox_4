@@ -79,7 +79,10 @@ _fnc_iedHandle = {
 
 			{
 				if (isEngineOn _x) then {
-					[["a3\missions_f_beta\data\sounds\firing_drills\drill_start.wss", _x]] remoteExec ["playSound3D", _x];
+if (!(isNull _x)) then {
+[["a3\missions_f_beta\data\sounds\firing_drills\drill_start.wss", _x]] remoteExec ["playSound3D", _x];
+};
+};
 				};
 			} forEach _arrayECM;
 
@@ -99,8 +102,15 @@ _fnc_iedHandle = {
 	//delete IED marker
 	_dummyMarker = _dummy getvariable "iedMarkerName";
 	if (!isnil "_dummyMarker") then {
-		[2,compile format ["deletemarkerlocal '%1';",_dummyMarker]] remoteExec ["MCC_fnc_globalExecute",0];
-	};
+if (!(isNull _dummy)) then {
+if (!isnil "_dummyMarker") then {
+if (!(isNull _dummy)) then {
+    [2,compile format ["deletemarkerlocal '%1';",_dummyMarker]] remoteExec ["MCC_fnc_globalExecute",0];
+};
+};
+};
+};
+
 
 	_armed 		= _dummy getvariable ["armed",false];
 	_triggered 	= _dummy getvariable ["iedTrigered",false];
@@ -183,7 +193,7 @@ _fnc_iedHandle = {
 
 	//Delete the dummyIED
 	deletevehicle _dummy;
-};
+
 
 if (typeName _iedside == "STRING") then {
 	_iedside = switch (tolower _iedside) do
@@ -235,7 +245,10 @@ _dummy setvariable ["iedAmbush", false, true];
 _dummy setvariable ["MCC_IEDtype", "ied", true];
 
 //Create helper
+if (!(isNull _dummy)) then {
 [_dummy,"Hold %1 to disarm"] remoteExec ["MCC_fnc_createHelper", false, true];
+};
+
 
 //If it is radio IED
 if (_IEDTriggerType == 1) then {
@@ -249,8 +262,11 @@ _fakeIed setvariable ["realIed", _dummy ,true];
 //Sync it with pre-sync IED
 if (str (_fakeIed getVariable ["syncedObject", [0,0,0]]) != "[0,0,0]") then
 {
-	[getpos _fakeIed, (_fakeIed getVariable ["syncedObject", [0,0,0]])] remoteExec ["MCC_fnc_iedSync", 2, false];
+if (!(isNull _fakeIed)) then {
+[getpos _fakeIed, (_fakeIed getVariable ["syncedObject", [0,0,0]])] remoteExec ["MCC_fnc_iedSync", 2, false];
 };
+};
+
 
 //Spawn the IED script
 _ok = [_dummy,_trapvolume,_IEDExplosionType,_IEDJammable,_IEDTriggerType,_trapdistance,_iedside] spawn _fnc_iedHandle;

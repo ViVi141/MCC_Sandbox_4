@@ -1,6 +1,8 @@
 //==================================================================MCC_fnc_globalSay3D======================================================================================
 // Say sound on 3d on all clients
-// Example: [[[netid _unit,_unit], _sound] remoteExec ["MCC_fnc_globalSay3D", 0, false]];
+if (!(isNull _unit)) then {
+    [[[netid _unit,_unit], _sound] remoteExec ["MCC_fnc_globalSay3D", 0, false]];
+};
 // Params: 
 //	_unit: object, sound's source
 // 	_sound: string, sound define in config

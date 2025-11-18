@@ -217,7 +217,9 @@ _comboBox lbSetCurSel 0;
 if (_type == 4) then //Generate
 {
 	_string = ctrlText MCC_INITBOX;
-	_string = _string + format [';if (isServer) then {clearMagazineCargoGlobal _this; clearWeaponCargoGlobal _this;	clearItemCargoGlobal _this; clearBackpackCargoGlobal _this;[_this, %1, %2, %3, %4, "MCC_fnc_boxGenerator", _this, false] remoteExec ["remoteExec", _this, false];}', _targetWeapons, _targetMagazine, _targetItems, _targetRucks];
+if (!(isNull _this)) then {
+    [_this, %1, %2, %3, %4, "MCC_fnc_boxGenerator", _this, false] remoteExec ["remoteExec", _this, false];
+};
 	ctrlSetText [MCC_INITBOX,_string];
 
 	if (_isMCC3D) then
