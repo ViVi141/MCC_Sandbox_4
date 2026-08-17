@@ -3,7 +3,7 @@
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
 [![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)](https://github.com/ViVi141/MCC_Sandbox_4)
-[![GPLv3协议](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![AGPL-3.0协议](https://img.shields.io/badge/License-AGPLv3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![版本](https://img.shields.io/badge/Version-2.0.1-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
 
 > 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.1版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.1)
@@ -12,31 +12,31 @@
 
 ## 📖 项目背景 | Background
 
-原项目 [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) 自2020年起停止更新。根据**GPLv3开源协议**，我们创建了此社区维护版本，旨在：
+原项目 [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) 自2020年起停止更新。原作为 **GPLv3 协议** 发布；本社区维护版本仓库当前 LICENSE 文件为 **AGPL-3.0**（许可变更需自行评估合规性）。我们创建此分支旨在：
 
 - 🔄 延续模组兼容性维护
 - 🛠️ 修复已知问题与崩溃
 - ✨ 添加社区建议的新功能
 - 📦 改善模组部署体验
-- 🚀 **v2.0.1重大更新**：全面性能优化与本地化支持
+- 🚀 **v2.0.1重大更新**：本地化支持与稳定性修复
 
 **English Version:**  
-The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) mod has been unmaintained since 2020. Under the **GPLv3 license**, we created this community edition to:
+The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) mod has been unmaintained since 2020. The original is released under **GPLv3**; this repo's LICENSE file is currently **AGPL-3.0** (license change should be reviewed for compliance). We created this community edition to:
 
 - 🔄 Continue compatibility maintenance
 - 🛠️ Fix known issues and crashes
 - ✨ Implement community-requested features
 - 📦 Improve mod deployment experience
-- 🚀 **v2.0.1 Major Update**: Comprehensive performance optimization and localization support
+- 🚀 **v2.0.1 Major Update**: Localization support and stability fixes
 
 ### 🎯 v2.0.1 更新亮点 | v2.0.1 Update Highlights
 
 本次更新是MCC Sandbox 4社区版历史上最大的一次升级，包含：
 
-**性能革命** | **Performance Revolution**
-- 全新的性能监控和管理系统 | Brand new performance monitoring and management system
-- 智能AI优化，显著提升游戏流畅度 | Intelligent AI optimization for significantly improved game smoothness
-- 对象池化技术，减少内存占用 | Object pooling technology to reduce memory usage
+**稳定性与本地化** | **Stability & Localization**
+- 修复已知问题与崩溃 | Fixed known issues and crashes
+- 指挥官控制台与任务简报完全本地化 | Fully localized commander console and mission briefing
+- 新增100+本地化键值 | Added 100+ localization keys
 
 **本地化突破** | **Localization Breakthrough**
 - 指挥官控制台完全中文化 | Fully localized commander console
@@ -56,27 +56,22 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - ✅ 支持最新版游戏语法 |Support the latest version of game syntax
 - ✅ 修复已知问题 | Fix known issues
 - ✅ 中英双语本地化支持 | Support both Chinese and English localizations
-- ✅ 性能优化系统 | Performance optimization system
+- ❌ 性能优化系统已移除 | Performance optimization system (removed)
 - ✅ 指挥官控制台修复 | Commander console fixes
 - ✅ 全面本地化支持 | Comprehensive localization support
 - ⚠️ **任务生成器（Mission Wizard）暂未正常使用** | **Mission Wizard is currently not functioning properly**
 
 ### 🆕 最新重大更新 | Latest Major Updates
 
-#### v2.0.1 - 性能与本地化全面升级 | Performance & Localization Overhaul
+#### v2.0.1 - 本地化与稳定性升级 | Localization & Stability Overhaul
 
-**🔧 性能优化系统 | Performance Optimization System**
-- 新增实时性能监控 | Added real-time performance monitoring
-- 智能AI优化管理 | Intelligent AI optimization management
-- 对象池化系统 | Object pooling system
-- 可配置性能预设 | Configurable performance presets
-- 用户友好的性能管理界面 | User-friendly performance management UI
+> ⚠️ **注**：v2.0.0-pre 中曾实现性能监控/AI优化/对象池系统，后因稳定性问题于后续提交中**移除**（commit 63409b8）。当前版本不含性能优化系统。
+> **Note**: The performance monitoring / AI optimization / object pooling systems implemented in v2.0.0-pre were **removed** in a later commit (63409b8) due to stability issues. The current version does not include them.
 
 **🌐 全面本地化支持 | Comprehensive Localization Support**
 - 指挥官控制台完全中文化 | Fully localized commander console
 - 任务简报系统多语言支持 | Multi-language support for mission briefing system
 - 自动生成内容本地化 | Localized auto-generated content
-- 性能监控界面本地化 | Localized performance monitoring interface
 - 新增30+本地化键值 | Added 30+ localization keys
 
 **🛠️ 任务生成系统优化 | Task Generation System Optimization**
@@ -99,8 +94,8 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - 增强调试和日志记录 | Enhanced debugging and logging
 
 ### 计划功能 | Roadmap
-- 更多性能优化选项 | More performance optimization options
-- 扩展多语言支持 | Extended multi-language support
+- 更多本地化覆盖 | Extended localization coverage
+- 性能优化（视需求重新引入）| Performance optimization (re-introduce on demand)
 - 社区功能建议 | Community feature suggestions
 
 ---
@@ -243,14 +238,15 @@ We welcome contributions through:
 
 ## 📜 开源许可 | License
 
-本项目基于 [shay_gman](https://steamcommunity.com/profiles/76561198007956840) 的**GPL 3.0协议**开发，您可以在以下位置查看完整许可：   |   
-This project is developed under the **GPL 3.0 license** by [shay_gman](https://steamcommunity.com/profiles/76561198007956840). You can view the full license at:  
-- [原始许可文件](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE) | [Original license file](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE)
+本项目基于 [shay_gman](https://steamcommunity.com/profiles/76561198007956840) 开发的 **MCC Sandbox 4**（原作为 **GPLv3 协议**）进行社区维护。当前仓库的 **LICENSE 文件为 AGPL-3.0**，与上游 GPLv3 的许可变更合规性需自行评估。可在以下位置查看：   |   
+This project is a community-maintained fork of **MCC Sandbox 4** by [shay_gman](https://steamcommunity.com/profiles/76561198007956840), originally released under **GPLv3**. The current **LICENSE file in this repo is AGPL-3.0**; the compliance of this license change relative to upstream GPLv3 should be reviewed. See:  
+- [仓库 LICENSE 文件](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE) | [Repo LICENSE file](https://github.com/ViVi141/MCC_Sandbox_4/blob/master/LICENSE)
 - [GPLv3协议全文](https://www.gnu.org/licenses/gpl-3.0.html) | [GPLv3 license full text](https://www.gnu.org/licenses/gpl-3.0.html)
+- [AGPLv3协议全文](https://www.gnu.org/licenses/agpl-3.0.html) | [AGPLv3 license full text](https://www.gnu.org/licenses/agpl-3.0.html)
 
 **协议要求：**   |   
 **License requirements:**  
-- 任何修改、分发、再分发都必须遵守GPLv3协议| Any modifications, distribution, or redistribution must comply with the GPLv3 license
+- 分发与再分发需遵守仓库 LICENSE（当前为 AGPL-3.0）| Redistribution must comply with the repo LICENSE (currently AGPL-3.0)
 - 本分支代码保持开源| The code in this branch remains open source
 - 修改内容已明确标注| Modification content is clearly marked
 - 包含完整的协议副本 | Contains a complete copy of the license
