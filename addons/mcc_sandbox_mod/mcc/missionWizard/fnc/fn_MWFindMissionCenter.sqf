@@ -38,12 +38,22 @@ if (_isBasedLocations) then {
 	};
 
 	if (count _locations > 0) then {
-		_location = _locations call BIS_fnc_selectRandom;
-		if (!isNil "_location" && {count _location >= 1}) then {
-			_newPos = getpos (_location select 0);
-			_centerFound = true;
+		//Prefer locations near the search center (user zone) so the mission spawns where requested
+		_locations = [_locations, {_pos distance2D (getpos (_x select 0)) < _minRadius}] call BIS_fnc_conditionalSelect;
+		if (count _locations == 0) then {
+			_locations = [_locations, [], {_pos distance2D (getpos (_x select 0))}, "ASCEND"] call BIS_fnc_sortBy;
+		};
+		if (count _locations > 0) then {
+			_location = _locations call BIS_fnc_selectRandom;
+			if (!isNil "_location" && {count _location >= 1}) then {
+				_newPos = getpos (_location select 0);
+				_newPos set [2, 0];
+				_centerFound = true;
+			} else {
+				// Fall back to non-location based search
+				_isBasedLocations = false;
+			};
 		} else {
-			// Fall back to non-location based search
 			_isBasedLocations = false;
 		};
 	} else {
