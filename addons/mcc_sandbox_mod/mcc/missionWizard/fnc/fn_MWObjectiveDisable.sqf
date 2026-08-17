@@ -48,10 +48,7 @@ if (_isCQB) then {
 			_unitPlaced = true;
 
 			//Lets spawn some body guards
-if (!(isNull _object)) then {
-[getpos _object,30,0,2,_faction, _side] remoteExec ["MCC_fnc_garrison", 0, false, false];
-};
-};
+			[getpos _object,30,0,2,_faction, _side] remoteExec ["MCC_fnc_garrison", 0, false, false];
 		};
 	};
 } else {

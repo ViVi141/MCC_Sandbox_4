@@ -67,9 +67,7 @@ switch (_type) do
 			{
 				MCC_capture_var = MCC_capture_var + FORMAT ['%5 set [count %5,[%1, %2]];
 					publicVariable "%5";
-if (!(isNull _unit)) then {
-    [2,{["MCCNotifications",["%4 CAS available","%3data\ammo_icon.paa",""]]} call bis_fnc_showNotification;}] remoteExec ["MCC_fnc_globalExecute", true, false];
-};
+					[2,{["MCCNotifications",["%4 CAS available","%3data\ammo_icon.paa",""]] call bis_fnc_showNotification;}] remoteExec ["MCC_fnc_globalExecute", true, false];
 					'
 					,MCC_spawnkind
 					,MCC_planeType
@@ -92,10 +90,7 @@ if (!(isNull _unit)) then {
 					missionNameSpace setVariable [_arrayName,_array];
 					publicvariable _arrayName;
 
-if (!(isNull _side)) then {
-[2,compile format ['["MCCNotifications",["%1 CAS available","%2data\ammo_icon.paa",""]] call bis_fnc_showNotification;',MCC_spawnkind select 0,MCC_path]] remoteExec ["MCC_fnc_globalExecute", _side, false];
-};
-};
+					[2,compile format ['["MCCNotifications",["%1 CAS available","%2data\ammo_icon.paa",""]] call bis_fnc_showNotification;',MCC_spawnkind select 0,MCC_path]] remoteExec ["MCC_fnc_globalExecute", _side, false];
 			};
 		};
 
@@ -132,7 +127,7 @@ if (!(isNull _side)) then {
 				publicvariable _arrayName;
 			};
 		};
-	
+	};
 
 if (_type == 0 || _type == 1) then {
 	hint "Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support";

@@ -211,52 +211,37 @@ switch _type do {
 				};
 			};
 
-if (!(isNull _unit)) then {
-["bf",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
-};
-};
+			["bf",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"sandstorm"
 	case 14:
 		{
-if (!(isNull _unit)) then {
-["sandstorm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
-};
-};
+			["sandstorm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"storm"
 	case 15:
 		{
-if (!(isNull _unit)) then {
-["storm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
-};
-};
+			["storm",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"snow"
 	case 16:
 		{
-if (!(isNull _unit)) then {
-["snow",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
-};
-};
+			["snow",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"heatwave"
 	case 17:
 		{
-if (!(isNull _unit)) then {
-["heatwave",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
-};
-};
+			["heatwave",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"clear"
 	case 18:
 		{
-if (!(isNull _unit)) then { ["clear",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false]; };
+			["clear",false] remoteExec ["MCC_fnc_ppEffects", 0, true, false];
 		};
 
 	//"N/V"

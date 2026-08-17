@@ -25,10 +25,7 @@ switch (true) do {
 		if (MCC_capture_state) then {
 			hint "Task Captured";
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _unit)) then {
-[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask", 2];
-};
-};
+							[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask",2];
 							'
 							,_actionID
 							,_stringName
@@ -39,10 +36,7 @@ if (!(isNull _unit)) then {
 							];
 		} else {
 			mcc_safe=mcc_safe + FORMAT ['
-if (!(isNull _dlg) && !(isNull _mccTasks)) then {
-[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask", 2];
-};
-};
+									[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask",2];
 									sleep 1;'
 									,_actionID
 									,_stringName
@@ -52,10 +46,7 @@ if (!(isNull _dlg) && !(isNull _mccTasks)) then {
 									,str _taskType
 									];
 			hint "Task updated";
-if (!(isNull _pos)) then {
-[_actionID, _stringName, _stringDescription, _pos, 0, _taskType] remoteExec ["MCC_fnc_makeTask", 2];
-};
-};
+			[_actionID, _stringName, _stringDescription, _pos,0, _taskType] remoteExec ["MCC_fnc_makeTask",2];
 
 			sleep 1;
 
@@ -80,9 +71,7 @@ if (!(isNull _pos)) then {
 		if (MCC_capture_state) then {
 			onMapSingleClick " 	hint 'Wp captured.';
 									MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _unit)) then {
-    [%1,%2, %3, %4] remoteExec ["MCC_fnc_makeTask",2];
-};
+										[%1,%2, %3, %4] remoteExec [""MCC_fnc_makeTask"",2];
 										'
 										,typ
 										,str stringName
@@ -92,14 +81,10 @@ if (!(isNull _unit)) then {
 									onMapSingleClick """";";
 		} else {
 			onMapSingleClick " 	hint 'Wp added.';
-if (!(isNull _pos)) then {
-    [typ, stringName, stringDescription, _pos] remoteExec ["MCC_fnc_makeTask", 2];
-};
+								[typ, stringName, stringDescription, _pos] remoteExec [""MCC_fnc_makeTask"",2];
 
 								mcc_safe=mcc_safe + FORMAT [""
-if (!(isNull _unit)) then {
-    [%1,%2, %3, %4] remoteExec ['MCC_fnc_makeTask',2];
-};
+									[%1,%2, %3, %4] remoteExec ['MCC_fnc_makeTask',2];
 									sleep 1;""
 									,typ
 									,str stringName
@@ -142,10 +127,7 @@ if (!(isNull _unit)) then {
 		if (MCC_capture_state) then
 		{
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _unit)) then {
-["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
-};
-};
+							["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
 							'
 							];
 		} else {
@@ -154,9 +136,7 @@ if (!(isNull _unit)) then {
 			waituntil {!isnil "_answer"};
 
 			if (_answer) then {
-if (!(isNull _unit)) then {
-	["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
-};
+				["everyonewon"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
 			};
 		};
 	};
@@ -166,7 +146,7 @@ if (!(isNull _unit)) then {
 	{
 		if (MCC_capture_state) then {
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _unit)) then { ["everyonelost"] remoteExec ["BIS_fnc_endMissionServer", 2, false]; };
+								["everyonelost"] remoteExec ["BIS_fnc_endMissionServer", 2, false];
 								'
 								];
 		} else {
@@ -175,9 +155,7 @@ if (!(isNull _unit)) then { ["everyonelost"] remoteExec ["BIS_fnc_endMissionServ
 			waituntil {!isnil "_answer"};
 
 			if (_answer) then {
-if (!(isNull _unit)) then {
-	[[_unit], "BIS_fnc_endMissionServer", false, false] remoteExec ["BIS_fnc_endMissionServer", 2, false];
-};
+				[["everyonelost"], "BIS_fnc_endMissionServer", false, false] remoteExec ["BIS_fnc_endMissionServer", 2, false];
 			};
 		};
 	};
@@ -189,9 +167,7 @@ if (!(isNull _unit)) then {
 		if (MCC_capture_state) then {
 			hint "Task Captured";
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _unit)) then {
-    [%1,%2] remoteExec ["MCC_fnc_makeTask",2];
-};
+							[%1,%2] remoteExec ["MCC_fnc_makeTask",2];
 							'
 							,_actionID
 							,str _taskID
@@ -199,9 +175,7 @@ if (!(isNull _unit)) then {
 		} else {
 			private _tasks = str _mccTasks;
 
-if (!(isNull _taskID)) then {
-    [_actionID, _taskID] remoteExec ["MCC_fnc_makeTask", 2];
-};
+			[_actionID, _taskID] remoteExec ["MCC_fnc_makeTask",2];
 
 			waituntil {_tasks != str _mccTasks};
 
@@ -215,4 +189,4 @@ if (!(isNull _taskID)) then {
 			_comboBox lbSetCurSel 0;
 		};
 	};
- 
+ };

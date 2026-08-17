@@ -34,10 +34,7 @@ switch (_hight) do
 
 player setpos (player modelToworld [0,-0.2,0]);
 //player switchmove _startAnim;
-if (!(isNull player)) then {
 [player, _startAnim, true, 0] remoteExec ["MCC_fnc_setUnitAnim", 0, false];
-};
-};
 
 waituntil {(animationState player) != _startAnim};
 
@@ -58,10 +55,7 @@ switch (_hight) do
 player setpos _endPos;
 
 if (_endAnim != "") then {
-if (!(isNull player)) then {
-[player, _endAnim, true, 0] remoteExec ["MCC_fnc_setUnitAnim", 0, false];
-};
-};
+	[player, _endAnim, true, 0] remoteExec ["MCC_fnc_setUnitAnim", 0, false];
 };
 
 sleep 1;

@@ -26,8 +26,7 @@ if ((_serialNumber mod 3) == 0 && (_serialNumber mod 7) == 0) then {
     if ((_serialNumber mod 3) == 0) then {
      _buttonsCombinations = [["@",false],["1",false],["^",false],["~",true],[")",true],["]",true],["(",false],["[",true],["|",true],["\",false],["/",false],["?",false],["3",false],["%",true],["*",false],["L",true],["8",false],["5",false],[";",true],["A",true],["a",false],["g",false],["G",true],["b",true],["B",true],["p",true],["P",false],["w",true],["W",false],["m",false],["n",false],["N",false],["M",true],["t",true],["T",true],["`",false],[":",false],["o",true],["0",false]];
     } else {
-    }
-        _buttonsCombinations = []["@",false],["1",false],["^",true],["~",false],[")",true],["]",false],["(",true],["[",false],["|",false],[]"\",false],["/",false],["?",true],["3",true],["%",true],["*",true],["L",true],["8",true],["5",false],[";",false],["A",false],["a",true],["g",true],["G",false],["b",false],["B",true],["p",false],["P",false],["w",false],["W",false],["m",true],["n",false],["N",true],["M",false],["t",true],["T",false],["`",true],[":",false],["o",false],["0",false]];
+        _buttonsCombinations = [["@",false],["1",false],["^",true],["~",false],[")",true],["]",false],["(",true],["[",false],["|",false],["\",false],["/",false],["?",true],["3",true],["%",true],["*",true],["L",true],["8",true],["5",false],[";",false],["A",false],["a",true],["g",true],["G",false],["b",false],["B",true],["p",false],["P",false],["w",false],["W",false],["m",true],["n",false],["N",true],["M",false],["t",true],["T",false],["`",true],[":",false],["o",false],["0",false]];
     };
 };
 
@@ -66,22 +65,7 @@ _ctrl = _display ctrlCreate ["RscButtonMenu", _idc+10,_ctrlGroup];
 _ctrl ctrlSetPosition [0.08*_ratio, 0.16*_ratio, 0.08*_ratio, 0.05*_ratio];
 _ctrl ctrlSetTextColor [0,0.8,0,0.8];
 _ctrl ctrlsetText "Submit";
-_ctrl ctrlAddEventHandler ['MouseButtonUp',format [
-        '
-        _display = (ctrlParent (_this select 0));
-        _input = [];
-        {
-            _input pushback (cbChecked (_display displayctrl _x));
-        } forEach %1;
-
-        if (str _input == str %2) then {
-            (_display displayctrl %3) ctrlshow false;
-            playsound ''RscDisplayCurator_ping02'';
-        } else {
-            player setVariable [''MCC_bombDefuseStrikes'',(player getVariable [''MCC_bombDefuseStrikes'',0])+1];
-            playsound ''AlarmCar'';
-        };
-    ',_ctrls,_answers,ctrlIDC _ctrlGroup]];
+_ctrl ctrlAddEventHandler ["MouseButtonUp",format [
         "
         _display = (ctrlParent (_this select 0));
         _input = [];

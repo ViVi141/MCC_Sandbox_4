@@ -34,10 +34,7 @@ if !(_isCQB) then {
 
 //Lets spawn some body guards
 _range = if (_isCQB) then {30} else {60};
-if (!(isNull _objPos)) then {
 [_objPos,_range,0,4,_faction, _side] remoteExec ["MCC_fnc_garrison",2];
-};
-};
 
 //Lets find out if we have a building close by
 _selectedBuilding = ([_objPos, 100] call MCC_fnc_MWFindbuildingPos) call BIS_fnc_selectRandom;
@@ -93,10 +90,7 @@ if (_isDownloadIntel) then {
 
 //Pick Item
 _init = '_this call MCC_fnc_pickItem';
-if (!(isNull _object)) then {
 [[netID _object,_object], _init] remoteExec ["MCC_fnc_setVehicleInit",0];
-};
-};
 
 {_x addCuratorEditableObjects [[_object],false]} forEach allCurators;
 

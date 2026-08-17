@@ -93,10 +93,7 @@ if (mcc_missionmaker == (name player)) then 	{
 						while {!MCC3DgotValue && MCC3DRuning} do {sleep 0.2};
 						if (MCC3DRuning) then {
 							MCC_capture_var=MCC_capture_var + FORMAT ["
-if (!(isNull MCC3DValue select 0)) then {
-[%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0,%11,false] remoteExec ["MCC_fnc_trapSingle", 2];
-};
-};
+							[%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0,%11,false] remoteExec ["MCC_fnc_trapSingle", 2];
 							"
 							, MCC3DValue select 0
 							, trapkind
@@ -128,10 +125,7 @@ if (!(isNull MCC3DValue select 0)) then {
 						while {!MCC3DgotValue && MCC3DRuning} do {sleep 0.2};
 
 						if (MCC3DRuning) then {
-if (!(isNull MCC3DValue select 0)) then {
-[MCC3DValue select 0, trapkind select 0, MCC_trapvolume select 0, IEDExplosionType, IEDDisarmTime, IEDJammable, IEDTriggerType, trapdistance, iedside, IedName select 0, MCC3DValue select 1, false, east] remoteExec ["MCC_fnc_trapSingle", 2, false];
-};
-};
+							[MCC3DValue select 0, trapkind select 0, MCC_trapvolume select 0, IEDExplosionType, IEDDisarmTime, IEDJammable, IEDTriggerType, trapdistance, iedside, IedName select 0, MCC3DValue select 1, false, east] remoteExec ["MCC_fnc_trapSingle", 2, false];
 							sleep 0.1;
 							MCC3DgotValue = false;
 						};
@@ -157,10 +151,7 @@ if (!(isNull MCC3DValue select 0)) then {
 				waituntil {!MCC_drawMinefield};
 				if (MCC_capture_state) then {
 					MCC_capture_var=MCC_capture_var + FORMAT ['
-if (!(isNull (trapkind select 0))) then {
-[%1 select 0, %2 select 0,%3,%4] remoteExec ["MCC_fnc_mineSingle", 2, false];
-};
-};
+					[%1 select 0, %2 select 0,%3,%4] remoteExec ["MCC_fnc_mineSingle", 2, false];
 					'
 					, trapkind
 					, IedName
@@ -168,10 +159,7 @@ if (!(isNull (trapkind select 0))) then {
 					, MCC_drawBoxZoneSize
 					];
 				} else {
-if (!(isNull (trapkind select 0))) then {
-[trapkind select 0, IedName select 0, MCC_drawBoxZonePos, MCC_drawBoxZoneSize] remoteExec ["MCC_fnc_mineSingle", 2, false];
-};
-};
+					[trapkind select 0, IedName select 0, MCC_drawBoxZonePos, MCC_drawBoxZoneSize] remoteExec ["MCC_fnc_mineSingle", 2, false];
 				};
 			};
 
@@ -189,10 +177,7 @@ if (!(isNull (trapkind select 0))) then {
 
 						if (MCC3DRuning) then {
 							MCC_capture_var=MCC_capture_var + FORMAT ["
-if (!(isNull MCC3DValue select 0)) then {
-[%1 , %2 select 0, %3 , %4 select 0, %5] remoteExec ["MCC_fnc_ACSingle", false, false];
-};
-};
+							[%1 , %2 select 0, %3 , %4 select 0, %5] remoteExec ["MCC_fnc_ACSingle", false, false];
 							"
 							, MCC3DValue select 0
 							, trapkind
@@ -217,9 +202,7 @@ if (!(isNull MCC3DValue select 0)) then {
 						MCC3DgotValue = false;
 						while {!MCC3DgotValue && MCC3DRuning} do {sleep 0.2};
 						if (MCC3DRuning) then {
-if (!(isNull MCC3DValue select 0)) then {
-    [MCC3DValue select 0, trapkind select 0, iedside, IedName select 0, MCC3DValue select 1] remoteExec ['MCC_fnc_ACSingle', 2, false];
-};
+							[MCC3DValue select 0, trapkind select 0, iedside, IedName select 0, MCC3DValue select 1] remoteExec ["MCC_fnc_ACSingle", 2, false];
 							MCC3DgotValue = false;
 						};
 
@@ -239,9 +222,7 @@ if (!(isNull MCC3DValue select 0)) then {
 				if (MCC_capture_state) then {
 						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_CAPTURED";
 								MCC_capture_var=MCC_capture_var + FORMAT ['
-if (!(isNull _pos) && !(isNull trapkind)) then {
-    [%1 , %2 select 0, %3 select 0, %4, %5] remoteExec ["MCC_fnc_SBSingle", 0, false];
-};
+								[%1 , %2 select 0, %3 select 0, %4, %5] remoteExec ["MCC_fnc_SBSingle", 0, false];
 								'
 								, _pos
 								, trapkind
@@ -252,13 +233,11 @@ if (!(isNull _pos) && !(isNull trapkind)) then {
 								onMapSingleClick """";";
 					} else {
 						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_PLACED";
-if (!(isNull _pos) && !(isNull trapkind) && !(isNull MCC_trapvolume) && !(isNull IEDExplosionType) && !(isNull iedside)) then {
-    [[_pos, trapkind select 0, MCC_trapvolume select 0, IEDExplosionType, iedside], "MCC_fnc_SBSingle", 0, 0] remoteExec ["MCC_fnc_SBSingle", 0, 0];
-};
+								[[_pos , trapkind select 0,MCC_trapvolume select 0, IEDExplosionType, iedside],"MCC_fnc_SBSingle",0,0] remoteExec ["MCC_fnc_SBSingle",0,0];
 								onMapSingleClick """";";
 					};
 			};
-		
+		};
 
 	if (_spawnType==1) then	{ //Ambush placing
 			IedName = [format ["Ambush_Group_%1", MCC_IEDCount]];
@@ -273,4 +252,4 @@ if (!(isNull _pos) && !(isNull trapkind) && !(isNull MCC_trapvolume) && !(isNull
 		hint "click, hold and then drag the cursor to place the ambushe group pointing the desired direction";
 		MCC_ambushPlacing = true;
 		};
-	
+	};

@@ -43,7 +43,6 @@ _pylonsAvailable = (configFile >> "cfgVehicles" >> typeof _vehicle >> "Component
 _turrets= (configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
 
 {
-}
 	_mag = ["None"];
 	//_turrets pushBack (getArray(_x >> "turret"));
 
@@ -53,8 +52,7 @@ _turrets= (configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "
 
 	_text = format  ["Pylon %1:  ", _forEachIndex + 1];
 
-	if (_forEachIndex < (count _pylonsAvailable)/2) then {;
- };
+	if (_forEachIndex < (count _pylonsAvailable)/2) then {
 		for "_i" from 0 to _forEachIndex step 1 do
 		{
 			_text = _text + "-----";
@@ -77,10 +75,7 @@ if (count _pylonsAvailable == 0) exitWith {
 	private _progress = ["Rearming...",10,objNull,false] call MCC_fnc_interactProgress;
 
 	if (_progress) then {
-if (!(isNull _vehicle)) then {
-[_vehicle, 1] remoteExec ["setVehicleAmmo", _vehicle];
-};
-};
+		[_vehicle, 1] remoteExec ["setVehicleAmmo", _vehicle];
 		playSound "gunReload";
 	};
 };
@@ -134,9 +129,6 @@ _exit = false;
 		missionNamespace setVariable ["MCC_fnc_interactProgress_running",false]
 	};
 
-if (!(isNull _vehicle)) then {
-[_vehicle, [configName _x, _magType,true,(_turrets select _forEachIndex)]] remoteExecCall ["setPylonLoadOut", 0];
-};
-};
+	[_vehicle,  [configName _x, _magType,true,(_turrets select _forEachIndex)]] remoteExecCall ["setPylonLoadOut", 0];
 	sleep 0.1;
 } forEach _pylonsAvailable;

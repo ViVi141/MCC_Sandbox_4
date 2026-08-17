@@ -92,7 +92,7 @@ while {true} do {
 			[format ["MCC_campaign_%1_%2",worldname,missionName], "CAMPAIGN_MARKERS", str (_x select 0), "write",(_x select 1),true] call MCC_fnc_handleDB;
 		} forEach [[east,_markersEast],[west,_markersWest],[resistance,[_markersGuer]]];
 		*/
-	
+	};
 
 	//Save stuff for each side
 	{
@@ -177,3 +177,4 @@ while {true} do {
 	};
 
 	sleep _waitTime;
+};

@@ -14,15 +14,9 @@ if (MCC_isACE) then {
 	removeallweapons _hostage;
 	_hostage setcaptive true;
 	_init = "_this switchmove 'Acts_ExecutionVictim_Loop';";
-if (!(isNull _hostage)) then {
-[[netID _hostage, _hostage], _init, false] remoteExec ["MCC_fnc_setVehicleInit", _hostage, true];
+	[[netID _hostage, _hostage], _init, false] remoteExec ["MCC_fnc_setVehicleInit", _hostage, true];
+	[[_hostage, "Hold %1 to interact"], "MCC_fnc_createHelper", false] remoteExec ["MCC_fnc_createHelper", _hostage, false];
 };
-};
-if (!(isNull _hostage)) then {
-[[_hostage, "Hold %1 to interact"], "MCC_fnc_createHelper", false] remoteExec ["MCC_fnc_createHelper", _hostage, false];
-};
-
-
 
 [
 	_hostage,
@@ -33,62 +27,24 @@ if (!(isNull _hostage)) then {
 	"(alive _target) && (_target distance _this < 5)",
 	{
 		//Start action
-if (!(isNull _target)) then {
-[name _target,"Oh thank you, Please hurry up!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-};
-}
-	}],
+		[name _target,"Oh thank you, Please hurry up!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
+	},
 	{},
 	{
 		//Success
 		_null = [_target, player, 0,[0]] execVM format ["%1mcc\general_scripts\hostages\hostage.sqf",MCC_path];
-if (!(isNull _target)) then {
-[name _target,"Thank you!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-};
-};
-	,
+		[name _target,"Thank you!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
+	},
 	{
 		//When stopped
-if (!(isNull _target)) then {
-[name _target,"Why did you stopped?"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-};
-};
-	,
+		[name _target,"Why did you stopped?"] remoteExec ["BIS_fnc_showSubtitle", _caller];
+	},
 	[],
 	3,
 	0,
 	true,
 	false
-] call bis_fnc_holdActionAdd;
-if (!(isNull _hostage)) then {
-    [
-        _hostage,
-        format ["Untie %1",name _hostage],
-        MCC_UNTIE_ICON,
-        MCC_UNTIE_ICON,
-        "(alive _target) && (_target distance _this < 5)",
-        "(alive _target) && (_target distance _this < 5)",
-        {
-            //Start action
-            [name _target,"Oh thank you, Please hurry up!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-        },
-        {},
-        {
-            //Success
-            _null = [_target, player, 0,[0]] execVM format ["%1mcc\general_scripts\hostages\hostage.sqf",MCC_path];
-            [name _target,"Thank you!"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-        },
-        {
-            //When stopped
-            [name _target,"Why did you stopped?"] remoteExec ["BIS_fnc_showSubtitle", _caller];
-        },
-        [],
-        3,
-        0,
-        true,
-        false
-    ] remoteExec ["bis_fnc_holdActionAdd", 0];
-};
+] remoteExec ["bis_fnc_holdActionAdd", 0];
 
 
 

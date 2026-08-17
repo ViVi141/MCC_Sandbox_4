@@ -10,10 +10,7 @@ if (isNull _module) exitWith {};
 if ((local _module) && !(isnull curatorcamera)) then {
 	[objNull, localize "STR_DISP_CURATOR_AMBIENTBIRDSSPAWN_SUCCESS"] call bis_fnc_showCuratorFeedbackMessage;
 	deleteVehicle _module;
-if (!(isNull _module)) then {
-[] remoteExec ["MCC_fnc_ambientBirdsSpawnInit", 2];
-};
-};
+	[] remoteExec ["MCC_fnc_ambientBirdsSpawnInit", 2];
 };
 
 if  (!isServer || (missionNamespace getVariable ["MCC_fnc_ambientBirdsSpawnInitRuning",false])) exitWith {};

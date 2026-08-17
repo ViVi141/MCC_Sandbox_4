@@ -10,8 +10,8 @@
 
  _dikCode 	= _this select 0;
  
-_text = switch (_dikCode) do {;
-};
+_text = switch (_dikCode) do	
+_text = switch (_dikCode) do {
 	case 2:{"1"};
 	case 3:{"2"};
 	case 4:{"3"};

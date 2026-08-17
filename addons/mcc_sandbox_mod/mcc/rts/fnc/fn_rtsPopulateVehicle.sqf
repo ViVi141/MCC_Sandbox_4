@@ -44,10 +44,7 @@ createVehicleCrew _obj;
 _ehID = _obj addMPEventHandler ["mpkilled", {
 												_unit = getText (configfile >> "CfgVehicles" >> typeof (_this select 0) >> "displayName");
 												_killer = name (_this select 1);
-if (!(isNull _unit)) then {
-["MCCNotificationBad", ["Unit Down", format ["%1 was killed by %2", _unit, _killer], ""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
-};
-};
+												["MCCNotificationBad",["Unit Down",format ["%1 was killed by %2",_unit,_killer],""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
 											  }];
 
 {

@@ -36,11 +36,8 @@ if (isnil format ["MCC_START_%1",playerSide]) exitWith {
 
 //Call Daynight cycle if using RTS
 if !(missionNamespace getVariable ["MCC_fnc_dayCycle_isRunning",false]) then {
-if (!(isNull sideLogic)) then {
-[playerSide, sideLogic] remoteExec ["MCC_fnc_dayCycle", 2];
+	[playerSide,sideLogic] remoteExec ["MCC_fnc_dayCycle",2];
 };
-};
-
 
 //Camera effects
 _camera = "Camera" camcreate [(getpos player) select 0, (getpos player) select 1,((getpos player) select 2) + 100];
@@ -528,10 +525,7 @@ MCC_fnc_rtsSelectGroup = {
 			if (count _groups > 0) then {
 				player globalRadio "CuratorWaypointPlaced";
 				{
-if (!(isNull (leader _x))) then {
-[1,screentoworld _pos,[2,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
-};
-};
+					[1,screentoworld _pos,[2,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
 				} forEach _groups;
 			};
 		} forEach MCC_ConsoleGroupSelected;
@@ -540,7 +534,7 @@ if (!(isNull (leader _x))) then {
 		[MCC_ConsoleGroupSelected] spawn MCC_fnc_baseSelected;
 		[] call MCC_fnc_rtsMakeMarkersGroups;
 	};
-
+};
 
 MCC_fnc_rtsMakeMarkersGroups = {
 	disableSerialization;
@@ -949,9 +943,7 @@ MCC_CONST_CAM_Handler =
 					playsound "click";
 				} else {
 					playSound "MCC_consturctionInitialized";
-if (!(isNull MCC_CONST_PLACEHOLDER)) then {
-    [getpos MCC_CONST_PLACEHOLDER, getdir MCC_CONST_PLACEHOLDER ,_cfgName, 1, playerside] remoteExec ['MCC_fnc_construct_base',2];
-};
+					[getpos MCC_CONST_PLACEHOLDER, getdir MCC_CONST_PLACEHOLDER ,_cfgName, 1, playerside] remoteExec ["MCC_fnc_construct_base",2];
 
 					//Remove old marker
 					[] spawn MCC_fnc_rtsMakeMarkersGroups;
@@ -1068,18 +1060,7 @@ if (!(isNull MCC_CONST_PLACEHOLDER)) then {
 								_buildingPos = [(nearestBuilding _wpPos), count units _x] call BIS_fnc_buildingPositions;
 								_x setVariable ["MCC_rtsIsFortified",true,true];
 
-_string = format ["{
-	_unit = (thislist select  _forEachIndex);
-	_unit domove _x;
-	_unit setSpeedMode 'FULL';
-	_unit spawn {
-		sleep 5;
-		waituntil {unitready _this};
-		_this disableai 'move';
-		while {(unitready leader _this)} do {sleep 1};
-		_this enableai 'move';
-	};
-} forEach %1;",_buildingPos];
+								_string = format ["{
 								                      _unit = (thislist select  _forEachIndex);
 								                      _unit domove _x;
 								                      _unit setSpeedMode 'FULL';
@@ -1090,7 +1071,7 @@ _string = format ["{
 								                      	while {(unitready leader _this)} do {sleep 1};
 								                      	_this enableai 'move';
 								                       };
-} forEach %1];
+								                  } forEach %1;",_buildingPos];
 							} else {
 								//Board empty vehicles
 								if ({count crew _x ==0} count _list > 0) then {
@@ -1099,15 +1080,12 @@ _string = format ["{
 							};
 						};
 
-if (!(isNull _x)) then {
-[if (_ctrlK) then {0} else {1},_wpPos,[_wpType,"YELLOW","NO CHANGE","FULL","AWARE","true",_string,0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
-};
-};
+						[if (_ctrlK) then {0} else {1},_wpPos,[_wpType,"YELLOW","NO CHANGE","FULL","AWARE","true",_string,0],[_x],true] remoteExec ["MCC_fnc_manageWp", leader _x, false];
 					} forEach _groups;
 				};
 			};
-		
-	
+		};
+	};
 
 	if (_mode == "MouseButtonDown") exitWith
 	{
@@ -1272,7 +1250,7 @@ if (!(isNull _x)) then {
 
 		uiNamespace setVariable ["MCC_LOGISTICS_BASE_BUILD_MOUSEXY",[_posX,_posY]];
 	};
-
+};
 
 
 //Clean up

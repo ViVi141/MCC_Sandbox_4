@@ -35,10 +35,7 @@ waituntil {alive player &&
 //Get player location
 if (_position) then {
 	_varName = format ["%1_%2_playerPos",worldname,missionName];
-if (!(isNull player)) then {
-[_varName, player, position player, "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
-};
-};
+	[_varName, player,position player, "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
 	waitUntil {!isNil _varName};
 
 	if (count (missionNameSpace getVariable [_varName,position player]) >= 3) then {
@@ -67,26 +64,7 @@ if (_gear) then {
 						  handgunWeapon player,
 						  primaryWeaponItems player,
 						  secondaryWeaponItems player,
-if (!(isNull player)) then {
-    [player,[   goggles player,
-                          headgear player,
-                          uniform player,
-                          vest player,
-                          backpack player,
-                          backpackItems player,
-                          primaryWeaponMagazine player,
-                          secondaryWeaponMagazine player,
-                          handgunMagazine player,
-                          assignedItems player,
-                          uniformItems player,
-                          vestItems player,
-                          primaryWeapon player,
-                          secondaryWeapon player,
-                          handgunWeapon player,
-                          primaryWeaponItems player,
-                          secondaryWeaponItems player,
-                          handgunItems player], "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
-};
+						  handgunItems player], "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
 	waitUntil {!isNil _varName};
 	if (count (missionNameSpace getVariable [_varName,[]]) >0) then {
 		(missionNameSpace getVariable [_varName,[]]) call MCC_fnc_loadGear;
@@ -96,9 +74,7 @@ if (!(isNull player)) then {
 //Set player stats
 if (_stats) then {
 	_varName = format ["%1_%2_playerStats",worldname,missionName];
-if (!(isNull player)) then {
 	[_varName, player,[], "ARRAY"] remoteExec ["MCC_fnc_getVariable", 2];
-};
 	waitUntil {!isNil _varName};
 	_var = missionNameSpace getVariable [_varName,[]];
 

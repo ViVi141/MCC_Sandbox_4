@@ -153,9 +153,7 @@ private ["_missionMaker"];
 } foreach playableUnits;
 
 if (!isnil "_missionMaker") then {
-if (!(isNull _missionMaker)) then {
-    [] remoteExec ["MCC_fnc_createMCCZones",_missionMaker];
-};
+	[] remoteExec ["MCC_fnc_createMCCZones",_missionMaker]
 };
 
 MCC_MWCleanup =
@@ -190,10 +188,7 @@ if (typeName _wholeMap == typeName true ) then {
 			_mapSize = getnumber (_worldPath >> "mapSize");
 		if (_mapSize == 0) exitWith {
 			diag_log FORMAT ["MCC: Mission Wizard Error: mapSize param not defined for '%1'",worldname];
-if (!(isNull worldname)) then {
-["mapSize param not defined for '%1'",worldname] remoteExec ["bis_fnc_halt", MCC_fnc_halt, false];
-};
-};
+			["mapSize param not defined for '%1'",worldname] remoteExec ["bis_fnc_halt", MCC_fnc_halt, false];
 			[[]] call MCC_MWCleanup;
 		};
 
@@ -227,9 +222,8 @@ if (!(isNull worldname)) then {
 			if (isNil "_center" || {count _center < 1}) exitWith {
 				diag_log "MCC: Mission Wizard Error: Can't find mission center - MWFindMissionCenter returned invalid result";
 				if (!isNil "_missionMaker") then {
-["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt", _missionMaker];
-};
-};
+					["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+				};
 				[[]] call MCC_MWCleanup;
 			};
 			
@@ -237,9 +231,8 @@ if (!(isNull worldname)) then {
 		if (isNil "_missionCenter" || {count _missionCenter < 3} || {_missionCenter isEqualTo [0,0,0]}) exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
 			if (!isNil "_missionMaker") then {
-["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt", _missionMaker];
-};
-};
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
 			[[]] call MCC_MWCleanup;
 		};
 	} else {
@@ -247,10 +240,7 @@ if (!(isNull worldname)) then {
 		if (count mcc_zone_markposition == 0) exitWith {
 			diag_log "MCC: Mission Wizard Error: Create a zone first";
 			if (!isNil "_missionMaker") then {
-if (!(isNull _missionMaker)) then {
-["MCC: Mission Wizard Error: Create a zone first"] remoteExec ["MCC_fnc_halt", _missionMaker, false];
-};
-};
+				["MCC: Mission Wizard Error: Create a zone first"] remoteExec ["MCC_fnc_halt", _missionMaker, false];
 			};
 			[[]] call MCC_MWCleanup;
 		};
@@ -283,9 +273,8 @@ if (!(isNull _missionMaker)) then {
 		if (isNil "_center" || {count _center < 1}) exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center - MWFindMissionCenter returned invalid result";
 			if (!isNil "_missionMaker") then {
-["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt", _missionMaker];
-};
-};
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
 			[[]] call MCC_MWCleanup;
 		};
 
@@ -295,10 +284,8 @@ if (!(isNull _missionMaker)) then {
 		if (isNil "_missionCenter" || {count _missionCenter < 3} || {_missionCenter isEqualTo [0,0,0]}) exitWith {
 			diag_log "MCC: Mission Wizard Error: Can't find mission center";
 			if (!isNil "_missionMaker") then {
-["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt", _missionMaker];
-};
-};
-};
+				["MCC: Mission Wizard Error: Can't find mission center try building your mission in a zone"] remoteExec ["MCC_fnc_halt",_missionMaker];
+			};
 			[[]] call MCC_MWCleanup;
 		};
 
@@ -493,9 +480,7 @@ _objectives = [];
 		if (!isNil "_objPos" && count _objPos >= 3 && ((_objPos distance2D _missionCenter) < (_maxObjectivesDistance*3))) then {
 
 			if (["Destroy", _objType] call BIS_fnc_inString) then {
-if (!isNil '_objPos' && count _objPos >= 3) then {
-	[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_objType,_campaignMission,_sidePlayer] remoteExec ['MCC_fnc_MWObjectiveDestroy',2];
-};
+				[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_objType,_campaignMission,_sidePlayer] remoteExec ["MCC_fnc_MWObjectiveDestroy",2];
 			} else {
 				switch (true) do {
 
@@ -512,41 +497,28 @@ if (!isNil '_objPos' && count _objPos >= 3) then {
 						};
 
 						//Spawn a hostage on the server
-if (!isNil '_objPos' && count _objPos >= 3) then {
-	[_objPos, _isCQB, true, _enemySide, _enemyfaction, _defendingSide, _defendingFaction,_preciseMarkers] remoteExec ["MCC_fnc_MWObjectiveHVT",2];
-};
+						[_objPos, _isCQB, true, _enemySide, _enemyfaction, _defendingSide, _defendingFaction,_preciseMarkers] remoteExec ["MCC_fnc_MWObjectiveHVT",2];
 					};
 
 					case (_objType in ["Kill HVT"]): {
-if (!isNil '_objPos' && count _objPos >= 3) then {
-    [_objPos, _isCQB, false, _enemySide, _enemyfaction, _sidePlayer, _factionPlayer,_preciseMarkers] remoteExec ['MCC_fnc_MWObjectiveHVT',2];
-};
+						[_objPos, _isCQB, false, _enemySide, _enemyfaction, _sidePlayer, _factionPlayer,_preciseMarkers] remoteExec ["MCC_fnc_MWObjectiveHVT",2];
 					};
 
 					case (_objType in ["Acquire Intel","Download Intel"]): {
-if (!isNil '_objPos' && count _objPos >= 3) then {
-	[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_sidePlayer,(_objType isEqualTo "Download Intel")] remoteExec ["MCC_fnc_MWObjectiveIntel",2];
-};
+						[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_sidePlayer,(_objType isEqualTo "Download Intel")] remoteExec ["MCC_fnc_MWObjectiveIntel",2];
 
 					};
 
 					case (_objType in ["Capture Area"]): {
-if (!(isNull _objPos)) then {
-[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers,_campaignMission,_maxObjectivesDistance] remoteExec ["MCC_fnc_MWObjectiveClear",2];
-};
-};
+						[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers,_campaignMission,_maxObjectivesDistance] remoteExec ["MCC_fnc_MWObjectiveClear",2];
 					};
 
 					case (_objType in ["Disarm IED"]): {
-if (!isNil '_objPos' && count _objPos >= 3) then {
-	[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers] remoteExec ['MCC_fnc_MWObjectiveDisable',2];
-};
+						[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers] remoteExec ["MCC_fnc_MWObjectiveDisable",2];
 					};
 
 					case (_objType in ["Logistics"]): {
-if (!(isNull _objPos) && !(isNull _enemySide) && !(isNull _enemyfaction) && !(isNull _sidePlayer)) then {
-	[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers,_campaignMission,_maxObjectivesDistance] remoteExec ["MCC_fnc_MWObjectiveLogistics",2];
-};
+						//[_objPos, _isCQB,_enemySide, _enemyfaction,_sidePlayer,_preciseMarkers,_campaignMission,_maxObjectivesDistance] remoteExec ["MCC_fnc_MWObjectiveLogistics",2];
 
 						[_objPos, _isCQB,_enemySide, _enemyfaction, _sidePlayer, _factionPlayer, _civFaction, _preciseMarkers] spawn {
 							params ["_objPos", "_isCQB","_enemySide", "_enemyfaction","_sidePlayer","_factionPlayer","_civFaction","_preciseMarkers"];
@@ -591,13 +563,9 @@ if (!(isNull _objPos) && !(isNull _enemySide) && !(isNull _enemyfaction) && !(is
 
 							//Garrison with some friendly troops
 							if (_aidSide == "civ") then {
-if (!(isNull _objPos)) then {
-    [_objPos,30,0,4,_civFaction, civilian] remoteExec ["MCC_fnc_garrison",2];
-};
+								[_objPos,30,0,4,_civFaction, civilian] remoteExec ["MCC_fnc_garrison",2];
 							} else {
-if (!(isNull _objPos)) then {
-    [_objPos,30,0,4,_factionPlayer, _sidePlayer] remoteExec ["MCC_fnc_garrison",2];
-};
+								[_objPos,30,0,4,_factionPlayer, _sidePlayer] remoteExec ["MCC_fnc_garrison",2];
 							};
 
 							//Spawn one group in defend
@@ -621,13 +589,13 @@ if (!(isNull _objPos)) then {
 							};
 						//Land_WaterBottle_01_stack_F Land_FoodSacks_01_small_brown_idap_F
 							[_supplyTruck, _objPos,"Logistics",_preciseMarkers,_enemySide,400] call MCC_fnc_MWCreateTask;
-						
+						};
 
 						//prevent spawning garrison in houses
 						_isCQB = false;
-					
-				
-			
+					};
+				};
+			};
 
 			//Stealth mission
 			/*
@@ -646,9 +614,7 @@ if (!(isNull _objPos)) then {
 				_alarm setVariable ["vehicleinit",_init];
 				{_x addCuratorEditableObjects [[_alarm],false]} forEach allCurators;
 
-if (!(isNull _alarm)) then {
-	["", getpos _alarm, 100, 100, _activate, _cond,"AlarmSfx",false] remoteExec ["MCC_fnc_MusicTrigger", 0, false];
-};
+				["", getpos _alarm, 100, 100, _activate, _cond,"AlarmSfx",false] remoteExec ["MCC_fnc_MusicTrigger", 0, false];
 			};
 			*/
 
@@ -680,16 +646,12 @@ if (!(isNull _alarm)) then {
 
 			// Is CQB
 			if (_isCQB) then {
-if (!(isNull _objPos)) then {
-	[_objPos,(_maxObjectivesDistance*0.5),0,(_totalEnemyUnits*0.05) min 2,_enemyfaction, _enemySide] remoteExec ["MCC_fnc_garrison", 0, false];
-};
+				[_objPos,(_maxObjectivesDistance*0.5),0,(_totalEnemyUnits*0.05) min 2,_enemyfaction, _enemySide] remoteExec ["MCC_fnc_garrison", 0, false];
 			};
 
 			// Is _isCiv
 			if (_isCiv) then {
-if (!(isNull _objPos)) then {
-	[_objPos,(_maxObjectivesDistance*0.5),1,(_totalEnemyUnits*0.05) min 2,_civFaction,"CIV"] remoteExec ["MCC_fnc_garrison", 0, false];
-};
+				[_objPos,(_maxObjectivesDistance*0.5),1,(_totalEnemyUnits*0.05) min 2,_civFaction,"CIV"] remoteExec ["MCC_fnc_garrison", 0, false];
 			};
 
 
@@ -704,9 +666,7 @@ if (!(isNull _objPos)) then {
 						_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
 						_pos = [[[_objPos,(_maxObjectivesDistance*0.7)]],["water"],{true}] call BIS_fnc_randomPos;
 
-if (!(isNull _objectType)) then {
-    [_pos,_objectType,"large",floor (random 2),_sidePlayer] remoteExec ["MCC_fnc_SBSingle", 0, false];
-};
+						[_pos,_objectType,"large",floor (random 2),_sidePlayer] remoteExec ["MCC_fnc_SBSingle", 0, false];
 
 						//Debug
 						if (MCC_debug) then {
@@ -730,9 +690,7 @@ if (!(isNull _objectType)) then {
 						_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
 						_pos = [[[_objPos,(_maxObjectivesDistance*0.7)]],["water"],{true}] call BIS_fnc_randomPos;
 
-if (!(isNull _objectType)) then {
-    [_pos,_objectType,_sidePlayer,"Armed Civilian",random 360] remoteExec ["MCC_fnc_ACSingle", 2];
-};
+						[_pos,_objectType,_sidePlayer,"Armed Civilian",random 360] remoteExec ["MCC_fnc_ACSingle", 2];
 
 						//Debug
 						if (MCC_debug) then {
@@ -749,9 +707,9 @@ if (!(isNull _objectType)) then {
 			};
 
 			_objectives pushBack MCC_MWObjectivesNames;
-		
-	
-foreach [_obj1,_obj2,_obj3];
+		};
+	};
+} foreach [_obj1,_obj2,_obj3];
 
 
 
@@ -777,18 +735,14 @@ if (_weatherChange != 0) then {
 	MCC_date	= [(MCC_date select 0) + floor (random 10 - random 10), floor ((random 12)+1)  ,  floor ((random 28)+1), _hour,  floor (random 60)];
 	publicVariable "MCC_date";
 
-if (!(isNull MCC_date)) then {
 	[MCC_date] remoteExec ["MCC_fnc_setTime", 0, false];
-};
 
 
 	//------------------- Weather ---------------------------------------------------------------------------------
 
 	if !(_weatherChange in [2,3,4]) then {
 		private "_monthFactor";
-if (!(isNull _unit)) then {
-    ["clear",false] remoteExec ["MCC_fnc_ppEffects",0,false];
-};
+		["clear",false] remoteExec ["MCC_fnc_ppEffects",0,false];
 
 		_monthFactor = [1,1,0.8,0.8,0.6,0.4,0.2,0.2,0.4,0.6,0.8,1] select ((MCC_date select 1)-1);
 					//     1 , 2,  3   , 4    , 5     , 6    , 7   , 8    , 9    , 10   , 11   , 12
@@ -809,13 +763,9 @@ if (!(isNull _unit)) then {
 			publicVariable "MCC_Lightnings";
 			publicVariable "MCC_Fog";
 
-if (!(isNull MCC_Overcast) && !(isNull MCC_WindForce) && !(isNull MCC_Waves) && !(isNull MCC_Rain) && !(isNull MCC_Lightnings) && !(isNull MCC_Fog)) then {
-    [[MCC_Overcast, MCC_WindForce, MCC_Waves, MCC_Rain, MCC_Lightnings, MCC_Fog]] remoteExec ["MCC_fnc_setWeather", 0, false];
-};
+			[[MCC_Overcast, MCC_WindForce, MCC_Waves, MCC_Rain, MCC_Lightnings, MCC_Fog]] remoteExec ["MCC_fnc_setWeather", 0, false];
 		} else {
-if (!(isNull MCC_Overcast) && !(isNull MCC_WindForce) && !(isNull MCC_Waves)) then {
-    [[MCC_Overcast, MCC_WindForce, MCC_Waves]] remoteExec ["MCC_fnc_setWeather", 0];
-};
+			[[MCC_Overcast, MCC_WindForce, MCC_Waves]] remoteExec ["MCC_fnc_setWeather",0];
 			publicVariable "MCC_Overcast";
 			publicVariable "MCC_WindForce";
 			publicVariable "MCC_Waves";
@@ -1029,9 +979,7 @@ if (_playMusic > 0 ) then {_music = ""};
 
 _name1 = if (isNil "_missionName1" || count _missionName1 < 1) then {"Unknown"} else {_missionName1 select 0};
 _name2 = if (isNil "_missionName2" || count _missionName2 < 1) then {"Operation"} else {_missionName2 select 0};
-if (!(isNull _objectives)) then {
-    [_html2, (_name1 + " " + _name2), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]] remoteExec ["MCC_fnc_makeBriefing", 0, false];
-};
+[_html2, (_name1 +" " + _name2), [_missionTittle], [_missionCenter,_objectives,1,_html,_sounds,_music,_plainText,_sidePlayer,_playMusic,_preciseMarkers]] remoteExec ["MCC_fnc_makeBriefing", 0, false];
 
 
 //Broadcast missionInfo to all side
