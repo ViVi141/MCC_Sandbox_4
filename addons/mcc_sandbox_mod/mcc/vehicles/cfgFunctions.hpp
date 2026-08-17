@@ -6,7 +6,7 @@ class vehicles
 	file = "mcc\vehicles\fnc";
 	#endif
 
-	//class BISGarage {description = "替换BI的车库功能，用于宙斯模式，所有功劳归宙斯";};
+	class BISGarage {description = "Replace the BI Garage for Zeus mode - all credits go to Zeus";};
 	class pylonsChange {description = "更改可用飞机的挂载配置";};
 	class spawnVehicle {description = "替换BIS_fnc_spawnVehicle";};
 	class vehicleRandomAnimation {description = "为车辆生成随机动画";};
