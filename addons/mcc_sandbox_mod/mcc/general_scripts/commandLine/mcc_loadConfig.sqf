@@ -212,7 +212,7 @@ if (!(isNull _unit)) then {
 };
 
 
-		systemChat "DB Activated";
+		systemChat (localize "STR_MCC_HINT_DB_ACTIVATED");
 	
 
 	//Delete data
@@ -221,7 +221,7 @@ if (!(isNull _unit)) then {
 if (!isNil {player}) then {
     [] remoteExec ["MCC_fnc_clearPersistentData", 2];
 };
-		systemChat "DB cleared";
+		systemChat (localize "STR_MCC_HINT_DB_CLEARED");
 	};
 
 

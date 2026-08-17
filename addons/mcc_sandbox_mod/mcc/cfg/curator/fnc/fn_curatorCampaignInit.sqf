@@ -5,7 +5,7 @@ private ["_pos","_module","_factionArray","_resualt","_difficulty","_missionMax"
 _module = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _module) exitWith {};
 
-if (missionNamespace getVariable ["MCC_isCampaignRuning",false]) exitWith {systemChat "Campaign already running"};
+if (missionNamespace getVariable ["MCC_isCampaignRuning",false]) exitWith {systemChat (localize "STR_MCC_HINT_CAMPAIGN_ALREADY_RUNNING")};
 
 //did we get here from the 2d editor?
 if (typeName (_module getVariable ["factionPlayer",true]) == typeName "") exitWith {

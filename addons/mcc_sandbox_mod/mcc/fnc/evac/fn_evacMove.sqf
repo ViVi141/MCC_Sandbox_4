@@ -107,7 +107,7 @@ else
 		{
 			//while {(_heli distance _pos)>55} do {_pilot doMove _pos; sleep 5;};
 			while {((getposasl _heli) select 2) > 8} do {_heli flyinHeight 3; sleep 1};
-			_heli globalChat "Golf 1 in position, clear for helocasting";
+			_heli globalChat (localize "STR_MCC_HINT_GOLF1_HELOCASTING");
 
 			{
 				[_x] spawn
@@ -134,7 +134,7 @@ if (!(isNull _unit)) then {
 
 		case 4:			//Smoke signal
 		{
-			_heli globalChat "Waiting for smoke signal to land";
+			_heli globalChat (localize "STR_MCC_HINT_WAITING_SMOKE");
 			_nearSmokes = [];
 			while {(count _nearSmokes < 1)} do
 			{
@@ -216,7 +216,7 @@ if (!(isNull _unit)) then {
 			_heli flyInHeight 20;
 			sleep 4;
 
-			_heli globalChat "Golf 1 in position, get ready for fast rope";
+			_heli globalChat (localize "STR_MCC_HINT_GOLF1_FASTROPE");
 			waitUntil { sleep 1; (abs(speed _heli) < 0.5)  || !alive _heli || !alive (driver _heli)};
 			if (!alive _heli || !alive (driver _heli)) exitWith {};
 

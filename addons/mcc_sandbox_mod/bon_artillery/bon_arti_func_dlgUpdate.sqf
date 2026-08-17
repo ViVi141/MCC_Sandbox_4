@@ -73,7 +73,7 @@ switch (ctrlIDC _ctrl) do
 		{
 			_shellsleft = MCC_server getVariable format["Arti_%1_shellsleft",side player];
 			if (isNil "_shellsleft") then {_shellsleft = 0};
-			ctrlSetText [BON_ARTY_SHELLSLEFT,format["Shells left: %1",_shellsleft]];
+			ctrlSetText [BON_ARTY_SHELLSLEFT,format[localize "STR_MCC_HINT_SHELLS_LEFT",_shellsleft]];
 
 			_comboBox = _artidialog displayCtrl BON_ARTY_TYPE;
 			lbClear _comboBox;
@@ -108,7 +108,7 @@ switch (ctrlIDC _ctrl) do
 					if ((_x select 0) == _ammo) then {_shellsleft = _shellsleft +(_x select 1)};
 				} foreach _allAmmo;
 
-				ctrlSetText [BON_ARTY_SHELLSLEFT,format["Shells left: %1",_shellsleft]];
+				ctrlSetText [BON_ARTY_SHELLSLEFT,format[localize "STR_MCC_HINT_SHELLS_LEFT",_shellsleft]];
 			};
 		};
 	};

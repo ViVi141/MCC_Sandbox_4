@@ -96,12 +96,12 @@ if(local player && call compile _arti_cond_side && call compile _arti_cond_class
 		(findDisplay 46) displayAddEventHandler ["KeyDown","_this call arti_func_keyspressed"];
 	};
 
-	player addAction ["<t color='#FFCC00'>Call Artillery</t>",(BON_ARTI_PATH+"dialog\openMenu.sqf"),["Arti_dlg"],-1,false,true,"",bon_arti_condition];
+	player addAction ["<t color='#FFCC00'>" + (localize "STR_MCC_HINT_CALL_ARTILLERY") + "</t>",(BON_ARTI_PATH+"dialog\openMenu.sqf"),["Arti_dlg"],-1,false,true,"",bon_arti_condition];
 	player addEventHandler ["Killed",{
 		[] spawn {
 			player removeAction bon_arti_action;
 			WaitUntil{alive player};
-			bon_arti_action = player addAction ["<t color='#FFCC00'>Call Artillery</t>",(BON_ARTI_PATH+"dialog\openMenu.sqf"),["Arti_dlg"],-1,false,true,"",bon_arti_condition];
+			bon_arti_action = player addAction ["<t color='#FFCC00'>" + (localize "STR_MCC_HINT_CALL_ARTILLERY") + "</t>",(BON_ARTI_PATH+"dialog\openMenu.sqf"),["Arti_dlg"],-1,false,true,"",bon_arti_condition];
 		};
 	}];
 };

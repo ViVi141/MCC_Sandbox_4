@@ -42,7 +42,7 @@ _artidialog = findDisplay BON_ARTY_DIALOG;
 
 _shellsleft = MCC_server getVariable format["Arti_%1_shellsleft",side player];
 if (isNil "_shellsleft" || !_isCommander) then {_shellsleft = 0};
-ctrlSetText [BON_ARTY_SHELLSLEFT,format["Shells left: %1",_shellsleft]];
+ctrlSetText [BON_ARTY_SHELLSLEFT,format[localize "STR_MCC_HINT_SHELLS_LEFT",_shellsleft]];
 ctrlSetText [BON_ARTY_XRAY,format["x-ray: %1",round (getPos player select 0)]];
 ctrlSetText [BON_ARTY_YANKEE,format["yankee: %1",round (getPos player select 1)]];
 

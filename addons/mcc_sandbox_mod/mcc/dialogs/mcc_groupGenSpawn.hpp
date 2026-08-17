@@ -298,7 +298,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		class MCC_delayedSpawn: MCC_RscCheckbox
 		{
 			idc = 3022;
-			tooltip = "Units will not spawn until players are nearby";
+			tooltip = "$STR_MCC_HINT_UNITS_WAIT_NEARBY";
 			x = 0.05 * safezoneW;
 			y = 0.26 * safezoneH;
 			w = 0.0171875 * safezoneW;
@@ -308,7 +308,7 @@ class MCC_spawnDialogControls:MCC_RscControlsGroup
 		class MCC_CacheSpawn: MCC_RscCheckbox
 		{
 			idc = 3023;
-			tooltip = "Units will spawn and cache automatically";
+			tooltip = "$STR_MCC_HINT_UNITS_CACHE_AUTO";
 			x = 0.13 * safezoneW;
 			y = 0.26 * safezoneH;
 			w = 0.0171875 * safezoneW;

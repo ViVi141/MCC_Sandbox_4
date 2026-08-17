@@ -44,7 +44,7 @@ if (_men distance _ied <4) then {
 				["Placing Charge",10] call MCC_fnc_interactProgress;
 
 				_c4 = "DemoCharge_Remote_Ammo_Scripted" createVehicle position player;
-				player addAction ["<t color=""#FF0000"">Detonate Charge</t>", {
+				player addAction ["<t color=""#FF0000"">" + (localize "STR_MCC_HINT_DETONATE_CHARGE") + "</t>", {
 												player removeAction (_this select 2);
 												((_this select 3) select 0) setDamage 1;
 												((_this select 3) select 1) setvariable ["iedTrigered",true,true];

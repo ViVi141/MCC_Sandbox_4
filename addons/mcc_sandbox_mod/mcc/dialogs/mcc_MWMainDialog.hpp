@@ -128,7 +128,7 @@ class MCCMWDialog
 			idc = -1;
 			text = "$STR_MCC_MW_MAIN_UPDATE_ZONE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-			tooltip = "Click and drag on the minimap to make a zone";
+			tooltip = "$STR_MCC_CREATE_ZONE_TOOLTIP";
 			onButtonClick = "if (mcc_missionmaker == (name player)) then {MCC_zone_drawing= true;} else {player globalchat 'Access Denied'};";
 
 			x = 0.700521 * safezoneW + safezoneX;

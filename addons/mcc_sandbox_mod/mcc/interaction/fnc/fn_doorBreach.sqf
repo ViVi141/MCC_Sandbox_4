@@ -39,7 +39,7 @@ _position = ATLtoASL(player modelToworld [0,_n-0.15,1]);
 _c4 = "ClaymoreDirectionalMine_Remote_Ammo_Scripted" createVehicle ATLtoASL _position;
 _c4 setpos aslToAtl _position;
 _c4 setdir (getdir player);
-player addAction ["<t color=""#FF0000"">Detonate Charge</t>", {
+player addAction ["<t color=""#FF0000"">" + (localize "STR_MCC_HINT_DETONATE_CHARGE") + "</t>", {
 								player removeAction (_this select 2);
 								((_this select 3) select 1) animate [((_this select 3) select 2), ((_this select 3) select 3)];
 								((_this select 3) select 1) setVariable [format ["bis_disabled_%1",((_this select 3) select 4)],0,true];

@@ -141,7 +141,7 @@ class MCC_WeatherDialogControls:MCC_RscControlsGroup
 		class MCC_timeTittle: MCC_RscText
 		{
 			idc = -1;
-			text = "Time:";
+			text = "$STR_MCC_HINT_TIME_LABEL";
 			x = 0.00572965 * safezoneW;
 			y = (0.23091+0.043983) * safezoneH;
 			w = 0.0630208 * safezoneW;

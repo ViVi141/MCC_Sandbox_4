@@ -96,7 +96,7 @@ _groupSize = 5;
 if (isNil "_faction") exitWith {};
 
 private _varName = format ["MCC_fnc_aas_AIspawnActive_%1", _faction];
-if (!isServer || (missionNamespace getVariable [_varName,false])) exitWith {systemChat "Faction AAS already initilized"};
+if (!isServer || (missionNamespace getVariable [_varName,false])) exitWith {systemChat (localize "STR_MCC_HINT_FACTION_AAS_INITIALIZED")};
 missionNamespace setVariable [_varName,true];
 publicVariable _varName;
 

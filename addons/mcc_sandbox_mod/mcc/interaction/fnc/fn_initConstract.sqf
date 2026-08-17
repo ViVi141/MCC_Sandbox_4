@@ -136,7 +136,7 @@ if (_available) then {
 	}, [MCC_FOB_object]] call BIS_fnc_addStackedEventHandler;
 
 	// Add secondary hold fire and place object to the action
-	_action =  player addAction ["Place Constuct", {missionNamespace setVariable ["MCC_FOB_object_position",[getPosASL MCC_FOB_object, getDir MCC_FOB_object]]; [publicVariableServer "MCC_FOB_object_position"]}, "", 0, false, true, "DefaultAction", "true"];
+	_action =  player addAction [(localize "STR_MCC_HINT_PLACE_CONSTRUCT"), {missionNamespace setVariable ["MCC_FOB_object_position",[getPosASL MCC_FOB_object, getDir MCC_FOB_object]]; [publicVariableServer "MCC_FOB_object_position"]}, "", 0, false, true, "DefaultAction", "true"];
 
 	waitUntil {!alive player || (player getvariable ["MCC_medicUnconscious",false]) || player distance _startPos > 10 || (count ((missionNamespace getVariable ["MCC_FOB_object_position",[]]) select 0) > 0)};
 

@@ -103,7 +103,7 @@ if (!(isNull _crate)) then {
 					}
 					else
 					{
-						systemChat "Can't lift this";
+						systemChat (localize "STR_MCC_HINT_CANT_LIFT");
 						deleteVehicle _crate;
 						[_isHeli] spawn MCC_fnc_logTruckRefresh;
 						uiNameSpace setVariable ["MCC_logisticLoadingPressed", false];

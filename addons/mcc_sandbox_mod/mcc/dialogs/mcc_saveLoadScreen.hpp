@@ -97,7 +97,7 @@ class MCC_SaveLoadScreen
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.032987 * safezoneH;
-			tooltip = "Save current MCC configuration to ClipBoard";
+			tooltip = "$STR_MCC_HINT_SAVE_TO_CLIPBOARD";
 			onButtonClick = __EVAL("[1] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\mcc_loadConfig.sqf'");
 		};
 
@@ -110,7 +110,7 @@ class MCC_SaveLoadScreen
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.108854 * safezoneW;
 			h = 0.032987 * safezoneH;
-			tooltip = "Paste MCC mission configuration code from clipboard (crtl-v) in text box first";
+			tooltip = "$STR_MCC_HINT_PASTE_FROM_CLIPBOARD";
 			onButtonClick = __EVAL("[0] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\mcc_loadConfig.sqf'");
 		};
 
@@ -184,7 +184,7 @@ class MCC_SaveLoadScreen
 			idc = -1;
 			onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\mcc_loadConfig.sqf'");
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-			tooltip = "Save a mission to profile name space - choose a slot from the above list first";
+			tooltip = "$STR_MCC_HINT_SAVE_PROFILE_SLOT";
 			text = "$STR_MCC_SAVE_TO_PROFILE";
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.675931 * safezoneH + safezoneY;
@@ -197,7 +197,7 @@ class MCC_SaveLoadScreen
 			idc = -1;
 			onButtonClick = __EVAL("[4] execVM '"+MCCPATH+"mcc\general_scripts\commandLine\mcc_loadConfig.sqf'");
 			sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-			tooltip = "Load a mission from profile name space - choose a slot from the above list first";
+			tooltip = "$STR_MCC_HINT_LOAD_PROFILE_SLOT";
 			text = "$STR_MCC_LOAD_FROM_PROFILE";
 			x = 0.620312 * safezoneW + safezoneX;
 			y = 0.675931 * safezoneH + safezoneY;

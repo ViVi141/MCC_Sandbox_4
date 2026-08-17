@@ -5530,4 +5530,894 @@
             </Key>
         </Container>
     </Package>
+    <Package name="GeneralFunc">
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_PRE_INIT">
+                <Original>Pre init</Original>
+                <English>Pre init</English>
+                <Chinesesimp>预初始化</Chinesesimp>
+                <Chinese>預初始化</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_POST_INIT">
+                <Original>Post init</Original>
+                <English>Post init</English>
+                <Chinesesimp>后初始化</Chinesesimp>
+                <Chinese>後初始化</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_ACTIVATEADDONS">
+                <Original>Activate addons</Original>
+                <English>Activate addons</English>
+                <Chinesesimp>激活插件</Chinesesimp>
+                <Chinese>激活插件</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GEAR">
+                <Original>Gear</Original>
+                <English>Gear</English>
+                <Chinesesimp>装备</Chinesesimp>
+                <Chinese>裝備</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_MOBILERESPAWN">
+                <Original>Mobile respawn</Original>
+                <English>Mobile respawn</English>
+                <Chinesesimp>移动重生</Chinesesimp>
+                <Chinese>移動重生</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_BUILDINGPOSCOUNT">
+                <Original>Building position count</Original>
+                <English>Building position count</English>
+                <Chinesesimp>建筑物位置计数</Chinesesimp>
+                <Chinese>建築物位置計數</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_MAKEUNITSARRAY">
+                <Original>Make units array</Original>
+                <English>Make units array</English>
+                <Chinesesimp>创建单位数组</Chinesesimp>
+                <Chinese>創建單位數組</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_COUNTGROUP">
+                <Original>Count group</Original>
+                <English>Count group</English>
+                <Chinesesimp>统计小组</Chinesesimp>
+                <Chinese>統計小組</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_PIPOPEN">
+                <Original>PIP open</Original>
+                <English>PIP open</English>
+                <Chinesesimp>PIP画面开启</Chinesesimp>
+                <Chinese>PIP畫面開啟</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_TIME2STRING">
+                <Original>Time to string</Original>
+                <English>Time to string</English>
+                <Chinesesimp>时间转字符串</Chinesesimp>
+                <Chinese>時間轉字符串</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_TIME">
+                <Original>Time</Original>
+                <English>Time</English>
+                <Chinesesimp>时间</Chinesesimp>
+                <Chinese>時間</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SETVEHICLEINIT">
+                <Original>Set vehicle init</Original>
+                <English>Set vehicle init</English>
+                <Chinesesimp>设置载具初始化</Chinesesimp>
+                <Chinese>設置載具初始化</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SETVEHICLENAME">
+                <Original>Set vehicle name</Original>
+                <English>Set vehicle name</English>
+                <Chinesesimp>设置载具名称</Chinesesimp>
+                <Chinese>設置載具名稱</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SETTIME">
+                <Original>Set time</Original>
+                <English>Set time</English>
+                <Chinesesimp>设置时间</Chinesesimp>
+                <Chinese>設置時間</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SETWEATHER">
+                <Original>Set weather</Original>
+                <English>Set weather</English>
+                <Chinesesimp>设置天气</Chinesesimp>
+                <Chinese>設置天氣</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GLOBALSAY3D">
+                <Original>Global say 3D</Original>
+                <English>Global say 3D</English>
+                <Chinesesimp>全局3D语音</Chinesesimp>
+                <Chinese>全局3D語音</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GLOBALHINT">
+                <Original>Global hint</Original>
+                <English>Global hint</English>
+                <Chinesesimp>全局提示</Chinesesimp>
+                <Chinese>全局提示</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GLOBALEXECUTE">
+                <Original>Global execute</Original>
+                <English>Global execute</English>
+                <Chinesesimp>全局执行</Chinesesimp>
+                <Chinese>全局執行</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GROUPCHAT">
+                <Original>Group chat</Original>
+                <English>Group chat</English>
+                <Chinesesimp>小组聊天</Chinesesimp>
+                <Chinese>小組聊天</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_MOVETOPOS">
+                <Original>Move to position</Original>
+                <English>Move to position</English>
+                <Chinesesimp>移动到位置</Chinesesimp>
+                <Chinese>移動到位置</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_PICKITEM">
+                <Original>Pick item</Original>
+                <English>Pick item</English>
+                <Chinesesimp>拾取物品</Chinesesimp>
+                <Chinese>拾取物品</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_BROADCAST">
+                <Original>Broadcast</Original>
+                <English>Broadcast</English>
+                <Chinesesimp>广播</Chinesesimp>
+                <Chinese>廣播</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_PARADROP">
+                <Original>Paradrop</Original>
+                <English>Paradrop</English>
+                <Chinesesimp>空投</Chinesesimp>
+                <Chinese>空投</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_REALPARADROP">
+                <Original>Real paradrop</Original>
+                <English>Real paradrop</English>
+                <Chinesesimp>真实空投</Chinesesimp>
+                <Chinese>真實空投</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_REALPARADROPPLAYER">
+                <Original>Real paradrop player</Original>
+                <English>Real paradrop player</English>
+                <Chinesesimp>玩家真实空投</Chinesesimp>
+                <Chinese>玩家真實空投</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_COUNTGROUPHC">
+                <Original>Count group HC</Original>
+                <English>Count group HC</English>
+                <Chinesesimp>统计小组(无头客户端)</Chinesesimp>
+                <Chinese>統計小組(無頭客戶端)</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_MANAGEWP">
+                <Original>Manage waypoints</Original>
+                <English>Manage waypoints</English>
+                <Chinesesimp>管理路径点</Chinesesimp>
+                <Chinese>管理路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SYNC">
+                <Original>Sync</Original>
+                <English>Sync</English>
+                <Chinesesimp>同步</Chinesesimp>
+                <Chinese>同步</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_OBJECTMAPPER">
+                <Original>Object mapper</Original>
+                <English>Object mapper</English>
+                <Chinesesimp>物体映射器</Chinesesimp>
+                <Chinese>物體映射器</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_FINDROADSLEADINGZONE">
+                <Original>Find roads leading zone</Original>
+                <English>Find roads leading zone</English>
+                <Chinesesimp>查找通往区域的公路</Chinesesimp>
+                <Chinese>查找通往區域的公路</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_NEARESTROAD">
+                <Original>Nearest road</Original>
+                <English>Nearest road</English>
+                <Chinesesimp>最近公路</Chinesesimp>
+                <Chinese>最近公路</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_GARRISON">
+                <Original>Garrison</Original>
+                <English>Garrison</English>
+                <Chinesesimp>驻守</Chinesesimp>
+                <Chinese>駐守</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SAVETOSQM">
+                <Original>Save to SQM</Original>
+                <English>Save to SQM</English>
+                <Chinesesimp>保存到SQM</Chinesesimp>
+                <Chinese>保存到SQM</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SAVETOMCC">
+                <Original>Save to MCC</Original>
+                <English>Save to MCC</English>
+                <Chinesesimp>保存到MCC</Chinesesimp>
+                <Chinese>保存到MCC</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_LOADFROMMCC">
+                <Original>Load from MCC</Original>
+                <English>Load from MCC</English>
+                <Chinesesimp>从MCC加载</Chinesesimp>
+                <Chinese>從MCC加載</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SAVETOCOMP">
+                <Original>Save to composition</Original>
+                <English>Save to composition</English>
+                <Chinesesimp>保存到配置</Chinesesimp>
+                <Chinese>保存到配置</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_REPLACESTRING">
+                <Original>Replace string</Original>
+                <English>Replace string</English>
+                <Chinesesimp>替换字符串</Chinesesimp>
+                <Chinese>替換字符串</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_DIRTOSTRING">
+                <Original>Direction to string</Original>
+                <English>Direction to string</English>
+                <Chinesesimp>方向转字符串</Chinesesimp>
+                <Chinese>方向轉字符串</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_STARTLOCATIONS">
+                <Original>Start locations</Original>
+                <English>Start locations</English>
+                <Chinesesimp>起始位置</Chinesesimp>
+                <Chinese>起始位置</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SPAWNGROUP">
+                <Original>Spawn group</Original>
+                <English>Spawn group</English>
+                <Chinesesimp>生成小组</Chinesesimp>
+                <Chinese>生成小組</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_KEYTONAME">
+                <Original>Key to name</Original>
+                <English>Key to name</English>
+                <Chinesesimp>按键转名称</Chinesesimp>
+                <Chinese>按鍵轉名稱</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_MAKEBRIEFING">
+                <Original>Make briefing</Original>
+                <English>Make briefing</English>
+                <Chinesesimp>创建简报</Chinesesimp>
+                <Chinese>創建簡報</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_HANDLEADDACTION">
+                <Original>Handle add action</Original>
+                <English>Handle add action</English>
+                <Chinesesimp>处理添加动作</Chinesesimp>
+                <Chinese>處理添加動作</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints2">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_FORWARD_OBSERVER_INTERFACE">
+                <Original>Forward observer artillery's interface</Original>
+                <English>Forward observer artillery's interface</English>
+                <Chinesesimp>前线观察员炮兵界面</Chinesesimp>
+                <Chinese>前線觀察員炮兵界面</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_OPEN_RTS_INTERFACE">
+                <Original>Open RTS interface</Original>
+                <English>Open RTS interface</English>
+                <Chinesesimp>打开RTS界面</Chinesesimp>
+                <Chinese>打開RTS界面</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CLOSE_CONSOLE">
+                <Original>Close the conosle</Original>
+                <English>Close the conosle</English>
+                <Chinesesimp>关闭控制台</Chinesesimp>
+                <Chinese>關閉控制台</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SHELLS_LEFT">
+                <Original>Shells left: %1</Original>
+                <English>Shells left: %1</English>
+                <Chinesesimp>剩余炮弹: %1</Chinesesimp>
+                <Chinese>剩餘炮彈: %1</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_YOUR_CURRENT_POSITION">
+                <Original>Your current position:</Original>
+                <English>Your current position:</English>
+                <Chinesesimp>你的当前位置:</Chinesesimp>
+                <Chinese>你的當前位置:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_XRAY">
+                <Original>x-ray</Original>
+                <English>x-ray</English>
+                <Chinesesimp>X坐标</Chinesesimp>
+                <Chinese>X座標</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_YANKEE">
+                <Original>yankee</Original>
+                <English>yankee</English>
+                <Chinesesimp>Y坐标</Chinesesimp>
+                <Chinese>Y座標</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DIRECTION">
+                <Original>direction</Original>
+                <English>direction</English>
+                <Chinesesimp>方向</Chinesesimp>
+                <Chinese>方向</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DISTANCE">
+                <Original>distance</Original>
+                <English>distance</English>
+                <Chinesesimp>距离</Chinesesimp>
+                <Chinese>距離</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_HEIGHT">
+                <Original>Height</Original>
+                <English>Height</English>
+                <Chinesesimp>高度</Chinesesimp>
+                <Chinese>高度</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_NR_SHELLS">
+                <Original>Nr. Shells:</Original>
+                <English>Nr. Shells:</English>
+                <Chinesesimp>炮弹数量:</Chinesesimp>
+                <Chinese>炮彈數量:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_FIRE">
+                <Original>Fire:</Original>
+                <English>Fire:</English>
+                <Chinesesimp>开火:</Chinesesimp>
+                <Chinese>開火:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DELAY_IN_SEC">
+                <Original>delay in sec.</Original>
+                <English>delay in sec.</English>
+                <Chinesesimp>延迟(秒)</Chinesesimp>
+                <Chinese>延遲(秒)</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_COPY_POSITION">
+                <Original>Copy Position</Original>
+                <English>Copy Position</English>
+                <Chinesesimp>复制位置</Chinesesimp>
+                <Chinese>複製位置</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_EXECUTE">
+                <Original>Execute</Original>
+                <English>Execute</English>
+                <Chinesesimp>执行</Chinesesimp>
+                <Chinese>執行</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CORR_LEFTRIGHT">
+                <Original>Corr. left-right</Original>
+                <English>Corr. left-right</English>
+                <Chinesesimp>修正 左-右</Chinesesimp>
+                <Chinese>修正 左-右</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CORR_DISTANCE">
+                <Original>Corr. distance</Original>
+                <English>Corr. distance</English>
+                <Chinesesimp>修正距离</Chinesesimp>
+                <Chinese>修正距離</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CLICK_TO_CHANGE">
+                <Original>Click to change</Original>
+                <English>Click to change</English>
+                <Chinesesimp>点击修改</Chinesesimp>
+                <Chinese>點擊修改</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CLICK_TO_DISABLE_CLIENT_SIDE">
+                <Original>Click to disable client side</Original>
+                <English>Click to disable client side</English>
+                <Chinesesimp>点击禁用客户端</Chinesesimp>
+                <Chinese>點擊禁用客戶端</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLAY_TRACK">
+                <Original>Play track</Original>
+                <English>Play track</English>
+                <Chinesesimp>播放曲目</Chinesesimp>
+                <Chinese>播放曲目</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_UNITS_WAIT_NEARBY">
+                <Original>Units will not spawn until players are nearby</Original>
+                <English>Units will not spawn until players are nearby</English>
+                <Chinesesimp>单位将在玩家靠近后才生成</Chinesesimp>
+                <Chinese>單位將在玩家靠近後才生成</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_UNITS_CACHE_AUTO">
+                <Original>Units will spawn and cache automatically</Original>
+                <English>Units will spawn and cache automatically</English>
+                <Chinesesimp>单位将自动生成并缓存</Chinesesimp>
+                <Chinese>單位將自動生成並緩存</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_TIME_LABEL">
+                <Original>Time:</Original>
+                <English>Time:</English>
+                <Chinesesimp>时间:</Chinesesimp>
+                <Chinese>時間:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CAS_AVAILABLE">
+                <Original>CAS Available:</Original>
+                <English>CAS Available:</English>
+                <Chinesesimp>空袭可用:</Chinesesimp>
+                <Chinese>空襲可用:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SAVE_TO_CLIPBOARD">
+                <Original>Save current MCC configuration to ClipBoard</Original>
+                <English>Save current MCC configuration to ClipBoard</English>
+                <Chinesesimp>将当前MCC配置保存到剪贴板</Chinesesimp>
+                <Chinese>將當前MCC配置保存到剪貼板</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PASTE_FROM_CLIPBOARD">
+                <Original>Paste MCC mission configuration code from clipboard (crtl-v) in text box first</Original>
+                <English>Paste MCC mission configuration code from clipboard (crtl-v) in text box first</English>
+                <Chinesesimp>先在文本框中粘贴(crtl-v)MCC任务配置代码</Chinesesimp>
+                <Chinese>先在文本框中粘貼(crtl-v)MCC任務配置代碼</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SAVE_PROFILE_SLOT">
+                <Original>Save a mission to profile name space - choose a slot from the above list first</Original>
+                <English>Save a mission to profile name space - choose a slot from the above list first</English>
+                <Chinesesimp>将任务保存到配置文件 - 请先选择上方列表中的槽位</Chinesesimp>
+                <Chinese>將任務保存到配置文件 - 請先選擇上方列表中的槽位</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_LOAD_PROFILE_SLOT">
+                <Original>Load a mission from profile name space - choose a slot from the above list first</Original>
+                <English>Load a mission from profile name space - choose a slot from the above list first</English>
+                <Chinesesimp>从配置文件加载任务 - 请先选择上方列表中的槽位</Chinesesimp>
+                <Chinese>從配置文件加載任務 - 請先選擇上方列表中的槽位</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SECOND_WIND">
+                <Original>Second wind</Original>
+                <English>Second wind</English>
+                <Chinesesimp>回光返照</Chinesesimp>
+                <Chinese>迴光返照</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_BLOOD_PRESSURE">
+                <Original>Blood Pressure:</Original>
+                <English>Blood Pressure:</English>
+                <Chinesesimp>血压:</Chinesesimp>
+                <Chinese>血壓:</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_HOLD_SPACE_RESPAWN">
+                <Original>Hold Space To Respawn</Original>
+                <English>Hold Space To Respawn</English>
+                <Chinesesimp>按住空格键重生</Chinesesimp>
+                <Chinese>按住空格鍵重生</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_MCC_CONTROLS">
+                <Original>MCC Controls</Original>
+                <English>MCC Controls</English>
+                <Chinesesimp>MCC控制</Chinesesimp>
+                <Chinese>MCC控制</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_ARTILLERY_RULER_TOOLTIP">
+                <Original>Activate the map ruler - left click on the map and drag from one point to another to measure the distance</Original>
+                <English>Activate the map ruler - left click on the map and drag from one point to another to measure distance and direction</English>
+                <Chinesesimp>激活地图标尺 - 在地图上左键点击并从一点拖到另一点以测量距离和方向</Chinesesimp>
+                <Chinese>激活地圖標尺 - 在地圖上左鍵點擊並從一點拖到另一點以測量距離和方向</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_FACTION_AAS_INIT">
+                <Original>Faction AAS already initilized</Original>
+                <English>Faction AAS already initilized</English>
+                <Chinesesimp>AAS阵营已初始化</Chinesesimp>
+                <Chinese>AAS陣營已初始化</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CAMPAIGN_RUNNING">
+                <Original>Campaign already running</Original>
+                <English>Campaign already running</English>
+                <Chinesesimp>战役已在运行</Chinesesimp>
+                <Chinese>戰役已在運行</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_RELEASE">
+                <Original>Release</Original>
+                <English>Release</English>
+                <Chinesesimp>释放</Chinesesimp>
+                <Chinese>釋放</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_GOLF1_HELOCASTING">
+                <Original>Golf 1 in position, clear for helocasting</Original>
+                <English>Golf 1 in position, clear for helocasting</English>
+                <Chinesesimp>Golf 1 就位，可进行直升机机降</Chinesesimp>
+                <Chinese>Golf 1 就位，可進行直升機機降</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_WAIT_SMOKE">
+                <Original>Waiting for smoke signal to land</Original>
+                <English>Waiting for smoke signal to land</English>
+                <Chinesesimp>等待烟雾信号降落</Chinesesimp>
+                <Chinese>等待煙霧信號降落</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_FAST_ROPE_READY">
+                <Original>Golf 1 in position, get ready for fast rope</Original>
+                <English>Golf 1 in position, get ready for fast rope</English>
+                <Chinesesimp>Golf 1 就位，准备速降</Chinesesimp>
+                <Chinese>Golf 1 就位，準備速降</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_WRITE_ERROR">
+                <Original>error writing DB</Original>
+                <English>error writing DB</English>
+                <Chinesesimp>写入数据库错误</Chinesesimp>
+                <Chinese>寫入數據庫錯誤</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_ACTIVATED">
+                <Original>DB Activated</Original>
+                <English>DB Activated</English>
+                <Chinesesimp>数据库已激活</Chinesesimp>
+                <Chinese>數據庫已激活</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_CLEARED">
+                <Original>DB cleared</Original>
+                <English>DB cleared</English>
+                <Chinesesimp>数据库已清除</Chinesesimp>
+                <Chinese>數據庫已清除</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CALL_ARTILLERY">
+                <Original>Call Artillery</Original>
+                <English>Call Artillery</English>
+                <Chinesesimp>呼叫炮兵</Chinesesimp>
+                <Chinese>呼叫炮兵</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CANT_LIFT">
+                <Original>Can't lift this</Original>
+                <English>Can't lift this</English>
+                <Chinesesimp>无法吊起</Chinesesimp>
+                <Chinese>無法吊起</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLAYER_NO_SIDE">
+                <Original>Player is not in any side</Original>
+                <English>Player is not in any side</English>
+                <Chinesesimp>玩家不属于任何阵营</Chinesesimp>
+                <Chinese>玩家不屬於任何陣營</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SPAWN_POINT_NOT_CLEAR">
+                <Original>Can't spawn. Spawn point isn't clear</Original>
+                <English>Can't spawn. Spawn point isn't clear</English>
+                <Chinesesimp>无法生成。生成点不清晰</Chinesesimp>
+                <Chinese>無法生成。生成點不清晰</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLACE_CONSTRUCT">
+                <Original>Place Constuct</Original>
+                <English>Place Constuct</English>
+                <Chinesesimp>放置建筑</Chinesesimp>
+                <Chinese>放置建築</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_ALREADY_INIT">
+                <Original>Faction AAS already initilized</Original>
+                <English>Faction AAS already initilized</English>
+                <Chinesesimp>AAS阵营已初始化</Chinesesimp>
+                <Chinese>AAS陣營已初始化</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints3">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_ARTILLERY_UNREGISTER_INFO">
+                <Original>Always use 'Cancel' to unregister without actually executing a fire mission.
+
+Written by Bon_Inf*.</Original>
+                <English>Always use 'Cancel' to unregister without actually executing a fire mission.
+
+Written by Bon_Inf*.</English>
+                <Chinesesimp>始终使用"取消"来注销而不实际执行火力任务。
+
+由 Bon_Inf* 编写。</Chinesesimp>
+                <Chinese>始終使用"取消"來註銷而不實際執行火力任務。
+
+由 Bon_Inf* 編寫。</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints4">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_RESPAWN">
+                <Original>Respawn</Original>
+                <English>Respawn</English>
+                <Chinesesimp>重生</Chinesesimp>
+                <Chinese>重生</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_FACTION_AAS_INITIALIZED">
+                <Original>Faction AAS already initilized</Original>
+                <English>Faction AAS already initilized</English>
+                <Chinesesimp>AAS阵营已初始化</Chinesesimp>
+                <Chinese>AAS陣營已初始化</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CAMPAIGN_ALREADY_RUNNING">
+                <Original>Campaign already running</Original>
+                <English>Campaign already running</English>
+                <Chinesesimp>战役已在运行</Chinesesimp>
+                <Chinese>戰役已在運行</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_RELEASE">
+                <Original>Release</Original>
+                <English>Release</English>
+                <Chinesesimp>释放</Chinesesimp>
+                <Chinese>釋放</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_GOLF1_HELOCASTING">
+                <Original>Golf 1 in position, clear for helocasting</Original>
+                <English>Golf 1 in position, clear for helocasting</English>
+                <Chinesesimp>Golf 1 就位，可进行直升机机降</Chinesesimp>
+                <Chinese>Golf 1 就位，可進行直升機機降</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_WAITING_SMOKE">
+                <Original>Waiting for smoke signal to land</Original>
+                <English>Waiting for smoke signal to land</English>
+                <Chinesesimp>等待烟雾信号降落</Chinesesimp>
+                <Chinese>等待煙霧信號降落</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_GOLF1_FASTROPE">
+                <Original>Golf 1 in position, get ready for fast rope</Original>
+                <English>Golf 1 in position, get ready for fast rope</English>
+                <Chinesesimp>Golf 1 就位，准备速降</Chinesesimp>
+                <Chinese>Golf 1 就位，準備速降</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_WRITE_ERROR">
+                <Original>error writing DB</Original>
+                <English>error writing DB</English>
+                <Chinesesimp>写入数据库错误</Chinesesimp>
+                <Chinese>寫入數據庫錯誤</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_ACTIVATED">
+                <Original>DB Activated</Original>
+                <English>DB Activated</English>
+                <Chinesesimp>数据库已激活</Chinesesimp>
+                <Chinese>數據庫已激活</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DB_CLEARED">
+                <Original>DB cleared</Original>
+                <English>DB cleared</English>
+                <Chinesesimp>数据库已清除</Chinesesimp>
+                <Chinese>數據庫已清除</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CALL_ARTILLERY">
+                <Original>Call Artillery</Original>
+                <English>Call Artillery</English>
+                <Chinesesimp>呼叫炮兵</Chinesesimp>
+                <Chinese>呼叫炮兵</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CANT_LIFT">
+                <Original>Can't lift this</Original>
+                <English>Can't lift this</English>
+                <Chinesesimp>无法吊起</Chinesesimp>
+                <Chinese>無法吊起</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLAYER_NO_SIDE">
+                <Original>Player is not in any side</Original>
+                <English>Player is not in any side</English>
+                <Chinesesimp>玩家不属于任何阵营</Chinesesimp>
+                <Chinese>玩家不屬於任何陣營</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SPAWN_POINT_NOT_CLEAR">
+                <Original>Can't spawn. Spawn point isn't clear</Original>
+                <English>Can't spawn. Spawn point isn't clear</English>
+                <Chinesesimp>无法生成。生成点不清晰</Chinesesimp>
+                <Chinese>無法生成。生成點不清晰</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLACE_CONSTRUCT">
+                <Original>Place Constuct</Original>
+                <English>Place Constuct</English>
+                <Chinesesimp>放置建筑</Chinesesimp>
+                <Chinese>放置建築</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints5">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CREATE_FOB">
+                <Original>Create FOB</Original>
+                <English>Create FOB</English>
+                <Chinesesimp>创建前沿作战基地</Chinesesimp>
+                <Chinese>創建前沿作戰基地</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_DETONATE_CHARGE">
+                <Original>Detonate Charge</Original>
+                <English>Detonate Charge</English>
+                <Chinesesimp>引爆炸药</Chinesesimp>
+                <Chinese>引爆炸藥</Chinese>
+            </Key>
+        </Container>
+    </Package>
 </Project>

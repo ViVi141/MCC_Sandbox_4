@@ -223,7 +223,7 @@ class mcc_consoleF6: MCC_RscButton
 			{
 				idc = -1;
 
-				text = "CAS Available:";
+				text = "$STR_MCC_HINT_CAS_AVAILABLE";
 				x = 0.00515602 * safezoneW;
 				y = 0.011 * safezoneH;
 				w = 0.113437 * safezoneW;
@@ -761,7 +761,7 @@ class mcc_consoleF6: MCC_RscButton
 	};
 	class MCC_ConsoleWPAdd: MCC_RscButton {
 		idc = MCC_CONSOLEWPADD;
-		text = "ADD";
+		text = "$STR_MCC_ADD";
 		x = 0.1 * safezoneW + safezoneX;
 		y = 0.1 * safezoneH + safezoneY;
 		w = 0.1 * safezoneW;

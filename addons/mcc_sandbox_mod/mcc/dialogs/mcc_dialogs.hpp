@@ -1329,7 +1329,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsOpenMCCButton: MCC_RscButton
 		{
 			idc = 8415;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this, 0] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1341,7 +1341,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsOpenConsoleButton: MCC_RscButton
 		{
 			idc = 8416;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,1] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1353,7 +1353,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsT2TButton: MCC_RscButton
 		{
 			idc = 8417;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,2] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1365,7 +1365,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsGroupsButton: MCC_RscButton
 		{
 			idc = 8418;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,3] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1378,7 +1378,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsMCCinteractionButton: MCC_RscButton
 		{
 			idc = 8419;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,4] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1390,7 +1390,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindssSQLPDAButton: MCC_RscButton
 		{
 			idc = 8420;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,5] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1402,7 +1402,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_keyBindsMCCinteractionSelfButton: MCC_RscButton
 		{
 			idc = 8421;
-			tooltip = "Click to change";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_CHANGE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			onMouseButtonUp =  __EVAL("[_this,6] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");
 
@@ -1414,7 +1414,7 @@ class MCC_keyBindsGroup: MCC_RscControlsGroup
 		class MCC_coverSystemClientButton: MCC_RscButton
 		{
 			idc = 8499;
-			tooltip = "Click to disable client side";
+			tooltip = "$STR_MCC_HINT_CLICK_TO_DISABLE_CLIENT_SIDE";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			text = "$STR_MCC_DISABLED";
 			onMouseButtonUp =  __EVAL("[_this,7] execVM '"+MCCPATH+"mcc\general_scripts\mission_settings\keyBinds.sqf'");

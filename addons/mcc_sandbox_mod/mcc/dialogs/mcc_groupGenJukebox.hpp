@@ -189,7 +189,7 @@ class MCC_jukeboxDialogControls: MCC_RscControlsGroup
 			y = 0.109957 * safezoneH;
 			w = 0.0196875 * safezoneW;
 			h = 0.0280063 * safezoneH;
-			tooltip = "Play track"; //--- ToDo: Localize;
+			tooltip = "$STR_MCC_HINT_PLAY_TRACK"; //--- ToDo: Localize;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		};
 		class MCC_JukeboxStop: MCC_RscButton

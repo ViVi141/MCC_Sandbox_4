@@ -58,7 +58,7 @@ if (!_dbExist) then {
 };
 
 //Still no DB exit
-if (!_dbExist) exitWith {systemChat "error writing DB"; false};
+if (!_dbExist) exitWith {systemChat (localize "STR_MCC_HINT_DB_WRITE_ERROR"); false};
 
 //Read/write
 [_read, [_section, _var, _value]] call (missionNamespace getVariable [_dbName,{}]);

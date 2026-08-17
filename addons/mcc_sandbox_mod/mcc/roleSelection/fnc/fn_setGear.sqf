@@ -44,7 +44,7 @@ if (toLower (_unit getvariable ["CP_role","n/a"]) != toLower _role) then {CP_pla
 
 _side = tolower str side _unit;
 
-if !(_side in ["east","west","guer"]) exitWith {systemChat "Player is not in any side"};
+if !(_side in ["east","west","guer"]) exitWith {systemChat (localize "STR_MCC_HINT_PLAYER_NO_SIDE")};
 
 //get correct weapons Arrays
 _cfg = if (isClass (missionconfigFile >> "MCC_loadouts" >> toLower _role)) then {(missionconfigFile >> "MCC_loadouts" >> toLower _role)} else {(configFile >> "MCC_loadouts" >> toLower _role)};

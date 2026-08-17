@@ -31,4 +31,4 @@ if (!(isNull _object)) then {
 
 player setVariable ["mcc_draggedObject", _object];
 
-player setVariable ["mcc_draggedObjectID", player addAction ["<t color='#FF0000'>Release</t>", {_this call MCC_fnc_releaseObject},[],6,true,true,"","(vehicle _target == vehicle _this) && !isNull(_this getVariable ['mcc_draggedObject', objNull])"]];
+player setVariable ["mcc_draggedObjectID", player addAction ["<t color='#FF0000'>" + (localize "STR_MCC_HINT_RELEASE") + "</t>", {_this call MCC_fnc_releaseObject},[],6,true,true,"","(vehicle _target == vehicle _this) && !isNull(_this getVariable ['mcc_draggedObject', objNull])"]];

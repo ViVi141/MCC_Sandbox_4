@@ -23,7 +23,7 @@ class mcc_uncMain
 		class respawn: MCC_RscButtonMenu
 		{
 			idc = 0;
-			text = "Respawn";
+			text = "$STR_MCC_HINT_RESPAWN";
 			x = 0.29375 * safezoneW + safezoneX;
 			y = 0.775 * safezoneH + safezoneY;
 			w = 0.12375 * safezoneW;
@@ -32,7 +32,7 @@ class mcc_uncMain
 		class secondWind: MCC_RscButtonMenu
 		{
 			idc = 1;
-			text = "Second wind";
+			text = "$STR_MCC_HINT_SECOND_WIND";
 			x = 0.5825 * safezoneW + safezoneX;
 			y = 0.775 * safezoneH + safezoneY;
 			w = 0.12375 * safezoneW;
@@ -42,7 +42,7 @@ class mcc_uncMain
 		class info: MCC_RscText
 		{
 			idc = 2;
-			text = "Blood Pressure:";
+			text = "$STR_MCC_HINT_BLOOD_PRESSURE";
 			x = 0.48 * safezoneW + safezoneX;
 			y = 0.11 * safezoneH + safezoneY;
 			w = 0.07 * safezoneW;
@@ -62,7 +62,7 @@ class mcc_uncMain
 		class RespawnText: MCC_RscText
 		{
 			idc = -1;
-			text = "Hold Space To Respawn";
+			text = "$STR_MCC_HINT_HOLD_SPACE_RESPAWN";
 			x = 0.46 * safezoneW + safezoneX;
 			y = 0.76* safezoneH + safezoneY;
 			w = 0.15 * safezoneW;

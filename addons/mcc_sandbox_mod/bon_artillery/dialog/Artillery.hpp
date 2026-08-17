@@ -79,7 +79,7 @@ class ArtilleryDialog
 			h = 0.0329871 * safezoneH;
 			text = "F1";
 			onButtonClick = "closedialog 0;createDialog 'MCC_playerConsole';";
-			tooltip = "Main Menu";
+			tooltip = "$STR_MCC_CONSOLE_MAIN_MENU";
 		};
 		class mcc_consoleF2: MCC_RscButton
 		{
@@ -90,7 +90,7 @@ class ArtilleryDialog
 			h = 0.0329871 * safezoneH;
 			text = "F2";
 			onButtonClick = "closedialog 0;createDialog 'MCC_playerConsole2';";
-			tooltip = "UAV Control";
+			tooltip = "$STR_MCC_CONSOLE_UAV_CONTROL";
 		};
 		class mcc_consoleF3: MCC_RscButton
 		{
@@ -101,7 +101,7 @@ class ArtilleryDialog
 			h = 0.0329871 * safezoneH;
 			text = "F3";
 			onButtonClick = "closedialog 0;createDialog 'MCC_playerConsole3';";
-			tooltip = "AC-130 Control";
+			tooltip = "$STR_MCC_CONSOLE_AC130_CONTROL";
 		};
 		class mcc_consoleF4: MCC_RscButton
 		{
@@ -111,7 +111,7 @@ class ArtilleryDialog
 			w = 0.0229167 * safezoneW;
 			h = 0.0329871 * safezoneH;
 			text = "F4";
-			tooltip = "Forward observer artillery's interface";
+			tooltip = "$STR_MCC_HINT_FORWARD_OBSERVER_INTERFACE";
 			onButtonClick = __EVAL("nul=[0,0,0,[1]] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleOpenMenu.sqf'");
 		};
 		class mcc_consoleF5: MCC_RscButton
@@ -122,7 +122,7 @@ class ArtilleryDialog
 			w = 0.0229167 * safezoneW;
 			h = 0.0329871 * safezoneH;
 			text = "F5";
-			tooltip = "Open RTS interface";
+			tooltip = "$STR_MCC_HINT_OPEN_RTS_INTERFACE";
 			onButtonClick ="while {dialog} do {closeDialog 0}; createDialog 'MCC_LOGISTICS_BASE_BUILD'";
 		};
 		class mcc_consoleF6: MCC_RscButton
@@ -133,7 +133,7 @@ class ArtilleryDialog
 			w = 0.0229167 * safezoneW;
 			h = 0.0329871 * safezoneH;
 			text = "F6";
-			tooltip = "Fleet Management";
+			tooltip = "$STR_MCC_CONSOLE_FLEET_MANAGEMENT";
 			onButtonClick ="while {dialog} do {closeDialog 0}; [0,0,0] spawn MCC_fnc_LHDspawnMenuInit";
 		};
 		class MCC_ConsoleExitButton: MCC_RscButton {
@@ -150,7 +150,7 @@ class ArtilleryDialog
 		colorBackgroundActive[] = {0,0,0,0};
 		colorDisabled[] = {0,0,0,0};
 		colorBackgroundDisabled[] = {0,0,0,0};
-		tooltip = "Close the conosle";
+		tooltip = "$STR_MCC_HINT_CLOSE_CONSOLE";
 		onButtonClick = "closedialog 0;";
 		};
 		class HW_ArtiTextField : MCC_RscText {
@@ -174,12 +174,12 @@ class ArtilleryDialog
 			w = 0.131771 * safezoneW;
 			h = 0.21395 * safezoneH;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Always use 'Cancel' to unregister without actually executing a fire mission.\n\n\n\n\n\n\n\n\n\n\n\n\n\nWritten by Bon_Inf*.";
+			text = "$STR_MCC_HINT_ARTILLERY_UNREGISTER_INFO";
 		};
 		class HW_ArtiShellsLeft : HW_ArtiTextField
 		{
 			idc = BON_ARTY_SHELLSLEFT;
-			text = "Shells left: 0815";
+			text = "$STR_MCC_HINT_SHELLS_LEFT";
 		};
 		class HW_Articoord : HW_ArtiTextField
 		{
@@ -187,7 +187,7 @@ class ArtilleryDialog
 			y = 0.28 * safezoneH + safezoneY;
 			w = 0.1375 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "Your current position:";
+			text = "$STR_MCC_HINT_YOUR_CURRENT_POSITION";
 		};
 		class HW_ArtiXcoord : HW_ArtiTextField
 		{
@@ -281,7 +281,7 @@ class ArtilleryDialog
 			y = 0.247 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "x-ray";
+			text = "$STR_MCC_HINT_XRAY";
 		};
 		class HW_ArtiYCoordUnitDescr : HW_ArtiXCoordUnitDescr
 		{
@@ -289,7 +289,7 @@ class ArtilleryDialog
 			y = 0.28 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "yankee";
+			text = "$STR_MCC_HINT_YANKEE";
 		};
 		class HW_ArtiDirDescr : HW_ArtiXCoordUnitDescr
 		{
@@ -297,7 +297,7 @@ class ArtilleryDialog
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "direction";
+			text = "$STR_MCC_HINT_DIRECTION";
 		};
 		class HW_ArtiDistDescr : HW_ArtiXCoordUnitDescr
 		{
@@ -305,7 +305,7 @@ class ArtilleryDialog
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "distance";
+			text = "$STR_MCC_HINT_DISTANCE";
 		};
 
 		class HW_ArtiHeightSlider : MCC_RscSlider
@@ -329,7 +329,7 @@ class ArtilleryDialog
 			w = 0.01375 * safezoneW;
 			h = 0.099 * safezoneH;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Height";
+			text = "$STR_MCC_HINT_HEIGHT";
 		};
 		class HW_ArtiSliderDescr : MCC_RscText
 		{
@@ -395,7 +395,7 @@ class ArtilleryDialog
 			w = 0.0572917 * safezoneW;
 			h = 0.022 * safezoneH;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Type:";
+			text = "$STR_MCC_TYPE";
 		};
 		class HW_ArtiNrShellsTitle : HW_ArtiTypeTitle
 		{
@@ -403,7 +403,7 @@ class ArtilleryDialog
 			y = 0.478 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "Nr. Shells:";
+			text = "$STR_MCC_HINT_NR_SHELLS";
 		};
 		class HW_ArtiSpreadTitle : HW_ArtiTypeTitle
 		{
@@ -411,7 +411,7 @@ class ArtilleryDialog
 			y = 0.511 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "Spread:";
+			text = "$STR_MCC_GROUPGEN_ARTILLERY_SPREAD";
 		};
 		class HW_ArtiMissionTitle : HW_ArtiTypeTitle
 		{
@@ -419,7 +419,7 @@ class ArtilleryDialog
 			y = 0.544 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "Fire:";
+			text = "$STR_MCC_HINT_FIRE";
 		};
 
 
@@ -430,7 +430,7 @@ class ArtilleryDialog
 			y = 0.445 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "delay in sec.";
+			text = "$STR_MCC_HINT_DELAY_IN_SEC";
 		};
 		class HW_ArtiDelayunit : HW_ArtiXCoordunit
 		{
@@ -450,7 +450,7 @@ class ArtilleryDialog
 			h = 0.022 * safezoneH;
 			size = 0.02821;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Confirm";
+			text = "$STR_MCC_CONFIRM";
 			onButtonClick = __EVAL("[] execVM '"+MCCPATH+"bon_artillery\bon_arti_setup.sqf'");
 		};
 		class HW_ArtiClearButton : HW_ArtiConfirmButton
@@ -459,7 +459,7 @@ class ArtilleryDialog
 			y = 0.555 * safezoneH + safezoneY;
 			w = 0.0630208 * safezoneW;
 			h = 0.022 * safezoneH;
-			text = "Reset";
+			text = "$STR_MCC_RESET";
 			onButtonClick = __EVAL("[] execVM '"+MCCPATH+"bon_artillery\bon_arti_clearcannons.sqf'");
 		};
 		class HW_artiCoordApplyButton : MCC_RscButton
@@ -469,7 +469,7 @@ class ArtilleryDialog
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
 			h = 0.066 * safezoneH;
-			text = "Copy Position";
+			text = "$STR_MCC_HINT_COPY_POSITION";
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
 			onButtonClick = __EVAL("[] execVM '"+MCCPATH+"bon_artillery\dialog\apply_pos.sqf'");
 		};
@@ -482,7 +482,7 @@ class ArtilleryDialog
 			y = 0.742 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.055 * safezoneH;
-			text = "Execute";
+			text = "$STR_MCC_HINT_EXECUTE";
 			onButtonClick = __EVAL("player execVM '"+MCCPATH+"bon_artillery\bon_arti_request.sqf'");
 		};
 		class HW_CancelButton : HW_RequestButton
@@ -492,7 +492,7 @@ class ArtilleryDialog
 			y = 0.742 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.055 * safezoneH;
-			text = "Cancel";
+			text = "$STR_MCC_DIALOGS_CANCEL";
 			onButtonClick = __EVAL("player execVM '"+MCCPATH+"bon_artillery\bon_arti_cancel.sqf'");
 		};
 
@@ -504,7 +504,7 @@ class ArtilleryDialog
 			w = 0.0916667 * safezoneW;
 			h = 0.0275 * safezoneH;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Corr. left-right";
+			text = "$STR_MCC_HINT_CORR_LEFTRIGHT";
 		};
 		class HW_ArtiRightCorrection : MCC_RscButton
 		{
@@ -543,7 +543,7 @@ class ArtilleryDialog
 			w = 0.0916667 * safezoneW;
 			h = 0.0275 * safezoneH;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-			text = "Corr. distance";
+			text = "$STR_MCC_HINT_CORR_DISTANCE";
 		};
 		class HW_ArtiUpCorrection : HW_ArtiRightCorrection
 		{
@@ -601,8 +601,8 @@ class ArtilleryDialog
 		class MCC_ConsoleMapRulerButton: MCC_RscButton
 		{
 			idc = MCC_ConsoleMapRulerButton;
-			text = "Ruler";
-			tooltip = "Activate the map ruler - left click on the map and drag from one point to another to measure distance and direction";
+			text = "$STR_MCC_CONSOLE_RULER";
+			tooltip = "$STR_MCC_HINT_ARTILLERY_RULER_TOOLTIP";
 			x = 0.626042 * safezoneW + safezoneX;
 			y = 0.764 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -613,7 +613,7 @@ class ArtilleryDialog
 		class MCC_ConsoleMapRulerDir: MCC_RscText
 		{
 			idc = MCC_ConsoleMapRulerDir;
-			text = "Direction:";
+			text = "$STR_MCC_CONSOLE_DIRECTION";
 			x = 0.517188 * safezoneW + safezoneX;
 			y = 0.764 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
@@ -622,7 +622,7 @@ class ArtilleryDialog
 		class MCC_ConsoleMapRulerDis: MCC_RscText
 		{
 			idc = MCC_ConsoleMapRulerDis;
-			text = "Distance:";
+			text = "$STR_MCC_CONSOLE_DISTANCE_LABEL";
 			x = 0.689063 * safezoneW + safezoneX;
 			y = 0.764 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;

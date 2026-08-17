@@ -84,11 +84,11 @@ switch (_action) do
 
         //can we spawn?
         _check = _spawnPadPos nearObjects ["LandVehicle", 5];
-        if (count _check > 0) exitWith {systemChat "Can't spawn. Spawn point isn't clear"};
+        if (count _check > 0) exitWith {systemChat (localize "STR_MCC_HINT_SPAWN_POINT_NOT_CLEAR")};
         _check = _spawnPadPos nearObjects ["Ship", 5];
-        if (count _check > 0) exitWith {systemChat "Can't spawn. Spawn point isn't clear"};
+        if (count _check > 0) exitWith {systemChat (localize "STR_MCC_HINT_SPAWN_POINT_NOT_CLEAR")};
         _check = _spawnPadPos nearObjects ["Air", 5];
-        if (count _check > 0) exitWith {systemChat "Can't spawn. Spawn point isn't clear"};
+        if (count _check > 0) exitWith {systemChat (localize "STR_MCC_HINT_SPAWN_POINT_NOT_CLEAR")};
 
         //Reduce resources
         if (_commander) then {
