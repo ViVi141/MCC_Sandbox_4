@@ -42,29 +42,20 @@ switch (_type) do {
 		};
 
 		if (_jukeBoxMusic) then {
-if (!isNull _track) then {
-[2, compile format ["playMusic '%1'", _track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-};
-};
+			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 		};
 	};
 
 	//Play
     case 1:	{
 		if (_jukeBoxMusic) then	{
-if (!isNull _track) then {
-[2, compile format ["playMusic '%1'", _track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-};
-};
+			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 		} else {
 			if (isClass(configFile >> "CfgSounds" >> _track) || isClass(missionconfigFile >> "CfgSounds" >> _track)) then {
-if (!isNull _track) then {
-[2, compile format ["playSound '%1'", _track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-};
-};
+				[[2,compile format ["playSound '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 			};
-		
-	
+		};
+	};
 
 	//Forward
    	case 2:	{
@@ -75,13 +66,13 @@ if (!isNull _track) then {
 		};
 
 		if (_jukeBoxMusic) then {
-			[2, compile format ["playMusic '%1'", _track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
+			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 		};
 	};
 
 	//Stop
    	case 3:	{
-		[2, compile "playMusic ''"] remoteExec ["MCC_fnc_globalExecute", 0, false];
+		[[2,compile "playMusic ''"], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 	};
 
 	//Volume slider
@@ -108,10 +99,7 @@ if (!isNull _track) then {
 						  _cond='%6';
 						  _track='%7';
 						  _jukeBoxMusic=%8;
-if (!(isNull _zone)) then {
-[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond, _track, _jukeBoxMusic] remoteExec ["MCC_fnc_MusicTrigger", 0, false];
-};
-};
+						  [[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ],'MCC_fnc_MusicTrigger',true,false] spawn BIS_fnc_MP;
 						   sleep 1;
 						  "
 						  ,_zone
@@ -133,11 +121,8 @@ if (!(isNull _zone)) then {
 		_markerName setmarkertextlocal _markerName;
 
 		//execute on all clients
-if (!(isNull _zone)) then {
-[[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ],"MCC_fnc_MusicTrigger",0,false] remoteExec;
-};
-};
-	
+		[[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ],'MCC_fnc_MusicTrigger',true,false] spawn BIS_fnc_MP;
+	};
 
 	//Switch to music tracks
 	case 6:	 {
@@ -150,3 +135,4 @@ if (!(isNull _zone)) then {
 		missionNamespace setvariable ["MCC_jukeboxMusic",false];
 		_null = [13] execVM format ["%1mcc\general_scripts\groupGen\controlsHandle.sqf",MCC_path];
 	};
+};

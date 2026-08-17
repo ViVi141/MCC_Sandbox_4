@@ -163,10 +163,7 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 		waitUntil {!isNull (missionNamespace getVariable ["MCC_fakeUAV",objNull]) && !isNull (missionNamespace getVariable ["MCC_fakeUAVCenter",objNull])};
 
 		playSound "missileLunch";
-if (!(isNull _missile)) then {
-[[netid _missile,_missile], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+		[[[netid _missile,_missile], "missileLunch"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		[(missionNamespace getVariable ["MCC_fakeUAVCenter",objNull]), [ getpos _missile, 100, random 360] call BIS_fnc_relPos, _missile,80,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
 	};
 
@@ -181,10 +178,10 @@ if (!(isNull _missile)) then {
 			missionNamespace setVariable ["MCC_ACConsoleUp",objNull];
 			publicVariable "MCC_ACConsoleUp";
 
-			[2,compile format ['["MCCNotifications",["AC-130 Left the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
+			[[2,compile format ['["MCCNotifications",["AC-130 Left the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]], "MCC_fnc_globalExecute", playerSide, false] spawn BIS_fnc_MP;
 		} else {
 
-			[2,compile format ['["MCCNotifications",["AC-130 Entered the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
+			[[2,compile format ['["MCCNotifications",["AC-130 Entered the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]], "MCC_fnc_globalExecute", playerSide, false] spawn BIS_fnc_MP;
 
 			_pos set [2,(_pos select 2)+400];
 
@@ -276,12 +273,9 @@ if (!(isNull _missile)) then {
 		};
 
 		_dir = [_spawn, _pos] call BIS_fnc_dirTo;
-if (!(isNull _planeType)) then {
-[_planeType, _casType, _dir, _pos] remoteExec ["MCC_fnc_cas", 2];
-};
-};
+		[_planeType, _casType, _dir, _pos] remoteExec ["MCC_fnc_cas",2];
 
-	else {
+	} else {
 		private ["_dir","_dis","_alt","_pitch","_speed","_duration","_planePos","_planeSide","_planeArray","_vectorDir","_velocity","_vectorUp","_planeCfg","_time"];
 		_planeCfg = configfile >> "cfgvehicles" >> _planeType;
 		_pos set [2,(_pos select 2) + getterrainheightasl _pos];
@@ -398,10 +392,7 @@ if (!(isNull _planeType)) then {
 						_velocity set [2,-30];
 						_bomb setVelocity _velocity;
 
-if (!(isNull _bomb)) then {
-[[netid _bomb,_bomb], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+						[[[netid _bomb,_bomb], format["bon_Shell_In_v0%1",[1,2,3,4,5,6,7] select round random 6]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 						sleep 0.5;
 					};
 			};
@@ -415,10 +406,7 @@ if (!(isNull _bomb)) then {
 				for [{_x=1},{_x<=_ammount*2},{_x=_x+1}] do
 					{
 						_nul=[[(_pos select 0)+50 - random 100,(_pos select 1)+50 - random 100,_pos select 2], getpos _plane1,"M_AT",200,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
-if (!(isNull _plane1)) then {
-[[netid _plane1,_plane1], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D", _plane1, true, false];
-};
-};
+						[[[netid _plane1,_plane1], "missileLunch"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 						sleep 0.2;
 					};
 
@@ -608,7 +596,7 @@ if (!(isNull _plane1)) then {
 				_nukeType = "ACE_B61_50";
 				[_plane1, _pos, _nukeType] spawn MCC_NUKE_AIR;
 			}
-		
+		};
 
 		_plane1 enableAI "move";
 		_plane1 setVariable ["MCC_casDone",true];
@@ -637,6 +625,6 @@ if (!(isNull _plane1)) then {
 
 		[_pilotGroup1, _pilot1, _plane1, _away] call MCC_fnc_deletePlane;
 		//[_pilotGroup2, _pilot2, _plane2, _away] call MCC_fnc_deletePlane;
-	
-
+	};
+};
 

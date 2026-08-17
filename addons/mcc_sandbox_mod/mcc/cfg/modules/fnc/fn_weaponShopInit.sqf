@@ -61,13 +61,10 @@ if (_module isKindOf "MCC_Module_createShop") then {
 				 100,
 				 false,
 				 false
-] remoteExec ["BIS_fnc_holdActionAdd", 0, _object];
-if (!(isNull _object)) then {
-};
-};
+			] remoteExec ["BIS_fnc_holdActionAdd", 0, _object];
 		} forEach _objects;
 	};
-else {
+} else {
 
 	//Not curator exit
 	if (!(local _module) || isnull curatorcamera) exitWith {};
@@ -93,10 +90,7 @@ else {
 
 	_object enableSimulation false;
 	_object allowDamage false;
-if (!(isNull _object)) then {
-[_object, true] remoteExec ["hideObjectGlobal", 2];
-};
-};
+	[_object, true] remoteExec ["hideObjectGlobal",2];
 
 	_box = (typeOf _object) createVehicle _pos;
 	_box setPos _pos;
@@ -129,10 +123,7 @@ if (!(isNull _object)) then {
 		 100,
 		 false,
 		 false
-] remoteExec ["BIS_fnc_holdActionAdd", 0, _box];
-if (!(isNull _box)) then {
+	] remoteExec ["BIS_fnc_holdActionAdd", 0, _box];
 };
-
-
 
 deleteVehicle _module;

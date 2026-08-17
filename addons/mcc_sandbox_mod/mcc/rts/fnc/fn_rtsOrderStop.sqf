@@ -10,10 +10,7 @@ if (count MCC_ConsoleGroupSelected <=0) exitWith {};
 {
 	_group = _x;
 	if (typeName _group == typeName grpNull) then {
-if (!(isNull _group)) then {
-[1,getpos leader _group,[0,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_group],true] remoteExec ["MCC_fnc_manageWp", leader _group, false];
-};
-};
+		[1,getpos leader _group,[0,"YELLOW","NO CHANGE","FULL","AWARE","true","",0],[_group],true] remoteExec ["MCC_fnc_manageWp", leader _group, false];
 	};
-forEach MCC_ConsoleGroupSelected;
+} forEach MCC_ConsoleGroupSelected;
 

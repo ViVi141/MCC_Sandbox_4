@@ -37,9 +37,7 @@ removeallweapons _sb;
 
 _dummy = MCC_dummy createVehicle (getpos _sb);
 _init = '_this hideobject true;';
-if (!(isNull _dummy)) then {
-[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
-};
+[[[netid _dummy,_dummy], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
 
 _dummy attachto [_sb,[0,0,0]];
 
@@ -103,10 +101,7 @@ while {alive _sb && _check} do {
 								_sb domove (getpos _enemy);
 								if (_sound == 1) then
 								{
-if (!(isNull _sb)) then {
-[[netid _sb,_sb], format ["suicide%1", (floor random 4)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+									[[[netid _sb,_sb], format ["suicide%1", (floor random 4)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 									_sound = 0
 								};
 								if ((_sb distance _enemy) <=15) exitwith { _check= false;};
@@ -117,7 +112,7 @@ if (!(isNull _sb)) then {
 			} foreach _closeunit;
 		};
 	};
-
+};
 
 switch (_IEDExplosionType) do
 		{

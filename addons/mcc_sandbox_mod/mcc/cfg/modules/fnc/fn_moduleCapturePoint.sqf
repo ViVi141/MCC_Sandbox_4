@@ -103,10 +103,7 @@ switch _mode do {
 		//Enable HUD
 		if (_enableHUD) then {
 			{
-if (!(isNull _x)) then {
-[[_logic,[],true,"initHUDLocal",false],"MCC_fnc_moduleCapturePoint",_x,true] remoteExec ["MCC_fnc_moduleCapturePoint", _x, true];
-};
-};
+				[[_logic,[],true,"initHUDLocal",false],"MCC_fnc_moduleCapturePoint",_x,true] call bis_fnc_mp;
 			} forEach _sides;
 		};
 
@@ -272,10 +269,7 @@ if (!(isNull _x)) then {
 
 					if (isPlayer _x) then {
 						if !(_x in _playersInList) then {_playersInList pushBack _x};
-if (!(isNull _x)) then {
-[[_logic,[],true,"player",true],"MCC_fnc_moduleCapturePoint",_x] remoteExec ["MCC_fnc_moduleCapturePoint", _x, true];
-};
-};
+						[[_logic,[],true,"player",true],"MCC_fnc_moduleCapturePoint",_x] call bis_fnc_mp;
 					};
 				} foreach list _x;
 
@@ -289,10 +283,7 @@ if (!(isNull _x)) then {
 				if !(isNil "_player") then {
 					if ({_player in list _x} count _areas <= 0) then {
 						_playersInList set [_i,-1];
-if (!(isNull _player)) then {
-[[_logic,[],true,"player",false],"MCC_fnc_moduleCapturePoint",_player] remoteExec ["MCC_fnc_moduleCapturePoint", _player, true];
-};
-};
+						[[_logic,[],true,"player",false],"MCC_fnc_moduleCapturePoint",_player] call bis_fnc_mp;
 					};
 				};
 			};
@@ -397,15 +388,10 @@ if (!(isNull _player)) then {
 				//--- Show notification
 				_ownerName = _owner call bis_fnc_sidename;
 				if (_owner != sideunknown) then {
-if (!(isNull _ownerOld)) then {
-    [format ['sectorCaptured%1',_owner],[_name,_ownerName,_iconTexture,_designation]] remoteExec ['BIS_fnc_showNotification', _sides - [_ownerOld]];
-};
-if (!(isNull _ownerOld)) then {
-[format ["sectorLost%1",_owner],[_name,_ownerName,_iconTexture,_designation]] remoteExec ["BIS_fnc_showNotification", _ownerOld];
-};
-};
+					[[format ["sectorCaptured%1",_owner],[_name,_ownerName,_iconTexture,_designation]],"BIS_fnc_showNotification",_sides - [_ownerOld]] call bis_fnc_mp;
+					[[format ["sectorLost%1",_owner],[_name,_ownerName,_iconTexture,_designation]],"BIS_fnc_showNotification",_ownerOld] call bis_fnc_mp;
 				};
-			
+			};
 
 			_ownerOld = _owner;
 
@@ -429,18 +415,15 @@ if (!(isNull _ownerOld)) then {
 
 			_step =_step + 1;
 			sleep 1;
-		
+		};
 
 		//Disable Progress Bar
 		for "_i" from 0 to (count _playersInList)-1 do {
 			private ["_player"];
 			_player = _playersInList select _i;
-if (!(isNull _player)) then {
-[[_logic,[],true,"player",false],"MCC_fnc_moduleCapturePoint",_player] remoteExec ["MCC_fnc_moduleCapturePoint", _player, true];
-};
-};
+			[[_logic,[],true,"player",false],"MCC_fnc_moduleCapturePoint",_player] call bis_fnc_mp;
 			sleep 0.01;
-		
+		};
 
 		//--- Sector finalized
 		if (isnull _logic) then {
@@ -472,7 +455,7 @@ if (!(isNull _player)) then {
 			_x settriggerstatements ["true","",""];
 			_x settriggertype "none";
 		} foreach _areas;
-	
+	};
 
 	case "player": {
 		private ["_progress","_logic"];
@@ -591,3 +574,4 @@ if (!(isNull _player)) then {
 			sleep 10;
 		};
 	};
+};

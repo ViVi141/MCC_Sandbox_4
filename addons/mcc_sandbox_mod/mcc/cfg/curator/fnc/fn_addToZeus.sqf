@@ -33,13 +33,13 @@ private _action = (_resualt select 1);
 		//Add
 		case 0:
 		{
-if (!(isNull _x)) then {[_x,[[_unit],true]] remoteExec ["addCuratorEditableObjects",2]};
+			{[_x,[[_unit],true]] remoteExec ["addCuratorEditableObjects",2]} foreach allCurators;
 		};
 
 		//Remove
 		case 1:
 		{
-{if (!(isNull _x)) then {[_x,[[_unit],true]] remoteExec ["removeCuratorEditableObjects",2];};} foreach allCurators;
+			{[_x,[[_unit],true]] remoteExec ["removeCuratorEditableObjects",2]} foreach allCurators;
 		};
 	};
 } forEach (nearestObjects [_pos, ["All"], (_resualt select 0)]);

@@ -62,10 +62,7 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 {
 	//Add val
 	_relVel = (_vel * (1 - ((_pos distance2D vehicle _x)/_hitRadius))) max 1;
-if (!(isNull _x)) then {
-[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
-};
-};
+	[_x,_relVel,(_relVel/10),_pos] remoteExec ["MCC_fnc_addVelocity",_x];
 
 	_random = random 10;
 	if (_x isKindOf "Man") then
@@ -82,17 +79,15 @@ if (!(isNull _x)) then {
 		if (((_x distance _pos) < _killRadius) && (_random > 1))then
 		{
 			_x setdamage 0.7;
-			[2, compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['wheel_2_1_steering', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['motor', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass1', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass2', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass3', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-if (!(isNull _x)) then {
-    [2, compile format ["objectFromNetId '%1' setHit ['glass4', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
-};
-			[2, compile format ["objectFromNetId '%1' setHit ['glass5', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass6', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
+			[[2,compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]], "MCC_fnc_globalExecute", _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['wheel_2_1_steering', 1]", _x]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['motor', 1]", _x]], "MCC_fnc_globalExecute", netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass1', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass2', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass3', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass4', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass5', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['glass6', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
 			if (isServer) then {_x spawn _burningEffects};
 			sleep 15;
 			_x setdamage 1;
@@ -100,15 +95,15 @@ if (!(isNull _x)) then {
 		else
 		{
 			_x setdamage 0.4;
-			[2, compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['wheel_2_1_steering', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['motor', 0.7]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass1', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass2', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass3', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass4', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass5', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['glass6', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
+			[[2,compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]], "MCC_fnc_globalExecute", _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1'  setHit ['wheel_2_1_steering', 1]", _x]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['motor', 0.7]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass1', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass2', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass3', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass4', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass5', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['glass6', 1]", _x]], "MCC_fnc_globalExecute",netid _x, false] spawn BIS_fnc_MP;
 		}
 	};
 
@@ -117,13 +112,13 @@ if (!(isNull _x)) then {
 		if (((_x distance _pos) < _killRadius) && (_random > 1))then
 		{
 			_x setdamage 0.7;
-			[2, compile format ["objectFromNetId '%1' setHit ['Ltrack', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['Rtrack', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2, compile format ["objectFromNetId '%1' setHit ['motor', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
+			[[2,compile format ["objectFromNetId '%1' setHit ['Ltrack', 1]",netid _x]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['Rtrack', 1]",netid _x]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[[2,compile format ["objectFromNetId '%1' setHit ['motor', 1]",netid _x]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
 			if (isServer) then {_x spawn _burningEffects};
 			sleep 15;
 			_x setdamage 1;
 		};
 	};
-forEach _effected;
+} forEach _effected;
 

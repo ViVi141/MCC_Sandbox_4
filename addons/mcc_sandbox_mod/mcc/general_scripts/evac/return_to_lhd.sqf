@@ -18,18 +18,15 @@ if !mcc_isloading then
 	if (MCC_capture_state) then
 		{
 		MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _point1)) then { [%1, %2, 2] remoteExec ["MCC_fnc_evacMove", 0, false]; };
+							[[%1, %2, 2],"MCC_fnc_evacMove",true,false] spawn BIS_fnc_MP;
 							'
 							,[_point1]
 							,_flyInHight
 							];
 		} else
 			{
-if (!(isNull _point1)) then {
-[_point1, _flyInHight, 2] remoteExec ["MCC_fnc_evacMove", 0, true];
-};
-};
+			[[[_point1], _flyInHight, 2],"MCC_fnc_evacMove",true,false] spawn BIS_fnc_MP;
 			};
 	}	
 		else { player globalchat "Access Denied"};
-	
+	};

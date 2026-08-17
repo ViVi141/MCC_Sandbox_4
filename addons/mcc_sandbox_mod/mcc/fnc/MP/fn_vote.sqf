@@ -15,8 +15,5 @@ waituntil {!isnil "_answer"};
 
 if (_answer) exitWith
 {
-if (!(isNull _variable)) then {
-[[_variable, missionNameSpace],1] remoteExec ["bis_fnc_counter", 2, false];
+	[[[_variable, missionNameSpace],1], "bis_fnc_counter", false, false] spawn BIS_fnc_MP;
 };
-};
-

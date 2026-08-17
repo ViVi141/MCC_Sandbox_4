@@ -75,10 +75,7 @@ if (_add) then {
 
 					//Set ammo count and helper
 					_crate setVariable ["ammoLeft",200*_costFactor,true];
-if (!(isNull _crate)) then {
-[[_crate, "Hold %1 to resupply"], "MCC_fnc_createHelper", false] remoteExec ["MCC_fnc_createHelper", 0, true];
-};
-};
+					[[_crate, "Hold %1 to resupply"], "MCC_fnc_createHelper", false] call BIS_fnc_MP;
 
 					_crate setVariable ["MCC_loadedBy", getplayeruid player, true];
 					//Change mass
@@ -122,10 +119,7 @@ if (!(isNull _crate)) then {
 
 					//Set ammo count and helper
 					_crate setVariable ["ammoLeft",100,true];
-if (!(isNull _crate)) then {
-[[_crate, "Hold %1 to resupply"], "MCC_fnc_createHelper", false] remoteExec ["MCC_fnc_createHelper", 2];
-};
-};
+					[[_crate, "Hold %1 to resupply"], "MCC_fnc_createHelper", false] call BIS_fnc_MP;
 
 					_crate setVariable ["MCC_loadedBy", getplayeruid player, true];
 
@@ -168,8 +162,8 @@ if (!(isNull _crate)) then {
 				};
 			};
 		};
-	
-
+	};
+}
 else
 {
 	if (_isHeli) then

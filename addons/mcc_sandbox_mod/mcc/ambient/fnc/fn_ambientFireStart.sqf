@@ -39,11 +39,8 @@ if (_baseFire) then {
 	_effect = FIRE_OBJECTSMALL createVehicle _pos;
 
 	//Spawn light
-if (!(isNull _effect)) then {
-[_effect,5] remoteExec ["MCC_fnc_ambientFireClientSide",0];
+	[_effect,5] remoteExec ["MCC_fnc_ambientFireClientSide",0];
 };
-};
-
 
 //Start the fire
 for "_i" from (_fireDir - 45) to (_fireDir + 45) step 15 do  {

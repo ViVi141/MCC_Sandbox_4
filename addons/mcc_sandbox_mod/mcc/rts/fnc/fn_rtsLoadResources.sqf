@@ -38,10 +38,7 @@ _fncLoadCrate = {
 
 	//Set ammo count and helper
 	_crate setVariable ["ammoLeft",100,true];
-if (!(isNull _crate)) then {
-[_crate, "Hold %1 to resupply"] remoteExec ["MCC_fnc_createHelper", 0, true];
-};
-};
+	[_crate, "Hold %1 to resupply"] remoteExec ["MCC_fnc_createHelper",0,true];
 	_crate setVariable ["MCC_loadedBy", getplayeruid player, true];
 
 	_attachPoint set [1, (_attachPoint select 1)- (count _loadedCrates*1.6)];
@@ -54,7 +51,7 @@ if (!(isNull _crate)) then {
 	_res set [_this, (_res select _this) - CRATE_COST];
 	missionNamespace setVariable [format ["MCC_res%1",playerside],_res];
 	publicVariable format ["MCC_res%1",playerside];
-
+};
 
 if (count _loadedCrates >=_maxLoad) exitWith {[9989,"Maximum Load Reached",5,true] call MCC_fnc_setIDCText;false};
 switch (true) do

@@ -40,10 +40,7 @@ _init = FORMAT [";%2 = _this;[_this, '%1',25] spawn MCC_fnc_manageAC;"
 				,MCC_tempName
 				];
 
-if (!(isNull _sb)) then {
-[[netid _sb,_sb], _init] remoteExec ["MCC_fnc_setVehicleInit", 2, false];
-};
-
+[[[netid _sb,_sb], _init], "MCC_fnc_setVehicleInit", false, false] spawn BIS_fnc_MP;
 
 {_x addCuratorEditableObjects [[_sb],false]} forEach allCurators;
 

@@ -159,10 +159,7 @@ MCC_fnc_SQLPDAMenuclicked =
 			_text = uinamespace getVariable "MCC_sqlpdaMenu1Data";
 			if (_ctrlData == "MinefieldAP") then {_path = "";_text = ""} else {if (playerside == east) then {_path = "b_"} else {_path = "o_"}};
 
-if (!(isNull _markerName) && !(isNull MCC_ConsoleWPpos)) then {
-[[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable "MCC_sqlpdaMenu1Data", _text, time, "default"], "MCC_fnc_PDAcreatemarker", playerside, false] remoteExec ["MCC_fnc_PDAcreatemarker", playerside, false];
-};
-};
+			[[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable "MCC_sqlpdaMenu1Data",_text, time, "default"] ,"MCC_fnc_PDAcreatemarker", playerside,false] call BIS_fnc_MP;
 		};
 
 		//Menu - enemy - markers - Size set
@@ -176,9 +173,7 @@ if (!(isNull _markerName) && !(isNull MCC_ConsoleWPpos)) then {
 			//Create marker
 			_markerName = (getplayerUID player) + (uinamespace getVariable "MCC_sqlpdaMenu1Data") + str floor time;
 			_path = if (playerside == east) then {"b_"} else {"o_"};
-if (!(isNull MCC_ConsoleWPpos)) then {
-    [[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable "MCC_sqlpdaMenu1Data", uinamespace getVariable "MCC_sqlpdaMenu2Data", time, "default"], "MCC_fnc_PDAcreatemarker", playerside, false] remoteExec ["MCC_fnc_PDAcreatemarker", playerside, false];
-};
+			[[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable "MCC_sqlpdaMenu1Data", uinamespace getVariable "MCC_sqlpdaMenu2Data", time, "default"] ,"MCC_fnc_PDAcreatemarker", playerside,false] call BIS_fnc_MP;
 		};
 
 //------------------------------------------------------------------------------------Menu - support----------------------------------------------------------------------------------------------------------------------
@@ -213,9 +208,7 @@ if (!(isNull MCC_ConsoleWPpos)) then {
 			//Create marker
 			_markerName = (getplayerUID player) + (uinamespace getVariable "MCC_sqlpdaMenu1Data") + str floor time;
 			_path = "";
-if (!isNil {_markerName} && !isNil {_path} && !isNil {MCC_ConsoleWPpos} && !isNil {(uinamespace getVariable 'MCC_sqlpdaMenu1Data')} && !isNil {_text}) then {
-    [[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable 'MCC_sqlpdaMenu1Data', _text, time, 'default'], 'MCC_fnc_PDAcreatemarker', playerside, false] remoteExec ['MCC_fnc_PDAcreatemarker', playerside, false];
-};
+			[[_markerName, _path, MCC_ConsoleWPpos, uinamespace getVariable "MCC_sqlpdaMenu1Data", _text, time, "default"] ,"MCC_fnc_PDAcreatemarker", playerside,false] call BIS_fnc_MP;
 		};
 
 //------------------------------------------------------------------------------------Menu - Construct----------------------------------------------------------------------------------------------------------------------
@@ -274,7 +267,7 @@ if (!isNil {_markerName} && !isNil {_path} && !isNil {MCC_ConsoleWPpos} && !isNi
 	_comboBox lbSetCurSel 0;
 
 	_child ctrlAddEventHandler ["LBSelChanged","_this call MCC_fnc_SQLPDAMenuclicked"];
-
+};
 
 
 

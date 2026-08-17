@@ -16,10 +16,7 @@ _flyInHeight = _this select 4;
 
 _pilotGroup setvariable ["MCC_canbecontrolled",false,true];
 
-if (!(isNull _plane)) then {
 [2,[],[0,"NO CHANGE","NO CHANGE","FULL","AWARE","", "",0],[_pilotGroup]] remoteExec ["MCC_fnc_manageWp",_plane];
-};
-
 
 _plane setfuel 0.2;
 _pilotGroup setSpeedMode "FULL";
@@ -31,10 +28,7 @@ _plane flyInHeight _flyInHeight;
 
 if (isnil "_away") then {_away = [100,100,100]};
 
-if (!(isNull _plane)) then {
 [1,_away,[0,"BLUE","NO CHANGE","FULL","CARELESS","", "",0],[_pilotGroup]] remoteExec ["MCC_fnc_manageWp",_plane];
-};
-
 _pilotGroup move _away;
 _pilot domove _away;
 

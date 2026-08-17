@@ -27,10 +27,7 @@ player globalRadio "CuratorWaypointPlaced";
 		} forEach assignedCargo _vehicle;
 
 		{
-if (!(isNull _x)) then {
-[[_x,_vehicle], {(_this select 0) leaveVehicle (_this select 1);}] remoteExec ["BIS_fnc_spawn", leader _x, false];
-};
-};
+			[[_x,_vehicle], {(_this select 0) leaveVehicle (_this select 1);}] remoteExec ["BIS_fnc_spawn", leader _x, false];
 		} forEach _groups;
 	};
-forEach _vehicles;
+} forEach _vehicles;

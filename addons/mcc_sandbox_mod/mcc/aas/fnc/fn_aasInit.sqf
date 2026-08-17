@@ -31,10 +31,7 @@ MCC_fnc_AASHandleSector = {
        _tlist = list _x;
        {
             if (isPlayer _x && side _x == _owner) then {
-if (!(isNull _x)) then {
-[getplayeruid _x, 500,"For Capturing A Sector"] remoteExec ["MCC_fnc_addRating", _x];
-};
-};
+                [getplayeruid _x, 500,"For Capturing A Sector"] remoteExec ["MCC_fnc_addRating", _x];
             };
        } forEach _tlist;
     } forEach (_sector getvariable ["areas",[]]);
@@ -58,30 +55,24 @@ if (!(isNull _x)) then {
 
         // Marker defend current sector
         deleteMarker (missionNamespace getVariable [format ["sector_%1", _index],""]);
-if (count _triggers > 0 && !isNull (_triggers select _index)) then {
-[_owner, position (_triggers select _index), format ["sector_%1", _index]] remoteExec ["MCC_fnc_AASmarkers", 0, false];
-};
-};
+        [_owner, position (_triggers select _index),format ["sector_%1", _index]] remoteExec ["MCC_fnc_AASmarkers", 0,false];
 
         if (_nextTriggerIndex >= 0 && _nextTriggerIndex < (count _triggers)) then {
             (_triggers select _nextTriggerIndex) setTriggerArea (_triggersAreas select _nextTriggerIndex);
 
             // Marker
             _nextTriggerOwner = ((missionNamespace getVariable ["MCC_fnc_AAS_sectors",[]]) select _nextTriggerIndex) getVariable ["owner",sideunknown];
-if (!(isNull (_triggers select _nextTriggerIndex))) then {
-[_nextTriggerOwner, position (_triggers select _nextTriggerIndex), format ["sector_%1", _nextTriggerIndex]] remoteExec ["MCC_fnc_AASmarkers", 0, false];
-};
-};
-        
+            [_nextTriggerOwner, position (_triggers select _nextTriggerIndex),format ["sector_%1", _nextTriggerIndex]] remoteExec ["MCC_fnc_AASmarkers", 0,false];
+        };
 
         if (_lastTriggerIndex >= 0 && _lastTriggerIndex < (count _triggers)) then {
             (_triggers select _lastTriggerIndex) setTriggerArea [0,0,0,false];
             deleteMarker (missionNamespace getVariable [format ["sector_%1", _lastTriggerIndex],""]);
         };
-    
+    };
 
     _sector spawn MCC_fnc_AASHandleSector;
-
+};
 
 //Module or function call
 if (typeName (_this select 0) == typeName []) then {
@@ -165,21 +156,15 @@ publicVariable "MCC_fnc_AAS_owners";
     _trigger setTriggerArea (_triggersAreas select _x);
 
     //Set Markers
-if (!(isNull _trigger)) then {
-[_owners select _x, position _trigger, format ["sector_%1", _x]] remoteExec ["MCC_fnc_AASmarkers", 0, false];
-};
-};
-forEach [0,(count _triggers -1)];
+    [_owners select _x, position _trigger,format ["sector_%1", _x]] remoteExec ["MCC_fnc_AASmarkers", 0,false];
+} forEach [0,(count _triggers -1)];
 
 //Draw Lines
 {
     if (_foreachindex > 0) then {
-if (!isNull _x && !isNull (_triggers select (_foreachindex -1))) then {
-[position _x, position (_triggers select (_foreachindex -1)), format ["MCC_AAS_Line_%1", _foreachindex]] remoteExec ["MCC_fnc_AAS_drawLine", 0,true];
-};
-};
+        [position _x, position (_triggers select (_foreachindex -1)), format ["MCC_AAS_Line_%1", _foreachindex]] remoteExec ["MCC_fnc_AAS_drawLine", 0,true];
     };
-forEach _triggers;
+} forEach _triggers;
 
 //Main loop
 {

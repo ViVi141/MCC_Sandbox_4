@@ -16,16 +16,13 @@ _unit	= param [1,player,[objNull]];
 _shout	= param [2,true,[true]];
 
 //shout
-if (_shout && !(isNull _unit)) then {
-if (!(isNull _unit)) then {
-[[if (isMultiplayer) then {netId _unit} else {""},_unit], format ["dontmove%1",floor (random 20)]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+if (_shout) then {
+	[[[netid _unit,_unit], format ["dontmove%1",floor (random 20)]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 	sleep 1;
-
+};
 
 //if no unit or already disarmed
-if (isNull _target || isNull _unit || !alive _target || !alive _unit || (_unit getVariable ["MCC_disarmed",false])) exitWith {};
+if (!alive _target || !alive _unit || (_unit getVariable ["MCC_disarmed",false])) exitWith {};
 
 /*---------------------------------------------------------------------------------------
 /
@@ -52,25 +49,11 @@ _targetCorage = _targetCorage min 98;
 
 //Halt the AI
 if (_shout) then {
-if (!(isNull _target)) then {
-[2,getpos _target,[0,"NO CHANGE","NO CHANGE","UNCHANGED","UNCHANGED","", {},0],[(group _target)]] remoteExec ["MCC_fnc_manageWp", 2, false];
-};
-};
+	[[2,getpos _target,[0,"NO CHANGE","NO CHANGE","UNCHANGED","UNCHANGED","", {},0],[(group _target)]],"MCC_fnc_manageWp", false, false] spawn BIS_fnc_MP;
 
 	//Stop and look at the player
-		if (!(isNull _target) && !(isNull _unit)) then {
-		[[_target, _unit], {
-			_target = _this select 0;
-			_men = _this select 1;
-
-			(group _target) setFormDir ([_target,_men] call BIS_fnc_dirTo);
-			doStop _target;
-			_target disableAI "MOVE";
-			sleep 2;
-			_target enableAI "MOVE";
-		}] remoteExec ["call", 2];
-if (!(isNull _target)) then {
-	[[_target, _unit], {
+	[[[_target, _unit],
+	  {
 		_target = _this select 0;
 		_men = _this select 1;
 
@@ -79,19 +62,13 @@ if (!(isNull _target)) then {
 		_target disableAI "MOVE";
 		sleep 2;
 		_target enableAI "MOVE";
-	}] remoteExec ["BIS_fnc_spawn", _target, false];
+	  }],"BIS_fnc_spawn", _target, false] spawn BIS_fnc_MP;
 };
-	};
-
 
 //If comply
 if (random 100 >= _targetCorage || (_target getVariable ["MCC_Stunned", false])) then {
-if (!(isNull _target)) then {
-	[[if (isMultiplayer) then {netId _target} else {""},_target], format ["enough%1",floor random 14]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-if (!(isNull _target)) then {
-	[[_target,"amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"], "MCC_fnc_disarmUnit", _target, false] remoteExec ["MCC_fnc_disarmUnit", _target, false];
-};
+	[[[netid _target,_target], format ["enough%1",floor random 14]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+	[[_target,"amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"], "MCC_fnc_disarmUnit", _target, false] spawn BIS_fnc_MP;
 
 	//if is armed civilian
 	if ((_target getVariable ["MCC_IEDtype",""]) == "ac") then
@@ -122,20 +99,14 @@ if (!(isNull _target)) then {
 	if !(_target getVariable ["MCC_animRunning",false]) then {
 
 		//Says he surrender
-		if (_shout && !(isNull _target)) then {
-if (!(isNull _target)) then {
-	[[if (isMultiplayer) then {netId _target} else {""},_target], format ["alone%1",floor random 10]] remoteExec ["MCC_fnc_globalSay3D", 0];
-};
+		if (_shout)  then {
+			[[[netid _target,_target], format ["alone%1",floor random 10]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		};
 
 		if ((stance _target == "STAND") && (side _target == civilian)) then	{
-if (!(isNull _target)) then {
-	[_target,"Acts_Kore_Introducing",true,4] remoteExec ["MCC_fnc_setUnitAnim",0];
-};
+			[_target,"Acts_Kore_Introducing",true,4] remoteExec ["MCC_fnc_setUnitAnim",0];
 		};
 	};
 };
 
-if (!(isNull _target)) then {
-[_target, {(_this select 0) enableAI "MOVE";} ] remoteExec ["BIS_fnc_spawn", _target, false];
-};
+[[[_target],{(_this select 0) enableAI "MOVE";}],"BIS_fnc_spawn", _target, false] spawn BIS_fnc_MP;

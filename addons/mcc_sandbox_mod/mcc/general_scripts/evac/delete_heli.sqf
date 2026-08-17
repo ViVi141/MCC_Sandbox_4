@@ -29,9 +29,7 @@ switch (_type) do
 if (MCC_capture_state) then
 {
 	MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _evac)) then {
-	[%1,[netid _evac,_evac]] remoteExec ["MCC_fnc_evacDelete", 0, false];
-};
+						[[%1,[netid %2,%2]],"MCC_fnc_evacDelete",true,false] spawn BIS_fnc_MP;
 						'
 						,_type
 						,_evac
@@ -39,10 +37,7 @@ if (!(isNull _evac)) then {
 }
 else
 {
-if (!(isNull _evac)) then {
-[_type,[netid _evac,_evac]] remoteExec ["MCC_fnc_evacDelete", 0, false];
+	[[_type,[netid _evac,_evac]],"MCC_fnc_evacDelete",true,false] spawn BIS_fnc_MP;
 };
-};
-
 ;
 

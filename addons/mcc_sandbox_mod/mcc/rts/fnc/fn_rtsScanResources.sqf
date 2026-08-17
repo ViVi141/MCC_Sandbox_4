@@ -42,9 +42,7 @@ if (_delete) exitWith {
 					+ "____________________<br/><br/>";
 
 	//Send hint
-if (!(isNull _side)) then {
-[_missionText,true] remoteExec ["MCC_fnc_globalHint", _side, false];
-};
+	[_missionText,true] remoteExec ["MCC_fnc_globalHint", _side, false];
 };
 
 
@@ -194,9 +192,7 @@ missionNamespace setVariable [format ['MCC_rtsMissionObjects_%1', _side],_missio
 publicVariable format ['MCC_rtsMissionOn_%1', _side];
 
 //Send hint
-if (!(isNull _side)) then {
 [_missionText,true] remoteExec ["MCC_fnc_globalHint",_side,false];
-};
 
 
 //Cleanup

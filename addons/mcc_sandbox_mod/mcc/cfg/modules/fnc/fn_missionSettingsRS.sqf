@@ -67,11 +67,8 @@ if (missionNamespace getVariable ["CP_activated",false]) then {
 		_sideTickets = format ["MCC_tickets%1", _x];
 		_tickets = missionNameSpace getVariable [_sideTickets,200];
 
-if (!(isNull _x)) then {
-[_x, _tickets] remoteExec ["BIS_fnc_respawnTickets", 2];
-};
-};
+		[_x, _tickets] remoteExec ["BIS_fnc_respawnTickets",2];
 	} foreach [west, east, resistance];
-
+};
 
 deleteVehicle _module;

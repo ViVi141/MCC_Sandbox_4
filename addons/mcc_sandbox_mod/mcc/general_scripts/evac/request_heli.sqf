@@ -47,12 +47,9 @@ if !mcc_isloading then
 			{
 				hint (localize "STR_MCC_HINT_EVAC_VEHICLE_SPAWNED_ON_LHD");
 				_pos = getmarkerpos "pos4";
-if (!(isNull _pos)) then {
-[MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 2, false];
-};
-};
+				[MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 2, false];
 				mcc_safe = mcc_safe + FORMAT ["
-if (!isNull _pos) then { ['%1',%2] remoteExec ["MCC_fnc_evacSpawn", 2, false]; };
+['%1',%2] remoteExec ['MCC_fnc_evacSpawn', 2, false];
 											"
 											, MCCEvacHeliType
 											, _pos
@@ -68,15 +65,9 @@ if (!isNull _pos) then { ['%1',%2] remoteExec ["MCC_fnc_evacSpawn", 2, false]; }
 		if (_option == 1) then
 		{
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_TO_SPAWN_EVAC_VECHICLE");
-			onMapSingleClick " 	hint localize "STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED";
-if (!(isNull MCCEvacHeliType)) then {
-[MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 0, false, false];
-};
-};
+			onMapSingleClick " 	hint localize ""STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED""; [MCCEvacHeliType, _pos] remoteExec ['MCC_fnc_evacSpawn', 2, false];
 								mcc_safe=mcc_safe + FORMAT ['
-if (!(isNull _pos)) then {
-    [MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 2, false];
-};
+[%1,%2] remoteExec ["MCC_fnc_evacSpawn", 2, false];
 									sleep 1;'
 									, MCCEvacHeliType
 									, _pos
@@ -113,5 +104,6 @@ if (!(isNull _pos)) then {
 	{
 		player globalchat "Access Denied"
 	};
+};
 
 

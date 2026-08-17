@@ -53,20 +53,15 @@ if (missionNamespace getVariable ["MCC_arcadeTanks",false]) then {
 		        _ai allowDamage false;
 		        _ai moveInDriver _this;
 
-if (!(isNull _this)) then {
-[_this,true] remoteExec ["lockDriver",_this];
-};
-};
+		        [_this,true] remoteExec ["lockDriver",_this];
 
 		        waitUntil {isNull gunner _this};
 		        _ai action ["EngineOff", _this];
 		        deleteVehicle _ai;
 
-if (!(isNull _this)) then {
-[_this,false] remoteExec ["lockDriver",_this];
-};
-};
+		        [_this,false] remoteExec ["lockDriver",_this];
 	            enableSentences true;
 		    };
 		};
-	
+	};
+};

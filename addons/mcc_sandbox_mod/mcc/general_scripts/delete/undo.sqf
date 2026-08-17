@@ -8,8 +8,7 @@
 								];									
 			};
 */
-[][]2, {
-}
+[[2, {
 		if ((count MCC_lastSpawn)>0) then
 		{
 			if (typeName (MCC_lastSpawn select ((count MCC_lastSpawn)-1)) == "ARRAY") then
@@ -24,7 +23,7 @@
 			
 			MCC_lastSpawn = MCC_lastSpawn select [0, (count MCC_lastSpawn)-1]; 
 		};
-if (!(isNull _unit)) then { [2, { if ((count MCC_lastSpawn)>0) then { if (typeName (MCC_lastSpawn select ((count MCC_lastSpawn)-1)) == "ARRAY") then { deleteVehicle ((MCC_lastSpawn select ((count MCC_lastSpawn)-1)) select 0); {deleteVehicle _x} forEach ((MCC_lastSpawn select ((count MCC_lastSpawn)-1)) select 1); } else { deleteVehicle (MCC_lastSpawn select ((count MCC_lastSpawn)-1)); }; MCC_lastSpawn = MCC_lastSpawn select [0, (count MCC_lastSpawn)-1]; }; }] remoteExec ["MCC_fnc_globalExecute", 0, true]; }
+	}] remoteExec ["MCC_fnc_globalExecute", 0, true];
 	
  
  

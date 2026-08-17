@@ -35,25 +35,17 @@ if (_object isKindOf "man") then {
 	_delete = false;
 
 	if !(_text isEqualTo "") then {
-if (!(isNull _object)) then {
-[name _object,_text] remoteExec ["BIS_fnc_showSubtitle", _caller];
-};
-};
+		[name _object,_text] remoteExec ["BIS_fnc_showSubtitle", _caller];
 	};
-else {
+} else {
 	_caller playMoveNow "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon";
 };
 
-if (!(isNull _shared) && {isNumber _shared}) then {
-    ["intelAdded",[format ["%1 has acquired %2",name _caller,_displayName],"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] remoteExec ["bis_fnc_showNotification", _shared, true];
-} else {
-    ["intelAdded",[format ["%1 has acquired %2",name _caller,_displayName],"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] remoteExec ["bis_fnc_showNotification", 0, true];
-};
+["intelAdded",[format ["%1 has acquired %2",name _caller,_displayName],"\A3\ui_f\data\map\markers\military\warning_ca.paa"]] remoteExec ["bis_fnc_showNotification", _shared];
 
 //Add intel
-if !(_text isEqualTo "") then {;
-};
-	[][_tittle,_text,_markers], {
+if !(_text isEqualTo "") then {
+	[[_tittle,_text,_markers], {
 				params ["_tittle","_text","_markers"];
 
 				//Add markers
@@ -76,32 +68,7 @@ if !(_text isEqualTo "") then {;
 				];
 
 				[_output,safezoneX,0,"<t color='#FFFFFFFF' align='left'>%1</t>"] spawn BIS_fnc_typeText;
-if (!(isNull _shared)) then {
-    [[_tittle,_text,_markers], {
-        params ["_tittle","_text","_markers"];
-
-        //Add markers
-        private _oldText = _text;
-        {
-            _text = _text + (format ["<marker name='%1'> Location</marker>", _x, _x]);
-        } forEach _markers;
-
-        _text = "<t size='1.0' font='PuristaBold'>" + _text +"</t>";
-
-        if !(player diarysubjectexists "MCC_intel") then {
-            player creatediarysubject ["MCC_intel","Intel"];
-        };
-        player creatediaryrecord ["MCC_intel",[_tittle,_text]];
-
-        private _output =
-        [
-            [_tittle,"<t size='1.0' font='PuristaBold'>%1</t><br/>",2],
-            [_oldText,"<t size='1.0' font='PuristaMedium'>%1</t><br/>",5]
-        ];
-
-        [_output,safezoneX,0,"<t color='#FFFFFFFF' align='left'>%1</t>"] spawn BIS_fnc_typeText;
-    }] remoteExec ["call", _shared];
-};
+			}] remoteExec ["call", _shared];
 };
 
 //Hint we are done

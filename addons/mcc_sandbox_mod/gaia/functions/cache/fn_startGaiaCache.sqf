@@ -114,7 +114,7 @@ while {true} do
 	 							_ar set [27,false];
 	 							//Enable the caching no matter what, delayed WILL be cached
 	 							//_ar set [26,true];
-if (!(isNull _ar)) then {[_ar, "mcc_setup", false, false] remoteExec ["mcc_setup", 0, false];};
+	 							[_ar, "mcc_setup", false, false] spawn BIS_fnc_MP;
 	 							MCC_DELAYED_SPAWNS set [_idx, "delete_me"];
 
 	 						};

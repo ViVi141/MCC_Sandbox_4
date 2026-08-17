@@ -37,12 +37,9 @@ if (_pressed==0) then {
 		_objects = (getpos MCC_ConolseUAV) nearObjects [(MCC_ConsoleUAVmissiles select 3), 300];
 		_rocket = if (count _objects > 0) then {_objects select 0};
 		if (isnil "_rocket") then {_rocket = getpos MCC_ConolseUAV};
-if (!(isNull MCC_fakeUAV)) then {
-[[netid MCC_fakeUAV, MCC_fakeUAV], "missileLunch"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+		[[[netid MCC_fakeUAV,MCC_fakeUAV], "missileLunch"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		[MCC_fakeUAVCenter, getpos _rocket, (MCC_ConsoleUAVmissiles select 3),400,true,""] execVM MCC_path + "mcc\general_scripts\CAS\missile_guide.sqf";
 		if (!isnil "_rocket") then {deletevehicle _rocket};
 		ctrlSetText [MCC_CONSOLE_UAV_MISSILE_COUNT, format ["%1 #: %2",MCC_ConsoleUAVmissiles select 0,(MCC_ConsoleUAVmissiles select 1)-1]];
 	};
-
+};

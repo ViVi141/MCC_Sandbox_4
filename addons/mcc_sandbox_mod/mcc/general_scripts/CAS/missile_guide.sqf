@@ -27,10 +27,7 @@ if (typeName _missileType == typeName "") then {
 _missile setPos [_missileStart select 0, _missileStart select 1,(_missileStart select 2)-5];
 
 //broadcast onwership
-if (!(isNull _missile)) then {
 [_missile,(owner player)] remoteExec ["setOwner", 2];
-};
-
 
 //procedure for guiding the missile
 _homeMissile = {

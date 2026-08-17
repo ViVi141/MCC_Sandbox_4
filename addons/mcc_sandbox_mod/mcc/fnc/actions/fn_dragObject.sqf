@@ -25,9 +25,7 @@ player playAction "grabDrag";
 player forceWalk true;
 _worldPos = player worldToModel getpos _object;
 _object attachTo [player,[_worldPos select 0, _worldPos select 1, 0.0 +((_object modelToWorld[0,0,0])select 2)-((getpos _object) select 2)]];
-if (!(isNull _object)) then {
-[_object, {(_this select 0) setDir 180;}] remoteExec ["BIS_fnc_spawn", _object, false];
-};
+[[[_object],{(_this select 0) setDir 180;}],"BIS_fnc_spawn", _object, false] spawn BIS_fnc_MP;
 
 player setVariable ["mcc_draggedObject", _object];
 

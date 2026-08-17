@@ -19,9 +19,6 @@ if (count _resualt == 0) exitWith {deleteVehicle _module};
 private ["_radius"];
 _radius = _resualt select 0;
 
-if (!(isNull _pos)) then {
 [_pos, _radius, 13,true] remoteExec ["MCC_fnc_deleteBrush",2];
-};
-
 
 deleteVehicle _module;

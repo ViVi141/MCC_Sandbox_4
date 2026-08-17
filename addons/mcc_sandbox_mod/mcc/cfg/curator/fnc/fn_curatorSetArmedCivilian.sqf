@@ -48,9 +48,6 @@ _object setVariable ["MCC_IEDtype","ac",true];
 _iedside = (_resualt select 0) call BIS_fnc_sideType;
 _static = !(_resualt select 1);
 _object setVariable ["static",_static,true];
-if (!(isNull _object)) then {
-[_object, _iedside, 25] remoteExec ["MCC_fnc_manageAC", _object, false];
-};
-
+[[_object, _iedside, 25], "MCC_fnc_manageAC", _object, false] spawn BIS_fnc_MP;
 
 deleteVehicle _module;

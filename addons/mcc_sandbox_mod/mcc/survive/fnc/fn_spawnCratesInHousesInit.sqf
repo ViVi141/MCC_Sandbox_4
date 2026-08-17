@@ -48,9 +48,6 @@ _density = _resualt select 1;
 _markers = _resualt select 2;
 
 //Start spawning
-if (!(isNull _pos) && !(isNull _radius) && !(isNull _density) && !(isNull _markers)) then {
 [_pos,_radius,_density,_markers] remoteExec ["MCC_fnc_spawnCratesInHouses", 2];
-};
-
 
 deleteVehicle _module;

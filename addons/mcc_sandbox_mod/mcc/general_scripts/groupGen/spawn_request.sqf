@@ -98,7 +98,7 @@ if ((lbCurSel MCC_GGUNIT_TYPE) == 1) then
 		if (MCC_capture_state) then
 		{
 			MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _center)) then { [%1,%2,%3,%4,"%5","%6"] remoteExec ["MCC_fnc_garrison", 0, false]; };
+				[[%1,%2,%3,%4,"%5","%6"],"MCC_fnc_garrison",true,false] call BIS_fnc_MP;;
 				'
 				,_center
 				,_radius
@@ -112,7 +112,7 @@ if (!(isNull _center)) then { [%1,%2,%3,%4,"%5","%6"] remoteExec ["MCC_fnc_garri
 		{
 				//*/
 				mcc_safe = mcc_safe + FORMAT ['
-if (!(isNull _center)) then { [%1,%2,%3,%4,"%5","%6"] remoteExec ["MCC_fnc_garrison", 0, false]; };
+				[[%1,%2,%3,%4,"%5","%6"],"MCC_fnc_garrison",true,false] call BIS_fnc_MP;;
 				'
 				,_center
 				,_radius

@@ -13,10 +13,7 @@ switch (_action) do
 		if (!alive _uav) exitWith {};
 
 		(_control select 0) ctrlSetTooltip str (_control select 1);
-if (!(isNull _uav)) then {
-[_uav,sliderPosition (_control select 0)] remoteExec ["flyInHeight",_uav];
-};
-};
+		[_uav,sliderPosition (_control select 0)] remoteExec ["flyInHeight",_uav];
 	};
 
 	case 1:
@@ -25,11 +22,8 @@ if (!(isNull _uav)) then {
 		if (!alive _uav) exitWith {};
 
 
-if (!(isNull _uav)) then {
-[_uav, MCC_ConsoleUAVmissiles select 2] remoteExec ["fire", _uav];
-};
-};
-	
+		[_uav,MCC_ConsoleUAVmissiles select 2] remoteExec ["fire",_uav];
+	};
 
 	case 2:
 	{
@@ -37,8 +31,6 @@ if (!(isNull _uav)) then {
 		if (!alive _uav) exitWith {};
 
 		(_control select 0) ctrlSetTooltip str (_control select 1);
-if (!(isNull _uav)) then {
-[_uav, sliderPosition (_control select 0)] remoteExec ["flyInHeight", _uav];
+		[_uav,sliderPosition (_control select 0)] remoteExec ["flyInHeight",_uav];
+	};
 };
-};
-	

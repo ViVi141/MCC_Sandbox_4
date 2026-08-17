@@ -15,10 +15,7 @@ _ar = [
 	];
 
 // Send data over the network, or when on server, execute directly
-if (!(isNull player)) then {
-_null = [_ar,"mcc_fnc_login",false,false] remoteExec ["mcc_fnc_login", 2, false];
-};
-
+_null = [_ar,"mcc_fnc_login",false,false] call BIS_fnc_MP;
 
 //Close dialog
 _t = time + 5;

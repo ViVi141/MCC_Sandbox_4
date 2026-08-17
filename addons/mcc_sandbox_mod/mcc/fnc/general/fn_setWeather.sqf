@@ -1,8 +1,6 @@
 //==================================================================MCC_fnc_setWeather======================================================================================
 // Sets weather  on all clients  - skip time by one hour to make the weather change
-if (!(isNull _weather)) then {
-    [[Overcast, WindForce, Waves, Rain, Lightnings, fog]] remoteExec ["MCC_fnc_setWeather", 0, false];
-};
+// Example: [[[ Overcast, WindForce, Waves, Rain, Lightnings,fog]],"MCC_fnc_setWeather",true,false] spawn BIS_fnc_MP;
 // Params:
 //	Overcast: number, 0-1
 //	WindForce: number, 0-1

@@ -54,17 +54,11 @@ if(_x_correction != 0 || _y_correction != 0) then{
 if(_spreadtype == "LASER") then{_message = "Polar Laser,"};
 
 _requestor spawn {
-if (!(isNull _this)) then {
-[[netid _this,_this], "requestO1"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+	[[[netid _this,_this], "requestO1"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 	sleep (5 + random 2);
-if (!(isNull _this)) then {
-[[netid _this,_this], "requestS1", "MCC_fnc_globalSay3D", true, false] remoteExec ["MCC_fnc_globalSay3D", 0, true];
-};
-
+	[[[netid _this,_this], "requestS1"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 	sleep (5 + random 2);
-
+};
 sleep (6 + random 6);
 MCC_bonFire = true; 
 MCC_bonSplash = true; 
@@ -76,54 +70,37 @@ switch _missiontype do
 {
 	case "ADJUSTMENT" : 
 	{
-if (!(isNull _requestor)) then {[[netid _requestor,_requestor], "gridO2"] remoteExec ["MCC_fnc_globalSay3D", 0, false];};
+		[[[netid _requestor,_requestor], "gridO2"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (10 + random 2);
-if (!(isNull _requestor)) then {
-[[netid _requestor,_requestor], "gridS2", "MCC_fnc_globalSay3D", true, false] remoteExec ["MCC_fnc_globalSay3D", _requestor, true, false];
-};
-};
+		[[[netid _requestor,_requestor], "gridS2"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (9 + random 2);
-if (!(isNull _requestor)) then {
-[[netid _requestor,_requestor], "splashO3"] remoteExec ["MCC_fnc_globalSay3D", 0, true, false];
-};
-};
+		[[[netid _requestor,_requestor], "splashO3"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (3 + random 1);
-if (!(isNull _requestor)) then {[[netid _requestor,_requestor], "splashS3"] remoteExec ["MCC_fnc_globalSay3D", 0, false];};
+		[[[netid _requestor,_requestor], "splashS3"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (2.5 + random 1);
-if (!(isNull _requestor)) then {
-[[netid _requestor,_requestor], "messegeS4"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-
+		[[[netid _requestor,_requestor], "messegeS4"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (9 + random 2);
-if (!(isNull _requestor)) then {
-	[[netid _requestor,_requestor], "messegeO4"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
+		[[[netid _requestor,_requestor], "messegeO4"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (9 + random 2);
 		[] execVM (BON_ARTI_PATH+"bon_arti_adjustfire.sqf");
-	
+	};
 
 	case "FOR EFFECT" : 
 	{
 		CloseDialog 0;	
 		// initiate fire mission
-if (!(isNull _requestor)) then {
-	[[netid _requestor,_requestor], "gridO2"] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
+		[[[netid _requestor,_requestor], "gridO2"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (10 + random 2);
-if (!(isNull _requestor)) then {
-	[[netid _requestor,_requestor], "gridS2", "MCC_fnc_globalSay3D", true, false] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
+		[[[netid _requestor,_requestor], "gridS2"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (9 + random 2);
-if (!(isNull _requestor)) then {
-	[[netid _requestor,_requestor], "splashO3", "MCC_fnc_globalSay3D", true, false] remoteExec ["MCC_fnc_globalSay3D", _requestor, true];
-};
+		[[[netid _requestor,_requestor], "splashO3"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (3 + random 1);
-if (!(isNull _requestor)) then {[[netid _requestor,_requestor], "splashS3"] remoteExec ["MCC_fnc_globalSay3D", 0, false];};
+		[[[netid _requestor,_requestor], "splashS3"], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 		sleep (2.5 + random 1);
 		if(isServer) then{[_requestor,side player] execVM (BON_ARTI_PATH+"bon_arti_fire.sqf")}
 		else{bon_arti_execution = [_requestor,side player]; publicVariable "bon_arti_execution";};
 		arty_LastData = nil;
 	};
-
+};
 
 if(true) exitWith{};

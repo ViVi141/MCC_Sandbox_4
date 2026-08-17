@@ -37,10 +37,7 @@ _cannonsObjects = [];
 
 	if (isPlayer _cannon) then
 	{
-if (!(isNull _cannon)) then {
-[_cannon,_splashpos,_firedelay,_artitype,_nrshells,_spread] remoteExec ["MCC_fnc_artyGetSolution", _cannon, false];
-};
-};
+		[[_cannon,_splashpos,_firedelay,_artitype,_nrshells,_spread], "MCC_fnc_artyGetSolution", _cannon, false] spawn BIS_fnc_MP;
 	}
 	else
 	{
@@ -63,4 +60,4 @@ if (!(isNull _cannon)) then {
 			};
 		};
 	};
-foreach _cannonsObjects;
+} foreach _cannonsObjects;

@@ -1,8 +1,6 @@
 //==================================================================MCC_fnc_setTime======================================================================================
 // Setstime on all clients
-if (!(isNull _time)) then {
-    [_time] remoteExec ["MCC_fnc_setTime", 0, false];
-};
+// Example: [[year, month, day, hour, minute],"MCC_fnc_setTime",true,false] spawn BIS_fnc_MP;
 //	year: number, YYYY
 //	month: number, MM
 //	day: number, DD

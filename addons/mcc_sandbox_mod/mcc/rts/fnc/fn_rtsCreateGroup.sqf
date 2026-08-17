@@ -68,9 +68,7 @@ _vehicles = [];
 	_ehID = _x addMPEventHandler ["mpkilled", {
 													_unit = name (_this select 0);
 													_killer = name (_this select 1);
-if (!(isNull _unit)) then {
-	["MCCNotificationBad", ["Unit Down", format ["%1 was killed by %2", name _unit, name _killer], ""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
-};
+													["MCCNotificationBad",["Unit Down",format ["%1 was killed by %2",_unit,_killer],""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
 												  }];
 	_unit = _x;
 	{_x addCuratorEditableObjects [[_unit],true]} forEach allCurators;

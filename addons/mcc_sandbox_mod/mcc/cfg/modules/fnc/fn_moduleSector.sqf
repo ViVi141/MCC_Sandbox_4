@@ -356,10 +356,7 @@ switch _mode do {
 		if (isnil {MCC_fnc_moduleSector_sideSectors}) then {MCC_fnc_moduleSector_sideSectors = [0,0,0,0,0];};
 
 		//--- Execute local function
-if (!(isNull _logic)) then {
-[_logic,[],true,"player"] remoteExec ["MCC_fnc_moduleSector", _sides - [sideunknown], true];
-};
-};
+		//[[_logic,[],true,"player"],"MCC_fnc_moduleSector",_sides - [sideunknown],true] call bis_fnc_mp;
 
 		_fnc_conversion = {
 			_total = 0;
@@ -444,10 +441,7 @@ if (!(isNull _logic)) then {
 			if (str _sides != _sidesOldStr) then {
 
 				//--- Show MP progress HUD - disable HUD
-if (!(isNull _logic)) then {
-[[_logic,[],true,"player"], "MCC_fnc_moduleSector", _sides - _sidesOld, true] remoteExec ["MCC_fnc_moduleSector", 0, true];
-};
-};
+				//[[_logic,[],true,"player"],"MCC_fnc_moduleSector",_sides - _sidesOld,true] call bis_fnc_mp;
 
 				//--- Add sides
 				{
@@ -615,14 +609,8 @@ if (!(isNull _logic)) then {
 				//--- Show notification
 				_ownerName = _owner call bis_fnc_sidename;
 				if (_owner != sideunknown) then {
-if (!(isNull _ownerOld)) then {
-[format ["sectorCaptured%1",_owner],[_name,_ownerName,_iconTexture,_designation]] remoteExec ["BIS_fnc_showNotification", _sides - [_ownerOld]];
-};
-};
-if (!(isNull _ownerOld)) then {
-[format ["sectorLost%1",_owner],[_name,_ownerName,_iconTexture,_designation]] remoteExec ["BIS_fnc_showNotification", _ownerOld];
-};
-};
+					[[format ["sectorCaptured%1",_owner],[_name,_ownerName,_iconTexture,_designation]],"BIS_fnc_showNotification",_sides - [_ownerOld]] call bis_fnc_mp;
+					[[format ["sectorLost%1",_owner],[_name,_ownerName,_iconTexture,_designation]],"BIS_fnc_showNotification",_ownerOld] call bis_fnc_mp;
 				};
 
 				//--- Update flag (not for default owner)
@@ -665,7 +653,7 @@ if (!(isNull _ownerOld)) then {
 						};
 					} foreach _tasks;
 				};
-			
+			};
 			_ownerOld = _owner;
 			_time = time;
 
@@ -746,7 +734,7 @@ if (!(isNull _ownerOld)) then {
 
 			_firstLoop = false;
 			sleep 0.1;
-		
+		};
 
 		//--- Sector finalized
 		if (isnull _logic) then {
@@ -786,7 +774,7 @@ if (!(isNull _ownerOld)) then {
 				[_x,nil,nil,nil,_taskState] call bis_fnc_setTask;
 			};
 		} foreach _tasks;
-	
+	};
 	case "player": {
 		/////////////////////////////////////////////////////////////////////////////////////
 		// Player
@@ -808,3 +796,4 @@ if (!(isNull _ownerOld)) then {
 		};
 		_logic enablesimulation false;
 	};
+};

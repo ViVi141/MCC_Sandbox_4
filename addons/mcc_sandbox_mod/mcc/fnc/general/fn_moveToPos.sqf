@@ -1,8 +1,6 @@
 //==================================================================MCC_fnc_moveToPos======================================================================================
 // move an object to a new location
-if (!(isNull _unit)) then {
-    [[[netid _unit,_unit],_pos] remoteExec ["MCC_fnc_moveToPos", 0, false]];
-};
+// Example: [[[netid _unit,_unit],_pos], "MCC_fnc_moveToPos", true, false] spawn BIS_fnc_MP;
 // Params:
 //	_unit: object, brocadcasting unit
 //	_pos: array, position

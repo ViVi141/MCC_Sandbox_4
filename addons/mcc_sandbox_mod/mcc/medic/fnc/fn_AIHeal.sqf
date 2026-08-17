@@ -20,10 +20,7 @@ if (_savior distance _unit < 3 && alive _unit) then {
 	sleep 3;
 
 	if (_savior distance _unit < 3 && alive _unit  && alive _savior) then {
-if (!(isNull _unit)) then {
-[_unit] remoteExec ["MCC_fnc_wakeUp",_unit];
-};
-};
+		[_unit] remoteExec ["MCC_fnc_wakeUp",_unit];
 	};
 
 	//Oreder him to regroup
@@ -31,7 +28,7 @@ if (!(isNull _unit)) then {
 		doStop _savior;
 		_savior doFollow leader _savior;
 	};
-
+};
 
 _unit setVariable ["MCC_medicSavior",objNull,true];
 _savior setVariable ["MCC_medicSavingUnit",objNull,true];

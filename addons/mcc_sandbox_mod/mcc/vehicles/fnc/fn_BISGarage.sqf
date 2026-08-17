@@ -787,10 +787,7 @@ systemChat "TabSelectLeft";
 				_animations pushback (_checkboxTextures find (_ctrlListAnimations lbpicture _i));
 			};
 
-if (!(isNull _center)) then {
-[_center,_textures,_animations] remoteExecCall ["bis_fnc_initVehicle",_center];
-};
-};
+			[_center,_textures,_animations] remoteExecCall ["bis_fnc_initVehicle",_center];
 		};
 
 		["SetCrewStatus",[_display]] call MCC_fnc_BISGarage;
@@ -1311,3 +1308,4 @@ if (!(isNull _center)) then {
 			} foreach [IDCS_LEFT];
 		};
 	};
+};

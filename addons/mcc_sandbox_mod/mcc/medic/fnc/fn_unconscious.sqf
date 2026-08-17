@@ -31,10 +31,7 @@ if (isplayer _source && _source != _unit) then {
 			if (_answer) then
 			{
 				_string = "<t font='puristaMedium' size='0.5' color='#FFFFFF '>Punished for friendly fire</t>";
-if (!(isNull _source)) then {
-[[_string,0,1,2,1,0,4] remoteExec ["bis_fnc_dynamictext", _source, false]];
-};
-};
+				[[_string,0,1,2,1,0,4], "bis_fnc_dynamictext", _source, false] spawn BIS_fnc_MP;
 				sleep 1;
 				_source setDamage 1;
 			};
@@ -53,15 +50,12 @@ if (!(isNull _source)) then {
 			};
 
 			if (side _source getFriend side _unit < 0.6) then {
-if (!(isNull _source)) then {
-[getplayeruid _source, (100*_xpFactor), _string] remoteExec ["MCC_fnc_addRating", _source, 0];
-};
-};
+				[[getplayeruid _source, (100*_xpFactor),_string], "MCC_fnc_addRating", _source] spawn BIS_fnc_MP;
 			};
 		};
 
-	
-
+	};
+};
 
 
 //Make it captive
@@ -93,10 +87,7 @@ if (surfaceIsWater position _unit) exitWith {_unit setDamage 1};
 
 /*
 //play wounded animation
-if (!(isNull _unit)) then {
-[_unit, ANIM_WOUNDED] remoteExec ["switchMove", 2];
-};
-};
+[_unit,ANIM_WOUNDED] remoteExec ["switchMove",2];
 
 //add 'anim changed' event handler to ensure unit stays in the incap animation
 private _ehAnimChanged = _unit addEventHandler
@@ -106,10 +97,7 @@ private _ehAnimChanged = _unit addEventHandler
 		params["_unit","_anim"];
 
 		if (_anim != ANIM_WOUNDED && alive _unit && (_unit getVariable ["MCC_medicUnconscious",false])) then {
-if (!(isNull _unit)) then {
-[_unit, ANIM_WOUNDED] remoteExec ["switchMove", 2];
-};
-};
+			[_unit,ANIM_WOUNDED] remoteExec ["switchMove",2];
 		};
 	}
 ];
@@ -120,10 +108,7 @@ _unit setUnconscious true;
 _unit allowDamage true;
 
 //Add helper
-if (!(isNull _unit)) then {
-[[_unit, "Hold %1 to heal"], "MCC_fnc_createHelper", false] remoteExec ["MCC_fnc_createHelper", 2];
-};
-
+[[_unit, "Hold %1 to heal"], "MCC_fnc_createHelper", false] call BIS_fnc_MP;
 
 //Handle player
 if (isPlayer _unit) exitWith {

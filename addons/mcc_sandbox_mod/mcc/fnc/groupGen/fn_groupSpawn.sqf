@@ -1,9 +1,6 @@
 //===================================================================MCC_fnc_groupSpawn=========================================================================================
 // Create a group on the server
-// Check if _pos, _unitsArray, _loc, _side, _isEmpty, and _cache are valid before calling remoteExec
-if (!(isNull _pos) && !(isNull _unitsArray) && !(isNull _loc) && !(isNull _side) && !(isNull _isEmpty) && !(isNull _cache)) then {
-    [_pos,_unitsArray,_loc, _side, _isEmpty, _cache] remoteExec ["MCC_fnc_groupSpawn", 2, false];
-};
+//[[_pos,_unitsArray,_loc, _side, _isEmpty, _cache],"MCC_fnc_groupSpawn",false,false] spawn BIS_fnc_MP;
 //	<in>
 //		_pos: Array		Position to spawn
 //		_unitsArray		Array of units or Cfg path

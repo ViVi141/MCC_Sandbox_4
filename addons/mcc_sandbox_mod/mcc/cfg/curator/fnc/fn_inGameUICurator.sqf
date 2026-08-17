@@ -27,8 +27,5 @@ _pos = getpos _module;
 if (count _resualt == 0) exitWith {deleteVehicle _module};
 
 //Start
-if (!(isNull _resualt)) then {
 _resualt remoteExec ["MCC_fnc_inGameUI", 0, true];
-};
-
 deleteVehicle _module;

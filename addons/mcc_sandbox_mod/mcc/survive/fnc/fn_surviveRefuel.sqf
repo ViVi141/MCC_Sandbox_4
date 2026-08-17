@@ -31,11 +31,8 @@ if (_vehicle isKindof "LandVehicle" || _vehicle isKindof "LandVehicle") then {
     _displayName = getText (configfile >> "CfgVehicles" >> typeof _vehicle >> "displayName");
     TitleText [format ["Refueling %1...",_displayName], "PLAIN DOWN",0.5];
   };
-if (!(isNull _vehicle)) then {
-[[_vehicle,_fuel], {(_this select 0) setFuel (_this select 1);}] remoteExec ["BIS_fnc_spawn", _vehicle, false, false];
+	[[_vehicle,_fuel], {(_this select 0) setFuel (_this select 1);}] remoteExec ["BIS_fnc_spawn", _vehicle, false, false];
 };
-};
-
 
 if (_returnItem != "") then {
   switch (true) do {

@@ -74,11 +74,8 @@ if (_support) then {
 	player globalRadio _radioSelf;
 
 	//broadcast
-if (!(isNull player)) then {
-[player, _radioGlobal] remoteExec ["MCC_fnc_radioSupport", playerside, false];
-};
-};
-else {
+	[[player,_radioGlobal] ,"MCC_fnc_radioSupport", playerside,false] call BIS_fnc_MP;
+} else {
 
 	if (_text == "MinefieldAP") then {
 		_path = "";
@@ -91,9 +88,7 @@ else {
 
 if (_pos distance player < 2500) then {
 	player globalRadio "SentEnemyDetectedClose";
-if (!isNil '_markerName' && !isNil '_path' && !isNil '_pos' && !isNil '_text' && !isNil '_tittle') then {
-    [[_markerName, _path, _pos, _text,_tittle, time, "default"], "MCC_fnc_PDAcreatemarker", playerside, false] remoteExec ["MCC_fnc_PDAcreatemarker", playerside, false];
-};
+	[[_markerName, _path, _pos, _text,_tittle, time, "default"] ,"MCC_fnc_PDAcreatemarker", playerside,false] call BIS_fnc_MP;
 } else {
 	player globalRadio "SentNoTarget";
 };

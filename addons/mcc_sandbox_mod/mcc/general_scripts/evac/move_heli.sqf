@@ -78,7 +78,7 @@ if !mcc_isloading then	{
 	if (MCC_capture_state) then
 		{
 		MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _evac)) then { [ [%1, %2, %3, [netid _evac,_evac]],"MCC_fnc_evacMove",false,false] remoteExec ["MCC_fnc_evacMove", 0, false]; };
+							[ [%1, %2, %3, [netid %4,%4]],"MCC_fnc_evacMove",false,false] spawn BIS_fnc_MP;
 							'
 							,[_point1, _point2, _point3]
 							,_flyInHight
@@ -87,9 +87,7 @@ if (!(isNull _evac)) then { [ [%1, %2, %3, [netid _evac,_evac]],"MCC_fnc_evacMov
 							];
 		} else
 			{
-if (!(isNull _evac)) then {
-[_point1, _point2, _point3, _flyInHight, _landing, [netid _evac, _evac]] remoteExec ["MCC_fnc_evacMove", _evac, false];
-};
-};
+			[[[_point1, _point2, _point3], _flyInHight, _landing,[netid _evac,_evac]],"MCC_fnc_evacMove",_evac,false] spawn BIS_fnc_MP;
 			};
+};
 

@@ -21,22 +21,8 @@
 // Return - nothing
 //==============================================================================================================================================================================
 private ["_zoneNumber","_unitPlaced","_safepos","_factor","_missionCenter","_missionRadius","_script_handler","_factor","_isCQB","_totalEnemyUnits","_roadPositions","_enemyfaction","_civFaction","_isCiv","_animals","_vehicles","_armor","_artillery","_isRoadblocks","_missionCenterTrigger","_isAS","_isSB","_dir","_markers","_debug"];
-
-// Validate input parameters
-if (isNil "_this" || {count _this < 1}) exitWith {
-	diag_log "MCC: populateObjective - Invalid parameters";
-};
-
 _missionCenterTrigger 	= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-if (isNull _missionCenterTrigger) exitWith {
-	diag_log "MCC: populateObjective - Invalid mission center trigger";
-};
-
 _missionCenter	= getpos _missionCenterTrigger;
-if (count _missionCenter < 3 || {_missionCenter isEqualTo [0,0,0]}) then {
-	diag_log "MCC: populateObjective - Invalid mission center position";
-	_missionCenter = [0,0,0];
-};
 
 _enemyfaction	= param [1, "OPF_F", [""]];
 _civFaction		= param [2, "CIV_F", [""]];
@@ -52,14 +38,9 @@ _isIED			= param [11, false, [true]];
 _isAS			= param [12, false, [true]];
 _isSB			= param [13, false, [true]];
 _reinforcement	= param [14, 0, [0]];
-_sidePlayer		= param [15, west, [sideUnknown]];
-_enemySide		= param [16, east, [sideUnknown]];
-_markers		= param [17, true, [true]];
-
-// Validate critical parameters
-if (_totalEnemyUnits <= 0) then {_totalEnemyUnits = 20};
-if (_enemyfaction == "") then {_enemyfaction = "OPF_F"};
-if (_civFaction == "") then {_civFaction = "CIV_F"};
+_sidePlayer		= param [15, west];
+_enemySide		= param [16, east];
+_markers		= param [17, true,[true]];
 
 _missionRadius 	= (((triggerArea _missionCenterTrigger) select 0)+ ((triggerArea _missionCenterTrigger) select 1))/2;
 //Let'screate the main zone and placing units
@@ -80,103 +61,66 @@ if (_debug) then {diag_log format ["Total enemy's infantry Spawned in main zone:
 //Garrison
 if (_isCQB) then
 {
-if (!(isNull _missionCenterTrigger)) then {
-[_missionCenter,_missionRadius,0,(_totalEnemyUnits*0.005),_enemyfaction,str _enemySide] remoteExec ["MCC_fnc_garrison", 0, false];
-};
-};
+	[[_missionCenter,_missionRadius,0,(_totalEnemyUnits*0.005),_enemyfaction,str _enemySide],"MCC_fnc_garrison",false,false] spawn BIS_fnc_MP;
 
 	//lock some doors
 	[_missionCenter,_missionRadius,12] spawn MCC_fnc_deleteBrush;
-
+};
 
 // Is _isCiv
 if (_isCiv) then
 {
-if (!(isNull _civFaction)) then {
-[getmarkerpos str _zoneNumber,((getmarkersize str _zoneNumber) select 0) max ((getmarkersize str _zoneNumber) select 1),1,(_totalEnemyUnits*0.005),_civFaction,"CIV"] remoteExec ["MCC_fnc_garrison", 0, false];
+	[[getmarkerpos str _zoneNumber,((getmarkersize str _zoneNumber) select 0) max ((getmarkersize str _zoneNumber) select 1),1,(_totalEnemyUnits*0.005),_civFaction,"CIV"],"MCC_fnc_garrison",false,false] spawn BIS_fnc_MP;
 };
-};
-
 
 //Animals
 if (_animals) then
 {
-if (!(isNull _zoneNumber)) then {
-[_zoneNumber] remoteExec ["MCC_fnc_MWspawnAnimals", 0, false];
-};
-};
+	[[_zoneNumber],"MCC_fnc_MWspawnAnimals",false,false] spawn BIS_fnc_MP;
 	if (_debug) then {diag_log format ["MCC: MW - Animals Spawned in Zone: %1", _unitPlaced]};
-
+};
 
 //Vehicles
 if (_vehicles) then
 {
-	if (!isNil "MCC_MWGroupArrayCar" && !isNil "MCC_MWunitsArrayCar" && {count MCC_MWGroupArrayCar > 0} && {count MCC_MWunitsArrayCar > 0}) then {
-		_unitPlaced = [(_totalEnemyUnits*0.6),_zoneNumber,MCC_MWGroupArrayCar,MCC_MWunitsArrayCar,5,15,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
-		if (_debug) then {diag_log format ["Total enemy's Vehicles Spawned in main zone: %1", _unitPlaced]};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Vehicle arrays not initialized, skipping vehicle spawn"};
-	};
+	_unitPlaced = [(_totalEnemyUnits*0.6),_zoneNumber,MCC_MWGroupArrayCar,MCC_MWunitsArrayCar,5,15,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
+	if (_debug) then {diag_log format ["Total enemy's Vehicles Spawned in main zone: %1", _unitPlaced]};
 };
 
 //Armor
 if (_armor) then
 {
-	if (!isNil "MCC_MWGroupArrayArmored" && !isNil "MCC_MWunitsArrayArmored" && {count MCC_MWGroupArrayArmored > 0} && {count MCC_MWunitsArrayArmored > 0}) then {
-		_unitPlaced = [(_totalEnemyUnits*0.4),_zoneNumber,MCC_MWGroupArrayArmored,MCC_MWunitsArrayArmored,10,30,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
-		if (_debug) then {diag_log format ["Total enemy's Armor Spawned in main zone: %1", _unitPlaced]};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Armored arrays not initialized, skipping armor spawn"};
-	};
+	_unitPlaced = [(_totalEnemyUnits*0.4),_zoneNumber,MCC_MWGroupArrayArmored,MCC_MWunitsArrayArmored,10,30,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
+	if (_debug) then {diag_log format ["Total enemy's Armor Spawned in main zone: %1", _unitPlaced]};
 };
 
 //Support
 if (_vehicles && (random 1 > 0.5)) then
 {
-	if (!isNil "MCC_MWGroupArraySupport" && !isNil "MCC_MWunitsArraySupport" && {count MCC_MWGroupArraySupport > 0} && {count MCC_MWunitsArraySupport > 0}) then {
-		_unitPlaced = [(_totalEnemyUnits*0.3),_zoneNumber,MCC_MWGroupArraySupport,MCC_MWunitsArraySupport,10,30,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
-		if (_debug) then {diag_log format ["Total enemy's Support Vehicles Spawned in main zone: %1", _unitPlaced]};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Support arrays not initialized, skipping support spawn"};
-	};
+	_unitPlaced = [(_totalEnemyUnits*0.3),_zoneNumber,MCC_MWGroupArraySupport,MCC_MWunitsArraySupport,10,30,"LAND",_enemySide] call MCC_fnc_MWSpawnVehicles;
+	if (_debug) then {diag_log format ["Total enemy's Support Vehicles Spawned in main zone: %1", _unitPlaced]};
 };
 
 //Artillery
 if (_artillery != 0) then
 {
-	if (!isNil "MCC_MWunitsArrayStatic" && {count MCC_MWunitsArrayStatic > 0}) then {
-if (!(isNull _missionCenter)) then {
-    [(_totalEnemyUnits*0.2), netId _missionCenter,_missionRadius, MCC_MWunitsArrayStatic, 5, 10, _enemySide, _artillery, _zoneNumber, _markers] remoteExec ["MCC_fnc_MWSpawnStatic",2];
-};
-		if (_debug) then {diag_log "Enemy's Artillery Spawned in main zone"};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Static units array not initialized, skipping artillery spawn"};
-	};
+	[(_totalEnemyUnits*0.2), _missionCenter,_missionRadius, MCC_MWunitsArrayStatic, 5, 10, _enemySide, _artillery, _zoneNumber, _markers] remoteExec ["MCC_fnc_MWSpawnStatic",2];
+	if (_debug) then {diag_log "Enemy's Artillery Spawned in main zone"};
 };
 
 //Static
 if (random 1 > 0.3) then
 {
-	if (!isNil "MCC_MWunitsArrayStatic" && {count MCC_MWunitsArrayStatic > 0}) then {
-if (!(isNull _missionCenter) && {count MCC_MWunitsArrayStatic > 0}) then {
-    [(_totalEnemyUnits*0.2),_missionCenter,_missionRadius,MCC_MWunitsArrayStatic,4,8,_enemySide,999,_zoneNumber] remoteExec ['MCC_fnc_MWSpawnStatic', 0, false];
-};
-		if (_debug) then {diag_log "Enemy's Static Weapons Spawned in main zone"};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Static units array not initialized, skipping static spawn"};
-	};
+	[[(_totalEnemyUnits*0.2),_missionCenter,_missionRadius,MCC_MWunitsArrayStatic,4,8,_enemySide,999,_zoneNumber],"MCC_fnc_MWSpawnStatic",false,false] spawn BIS_fnc_MP;
+	if (_debug) then {diag_log "Enemy's Static Weapons Spawned in main zone"};
 };
 
 //Ship
 _safepos =[_missionCenter ,1,(_missionRadius*2.5),2,2,10,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos; //Check if they are water
 if (str _safepos != "[-500,-500,0]") then
 {
-	if (!isNil "MCC_MWGroupArrayShip" && !isNil "MCC_MWunitsArrayShip" && {count MCC_MWGroupArrayShip > 0} && {count MCC_MWunitsArrayShip > 0}) then {
-		_unitPlaced = [(_totalEnemyUnits*0.2),_zoneNumber,MCC_MWGroupArrayShip,MCC_MWunitsArrayShip,5,15,"WATER",_enemySide] call MCC_fnc_MWSpawnVehicles;
-		if (_debug) then {diag_log format ["Total enemy's Ships Vehicles Spawned in main zone: %1", _unitPlaced]};
-	} else {
-		if (_debug) then {diag_log "MCC: MW - Ship arrays not initialized, skipping ship spawn"};
-	};
+	_unitPlaced = [(_totalEnemyUnits*0.2),_zoneNumber,MCC_MWGroupArrayShip,MCC_MWunitsArrayShip,5,15,"WATER",_enemySide] call MCC_fnc_MWSpawnVehicles;
+	if (_debug) then {diag_log format ["Total enemy's Ships Vehicles Spawned in main zone: %1", _unitPlaced]};
 };
 
 //CheckPoints
@@ -201,16 +145,13 @@ if (_isRoadblocks) then
 					//If no buildings around
 					if ((nearestBuilding _pos) distance _pos >30) then
 					{
-if (!(isNull _pos) && !(isNull _dir) && !(isNull _enemyfaction) && !(isNull _enemySide)) then {
-[_pos, _dir, _enemyfaction, _enemySide] remoteExec ["MCC_fnc_buildRoadblock", 0, false];
-};
-};
+						[[_pos, _dir, _enemyfaction, _enemySide],"MCC_fnc_buildRoadblock",false,false] spawn BIS_fnc_MP;
 					};
 				};
 			};
 		} foreach _roadPositions;
 	};
-
+};
 
 //IEDs
 if (_isIED) then
@@ -269,9 +210,7 @@ if (_isIED) then
 					};
 
 					//Spawn the IED
-if (!(isNull _objectType)) then {
-	[_iedpos,_objectType,"large",floor (random 2),2,false,0,((random 25) + 15),_sidePlayer,_name,_dir,true,_enemySide] remoteExec ["MCC_fnc_trapSingle", 0, false];
-};
+					[[_iedpos,_objectType,"large",floor (random 2),2,false,0,((random 25) + 15),_sidePlayer,_name,_dir,true,_enemySide],"MCC_fnc_trapSingle",false,false] spawn BIS_fnc_MP;
 
 					//Debug
 					if (_debug) then
@@ -302,9 +241,7 @@ if (_reinforcement in [1,2,3]) then
 		_cond set [_x, (_cond select (_x-1)) + 0.3];
 	};
 
-if (!(isNull _missionCenterTrigger)) then {
-	[_reinforcement,_enemySide,getpos _missionCenterTrigger, triggerArea _missionCenterTrigger, _cond,_zoneNumber,_enemyfaction,(missionNamespace getVariable ["MCC_reinforcementWarning",true]),_totalEnemyUnits] remoteExec ["MCC_fnc_MWreinforcement", 0, false];
-};
+	[[_reinforcement,_enemySide,getpos _missionCenterTrigger, triggerArea _missionCenterTrigger, _cond,_zoneNumber,_enemyfaction,(missionNamespace getVariable ["MCC_reinforcementWarning",true]),_totalEnemyUnits],"MCC_fnc_MWreinforcement",false,false] call BIS_fnc_MP;
 };
 
 //all sides but the enemy
@@ -323,9 +260,7 @@ if (_isSB) then {
 			_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
 			_pos = [[[_missionCenter,(_missionRadius*0.4)]],["water"],{true}] call BIS_fnc_randomPos;
 
-if (!(isNull _objectType)) then {
-    [_pos,_objectType,"large",floor (random 2),_playersSides] remoteExec ["MCC_fnc_SBSingle", 0, false];
-};
+			[[_pos,_objectType,"large",floor (random 2),_playersSides],"MCC_fnc_SBSingle",false,false] spawn BIS_fnc_MP;
 
 			//Debug
 			if (_debug) then
@@ -353,9 +288,7 @@ if (_isAS) then {
 			_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
 			_pos = [[[_missionCenter,(_missionRadius*0.4)]],["water"],{true}] call BIS_fnc_randomPos;
 
-if (!(isNull _objectType)) then {
-    [_pos,_objectType,_playersSides,"Armed Civilian",random 360] remoteExec ["MCC_fnc_ACSingle", 0, false];
-};
+			[[_pos,_objectType,_playersSides,"Armed Civilian",random 360],"MCC_fnc_ACSingle",false,false] spawn BIS_fnc_MP;
 
 			//Debug
 			if (_debug) then

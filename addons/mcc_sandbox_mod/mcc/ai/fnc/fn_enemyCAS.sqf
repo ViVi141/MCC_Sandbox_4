@@ -83,10 +83,7 @@ if (_IsCAS) then {
 		_IsCAS = _this select 2;
 		_sidePlayer = _this select 3;
 
-if (!(isNull _sidePlayer)) then {
-["MCCNotificationBad",["CAS","Enemy CAS approaching",""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
-};
-};
+		["MCCNotificationBad",["CAS","Enemy CAS approaching",""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
 
 		while {(alive _casVehicle)} do {
 			_casVehicle setVehicleAmmo 1;
@@ -98,10 +95,7 @@ if (!(isNull _sidePlayer)) then {
 			sleep 60;
 		};
 
-if (!(isNull _sidePlayer)) then {
-	["MCCNotificationGood",["CAS","Enemy CAS down",""]]
-	remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
-};
+		["MCCNotificationGood",["CAS","Enemy CAS down",""]] remoteExec ["bis_fnc_showNotification", _sidePlayer, false];
 
 		sleep 30;
 		if (!isNull _casVehicle) then {deleteVehicle _casVehicle;};
@@ -109,3 +103,4 @@ if (!(isNull _sidePlayer)) then {
 		_totalCASActive = missionNamespace getVariable ["MCC_totalCASActive",0];
 
 		missionNamespace setVariable ["MCC_totalCASActive",(_totalCASActive-1)];
+};

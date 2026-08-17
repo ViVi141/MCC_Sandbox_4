@@ -44,7 +44,7 @@ if (_men distance _ied <4) then {
 				["Placing Charge",10] call MCC_fnc_interactProgress;
 
 				_c4 = "DemoCharge_Remote_Ammo_Scripted" createVehicle position player;
-				player addAction ["<t color=""#FF0000"">" + (localize "STR_MCC_HINT_DETONATE_CHARGE") + "</t>", {
+				player addAction ["<t color=""#FF0000"">Detonate Charge</t>", {
 												player removeAction (_this select 2);
 												((_this select 3) select 0) setDamage 1;
 												((_this select 3) select 1) setvariable ["iedTrigered",true,true];
@@ -83,10 +83,7 @@ if (_men distance _ied <4) then {
 	if (_isEngineer) then {
 		if (_rand > 0.20) then {
 			hint "disarmed";
-if (!(isNull _men)) then {
-[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+			[[[netid _men,_men], format ["disarm%1", (floor random 7)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 
 			sleep 1;
 			if (_isEngineer) then {player addrating 500};
@@ -97,17 +94,11 @@ if (!(isNull _men)) then {
 			if (_rand >0.05) then {
 				hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 
-if (!(isNull _men)) then {
-[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+				[[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 			} else {
 				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
-if (!(isNull _men)) then {
-[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+				[[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
@@ -115,31 +106,23 @@ if (!(isNull _men)) then {
 				sleep 10 + random 10;
 				_ied setvariable ["iedTrigered",true,true];
 			};
-		
-	else {
+		}
+	} else {
 		//If it isn't a bomb expert <*Kaboom*>
 		if (_rand > 0.70) then {
 			hint "disarmed";
-if (!(isNull _men)) then {
-[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+			[[[netid _men,_men], format ["disarm%1", (floor random 7)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 
 			sleep 1;
 			_ied setvariable ["armed",false,true];
 		} else {
 			hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 			if (_rand >0.3) then {
-if (!(isNull _men)) then {
-[netid _men,_men], format ["disarmfail%1", (floor random 3)+1] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
-};
+				[[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 			} else {
 				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
-if (!(isNull _men)) then {
-    [[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
-};
+				[[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
 
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
@@ -147,13 +130,13 @@ if (!(isNull _men)) then {
 				sleep 10 + random 10;
 				_ied setvariable ["iedTrigered",true,true];
 			};
-		
-	
+		};
+	};
 
 	player setVariable ["MCC_interactionActive",false];
 	_ied setVariable ["MCC_isInteracted",false,true];
-
-else {hint (localize "STR_MCC_HINT_TO_FAR_TO_DISARM")};
+}
+else {hint "To far to disarm"};
 _ied setVariable ["MCC_isInteracted",false,true];
 sleep _waitTime;
 player setVariable ["MCC_interactionActive",false];

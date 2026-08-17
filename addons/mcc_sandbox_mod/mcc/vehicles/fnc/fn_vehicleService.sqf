@@ -24,13 +24,10 @@ params [
 		_success = ["Reparing...",(damage _vehicle) * 60,objNull,false] call MCC_fnc_interactProgress;
 
 		if (_success && alive _vehicle && speed _vehicle < 5) then {
-if (!(isNull _vehicle)) then {
-[_vehicle, 0] remoteExec ["setDamage", _vehicle];
-};
-};
+			[_vehicle, 0] remoteExec ["setDamage", _vehicle];
 			playSound "gunReload";
 		};
-	
+	};
 
 	if (!_success) exitWith {};
 
@@ -39,13 +36,10 @@ if (!(isNull _vehicle)) then {
 		_success = ["Rearming...",10,objNull,false] call MCC_fnc_interactProgress;
 
 		if (_success && alive _vehicle && speed _vehicle < 5) then {
-if (!(isNull _vehicle)) then {
-[_vehicle, 1] remoteExec ["setVehicleAmmo", _vehicle];
-};
-};
+			[_vehicle, 1] remoteExec ["setVehicleAmmo", _vehicle];
 			playSound "gunReload";
 		};
-	
+	};
 
 	if (!_success) exitWith {};
 
@@ -54,11 +48,8 @@ if (!(isNull _vehicle)) then {
 		_success = ["Refuelling...",(1 - fuel _vehicle) * 30,objNull,false] call MCC_fnc_interactProgress;
 
 		if (_success && alive _vehicle && speed _vehicle < 5) then {
-if (!(isNull _vehicle)) then {
-[_vehicle, 1] remoteExec ["setFuel", _vehicle];
-};
-};
+			[_vehicle, 1] remoteExec ["setFuel", _vehicle];
 			playSound "gunReload";
 		};
-	
+	};
 

@@ -155,9 +155,7 @@ switch (_LHDType) do
 	case 0: //Destroyer
 	{
 		[_ship] call BIS_fnc_Destroyer01PosUpdate;
-if (!(isNull _ship)) then {
-	_ship remoteExec ["BIS_fnc_Destroyer01Init", 0];
-};
+		//_ship remoteExec ["BIS_fnc_Destroyer01Init",0];
 		sleep 2;
 
 
@@ -168,12 +166,8 @@ if (!(isNull _ship)) then {
 					[MCC_AA_SAM,[0.355652,50.5234,20],180],
 					[MCC_AA_AAA,[0.0202637,-47.999,18],180],
 					[MCC_AA_AAA,[0.394226,36.05,22],0],
-if (!(isNull _this)) then {
-	_this remoteExec ["BIS_fnc_BoatRack01Init", 0, true];
-};
-if (!(isNull _this)) then {
-    [_this, [-11.4057, 12.835, 8], 0] remoteExec ["BIS_fnc_BoatRack01Init", 0, true];
-};
+					[MCC_BOAT_RACK,[11.7208,12.7422,8],0,'_this remoteExec ["BIS_fnc_BoatRack01Init",0,true];'],
+					[MCC_BOAT_RACK,[-11.4057,12.835,8],0,'_this remoteExec ["BIS_fnc_BoatRack01Init",0,true];'],
 					[MCC_HELIPAD,[0.876953,75.5786,9],0]
 				  ]] spawn _fnc_spawnWeapons;
 
@@ -183,10 +177,7 @@ if (!(isNull _this)) then {
 	{
 		[_ship] call BIS_fnc_Carrier01PosUpdate;
 		sleep 5;
-if (!(isNull _ship)) then {
-_ship remoteExec ["BIS_fnc_Carrier01Init", 0];
-};
-};
+		_ship remoteExec ["BIS_fnc_Carrier01Init",0];
 
 		//spawn mobile defense
 		[_ship, _side,[
@@ -299,10 +290,7 @@ _ship remoteExec ["BIS_fnc_Carrier01Init", 0];
 		_trg setPos _temp_pos;
 		_trg setTriggerArea [15, 10, 0, false];
 		_trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-if (!(isNull _trg) && {count thisList > 0}) then {
-_trg setTriggerStatements ["this", "{[thisTrigger, _x] remoteExec ['MCC_fnc_arrestingGear',_x]} forEach thisList;", ""];
-};
-};
+		_trg setTriggerStatements ["this", "{[thisTrigger, _x] remoteExec ['MCC_fnc_arrestingGear',_x]} forEach thisList;", ""];
 
 		//Arresting Gear marker
 		_dummy = createmarker ["gear",_temp_pos];
@@ -330,13 +318,9 @@ _trg setTriggerStatements ["this", "{[thisTrigger, _x] remoteExec ['MCC_fnc_arre
 			/*
 			// For each vehicle add an action to detach from the ship - MP compliant
 			[
-if (!(isNull _vehicle)) then {
-	[_vehicle, format ["%1 %2", localize "STR_CUP_CFG_RELEASEVEHICLE", (getText (configFile >> "CfgVehicles" >> "CUP_B_TowingTractor_USMC" >> "displayName"))], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] remoteExec ["CUP_fnc_detachFromShip", 0, true]}, nil, 1.5, false, true]
-};
+				[_vehicle,[format ["%1 %2",localize "STR_CUP_CFG_RELEASEVEHICLE", (getText (configFile >> "CfgVehicles" >> "CUP_B_TowingTractor_USMC" >> "displayName"))], {[_this, "CUP_fnc_detachFromShip", _this select 0, false, true] call BIS_fnc_MP},nil, 1.5, false, true]],
 				"addAction", true, true
-if (!(isNull (_this select 0))) then {
-	] remoteExec ["CUP_fnc_detachFromShip", _this select 0, false, true];
-};
+			] call BIS_fnc_MP;
 			*/
 
 			{_x addCuratorEditableObjects [[_vehicle],false]} forEach allCurators;
@@ -380,8 +364,8 @@ if (!(isNull (_this select 0))) then {
 		_markers pushBack _dummy;
 
 		_ship setVariable ["MCC_LHDMarkers",_markers,true];
-	
-
+	};
+};
 
 //Set Ships as a service centers
 if (_rearm) then {
@@ -449,7 +433,7 @@ if (_store) then {
 	_dummy setObjectTexture [0,"\A3\boat_f\Boat_Armed_01\data\ui\Boat_Armed_01_minigun.paa"];
 	_dummy setObjectTexture [1,'#(rgb,8,8,3)color(0.5,0.5,0.5,0.1)'];
 	_dummy setObjectTexture [2,'#(rgb,8,8,3)color(0.5,0.5,0.5,0.1)'];
-	[_dummy, ["<t color=""#ff1111"">Ship Control</t>", format ["[0,%1,2] spawn MCC_fnc_LHDspawnMenuInit", _ships find _ship]]] remoteExec ["addAction", 0, true];
+	[_dummy, ["<t color=""#ff1111"">Ship Control</t>", format ["[0,%1,2] spawn MCC_fnc_LHDspawnMenuInit", _ships find _ship]]] remoteExec ["addAction",0,true];
 	//{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 };
 

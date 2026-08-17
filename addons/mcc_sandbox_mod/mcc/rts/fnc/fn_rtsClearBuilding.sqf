@@ -17,14 +17,11 @@ deletevehicle _anchor;
 
 if (_deleteModule) then {
 	//Delete Marker
-if (!(isNull _module)) then {
-[compile format ['deleteMarker "%1";',(_module getVariable ["mcc_markerName",""])]] remoteExec ["BIS_fnc_spawn", _side,false];
-};
-};
+	[compile format ['deleteMarker "%1";',(_module getVariable ["mcc_markerName",""])]] remoteExec ["BIS_fnc_spawn", _side,false];
 
 	//Delete module
 	deletevehicle _module;
-
+};
 
 //Remove old marker
 if (!isnil "MCC_fnc_rtsMakeMarkersGroups") then {

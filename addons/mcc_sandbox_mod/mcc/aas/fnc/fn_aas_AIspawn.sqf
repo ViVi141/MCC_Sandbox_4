@@ -66,10 +66,7 @@ if (typeName (_this select 0) != typeName objNull) then {
 			_spawnVehicles = (_resualt select 7);
 			_startPos = getpos _module;
 
-if (!(isNull _module)) then {
-[_faction, _enemySide, _autoBalance, _minPerSide, _spawnInDefensive, _searchRadius, _useDefaultGear, _startPos, _spawnVehicles] remoteExec ["MCC_fnc_aas_AIspawn", 2];
-};
-};
+			[_faction, _enemySide, _autoBalance, _minPerSide, _spawnInDefensive, _searchRadius, _useDefaultGear, _startPos, _spawnVehicles] remoteExec ["MCC_fnc_aas_AIspawn", 2];
 			_faction = nil;
 		};
 
@@ -87,7 +84,7 @@ if (!(isNull _module)) then {
 		_spawnVehicles = _module getVariable ["spawnVehicles",true];
 	};
 
-
+};
 
 
 _groupSize = 5;

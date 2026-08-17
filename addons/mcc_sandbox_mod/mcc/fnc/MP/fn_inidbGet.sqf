@@ -1,9 +1,6 @@
 //==================================================================MCC_fnc_LootGet======================================================================================
 // Global execute a command on server only  - SERVER ONLY
-if (!(isNull player)) then {
-[[varName,playerID,VarDefaultValue], "MCC_fnc_getVariable", false, false] remoteExec ["MCC_fnc_getVariable", 2, false];
-};
-
+// Example: [[varName,playerID,VarDefaultValue], "MCC_fnc_getVariable", false, false] spawn BIS_fnc_MP;
 //==============================================================================================================================================================================
 private ["_varName1","_varName2","_varName3","_read","_id","_value","_player","_varType","_valueExist","_var"];
 _varName1 	=  [_this,0,"",[""]] call bis_fnc_param;
@@ -34,11 +31,8 @@ if (_read) exitWith {
 		};
 
 	//returns value
-if (!(isNull _player)) then {
-[[_value,_id], "MCC_fnc_inidbSet", _player, false] remoteExec ["MCC_fnc_inidbSet", _player, false];
+	[[_value,_id], "MCC_fnc_inidbSet", _player, false] spawn BIS_fnc_MP;
 };
-};
-
 
 
 //Update server

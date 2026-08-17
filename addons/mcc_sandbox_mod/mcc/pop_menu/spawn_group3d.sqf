@@ -30,7 +30,7 @@ if (mcc_missionmaker == (name player)) then
 				if (MCC_capture_state) then
 				{
 					 MCC_capture_var = MCC_capture_var + FORMAT ["
-if (!(isNull MCC3DValue)) then { [%1, %2, '%3', '%4', '%5', %6, '%7', '%8', %9] remoteExec ['MCC_fnc_simpleSpawn', 0, false]; };
+										[[%1, %2, '%3', '%4', '%5', %6, '%7', '%8', %9],'MCC_fnc_simpleSpawn',true,false] spawn BIS_fnc_MP;		
 										"
 										,MCC3DValue select 0
 										,MCC3DValue select 1
@@ -54,9 +54,7 @@ if (!(isNull MCC3DValue)) then { [%1, %2, '%3', '%4', '%5', %6, '%7', '%8', %9] 
 						waitUntil {(_pos distance Object3D > 8) || (time >_time)};
 					};
 					
-if (!(isNull MCC3DValue)) then {
-    [MCC3DValue select 0, MCC3DValue select 1, mcc_spawnname, mcc_spawntype, mcc_spawnfaction, mcc_spawnwithcrew, MCC_unitInit, MCC_unitName, mcc_hc] remoteExec ['MCC_fnc_simpleSpawn', 0, false];
-};
+					[[MCC3DValue select 0, MCC3DValue select 1, mcc_spawnname, mcc_spawntype, mcc_spawnfaction, mcc_spawnwithcrew,MCC_unitInit,MCC_unitName,mcc_hc],"MCC_fnc_simpleSpawn",true,false] spawn BIS_fnc_MP;		
 				};
 			};
 			sleep 0.1;

@@ -35,7 +35,4 @@ _statment = {
 	_mine spawn {sleep 30; _this setDamage 1};
 };
 
-if (!(isNull _leader)) then {
 [[_pos, _leader], _statment] remoteExec ["spawn", _leader];
-};
-

@@ -124,9 +124,6 @@ publicvariable "MCC_surviveModAllowSearch";
           ];
 
 //Fatigue
-if (!(isNull player)) then {
 {player enableFatigue !(missionNamespace getVariable ["MCC_disableFatigue",false])} remoteExec ["bis_fnc_call", 0];
-};
-
 
 deleteVehicle _module;

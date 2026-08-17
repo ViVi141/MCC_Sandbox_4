@@ -80,9 +80,7 @@ switch (_type) do {
 				 +   'MCC_settingsVars = ' + (str((call compile _temp) select 5)) + ';' + _br
 				 +   'MCC_savedZones = ' + MCC_savedZones + ';' + _br
 				 +   '[MCC_savedZones] spawn MCC_fn_loadZones;' + _br
-if (!(isNull MCC_savedObjectives) && !(isNull MCC_savedGroups) && !(isNull MCC_savedVehicles) && !(isNull MCC_savedWeather) && !(isNull MCC_savedTime) && !(isNull MCC_settingsVars)) then {
-[MCC_savedObjectives, MCC_savedGroups, MCC_savedVehicles, MCC_savedWeather, MCC_savedTime, MCC_settingsVars] remoteExec ["MCC_fnc_loadFromMCC", 2, false];
-};
+				 +   '[[MCC_savedObjectives, MCC_savedGroups, MCC_savedVehicles, MCC_savedWeather, MCC_savedTime,MCC_settingsVars], "MCC_fnc_loadFromMCC", false, false] spawn BIS_fnc_MP;' + _br;
 
 
 		MCC_output = MCC_output + mcc_safe;
@@ -153,10 +151,7 @@ if (!(isNull MCC_savedObjectives) && !(isNull MCC_savedGroups) && !(isNull MCC_s
 			sleep 0.5;
 			closeDialog 0;
 			sleep 0.3;
-if (!(isNull _array)) then {
-[[_array select 0, _array select 1, _array select 2, _array select 3, _array select 4, _array select 5], "MCC_fnc_loadFromMCC", false, false] remoteExec ["MCC_fnc_loadFromMCC", 2, false, false];
-};
-};
+			[[_array select 0, _array select 1, _array select 2, _array select 3, _array select 4, _array select 5], "MCC_fnc_loadFromMCC", false, false] spawn BIS_fnc_MP;
 			[(_array select 6)] spawn MCC_fn_loadZones;
 			_command = 'mcc_isloading=true;closedialog 0;titleText [(localize "STR_MCC_HINT_LOADING_MISSION"),"BLACK FADED",5];' + _string + 'mcc_isloading=false;titleText [(localize "STR_MCC_HINT_MISSION_LOADED"),"BLACK IN",5];';
 
@@ -188,40 +183,30 @@ if (!(isNull _array)) then {
 	case 8:
 	{
 		//load server
-if (!(isNull _object)) then {
-["MCC_campaign",true,true,true,true,true,true,true,true,true] remoteExec ["MCC_fnc_loadServer", 2];
-};
-};
+		["MCC_campaign",true,true,true,true,true,true,true,true,true] remoteExec ["MCC_fnc_loadServer", 2];
 
 		//load players
-if (!(isNull _unit)) then {
-[true,true,true] remoteExec ["MCC_fnc_loadPlayer", 0];
-};
+		[true,true,true] remoteExec ["MCC_fnc_loadPlayer", 0];
 
 
 		sleep 20;
 
 		//Save server
-if (!(isNull MCC_campaign)) then {
-    ['MCC_campaign', 600, false, true, true, true, true, true, true, true] remoteExec ['MCC_fnc_saveServer', 2];
-};
+		['MCC_campaign', 600, false, true, true, true, true, true, true, true] remoteExec ['MCC_fnc_saveServer', 2];
 
 		//save players
-if (!(isNull _unit)) then {
-[300,true,true,true] remoteExec ["MCC_fnc_savePlayer", 2];
-};
+		[300,true,true,true] remoteExec ["MCC_fnc_savePlayer", 2];
 
 
 		systemChat (localize "STR_MCC_HINT_DB_ACTIVATED");
-	
+	};
 
 	//Delete data
 	case 9:
 	{
-if (!isNil {player}) then {
-    [] remoteExec ["MCC_fnc_clearPersistentData", 2];
-};
+		[] remoteExec ["MCC_fnc_clearPersistentData",2];
 		systemChat (localize "STR_MCC_HINT_DB_CLEARED");
 	};
+};
 
 

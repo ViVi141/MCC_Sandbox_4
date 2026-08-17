@@ -19,7 +19,4 @@ publicVariable _varName;
 
 [MCC_ConsoleGroupSelected] spawn MCC_fnc_baseSelected;
 
-if (!(isNull _side)) then {
 [_side,10,true] remoteExec ["MCC_fnc_rtsScanResources",false,false];
-};
-

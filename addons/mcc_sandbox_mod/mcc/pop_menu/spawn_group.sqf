@@ -14,14 +14,12 @@ private ["_type","_groupArray","_nul","_zonePos","_comboBox","_group","_mccdialo
 disableSerialization;
 if (mcc_missionmaker == (name player)) then 
 {
-}
 	if (count mcc_zone_pos == 0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};	//Failsafe incase we trying to spawn something without making a zone first
 	_zonePos = (mcc_zone_pos select (lbCurSel MCCZONENUMBER)+1);
 	if (isnil "_zonePos") exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};	//Failsafe incase we trying to spawn something without making a zone first
 	//Group
 	if ((lbCurSel SPAWNTYPE) == 1) then 
 	{	
- }
 		if (((MCC_groupTypes select (lbCurSel SPAWNBRANCH) select 0)) =="Reinforcement") exitWith 	//Paratroopers
 		{
 			mcc_spawnname = (lbCurSel SPAWNCLASS);    //MCCR14 remove
@@ -46,7 +44,8 @@ if (mcc_missionmaker == (name player)) then
 		};  
 		
 		 //Garrison
-		if (((MCC_groupTypes select (lbCurSel SPAWNBRANCH) select 0)) =="Garrison") exitWith {
+		if (((MCC_groupTypes select (lbCurSel SPAWNBRANCH) select 0)) =="Garrison") exitWith 
+		{							
 			private ["_center","_radius","_action","_intanse","_faction"];
 			_center = (mcc_zone_pos select (mcc_zone_number));
 			_radius = (((mcc_zone_size select (mcc_zone_number))select 0) + ((mcc_zone_size select (mcc_zone_number)) select 1))/2;
@@ -81,10 +80,7 @@ if (mcc_missionmaker == (name player)) then
 			if (MCC_capture_state) then	
 			{
 				MCC_capture_var = MCC_capture_var + FORMAT ['
-if (!(isNull _center)) then {
-[%1,%2,%3,%4,"%5","%6"] remoteExec ["MCC_fnc_garrison", 0, false];
-};
-};
+					[[%1,%2,%3,%4,"%5","%6"],"MCC_fnc_garrison",true,false] call BIS_fnc_MP;;
 					'
 					,_center
 					,_radius
@@ -97,9 +93,7 @@ if (!(isNull _center)) then {
 			else 
 			{
 					mcc_safe = mcc_safe + FORMAT ['
-if (!(isNull _center) && !(isNull _radius) && !(isNull _action) && !(isNull _intanse) && !(isNull _faction) && !(isNull mcc_sidename)) then {
-    [_center,_radius,_action,_intanse,_faction,mcc_sidename] remoteExec ["MCC_fnc_garrison", 0, false];
-};
+					[[%1,%2,%3,%4,"%5","%6"],"MCC_fnc_garrison",true,false] call BIS_fnc_MP;;
 					'
 					,_center
 					,_radius
@@ -108,9 +102,9 @@ if (!(isNull _center) && !(isNull _radius) && !(isNull _action) && !(isNull _int
 					,_faction
 					,mcc_sidename
 					];
-		[_center,_radius,_action,_intanse,_faction,mcc_sidename] remoteExec ["MCC_fnc_garrison", 0, false];
+					[[_center,_radius,_action,_intanse,_faction,mcc_sidename],"MCC_fnc_garrison",true,false] call BIS_fnc_MP;;
+			};
 		};
-	};
 			
 		mcc_spawntype="GROUP";
 		
@@ -133,6 +127,7 @@ if (!(isNull _center) && !(isNull _radius) && !(isNull _action) && !(isNull _int
 			mcc_spawnfaction = (MCC_groupArray select (lbCurSel SPAWNCLASS)) select 2;
 			mcc_spawndisplayname = (MCC_groupArray select (lbCurSel SPAWNCLASS)) select 3;
 		};
+	};
 		
 	if ((lbCurSel SPAWNTYPE) == 0) then 	//Units
 	{ 
@@ -325,7 +320,7 @@ if (!(isNull _center) && !(isNull _radius) && !(isNull _action) && !(isNull _int
 	mcc_track_units = false;
 	
 	_nul=[4] execVM MCC_path + "mcc\general_scripts\mcc_SpawnStuff.sqf";
-
+} 
 else 
 {
 	player globalchat "Access Denied";

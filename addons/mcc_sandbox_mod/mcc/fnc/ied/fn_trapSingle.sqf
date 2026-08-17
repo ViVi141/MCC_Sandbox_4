@@ -1,8 +1,6 @@
 //===================================================================MCC_fnc_trapSingle=============================================================================
 // Create an IED
-if (!(isNull _fakeIed)) then {
-    [_fakeIed,_trapvolume,_IEDExplosionType,_IEDDisarmTime,_IEDJammable,_IEDTriggerType,_trapdistance,_iedside] remoteExec ["MCC_fnc_createIED",2];
-};
+//Example:[[pos,IEDkind,IEDVolume,IEDExplosionType,IEDDisarmTime,IEDJammable,IEDTriggerType,IEDdistance,IEDside,IEDMarkerName,IEDDir,_groupArray,_ambushSide],'MCC_fnc_trapSingle',true,false] call BIS_fnc_MP;
 // Params:
 // 	pos: array, trap position
 // 	IEDkind: string, any oject's vehicleClass
@@ -49,16 +47,10 @@ _fakeIed = _trapkind createVehicle _pos;
 _fakeIed setpos _pos;
 _fakeIed setdir _iedDir;
 _fakeIed setVariable ["isIED",true,true];
-if (!(isNull _fakeIed)) then {
-_fakeIed setVariable ["vehicleinit", format ["_null =[[_this,'%1',%2,%3,%4,%5,%6,'%7'], 'MCC_fnc_createIED', false, false] remoteExec [0];", _trapvolume, _IEDExplosionType, _IEDDisarmTime, _IEDJammable, _IEDTriggerType, _trapdistance, _iedside]];
-};
-
+_fakeIed setvariable ["vehicleinit",format ["_null =[[_this,'%1',%2,%3,%4,%5,%6,'%7'], 'MCC_fnc_createIED', false, false] spawn BIS_fnc_MP;",_trapvolume,_IEDExplosionType,_IEDDisarmTime,_IEDJammable,_IEDTriggerType,_trapdistance,_iedside]];
 {_x addCuratorEditableObjects [[_fakeIed],false]} forEach allCurators;
 
-if (!(isNull _fakeIed)) then {
 [_fakeIed,_trapvolume,_IEDExplosionType,_IEDDisarmTime,_IEDJammable,_IEDTriggerType,_trapdistance,_iedside] remoteExec ["MCC_fnc_createIED",2];
-};
-
 
 //Spawn AMBUSH
 if (_groupArray) then {
@@ -91,10 +83,7 @@ if (_groupArray) then {
 
 	sleep 2;
 	//Sync the IED and the ambush group
-if (!(isNull _ambushPos) && !(isNull _pos)) then {
-[[_ambushPos, _pos], "MCC_fnc_iedSync", false, false] remoteExec ["MCC_fnc_iedSync", 2, false];
+	[[_ambushPos , _pos],"MCC_fnc_iedSync",false,false] call BIS_fnc_MP;
 };
-};
-
 
 _fakeIed

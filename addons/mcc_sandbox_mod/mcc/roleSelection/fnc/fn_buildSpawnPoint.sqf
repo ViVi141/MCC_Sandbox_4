@@ -1,7 +1,6 @@
 //================================================================MCC_fnc_buildSpawnPoint=============================================================================
 //Create a spawn point to the given side - SERVER ONLY
-[[pos, dir, side, size, destructable], "MCC_fnc_buildSpawnPoint", false, false] remoteExec ["MCC_fnc_buildSpawnPoint", 2, false];
-
+// Example: [[pos, dir, side,size,destructable], "MCC_fnc_buildSpawnPoint", false, false] spawn BIS_fnc_MP;
 // pos: Array, position
 // dir; number, direction
 // side: string, "west", "east" or "GUER"
@@ -102,10 +101,7 @@ switch (_mode) do
 		if !(isServer) exitWith {};
 
 		if (_enableHud) then {
-if (!(isNull _pos) && !(isNull _dir) && !(isNull _side) && !(isNull _size) && !(isNull _destructable) && !(isNull _animate) && !(isNull _construct) && !(isNull _teleport) && !(isNull _enableHud)) then {
-[_pos,_dir,_side,_size,_destructable,_animate,_construct,_teleport,_enableHud,"initHUDLocal"] remoteExec ["MCC_fnc_buildSpawnPoint", 0];
-};
-};
+			[_pos,_dir,_side,_size,_destructable,_animate,_construct,_teleport,_enableHud,"initHUDLocal"] remoteExec ["MCC_fnc_buildSpawnPoint", 0];
 		};
 
 		//animate the process of building a FOB
@@ -226,9 +222,7 @@ if (!(isNull _pos) && !(isNull _dir) && !(isNull _side) && !(isNull _size) && !(
 												_mark = _obj getVariable ["mcc_fob_name",""];
 												_side = _obj getVariable ["side",civilian];
 
-if (!isnil '_mark') then {
-[compile format ['deleteMarker "%1";',_mark],"BIS_fnc_spawn", _side,false] remoteExec ["BIS_fnc_spawn", _side, false];
-};
+												[compile format ['deleteMarker "%1";',_mark],"BIS_fnc_spawn", _side,false] call BIS_fnc_MP;
 
 												_flag = _obj getVariable ["mcc_flag",objnull];
 												if (!isnil "_flag") then
@@ -244,10 +238,7 @@ if (!isnil '_mark') then {
 			_dummy setvariable ["mcc_fob_name",_name, true];
 
 			//Create marker
-if (!(isNull _pos)) then {
-[[_name, _pos, "colorGreen", "loc_Bunker", _name, false] remoteExec ["BIS_fnc_markerCreate", _side, false]];
-};
-};
+			[[[_name], _pos, "colorGreen", "loc_Bunker",_name,false],"BIS_fnc_markerCreate", _side,false] call BIS_fnc_MP;
 		} else {
 			//Not destroyable
 			_dummy addEventHandler ["handledamage",{0}];
@@ -265,4 +256,5 @@ if (!(isNull _pos)) then {
 		};
 
 		[_side, _dummy] call BIS_fnc_addRespawnPosition;
-	
+	};
+};

@@ -118,9 +118,7 @@ switch (_action) do
             clearItemCargoGlobal _vehicle;
         };
 
-if (!(isNull _vehicle)) then {
-[[_vehicle], {MCC_curator addCuratorEditableObjects [[_this select 0],false];}] remoteExec ["BIS_fnc_spawn", false, false, false];
-};
-};
+		[[_vehicle], {MCC_curator addCuratorEditableObjects [[_this select 0],false];}] remoteExec ["BIS_fnc_spawn", false, false, false];
         closeDialog 0;
     };
+};

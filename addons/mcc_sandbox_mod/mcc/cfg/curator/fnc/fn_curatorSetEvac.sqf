@@ -15,12 +15,9 @@ if (typeName (_module getVariable ["side",true]) == typeName 0) exitWith {
 	_campaign = (_module getVariable ["campaign",0]) == 1;
 
 	{
-if (!(isNull _x)) then {
-[_x, _side, _gunners, _campaign] remoteExec ["MCC_fnc_setEvac", 2];
-};
-};
+		[_x, _side, _gunners, _campaign] remoteExec ["MCC_fnc_setEvac",2];
 	} forEach (synchronizedObjects _module);
-
+};
 
 //Not curator exit
 if (!(local _module) || isnull curatorcamera) exitWith {};
@@ -55,10 +52,7 @@ _campaign = _resualt select 2;
 
 
 
-if (!(isNull _object)) then {
-[_object, _side, _gunners, _campaign] remoteExec ["MCC_fnc_setEvac", 2];
-};
-
+[_object, _side, _gunners, _campaign] remoteExec ["MCC_fnc_setEvac",2];
 
 
 deleteVehicle _module;

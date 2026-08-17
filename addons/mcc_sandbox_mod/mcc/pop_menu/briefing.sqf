@@ -8,7 +8,4 @@ _type = _this select 0;
 _dlg = (uiNamespace getVariable "MCC_groupGen_Dialog");
 _string = ctrlText (_dlg displayCtrl MCC_BRIEFING_TEXT);
 
-if (!(isNull _string) && !(isNull _type)) then {
-[_string, _type] remoteExec ["MCC_fnc_makeBriefing", 2];
-};
-
+[[_string, _type],"MCC_fnc_makeBriefing",false,false] spawn BIS_fnc_MP;
