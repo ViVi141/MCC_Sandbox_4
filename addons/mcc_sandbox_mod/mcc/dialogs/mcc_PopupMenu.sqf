@@ -36,22 +36,22 @@ if (_index == 0) exitWith {
 				};
 
 				_ok = createDialog "mcc_loginDialog";
-				if !(_ok) exitWith { hint "createDialog failed" };
+				if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATEDIALOG_FAILED") };
 			};
 			case 1:
 			{
 				_ok = createDialog "MCC3D_Dialog";
-				if !(_ok) exitWith { hint "createDialog failed" };
+				if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATEDIALOG_FAILED") };
 			};
 			case 2:
 			{
 				_ok = createDialog "mcc_groupGen";
-				if !(_ok) exitWith { hint "createDialog failed" };
+				if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATEDIALOG_FAILED") };
 			};
 			case 3:
 			{
 				_ok = createDialog "MCCMWDialog";
-				if !(_ok) exitWith { hint "createDialog failed" };
+				if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATEDIALOG_FAILED") };
 			};
 		};
 

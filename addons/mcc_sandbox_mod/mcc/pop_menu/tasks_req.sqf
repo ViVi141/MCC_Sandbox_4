@@ -11,7 +11,7 @@ _dlg = (uiNamespace getVariable "MCC_groupGen_Dialog");
 _mccTasks = missionNamespace getVariable ["MCC_tasks",[]];
 
 //Make sure the player created a task
-if (!(_actionID in [0,5,6]) && count _mccTasks <=0) exitWith {hint "Create a task first"};
+if (!(_actionID in [0,5,6]) && count _mccTasks <=0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_TASK_FIRST")};
 
 switch (true) do {
 
@@ -23,7 +23,7 @@ switch (true) do {
 		_pos = [];
 
 		if (MCC_capture_state) then {
-			hint "Task Captured";
+			hint (localize "STR_MCC_HINT_TASK_CAPTURED");
 			MCC_capture_var = MCC_capture_var + FORMAT ['
 							[%1, "%2", "%3", %4, %5, %6] remoteExec ["MCC_fnc_makeTask",2];
 							'
@@ -45,7 +45,7 @@ switch (true) do {
 									,0
 									,str _taskType
 									];
-			hint "Task updated";
+			hint (localize "STR_MCC_HINT_TASK_UPDATED");
 			[_actionID, _stringName, _stringDescription, _pos,0, _taskType] remoteExec ["MCC_fnc_makeTask",2];
 
 			sleep 1;
@@ -66,7 +66,7 @@ switch (true) do {
 		stringDescription = _mccTasks select (lbCurSel MCC_TASKS_LIST) select 2;
 		typ = _actionID;
 
-		hint "Left click on the map to set a WP for this Task";
+		hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_SET_A_WP_FOR_THIS_TASK");
 
 		if (MCC_capture_state) then {
 			onMapSingleClick " 	hint 'Wp captured.';
@@ -108,7 +108,7 @@ switch (true) do {
 					};
 
 		if (MCC_capture_state) then {
-			hint "Task Succeeded Captured";
+			hint (localize "STR_MCC_HINT_TASK_SUCCEEDED_CAPTURED");
 			MCC_capture_var = MCC_capture_var + FORMAT ['
 								[%1,%2] spawn bis_fnc_taskSetState;
 								'
@@ -165,7 +165,7 @@ switch (true) do {
 		_taskID = _mccTasks select (lbCurSel MCC_TASKS_LIST) select 1;
 
 		if (MCC_capture_state) then {
-			hint "Task Captured";
+			hint (localize "STR_MCC_HINT_TASK_CAPTURED");
 			MCC_capture_var = MCC_capture_var + FORMAT ['
 							[%1,%2] remoteExec ["MCC_fnc_makeTask",2];
 							'

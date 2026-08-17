@@ -13,7 +13,7 @@ if !mcc_isloading then	{
 	deletemarkerlocal "evac_marker2";
 	deletemarkerlocal "evac_marker3";
 
-	hint  "Left click on the map to put 1st WP";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_1ST_WP");
 	click = false;
 	onMapSingleClick "point1 = _pos;
 	click = true;
@@ -30,7 +30,7 @@ if !mcc_isloading then	{
 	_point1 =getmarkerpos "evac_marker1";
 	sleep 0.5;
 
-	hint  "Left click on the map to put 2nd WP";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_2ND_WP");
 
 	onMapSingleClick "point2 = _pos;
 	click = true;
@@ -47,7 +47,7 @@ if !mcc_isloading then	{
 	_point2 =getmarkerpos "evac_marker2";
 	sleep 0.5;
 
-	hint  "Left click on the map to put 3rd WP";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_3RD_WP");
 
 	onMapSingleClick "point3 = _pos;
 	click = true;
@@ -64,7 +64,7 @@ if !mcc_isloading then	{
 	_point3 =getmarkerpos "evac_marker3";
 	sleep 0.5;
 
-	hint "Markers placed";
+	hint (localize "STR_MCC_HINT_MARKERS_PLACED");
 	if ((lbCurSel MCC_EVAC_SELECTED) == -1) exitWith {};
 
 	_evacVehicles = missionNamespace getvariable [format ["MCC_evacVehicles_%1",playerside],[]];

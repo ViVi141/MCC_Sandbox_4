@@ -34,14 +34,14 @@ if (MCC_ambushPlacing && _pressed!=1) exitWith {
 	IEDDir = [MCC_pointA,MCC_pointB] call BIS_fnc_dirTo;
 
 	if (MCC_capture_state) then {
-		hint "Ambush Captured.";
+		hint (localize "STR_MCC_HINT_AMBUSH_CAPTURED");
 		MCC_capture_var = MCC_capture_var
 if (!(isNull MCC_pointA) && !(isNull IEDAmbushspawnname) && !(isNull mcc_sidename) && !(isNull IedName) && !(isNull MCC_pointB)) then {
 [MCC_pointA, IEDAmbushspawnname, mcc_sidename, IedName, IEDDir, MCC_pointB, MCC_IEDisSpotter, iedside] remoteExec ["MCC_fnc_ambushSingle", 0, false];
 };
 };
 	} else  {
-		hint "Ambush Placed.";
+		hint (localize "STR_MCC_HINT_AMBUSH_PLACED");
 if (!(isNull MCC_pointA) && !(isNull IEDAmbushspawnname) && !(isNull mcc_sidename) && !(isNull IedName) && !(isNull MCC_pointB)) then {
 [MCC_pointA,IEDAmbushspawnname,mcc_sidename,IedName,IEDDir,MCC_pointB,MCC_IEDisSpotter,iedside] remoteExec ["MCC_fnc_ambushSingle",2,false];
 };

@@ -38,4 +38,4 @@ if (missionNamespace getVariable ["MCC_teleportToTeam",false]) then {
 		};
 	};
 
-} else {hint "Telpeport is N/A"};
+} else {hint (localize "STR_MCC_HINT_TELPEPORT_IS_N_A")};

@@ -15,9 +15,9 @@ disableSerialization;
 if (mcc_missionmaker == (name player)) then 
 {
 }
-	if (count mcc_zone_pos == 0) exitWith {hint "Create a zone first"};	//Failsafe incase we trying to spawn something without making a zone first
+	if (count mcc_zone_pos == 0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};	//Failsafe incase we trying to spawn something without making a zone first
 	_zonePos = (mcc_zone_pos select (lbCurSel MCCZONENUMBER)+1);
-	if (isnil "_zonePos") exitWith {hint "Create a zone first"};	//Failsafe incase we trying to spawn something without making a zone first
+	if (isnil "_zonePos") exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};	//Failsafe incase we trying to spawn something without making a zone first
 	//Group
 	if ((lbCurSel SPAWNTYPE) == 1) then 
 	{	

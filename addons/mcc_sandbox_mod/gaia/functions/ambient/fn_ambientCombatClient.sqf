@@ -30,7 +30,7 @@ while{true}do
 				if (_simu == "soldier") then
 				{
 					_grp = [(position _x), civilian, [((_Civs select (floor random (count _Civs)))select 0)]] call BIS_fnc_spawnGroup;
-					hint "civvie is there";
+					hint (localize "STR_MCC_HINT_CIVVIE_IS_THERE");
 					sleep 3;
 				};
 			};

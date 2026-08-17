@@ -11,7 +11,7 @@ if !mcc_isloading then {
 	{
 		case 0:	//West
 		{
-			hint "click on map where you want your start location";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_YOUR_START_LOCATION");
 			onMapSingleClick "
 					MCC_START_WEST  = _pos;
 					publicVariable ""MCC_START_WEST"";
@@ -42,7 +42,7 @@ if (!(isNull MCC_START_GUER)) then {
 
 		case 1:	//East
 		{
-			hint "click on map where you want your start location";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_YOUR_START_LOCATION");
 			onMapSingleClick "
 					MCC_START_EAST  = _pos;
 					publicVariable ""MCC_START_EAST"";
@@ -73,7 +73,7 @@ if (!(isNull MCC_START_GUER)) then {
 
 		case 2:	//Guer
 		{
-			hint "click on map where you want your start location";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_YOUR_START_LOCATION");
 			onMapSingleClick "
 					MCC_START_GUER  = _pos;
 					publicVariable ""MCC_START_GUER"";
@@ -104,7 +104,7 @@ if (!(isNull MCC_START_GUER)) then {
 
 		case 3:	//Civ
 		{
-			hint "click on map where you want your start location";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_YOUR_START_LOCATION");
 			onMapSingleClick "
 					MCC_START_CIV  = _pos;
 					publicVariable ""MCC_START_CIV"";
@@ -186,7 +186,7 @@ if (!(isNull _unit)) then {
 
 		case 7:	//FOB West
 		{
-			hint "click on map inorder to place the FOB";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
 if (!(isNull _pos)) then {
 	[_pos, 0, 'west', 'FOB', true, false, false, MCC_teleportAtStart] remoteExec ["MCC_fnc_buildSpawnPoint", 0, false];
@@ -205,7 +205,7 @@ if (!(isNull _pos)) then {
 
 		case 8:	//FOB East
 		{
-			hint "click on map inorder to place the FOB";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
 if (!(isNull _pos)) then {
 	[_pos, 0, 'east', 'FOB', true, false, false, MCC_teleportAtStart] remoteExec ["MCC_fnc_buildSpawnPoint", 0, false];
@@ -222,7 +222,7 @@ if (!(isNull _1)) then { [%1, 0, 'east', 'FOB', true] remoteExec ["MCC_fnc_build
 
 		case 9:	//FOB RESISTANCE
 		{
-			hint "click on map inorder to place the FOB";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
 if (!(isNull _pos)) then {
     [_pos, 0, 'GUER', 'FOB', true, false, false, MCC_teleportAtStart] remoteExec ["MCC_fnc_buildSpawnPoint", 0, false];
@@ -241,7 +241,7 @@ if (!(isNull _pos)) then {
 
 		case 10:	//FOB Civilian
 		{
-			hint "click on map inorder to place the FOB";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
 if (!(isNull _pos)) then {
 	[_pos, 0, 'CIV', 'FOB', true, false, false, MCC_teleportAtStart] remoteExec ["MCC_fnc_buildSpawnPoint", 0, false];

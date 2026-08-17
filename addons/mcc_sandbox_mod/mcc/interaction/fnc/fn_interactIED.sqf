@@ -95,14 +95,14 @@ if (!(isNull _men)) then {
 			_ied setVariable ["MCC_isInteracted",false,true];
 		} else {
 			if (_rand >0.05) then {
-				hint "Fail to disarm";
+				hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 
 if (!(isNull _men)) then {
 [[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 };
 };
 			} else {
-				hint "Critical fail start runing";
+				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
 if (!(isNull _men)) then {
 [[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
@@ -128,14 +128,14 @@ if (!(isNull _men)) then {
 			sleep 1;
 			_ied setvariable ["armed",false,true];
 		} else {
-			hint "Fail to disarm";
+			hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 			if (_rand >0.3) then {
 if (!(isNull _men)) then {
 [netid _men,_men], format ["disarmfail%1", (floor random 3)+1] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 };
 };
 			} else {
-				hint "Critical fail start runing";
+				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
 if (!(isNull _men)) then {
     [[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
@@ -153,7 +153,7 @@ if (!(isNull _men)) then {
 	player setVariable ["MCC_interactionActive",false];
 	_ied setVariable ["MCC_isInteracted",false,true];
 
-else {hint "To far to disarm"};
+else {hint (localize "STR_MCC_HINT_TO_FAR_TO_DISARM")};
 _ied setVariable ["MCC_isInteracted",false,true];
 sleep _waitTime;
 player setVariable ["MCC_interactionActive",false];

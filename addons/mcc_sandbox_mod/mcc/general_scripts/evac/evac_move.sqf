@@ -16,7 +16,7 @@ _cargoUnits	   = [];
 	};
 } foreach (fullCrew _heli);
 
-if (!local _heli) exitWith {hint "vehicle must be local";};
+if (!local _heli) exitWith {hint (localize "STR_MCC_HINT_VEHICLE_MUST_BE_LOCAL");};
 
 if (_height == 5000) then //We got a vehicle
 {

@@ -130,7 +130,7 @@ switch (_type) do
 	};
 
 if (_type == 0 || _type == 1) then {
-	hint "Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_HOLD_AND_DRAG_THE_CURSOR_TO_MARK_THE_AREA_AND_DIRECTION_OF_THE_AIR_SUPPORT");
 	MCC_CASrequestMarker = true;
 	};
 

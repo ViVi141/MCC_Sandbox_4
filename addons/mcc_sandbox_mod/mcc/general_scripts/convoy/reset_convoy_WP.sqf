@@ -9,7 +9,7 @@ if !mcc_isloading then
 	deletemarkerlocal "marker4";
 	deletemarkerlocal "marker5";
 
-	hint  "Left click on the map to put start position for the convy";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_START_POSITION_FOR_THE_CONVY");
 
 	onMapSingleClick "point1 = _pos;
 	click = true;
@@ -26,7 +26,7 @@ if !mcc_isloading then
 	_point1 =getmarkerpos "marker1";
 	sleep 0.5;
 
-	hint  "Left click on the map to put first convoy point";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_FIRST_CONVOY_POINT");
 
 	onMapSingleClick "point2 = _pos;
 	click = true;
@@ -43,7 +43,7 @@ if !mcc_isloading then
 	_point2 =getmarkerpos "marker2";
 	sleep 0.5;
 
-	hint  "Left click on the map to put second convoy point";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_SECOND_CONVOY_POINT");
 
 	onMapSingleClick "point3 = _pos;
 	click = true;
@@ -60,7 +60,7 @@ if !mcc_isloading then
 	_point3 =getmarkerpos "marker3";
 	sleep 0.5;
 
-	hint  "Left click on the map to put third convoy point";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_THIRD_CONVOY_POINT");
 
 	onMapSingleClick "point4 = _pos;
 	click = true;
@@ -77,7 +77,7 @@ if !mcc_isloading then
 	_point4 =getmarkerpos "marker4";
 	sleep 0.5;
 
-	hint  "Left click on the map to put the last convoy point";
+	hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_THE_LAST_CONVOY_POINT");
 
 	onMapSingleClick "point5 = _pos;
 	click = true;

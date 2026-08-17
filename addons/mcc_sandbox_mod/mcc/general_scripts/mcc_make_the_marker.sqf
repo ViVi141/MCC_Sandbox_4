@@ -74,5 +74,5 @@ if (!MCC_capture_state) then
 								,mcc_hc
 								,MCC_Marker_dir
 								];
-		hint "Action captured";
+		hint (localize "STR_MCC_HINT_ACTION_CAPTURED");
 	};

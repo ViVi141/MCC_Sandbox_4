@@ -45,7 +45,7 @@ if !mcc_isloading then
 		{
 			if (MCCLHDSpawned) then
 			{
-				hint "Evac Vehicle spawned on LHD";
+				hint (localize "STR_MCC_HINT_EVAC_VEHICLE_SPAWNED_ON_LHD");
 				_pos = getmarkerpos "pos4";
 if (!(isNull _pos)) then {
 [MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 2, false];
@@ -60,14 +60,14 @@ if (!isNull _pos) then { ['%1',%2] remoteExec ["MCC_fnc_evacSpawn", 2, false]; }
 			}
 			else
 			{
-				hint "LHD is not available, evac chopper can't be spawned"
+				hint (localize "STR_MCC_HINT_LHD_IS_NOT_AVAILABLE_EVAC_CHOPPER_CAN_T_BE_SPAWNED")
 			};
 		};
 
 		//Spawn on land
 		if (_option == 1) then
 		{
-			hint "click on map to spawn evac vechicle";
+			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_TO_SPAWN_EVAC_VECHICLE");
 			onMapSingleClick " 	hint localize "STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED";
 if (!(isNull MCCEvacHeliType)) then {
 [MCCEvacHeliType, _pos] remoteExec ["MCC_fnc_evacSpawn", 0, false, false];

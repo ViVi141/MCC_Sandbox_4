@@ -219,7 +219,7 @@ if (_action == 1) then
 {			
 	_type = lbCurSel UNIT_TYPE;
 	
-	if (_type in [7,8,-1]) exitWith {hint "Cannot add static object to a group"};
+	if (_type in [7,8,-1]) exitWith {hint (localize "STR_MCC_HINT_CANNOT_ADD_STATIC_OBJECT_TO_A_GROUP")};
 	
 	if ((lbCurSel UNIT_CLASS) == -1) exitWith {};
 	

@@ -1,6 +1,6 @@
 // "for Spectating Script";
 // "Handles events such as keyboard keypresses";
-// "by Kegetys <kegetys [ät] dnainternet.net>";
+// "by Kegetys <kegetys [ï¿½t] dnainternet.net>";
 
 _type = _this select 0;
 _param = _this select 1;
@@ -805,7 +805,7 @@ switch (_type) do
 */
 				
 	default {
-		hint "Unknown event";
+		hint (localize "STR_MCC_HINT_UNKNOWN_EVENT");
 	};
 };
 

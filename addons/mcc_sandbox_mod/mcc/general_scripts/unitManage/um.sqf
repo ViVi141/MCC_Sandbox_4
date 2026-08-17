@@ -16,7 +16,7 @@ switch (_type) do {
 	//Teleport
 	case 0:{
 		mapClick = false;
-		hint "Click on the map";
+		hint (localize "STR_MCC_HINT_CLICK_ON_THE_MAP");
 		onMapSingleClick " 	hint format ['%1 teleported', UMName];
 							teleportPos = _pos;
 							mapClick = true;
@@ -57,7 +57,7 @@ if (!(isNull _x)) then {
 			if (MCC_UMUnit==0) then
 			{
 				_targetUnit = MCC_UMunitsNames select (lbCurSel MCC_UM_LIST);	//Hijacked unit
-				if (isplayer _targetUnit) exitwith {hint "Can't hijak other players"};
+				if (isplayer _targetUnit) exitwith {hint (localize "STR_MCC_HINT_CAN_T_HIJAK_OTHER_PLAYERS")};
 				if (isNil "_targetUnit" || isNull _targetUnit) exitWith {};
 				MCC_PrevHijacked_Group = netID (group _targetUnit);
 				MCC_Prev_HijackedGroupIsLeader = if (leader group _targetUnit == _targetUnit) then {true} else {false};
@@ -137,7 +137,7 @@ if (!(isNull _x)) then {
 				};
 			}
 			else
-			{hint "Can only hijak units not groups"};
+			{hint (localize "STR_MCC_HINT_CAN_ONLY_HIJAK_UNITS_NOT_GROUPS")};
 		};
 
 		case 3:	//Markers
@@ -265,7 +265,7 @@ if (!(isNull _x)) then {
 			{
 			if (MCC_UMUnit==1) then
 				{
-				hint "Only units can be assighned as high commanders";
+				hint (localize "STR_MCC_HINT_ONLY_UNITS_CAN_BE_ASSIGHNED_AS_HIGH_COMMANDERS");
 				}
 				else
 				{
@@ -285,7 +285,7 @@ if (!(isNull UMName)) then {
 			if (MCC_UMUnit==0) then
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
-			hint "cleared all High Command units";
+			hint (localize "STR_MCC_HINT_CLEARED_ALL_HIGH_COMMAND_UNITS");
 if (!(isNull UMName)) then {
 [[netID UMName,UMName],1] remoteExec ["MCC_fnc_highCommand", 0, false];
 };
@@ -300,7 +300,7 @@ if (!(isNull UMName)) then {
 			if (MCC_UMUnit==0) then
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
-			hint "Group Added";
+			hint (localize "STR_MCC_HINT_GROUP_ADDED");
 if (!(isNull UMName)) then {
 [[netID UMName,UMName],2] remoteExec ["MCC_fnc_highCommand", 0, false];
 };
@@ -329,7 +329,7 @@ if (!(isNull UMName)) then {
 		case 9:	//HALO
 		{
 			/*
-			hint "click on the map to start the Parachute";
+			hint (localize "STR_MCC_HINT_CLICK_ON_THE_MAP_TO_START_THE_PARACHUTE");
 			MCC_click = false;
 			onMapSingleClick " 	hint format ['%1 Paradroped', MCC_UMunitsNames];
 								MCC_pos = _pos;
@@ -361,7 +361,7 @@ if (!(isNull _x)) then {
 			*/
 			MCC_UMparadropIsHalo = 2; //HALO
 			MCC_UMParadropRequestMarker = true;
-			hint "click and dragto start the Drop";
+			hint (localize "STR_MCC_HINT_CLICK_AND_DRAGTO_START_THE_DROP");
 		};
 
 		case 10:	//Parachute
@@ -374,12 +374,12 @@ if (!(isNull _x)) then {
 				MCC_UMparadropIsHalo = 1; //Parachute
 			};
 			MCC_UMParadropRequestMarker = true;
-			hint "click and dragto start the Drop";
+			hint (localize "STR_MCC_HINT_CLICK_AND_DRAGTO_START_THE_DROP");
 		};
 
 		case 11:	//Broadcast
 		{
-			hint "Live feed is broadcasting";
+			hint (localize "STR_MCC_HINT_LIVE_FEED_IS_BROADCASTING");
 			if (MCC_UMUnit==0) then
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
@@ -413,7 +413,7 @@ if (!(isNull UMName)) then {
 
 		case 13:	//Join
 		{
-			hint "Click on the unit or group to select it then click on the unit or group you want it to join to";
+			hint (localize "STR_MCC_HINT_CLICK_ON_THE_UNIT_OR_GROUP_TO_SELECT_IT_THEN_CLICK_ON_THE_UNIT_OR_GROUP_YOU_WANT_IT_TO_JOIN_TO");
 			if (MCC_UMUnit==0) then
 				{
 					UMJoin=  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST);
@@ -425,7 +425,7 @@ if (!(isNull UMName)) then {
 
 		case 14:	//Parachute
 		{
-			hint "Units paracuted";
+			hint (localize "STR_MCC_HINT_UNITS_PARACUTED");
 			if (MCC_UMUnit==0) then
 				{
 					{while {!(isnull _x) && !(isplayer _x)} do {deletevehicle vehicle _x}} foreach MCC_selectedUnits;

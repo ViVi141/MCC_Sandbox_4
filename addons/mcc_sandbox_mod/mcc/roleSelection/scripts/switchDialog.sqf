@@ -7,8 +7,8 @@ waituntil {!dialog};
 switch (CP_screen) do {
     case 0:
    {_ok = createDialog "CP_RESPAWNPANEL";
- 	if !(_ok) exitWith { hint "create Dialog failed"; diag_log  "CP: create respawn Dialog failed";};};
+ 	if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATE_DIALOG_FAILED"); diag_log  "CP: create respawn Dialog failed";};};
    case 1:
    { _ok = createDialog "CP_GEARPANEL";
-	 if !(_ok) exitWith { hint "create Dialog failed"; diag_log  "CP: create gear Dialog failed";};};
+	 if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATE_DIALOG_FAILED"); diag_log  "CP: create gear Dialog failed";};};
 };

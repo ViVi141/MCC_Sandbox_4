@@ -20,7 +20,7 @@ if !mcc_isloading then
 			{
 				shellspread = (MCC_artillerySpreadArray select (lbCurSel ((uiNamespace getVariable "MCC_groupGen_Dialog") displayCtrl 31))) select 1;
 				missionNameSpace setVariable ["MCC_artilleryEnabled",true];
-				hint "click on map where you want to send artillery -Hold Ctrl for multiple clicks"; 
+				hint (localize "STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_TO_SEND_ARTILLERY_HOLD_CTRL_FOR_MULTIPLE_CLICKS"); 
 				
 			};
 			case 1:	//Add		

@@ -56,7 +56,7 @@ switch (_type) do {
 			closeDialog 0;
 
 			sleep 0.3;
-			_command = 'mcc_isloading=true;closedialog 0;titleText ["Loading Mission","BLACK FADED",5];' + _string + 'titleText ["Mission Loaded","BLACK IN",5];mcc_isloading=false;';
+			_command = 'mcc_isloading=true;closedialog 0;titleText [(localize "STR_MCC_HINT_LOADING_MISSION"),"BLACK FADED",5];' + _string + 'titleText ["Mission Loaded","BLACK IN",5];mcc_isloading=false;';
 			[] spawn compile _command;
 		}
 		else
@@ -97,7 +97,7 @@ if (!(isNull MCC_savedObjectives) && !(isNull MCC_savedGroups) && !(isNull MCC_s
 	case 2: //Save MCC Mission config code to uinamespace
 	{
 		_string = ctrlText MCC_SAVE_NAME;
-		if (_string == "" ) exitWith {hint "Mission save failed! Please type a name for your saved mission"};
+		if (_string == "" ) exitWith {hint (localize "STR_MCC_HINT_MISSION_SAVE_FAILED_PLEASE_TYPE_A_NAME_FOR_YOUR_SAVED_MISSION")};
 
 		//Give the mission a new name
 		missionnamespace setvariable ["bis_fnc_moduleMissionName_name",_string];
@@ -116,7 +116,7 @@ if (!(isNull MCC_savedObjectives) && !(isNull MCC_savedGroups) && !(isNull MCC_s
 		profileNamespace setVariable ["MCC_save", MCC_saveNames];
 		profileNamespace setVariable ["MCC_saveFiles", MCC_saveFiles];
 		saveProfileNamespace;
-		hint "Saved MCC Mission configuration.";
+		hint (localize "STR_MCC_HINT_SAVED_MCC_MISSION_CONFIGURATION");
 
 		_comboBox = _mccdialog displayCtrl MCC_SAVE_LIST;
 		lbClear _comboBox;
@@ -158,12 +158,12 @@ if (!(isNull _array)) then {
 };
 };
 			[(_array select 6)] spawn MCC_fn_loadZones;
-			_command = 'mcc_isloading=true;closedialog 0;titleText ["Loading Mission","BLACK FADED",5];' + _string + 'mcc_isloading=false;titleText ["Mission Loaded","BLACK IN",5];';
+			_command = 'mcc_isloading=true;closedialog 0;titleText [(localize "STR_MCC_HINT_LOADING_MISSION"),"BLACK FADED",5];' + _string + 'mcc_isloading=false;titleText [(localize "STR_MCC_HINT_MISSION_LOADED"),"BLACK IN",5];';
 
 			[] spawn compile _command;
 
 		} else {
-			hint "Mission load failed! : No MCC Mission configuration pasted from namespace";
+			hint (localize "STR_MCC_HINT_MISSION_LOAD_FAILED_NO_MCC_MISSION_CONFIGURATION_PASTED_FROM_NAMESPACE");
 		};
 	};
 

@@ -147,7 +147,7 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 					<t color='#FF0000'>Waypoints to go: 0</t><br/>--------------------------<br/>"];
 
 		if (MCC_capture_state) then {
-			hint "Convoy captured";
+			hint (localize "STR_MCC_HINT_CONVOY_CAPTURED");
 			MCC_capture_var = MCC_capture_var + FORMAT ["
 									point2 =%7;
 									point3 =%8;
@@ -171,7 +171,7 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 								  , vipCar
 								  ];
 		} else {
-			hint "Convoy placed";
+			hint (localize "STR_MCC_HINT_CONVOY_PLACED");
 [convoy_car1 select 0, convoy_car2 select 0, convoy_car3 select 0, convoy_car4 select 0, convoy_car5 select 0,_point1, _point2,[mcc_sidename] select 0, vip select 0, vipCar select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
 			mcc_safe = mcc_safe + FORMAT ["
 									point2 =%7;

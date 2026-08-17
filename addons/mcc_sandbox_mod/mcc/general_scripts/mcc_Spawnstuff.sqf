@@ -54,7 +54,7 @@ switch (mcc_classtype) do
 //safe that string man!
 if (MCC_capture_state) then
 {
-	hint "Action captured";
+	hint (localize "STR_MCC_HINT_ACTION_CAPTURED");
 	if (mcc_spawntype == "GROUP") then
 	{
 		MCC_capture_var=MCC_capture_var + FORMAT ["

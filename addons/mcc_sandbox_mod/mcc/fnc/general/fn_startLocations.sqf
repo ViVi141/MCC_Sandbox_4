@@ -40,7 +40,7 @@ if (!_cpActivated && _respawnDialog) then {
 		sleep 0.1;
 
 		_ok = createDialog "CP_RESPAWNPANEL";
-		if !(_ok) exitWith { hint "createDialog failed"; diag_log  "CP: create respawn Dialog failed";};
+		if !(_ok) exitWith { hint (localize "STR_MCC_HINT_CREATEDIALOG_FAILED"); diag_log  "CP: create respawn Dialog failed";};
 
 		waituntil {playerDeploy};
 		closedialog 0;

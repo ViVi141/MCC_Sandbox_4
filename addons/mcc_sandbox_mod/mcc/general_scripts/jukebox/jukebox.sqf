@@ -92,7 +92,7 @@ if (!isNull _track) then {
 	//Link to zone
    	case 5:	{
 		_zone = (missionNamespace getVariable ["MCC_zones_numbers",[]]) select (lbCurSel MCC_JUKEBOX_ZONE);
-		if (count mcc_zone_pos < _zone) exitWith {hint "Invalid zone slected"};
+		if (count mcc_zone_pos < _zone) exitWith {hint (localize "STR_MCC_HINT_INVALID_ZONE_SLECTED")};
 		_zonePos = mcc_zone_pos select _zone;
 		_zoneX = mcc_zone_size select (_zone) select 0;
 		_zoneY = mcc_zone_size select (_zone) select 1;

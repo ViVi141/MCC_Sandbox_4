@@ -11,17 +11,17 @@ switch (_type) do
 	case 0:
 	{
 		if (!alive driver _evac) exitWith {};
-		hint "pilot deleted";
+		hint (localize "STR_MCC_HINT_PILOT_DELETED");
 	};
 	case 1:
 	{
 		if (alive driver _evac) exitWith {};
-		hint "pilot respawned";
+		hint (localize "STR_MCC_HINT_PILOT_RESPAWNED");
 	};
 	case 2:
 	{
 		if (!alive _evac) exitWith {};
-		hint "Pilot & Chopper deleted";
+		hint (localize "STR_MCC_HINT_PILOT_CHOPPER_DELETED");
 	};
 
 };

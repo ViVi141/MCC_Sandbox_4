@@ -232,7 +232,7 @@ lbClear KEGs_cLBTargets;
 onMapSingleClick "[""MapClick"",_pos] call KEGs_fnc_spectateEvents";
 
 // Spawn thread to display help reminder after a few seconds
-[] spawn {sleep(3);if(dialog) then {cutText["\n\n\n\n\nPress F1 for help","PLAIN DOWN", 0.75]}};
+[] spawn {sleep(3);if(dialog) then {cutText [(localize "STR_MCC_HINT_N_N_N_N_NPRESS_F1_FOR_HELP"),"PLAIN DOWN", 0.75]}};
 
 KEGs_camSelLast = 0;
 mouseLastX = 0.5;

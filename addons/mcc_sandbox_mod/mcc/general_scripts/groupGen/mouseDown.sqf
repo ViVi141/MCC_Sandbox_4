@@ -166,7 +166,7 @@ if ((missionNameSpace getVariable ["MCC_artilleryEnabled",false]) &&  _pressed =
 	if (!_ctrlKey) then {missionNameSpace setVariable ["MCC_artilleryEnabled",false]};
 	if (MCC_capture_state) then
 	{
-		hint "Artillery captured.";
+		hint (localize "STR_MCC_HINT_ARTILLERY_CAPTURED");
 		MCC_capture_var = MCC_capture_var + FORMAT ["
 		[%1, '%2', %3, %4, %5, %6] remoteExec ["MCC_fnc_artillery", 0, false];
 		"
@@ -180,7 +180,7 @@ if ((missionNameSpace getVariable ["MCC_artilleryEnabled",false]) &&  _pressed =
 	}
 	else
 	{
-		hint "Artillery inbound.";
+		hint (localize "STR_MCC_HINT_ARTILLERY_INBOUND");
 		[_ctrl ctrlMapScreenToWorld [_posX,_posY], shelltype, shellspread, nshell,MCCSimulate,MCC_artyDelay] remoteExec ["MCC_fnc_artillery",2];
 	};
 	sleep 0.5;
@@ -193,7 +193,7 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	if (!_ctrlKey) then {missionNameSpace setVariable ["MCC_spawnEnabled",false]};
 	if (MCC_capture_state) then
 	{
-		hint "Spawned Captured";
+		hint (localize "STR_MCC_HINT_SPAWNED_CAPTURED");
 		MCC_capture_var = MCC_capture_var + FORMAT ["
 								[%1 , %2, %3, %4, %5] remoteExec ["MCC_fnc_groupSpawn", 2, false];
 								"
@@ -257,7 +257,7 @@ if (MCC_CASrequestMarker && _pressed==0) then
 	_ammount	=  floor (((getMarkerSize _marker) select 1)/50) + 1; 		//Ammount of drop min 0 max 6
 
 	if (MCC_capture_state) then {
-		hint "Air support captured.";
+		hint (localize "STR_MCC_HINT_AIR_SUPPORT_CAPTURED");
 		MCC_capture_var=MCC_capture_var + FORMAT ['
 			[%1, %2 , %3, %4, %5, %6] remoteExec ["MCC_fnc_airDrop", 2, false];
 			'
@@ -268,7 +268,7 @@ if (MCC_CASrequestMarker && _pressed==0) then
 			,_spawn
 			,_away];
 	} else {
-		hint "Air support incomming.";
+		hint (localize "STR_MCC_HINT_AIR_SUPPORT_INCOMMING");
 		[_ammount, MCC_spawnkind , getmarkerpos _marker, MCC_planeType, _spawn,_away,(missionNamespace getVariable ["MCC_airdropIsParachute",0])] spawn MCC_fnc_airDrop;
 	};
 

@@ -31,11 +31,11 @@ if ((lbCurSel MCC_GGUNIT_TYPE) == 1) then
 	if ((((MCC_groupTypes select (lbCurSel UNIT_TYPE) select 0)) =="Reinforcement") && !(_type==0)) exitWith
 	{
 		//Check if zone exists before trying to spawn paratroopers without making a zone first
-		if (count mcc_zone_pos == 0) exitWith {hint "Create a zone first"};
+		if (count mcc_zone_pos == 0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};
 
 		_selectedZoneNr = (lbCurSel ((uiNamespace getVariable "MCC_groupGen_Dialog") displayCtrl 1023))+1;
 		_zonePos = mcc_zone_pos select _selectedZoneNr;
-		if ( (count mcc_zone_pos <= _selectedZoneNr ) || { isnil "_zonePos" } ) exitWith {hint "Create a zone first"};
+		if ( (count mcc_zone_pos <= _selectedZoneNr ) || { isnil "_zonePos" } ) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};
 		mcc_spawnname = (lbCurSel UNIT_CLASS);    //MCCR14 remove
 		mcc_spawntype="Reinforcement";
 		mcc_classtype = "Reinforcement";
@@ -62,7 +62,7 @@ if ((lbCurSel MCC_GGUNIT_TYPE) == 1) then
 		private ["_center","_radius","_action","_intanse","_faction"];
 
 		//Failsafe incase we trying to spawn something without making a zone first
-		if (count mcc_zone_pos == 0) exitWith {hint "Create a zone first"};
+		if (count mcc_zone_pos == 0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};
 
 		_center = (mcc_zone_pos select (mcc_zone_number));
 		_radius = (((mcc_zone_size select (mcc_zone_number))select 0) + ((mcc_zone_size select (mcc_zone_number)) select 1))/2;
@@ -236,7 +236,7 @@ if ((_type==0) && ((!(((MCC_groupTypes select (lbCurSel UNIT_TYPE) select 0)) in
 		if (count MCC_groupBroadcast == 0) exitWIth {systemchat "Cannot spawn an empty group"};
 	};
 
-	hint "click map to spawn - Hold Ctrl for multiple times";
+	hint (localize "STR_MCC_HINT_CLICK_MAP_TO_SPAWN_HOLD_CTRL_FOR_MULTIPLE_TIMES");
 	missionNameSpace setVariable ["MCC_spawnEnabled",true];
 }
 //Spawn to zone
@@ -246,12 +246,12 @@ else
 	if ((lbCurSel UNIT_CLASS) == -1) exitWith {systemchat "Cannot spawn an empty group"};
 
 	//Failsafe incase we trying to spawn something without making a zone first
-	if (count mcc_zone_pos == 0) exitWith {hint "Create a zone first"};
+	if (count mcc_zone_pos == 0) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};
 
 	//Failsafe in case we trying to spawn something without making a zone first
 	_selectedZoneNr = (lbCurSel ((uiNamespace getVariable "MCC_groupGen_Dialog") displayCtrl 1023))+1;
 	_zonePos = mcc_zone_pos select _selectedZoneNr;
-	if ( (count mcc_zone_pos <= _selectedZoneNr ) || { isnil "_zonePos" } ) exitWith {hint "Create a zone first"};
+	if ( (count mcc_zone_pos <= _selectedZoneNr ) || { isnil "_zonePos" } ) exitWith {hint (localize "STR_MCC_HINT_CREATE_A_ZONE_FIRST")};
 
 	mcc_spawnwithcrew = (MCC_spawn_empty select (lbCurSel MCC_GGUNIT_EMPTY)) select 1;	//let's add the behavior/awerness
 	MCC_empty_index = (lbCurSel MCC_GGUNIT_EMPTY);

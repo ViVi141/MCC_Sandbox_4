@@ -53,7 +53,7 @@ if (typeName _side == "STRING") then {
 
 if (isnil "_side") exitWith {};
 
-if (_buildingscount < 1) exitwith {hint "No buildings found"};	//No available buildings? stop the script!
+if (_buildingscount < 1) exitwith {hint (localize "STR_MCC_HINT_NO_BUILDINGS_FOUND")};	//No available buildings? stop the script!
 {
 	_buildingPos = _x call MCC_fnc_buildingPosCount;
 	if (_buildingPos > 0) then

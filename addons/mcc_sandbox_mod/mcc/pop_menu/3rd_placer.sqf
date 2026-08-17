@@ -200,7 +200,7 @@ if (_conMenu) then {
 	_createBorderScope = MCC_3D_CAM call _createBorder;
 };
 
-if !(isnil "MCC_3D_CAM_Handler") exitwith {hint "MCC_3D_CAM_Handler is nill";endLoadingScreen};
+if !(isnil "MCC_3D_CAM_Handler") exitwith {hint (localize "STR_MCC_HINT_MCC_3D_CAM_HANDLER_IS_NILL");endLoadingScreen};
 
 MCC_3D_CAM_Handler =
 {
@@ -547,7 +547,7 @@ if (!(isNull Object3D)) then {
 				sleep 0.2;
 				MCC3DgotValue = true;
 				MCC3DValue = [_objectPos,_objectDir];
-				hint "Object placed";
+				hint (localize "STR_MCC_HINT_OBJECT_PLACED");
 				deletevehicle Object3D;
 
 				if (mcc_spawntype == "MINES") then {

@@ -15,7 +15,7 @@ if !mcc_isloading then
 		deletemarkerlocal "evac_marker2";
 		deletemarkerlocal "evac_marker3";
 
-		hint  "Left click on the map to add one WP";
+		hint (localize "STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_ADD_ONE_WP");
 		click = false;
 		onMapSingleClick "point1 = _pos;
 		click = true;
@@ -31,7 +31,7 @@ if !mcc_isloading then
 		_convoy_wp1 setMarkerColorLocal "ColorBlue";
 		_point1 =getmarkerpos "evac_marker1";
 
-		hint "Markers placed";
+		hint (localize "STR_MCC_HINT_MARKERS_PLACED");
 		if ((lbCurSel MCC_EVAC_SELECTED) == -1) exitWith {};
 
 		_evac = _evacVehicles select (lbCurSel MCC_EVAC_SELECTED);

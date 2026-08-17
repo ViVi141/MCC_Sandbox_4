@@ -15,7 +15,7 @@ if (!(isNull _1) && !(isNull _2) && !(isNull _3) && !(isNull _4) && !(isNull _5)
 	}
 	else
 	{
-		hint "Convoy is moving";
+		hint (localize "STR_MCC_HINT_CONVOY_IS_MOVING");
 if (!(isNull vip)) then { [[point2,point3,point4,point5],vip select 0] remoteExec ["MCC_fnc_startConvoy", 0, false]; };
 	};
 };

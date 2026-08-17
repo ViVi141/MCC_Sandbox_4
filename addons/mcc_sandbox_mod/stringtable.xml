@@ -4854,4 +4854,680 @@
             </Key>
         </Container>
     </Package>
+    <Package name="Hints">
+        
+        
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_ACTION_CAPTURED">
+                <Original>Action captured</Original>
+                <English>Action captured</English>
+                <Chinesesimp>操作已捕获</Chinesesimp>
+                <Chinese>操作已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_AIR_SUPPORT_CAPTURED">
+                <Original>Air support captured.</Original>
+                <English>Air support captured.</English>
+                <Chinesesimp>空中支援已捕获</Chinesesimp>
+                <Chinese>空中支援已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_AIR_SUPPORT_INCOMMING">
+                <Original>Air support incomming.</Original>
+                <English>Air support incomming.</English>
+                <Chinesesimp>空中支援即将到达</Chinesesimp>
+                <Chinese>空中支援即將到達</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_AMBUSH_CAPTURED">
+                <Original>Ambush Captured.</Original>
+                <English>Ambush Captured.</English>
+                <Chinesesimp>伏击点已捕获</Chinesesimp>
+                <Chinese>伏擊點已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_AMBUSH_PLACED">
+                <Original>Ambush Placed.</Original>
+                <English>Ambush Placed.</English>
+                <Chinesesimp>伏击点已放置</Chinesesimp>
+                <Chinese>伏擊點已放置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_ARTILLERY_CAPTURED">
+                <Original>Artillery captured.</Original>
+                <English>Artillery captured.</English>
+                <Chinesesimp>炮兵目标已捕获</Chinesesimp>
+                <Chinese>炮兵目標已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_ARTILLERY_INBOUND">
+                <Original>Artillery inbound.</Original>
+                <English>Artillery inbound.</English>
+                <Chinesesimp>炮击来袭</Chinesesimp>
+                <Chinese>炮擊來襲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CAN_ONLY_HIJAK_UNITS_NOT_GROUPS">
+                <Original>Can only hijak units not groups</Original>
+                <English>Can only hijak units not groups</English>
+                <Chinesesimp>只能劫持单位，不能劫持小组</Chinesesimp>
+                <Chinese>只能劫持單位，不能劫持小組</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CAN_T_HIJAK_OTHER_PLAYERS">
+                <Original>Can't hijak other players</Original>
+                <English>Can't hijak other players</English>
+                <Chinesesimp>不能劫持其他玩家</Chinesesimp>
+                <Chinese>不能劫持其他玩家</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CANNOT_ADD_STATIC_OBJECT_TO_A_GROUP">
+                <Original>Cannot add static object to a group</Original>
+                <English>Cannot add static object to a group</English>
+                <Chinesesimp>无法将静态物体添加到小组</Chinesesimp>
+                <Chinese>無法將靜態物體添加到小組</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_THE_MAP">
+                <Original>Click on the map</Original>
+                <English>Click on the map</English>
+                <Chinesesimp>在地图上点击</Chinesesimp>
+                <Chinese>在地圖上點擊</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_THE_UNIT_OR_GROUP_TO_SELECT_IT_THEN_CLICK_ON_THE_UNIT_OR_GROUP_YOU_WANT_IT_TO_JOIN_TO">
+                <Original>Click on the unit or group to select it then click on the unit or group you want it to join to</Original>
+                <English>Click on the unit or group to select it then click on the unit or group you want it to join to</English>
+                <Chinesesimp>点击单位或小组进行选择，然后点击目标单位或小组以加入</Chinesesimp>
+                <Chinese>點擊單位或小組進行選擇，然後點擊目標單位或小組以加入</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_COMPOSITION_LOAD_FAILED_NO_MCC_COMPOSITION_PASTED_FROM_NAMESPACE">
+                <Original>Composition load failed! : No MCC Composition pasted from namespace</Original>
+                <English>Composition load failed! : No MCC Composition pasted from namespace</English>
+                <Chinesesimp>配置加载失败！：命名空间中没有粘贴的MCC配置</Chinesesimp>
+                <Chinese>配置加載失敗！：命名空間中沒有粘貼的MCC配置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_COMPOSITION_SAVE_FAILED_PLEASE_TYPE_A_NAME_FOR_YOUR_SAVED_COMPOSITION">
+                <Original>Composition save failed! Please type a name for your saved composition</Original>
+                <English>Composition save failed! Please type a name for your saved composition</English>
+                <Chinesesimp>配置保存失败！请为保存的配置输入名称</Chinesesimp>
+                <Chinese>配置保存失敗！請為保存的配置輸入名稱</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CONVOY_CAPTURED">
+                <Original>Convoy captured</Original>
+                <English>Convoy captured</English>
+                <Chinesesimp>车队已捕获</Chinesesimp>
+                <Chinese>車隊已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CONVOY_IS_MOVING">
+                <Original>Convoy is moving</Original>
+                <English>Convoy is moving</English>
+                <Chinesesimp>车队正在移动</Chinesesimp>
+                <Chinese>車隊正在移動</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CONVOY_PLACED">
+                <Original>Convoy placed</Original>
+                <English>Convoy placed</English>
+                <Chinesesimp>车队已放置</Chinesesimp>
+                <Chinese>車隊已放置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CREATE_A_TASK_FIRST">
+                <Original>Create a task first</Original>
+                <English>Create a task first</English>
+                <Chinesesimp>请先创建任务</Chinesesimp>
+                <Chinese>請先創建任務</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CREATE_A_ZONE_FIRST">
+                <Original>Create a zone first</Original>
+                <English>Create a zone first</English>
+                <Chinesesimp>请先创建区域</Chinesesimp>
+                <Chinese>請先創建區域</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CRITICAL_FAIL_START_RUNING">
+                <Original>Critical fail start runing</Original>
+                <English>Critical fail start runing</English>
+                <Chinesesimp>严重失败，开始逃跑</Chinesesimp>
+                <Chinese>嚴重失敗，開始逃跑</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_EVAC_VEHICLE_SPAWNED_ON_LHD">
+                <Original>Evac Vehicle spawned on LHD</Original>
+                <English>Evac Vehicle spawned on LHD</English>
+                <Chinesesimp>撤离载具已生成在LHD上</Chinesesimp>
+                <Chinese>撤離載具已生成在LHD上</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_FAIL_TO_DISARM">
+                <Original>Fail to disarm</Original>
+                <English>Fail to disarm</English>
+                <Chinesesimp>拆弹失败</Chinesesimp>
+                <Chinese>拆彈失敗</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_GROUP_ADDED">
+                <Original>Group Added</Original>
+                <English>Group Added</English>
+                <Chinesesimp>小组已添加</Chinesesimp>
+                <Chinese>小組已添加</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_INVALID_ZONE_SLECTED">
+                <Original>Invalid zone slected</Original>
+                <English>Invalid zone slected</English>
+                <Chinesesimp>选择的区域无效</Chinesesimp>
+                <Chinese>選擇的區域無效</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LHD_IS_NOT_AVAILABLE_EVAC_CHOPPER_CAN_T_BE_SPAWNED">
+                <Original>LHD is not available, evac chopper can't be spawned</Original>
+                <English>LHD is not available, evac chopper can't be spawned</English>
+                <Chinesesimp>LHD不可用，无法生成撤离直升机</Chinesesimp>
+                <Chinese>LHD不可用，無法生成撤離直升機</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_AND_DRAG_ON_THE_MINI_MAP_TO_CREATE_A_BRUSH">
+                <Original>Left click and drag on the mini-map to create a brush</Original>
+                <English>Left click and drag on the mini-map to create a brush</English>
+                <Chinesesimp>在迷你地图上左键拖拽以创建画笔</Chinesesimp>
+                <Chinese>在迷你地圖上左鍵拖拽以創建畫筆</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_AND_DRAG_A_BOX_ON_THE_MAP_TO_CREATE_A_MINEFIELD">
+                <Original>Left click on and drag a box on the map to create a minefield</Original>
+                <English>Left click on and drag a box on the map to create a minefield</English>
+                <Chinesesimp>在地图上左键拖拽框选以创建雷区</Chinesesimp>
+                <Chinese>在地圖上左鍵拖拽框選以創建雷區</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_AND_DRAG_A_BOX_ON_THE_MAP_TO_CREATE_A_TRIGGER">
+                <Original>Left click on and drag a box on the map to create a trigger</Original>
+                <English>Left click on and drag a box on the map to create a trigger</English>
+                <Chinesesimp>在地图上左键拖拽框选以创建触发器</Chinesesimp>
+                <Chinese>在地圖上左鍵拖拽框選以創建觸發器</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_ADD_ONE_WP">
+                <Original>Left click on the map to add one WP</Original>
+                <English>Left click on the map to add one WP</English>
+                <Chinesesimp>在地图上左键点击以添加一个路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以添加一個路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_MOVE_A_TRIGGER">
+                <Original>Left click on the map to move a trigger</Original>
+                <English>Left click on the map to move a trigger</English>
+                <Chinesesimp>在地图上左键点击以移动触发器</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以移動觸發器</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_1ST_WP">
+                <Original>Left click on the map to put 1st WP</Original>
+                <English>Left click on the map to put 1st WP</English>
+                <Chinesesimp>在地图上左键点击以放置第1个路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第1個路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_2ND_WP">
+                <Original>Left click on the map to put 2nd WP</Original>
+                <English>Left click on the map to put 2nd WP</English>
+                <Chinesesimp>在地图上左键点击以放置第2个路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第2個路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_3RD_WP">
+                <Original>Left click on the map to put 3rd WP</Original>
+                <English>Left click on the map to put 3rd WP</English>
+                <Chinesesimp>在地图上左键点击以放置第3个路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第3個路徑點</Chinese>
+            </Key>
+        </Container>
+        
+        
+        
+        
+        
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_SET_A_WP_FOR_THIS_TASK">
+                <Original>Left click on the map to set a WP for this Task</Original>
+                <English>Left click on the map to set a WP for this Task</English>
+                <Chinesesimp>在地图上左键点击以为此任务设置路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以為此任務設置路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_SET_A_MARKER">
+                <Original>Left click on the map to set a marker</Original>
+                <English>Left click on the map to set a marker</English>
+                <Chinesesimp>在地图上左键点击以设置标记</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以設置標記</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_HOLD_AND_DRAG_THE_CURSOR_TO_MARK_THE_AREA_AND_DIRECTION_OF_THE_AIR_SUPPORT">
+                <Original>Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support</Original>
+                <English>Left click on the map,hold and drag the cursor to mark the area and direction of the Air Support</English>
+                <Chinesesimp>在地图上左键按住并拖拽光标，标记空中支援的区域和方向</Chinesesimp>
+                <Chinese>在地圖上左鍵按住並拖拽光標，標記空中支援的區域和方向</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LIVE_FEED_IS_BROADCASTING">
+                <Original>Live feed is broadcasting</Original>
+                <English>Live feed is broadcasting</English>
+                <Chinesesimp>实时画面正在广播</Chinesesimp>
+                <Chinese>實時畫面正在廣播</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LOADING_MISSION">
+                <Original>Loading Mission</Original>
+                <English>Loading Mission</English>
+                <Chinesesimp>正在加载任务</Chinesesimp>
+                <Chinese>正在加載任務</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_MCC_3D_CAM_HANDLER_IS_NILL">
+                <Original>MCC_3D_CAM_Handler is nill</Original>
+                <English>MCC_3D_CAM_Handler is nill</English>
+                <Chinesesimp>MCC_3D_CAM_Handler 为空</Chinesesimp>
+                <Chinese>MCC_3D_CAM_Handler 為空</Chinese>
+            </Key>
+        </Container>
+        
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_MISSION_LOADED">
+                <Original>Mission Loaded</Original>
+                <English>Mission Loaded</English>
+                <Chinesesimp>任务已加载</Chinesesimp>
+                <Chinese>任務已加載</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_MISSION_LOAD_FAILED_NO_MCC_MISSION_CONFIGURATION_PASTED_FROM_NAMESPACE">
+                <Original>Mission load failed! : No MCC Mission configuration pasted from namespace</Original>
+                <English>Mission load failed! : No MCC Mission configuration pasted from namespace</English>
+                <Chinesesimp>任务加载失败！：命名空间中没有粘贴的MCC任务配置</Chinesesimp>
+                <Chinese>任務加載失敗！：命名空間中沒有粘貼的MCC任務配置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_MISSION_SAVE_FAILED_PLEASE_TYPE_A_NAME_FOR_YOUR_SAVED_MISSION">
+                <Original>Mission save failed! Please type a name for your saved mission</Original>
+                <English>Mission save failed! Please type a name for your saved mission</English>
+                <Chinesesimp>任务保存失败！请为保存的任务输入名称</Chinesesimp>
+                <Chinese>任務保存失敗！請為保存的任務輸入名稱</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_NO_BUILDINGS_FOUND">
+                <Original>No buildings found</Original>
+                <English>No buildings found</English>
+                <Chinesesimp>未找到建筑物</Chinesesimp>
+                <Chinese>未找到建築物</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_OBJECT_PLACED">
+                <Original>Object placed</Original>
+                <English>Object placed</English>
+                <Chinesesimp>物体已放置</Chinesesimp>
+                <Chinese>物體已放置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_ONLY_UNITS_CAN_BE_ASSIGHNED_AS_HIGH_COMMANDERS">
+                <Original>Only units can be assighned as high commanders</Original>
+                <English>Only units can be assighned as high commanders</English>
+                <Chinesesimp>只有单位才能被指定为高级指挥官</Chinesesimp>
+                <Chinese>只有單位才能被指定為高級指揮官</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_PILOT_CHOPPER_DELETED">
+                <Original>Pilot &amp; Chopper deleted</Original>
+                <English>Pilot &amp; Chopper deleted</English>
+                <Chinesesimp>飞行员与直升机已删除</Chinesesimp>
+                <Chinese>飛行員與直升機已刪除</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_PRESS_ANY_KEY_OR_KEY_COMBINATION_WITH_ALT_SHIFT_OR_CTRL_TO_BIND">
+                <Original>Press any key or key combination with Alt, Shift or Ctrl to bind</Original>
+                <English>Press any key or key combination with Alt, Shift or Ctrl to bind</English>
+                <Chinesesimp>按下任意键或Alt、Shift、Ctrl组合键进行绑定</Chinesesimp>
+                <Chinese>按下任意鍵或Alt、Shift、Ctrl組合鍵進行綁定</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_RETURNING_TO_LHD">
+                <Original>Returning to LHD</Original>
+                <English>Returning to LHD</English>
+                <Chinesesimp>正在返回LHD</Chinesesimp>
+                <Chinese>正在返回LHD</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_SAVED_MCC_COMPOSITION">
+                <Original>Saved MCC Composition.</Original>
+                <English>Saved MCC Composition.</English>
+                <Chinesesimp>MCC配置已保存</Chinesesimp>
+                <Chinese>MCC配置已保存</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_SAVED_MCC_MISSION_CONFIGURATION">
+                <Original>Saved MCC Mission configuration.</Original>
+                <English>Saved MCC Mission configuration.</English>
+                <Chinesesimp>MCC任务配置已保存</Chinesesimp>
+                <Chinese>MCC任務配置已保存</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_SPAWNED_CAPTURED">
+                <Original>Spawned Captured</Original>
+                <English>Spawned Captured</English>
+                <Chinesesimp>生成已捕获</Chinesesimp>
+                <Chinese>生成已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TASK_CAPTURED">
+                <Original>Task Captured</Original>
+                <English>Task Captured</English>
+                <Chinesesimp>任务已捕获</Chinesesimp>
+                <Chinese>任務已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TASK_SUCCEEDED_CAPTURED">
+                <Original>Task Succeeded Captured</Original>
+                <English>Task Succeeded Captured</English>
+                <Chinesesimp>任务成功已捕获</Chinesesimp>
+                <Chinese>任務成功已捕獲</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TASK_UPDATED">
+                <Original>Task updated</Original>
+                <English>Task updated</English>
+                <Chinesesimp>任务已更新</Chinesesimp>
+                <Chinese>任務已更新</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TELPEPORT_IS_N_A">
+                <Original>Telpeport is N/A</Original>
+                <English>Telpeport is N/A</English>
+                <Chinesesimp>传送不可用</Chinesesimp>
+                <Chinese>傳送不可用</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TO_FAR_TO_DISARM">
+                <Original>To far to disarm</Original>
+                <English>To far to disarm</English>
+                <Chinesesimp>距离太远，无法拆弹</Chinesesimp>
+                <Chinese>距離太遠，無法拆彈</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_TRIGGER_CREATED_CAPTURE_MCC_ACTIONS_THAT_YOU_WANT_TO_LINK_TO_THAT_TRIGGER_PRESS_STOP_CAPTURING_TO_FINISH">
+                <Original>Trigger created: capture MCC actions that you want to link to that trigger, press Stop Capturing to finish</Original>
+                <English>Trigger created: capture MCC actions that you want to link to that trigger, press Stop Capturing to finish</English>
+                <Chinesesimp>触发器已创建：捕获要链接到该触发器的MCC操作，按停止捕获以完成</Chinesesimp>
+                <Chinese>觸發器已創建：捕獲要鏈接到該觸發器的MCC操作，按停止捕獲以完成</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_UNITS_PARACUTED">
+                <Original>Units paracuted</Original>
+                <English>Units paracuted</English>
+                <Chinesesimp>单位已空投</Chinesesimp>
+                <Chinese>單位已空投</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_UNKNOWN_EVENT">
+                <Original>Unknown event</Original>
+                <English>Unknown event</English>
+                <Chinesesimp>未知事件</Chinesesimp>
+                <Chinese>未知事件</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_N_N_N_N_NPRESS_F1_FOR_HELP">
+                <Original>\n\n\n\n\nPress F1 for help</Original>
+                <English>\n\n\n\n\nPress F1 for help</English>
+                <Chinesesimp>\n\n\n\n\n按F1获取帮助</Chinesesimp>
+                <Chinese>\n\n\n\n\n按F1獲取幫助</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CIVVIE_IS_THERE">
+                <Original>civvie is there</Original>
+                <English>civvie is there</English>
+                <Chinesesimp>平民在那里</Chinesesimp>
+                <Chinese>平民在那裡</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLEARED_ALL_HIGH_COMMAND_UNITS">
+                <Original>cleared all High Command units</Original>
+                <English>cleared all High Command units</English>
+                <Chinesesimp>已清除所有高级指挥单位</Chinesesimp>
+                <Chinese>已清除所有高級指揮單位</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_AND_DRAGTO_START_THE_DROP">
+                <Original>click and dragto start the Drop</Original>
+                <English>click and dragto start the Drop</English>
+                <Chinesesimp>点击并拖拽以开始空投</Chinesesimp>
+                <Chinese>點擊並拖拽以開始空投</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_MAP_TO_SPAWN_HOLD_CTRL_FOR_MULTIPLE_TIMES">
+                <Original>click map to spawn - Hold Ctrl for multiple times</Original>
+                <English>click map to spawn - Hold Ctrl for multiple times</English>
+                <Chinesesimp>点击地图以生成 - 按住Ctrl可多次</Chinesesimp>
+                <Chinese>點擊地圖以生成 - 按住Ctrl可多次</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_MAP">
+                <Original>click on map</Original>
+                <English>click on map</English>
+                <Chinesesimp>在地图上点击</Chinesesimp>
+                <Chinese>在地圖上點擊</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB">
+                <Original>click on map inorder to place the FOB</Original>
+                <English>click on map inorder to place the FOB</English>
+                <Chinesesimp>点击地图以放置前沿作战基地</Chinesesimp>
+                <Chinese>點擊地圖以放置前沿作戰基地</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_MAP_TO_SPAWN_EVAC_VECHICLE">
+                <Original>click on map to spawn evac vechicle</Original>
+                <English>click on map to spawn evac vechicle</English>
+                <Chinesesimp>点击地图以生成撤离载具</Chinesesimp>
+                <Chinese>點擊地圖以生成撤離載具</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_TO_SEND_ARTILLERY_HOLD_CTRL_FOR_MULTIPLE_CLICKS">
+                <Original>click on map where you want to send artillery -Hold Ctrl for multiple clicks</Original>
+                <English>click on map where you want to send artillery -Hold Ctrl for multiple clicks</English>
+                <Chinesesimp>点击地图以指定炮击目标 - 按住Ctrl可多点</Chinesesimp>
+                <Chinese>點擊地圖以指定炮擊目標 - 按住Ctrl可多點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_MAP_WHERE_YOU_WANT_YOUR_START_LOCATION">
+                <Original>click on map where you want your start location</Original>
+                <English>click on map where you want your start location</English>
+                <Chinesesimp>点击地图以设置你的起始位置</Chinesesimp>
+                <Chinese>點擊地圖以設置你的起始位置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_THE_MAP_TO_PLACE_THE_TRAP">
+                <Original>click on the map to place the trap</Original>
+                <English>click on the map to place the trap</English>
+                <Chinesesimp>在地图上点击以放置陷阱</Chinesesimp>
+                <Chinese>在地圖上點擊以放置陷阱</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_ON_THE_MAP_TO_START_THE_PARACHUTE">
+                <Original>click on the map to start the Parachute</Original>
+                <English>click on the map to start the Parachute</English>
+                <Chinesesimp>点击地图以开始跳伞</Chinesesimp>
+                <Chinese>點擊地圖以開始跳傘</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CLICK_HOLD_AND_THEN_DRAG_THE_CURSOR_TO_PLACE_THE_AMBUSHE_GROUP_POINTING_THE_DESIRED_DIRECTION">
+                <Original>click, hold and then drag the cursor to place the ambushe group pointing the desired direction</Original>
+                <English>click, hold and then drag the cursor to place the ambushe group pointing the desired direction</English>
+                <Chinesesimp>点击、按住然后拖拽光标，放置指向所需方向的伏击小组</Chinesesimp>
+                <Chinese>點擊、按住然後拖拽光標，放置指向所需方向的伏擊小組</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CREATE_DIALOG_FAILED">
+                <Original>create Dialog failed</Original>
+                <English>create Dialog failed</English>
+                <Chinesesimp>创建对话框失败</Chinesesimp>
+                <Chinese>創建對話框失敗</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_CREATEDIALOG_FAILED">
+                <Original>createDialog failed</Original>
+                <English>createDialog failed</English>
+                <Chinesesimp>创建对话框失败</Chinesesimp>
+                <Chinese>創建對話框失敗</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_PILOT_DELETED">
+                <Original>pilot deleted</Original>
+                <English>pilot deleted</English>
+                <Chinesesimp>飞行员已删除</Chinesesimp>
+                <Chinese>飛行員已刪除</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_PILOT_RESPAWNED">
+                <Original>pilot respawned</Original>
+                <English>pilot respawned</English>
+                <Chinesesimp>飞行员已重生</Chinesesimp>
+                <Chinese>飛行員已重生</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_VEHICLE_MUST_BE_LOCAL">
+                <Original>vehicle must be local</Original>
+                <English>vehicle must be local</English>
+                <Chinesesimp>载具必须为本机载具</Chinesesimp>
+                <Chinese>載具必須為本機載具</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints2">
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_MARKERS_PLACED">
+                <Original>Markers placed</Original>
+                <English>Markers placed</English>
+                <Chinesesimp>标记已放置</Chinesesimp>
+                <Chinese>標記已放置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_START_POSITION_FOR_THE_CONVY">
+                <Original>Left click on the map to put start position for the convy</Original>
+                <English>Left click on the map to put start position for the convy</English>
+                <Chinesesimp>在地图上左键点击以设置车队起始位置</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以設置車隊起始位置</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_FIRST_CONVOY_POINT">
+                <Original>Left click on the map to put first convoy point</Original>
+                <English>Left click on the map to put first convoy point</English>
+                <Chinesesimp>在地图上左键点击以放置第一个车队路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第一個車隊路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_SECOND_CONVOY_POINT">
+                <Original>Left click on the map to put second convoy point</Original>
+                <English>Left click on the map to put second convoy point</English>
+                <Chinesesimp>在地图上左键点击以放置第二个车队路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第二個車隊路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_THIRD_CONVOY_POINT">
+                <Original>Left click on the map to put third convoy point</Original>
+                <English>Left click on the map to put third convoy point</English>
+                <Chinesesimp>在地图上左键点击以放置第三个车队路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置第三個車隊路徑點</Chinese>
+            </Key>
+        </Container>
+        <Container name="hint">
+            <Key ID="STR_MCC_HINT_LEFT_CLICK_ON_THE_MAP_TO_PUT_THE_LAST_CONVOY_POINT">
+                <Original>Left click on the map to put the last convoy point</Original>
+                <English>Left click on the map to put the last convoy point</English>
+                <Chinesesimp>在地图上左键点击以放置最后一个车队路径点</Chinesesimp>
+                <Chinese>在地圖上左鍵點擊以放置最後一個車隊路徑點</Chinese>
+            </Key>
+        </Container>
+    </Package>
 </Project>
