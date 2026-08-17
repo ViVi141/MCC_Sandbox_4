@@ -67,7 +67,7 @@ if !mcc_isloading then
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_TO_SPAWN_EVAC_VECHICLE");
 			onMapSingleClick " 	hint localize ""STR_MCC_GENERAL_SCRIPTS_EVAC_VEHICLE_SPAWNED""; [MCCEvacHeliType, _pos] remoteExec ['MCC_fnc_evacSpawn', 2, false];
 								mcc_safe=mcc_safe + FORMAT ['
-[%1,%2] remoteExec ["MCC_fnc_evacSpawn", 2, false];
+[%1,%2] remoteExec [""MCC_fnc_evacSpawn"", 2, false];
 									sleep 1;'
 									, MCCEvacHeliType
 									, _pos

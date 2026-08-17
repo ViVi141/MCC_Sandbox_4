@@ -154,7 +154,7 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+									[[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0],""MCC_fnc_placeConvoy"",false,false] spawn BIS_fnc_MP;
 								    "
 								  , convoy_car1
 								  , convoy_car2
@@ -179,7 +179,7 @@ hint parseText format["Add waypoints for convoy:<br/>--------------------------<
 									point4 =%9;
 									point5 =%10;
 									vip = %12;
-[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0] remoteExec ["MCC_fnc_placeConvoy", 2, false];
+									[[%1 select 0, %2 select 0, %3 select 0, %4 select 0, %5 select 0,%6, %7, %11 select 0,%12 select 0, %13 select 0],""MCC_fnc_placeConvoy"",false,false] spawn BIS_fnc_MP;
 
 								    sleep 1;
 								  "

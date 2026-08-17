@@ -93,7 +93,7 @@ if (mcc_missionmaker == (name player)) then 	{
 						while {!MCC3DgotValue && MCC3DRuning} do {sleep 0.2};
 						if (MCC3DRuning) then {
 							MCC_capture_var=MCC_capture_var + FORMAT ["
-							[%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0,%11,false] remoteExec ["MCC_fnc_trapSingle", 2];
+							[[%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0,%11,false],""MCC_fnc_trapSingle"",false,false] call BIS_fnc_MP;
 							"
 							, MCC3DValue select 0
 							, trapkind
@@ -177,7 +177,7 @@ if (mcc_missionmaker == (name player)) then 	{
 
 						if (MCC3DRuning) then {
 							MCC_capture_var=MCC_capture_var + FORMAT ["
-							[%1 , %2 select 0, %3 , %4 select 0, %5] remoteExec ["MCC_fnc_ACSingle", false, false];
+							[[%1 , %2 select 0, %3 , %4 select 0, %5],""MCC_fnc_ACSingle"",false,false] call BIS_fnc_MP;
 							"
 							, MCC3DValue select 0
 							, trapkind
@@ -220,9 +220,9 @@ if (mcc_missionmaker == (name player)) then 	{
 				trapkind = [(_trapsArray select (lbCurSel MCC_TRAPS_OBJECT)) select 1];
 				hint (localize "STR_MCC_HINT_CLICK_ON_THE_MAP_TO_PLACE_THE_TRAP");
 				if (MCC_capture_state) then {
-						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_CAPTURED";
+						onMapSingleClick " 	hint localize ""STR_MCC_FNC_TRAP_CAPTURED"";
 								MCC_capture_var=MCC_capture_var + FORMAT ['
-								[%1 , %2 select 0, %3 select 0, %4, %5] remoteExec ["MCC_fnc_SBSingle", 0, false];
+								[[%1 , %2 select 0, %3 select 0, %4, %5],""MCC_fnc_SBSingle"",true,false] call BIS_fnc_MP;
 								'
 								, _pos
 								, trapkind
@@ -232,8 +232,8 @@ if (mcc_missionmaker == (name player)) then 	{
 								];
 								onMapSingleClick """";";
 					} else {
-						onMapSingleClick " 	hint localize "STR_MCC_FNC_TRAP_PLACED";
-								[[_pos , trapkind select 0,MCC_trapvolume select 0, IEDExplosionType, iedside],"MCC_fnc_SBSingle",0,0] remoteExec ["MCC_fnc_SBSingle",0,0];
+						onMapSingleClick " 	hint localize ""STR_MCC_FNC_TRAP_PLACED"";
+								[[_pos , trapkind select 0,MCC_trapvolume select 0, IEDExplosionType, iedside],""MCC_fnc_SBSingle"",true,false] call BIS_fnc_MP;
 								onMapSingleClick """";";
 					};
 			};
