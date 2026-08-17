@@ -30,7 +30,7 @@ if (mcc_missionmaker == (name player)) then
 				if (MCC_capture_state) then
 				{
 					 MCC_capture_var = MCC_capture_var + FORMAT ["
-if (!(isNull MCC3DValue select 0)) then { [%1, %2, '%3', '%4', '%5', %6, '%7', '%8', %9] remoteExec ['MCC_fnc_simpleSpawn', 0, false]; };
+if (!(isNull MCC3DValue)) then { [%1, %2, '%3', '%4', '%5', %6, '%7', '%8', %9] remoteExec ['MCC_fnc_simpleSpawn', 0, false]; };
 										"
 										,MCC3DValue select 0
 										,MCC3DValue select 1

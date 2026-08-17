@@ -1,8 +1,6 @@
 //================================================================MCC_fnc_buildSpawnPoint=============================================================================
 //Create a spawn point to the given side - SERVER ONLY
-if (!(isNull _this select 0)) then {
 [[pos, dir, side, size, destructable], "MCC_fnc_buildSpawnPoint", false, false] remoteExec ["MCC_fnc_buildSpawnPoint", 2, false];
-};
 
 // pos: Array, position
 // dir; number, direction
