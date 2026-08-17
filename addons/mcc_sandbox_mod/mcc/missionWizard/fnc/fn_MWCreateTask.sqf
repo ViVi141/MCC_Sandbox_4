@@ -8,9 +8,7 @@
 //===================================================================================================================================================================*/
 private ["_type","_stringName","_stringDescription","_pos","_objectName","_missionTime","_missionIntel","_indecator","_capturVar","_stateCond","_missionWherabouts","_pic","_sides","_taskId","_taskType","_vehicle","_group","_missionName"];
 
-// Rename function to original
-MCC_fnc_MWCreateTaskOriginal = {
-
+// MCC_fnc_MWCreateTask - create a mission objective module
 _this params [
   ["_obj",objNull,[objNull]],
   ["_pos",[],[[]]],
@@ -360,4 +358,3 @@ publicVariable "MCC_MWObjectivesNames";
 
 // 返回任务信息
 [_pos,"",_stringName,_stringDescription,"",_pic,1,[],_vehicle]
-};

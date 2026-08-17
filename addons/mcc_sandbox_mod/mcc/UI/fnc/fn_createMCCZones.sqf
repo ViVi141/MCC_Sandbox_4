@@ -5,7 +5,7 @@
 private ["_zone","_markerlabel"];
 
 {
-	if ((count mcc_zone_pos) > _x && (count mcc_zone_size) > _x && (count mcc_zone_dir) > _x && !(isNil {mcc_zone_pos select _x})) then {
+	if (typeName _x == "SCALAR" && (count mcc_zone_pos) > _x && (count mcc_zone_size) > _x && (count mcc_zone_dir) > _x && !(isNil {mcc_zone_pos select _x})) then {
 		_zone = createMarkerLocal [str _x, mcc_zone_pos select _x];
 		_zone setMarkerShapeLocal "RECTANGLE";
 		_zone setMarkerColorLocal "colorBlack";
