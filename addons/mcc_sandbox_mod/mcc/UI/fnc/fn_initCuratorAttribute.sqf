@@ -13,7 +13,7 @@ with uinamespace do
 	_fncName = _class;
 		
 	_fncFile = preprocessfilelinenumbers format ["%2mcc\UI\rscommon\%1.sqf",_fncName, _path];
-	_fncFile = format ["scriptname '%1_%2'; _fnc_scriptName = '%1';",_fncName] + _fncFile;
+	_fncFile = format ["scriptname '%1'; _fnc_scriptName = '%1';",_fncName] + _fncFile;
 	uinamespace setvariable ["MCC_"+ _fncName,compile _fncFile];
 	
 	_control = _params select 0;

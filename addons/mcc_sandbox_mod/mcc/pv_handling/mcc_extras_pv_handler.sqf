@@ -13,9 +13,6 @@ if ( (isServer) || (MCC_isLocalHC) ) then {
 if (isServer) then {
 //===================================================================MCC_fnc_highCommand======================================================================================
 // Create a suiside bombers  that will randomly run ove and explode himself on target faction's units
-if (!(isNull _commander)) then {
-    [_commander, _action] remoteExec ["MCC_fnc_highCommand", 0, false];
-};
 // Params:
 // 	_commander: object, unit that is the commander
 // 	_action: integer, 0 - make new commander, 1 - remove all groups from the commander, 2 - add group to the commander
@@ -24,9 +21,6 @@ if (!(isNull _commander)) then {
 
 //===================================================================MCC_fnc_boxGenerator======================================================================================
 // Create an empty box with the given weapons and items
-if (!(isNull _pos) && !(isNull _dir) && !(isNull _weapons) && !(isNull _magazines) && !(isNull _items) && !(isNull _rucks)) then {
-    [_pos, _dir, _weapons, _magazines, _items, _rucks] remoteExec ["MCC_fnc_boxGenerator", 0, false];
-};
 // Params:
 // 	_pos: array position
 // 	_dir: number - direction
@@ -39,9 +33,6 @@ if (!(isNull _pos) && !(isNull _dir) && !(isNull _weapons) && !(isNull _magazine
 
 //===================================================================MCC_fnc_placeConvoy======================================================================================
 // Place a convoy up to 5 cars facing the direction stated with ot without an HVT
-if (!(isNull vehicle1) && !(isNull vehicle2) && !(isNull vehicle3) && !(isNull vehicle4) && !(isNull vehicle5)) then {
-    [vehicle1, vehicle2, vehicle3, vehicle4, vehicle5, start, heading, side, VIPclass, VIPcar] remoteExec ["MCC_fnc_placeConvoy", 0, false];
-};
 // Params:
 // 	vehicle1, vehicle2, vehicle3, vehicle4, vehicle5: string, vehicle class leave "" to not spawn a vehicle
 // 	start: array, position, start location
@@ -54,9 +45,6 @@ if (!(isNull vehicle1) && !(isNull vehicle2) && !(isNull vehicle3) && !(isNull v
 
 //===================================================================MCC_fnc_startConvoy======================================================================================
 // Make the convoy drive through the specific waypoints
-if (!(isNull _unit)) then {
-    [[wp1, wp2, wp3], isVIP] remoteExec ["MCC_fnc_startConvoy", 0, false];
-};
 // Params:
 // 	[wp1, wp2, wp3]: array, waypoints positions
 // 	isVIP: string, if = "0" no vip else there is a vip
