@@ -23,6 +23,7 @@ create a movie scene made of intro if needed and a zoom in on an object
 =======================================================================================================================================================*/
 private ["_sfx","_blur","_cam","_camPos","_targetPos","_fnc_tranzEffect","_target","_units","_timeEnd","_endCinimeticEH"];
 params ["_object","_taskDescription","_sfxName","_zoomStart","_zoomEnd","_shotDuration","_trazDuration","_specialIntro","_sounds","_music","_plainText","_distance"];
+if (isNil "_object" || {isNull _object}) exitWith {};
 
 MCC_fnc_tranzEffect = {
 	params ["_cutText","_duration","_adjust"];parsetext

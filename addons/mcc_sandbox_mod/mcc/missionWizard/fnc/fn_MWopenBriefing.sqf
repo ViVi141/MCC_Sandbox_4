@@ -82,9 +82,11 @@ MCC_fnc_isUnitInBuilsing = {
 
 //Cinematic
 if (_playMusic == 0) then {
-	private ["_module","_object","_taskDescription","_sfx","_zoomEnd","_specialIntro","_units"];
+	private ["_module","_object","_taskDescription","_sfx","_zoomEnd","_specialIntro","_units","_missionsInfo"];
 
-		_object = ((((missionNamespace getVariable format ["MCC_missionsInfo_%1", side player]) select 1) select 0) select 8);
+		_missionsInfo = missionNamespace getVariable [format ["MCC_missionsInfo_%1", side player], []];
+		if (count _missionsInfo > 1 && {count (_missionsInfo select 1) > 0}) then {
+			_object = (((_missionsInfo select 1) select 0) select 8);
 
 		//Do we have a sky intro
 		_units = (getpos _object) nearEntities [["Man", "Air", "Car", "Tank"], 1000];
@@ -131,6 +133,7 @@ if (_playMusic == 0) then {
 			//make a scene
 			[_object,_taskDescription,_sfx,0.3,_zoomEnd,10,1,"none",[],"",""] call MCC_fnc_movieMaker;
 		} foreach ((missionNamespace getVariable format ["MCC_missionsInfo_%1", side player]) select 1);
+	};
 	};
 };
 
