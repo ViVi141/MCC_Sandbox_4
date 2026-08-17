@@ -67,8 +67,7 @@ _pos = getpos _module;
 _zones = ["New"];
 {
  	_zones pushBack str _x;
- } forEach (missionNamespace getVariable ["MCC_zones_numbers",[]]); ;
-
+ } forEach (missionNamespace getVariable ["MCC_zones_numbers",[]]);
 _resualt = ["Create Zone",[
 			["Zone",_zones],
 			["size X",2000],

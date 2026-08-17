@@ -19,8 +19,7 @@ _object = _object select 1;
 _zones = [];
 {
  	_zones pushBack str _x;
- } forEach (missionNamespace getVariable ["MCC_zones_numbers",[]]); ;
-
+ } forEach (missionNamespace getVariable ["MCC_zones_numbers",[]]);
 _resualt = ["Assign to Zone",[
 			["Zone",_zones],
 			["Behavior",["aggressive","Defensive","Fortify","Default","BIS Defence","BIS Patrol"]]

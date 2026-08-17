@@ -83,8 +83,7 @@ if (_men distance _ied <4) then {
 	if (_isEngineer) then {
 		if (_rand > 0.20) then {
 			hint "disarmed";
-			[[[netid _men,_men], format ["disarm%1", (floor random 7)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
-
+			[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 			sleep 1;
 			if (_isEngineer) then {player addrating 500};
 			_ied setvariable ["armed",false,true];
@@ -94,12 +93,11 @@ if (_men distance _ied <4) then {
 			if (_rand >0.05) then {
 				hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 
-				[[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+				[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 			} else {
 				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
-				[[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
-
+				[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
 				"SmallSecondary" createVehicle _pos;
@@ -111,19 +109,17 @@ if (_men distance _ied <4) then {
 		//If it isn't a bomb expert <*Kaboom*>
 		if (_rand > 0.70) then {
 			hint "disarmed";
-			[[[netid _men,_men], format ["disarm%1", (floor random 7)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
-
+			[[netid _men,_men], format ["disarm%1", (floor random 7)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 			sleep 1;
 			_ied setvariable ["armed",false,true];
 		} else {
 			hint (localize "STR_MCC_HINT_FAIL_TO_DISARM");
 			if (_rand >0.3) then {
-				[[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
+				[[netid _men,_men], format ["disarmfail%1", (floor random 3)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 			} else {
 				hint (localize "STR_MCC_HINT_CRITICAL_FAIL_START_RUNING");
 
-				[[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]], "MCC_fnc_globalSay3D", true, false] spawn BIS_fnc_MP;
-
+				[[netid _men,_men], format ["disarmcrit%1", (floor random 2)+1]] remoteExec ["MCC_fnc_globalSay3D", 0, false];
 				//_ied setvariable ["armed",false,true];
 				sleep 2 + random 3;
 				"SmallSecondary" createVehicle _pos;

@@ -74,7 +74,7 @@ switch (_mode) do
 				private ["_text","_color","_texture","_pos"];
 				_pos = missionNamespace getVariable [format ["MCC_START_%1",playerSide],[0,0,0]];
 				_text 	= "HQ";
-				_texture = "n_installation" call bis_fnc_textureMarker;;
+				_texture = "n_installation" call bis_fnc_textureMarker;
 				_color = [playerSide] call bis_fnc_sidecolor;
 				_color set [3,1-(((player distance _pos)/1000)) max 0];
 				_text = _text + format [" %1 m",floor (player distance _pos)];
@@ -222,8 +222,7 @@ switch (_mode) do
 												_mark = _obj getVariable ["mcc_fob_name",""];
 												_side = _obj getVariable ["side",civilian];
 
-												[compile format ['deleteMarker "%1";',_mark],"BIS_fnc_spawn", _side,false] call BIS_fnc_MP;
-
+												compile format ['deleteMarker "%1";',_mark] remoteExec ["BIS_fnc_spawn", _side, false];
 												_flag = _obj getVariable ["mcc_flag",objnull];
 												if (!isnil "_flag") then
 												{
@@ -238,7 +237,7 @@ switch (_mode) do
 			_dummy setvariable ["mcc_fob_name",_name, true];
 
 			//Create marker
-			[[[_name], _pos, "colorGreen", "loc_Bunker",_name,false],"BIS_fnc_markerCreate", _side,false] call BIS_fnc_MP;
+			[[_name], _pos, "colorGreen", "loc_Bunker",_name,false] remoteExec ["BIS_fnc_markerCreate", _side, false];
 		} else {
 			//Not destroyable
 			_dummy addEventHandler ["handledamage",{0}];

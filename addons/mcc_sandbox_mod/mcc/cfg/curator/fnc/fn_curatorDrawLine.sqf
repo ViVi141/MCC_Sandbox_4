@@ -64,7 +64,7 @@ MCC_fnc_curatorDrawLine_mapEH = [((findDisplay 312) displayCtrl 50), "draw", {
         // Draw the 3d icon and line
         private _mousePosAGL = screenToWorld getMousePosition;
         drawIcon3D [_icon, _color, _mousePosAGL, 2, 2, 0, _text];
-        drawLine3D [_mousePosAGL, getpos _object, _color];;
+        drawLine3D [_mousePosAGL, getpos _object, _color];
     } else {
         (_this select 1) call CBA_fnc_removePerFrameHandler;
         (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", MCC_fnc_curatorDrawLine_mouseEH];

@@ -115,7 +115,7 @@ else
 
 						if (isMultiplayer) then
 						{
-							[compile format ["unassignVehicle objectFromNetID '%1'; objectFromNetID '%1' action ['eject', vehicle objectFromNetID '%1']", netID _unit], "BIS_fnc_spawn", _unit, false] spawn BIS_fnc_MP;
+							compile format ["unassignVehicle objectFromNetID '%1'; objectFromNetID '%1' action ['eject', vehicle objectFromNetID '%1']", netID _unit] remoteExec ["BIS_fnc_spawn", _unit, false];
 						}
 						else
 						{
@@ -239,8 +239,7 @@ else
 			{
 				_rope = _actualRopes select (_forEachIndex % 2);
 
-				[[_x, _rope],"MCC_fnc_fastRopeLocal",_x,false] spawn BIS_fnc_MP;
-
+				[_x, _rope] remoteExec ["MCC_fnc_fastRopeLocal", _x, false];
 				sleep ( 1 + ((random 6)/10) );
 			} foreach _cargoUnits;
 
@@ -316,7 +315,7 @@ else
 
 		if (_empty && (!isnil "_startPos")) then
 		{
-			[[[_startPos], _height, 1, [netid _heli,_heli]],"MCC_fnc_evacMove",_heli,false] spawn BIS_fnc_MP;
+			[[_startPos], _height, 1, [netid _heli,_heli]] remoteExec ["MCC_fnc_evacMove", _heli, false];
 		};
 	};
 };

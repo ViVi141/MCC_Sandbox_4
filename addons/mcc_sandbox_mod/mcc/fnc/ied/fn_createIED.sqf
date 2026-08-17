@@ -235,8 +235,7 @@ _dummy setvariable ["iedAmbush", false, true];
 _dummy setvariable ["MCC_IEDtype", "ied", true];
 
 //Create helper
-[[_dummy,"Hold %1 to disarm"], "MCC_fnc_createHelper", false] call BIS_fnc_MP;
-
+[_dummy,"Hold %1 to disarm"] remoteExec ["MCC_fnc_createHelper", 2];
 //If it is radio IED
 if (_IEDTriggerType == 1) then {
 	_dummy setvariable ["iedTrigereRadio", true, true];
@@ -249,7 +248,7 @@ _fakeIed setvariable ["realIed", _dummy ,true];
 //Sync it with pre-sync IED
 if (str (_fakeIed getVariable ["syncedObject", [0,0,0]]) != "[0,0,0]") then
 {
-	[[getpos _fakeIed , (_fakeIed getVariable ["syncedObject", [0,0,0]])],"MCC_fnc_iedSync",false,false] call BIS_fnc_MP;
+	[getpos _fakeIed , (_fakeIed getVariable ["syncedObject", [0,0,0]])] remoteExec ["MCC_fnc_iedSync", 2, false];
 };
 
 //Spawn the IED script

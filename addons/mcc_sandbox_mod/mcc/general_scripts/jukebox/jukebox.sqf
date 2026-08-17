@@ -42,17 +42,17 @@ switch (_type) do {
 		};
 
 		if (_jukeBoxMusic) then {
-			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[2,compile format ["playMusic '%1'",_track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
 		};
 	};
 
 	//Play
     case 1:	{
 		if (_jukeBoxMusic) then	{
-			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[2,compile format ["playMusic '%1'",_track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
 		} else {
 			if (isClass(configFile >> "CfgSounds" >> _track) || isClass(missionconfigFile >> "CfgSounds" >> _track)) then {
-				[[2,compile format ["playSound '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+				[2,compile format ["playSound '%1'",_track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
 			};
 		};
 	};
@@ -66,13 +66,13 @@ switch (_type) do {
 		};
 
 		if (_jukeBoxMusic) then {
-			[[2,compile format ["playMusic '%1'",_track]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+			[2,compile format ["playMusic '%1'",_track]] remoteExec ["MCC_fnc_globalExecute", 0, false];
 		};
 	};
 
 	//Stop
    	case 3:	{
-		[[2,compile "playMusic ''"], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+		[2,compile "playMusic ''"] remoteExec ["MCC_fnc_globalExecute", 0, false];
 	};
 
 	//Volume slider
@@ -99,7 +99,7 @@ switch (_type) do {
 						  _cond='%6';
 						  _track='%7';
 						  _jukeBoxMusic=%8;
-						  [[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ],'MCC_fnc_MusicTrigger',true,false] spawn BIS_fnc_MP;
+						  [_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ] remoteExec ['MCC_fnc_MusicTrigger', 0, false];
 						   sleep 1;
 						  "
 						  ,_zone
@@ -121,7 +121,7 @@ switch (_type) do {
 		_markerName setmarkertextlocal _markerName;
 
 		//execute on all clients
-		[[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ],'MCC_fnc_MusicTrigger',true,false] spawn BIS_fnc_MP;
+		[_zone, _zonePos, _zoneX, _zoneY, _activate, _cond,_track,_jukeBoxMusic ] remoteExec ['MCC_fnc_MusicTrigger', 0, false];
 	};
 
 	//Switch to music tracks

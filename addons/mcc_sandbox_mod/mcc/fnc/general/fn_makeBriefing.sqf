@@ -9,8 +9,8 @@
 private ["_type","_string","_tittle","_dummyGroup","_dummy","_missionTittle","_missionInfo","_sidePlayer","_playMusic"];
 _string 		= _this select 0;
 _type 			= _this select 1;
-_missionTittle 	= param [2, [], [[]]];;
-_missionInfo	= param [3, [], [[]]];;
+_missionTittle 	= param [2, [], [[]]];
+_missionInfo	= param [3, [], [[]]];
 _sidePlayer =  _missionInfo param [7, sideLogic,[sideLogic]];
 _playMusic = _missionInfo param [8, 0,[0]];
 
@@ -64,5 +64,5 @@ if (count _missionInfo > 0) then {
 if (_playMusic in [0,1]) then {
 	_init = format ["0 = _this spawn {if (!isDedicated && (str playerSide ==  '%4')) then {waituntil {alive player};player createDiaryRecord ['diary', ['%1',(toString %3) + '%2']];(_this getVariable 'missionsInfo') spawn MCC_fnc_MWopenBriefing;}};",_tittle, _string ,_missionTittle, _sidePlayer];
 
-	[[[netid _dummy,_dummy], _init], "MCC_fnc_setVehicleInit", true, false] spawn BIS_fnc_MP;
+	[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, false];
 };

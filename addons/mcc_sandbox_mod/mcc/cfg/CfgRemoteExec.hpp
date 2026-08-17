@@ -420,6 +420,7 @@ class MCC_fnc_ambientFireInit {allowedTargets=0;};
 class MCC_fnc_ambientFireClientSide {allowedTargets=0;};
 class MCC_fnc_ambientFirePlayerFiredEH {allowedTargets=0;};
 class MCC_fnc_ambientFireStart {allowedTargets=0;};
+class MCC_fnc_boxGenerator {allowedTargets=0;};
 class MCC_fnc_cas {allowedTargets=0;};
 class MCC_fnc_clearPersistentData {allowedTargets=0;};
 class MCC_fnc_fastRopeLocal {allowedTargets=0;};

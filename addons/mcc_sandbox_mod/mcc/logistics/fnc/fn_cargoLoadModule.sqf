@@ -70,7 +70,7 @@ _object = _object select 1;
     		_availableVehicle = (nearestObjects [ASLToAGL _mousePosASL, (missionNamespace getVariable ["ace_cargo_cargoHolderTypes",[]]), 15, true]) param [0, objNull];
     	} else {
     		_objectMass = (getMass _object) max 5;
-    		_availableVehicle = (((ASLToAGL _mousePosASL) nearObjects ["AllVehicles",15]) select {_x getVariable ["MCC_logisticsObjectMass",_x call MCC_fnc_logisticsCargoGetMass] >= _objectMass}) param [0, objNull];;
+    		_availableVehicle = (((ASLToAGL _mousePosASL) nearObjects ["AllVehicles",15]) select {_x getVariable ["MCC_logisticsObjectMass",_x call MCC_fnc_logisticsCargoGetMass] >= _objectMass}) param [0, objNull];
     	};
 
         if (isNull _availableVehicle || !alive _availableVehicle) exitWith { };

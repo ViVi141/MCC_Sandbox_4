@@ -26,4 +26,4 @@ if (!_valueExist) then {
 };
 
 //returns value
-[[_varName,_value,_id], "MCC_fnc_setValue", _player, false] spawn BIS_fnc_MP;
+[_varName,_value,_id] remoteExec ["MCC_fnc_setValue", _player, false];

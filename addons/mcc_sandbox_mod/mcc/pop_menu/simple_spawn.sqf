@@ -45,10 +45,9 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 
 					if (_name != "") then
 					{
-						[[[netid _dummy,_dummy], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+						[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-					[[[netid _dummy,_dummy], _init, false], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+					[[netid _dummy,_dummy], _init, false] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 				};
@@ -73,10 +72,9 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 					_unitspawned setformdir _dir;
 					if (_name != "") then
 					{
-						[[[netid _dummy,_dummy], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+						[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-					[[[netid _dummy,_dummy], _init, false], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+					[[netid _dummy,_dummy], _init, false] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 				};
@@ -114,7 +112,7 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 
 						if (_name != "") then
 						{
-							[[[netid (_dummy select 0),(_dummy select 0)], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+							[[netid (_dummy select 0),(_dummy select 0)], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 						};
 
 						_tempInit = _init +	FORMAT [";group _this setFormDir %1;",_dir];
@@ -127,8 +125,7 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 						(_dummy select 0) setVariable ["vehicleinit", _tempInit, true];
 
 
-						[[[netid (_dummy select 0),(_dummy select 0)], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+						[[netid (_dummy select 0),(_dummy select 0)], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 						//Curator
 						{_x addCuratorEditableObjects [[(_dummy select 0)],true]} forEach allCurators;
 					}
@@ -151,10 +148,9 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 
 						if (_name != "") then
 						{
-							[[[netid _dummy,_dummy], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+							[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 						};
-						[[[netid _dummy,_dummy], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+						[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 						//Curator
 						{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 					};
@@ -178,10 +174,9 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 
 					if (_name != "") then
 					{
-						[[[netid _dummy,_dummy], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+						[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-					[[[netid _dummy,_dummy], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+					[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 				};
@@ -194,10 +189,9 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 					sleep 0.01;
 					if (_name != "") then
 					{
-						[[[netid _dummy,_dummy], _name], "MCC_fnc_setVehicleName", true, true] spawn BIS_fnc_MP;
+						[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-					[[[netid _dummy,_dummy], _init], "MCC_fnc_setVehicleInit", true, true] spawn BIS_fnc_MP;
-
+					[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 				};

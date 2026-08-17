@@ -16,8 +16,7 @@ if !mcc_isloading then {
 					MCC_START_WEST  = _pos;
 					publicVariable ""MCC_START_WEST"";
 
-					[[_pos, 0, 'west','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
-
+					[_pos, 0, 'west','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 
 					mcc_safe=mcc_safe + FORMAT [""
@@ -26,7 +25,7 @@ if !mcc_isloading then {
 
 												MCC_teleportAtStart = %2;
 
-												[[MCC_START_WEST, 0, 'west','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[MCC_START_WEST, 0, 'west','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,MCC_START_WEST
 												,MCC_teleportAtStart
@@ -42,8 +41,7 @@ if !mcc_isloading then {
 					MCC_START_EAST  = _pos;
 					publicVariable ""MCC_START_EAST"";
 
-					[[_pos, 0, 'east','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
-
+					[_pos, 0, 'east','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 
 					mcc_safe=mcc_safe + FORMAT [""
@@ -52,7 +50,7 @@ if !mcc_isloading then {
 
 												MCC_teleportAtStart = %2;
 
-												[[MCC_START_EAST, 0, 'east','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[MCC_START_EAST, 0, 'east','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,MCC_START_EAST
 												,MCC_teleportAtStart
@@ -68,8 +66,7 @@ if !mcc_isloading then {
 					MCC_START_GUER  = _pos;
 					publicVariable ""MCC_START_GUER"";
 
-					[[_pos, 0, 'GUER','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
-
+					[_pos, 0, 'GUER','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 
 					mcc_safe=mcc_safe + FORMAT [""
@@ -78,7 +75,7 @@ if !mcc_isloading then {
 
 												MCC_teleportAtStart = %2;
 
-												[[MCC_START_GUER, 0, 'GUER','HQ',false,false,true,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[MCC_START_GUER, 0, 'GUER','HQ',false,false,true,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,MCC_START_GUER
 												,MCC_teleportAtStart
@@ -171,10 +168,10 @@ if !mcc_isloading then {
 		{
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
-					[[_pos, 0, 'west' ,'FOB',true,false,false,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+					[_pos, 0, 'west' ,'FOB',true,false,false,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 					mcc_safe=mcc_safe + FORMAT [""
-												[[%1, 0, 'west' ,'FOB',true], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[%1, 0, 'west' ,'FOB',true] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,_pos
 												];
@@ -186,10 +183,10 @@ if !mcc_isloading then {
 		{
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
-					[[_pos, 0, 'east' ,'FOB',true,false,false,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+					[_pos, 0, 'east' ,'FOB',true,false,false,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 					mcc_safe=mcc_safe + FORMAT [""
-												[[%1, 0, 'east' ,'FOB',true], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[%1, 0, 'east' ,'FOB',true] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,_pos
 												];
@@ -201,10 +198,10 @@ if !mcc_isloading then {
 		{
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
-					[[_pos, 0, 'GUER' ,'FOB',true,false,false,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+					[_pos, 0, 'GUER' ,'FOB',true,false,false,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 					mcc_safe=mcc_safe + FORMAT [""
-												[[%1, 0, 'RESISTANCE' ,'FOB',true], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[%1, 0, 'RESISTANCE' ,'FOB',true] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,_pos
 												];
@@ -216,10 +213,10 @@ if !mcc_isloading then {
 		{
 			hint (localize "STR_MCC_HINT_CLICK_ON_MAP_INORDER_TO_PLACE_THE_FOB");
 			onMapSingleClick "
-					[[_pos, 0, 'CIV' ,'FOB',true,false,false,MCC_teleportAtStart], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+					[_pos, 0, 'CIV' ,'FOB',true,false,false,MCC_teleportAtStart] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 					onMapSingleClick """";
 					mcc_safe=mcc_safe + FORMAT [""
-												[[%1, 0, 'CIV' ,'FOB',true], 'MCC_fnc_buildSpawnPoint', false, false] spawn BIS_fnc_MP;
+												[%1, 0, 'CIV' ,'FOB',true] remoteExec ['MCC_fnc_buildSpawnPoint', 2, false];
 												""
 												,_pos
 												];

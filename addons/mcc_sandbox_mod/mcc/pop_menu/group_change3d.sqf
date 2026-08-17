@@ -238,7 +238,7 @@ if (_type<=6) then 	//If not doc or object
 				_comboBox = _mccdialog displayCtrl MCC_UNIT_CLASS;		
 				lbClear _comboBox;
 					{
-						_displayname = format ["%1",(_x select 3) select 0];;
+						_displayname = format ["%1",(_x select 3) select 0];
 						_comboBox lbAdd _displayname;
 					} foreach U_GARBAGE;
 				_comboBox lbSetCurSel 0;

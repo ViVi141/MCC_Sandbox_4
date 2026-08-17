@@ -814,7 +814,7 @@ if ( isServer ) then {
 			MCC_allowedPlayers = _names;
 		};
 
-		publicVariable "MCC_allowedPlayers";;
+		publicVariable "MCC_allowedPlayers";
 	} else {
 		MCC_iniDBenabled = false;
 	};

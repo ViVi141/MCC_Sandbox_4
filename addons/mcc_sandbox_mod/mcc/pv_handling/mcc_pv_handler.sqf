@@ -168,7 +168,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 				{
 					if (MCC_Chat) then
 					{
-						[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> %2 Logged out as Misson Maker",_p_mcc_request,mcc_missionMaker], false],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+						[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> %2 Logged out as Misson Maker",_p_mcc_request,mcc_missionMaker], false] remoteExec ["MCC_fnc_groupchat", 0, false];
 					};
 					mcc_missionmaker="";
 					publicVariable "mcc_missionmaker";
@@ -245,7 +245,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 							if (MCC_Chat) then
 							{
-								[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%2"" of type %3.",_p_mcc_request,_unitspawned,_p_mcc_spawnname], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+								[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%2"" of type %3.",_p_mcc_request,_unitspawned,_p_mcc_spawnname], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 							};
 
 							if (_p_mcc_zone_behavior != "bis" && _p_mcc_zone_behavior != "bisd" && _p_mcc_zone_behavior != "bisp") then
@@ -275,7 +275,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 							if (MCC_Chat) then
 							{
-								[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%2"" of type %3.",_p_mcc_request,_unitspawned,_p_mcc_spawnname], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+								[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%2"" of type %3.",_p_mcc_request,_unitspawned,_p_mcc_spawnname], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 							};
 
 						};
@@ -360,7 +360,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 									if (MCC_Chat) then
 									{
-										[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%3"" of type %2.",_p_mcc_request,_p_mcc_spawnname,(_unitspawned select 0)], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+										[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%3"" of type %2.",_p_mcc_request,_p_mcc_spawnname,(_unitspawned select 0)], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 									};
 								}
 							else
@@ -376,7 +376,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 									if (MCC_Chat) then
 									{
-										[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned type %2.",_p_mcc_request,_p_mcc_spawnname], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+										[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned type %2.",_p_mcc_request,_p_mcc_spawnname], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 									};
 								};
 
@@ -391,7 +391,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 							if (MCC_Chat) then
 							{
-								[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned type %2.",_p_mcc_request,_p_mcc_spawnname], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+								[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned type %2.",_p_mcc_request,_p_mcc_spawnname], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 							};
 
 
@@ -476,7 +476,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 											{
 												if (_p_mcc_zone_behavior != "bis" && _p_mcc_zone_behavior != "bisd" && _p_mcc_zone_behavior != "bisp") then
 												{
-													//nul = [leader _unitspawned, _p_mcc_zone_markername, _p_mcc_zone_behavior, "SHOWMARKER", "NOWAIT",_specialUps,_specialUpsNr,_specialUpsRandom,_track_units, "spawned", _p_mcc_awareness  ] execVm format ["%1scripts\UPSMON.sqf",MCC_path];;
+													//nul = [leader _unitspawned, _p_mcc_zone_markername, _p_mcc_zone_behavior, "SHOWMARKER", "NOWAIT",_specialUps,_specialUpsNr,_specialUpsRandom,_track_units, "spawned", _p_mcc_awareness  ] execVm format ["%1scripts\UPSMON.sqf",MCC_path];
 													_unitspawned setVariable ["GAIA_ZONE_INTEND",[_p_mcc_zone_markername,_p_mcc_zone_behavior], true];
 													_unitspawned setVariable ["mcc_gaia_cache",_p_mcc_cache, true];
 												}
@@ -491,7 +491,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 									if (MCC_Chat) then
 									{
-										[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%3"" of type %2.",_p_mcc_request,_p_mcc_spawnname,((units _unitspawned) select 0)], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+										[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned ""%3"" of type %2.",_p_mcc_request,_p_mcc_spawnname,((units _unitspawned) select 0)], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 									};
 
 
@@ -512,7 +512,7 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 					{
 						if (MCC_Chat) then
 						{
-							[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Created/Updated zone: %2.",_p_mcc_request,_p_mcc_zone_markername], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+							[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Created/Updated zone: %2.",_p_mcc_request,_p_mcc_zone_markername], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 						};
 					}
 				else
@@ -522,14 +522,14 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 							{
 								if (MCC_Chat) then
 								{
-									[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned in grid: %2.",_p_mcc_request,(_p_safepos call BIS_fnc_PosToGrid)], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+									[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Spawned in grid: %2.",_p_mcc_request,(_p_safepos call BIS_fnc_PosToGrid)], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 								};
 							}
 						else
 							{
 								if (MCC_Chat) then
 								{
-									[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> SPAWN FAILED! No good position found!",_p_mcc_request], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
+									[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> SPAWN FAILED! No good position found!",_p_mcc_request], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 								};
 							};
 					};
@@ -541,7 +541,6 @@ if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 			MCC_DELAYED_SPAWNS = MCC_DELAYED_SPAWNS+ [_p_safepos];
 			_var2 = "MCC_DELAY" + str(_p_safepos);
 			missionNamespace setVariable [_var2, _this ];
-			[[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Delayed Spawned in grid: %2.",_p_mcc_request,(_p_safepos call BIS_fnc_PosToGrid)], true],"MCC_fnc_groupchat",true,false] spawn BIS_fnc_MP;
-
+			[[netId _p_mcc_player,_p_mcc_player], format["MCC ID %1-> Delayed Spawned in grid: %2.",_p_mcc_request,(_p_safepos call BIS_fnc_PosToGrid)], true] remoteExec ["MCC_fnc_groupchat", 0, false];
 		};
 	};

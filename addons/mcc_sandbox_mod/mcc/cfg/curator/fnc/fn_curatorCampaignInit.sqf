@@ -30,9 +30,7 @@ if (typeName (_module getVariable ["factionPlayer",true]) == typeName "") exitWi
 
 
 	//Start day/night cycle
-	[[_sidePlayer,_sidePlayer2],"MCC_fnc_dayCycle",false,false] spawn BIS_fnc_MP;
-
-
+	[_sidePlayer,_sidePlayer2] remoteExec ["MCC_fnc_dayCycle", 2, false];
 //Not curator exit
 if (!(local _module) || isnull curatorcamera) exitWith {};
 
@@ -78,6 +76,5 @@ _playMusic = _resualt select 10;
 
 
 //Start day/night cycle
-[[_sidePlayer,_sidePlayer2],"MCC_fnc_dayCycle",false,false] spawn BIS_fnc_MP;
-
+[_sidePlayer,_sidePlayer2] remoteExec ["MCC_fnc_dayCycle", 2, false];
 deleteVehicle _module;

@@ -10,8 +10,7 @@
 ========================================================================================================================================================================================*/
 private ["_pos","_radius","_markers","_marker","_tempArray","_fnc_isWater","_markerName","_side","_markerColor","_alpha"];
 _pos = param [0,objNull,[objNull,[]]];
-_radius = param [1,1000,[0]];;
-
+_radius = param [1,1000,[0]];
 if (typeName _pos == typeName objNull) then {_pos = position _pos};
 
 

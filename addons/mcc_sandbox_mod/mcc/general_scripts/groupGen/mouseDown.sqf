@@ -168,7 +168,7 @@ if ((missionNameSpace getVariable ["MCC_artilleryEnabled",false]) &&  _pressed =
 	{
 		hint (localize "STR_MCC_HINT_ARTILLERY_CAPTURED");
 		MCC_capture_var = MCC_capture_var + FORMAT ["
-		[[%1, '%2', %3, %4, %5, %6],'MCC_fnc_artillery',true,false] spawn BIS_fnc_MP;
+		[%1, '%2', %3, %4, %5, %6] remoteExec ['MCC_fnc_artillery', 0, false];
 		"
 		,_ctrl ctrlMapScreenToWorld [_posX,_posY]
 		,shelltype
@@ -195,7 +195,7 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	{
 		hint (localize "STR_MCC_HINT_SPAWNED_CAPTURED");
 		MCC_capture_var = MCC_capture_var + FORMAT ["
-								[[%1 , %2, %3, %4, %5],'MCC_fnc_groupSpawn',false,false] spawn BIS_fnc_MP;
+								[%1 , %2, %3, %4, %5] remoteExec ['MCC_fnc_groupSpawn', 2, false];
 								"
 								, _ctrl ctrlMapScreenToWorld [_posX,_posY]
 								, MCC_groupBroadcast
@@ -208,7 +208,7 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	{
 		hint "Spawned";
 
-		[[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]],"MCC_fnc_groupSpawn",false,false] spawn BIS_fnc_MP;
+		[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]] remoteExec ["MCC_fnc_groupSpawn", 2, false];
 	};
 	sleep 0.5;
 	deleteMarkerLocal "mcc_spawnMarker";
@@ -259,7 +259,7 @@ if (MCC_CASrequestMarker && _pressed==0) then
 	if (MCC_capture_state) then {
 		hint (localize "STR_MCC_HINT_AIR_SUPPORT_CAPTURED");
 		MCC_capture_var=MCC_capture_var + FORMAT ['
-			[[%1, %2 , %3, %4, %5, %6],"MCC_fnc_airDrop",false,false] spawn BIS_fnc_MP;
+			[%1, %2 , %3, %4, %5, %6] remoteExec ["MCC_fnc_airDrop", 2, false];
 			'
 			,_ammount
 			,MCC_spawnkind
@@ -300,8 +300,7 @@ if (MCC_UMParadropRequestMarker && _pressed==0) then
 
 	//[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away] execVM "mcc\fnc\general\fn_realParadrop.sqf";
 
-	[[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away], "MCC_fnc_realParadrop", false] spawn BIS_fnc_MP;
-
+	[getmarkerpos _marker, MCC_selectedUnits, MCC_UMUnit, MCC_UMparadropIsHalo,_spawn,_away] remoteExec ["MCC_fnc_realParadrop", 2];
 	MCC_UMParadropRequestMarker = false;			//Wait and delete the marker
 	sleep 40;
 	deletemarkerlocal _marker;

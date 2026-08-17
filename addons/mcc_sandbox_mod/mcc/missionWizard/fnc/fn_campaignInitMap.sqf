@@ -9,10 +9,10 @@
 //====================================================================================================================================================================*/
 private ["_mapSize","_markersArray","_size","_marker","_tempArray","_fnc_isWater","_markerName","_side","_markerColor","_alpha","_xCounter","_yCounter","_locations","_markerPos","_hotAlpha","_hotDistance","_markerSelected","_markerCenter","_loadDb"];
 _side = param [0,sideLogic,[west]];
-_size = param [1,250,[0]];;
+_size = param [1,250,[0]];
 _alpha = param [2,0.3,[0]];
 _locations = param [3,[],[[]]];
-_hotDistance = param [4,500,[0]];;
+_hotDistance = param [4,500,[0]];
 _hotAlpha = param [5,0.5,[0]];
 _loadDb = param [6,false,[false]];
 

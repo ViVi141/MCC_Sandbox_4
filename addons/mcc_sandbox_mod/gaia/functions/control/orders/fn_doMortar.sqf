@@ -42,10 +42,7 @@ if ((_isInRange) and !Isnil("_ammo")) then
 		};
 
 		///Pos is for all mortar in group
-		_mortarPos = [_pos, _radiusSpread, random(360)] call BIS_fnc_relPos;;
-
-
-
+		_mortarPos = [_pos, _radiusSpread, random(360)] call BIS_fnc_relPos;
 		//Fire dudes
 		{
 

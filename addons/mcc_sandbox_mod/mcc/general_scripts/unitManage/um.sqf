@@ -24,12 +24,12 @@ switch (_type) do {
 		waituntil {mapClick};
 		if (MCC_UMUnit==0) then {
 			{
-				[[[netID _x,_x],teleportPos], "MCC_fnc_moveToPos", _x, false] spawn BIS_fnc_MP;
+				[[netID _x,_x],teleportPos] remoteExec ["MCC_fnc_moveToPos", _x, false];
 			} foreach MCC_selectedUnits;
 		} else {
 			{
 				{
-					[[[netID _x,_x],teleportPos], "MCC_fnc_moveToPos", _x, false] spawn BIS_fnc_MP;
+					[[netID _x,_x],teleportPos] remoteExec ["MCC_fnc_moveToPos", _x, false];
 					sleep 0.2;
 				} foreach (units _x);
 			} foreach MCC_selectedUnits;
@@ -41,11 +41,11 @@ switch (_type) do {
 			_worldPos = deck modelToWorld [0,0,0];
 			if (MCC_UMUnit==0) then
 			{
-				{[[[netID _x,_x],[_worldPos select 0, _worldPos select 1, 15.9]], "MCC_fnc_moveToPos", true, false] spawn BIS_fnc_MP} foreach MCC_selectedUnits;
+				{[[netID _x,_x],[_worldPos select 0, _worldPos select 1, 15.9]] remoteExec ["MCC_fnc_moveToPos", 0, false];} foreach MCC_selectedUnits;
 			}
 			else
 			{
-				{{[[[netID _x,_x],[_worldPos select 0, _worldPos select 1, 15.9]], "MCC_fnc_moveToPos", true, false] spawn BIS_fnc_MP} foreach (units _x);} foreach MCC_selectedUnits;
+				{{[[netID _x,_x],[_worldPos select 0, _worldPos select 1, 15.9]] remoteExec ["MCC_fnc_moveToPos", 0, false];} foreach (units _x);} foreach MCC_selectedUnits;
 			};
 		};
 
@@ -124,7 +124,7 @@ switch (_type) do {
 					{
 						if (isMultiplayer) then
 						{
-							[[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group Player), netID player]], "MCC_fnc_globalExecute", true, false] spawn BIS_fnc_MP;
+							[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group Player), netID player]] remoteExec ["MCC_fnc_globalExecute", 0, false];
 						}
 						else
 						{
@@ -267,7 +267,7 @@ switch (_type) do {
 				else
 				{
 				UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST);
-				[[[netID UMName,UMName],0],"MCC_fnc_highCommand",true,false] call BIS_fnc_MP;
+				[[netID UMName,UMName],0] remoteExec ["MCC_fnc_highCommand", 0, false];
 				};
 			};
 		};
@@ -280,7 +280,7 @@ switch (_type) do {
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
 			hint (localize "STR_MCC_HINT_CLEARED_ALL_HIGH_COMMAND_UNITS");
-			[[[netID UMName,UMName],1],"MCC_fnc_highCommand",true,false] call BIS_fnc_MP;
+			[[netID UMName,UMName],1] remoteExec ["MCC_fnc_highCommand", 0, false];
 			};
 		};
 
@@ -292,7 +292,7 @@ switch (_type) do {
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
 			hint (localize "STR_MCC_HINT_GROUP_ADDED");
-			[[[netID UMName,UMName],2],"MCC_fnc_highCommand",true,false] call BIS_fnc_MP;
+			[[netID UMName,UMName],2] remoteExec ["MCC_fnc_highCommand", 0, false];
 			};
 		};
 
@@ -365,7 +365,7 @@ switch (_type) do {
 			if (MCC_UMUnit==0) then
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
-			[[[netid UMName,UMName], MCC_UMPIPView],"MCC_fnc_broadcast",true,false] spawn BIS_fnc_MP;
+			[[netid UMName,UMName], MCC_UMPIPView] remoteExec ["MCC_fnc_broadcast", 0, false];
 		};
 
 		case 12:	//Delete

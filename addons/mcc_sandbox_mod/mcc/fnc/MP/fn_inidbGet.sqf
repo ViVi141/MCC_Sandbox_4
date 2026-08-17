@@ -31,7 +31,7 @@ if (_read) exitWith {
 		};
 
 	//returns value
-	[[_value,_id], "MCC_fnc_inidbSet", _player, false] spawn BIS_fnc_MP;
+	[_value,_id] remoteExec ["MCC_fnc_inidbSet", _player, false];
 };
 
 
