@@ -325,7 +325,11 @@ def find_missing(g, parsers, root):
                 continue
             if not target.strip() or not target.lower().endswith('.sqf'):
                 continue
-            if target.lower() not in existing:
+            # 兼容两种写法：相对 addon 根 / MCC_path 拼接（\mcc_sandbox_mod\ 前缀）
+            cands = {tl}
+            if not tl.startswith('mcc/'):
+                cands.add('mcc/' + tl)
+            if not cands & existing:
                 problems.append(('missing-file', rel, target, 'execVM/preprocess 目标不存在'))
         DOC_ONLY = ('mcc_fnc_ambientfiresclientside', 'mcc_fnc_ambientambientfirepropagation',
                      'mcc_fnc_ambientfiresclientside', 'gaia_fnc_knowsabout', 'gaia_fnc_spawngroup')
