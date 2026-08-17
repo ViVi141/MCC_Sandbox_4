@@ -206,7 +206,7 @@ if ((missionNameSpace getVariable ["MCC_spawnEnabled",false]) &&  _pressed == 0)
 	}
 	else
 	{
-		hint "Spawned";
+		hint (localize "STR_MCC_HINT_SPAWNED");
 
 		[_ctrl ctrlMapScreenToWorld [_posX,_posY], MCC_groupBroadcast, mcc_hc, mcc_sidename, MCC_isEmpty,missionNamespace getVariable ["mcc_caching",false]] remoteExec ["MCC_fnc_groupSpawn", 2, false];
 	};

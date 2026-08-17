@@ -6981,5 +6981,55 @@ Written by Bon_Inf*.</English>
                 <Chinese>MCC: 任務嚮導錯誤：找不到任務中心，請嘗試在區域內建造你的任務</Chinese>
             </Key>
         </Container>
+        <Container name="hintModern">
+            <Key ID="STR_MCC_HINT_TELEPORTING">
+                <Original>Teleporting</Original>
+                <English>Teleporting</English>
+                <Chinesesimp>传送中</Chinesesimp>
+                <Chinese>傳送中</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_SPAWNED">
+                <Original>Spawned</Original>
+                <English>Spawned</English>
+                <Chinesesimp>已生成</Chinesesimp>
+                <Chinese>已生成</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_CAN_ONLY_HIJAK_UNITS_NOT_GROUPS">
+                <Original>Can only hijak units not groups</Original>
+                <English>Can only hijak units not groups</English>
+                <Chinesesimp>只能劫持单位，不能劫持小组</Chinesesimp>
+                <Chinese>只能劫持單位，不能劫持小組</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_CLICK_AND_DRAG_TO_START_THE_DROP">
+                <Original>click and dragto start the Drop</Original>
+                <English>click and dragto start the Drop</English>
+                <Chinesesimp>点击并拖动开始空投</Chinesesimp>
+                <Chinese>點擊並拖動開始空投</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_LIVE_FEED_IS_BROADCASTING">
+                <Original>Live feed is broadcasting</Original>
+                <English>Live feed is broadcasting</English>
+                <Chinesesimp>实时画面正在播放</Chinesesimp>
+                <Chinese>實時畫面正在播放</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_SELECT_UNIT_OR_GROUP_TO_JOIN">
+                <Original>Click on the unit or group to select it then click on the unit or group you want it to join to</Original>
+                <English>Click on the unit or group to select it then click on the unit or group you want it to join to</English>
+                <Chinesesimp>点击单位或小组以选择，然后点击要加入的单位或小组</Chinesesimp>
+                <Chinese>點擊單位或小組以選擇，然後點擊要加入的單位或小組</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_UNITS_PARACHUTED">
+                <Original>Units paracuted</Original>
+                <English>Units paracuted</English>
+                <Chinesesimp>单位已空投</Chinesesimp>
+                <Chinese>單位已空投</Chinese>
+            </Key>
+            <Key ID="STR_MCC_HINT_DISARMED">
+                <Original>disarmed</Original>
+                <English>disarmed</English>
+                <Chinesesimp>已拆除</Chinesesimp>
+                <Chinese>已拆除</Chinese>
+            </Key>
+        </Container>
     </Package>
 </Project>

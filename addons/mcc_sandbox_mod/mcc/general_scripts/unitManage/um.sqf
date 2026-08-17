@@ -16,7 +16,7 @@ switch (_type) do {
 	//Teleport
 	case 0:{
 		mapClick = false;
-		hint "Click on the map";
+		hint (localize "STR_MCC_HINT_CLICK_ON_THE_MAP");
 		onMapSingleClick " 	hint format ['%1 teleported', UMName];
 							teleportPos = _pos;
 							mapClick = true;
@@ -134,7 +134,7 @@ switch (_type) do {
 				};
 			}
 			else
-			{hint "Can only hijak units not groups"};
+			{hint (localize "STR_MCC_HINT_CAN_ONLY_HIJAK_UNITS_NOT_GROUPS")};
 		};
 
 		case 3:	//Markers
@@ -317,7 +317,7 @@ switch (_type) do {
 		case 9:	//HALO
 		{
 			/*
-			hint "click on the map to start the Parachute";
+			hint (localize "STR_MCC_HINT_CLICK_ON_THE_MAP_TO_START_THE_PARACHUTE");
 			MCC_click = false;
 			onMapSingleClick " 	hint format ['%1 Paradroped', MCC_UMunitsNames];
 								MCC_pos = _pos;
@@ -343,7 +343,7 @@ switch (_type) do {
 			*/
 			MCC_UMparadropIsHalo = 2; //HALO
 			MCC_UMParadropRequestMarker = true;
-			hint "click and dragto start the Drop";
+			hint (localize "STR_MCC_HINT_CLICK_AND_DRAG_TO_START_THE_DROP");
 		};
 
 		case 10:	//Parachute
@@ -356,12 +356,12 @@ switch (_type) do {
 				MCC_UMparadropIsHalo = 1; //Parachute
 			};
 			MCC_UMParadropRequestMarker = true;
-			hint "click and dragto start the Drop";
+			hint (localize "STR_MCC_HINT_CLICK_AND_DRAG_TO_START_THE_DROP");
 		};
 
 		case 11:	//Broadcast
 		{
-			hint "Live feed is broadcasting";
+			hint (localize "STR_MCC_HINT_LIVE_FEED_IS_BROADCASTING");
 			if (MCC_UMUnit==0) then
 				{UMName =  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST)}
 				else {UMName = leader (UMgroupNames select (lbCurSel MCC_UM_LIST))};
@@ -393,7 +393,7 @@ switch (_type) do {
 
 		case 13:	//Join
 		{
-			hint "Click on the unit or group to select it then click on the unit or group you want it to join to";
+			hint (localize "STR_MCC_HINT_SELECT_UNIT_OR_GROUP_TO_JOIN");
 			if (MCC_UMUnit==0) then
 				{
 					UMJoin=  MCC_UMunitsNames select (lbCurSel MCC_UM_LIST);
@@ -405,7 +405,7 @@ switch (_type) do {
 
 		case 14:	//Parachute
 		{
-			hint "Units paracuted";
+			hint (localize "STR_MCC_HINT_UNITS_PARACHUTED");
 			if (MCC_UMUnit==0) then
 				{
 					{while {!(isnull _x) && !(isplayer _x)} do {deletevehicle vehicle _x}} foreach MCC_selectedUnits;

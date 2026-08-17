@@ -44,7 +44,7 @@ _convoy_wp1 setMarkerColorLocal "ColorBlue";
 _point1 =getmarkerpos "evac_marker1";
 
 if (_type == 0) then {														// 1 WP
-	//hint "Markers placed";
+	//hint (localize "STR_MCC_HINT_MARKERS_PLACED");
 	[[_point1, _flyInHight, _landing, [netid _evac,_evac]], "MCC_fnc_evacMove"] remoteExec ["call", _evac];
 	} else {																// 3 WP
 		hint localize "STR_MCC_CONSOLE_LEFT_CLICK_2ND_WP";
