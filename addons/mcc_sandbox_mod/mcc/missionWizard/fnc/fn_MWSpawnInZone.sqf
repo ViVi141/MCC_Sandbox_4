@@ -25,8 +25,9 @@ mcc_request= (missionNamespace getVariable ["mcc_request",0])+1;
 publicVariable "mcc_request";
 
 // What ever we do, we need a good position
-_p_mcc_zone_markposition = (mcc_zone_pos select (_zoneNumber));
-_p_maxrange				 = ((mcc_zone_size select (_zoneNumber)) select 1);
+_p_mcc_zone_markposition = if ((count mcc_zone_pos) > _zoneNumber && !(isNil {mcc_zone_pos select _zoneNumber})) then {mcc_zone_pos select _zoneNumber} else {[0,0,0]};
+_p_maxrange = if ((count mcc_zone_size) > _zoneNumber && !(isNil {mcc_zone_size select _zoneNumber})) then {((mcc_zone_size select _zoneNumber) select 1)} else {100};
+if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 
 switch (_classtype) do

@@ -6,8 +6,9 @@ mcc_request= (missionNamespace getVariable ["mcc_request",0])+1;
 publicVariable "mcc_request";
 
 // What ever we do, we need a good position
-_p_mcc_zone_markposition = (mcc_zone_pos select (mcc_zone_number));
-_p_maxrange				 = ((mcc_zone_size select (mcc_zone_number)) select 1);
+_p_mcc_zone_markposition = if ((count mcc_zone_pos) > mcc_zone_number && !(isNil {mcc_zone_pos select mcc_zone_number})) then {mcc_zone_pos select mcc_zone_number} else {[0,0,0]};
+_p_maxrange = if ((count mcc_zone_size) > mcc_zone_number && !(isNil {mcc_zone_size select mcc_zone_number})) then {((mcc_zone_size select mcc_zone_number) select 1)} else {100};
+if (isNil "_p_maxrange" || {_p_maxrange < 1}) then {_p_maxrange = 100};
 
 //workaround to make sure we sapwn vehicles from the correct side
 if (typeName(missionNamespace getVariable ["mcc_spawnname",""]) == typeName "") then {
