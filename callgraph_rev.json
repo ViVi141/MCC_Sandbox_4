@@ -1,0 +1,3939 @@
+{
+"bon_artillery/bon_arti_init.sqf": [
+"init.sqf"
+],
+"mcc/pop_menu/mcc_init_menu.sqf": [
+"init.sqf"
+],
+"mcc/pv_handling/mcc_pv_handler.sqf": [
+"init.sqf"
+],
+"mcc/pv_handling/mcc_extras_pv_handler.sqf": [
+"init.sqf"
+],
+"mcc/roleselection/scripts/server/server_init.sqf": [
+"init.sqf"
+],
+"mcc/general_scripts/save_gear.sqf": [
+"init.sqf"
+],
+"spectator/specta.sqf": [
+"init.sqf",
+"mcc/pop_menu/mission_settings.sqf",
+"spectator/onplayerrespawn.sqf",
+"spectator/specta_init.sqf"
+],
+"mcc_fnc_populatevehicle": [
+"init.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/general_scripts/convoy/start_convoy_execute.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf"
+],
+"BIS_fnc_addRespawnPosition": [
+"init.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/roleselection/fnc/fn_createrespawntent.sqf",
+"mcc/roleselection/fnc/fn_rssquadjoin.sqf"
+],
+"mcc_fnc_amb_art": [
+"init.sqf",
+"bon_artillery/init_virtualart.sqf",
+"mcc/fnc/artillery/fn_amb_art.sqf",
+"mcc/general_scripts/artillery/bon_art.sqf",
+"mcc/general_scripts/docobject/b_aavehiclesiteambient.sqf",
+"mcc/general_scripts/docobject/b_mobileartillerycampambient.sqf",
+"mcc/general_scripts/docobject/b_mortarcampambient.sqf",
+"mcc/general_scripts/docobject/i_mortarcampambient.sqf",
+"mcc/general_scripts/docobject/o_aavehiclesiteambient.sqf",
+"mcc/general_scripts/docobject/o_mobileartillerycampambient.sqf",
+"mcc/general_scripts/docobject/o_mortarcampambient.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf"
+],
+"bis_fnc_setpitchbank": [
+"init.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/general_scripts/cas/missile_guide.sqf",
+"mcc/general_scripts/console/ac_fire.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"spectator/freelookmovementhandler.sqf",
+"spectator/specta.sqf",
+"spectator/specta_events.sqf"
+],
+"BIS_fnc_arsenal": [
+"init.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"mcc_fnc_lhdspawnmenuinit": [
+"init.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf"
+],
+"bis_fnc_holdActionAdd": [
+"init.sqf",
+"mcc/cfg/modules/fnc/fn_weaponshopinit.sqf",
+"mcc/fnc/general/fn_pickitem.sqf",
+"mcc/general_scripts/hostages/create_hostage.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinit.sqf"
+],
+"BIS_fnc_sandstorm": [
+"init.sqf"
+],
+"BIS_fnc_flies": [
+"init.sqf"
+],
+"mcc_fnc_unconscious": [
+"init.sqf",
+"mcc/medic/fnc/fn_handledamage.sqf",
+"mcc/medic/fnc/fn_mediceffects.sqf",
+"mcc/medic/fnc/fn_setunconscious.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf"
+],
+"mcc_fnc_pickitem": [
+"init.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetintel.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf"
+],
+"BIS_fnc_inString": [
+"init.sqf",
+"gaia/functions/control/fn_getunittypeamounts.sqf",
+"mcc/aas/fnc/fn_aasgroupspawn.sqf",
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf",
+"mcc/ambient/fnc/fn_findcivhouse.sqf",
+"mcc/fnc/evac/fn_setevac.sqf",
+"mcc/fnc/general/fn_activateaddons.sqf",
+"mcc/fnc/general/fn_gear.sqf",
+"mcc/fnc/general/fn_makeunitsarray.sqf",
+"mcc/general_scripts/evac/spawn_heli.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactobject.sqf",
+"mcc/interaction/fnc/fn_isdoor.sqf",
+"mcc/interaction/fnc/fn_isdoorlocked.sqf",
+"mcc/interaction/fnc/fn_issurvivalobject.sqf",
+"mcc/interaction/fnc/fn_searchsurvivalobject.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_findmarkers.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/pop_menu/mcc_make_array_grps.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerbuildcosttable.sqf",
+"mcc/survive/fnc/fn_spawncratesinhouses.sqf"
+],
+"BIS_fnc_moduleCurator": [
+"init.sqf"
+],
+"BIS_fnc_setCuratorAttributes": [
+"init.sqf"
+],
+"BIS_fnc_moduleHQ": [
+"init.sqf",
+"mcc/cfg/modules/fnc/fn_restrictzoneeffect.sqf"
+],
+"BIS_fnc_playSound": [
+"init.sqf",
+"mcc/roleselection/fnc/fn_rstakecommander.sqf"
+],
+"bis_fnc_dynamictext": [
+"init.sqf",
+"mcc/fnc/actions/fn_cover.sqf",
+"mcc/general_scripts/commandline/commandline.sqf",
+"mcc/general_scripts/respawntents/deployrespawntents.sqf",
+"mcc/helpers/fnc/fn_helpersinit.sqf",
+"mcc/hud/fnc/fn_inithud.sqf",
+"mcc/interaction/fnc/fn_doorcamera.sqf",
+"mcc/interaction/fnc/fn_doormenuclicked.sqf",
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf",
+"mcc/logistics/fnc/fn_logisticsboxdeposit.sqf",
+"mcc/logistics/fnc/fn_logisticswithdrawbox.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf",
+"mcc/radio/fnc/fn_vonradiopressed.sqf",
+"mcc/roleselection/fnc/fn_gainxpfromroles.sqf",
+"mcc/roleselection/fnc/fn_rstakecommander.sqf",
+"mcc/roleselection/fnc/fn_rsunitselectedclicked.sqf",
+"mcc/roleselection/fnc/fn_unlock.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf",
+"mcc/vehicles/fnc/fn_vehicletirechange.sqf"
+],
+"BIS_fnc_addStackedEventHandler": [
+"init.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/fnc/actions/fn_coverinit.sqf",
+"mcc/fnc/general/fn_handleaddaction.sqf",
+"mcc/hud/fnc/fn_initcompasshud.sqf",
+"mcc/hud/fnc/fn_supressioninit.sqf",
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/interaction/fnc/fn_requestdropoff.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/ui/fnc/fn_tagsystem.sqf"
+],
+"mcc_fnc_saveserver": [
+"init.sqf",
+"mcc/fnc/mp/fn_saveserver.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_handlekilled": [
+"init.sqf"
+],
+"mcc_fnc_handledb": [
+"init.sqf",
+"mcc/fnc/mp/fn_clearpersistentdata.sqf",
+"mcc/fnc/mp/fn_inidbget.sqf",
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/fnc/mp/fn_saveserver.sqf",
+"mcc/missionwizard/fnc/fn_campaigninitmap.sqf",
+"mcc/roleselection/fnc/fn_getvariable.sqf",
+"mcc/roleselection/fnc/fn_setvariable.sqf",
+"mcc/roleselection/scripts/server/server_init.sqf",
+"mcc/rts/fnc/fn_savecargobox.sqf"
+],
+"mcc_fnc_sync": [
+"init.sqf"
+],
+"mcc_fnc_countdownline": [
+"init.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf"
+],
+"mcc_fnc_curatorinitline": [
+"init.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"mcc_fnc_cbakeybinds": [
+"init.sqf"
+],
+"mcc_fnc_keydown": [
+"init.sqf"
+],
+"mcc_fnc_alloweddrivers": [
+"init.sqf"
+],
+"mcc_fnc_startlocations": [
+"init.sqf",
+"mcc/fnc/general/fn_startlocations.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf"
+],
+"mcc_fnc_handlerating": [
+"init.sqf",
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf"
+],
+"mcc_fnc_handleaddaction": [
+"init.sqf",
+"mcc/general_scripts/save_gear.sqf"
+],
+"mcc_fnc_isdoor": [
+"init.sqf",
+"mcc/interaction/fnc/fn_checkdoor.sqf",
+"mcc/interaction/fnc/fn_doorbreach.sqf",
+"mcc/interaction/fnc/fn_doorcamera.sqf",
+"mcc/interaction/fnc/fn_doorlock.sqf",
+"mcc/interaction/fnc/fn_doormenuclicked.sqf",
+"mcc/interaction/fnc/fn_doorunlock.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactdoorgrenadethrow.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"gaia_fnc_cacheoriginalgroup": [
+"init.sqf"
+],
+"gaia_fnc_uncacheoriginalgroup": [
+"init.sqf"
+],
+"mcc_fnc_globalexecute": [
+"init.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/general/fn_globalexecute.sqf",
+"mcc/fnc/ied/fn_createied.sqf",
+"mcc/fnc/ied/fn_ieddisablingexplosion.sqf",
+"mcc/general_scripts/artillery/artillery_request.sqf",
+"mcc/general_scripts/cas/cas_request.sqf",
+"mcc/general_scripts/commandline/commandline.sqf",
+"mcc/general_scripts/delete/undo.sqf",
+"mcc/general_scripts/jukebox/jukebox.sqf",
+"mcc/general_scripts/unitmanage/backtoplayer.sqf",
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/roleselection/fnc/fn_rstakecommander.sqf",
+"mcc/rts/fnc/fn_rtstakecontrol.sqf"
+],
+"mcc_fnc_addrating": [
+"init.sqf",
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/fnc/mp/fn_construction.sqf",
+"mcc/medic/fnc/fn_medicuseitem.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf",
+"mcc/roleselection/fnc/fn_handlekilled.sqf"
+],
+"BIS_fnc_spawn": [
+"init.sqf",
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_stunbehav.sqf",
+"mcc/fnc/actions/fn_dragobject.sqf",
+"mcc/fnc/evac/fn_evacmove.sqf",
+"mcc/fnc/mp/fn_construction.sqf",
+"mcc/fnc/mp/fn_construct_base.sqf",
+"mcc/general_scripts/save_gear.sqf",
+"mcc/general_scripts/evac/evac_move.sqf",
+"mcc/general_scripts/hostages/hostage.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_requestdropoff.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf",
+"mcc/medic/fnc/fn_medicdragcarry.sqf",
+"mcc/medic/fnc/fn_medicprogressbar.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/roleselection/fnc/fn_rstakecommander.sqf",
+"mcc/roleselection/fnc/fn_rsunitselectedclicked.sqf",
+"mcc/rts/fnc/fn_rtsclearbuilding.sqf",
+"mcc/rts/fnc/fn_rtsordergetout.sqf",
+"mcc/rts/fnc/fn_vehiclespawner.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinit.sqf",
+"mcc/survive/fnc/fn_surviverefuel.sqf"
+],
+"mcc_fnc_stunbehav": [
+"init.sqf"
+],
+"mcc/settings/uisettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/generalsettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/rssettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/mechanicssettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/medicalsettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/radiosettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/gaiasettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/mwsettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/commanderconsolesettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/respawnsettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/settings/classessettings.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/medic/xeh_preinit.sqf": [
+"xeh_preinit.sqf"
+],
+"mcc/general_scripts/artillery/bon_art.sqf": [
+"bon_artillery/bon_arti_fire.sqf",
+"mcc/general_scripts/docobject/b_mobileartillerycampobserver.sqf",
+"mcc/general_scripts/docobject/b_mortarcampobserver.sqf",
+"mcc/general_scripts/docobject/i_mortarcampobserver.sqf",
+"mcc/general_scripts/docobject/o_mobileartillerycampobserver.sqf",
+"mcc/general_scripts/docobject/o_mortarcampobserver.sqf"
+],
+"mcc_fnc_artydpicm": [
+"bon_artillery/bon_arti_fire.sqf",
+"mcc/fnc/artillery/fn_artillery.sqf",
+"mcc/general_scripts/artillery/artillery_fire.sqf"
+],
+"mcc_fnc_artyflare": [
+"bon_artillery/bon_arti_fire.sqf",
+"mcc/fnc/artillery/fn_artillery.sqf",
+"mcc/general_scripts/artillery/artillery_fire.sqf"
+],
+"mcc_fnc_artybomb": [
+"bon_artillery/bon_arti_fire.sqf",
+"mcc/fnc/artillery/fn_artillery.sqf",
+"mcc/general_scripts/artillery/artillery_fire.sqf"
+],
+"mcc_fnc_globalsay3d": [
+"bon_artillery/bon_arti_fire.sqf",
+"bon_artillery/bon_arti_request.sqf",
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/fnc/actions/fn_releasepod.sqf",
+"mcc/fnc/artillery/fn_artybomb.sqf",
+"mcc/fnc/artillery/fn_artydpicm.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/fnc/general/fn_globalsay3d.sqf",
+"mcc/fnc/ied/fn_manageac.sqf",
+"mcc/fnc/ied/fn_managesb.sqf",
+"mcc/general_scripts/console/uavmousedown.sqf",
+"mcc/interaction/fnc/fn_interactied.sqf",
+"mcc/medic/fnc/fn_mediceffects.sqf",
+"mcc/survive/fnc/fn_foodwaterconsumption.sqf"
+],
+"bon_artillery/": [
+"bon_artillery/bon_arti_init.sqf"
+],
+"mcc_fnc_consolefireartillery": [
+"bon_artillery/bon_arti_request.sqf"
+],
+"BIS_fnc_relPos": [
+"bon_artillery/init_virtualart.sqf",
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/control/orders/fn_doartillery.sqf",
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_domortar.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dotransportcar.sqf",
+"gaia/functions/control/orders/fn_dotransporttank.sqf",
+"mcc/aas/fnc/fn_aasmarkers.sqf",
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ambient/fnc/fn_ambientbirdsspawn.sqf",
+"mcc/ambient/fnc/fn_ambientfireinit.sqf",
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf",
+"mcc/ambient/fnc/fn_ambientinit.sqf",
+"mcc/cfg/curator/fnc/fn_curatordamagepart.sqf",
+"mcc/cfg/curator/fnc/fn_curatormcccas.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/fnc/actions/fn_ilschilds.sqf",
+"mcc/fnc/artillery/fn_amb_art.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/fnc/general/fn_realparadropplayer.sqf",
+"mcc/general_scripts/artillery/bon_art.sqf",
+"mcc/general_scripts/console/consoleuav.sqf",
+"mcc/general_scripts/console/mousedown.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/general_scripts/paradrop/paratroops.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_moviemaker.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/scripts/frontlineinit.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"ArtilleryDialog": [
+"bon_artillery/dialog/openmenu.sqf",
+"mcc/fnc/general/fn_openartillery.sqf"
+],
+"gaia_fnc_startgaia": [
+"gaia/gaia_init.sqf"
+],
+"gaia_fnc_startgaiacache": [
+"gaia/gaia_init.sqf"
+],
+"lv/ambientcombat.sqf": [
+"gaia/functions/ambient/fn_ambientcombat.sqf",
+"gaia/functions/ambient/fn_ambientcombatserver.sqf"
+],
+"mcc_fnc_makeunitsarray": [
+"gaia/functions/ambient/fn_ambientcombatclient.sqf",
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_event.sqf",
+"mcc/aas/fnc/fn_aas_aispawn.sqf",
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_populatevehicle.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/ambient/fnc/fn_ambientinit.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/fnc/general/fn_garrison.sqf",
+"mcc/fnc/general/fn_login.sqf",
+"mcc/fnc/general/fn_realparadrop.sqf",
+"mcc/general_scripts/garrison/fn_garrison.sqf",
+"mcc/general_scripts/garrison/garrison.sqf",
+"mcc/general_scripts/paradrop/paratroops.sqf",
+"mcc/missionwizard/fnc/fn_buildroadblock.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"gaia_fnc_isnearplayer": [
+"gaia/functions/ambient/fn_ambientcombatclient.sqf",
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/ambient/fn_getplayers.sqf",
+"gaia/functions/cache/fn_startgaiacache.sqf",
+"gaia/functions/control/fn_event.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf"
+],
+"BIS_fnc_selectRandomWeighted": [
+"gaia/functions/ambient/fn_ambientcombatclient.sqf",
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_event.sqf",
+"mcc/aas/fnc/fn_aasgroupspawn.sqf",
+"mcc/cfg/curator/fnc/fn_curatoratmoshphere.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"BIS_fnc_spawnGroup": [
+"gaia/functions/ambient/fn_ambientcombatclient.sqf",
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_event.sqf",
+"mcc/general_scripts/paradrop/paratroops.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/rts/fnc/fn_rtscreategroup.sqf"
+],
+"gaia_fnc_getplayers": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf"
+],
+"BIS_fnc_selectRandom": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_analyzeforces.sqf",
+"gaia/functions/control/fn_fireflare.sqf",
+"gaia/functions/control/fn_occupy.sqf",
+"gaia/functions/control/fortify/fn_taskdefend.sqf",
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolhelicopter.sqf",
+"mcc/aas/fnc/fn_aasgroupspawn.sqf",
+"mcc/aas/fnc/fn_aas_aispawn.sqf",
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/ai/fnc/fn_garrisonbehavior.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/ambient/fnc/fn_ambientbirdsspawn.sqf",
+"mcc/ambient/fnc/fn_ambientbirdsspawninit.sqf",
+"mcc/ambient/fnc/fn_ambientfireclientside.sqf",
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/bombdefuse/fnc/fn_bdnumpadmodule.sqf",
+"mcc/bombdefuse/fnc/fn_bdstart.sqf",
+"mcc/bombdefuse/fnc/fn_bdwiremodule.sqf",
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf",
+"mcc/fnc/actions/fn_breakdown.sqf",
+"mcc/fnc/general/fn_deletebrush.sqf",
+"mcc/fnc/general/fn_garrison.sqf",
+"mcc/fnc/general/fn_ppeffects.sqf",
+"mcc/fnc/ied/fn_manageac.sqf",
+"mcc/fnc/ied/fn_trapsingle.sqf",
+"mcc/interaction/fnc/fn_interactobject.sqf",
+"mcc/missionwizard/fnc/fn_buildrandomcomposition.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_missiondone.sqf",
+"mcc/missionwizard/fnc/fn_moviemaker.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwcreatetask.sqf",
+"mcc/missionwizard/fnc/fn_mwfindmissioncenter.sqf",
+"mcc/missionwizard/fnc/fn_mwfindobjectivepos.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf",
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnanimals.sqf",
+"mcc/missionwizard/fnc/fn_mwspawninfantry.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnstatic.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnvehicles.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf",
+"mcc/roleselection/fnc/fn_gearai.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf",
+"mcc/survive/fnc/fn_spawncratesinhouses.sqf"
+],
+"BIS_fnc_dirTo": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/control/fn_fireflare.sqf",
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dotransportcar.sqf",
+"gaia/functions/control/orders/fn_dotransporttank.sqf",
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/ambient/fnc/fn_ambientinit.sqf",
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_createplane.sqf",
+"mcc/fnc/general/fn_garrison.sqf",
+"mcc/fnc/ied/fn_trapsingle.sqf",
+"mcc/general_scripts/3deditor/mouseup.sqf",
+"mcc/general_scripts/cas/missile_guide.sqf",
+"mcc/general_scripts/console/ac_fire.sqf",
+"mcc/general_scripts/console/mousedown.sqf",
+"mcc/general_scripts/evac/evac_move.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/general_scripts/groupgen/mouseup.sqf",
+"mcc/general_scripts/paradrop/paratroops.sqf",
+"mcc/hud/fnc/fn_initcompasshud.sqf",
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/missionwizard/scripts/frontlineinit.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"BIS_fnc_findSafePos": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/control/fn_calculateoptimalposition.sqf",
+"gaia/functions/control/fn_event.sqf",
+"gaia/functions/control/fn_occupy.sqf",
+"gaia/functions/control/orders/fn_dopatrolhelicopter.sqf",
+"gaia/functions/control/orders/fn_dowait.sqf",
+"mcc/fnc/general/fn_mobilerespawn.sqf",
+"mcc/fnc/general/fn_movetopos.sqf",
+"mcc/fnc/groupgen/fn_groupspawn.sqf",
+"mcc/general_scripts/mcc_spawnstuff.sqf",
+"mcc/general_scripts/groupgen/group_spawnserver.sqf",
+"mcc/missionwizard/fnc/fn_buildrandomcomposition.sqf",
+"mcc/missionwizard/fnc/fn_mwfindobjectivepos.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwspawninzone.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"gaia_fnc_isinmarker": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/ambient/fn_getplayers.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf"
+],
+"BIS_fnc_conditionalSelect": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/ambient/fn_getplayers.sqf",
+"gaia/functions/cache/fn_startgaiacache.sqf",
+"gaia/functions/control/fn_getconflictareas.sqf",
+"gaia/functions/control/fn_getdistancetoclosestzone.sqf",
+"gaia/functions/control/fn_issueorders.sqf",
+"gaia/functions/control/fortify/fn_taskdefend.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf"
+],
+"gaia_fnc_getsideratio": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf",
+"gaia/functions/ambient/fn_showlocationowner.sqf"
+],
+"GAIA_fnc_SpawnGroup": [
+"gaia/functions/ambient/fn_ambientcombatserver.sqf"
+],
+"gaia_fnc_showlocationowner": [
+"gaia/functions/ambient/fn_getplayers.sqf"
+],
+"BIS_fnc_groupVehicles": [
+"gaia/functions/ambient/fn_getplayers.sqf",
+"gaia/functions/cache/fn_cachefar.sqf",
+"gaia/functions/cache/fn_cacheoriginalgroup.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf"
+],
+"gaia_fnc_getdistancetoclosestzone": [
+"gaia/functions/ambient/fn_getsideratio.sqf"
+],
+"BIS_fnc_findExtreme": [
+"gaia/functions/ambient/fn_getsideratio.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/missionwizard/fnc/fn_createconfigs.sqf"
+],
+"BIS_fnc_param": [
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_fireflare.sqf",
+"gaia/functions/control/fn_haslineofsight.sqf",
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/ai/fnc/fn_garrisonbehavior.sqf",
+"mcc/ambient/fnc/fn_ambientdeletecar.sqf",
+"mcc/ambient/fnc/fn_ambientdeletecarparked.sqf",
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/ambient/fnc/fn_findcivhouse.sqf",
+"mcc/cfg/curator/fnc/fn_addtozeus.sqf",
+"mcc/cfg/curator/fnc/fn_curatoratmoshphere.sqf",
+"mcc/cfg/curator/fnc/fn_curatorcampaigninit.sqf",
+"mcc/cfg/curator/fnc/fn_curatordamagepart.sqf",
+"mcc/cfg/curator/fnc/fn_curatordoorlock.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgarrisonunits.sqf",
+"mcc/cfg/curator/fnc/fn_curatormcccas.sqf",
+"mcc/cfg/curator/fnc/fn_curatormodulecapturepoint.sqf",
+"mcc/cfg/curator/fnc/fn_curatornighteffects.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetarmedcivilian.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetevac.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/cfg/curator/fnc/fn_curatorundercover.sqf",
+"mcc/cfg/curator/fnc/fn_curatorvehiclespawner.sqf",
+"mcc/cfg/curator/fnc/fn_setresources.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/fnc/actions/fn_addilschildrenace.sqf",
+"mcc/fnc/actions/fn_breakdown.sqf",
+"mcc/fnc/actions/fn_callsupport.sqf",
+"mcc/fnc/actions/fn_canattachpod.sqf",
+"mcc/fnc/actions/fn_spotenemy.sqf",
+"mcc/fnc/evac/fn_evacdelete.sqf",
+"mcc/fnc/evac/fn_repairevac.sqf",
+"mcc/fnc/evac/fn_setevac.sqf",
+"mcc/fnc/general/fn_garrison.sqf",
+"mcc/fnc/general/fn_globalhint.sqf",
+"mcc/fnc/general/fn_managewp.sqf",
+"mcc/fnc/general/fn_nearestroad.sqf",
+"mcc/fnc/general/fn_setweather.sqf",
+"mcc/fnc/general/fn_spawngroup.sqf",
+"mcc/fnc/mp/fn_inidbget.sqf",
+"mcc/missionwizard/fnc/fn_createconfigs.sqf",
+"mcc/missionwizard/fnc/fn_mwmaptooltip.sqf",
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/roleselection/fnc/fn_createcameraonplayer.sqf",
+"mcc/rts/fnc/fn_addvirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_addvirtualweaponcargo.sqf",
+"mcc/rts/fnc/fn_getvirtualitemcargo.sqf",
+"mcc/rts/fnc/fn_getvirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_getvirtualweaponcargo.sqf",
+"mcc/rts/fnc/fn_makeobjectvirtualbox.sqf",
+"mcc/rts/fnc/fn_removevirtualitemcargo.sqf",
+"mcc/rts/fnc/fn_removevirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_removevirtualweaponcargo.sqf",
+"mcc/rts/fnc/fn_rtsclearbuilding.sqf",
+"mcc/ui/fnc/fn_setidctext.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"mcc_fnc_spawnvehicle": [
+"gaia/functions/ambient/fn_spawngroup.sqf",
+"gaia/functions/control/fn_event.sqf",
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_spawngroup.sqf",
+"mcc/fnc/groupgen/fn_groupspawn.sqf",
+"mcc/general_scripts/convoy/place_convoy.sqf",
+"mcc/general_scripts/groupgen/group_spawnserver.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnstatic.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"gaia_fnc_cache": [
+"gaia/functions/cache/fn_startgaiacache.sqf"
+],
+"gaia_fnc_uncache": [
+"gaia/functions/cache/fn_startgaiacache.sqf"
+],
+"gaia_fnc_synccachedgroup": [
+"gaia/functions/cache/fn_startgaiacache.sqf"
+],
+"gaia_fnc_cachefar": [
+"gaia/functions/cache/fn_startgaiacache.sqf"
+],
+"gaia_fnc_uncachefar": [
+"gaia/functions/cache/fn_startgaiacache.sqf"
+],
+"mcc_setup": [
+"gaia/functions/cache/fn_startgaiacache.sqf",
+"mcc/general_scripts/mcc_spawnstuff.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/fnc/fn_mwspawninzone.sqf",
+"mcc/missionwizard/fnc/fn_mwupdatezone.sqf"
+],
+"gaia_fnc_respawnset": [
+"gaia/functions/cache/fn_uncachefar.sqf",
+"gaia/functions/cache/fn_uncacheoriginalgroup.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgaiarespawn.sqf"
+],
+"BIS_fnc_moveIn": [
+"gaia/functions/cache/fn_uncacheoriginalgroup.sqf"
+],
+"gaia_fnc_getzoneintendofgroup": [
+"gaia/functions/control/fn_analyzeforces.sqf"
+],
+"gaia_fnc_ispositioninmarker": [
+"gaia/functions/control/fn_analyzeforces.sqf",
+"gaia/functions/control/fn_getconflictareacost.sqf",
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_getzonestatusbehavior": [
+"gaia/functions/control/fn_analyzeforces.sqf"
+],
+"gaia_fnc_iscleared": [
+"gaia/functions/control/fn_analyzetargets.sqf"
+],
+"gaia_fnc_getmarkershape": [
+"gaia/functions/control/fn_calculateoptimalposition.sqf",
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_randompositioninrectanglemarker": [
+"gaia/functions/control/fn_calculateoptimalposition.sqf"
+],
+"gaia_fnc_randompositioninellipsemarker": [
+"gaia/functions/control/fn_calculateoptimalposition.sqf"
+],
+"gaia_fnc_analyzeterrain": [
+"gaia/functions/control/fn_calculateoptimalposition.sqf"
+],
+"gaia_fnc_isblacklisted": [
+"gaia/functions/control/fn_calculateoptimalposition.sqf",
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_getunitsclassification": [
+"gaia/functions/control/fn_classifyside.sqf",
+"gaia/functions/control/fn_getconflictareacost.sqf"
+],
+"BIS_fnc_sortBy": [
+"gaia/functions/control/fn_event.sqf",
+"gaia/functions/control/fn_getconflictareas.sqf",
+"gaia/functions/control/fn_getdistancetoclosestzone.sqf",
+"gaia/functions/control/fn_issueorders.sqf",
+"gaia/functions/control/orders/fn_doorganizetransportation.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dotransportcar.sqf",
+"gaia/functions/control/orders/fn_dotransporttank.sqf",
+"mcc/aas/fnc/fn_aas_aicontrol.sqf",
+"mcc/fnc/actions/fn_pickkit.sqf",
+"mcc/fnc/general/fn_handleaddaction.sqf",
+"mcc/fnc/general/fn_nearestroad.sqf",
+"mcc/fnc/ied/fn_iedsync.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwfindbuildingpos.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_taskPatrol": [
+"gaia/functions/control/fn_event.sqf",
+"mcc/fnc/ied/fn_manageac.sqf",
+"mcc/fnc/ied/fn_managesb.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"BIS_fnc_log": [
+"gaia/functions/control/fn_fireflare.sqf"
+],
+"BIS_fnc_logFormat": [
+"gaia/functions/control/fn_fireflare.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"gaia_fnc_calculateoptimalposition": [
+"gaia/functions/control/fn_generatewaypoints.sqf",
+"gaia/functions/control/orders/fn_dopatrolhelicopter.sqf",
+"gaia/functions/control/orders/fn_dowait.sqf"
+],
+"gaia_fnc_addwaypoint": [
+"gaia/functions/control/fn_generatewaypoints.sqf",
+"gaia/functions/control/orders/fn_doclearinfantry.sqf",
+"gaia/functions/control/orders/fn_doclearrecon.sqf",
+"gaia/functions/control/orders/fn_dohide.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dopatrolcar.sqf",
+"gaia/functions/control/orders/fn_dopatrolhelicopter.sqf",
+"gaia/functions/control/orders/fn_dopatrolmechanizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolship.sqf",
+"gaia/functions/control/orders/fn_dosupport.sqf",
+"gaia/functions/control/orders/fn_dowait.sqf"
+],
+"gaia_fnc_getunittypeamounts": [
+"gaia/functions/control/fn_getunitsclassification.sqf"
+],
+"gaia_fnc_getunitassets": [
+"gaia/functions/control/fn_getunittypeamounts.sqf"
+],
+"BIS_fnc_inAngleSector": [
+"gaia/functions/control/fn_haslineofsight.sqf"
+],
+"gaia_fnc_removewaypoints": [
+"gaia/functions/control/fn_issueorders.sqf",
+"gaia/functions/control/orders/fn_doattackcar.sqf",
+"gaia/functions/control/orders/fn_doattackhelicopter.sqf",
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackmechanizedinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackmotorizedrecon.sqf",
+"gaia/functions/control/orders/fn_doattackmotorizeinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_doattackship.sqf",
+"gaia/functions/control/orders/fn_doattacktank.sqf",
+"gaia/functions/control/orders/fn_doclearinfantry.sqf",
+"gaia/functions/control/orders/fn_doclearrecon.sqf",
+"gaia/functions/control/orders/fn_dofortify.sqf",
+"gaia/functions/control/orders/fn_dohide.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dopatrolcar.sqf",
+"gaia/functions/control/orders/fn_dopatrolhelicopter.sqf",
+"gaia/functions/control/orders/fn_dopatrolinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmechanizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolship.sqf",
+"gaia/functions/control/orders/fn_dosupport.sqf",
+"gaia/functions/control/orders/fn_dotransportcar.sqf",
+"gaia/functions/control/orders/fn_dotransporthelicopter.sqf",
+"gaia/functions/control/orders/fn_dotransporttank.sqf",
+"gaia/functions/control/orders/fn_dowait.sqf"
+],
+"BIS_fnc_nearestPosition": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_getconflictareacost": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_dofortify": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_doattack": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_doclear": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_domortar": [
+"gaia/functions/control/fn_issueorders.sqf",
+"mcc/fnc/general/fn_managewp.sqf"
+],
+"gaia_fnc_dopatrol": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_dowait": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_dosupport": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_dohide": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_dopark": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_doorganizetransportation": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"gaia_fnc_fireflare": [
+"gaia/functions/control/fn_issueorders.sqf"
+],
+"mcc_fnc_mwcreateunitsarray": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf"
+],
+"mcc_fnc_createconfigs": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwspawnvehicles": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"BIS_fnc_isInsideArea": [
+"gaia/functions/control/fn_occupy.sqf"
+],
+"mcc_fnc_mwupdatezone": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/cfg/modules/fnc/fn_createzonesinit.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_mwspawninfantry": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_mwspawnanimals": [
+"gaia/functions/control/fn_occupy.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"gaia_fnc_doattackinfantry": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackrecon": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackcar": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackmotorizedrecon": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackmechanizedinfantry": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackhelicopter": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_doattackship": [
+"gaia/functions/control/orders/fn_doattack.sqf"
+],
+"gaia_fnc_addattackwaypoint": [
+"gaia/functions/control/orders/fn_doattackcar.sqf",
+"gaia/functions/control/orders/fn_doattackhelicopter.sqf",
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackmechanizedinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackmotorizedrecon.sqf",
+"gaia/functions/control/orders/fn_doattackmotorizeinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_doattackship.sqf",
+"gaia/functions/control/orders/fn_doattacktank.sqf"
+],
+"gaia_fnc_generatebuildingpatrolwaypoints": [
+"gaia/functions/control/orders/fn_doattackinfantry.sqf",
+"gaia/functions/control/orders/fn_doattackrecon.sqf",
+"gaia/functions/control/orders/fn_doclearinfantry.sqf",
+"gaia/functions/control/orders/fn_doclearrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolrecon.sqf"
+],
+"gaia_fnc_doclearinfantry": [
+"gaia/functions/control/orders/fn_doclear.sqf"
+],
+"gaia_fnc_doclearrecon": [
+"gaia/functions/control/orders/fn_doclear.sqf"
+],
+"gaia_fnc_taskdefend": [
+"gaia/functions/control/orders/fn_dofortify.sqf"
+],
+"gaia_fnc_generatewaypoints": [
+"gaia/functions/control/orders/fn_dohide.sqf",
+"gaia/functions/control/orders/fn_dopark.sqf",
+"gaia/functions/control/orders/fn_dopatrolcar.sqf",
+"gaia/functions/control/orders/fn_dopatrolinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmechanizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedinfantry.sqf",
+"gaia/functions/control/orders/fn_dopatrolmotorizedrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolrecon.sqf",
+"gaia/functions/control/orders/fn_dopatrolship.sqf",
+"gaia/functions/control/orders/fn_dosupport.sqf"
+],
+"gaia_fnc_dotransportcar": [
+"gaia/functions/control/orders/fn_doorganizetransportation.sqf"
+],
+"gaia_fnc_dotransporttank": [
+"gaia/functions/control/orders/fn_doorganizetransportation.sqf"
+],
+"gaia_fnc_dotransporthelicopter": [
+"gaia/functions/control/orders/fn_doorganizetransportation.sqf"
+],
+"gaia_fnc_dopatrolinfantry": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolrecon": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolmechanizedinfantry": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolmotorizedinfantry": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolcar": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolship": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_dopatrolhelicopter": [
+"gaia/functions/control/orders/fn_dopatrol.sqf"
+],
+"gaia_fnc_rotateposition": [
+"gaia/functions/general/fn_isinellipse.sqf",
+"gaia/functions/general/fn_ispositioninmarker.sqf",
+"gaia/functions/general/fn_randompositioninellipsemarker.sqf"
+],
+"gaia_fnc_issameposition": [
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_getmarkervertices": [
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_isinrectangle": [
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_isincircle": [
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_isinellipse": [
+"gaia/functions/general/fn_ispositioninmarker.sqf"
+],
+"gaia_fnc_analyzetargets": [
+"gaia/functions/general/fn_startgaia.sqf"
+],
+"hcam/": [
+"hcam/hcam_init.sqf"
+],
+"BIS_fnc_respawnTickets": [
+"mcc/aas/fnc/fn_aasgroupspawn.sqf",
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/cfg/modules/fnc/fn_missionsettingsrs.sqf",
+"mcc/fnc/mp/fn_clearpersistentdata.sqf",
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/fnc/mp/fn_saveserver.sqf",
+"mcc/general_scripts/mcc_start_location.sqf",
+"mcc/general_scripts/save_gear.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_daycycle.sqf",
+"mcc/roleselection/scripts/gearpanel_init.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf",
+"mcc/roleselection/scripts/server/server_init.sqf",
+"mcc/rts/fnc/fn_rtsbuytickets.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_gearai": [
+"mcc/aas/fnc/fn_aasgroupspawn.sqf"
+],
+"BIS_fnc_returnVehicleTurrets": [
+"mcc/aas/fnc/fn_aasgroupspawn.sqf",
+"mcc/fnc/evac/fn_setevac.sqf",
+"mcc/general_scripts/evac/spawn_heli.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_aasinit": [
+"mcc/aas/fnc/fn_aasinit.sqf"
+],
+"MCC_fnc_AASHandleSector": [
+"mcc/aas/fnc/fn_aasinit.sqf"
+],
+"BIS_fnc_sideType": [
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/aas/fnc/fn_aas_aispawn.sqf",
+"mcc/ambient/fnc/fn_ambientfireinit.sqf",
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/cfg/curator/fnc/fn_curatoraddvalor.sqf",
+"mcc/cfg/curator/fnc/fn_curatorcampaigninit.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgarrisonunits.sqf",
+"mcc/cfg/curator/fnc/fn_curatorlhdspawn.sqf",
+"mcc/cfg/curator/fnc/fn_curatormodulecapturepoint.sqf",
+"mcc/cfg/curator/fnc/fn_curatorrtsbuilding.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetarmedcivilian.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetevac.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/cfg/curator/fnc/fn_setresources.sqf",
+"mcc/cfg/modules/fnc/fn_createrestrictedzones.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/fnc/actions/fn_addilschildrenace.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/fnc/cas/fn_createplane.sqf",
+"mcc/fnc/evac/fn_evacspawn.sqf",
+"mcc/general_scripts/mcc_spawnstuff.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/pop_menu/simple_spawn.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerbuildcosttable.sqf",
+"mcc/ui/fnc/fn_initdispaly.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf"
+],
+"BIS_fnc_endMissionServer": [
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/pop_menu/tasks_req.sqf"
+],
+"mcc_fnc_modulecapturepoint": [
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/cfg/curator/fnc/fn_curatormodulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf"
+],
+"mcc_fnc_aasmarkers": [
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/aas/fnc/fn_aasmarkers.sqf"
+],
+"mcc_fnc_aas_drawline": [
+"mcc/aas/fnc/fn_aasinit.sqf",
+"mcc/aas/fnc/fn_aas_drawline.sqf"
+],
+"bis_fnc_parsenumber": [
+"mcc/aas/fnc/fn_aas_aicontrol.sqf",
+"mcc/aas/fnc/fn_aas_aispawn.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"mcc_fnc_managewp": [
+"mcc/aas/fnc/fn_aas_aicontrol.sqf",
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/ambient/fnc/fn_ambientinit.sqf",
+"mcc/fnc/actions/fn_ilschilds.sqf",
+"mcc/fnc/cas/fn_deleteplane.sqf",
+"mcc/general_scripts/console/managewp.sqf",
+"mcc/general_scripts/console/mouseup.sqf",
+"mcc/general_scripts/convoy/start_convoy_execute.sqf",
+"mcc/general_scripts/groupgen/managewp.sqf",
+"mcc/general_scripts/groupgen/mousedblclick.sqf",
+"mcc/interaction/fnc/fn_requestdropoff.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/rts/fnc/fn_rtsorderland.sqf",
+"mcc/rts/fnc/fn_rtsorderstop.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_initdynamicdialog": [
+"mcc/aas/fnc/fn_aas_aispawn.sqf",
+"mcc/ai/fnc/fn_ai_assigntozone.sqf",
+"mcc/cfg/curator/fnc/fn_addtozeus.sqf",
+"mcc/cfg/curator/fnc/fn_ambientdenied.sqf",
+"mcc/cfg/curator/fnc/fn_curatoraddvalor.sqf",
+"mcc/cfg/curator/fnc/fn_curatorambientcivilians.sqf",
+"mcc/cfg/curator/fnc/fn_curatoratmoshphere.sqf",
+"mcc/cfg/curator/fnc/fn_curatorcampaigninit.sqf",
+"mcc/cfg/curator/fnc/fn_curatordamagepart.sqf",
+"mcc/cfg/curator/fnc/fn_curatordoorlock.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgaiarespawn.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgarrisonunits.sqf",
+"mcc/cfg/curator/fnc/fn_curatorlhdspawn.sqf",
+"mcc/cfg/curator/fnc/fn_curatormcccas.sqf",
+"mcc/cfg/curator/fnc/fn_curatormodulecapturepoint.sqf",
+"mcc/cfg/curator/fnc/fn_curatornighteffects.sqf",
+"mcc/cfg/curator/fnc/fn_curatorrtsbuilding.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetarmedcivilian.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetevac.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetintel.sqf",
+"mcc/cfg/curator/fnc/fn_curatorundercover.sqf",
+"mcc/cfg/curator/fnc/fn_curatorvehiclespawner.sqf",
+"mcc/cfg/curator/fnc/fn_curatorwarzone.sqf",
+"mcc/cfg/curator/fnc/fn_ingameuicurator.sqf",
+"mcc/cfg/curator/fnc/fn_setresources.sqf",
+"mcc/cfg/modules/fnc/fn_createzonesinit.sqf",
+"mcc/cfg/modules/fnc/fn_gaiasettings.sqf",
+"mcc/cfg/modules/fnc/fn_missionsettings.sqf",
+"mcc/cfg/modules/fnc/fn_missionsettingsrs.sqf",
+"mcc/cfg/modules/fnc/fn_settingscover.sqf",
+"mcc/cfg/modules/fnc/fn_settingsmedical.sqf",
+"mcc/cfg/modules/fnc/fn_weaponshopinit.sqf",
+"mcc/fnc/dynamicdialog/fn_initdynamicdialog.sqf",
+"mcc/general_scripts/test.sqf",
+"mcc/medic/fnc/fn_setunconscious.sqf",
+"mcc/survive/fnc/fn_spawncratesinhousesinit.sqf"
+],
+"mcc_fnc_aas_aicontrol": [
+"mcc/aas/fnc/fn_aas_aispawn.sqf"
+],
+"mcc_fnc_aasgroupspawn": [
+"mcc/aas/fnc/fn_aas_aispawn.sqf"
+],
+"gaia_fnc_getturretweapons": [
+"mcc/aas/fnc/fn_aas_aispawn.sqf"
+],
+"mcc_fnc_aas_aispawn": [
+"mcc/aas/fnc/fn_aas_aispawn.sqf"
+],
+"mcc_fnc_deletebodies": [
+"mcc/aas/fnc/fn_deletebodies.sqf"
+],
+"bis_fnc_showCuratorFeedbackMessage": [
+"mcc/ai/fnc/fn_ai_assigntozone.sqf",
+"mcc/ambient/fnc/fn_ambientbirdsspawninit.sqf",
+"mcc/ambient/fnc/fn_ambientfireinit.sqf",
+"mcc/cfg/curator/fnc/fn_curatoraddvalor.sqf",
+"mcc/cfg/curator/fnc/fn_curatordamagepart.sqf",
+"mcc/cfg/curator/fnc/fn_curatorgaiarespawn.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetarmedcivilian.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetevac.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetintel.sqf",
+"mcc/cfg/curator/fnc/fn_curatorundercover.sqf",
+"mcc/cfg/modules/fnc/fn_createzonesinit.sqf",
+"mcc/cfg/modules/fnc/fn_weaponshopinit.sqf",
+"mcc/medic/fnc/fn_setunconscious.sqf"
+],
+"mcc_fnc_createhelper": [
+"mcc/ai/fnc/fn_disarmunit.sqf",
+"mcc/fnc/actions/fn_acedropammobox.sqf",
+"mcc/fnc/actions/fn_utilityuse.sqf",
+"mcc/fnc/ied/fn_createied.sqf",
+"mcc/general_scripts/hostages/create_hostage.sqf",
+"mcc/general_scripts/hostages/hostage.sqf",
+"mcc/logistics/fnc/fn_logtruckadd.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf",
+"mcc/rts/fnc/fn_makeobjectvirtualbox.sqf",
+"mcc/rts/fnc/fn_rtsloadresources.sqf"
+],
+"mcc_fnc_deletehelper": [
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/fnc/ied/fn_createied.sqf",
+"mcc/general_scripts/hostages/hostage.sqf",
+"mcc/medic/fnc/fn_wakeup.sqf"
+],
+"mcc_fnc_disarmunit": [
+"mcc/ai/fnc/fn_dohaltai.sqf"
+],
+"mcc_fnc_setunitanim": [
+"mcc/ai/fnc/fn_dohaltai.sqf",
+"mcc/fnc/actions/fn_vault.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"BIS_fnc_taskAttack": [
+"mcc/ai/fnc/fn_enemycas.sqf"
+],
+"bis_fnc_showNotification": [
+"mcc/ai/fnc/fn_enemycas.sqf",
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/evac/fn_setevac.sqf",
+"mcc/fnc/general/pickitem.sqf",
+"mcc/general_scripts/artillery/artillery_request.sqf",
+"mcc/general_scripts/cas/cas_request.sqf",
+"mcc/rts/fnc/fn_rtscreategroup.sqf",
+"mcc/rts/fnc/fn_rtspopulatevehicle.sqf",
+"mcc/rts/fnc/fn_rtsrespawnunits.sqf"
+],
+"mcc_fnc_findcivhouse": [
+"mcc/ai/fnc/fn_garrisonbehavior.sqf",
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf"
+],
+"mcc_fnc_buildingposcount": [
+"mcc/ai/fnc/fn_garrisonbehavior.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/fnc/general/fn_garrison.sqf",
+"mcc/general_scripts/garrison/fn_garrison.sqf",
+"mcc/general_scripts/garrison/garrison.sqf",
+"mcc/missionwizard/fnc/fn_mwfindbuildingpos.sqf"
+],
+"mcc_fnc_crewcount": [
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_populatevehicle.sqf",
+"mcc/fnc/general/fn_realparadrop.sqf"
+],
+"mcc_fnc_createplane": [
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/general/fn_realparadrop.sqf",
+"mcc/general_scripts/paradrop/paratroops.sqf"
+],
+"mcc_fnc_spawngroup": [
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/ai/fnc/fn_populatevehicle.sqf",
+"mcc/fnc/groupgen/fn_groupspawn.sqf",
+"mcc/fnc/ied/fn_ambushsingle.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"mcc_fnc_heliopenclosedoor": [
+"mcc/ai/fnc/fn_paratroops.sqf",
+"mcc/fnc/evac/fn_evacmove.sqf",
+"mcc/fnc/general/fn_realparadrop.sqf"
+],
+"mcc_fnc_nearestroad": [
+"mcc/ai/fnc/fn_reinforcement.sqf",
+"mcc/fnc/general/fn_findroadsleadingzone.sqf"
+],
+"BIS_fnc_enemyDetected": [
+"mcc/ai/fnc/fn_setunitanim.sqf"
+],
+"bis_fnc_sayMessage": [
+"mcc/ambient/fnc/fn_ambientbirdsspawn.sqf",
+"mcc/ambient/fnc/fn_ambientfireinit.sqf"
+],
+"mcc_fnc_ambientbirdsspawn": [
+"mcc/ambient/fnc/fn_ambientbirdsspawninit.sqf"
+],
+"mcc_fnc_ambientbirdsspawninit": [
+"mcc/ambient/fnc/fn_ambientbirdsspawninit.sqf",
+"mcc/settings/generalsettings.sqf"
+],
+"MCC_fnc_ambientFireSClientSide": [
+"mcc/ambient/fnc/fn_ambientfireclientside.sqf"
+],
+"mcc_fnc_ambientfirestart": [
+"mcc/ambient/fnc/fn_ambientfireinit.sqf",
+"mcc/ambient/fnc/fn_ambientfireplayerfiredeh.sqf",
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf",
+"mcc/ambient/fnc/fn_ambientfirestart.sqf"
+],
+"MCC_fnc_ambientFireEntityKilled": [
+"mcc/ambient/fnc/fn_ambientfireinit.sqf"
+],
+"mcc_fnc_ambientfireplayerfiredeh": [
+"mcc/ambient/fnc/fn_ambientfireinit.sqf"
+],
+"MCC_fnc_ambientambientFirePropagation": [
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf"
+],
+"mcc_fnc_ambientfirepropagation": [
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf",
+"mcc/ambient/fnc/fn_ambientfirestart.sqf"
+],
+"mcc_fnc_ambientfireclientside": [
+"mcc/ambient/fnc/fn_ambientfirepropagation.sqf",
+"mcc/ambient/fnc/fn_ambientfirestart.sqf"
+],
+"mcc_fnc_ambientdeleteciv": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"mcc_fnc_ambientspawnciv": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"mcc_fnc_ambientdeletecar": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"mcc_fnc_ambientspawncar": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"mcc_fnc_ambientdeletecarparked": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"mcc_fnc_ambientspawncarparked": [
+"mcc/ambient/fnc/fn_ambientinit.sqf"
+],
+"MCC_fnc_ambientCivilianFiredNearEH": [
+"mcc/ambient/fnc/fn_ambientinit.sqf",
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf"
+],
+"mcc_fnc_isvisabletoplayers": [
+"mcc/ambient/fnc/fn_ambientspawncar.sqf",
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf"
+],
+"bis_fnc_nearestRoad": [
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"mcc_fnc_vehiclerandomanimation": [
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/cfg/modules/fnc/fn_vehiclerespawn.sqf",
+"mcc/vehicles/fnc/fn_spawnvehicle.sqf"
+],
+"mcc_fnc_createied": [
+"mcc/ambient/fnc/fn_ambientspawncarparked.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/fnc/ied/fn_createied.sqf",
+"mcc/fnc/ied/fn_trapsingle.sqf"
+],
+"BIS_fnc_sideIsEnemy": [
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/ui/fnc/fn_tagsystem.sqf"
+],
+"mcc_fnc_managesb": [
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf",
+"mcc/fnc/ied/fn_sbsingle.sqf"
+],
+"mcc_fnc_manageac": [
+"mcc/ambient/fnc/fn_ambientspawnciv.sqf",
+"mcc/cfg/curator/fnc/fn_curatorsetarmedcivilian.sqf",
+"mcc/fnc/ied/fn_acsingle.sqf",
+"mcc/fnc/ied/fn_manageambush.sqf"
+],
+"mcc_fnc_initbombdefuse": [
+"mcc/bombdefuse/fnc/fn_bdstart.sqf",
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"mcc_fnc_time2string": [
+"mcc/bombdefuse/fnc/fn_bdwatch.sqf",
+"mcc/dialogs/mcc_playerconsole2_init.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/fnc/general/fn_time.sqf"
+],
+"mcc_fnc_bdwatch": [
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"mcc_fnc_bdwiremodule": [
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"mcc_fnc_bdbuttonsmodule": [
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"mcc_fnc_bdnumpadmodule": [
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"MCC_bombDefuse": [
+"mcc/bombdefuse/fnc/fn_initbombdefuse.sqf"
+],
+"addCuratorEditableObjects": [
+"mcc/cfg/curator/fnc/fn_addtozeus.sqf"
+],
+"removeCuratorEditableObjects": [
+"mcc/cfg/curator/fnc/fn_addtozeus.sqf"
+],
+"mcc_fnc_ambientinit": [
+"mcc/cfg/curator/fnc/fn_curatorambientcivilians.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf"
+],
+"mcc_fnc_ppeffects": [
+"mcc/cfg/curator/fnc/fn_curatoratmoshphere.sqf",
+"mcc/fnc/general/fn_deletebrush.sqf",
+"mcc/fnc/general/fn_ppeffects.sqf",
+"mcc/fnc/general/fn_sync.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_settime": [
+"mcc/cfg/curator/fnc/fn_curatoratmoshphere.sqf",
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_settime.sqf",
+"mcc/general_scripts/time.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_campaigninit": [
+"mcc/cfg/curator/fnc/fn_curatorcampaigninit.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf"
+],
+"mcc_fnc_iedfakeexplosion": [
+"mcc/cfg/curator/fnc/fn_curatordamagepart.sqf"
+],
+"mcc_fnc_deletebrush": [
+"mcc/cfg/curator/fnc/fn_curatordoorlock.sqf",
+"mcc/cfg/curator/fnc/fn_curatornighteffects.sqf",
+"mcc/cfg/curator/fnc/fn_curatorwarzone.sqf",
+"mcc/fnc/general/fn_deletebrush.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"MCC_fnc_curatorDrawLineRuning": [
+"mcc/cfg/curator/fnc/fn_curatordrawline.sqf"
+],
+"MCC_fnc_curatorDrawLine_mouseEH": [
+"mcc/cfg/curator/fnc/fn_curatordrawline.sqf"
+],
+"MCC_fnc_curatorDrawLine_mapEH": [
+"mcc/cfg/curator/fnc/fn_curatordrawline.sqf"
+],
+"mcc_fnc_garrison": [
+"mcc/cfg/curator/fnc/fn_curatorgarrisonunits.sqf",
+"mcc/general_scripts/groupgen/spawn_request.sqf",
+"mcc/missionwizard/fnc/fn_buildroadblock.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/pop_menu/spawn_group.sqf"
+],
+"mcc_fnc_lhdspawn": [
+"mcc/cfg/curator/fnc/fn_curatorlhdspawn.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"mcc_fnc_airdrop": [
+"mcc/cfg/curator/fnc/fn_curatormcccas.sqf",
+"mcc/general_scripts/console/mousedown.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"mcc_fnc_construct_base": [
+"mcc/cfg/curator/fnc/fn_curatorrtsbuilding.sqf",
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/rts/fnc/fn_rtsupgrade.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_setevac": [
+"mcc/cfg/curator/fnc/fn_curatorsetevac.sqf",
+"mcc/fnc/evac/fn_evacspawn.sqf",
+"mcc/fnc/evac/fn_setevac.sqf"
+],
+"mcc/fnc/ied/fn_createied.sqf": [
+"mcc/cfg/curator/fnc/fn_curatorsetied.sqf"
+],
+"mcc_fnc_undercoverinit": [
+"mcc/cfg/curator/fnc/fn_curatorundercover.sqf",
+"mcc/undercover/fnc/fn_undercoverinit.sqf"
+],
+"mcc_fnc_vehiclespawnerinit": [
+"mcc/cfg/curator/fnc/fn_curatorvehiclespawner.sqf",
+"mcc/rts/fnc/fn_initworkshop.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinit.sqf"
+],
+"mcc_fnc_ingameui": [
+"mcc/cfg/curator/fnc/fn_ingameuicurator.sqf",
+"mcc/cfg/modules/fnc/fn_ingameui.sqf"
+],
+"a3/ui_f_curator/ui/defineresincldesign.inc": [
+"mcc/cfg/curator/fnc/fn_rscattributevehiclecargo.sqf",
+"mcc/cfg/curator/scripts/mcc_rscattributeammo.sqf",
+"mcc/cfg/curator/scripts/mcc_rscattributeengine.sqf",
+"mcc/cfg/curator/scripts/mcc_rscattributelights.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf"
+],
+"mcc_fnc_rscattributevehiclecargo": [
+"mcc/cfg/curator/fnc/fn_rscattributevehiclecargo.sqf"
+],
+"mcc_fnc_logisticscargounload": [
+"mcc/cfg/curator/fnc/fn_rscattributevehiclecargo.sqf",
+"mcc/logistics/fnc/fn_logisticscargoinit.sqf"
+],
+"setVehicleAmmo": [
+"mcc/cfg/curator/scripts/mcc_rscattributeammo.sqf",
+"mcc/general_scripts/test.sqf",
+"mcc/vehicles/fnc/fn_vehicleservice.sqf"
+],
+"bis_fnc_ctrlsetscale": [
+"mcc/cfg/curator/scripts/mcc_rscattributeengine.sqf",
+"mcc/cfg/curator/scripts/mcc_rscattributelights.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf"
+],
+"mcc_fnc_vehicleengine": [
+"mcc/cfg/curator/scripts/mcc_rscattributeengine.sqf"
+],
+"mcc_fnc_vehiclelights": [
+"mcc/cfg/curator/scripts/mcc_rscattributelights.sqf"
+],
+"mcc_fnc_restrictzoneeffect": [
+"mcc/cfg/modules/fnc/fn_createrestrictedzones.sqf"
+],
+"mcc_fnc_createrestrictedzones": [
+"mcc/cfg/modules/fnc/fn_createrestrictedzones.sqf"
+],
+"mcc_fnc_helpersinit": [
+"mcc/cfg/modules/fnc/fn_ingameui.sqf"
+],
+"mcc_fnc_initcompasshud": [
+"mcc/cfg/modules/fnc/fn_ingameui.sqf",
+"mcc/settings/uisettings.sqf"
+],
+"mcc_fnc_supressioninit": [
+"mcc/cfg/modules/fnc/fn_ingameui.sqf",
+"mcc/settings/uisettings.sqf"
+],
+"mcc_fnc_forcecamera": [
+"mcc/cfg/modules/fnc/fn_ingameui.sqf",
+"mcc/settings/uisettings.sqf"
+],
+"mcc_fnc_pvpinterface": [
+"mcc/cfg/modules/fnc/fn_ingameui.sqf",
+"mcc/settings/uisettings.sqf"
+],
+"enableEngineArtillery": [
+"mcc/cfg/modules/fnc/fn_missionsettings.sqf"
+],
+"setTimeMultiplier": [
+"mcc/cfg/modules/fnc/fn_missionsettings.sqf"
+],
+"setfriend": [
+"mcc/cfg/modules/fnc/fn_missionsettings.sqf"
+],
+"bis_fnc_sideID": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/fnc/general/fn_gear.sqf",
+"mcc/fnc/general/fn_startlocations.sqf",
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/logistics/scripts/mcc_logisticsloadtruck_init.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf"
+],
+"bis_fnc_addscriptedeventhandler": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_counter": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/fnc/artillery/fn_artygetsolution.sqf",
+"mcc/fnc/general/fn_maketask.sqf",
+"mcc/fnc/general/fn_savetomcc.sqf",
+"mcc/fnc/general/fn_savetosqm.sqf",
+"mcc/fnc/ied/fn_acsingle.sqf",
+"mcc/fnc/mp/fn_construction.sqf",
+"mcc/fnc/mp/fn_construct_base.sqf",
+"mcc/fnc/mp/fn_vote.sqf",
+"mcc/missionwizard/fnc/fn_buildroadblock.sqf",
+"mcc/missionwizard/fnc/fn_mwcreatetask.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnstatic.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/roads/fnc/fn_roadnetworkfind.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf"
+],
+"bis_fnc_phoneticalWord": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_textureMarker": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/ui/fnc/fn_tagsystem.sqf"
+],
+"bis_fnc_callscriptedeventhandler": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"BIS_fnc_removeRespawnPosition": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"bis_fnc_sidecolor": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/dialogs/mcc_playerconsole_init.sqf",
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/ui/fnc/fn_getgroupicondata.sqf",
+"mcc/ui/fnc/fn_tagsystem.sqf",
+"mcc/ui/fnc/fn_trackunits.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf"
+],
+"bis_fnc_colorRGBAtoTexture": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf"
+],
+"bis_fnc_sidename": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf"
+],
+"mcc_fnc_rtscalculateresourcetreshold": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/missionwizard/fnc/fn_daycycle.sqf",
+"mcc/missionwizard/fnc/fn_missiondone.sqf",
+"mcc/rts/fnc/fn_rtscalculateresourcetreshold.sqf",
+"mcc/rts/fnc/fn_rtscreategroup.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_rscLayer": [
+"mcc/cfg/modules/fnc/fn_modulecapturepoint.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/cfg/modules/fnc/fn_restrictzoneeffect.sqf",
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/fnc/actions/fn_grenadethrow.sqf",
+"mcc/fnc/actions/fn_weaponselect.sqf",
+"mcc/general_scripts/console/fn_consoleacfullscreen.sqf",
+"mcc/hud/fnc/fn_initcompasshud.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf",
+"mcc/hud/fnc/fn_supressioneffects.sqf",
+"mcc/interaction/fnc/fn_interactobject.sqf",
+"mcc/medic/dialogs/mcc_uncmain_init.sqf",
+"mcc/medic/fnc/fn_medicprogressbar.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/roleselection/fnc/fn_unlock.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/settings/uisettings.sqf",
+"mcc/survive/fnc/fn_survivalprogressbars.sqf",
+"mcc/ui/fnc/fn_3dcredits.sqf",
+"mcc/ui/fnc/fn_interactprogress.sqf"
+],
+"mcc_fnc_moduleobjective_f": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf"
+],
+"mcc_fnc_customtasks": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf",
+"mcc/fnc/general/fn_savetosqm.sqf",
+"mcc/missionwizard/fnc/fn_customtasks.sqf"
+],
+"bis_fnc_setTask": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_taskExists": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf",
+"mcc/fnc/general/fn_loadfrommcc.sqf"
+],
+"bis_fnc_taskCompleted": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf",
+"mcc/missionwizard/fnc/fn_customtasks.sqf"
+],
+"bis_fnc_deleteTask": [
+"mcc/cfg/modules/fnc/fn_moduleobjective_f.sqf",
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/fnc/general/fn_maketask.sqf"
+],
+"mcc_fnc_modulesector": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/ui/fnc/fn_initdispaly.sqf"
+],
+"bis_fnc_startloadingscreen": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_endloadingscreen": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf",
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_objectvar": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_paramin": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"bis_fnc_textureVehicleIcon": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_allSynchronizedObjects": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_error": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf",
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"bis_fnc_arefriendly": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"MCC_fnc_moduleSector_sideSectors": [
+"mcc/cfg/modules/fnc/fn_modulesector.sqf"
+],
+"bis_fnc_call": [
+"mcc/cfg/modules/fnc/fn_settingscover.sqf"
+],
+"hcam/hcam_init.sqf": [
+"mcc/cfg/modules/fnc/fn_sf.sqf"
+],
+"data/sf.paa' />": [
+"mcc/cfg/modules/fnc/fn_sf.sqf"
+],
+"BIS_fnc_guiMessage": [
+"mcc/cfg/modules/fnc/fn_sf.sqf",
+"mcc/fnc/general/fn_halt.sqf",
+"mcc/fnc/mp/fn_vote.sqf",
+"mcc/general_scripts/mcc_start_location.sqf",
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/helpers/fnc/fn_helpersinit.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf",
+"mcc/pop_menu/tasks_req.sqf",
+"mcc/rts/fnc/fn_rtsdestroylogic.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf",
+"samplemissions/pvpmine.tanoa/init.sqf"
+],
+"mcc_fnc_vehiclerespawn": [
+"mcc/cfg/modules/fnc/fn_vehiclerespawn.sqf"
+],
+"mcc_fnc_nearrespawn": [
+"mcc/cfg/modules/fnc/fn_vehiclerespawn.sqf",
+"mcc/interaction/fnc/fn_interactutility.sqf",
+"mcc/logistics/fnc/fn_loadtruckui.sqf"
+],
+"mcc_fnc_ieddeadlyexplosion": [
+"mcc/cfg/modules/fnc/fn_vehiclerespawn.sqf"
+],
+"mcc_fnc_mainboxinit": [
+"mcc/cfg/modules/fnc/fn_weaponshopinit.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/rts/fnc/fn_mainboxopen.sqf"
+],
+"hideObjectGlobal": [
+"mcc/cfg/modules/fnc/fn_weaponshopinit.sqf"
+],
+"mcc_fnc_compositionsplace": [
+"mcc/compositions/fnc/fn_compositionsplace.sqf",
+"mcc/missionwizard/fnc/fn_buildrandomcomposition.sqf"
+],
+"mcc_fnc_trackunits": [
+"mcc/dialogs/mcc_3d_init.sqf",
+"mcc/dialogs/mcc_groupgen_init.sqf",
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/pop_menu/3rd_placer.sqf"
+],
+"BIS_fnc_MP": [
+"mcc/dialogs/mcc_boxgen_change.sqf"
+],
+"mcc_fnc_createmcczones": [
+"mcc/dialogs/mcc_groupgen_init.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_groupgenrefresh": [
+"mcc/dialogs/mcc_groupgen_init.sqf",
+"mcc/general_scripts/groupgen/group_manage.sqf"
+],
+"MCC_fnc_FPS": [
+"mcc/dialogs/mcc_groupgen_init.sqf",
+"mcc/login/scripts/mcc_logindialog_init.sqf",
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"%mcc/general_scripts/console/consoleswitchmenu.sqf": [
+"mcc/dialogs/mcc_playerconsole2_init.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf"
+],
+"mcc_fnc_pipopen": [
+"mcc/dialogs/mcc_playerconsole2_init.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/dialogs/sqlpda/mcc_sqlpda_rsc_init.sqf",
+"mcc/general_scripts/console/livefeed.sqf",
+"mcc/general_scripts/pda/livefeed.sqf",
+"mcc/general_scripts/unitmanage/um.sqf"
+],
+"mcc_fnc_time": [
+"mcc/dialogs/mcc_playerconsole2_init.sqf",
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/hud/fnc/fn_pvpinterface.sqf",
+"mcc/roleselection/scripts/gearpanel_init.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_setvehicleinit": [
+"mcc/dialogs/mcc_playerconsole2_init.sqf",
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_makebriefing.sqf",
+"mcc/fnc/general/fn_objectmapper.sqf",
+"mcc/fnc/general/fn_setvehicleinit.sqf",
+"mcc/fnc/ied/fn_acsingle.sqf",
+"mcc/fnc/ied/fn_ambushsingle.sqf",
+"mcc/fnc/ied/fn_managesb.sqf",
+"mcc/fnc/ied/fn_sbsingle.sqf",
+"mcc/general_scripts/hostages/create_hostage.sqf",
+"mcc/general_scripts/hostages/hostage.sqf",
+"mcc/general_scripts/unitmanage/paradrop.sqf",
+"mcc/general_scripts/unitmanage/umbroadcast.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf",
+"mcc/pop_menu/simple_spawn.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"data/consuletarget1.paa": [
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/general_scripts/console/ac_weaponchange.sqf"
+],
+"data/consuletarget2.paa": [
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/general_scripts/console/ac_weaponchange.sqf"
+],
+"data/consuletarget3.paa": [
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/general_scripts/console/ac_weaponchange.sqf"
+],
+"mcc_fnc_deleteplane": [
+"mcc/dialogs/mcc_playerconsole3_init.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/general/fn_realparadrop.sqf"
+],
+"MCC_playerConsole": [
+"mcc/dialogs/mcc_playerconsoleloading_init.sqf",
+"mcc/general_scripts/console/consoleopenmenu_impl.sqf",
+"mcc/general_scripts/console/consoleswitchmenu_impl.sqf"
+],
+"%mcc/fnc/console/fn_consoleclickgroupicon.sqf": [
+"mcc/dialogs/mcc_playerconsole_init.sqf"
+],
+"mcc_fnc_checkbuildings": [
+"mcc/dialogs/mcc_playerconsole_init.sqf",
+"mcc/missionwizard/fnc/fn_missiondone.sqf",
+"mcc/rts/fnc/fn_baseactionentered.sqf",
+"mcc/rts/fnc/fn_baseselected.sqf",
+"mcc/rts/fnc/fn_rtsbuilduicontainer.sqf"
+],
+"mcc_fnc_checkres": [
+"mcc/dialogs/mcc_playerconsole_init.sqf",
+"mcc/general_scripts/console/console_request.sqf",
+"mcc/rts/fnc/fn_baseactionentered.sqf",
+"mcc/rts/fnc/fn_baseselected.sqf",
+"mcc/rts/fnc/fn_rtsbuilduicontainer.sqf"
+],
+"MCC_fnc_mapDrawWPConsole": [
+"mcc/dialogs/mcc_playerconsole_init.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_getgroupicondata": [
+"mcc/dialogs/mcc_playerconsole_init.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"%mcc/general_scripts/console/consoleopenmenu.sqf": [
+"mcc/dialogs/mcc_popupmenu.sqf"
+],
+"mcc_loginDialog": [
+"mcc/dialogs/mcc_popupmenu.sqf"
+],
+"MCC3D_Dialog": [
+"mcc/dialogs/mcc_popupmenu.sqf",
+"mcc/pop_menu/3rd_placer.sqf"
+],
+"mcc_groupGen": [
+"mcc/dialogs/mcc_popupmenu.sqf",
+"mcc/general_scripts/triggers/triggers.sqf"
+],
+"MCCMWDialog": [
+"mcc/dialogs/mcc_popupmenu.sqf"
+],
+"CP_RESPAWNPANEL": [
+"mcc/dialogs/mcc_popupmenu.sqf",
+"mcc/fnc/general/fn_startlocations.sqf",
+"mcc/roleselection/scripts/player_init.sqf",
+"mcc/roleselection/scripts/switchdialog.sqf"
+],
+"MCC_SQLPDA": [
+"mcc/dialogs/mcc_popupmenu.sqf"
+],
+"mcc/dialogs/sqlpda/data/zoomout.paa": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf"
+],
+"mcc/dialogs/sqlpda/data/zoomin.paa": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf"
+],
+"%mcc/fnc/console/fn_pdaclickgroupicon.sqf": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf"
+],
+"MCC_fnc_SQLPDAMenuClear": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf"
+],
+"mcc_fnc_initconstract": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/fnc/actions/fn_callconstruct.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"MCC_fnc_SQLPDAMenuclicked": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/general_scripts/pda/mousedblclick.sqf"
+],
+"MCC_fnc_mapDrawWPPDA": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/dialogs/sqlpda/mcc_sqlpda_rsc_init.sqf"
+],
+"mcc_fnc_countgrouphc": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/dialogs/sqlpda/mcc_sqlpda_rsc_init.sqf",
+"mcc/fnc/console/fn_consoleclickgroupicon.sqf",
+"mcc/fnc/console/fn_pdaclickgroupicon.sqf",
+"mcc/fnc/groupgen/fn_groupgenrefresh.sqf",
+"mcc/general_scripts/groupgen/clickgroupicon.sqf",
+"mcc/rts/fnc/fn_baseselected.sqf",
+"mcc/ui/fnc/fn_getgroupicondata.sqf"
+],
+"mcc_fnc_countgroup": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/dialogs/sqlpda/mcc_sqlpda_rsc_init.sqf",
+"mcc/fnc/console/fn_consoleclickgroupicon.sqf",
+"mcc/fnc/console/fn_pdaclickgroupicon.sqf",
+"mcc/fnc/groupgen/fn_groupgenrefresh.sqf",
+"mcc/general_scripts/groupgen/clickgroupicon.sqf",
+"mcc/ui/fnc/fn_getgroupicondata.sqf"
+],
+"mcc_fnc_pdacreatemarker": [
+"mcc/dialogs/sqlpda/mcc_sqlpda_init.sqf",
+"mcc/fnc/actions/fn_callsupport.sqf",
+"mcc/fnc/actions/fn_spotenemy.sqf",
+"mcc/interaction/fnc/fn_interactionmarkercreate.sqf"
+],
+"setOwner": [
+"mcc/fnc/actions/fn_acedropammobox.sqf",
+"mcc/fnc/actions/fn_utilityuse.sqf",
+"mcc/general_scripts/cas/missile_guide.sqf",
+"mcc/general_scripts/console/ac_fire.sqf"
+],
+"mcc_fnc_ilschilds": [
+"mcc/fnc/actions/fn_addilschildrenace.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_getkeyfromcba": [
+"mcc/fnc/actions/fn_cover.sqf",
+"mcc/fnc/general/fn_handleaddaction.sqf"
+],
+"mcc_fnc_cover": [
+"mcc/fnc/actions/fn_coverinit.sqf"
+],
+"mcc_fnc_releaseobject": [
+"mcc/fnc/actions/fn_dragobject.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactman.sqf",
+"mcc/medic/fnc/fn_medicdragcarry.sqf"
+],
+"mcc_fnc_weaponselect": [
+"mcc/fnc/actions/fn_grenadethrow.sqf",
+"mcc/fnc/actions/fn_utilityuse.sqf",
+"mcc/ui/fnc/fn_cbakeybinds.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"BIS_fnc_relativeDirTo": [
+"mcc/fnc/actions/fn_utilityuse.sqf",
+"mcc/fnc/general/fn_handleaddaction.sqf",
+"mcc/general_scripts/console/acmousemoving.sqf",
+"mcc/hud/fnc/fn_supressionfiredeh.sqf",
+"mcc/hud/fnc/fn_supressioninit.sqf",
+"mcc/interaction/fnc/fn_door_cam_handler.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_getkeyfromaction": [
+"mcc/fnc/actions/fn_weaponselect.sqf"
+],
+"mcc_fnc_grenadethrow": [
+"mcc/fnc/actions/fn_weaponselect.sqf"
+],
+"mcc_fnc_utilityuse": [
+"mcc/fnc/actions/fn_weaponselect.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc/general_scripts/cas/missile_guide.sqf": [
+"mcc/fnc/artillery/fn_artillery.sqf",
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/general_scripts/artillery/artillery_fire.sqf",
+"mcc/general_scripts/console/uavmousedown.sqf"
+],
+"mcc_fnc_artillery": [
+"mcc/fnc/artillery/fn_artillery.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"mcc_fnc_calcsolution": [
+"mcc/fnc/artillery/fn_artygetsolution.sqf"
+],
+"MCC_fnc_calcSolutionInside": [
+"mcc/fnc/artillery/fn_calcsolution.sqf"
+],
+"mcc_fnc_artygetsolution": [
+"mcc/fnc/artillery/fn_consolefireartillery.sqf"
+],
+"mcc_fnc_createammodrop": [
+"mcc/fnc/cas/fn_airdrop.sqf"
+],
+"mcc_fnc_helipreciselanding": [
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/evac/fn_evacmove.sqf"
+],
+"mcc_fnc_uavdetect": [
+"mcc/fnc/cas/fn_airdrop.sqf"
+],
+"bis_fnc_curatorSayMessage": [
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf"
+],
+"bis_fnc_vectorFromXtoY": [
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf"
+],
+"bis_fnc_vectorMultiply": [
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/fnc/cas/fn_cas.sqf"
+],
+"mcc_fnc_sadarm": [
+"mcc/fnc/cas/fn_airdrop.sqf"
+],
+"mcc_fnc_cbu": [
+"mcc/fnc/cas/fn_airdrop.sqf"
+],
+"mcc_fnc_cas": [
+"mcc/fnc/cas/fn_airdrop.sqf"
+],
+"MCC_playerConsole2": [
+"mcc/fnc/cas/fn_airdrop.sqf",
+"mcc/general_scripts/console/consoleswitchmenu_impl.sqf"
+],
+"bis_fnc_itemType": [
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/rts/fnc/fn_boxmakeweaponsarray.sqf",
+"mcc/rts/fnc/fn_getweaponcost.sqf",
+"mcc/rts/fnc/fn_mainboxinit.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"bis_fnc_weaponsEntityType": [
+"mcc/fnc/cas/fn_cas.sqf"
+],
+"bis_fnc_spawnVehicle": [
+"mcc/fnc/cas/fn_cas.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"bis_fnc_objectType": [
+"mcc/fnc/cas/fn_createammodrop.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"MCC_fnc_rtsMakeMarkersGroups": [
+"mcc/fnc/console/fn_consoleclickgroupicon.sqf",
+"mcc/rts/fnc/fn_rtsclearbuilding.sqf",
+"mcc/rts/fnc/fn_rtsupgrade.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_baseselected": [
+"mcc/fnc/console/fn_consoleclickgroupicon.sqf",
+"mcc/rts/fnc/fn_rtsbuilduicontainerback.sqf",
+"mcc/rts/fnc/fn_rtsscanresourcescancel.sqf",
+"mcc/rts/fnc/fn_rtsstartelectricity.sqf",
+"mcc/rts/fnc/fn_rtsupgrade.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesadvanced.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesbasic.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_rankParams": [
+"mcc/fnc/console/fn_consoleclickgroupicon.sqf",
+"mcc/fnc/console/fn_pdaclickgroupicon.sqf",
+"mcc/general_scripts/groupgen/clickgroupicon.sqf",
+"mcc/hud/fnc/fn_inithud.sqf",
+"mcc/roleselection/fnc/fn_unlock.sqf",
+"mcc/roleselection/scripts/player_init.sqf",
+"mcc/rts/fnc/fn_baseselected.sqf"
+],
+"MCC_DynamicDialog": [
+"mcc/fnc/dynamicdialog/fn_initdynamicdialog.sqf"
+],
+"mcc_fnc_evacdelete": [
+"mcc/fnc/evac/fn_evacdelete.sqf",
+"mcc/general_scripts/evac/delete_heli.sqf"
+],
+"mcc_fnc_evacmove": [
+"mcc/fnc/evac/fn_evacmove.sqf",
+"mcc/general_scripts/evac/add_wp_heli.sqf",
+"mcc/general_scripts/evac/evac_move.sqf",
+"mcc/general_scripts/evac/move_heli.sqf",
+"mcc/general_scripts/evac/return_to_lhd.sqf"
+],
+"mcc_fnc_fastropelocal": [
+"mcc/fnc/evac/fn_evacmove.sqf"
+],
+"mcc_fnc_evacspawn": [
+"mcc/fnc/evac/fn_evacspawn.sqf",
+"mcc/general_scripts/evac/request_heli.sqf",
+"mcc/rts/fnc/fn_rtsevachelicopterbuy.sqf"
+],
+"BIS_fnc_activateAddons": [
+"mcc/fnc/general/fn_activateaddons.sqf"
+],
+"mcc_fnc_addvelocity": [
+"mcc/fnc/general/fn_addvelocity.sqf",
+"mcc/fnc/ied/fn_ieddeadlyexplosion.sqf",
+"mcc/fnc/ied/fn_ieddisablingexplosion.sqf",
+"mcc/fnc/ied/fn_iedfakeexplosion.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf"
+],
+"mcc/general_scripts/unitmanage/umbroadcast.sqf": [
+"mcc/fnc/general/fn_broadcast.sqf"
+],
+"mcc_fnc_broadcast": [
+"mcc/fnc/general/fn_broadcast.sqf",
+"mcc/general_scripts/unitmanage/um.sqf"
+],
+"BIS_fnc_crewCount": [
+"mcc/fnc/general/fn_crewcount.sqf"
+],
+"mcc_fnc_makemarker": [
+"mcc/fnc/general/fn_deletebrush.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/pop_menu/markers_add.sqf",
+"mcc/pop_menu/markers_req.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf",
+"mcc/ui/fnc/fn_makemarker.sqf",
+"mcc/ui/fnc/markers_add.sqf"
+],
+"BIS_fnc_switchLamp": [
+"mcc/fnc/general/fn_deletebrush.sqf"
+],
+"mcc_fnc_findroadsleadingzone": [
+"mcc/fnc/general/fn_findroadsleadingzone.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_garrisonbehavior": [
+"mcc/fnc/general/fn_garrison.sqf"
+],
+"mcc_fnc_groupchat": [
+"mcc/fnc/general/fn_groupchat.sqf",
+"mcc/fnc/general/fn_login.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"mcc/general_scripts/respawntents/deployrespawntents.sqf": [
+"mcc/fnc/general/fn_handleaddaction.sqf"
+],
+"mcc/dialogs/mcc_popupmenu.sqf": [
+"mcc/fnc/general/fn_handleaddaction.sqf",
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/login/fnc/fn_logindialog.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/pop_menu/mcc_faction_choice.sqf",
+"spectator/specta.sqf"
+],
+"BIS_fnc_removeStackedEventHandler": [
+"mcc/fnc/general/fn_handleaddaction.sqf",
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/interaction/fnc/fn_requestdropoff.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/settings/uisettings.sqf"
+],
+"mcc_rscKeyBinds": [
+"mcc/fnc/general/fn_handleaddaction.sqf"
+],
+"BIS_fnc_spawnCrew": [
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/pop_menu/simple_spawn.sqf"
+],
+"mcc_fnc_replacestring": [
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_savetomcc.sqf",
+"mcc/fnc/general/fn_savetosqm.sqf",
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf"
+],
+"bis_fnc_setServerVariable": [
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_savetosqm.sqf"
+],
+"mcc_fnc_setweather": [
+"mcc/fnc/general/fn_loadfrommcc.sqf",
+"mcc/fnc/general/fn_ppeffects.sqf",
+"mcc/fnc/general/fn_setweather.sqf",
+"mcc/general_scripts/time.sqf",
+"mcc/missionwizard/fnc/fn_daycycle.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"bis_fnc_moduleMissionName": [
+"mcc/fnc/general/fn_loadfrommcc.sqf"
+],
+"mcc_fnc_mwopenbriefing": [
+"mcc/fnc/general/fn_makebriefing.sqf"
+],
+"bis_fnc_taskCreate": [
+"mcc/fnc/general/fn_maketask.sqf"
+],
+"BIS_fnc_taskSetDestination": [
+"mcc/fnc/general/fn_maketask.sqf"
+],
+"BIS_fnc_establishingShot": [
+"mcc/fnc/general/fn_maketask.sqf"
+],
+"mcc_fnc_movetopos": [
+"mcc/fnc/general/fn_movetopos.sqf",
+"mcc/general_scripts/unitmanage/um.sqf"
+],
+"mcc_fnc_objectmapper": [
+"mcc/fnc/general/fn_objectmapper.sqf",
+"mcc/general_scripts/docobject/compositionmanagerchnage.sqf",
+"mcc/missionwizard/fnc/fn_buildroadblock.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/pop_menu/simple_spawn.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"mcc_fnc_paradrop": [
+"mcc/fnc/general/fn_paradrop.sqf",
+"mcc/fnc/general/fn_realparadropplayer.sqf",
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf"
+],
+"BIS_fnc_dataTerminalAnimate": [
+"mcc/fnc/general/fn_pickitem.sqf"
+],
+"init.sqf": [
+"mcc/fnc/general/fn_post_init.sqf",
+"mcc/fnc/general/pre_init.sqf"
+],
+"a3/air_f_heli/heli_transport_04/scripts/heli_transport_04_basic_black.sqf": [
+"mcc/fnc/general/fn_realparadrop.sqf"
+],
+"mcc_fnc_releasepod": [
+"mcc/fnc/general/fn_realparadrop.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_realparadropplayer": [
+"mcc/fnc/general/fn_realparadrop.sqf"
+],
+"mcc_fnc_camp_showosd": [
+"mcc/fnc/general/fn_realparadropplayer.sqf",
+"mcc/missionwizard/fnc/fn_moviemaker.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf",
+"mcc/ui/fnc/fn_camp_showosd.sqf"
+],
+"BIS_fnc_arrayInsert": [
+"mcc/fnc/general/fn_replacestring.sqf"
+],
+"bis_fnc_getServerVariable": [
+"mcc/fnc/general/fn_savetomcc.sqf",
+"mcc/fnc/general/fn_savetosqm.sqf"
+],
+"mcc_fnc_setvehiclename": [
+"mcc/fnc/general/fn_setvehiclename.sqf",
+"mcc/pop_menu/simple_spawn.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"bis_fnc_setovercast": [
+"mcc/fnc/general/fn_setweather.sqf"
+],
+"BIS_fnc_returnGroupComposition": [
+"mcc/fnc/general/fn_spawngroup.sqf"
+],
+"bis_fnc_setRank": [
+"mcc/fnc/general/fn_spawngroup.sqf"
+],
+"mcc/roleselection/scripts/player_init.sqf": [
+"mcc/fnc/general/fn_startlocations.sqf",
+"mcc/general_scripts/mcc_start_location.sqf"
+],
+"BIS_fnc_getRespawnPositions": [
+"mcc/fnc/general/fn_startlocations.sqf",
+"mcc/fnc/mp/fn_getactivesides.sqf",
+"mcc/fnc/mp/fn_saveserver.sqf",
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/interaction/fnc/fn_interactself.sqf",
+"mcc/missionwizard/fnc/fn_mwgetstartlocation.sqf",
+"mcc/roleselection/fnc/fn_nearrespawn.sqf",
+"mcc/roleselection/fnc/fn_rssquadjoin.sqf",
+"mcc/roleselection/scripts/gearpanel_init.sqf",
+"mcc/roleselection/scripts/player_init.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"BIS_fnc_typeText": [
+"mcc/fnc/general/pickitem.sqf",
+"mcc/missionwizard/fnc/fn_moviemaker.sqf",
+"mcc/ui/fnc/fn_camp_showosd.sqf"
+],
+"BIS_fnc_showSubtitle": [
+"mcc/fnc/general/pickitem.sqf",
+"mcc/general_scripts/hostages/create_hostage.sqf"
+],
+"MCC_fnc_mapDrawWP": [
+"mcc/fnc/groupgen/fn_groupgenrefresh.sqf",
+"mcc/general_scripts/unitmanage/um.sqf"
+],
+"mcc_fnc_groupgenumrefresh": [
+"mcc/fnc/groupgen/fn_groupgenrefresh.sqf"
+],
+"mcc_fnc_groupspawn": [
+"mcc/fnc/groupgen/fn_groupspawn.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"mcc_fnc_manageambush": [
+"mcc/fnc/ied/fn_ambushsingle.sqf"
+],
+"mcc_fnc_iedhit": [
+"mcc/fnc/ied/fn_createied.sqf"
+],
+"playSound3D": [
+"mcc/fnc/ied/fn_createied.sqf"
+],
+"mcc_fnc_iedsync": [
+"mcc/fnc/ied/fn_createied.sqf",
+"mcc/fnc/ied/fn_manageambush.sqf",
+"mcc/fnc/ied/fn_trapsingle.sqf",
+"mcc/general_scripts/3deditor/mouseup.sqf",
+"mcc/general_scripts/groupgen/mouseup.sqf"
+],
+"mcc_fnc_setunitpos": [
+"mcc/fnc/ied/fn_manageambush.sqf"
+],
+"mcc_fnc_minesingle": [
+"mcc/fnc/ied/fn_minesingle.sqf",
+"mcc/fnc/ied/scripts/trap_request.sqf"
+],
+"BIS_fnc_findOverwatch": [
+"mcc/fnc/ied/fn_trapsingle.sqf"
+],
+"mcc_fnc_ambushsingle": [
+"mcc/fnc/ied/fn_trapsingle.sqf",
+"mcc/general_scripts/3deditor/mouseup.sqf",
+"mcc/general_scripts/groupgen/mouseup.sqf"
+],
+"mcc_fnc_trapsingle": [
+"mcc/fnc/ied/scripts/trap_request.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_acsingle": [
+"mcc/fnc/ied/scripts/trap_request.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_sbsingle": [
+"mcc/fnc/ied/scripts/trap_request.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_clearpersistentdata": [
+"mcc/fnc/mp/fn_clearpersistentdata.sqf",
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf"
+],
+"BIS_fnc_markerCreate": [
+"mcc/fnc/mp/fn_construction.sqf",
+"mcc/fnc/mp/fn_construct_base.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf"
+],
+"mcc_fnc_buildspawnpoint": [
+"mcc/fnc/mp/fn_construction.sqf",
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/general_scripts/mcc_start_location.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf",
+"mcc/roleselection/scripts/createfob.sqf"
+],
+"mcc_fnc_makeobjectvirtualbox": [
+"mcc/fnc/mp/fn_construct_base.sqf",
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf"
+],
+"mcc_fnc_globalhint": [
+"mcc/fnc/mp/fn_construct_base.sqf",
+"mcc/general_scripts/mcc_start_location.sqf",
+"mcc/missionwizard/fnc/fn_daycycle.sqf",
+"mcc/missionwizard/fnc/fn_missiondone.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"mcc_fnc_initworkshop": [
+"mcc/fnc/mp/fn_construct_base.sqf"
+],
+"mcc_fnc_getvariable": [
+"mcc/fnc/mp/fn_inidbget.sqf",
+"mcc/fnc/mp/fn_loadplayer.sqf",
+"mcc/roleselection/fnc/fn_getvariable.sqf",
+"mcc/roleselection/scripts/gearpanel_init.sqf",
+"mcc/roleselection/scripts/player_init.sqf"
+],
+"mcc_fnc_inidbset": [
+"mcc/fnc/mp/fn_inidbget.sqf"
+],
+"mcc_fnc_loadplayer": [
+"mcc/fnc/mp/fn_loadplayer.sqf",
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf",
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_loadgear": [
+"mcc/fnc/mp/fn_loadplayer.sqf",
+"mcc/general_scripts/save_gear.sqf"
+],
+"mcc_fnc_loadserver": [
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_rtsclearbuilding": [
+"mcc/fnc/mp/fn_loadserver.sqf",
+"mcc/rts/fnc/fn_rtsdestroylogic.sqf",
+"mcc/rts/fnc/fn_rtsupgrade.sqf"
+],
+"mcc_fnc_saveplayer": [
+"mcc/fnc/mp/fn_saveplayer.sqf",
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf",
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_setvariable": [
+"mcc/fnc/mp/fn_saveplayer.sqf",
+"mcc/roleselection/fnc/fn_handlerating.sqf",
+"mcc/roleselection/fnc/fn_setvariable.sqf"
+],
+"mcc/general_scripts/mcc_spawnstuff.sqf": [
+"mcc/general_scripts/mcc_make_the_marker.sqf",
+"mcc/general_scripts/groupgen/spawn_request.sqf",
+"mcc/pop_menu/spawn_group.sqf"
+],
+"7mcc/general_scripts/mcc_spawnstuff.sqf": [
+"mcc/general_scripts/mcc_spawnstuff.sqf"
+],
+"mcc_setup_hc": [
+"mcc/general_scripts/mcc_spawnstuff.sqf",
+"mcc/missionwizard/fnc/fn_mwspawninzone.sqf",
+"mcc/missionwizard/fnc/fn_mwupdatezone.sqf"
+],
+"%2mcc/roleselection/scripts/player_init.sqf": [
+"mcc/general_scripts/mcc_start_location.sqf"
+],
+"mcc_fnc_assigncurator": [
+"mcc/general_scripts/save_gear.sqf"
+],
+"BIS_fnc_returnChildren": [
+"mcc/general_scripts/test.sqf",
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"mcc_fnc_interactprogress": [
+"mcc/general_scripts/test.sqf",
+"mcc/general_scripts/respawntents/deployrespawntents.sqf",
+"mcc/interaction/fnc/fn_doorbreach.sqf",
+"mcc/interaction/fnc/fn_doorlock.sqf",
+"mcc/interaction/fnc/fn_doormenuclicked.sqf",
+"mcc/interaction/fnc/fn_doorunlock.sqf",
+"mcc/interaction/fnc/fn_interactied.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_magazinerepack.sqf",
+"mcc/ui/fnc/fn_interactprogress.sqf",
+"mcc/vehicles/fnc/fn_pylonschange.sqf",
+"mcc/vehicles/fnc/fn_vehicleservice.sqf",
+"mcc/vehicles/fnc/fn_vehicletirechange.sqf"
+],
+"setPylonLoadOut": [
+"mcc/general_scripts/test.sqf",
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"BIS_fnc_setCuratorCamera": [
+"mcc/general_scripts/3deditor/openzeus.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"%mcc/pop_menu/spawn_group3d.sqf": [
+"mcc/general_scripts/boxgen/mcc_boxgen_change.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf",
+"mcc/pop_menu/spawn_group3d.sqf"
+],
+"mcc/general_scripts/docobject/compositionmanager.sqf": [
+"mcc/general_scripts/boxgen/mcc_boxgen_init.sqf"
+],
+"mcc/general_scripts/mcc_make_the_marker.sqf": [
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf",
+"mcc/pop_menu/zones.sqf"
+],
+"mcc_fnc_savetomcc": [
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf"
+],
+"mcc_fnc_savetosqm": [
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf"
+],
+"mcc_fnc_savetocomp": [
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf",
+"mcc/general_scripts/docobject/compositionmanagerchnage.sqf"
+],
+"mcc_fnc_loadfrommcc": [
+"mcc/general_scripts/commandline/mcc_loadconfig.sqf"
+],
+"mcc/general_scripts/console/ac_fire.sqf": [
+"mcc/general_scripts/console/acmousedown.sqf"
+],
+"bon_artillery/dialog/openmenu.sqf": [
+"mcc/general_scripts/console/consoleopenmenu_impl.sqf"
+],
+"MCC_playerConsoleLoading": [
+"mcc/general_scripts/console/consoleopenmenu_impl.sqf"
+],
+"MCC_playerConsole3": [
+"mcc/general_scripts/console/consoleswitchmenu_impl.sqf"
+],
+"general_scripts/console/consoleuavaction.sqf": [
+"mcc/general_scripts/console/consoleuavactioncommit.sqf"
+],
+"mcc_fnc_baseresourcereduce": [
+"mcc/general_scripts/console/console_request.sqf",
+"mcc/rts/fnc/fn_rtsaddartilleryammo.sqf",
+"mcc/rts/fnc/fn_rtsbuildingprogress.sqf",
+"mcc/rts/fnc/fn_rtsevachelicopterbuy.sqf",
+"mcc/rts/fnc/fn_rtsmountguns.sqf",
+"mcc/rts/fnc/fn_rtsorderplacesatchel.sqf",
+"mcc/rts/fnc/fn_rtspopulatevehicle.sqf",
+"mcc/rts/fnc/fn_rtsrespawnunits.sqf",
+"mcc/rts/fnc/fn_rtsupgrade.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_ConsoleACControlHandler": [
+"mcc/general_scripts/console/fn_consoleacfullscreen.sqf"
+],
+"mcc_fnc_drawarrow": [
+"mcc/general_scripts/console/mousedown.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"BIS_fnc_inTrigger": [
+"mcc/general_scripts/console/mousedown.sqf"
+],
+"mcc_fnc_drawbox": [
+"mcc/general_scripts/console/mousedown.sqf",
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"flyInHeight": [
+"mcc/general_scripts/console/uavcontrol.sqf"
+],
+"fire": [
+"mcc/general_scripts/console/uavcontrol.sqf"
+],
+"mcc/general_scripts/console/uavcontrol.sqf": [
+"mcc/general_scripts/console/uavmousedown.sqf"
+],
+"MCC_fnc_placeConvoy": [
+"mcc/general_scripts/convoy/make_convoy_wp.sqf",
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"MCC_fnc_startConvoy": [
+"mcc/general_scripts/convoy/start_convoy.sqf",
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"BIS_fnc_distance2D": [
+"mcc/general_scripts/evac/evac_move.sqf",
+"mcc/pop_menu/3rd_placer.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_taskType": [
+"mcc/general_scripts/groupgen/controlshandle.sqf",
+"mcc/pop_menu/tasks_req.sqf"
+],
+"BIS_fnc_taskTypeIcon": [
+"mcc/general_scripts/groupgen/controlshandle.sqf",
+"mcc/pop_menu/tasks_req.sqf"
+],
+"%mcc/general_scripts/groupgen/group_change.sqf": [
+"mcc/general_scripts/groupgen/group_change.sqf"
+],
+"mcc/pop_menu/zones.sqf": [
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"mcc_fnc_realparadrop": [
+"mcc/general_scripts/groupgen/mousedown.sqf"
+],
+"%mcc/general_scripts/hostages/hostage.sqf": [
+"mcc/general_scripts/hostages/create_hostage.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"%mcc/general_scripts/groupgen/controlshandle.sqf": [
+"mcc/general_scripts/jukebox/jukebox.sqf"
+],
+"mcc_fnc_musictrigger": [
+"mcc/general_scripts/jukebox/jukebox.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"BIS_fnc_trimString": [
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf"
+],
+"MCC_fnc_mapDrawPlayersWPConsole": [
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_tagsystem": [
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf"
+],
+"mcc_fnc_allowedweapons": [
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf"
+],
+"mcc_fnc_gainxpfromroles": [
+"mcc/general_scripts/loops/mcc_cpplayerloop.sqf"
+],
+"mcc_fnc_missionsettings": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_ingameuicurator": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_settingscover": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_settingsmedical": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_missionsettingsrs": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_gaiasettings": [
+"mcc/general_scripts/mission_settings/mission_settings_change.sqf"
+],
+"mcc_fnc_createrespawntent": [
+"mcc/general_scripts/respawntents/deployrespawntents.sqf"
+],
+"2mcc/general_scripts/triggers/triggers_execute.sqf": [
+"mcc/general_scripts/triggers/triggers.sqf"
+],
+"mcc/general_scripts/triggers/triggers_execute.sqf": [
+"mcc/general_scripts/triggers/triggers.sqf"
+],
+"mcc/general_scripts/unitmanage/parastart.sqf": [
+"mcc/general_scripts/unitmanage/paradrop.sqf"
+],
+"mcc/general_scripts/unitmanage/backtoplayer.sqf": [
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/rts/fnc/fn_rtstakecontrol.sqf"
+],
+"MCC_fnc_highCommand": [
+"mcc/general_scripts/unitmanage/um.sqf",
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"BIS_fnc_liveFeed": [
+"mcc/general_scripts/unitmanage/umbroadcast.sqf"
+],
+"BIS_fnc_liveFeedTerminate": [
+"mcc/general_scripts/unitmanage/umbroadcast.sqf"
+],
+"MCC_fnc_compHudEVH": [
+"mcc/hud/fnc/fn_initcompasshud.sqf"
+],
+"mcc/interaction/data/iconbleeding.paa": [
+"mcc/hud/fnc/fn_inithud.sqf",
+"mcc/interaction/fnc/fn_interactman.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactself.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"MCC_fnc_NameTagsEVH": [
+"mcc/hud/fnc/fn_inithud.sqf"
+],
+"mcc_fnc_supressioneffects": [
+"mcc/hud/fnc/fn_supressioninit.sqf"
+],
+"mcc_fnc_supressionfiredeh": [
+"mcc/hud/fnc/fn_supressioninit.sqf"
+],
+"mcc_fnc_interactdoorgrenadethrow": [
+"mcc/interaction/fnc/fn_ace_addgrenadeschildren.sqf",
+"mcc/interaction/fnc/fn_doormenuclicked.sqf"
+],
+"mcc_fnc_door_cam_handler": [
+"mcc/interaction/fnc/fn_doorcamera.sqf",
+"mcc/interaction/fnc/fn_doormenuclicked.sqf"
+],
+"mcc_fnc_doormenuclicked": [
+"mcc/interaction/fnc/fn_doormenuclicked.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc_fnc_interactionsbuildinteractionui": [
+"mcc/interaction/fnc/fn_doormenuclicked.sqf",
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactied.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_interactman.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactself.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf",
+"mcc/interaction/fnc/fn_interactutility.sqf"
+],
+"mcc_fnc_construction": [
+"mcc/interaction/fnc/fn_initconstract.sqf"
+],
+"mcc_fnc_radiosupport": [
+"mcc/interaction/fnc/fn_initconstract.sqf",
+"mcc/interaction/fnc/fn_interactionmarkercreate.sqf"
+],
+"mcc/interaction/data/lock.paa": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc/interaction/data/grenade.paa": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc/interaction/data/unlock.paa": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"data/tacticalprobe.paa": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc_fnc_doorhandle": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_dragobject": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactutility.sqf",
+"mcc/medic/fnc/fn_medicdragcarry.sqf"
+],
+"mcc_fnc_resupply": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactutility.sqf"
+],
+"mcc_fnc_logisticscargogetmass": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/logistics/fnc/fn_cargoloadmodule.sqf",
+"mcc/logistics/fnc/fn_logisticscargoload.sqf",
+"mcc/logistics/fnc/fn_logisticscargounload.sqf"
+],
+"mcc_fnc_logisticscargoload": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/logistics/fnc/fn_cargoloadmodule.sqf"
+],
+"BIS_fnc_netId": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc_fnc_logisticswithdrawbox": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"MCC_fnc_vehicleMenuClicked": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interactself.sqf"
+],
+"mcc_fnc_vehicletirechange": [
+"mcc/interaction/fnc/fn_interactdoor.sqf"
+],
+"mcc_fnc_logisticscargoinit": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"CP_GEARPANEL": [
+"mcc/interaction/fnc/fn_interactdoor.sqf",
+"mcc/roleselection/scripts/switchdialog.sqf"
+],
+"mcc_fnc_bdstart": [
+"mcc/interaction/fnc/fn_interactied.sqf"
+],
+"MCC_fnc_IEDMenuClicked": [
+"mcc/interaction/fnc/fn_interactied.sqf"
+],
+"mcc_fnc_getsurvivalplaceholders": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_interactobject.sqf",
+"mcc/interaction/fnc/fn_issurvivalobject.sqf",
+"mcc/interaction/fnc/fn_searchsurvivalobject.sqf"
+],
+"mcc_fnc_canhaltai": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_interactman.sqf"
+],
+"mcc_fnc_dohaltai": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_interactman.sqf"
+],
+"mcc_fnc_interactied": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_interactutility": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_interactdoor": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_interactman": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_interactobject": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/interaction/fnc/fn_searchsurvivalobject.sqf"
+],
+"mcc_fnc_requestdropoff": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"BIS_fnc_filterString": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/medic/fnc/fn_loadwounded.sqf",
+"mcc/medic/fnc/fn_unloadwounded.sqf"
+],
+"mcc_fnc_attachpod": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_openartillery": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"MCC_fnc_vehicleCargoMenuClicked": [
+"mcc/interaction/fnc/fn_interaction.sqf"
+],
+"mcc_fnc_pylonschange": [
+"mcc/interaction/fnc/fn_interaction.sqf",
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"MCC_INTERACTION_MENU": [
+"mcc/interaction/fnc/fn_interactionsbuildinteractionui.sqf"
+],
+"mcc_fnc_interactmanclicked": [
+"mcc/interaction/fnc/fn_interactman.sqf",
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"mcc/medic/dialogs/data/soldier_head.paa": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc/medic/dialogs/data/soldier_body.paa": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc/medic/dialogs/data/soldier_legs.paa": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc/medic/dialogs/data/soldier_hands.paa": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_pickkit": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"mcc_fnc_medicuseitem": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_medicdragcarry": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"mcc_fnc_loadwounded": [
+"mcc/interaction/fnc/fn_interactmanclicked.sqf"
+],
+"mcc_fnc_inidbget": [
+"mcc/interaction/fnc/fn_interactobject.sqf"
+],
+"mcc_fnc_interactselfclicked": [
+"mcc/interaction/fnc/fn_interactself.sqf",
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_acedropammobox": [
+"mcc/interaction/fnc/fn_interactself.sqf"
+],
+"mcc_fnc_interactionmarkercreate": [
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_magazinerepack": [
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_attachitemuniform": [
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"MCC_fnc_ordnanceDetonatePlayer": [
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_attachitemweapons": [
+"mcc/interaction/fnc/fn_interactselfclicked.sqf"
+],
+"mcc_fnc_breakdown": [
+"mcc/interaction/fnc/fn_interactutility.sqf"
+],
+"mcc_fnc_logisticsboxdeposit": [
+"mcc/interaction/fnc/fn_interactutility.sqf"
+],
+"say3D": [
+"mcc/lhd/fnc/fn_arrestinggear.sqf"
+],
+"BIS_fnc_Destroyer01PosUpdate": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"BIS_fnc_Carrier01PosUpdate": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"BIS_fnc_Destroyer01Init": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"BIS_fnc_BoatRack01Init": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"BIS_fnc_Carrier01Init": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+", ": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf"
+],
+"CUP_fnc_detachFromShip": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf"
+],
+"addAction": [
+"mcc/lhd/fnc/fn_lhdspawn.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf"
+],
+"mcc_fnc_vehiclespawnerbuildcosttable": [
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinitdialog.sqf"
+],
+"mcc_fnc_lhdspawnvehicle": [
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf",
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf"
+],
+"MCC_LHDSpawn": [
+"mcc/lhd/fnc/fn_lhdspawnmenuinit.sqf"
+],
+"mcc_fnc_formatnumber": [
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf",
+"mcc/rts/fnc/fn_mainboxinit.sqf",
+"mcc/rts/fnc/fn_vehiclespawner.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinitdialog.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"BIS_fnc_boundingBoxDimensions": [
+"mcc/lhd/fnc/fn_lhdspawnvehicle.sqf"
+],
+"mcc_fnc_login": [
+"mcc/login/fnc/fn_logindialog.sqf"
+],
+"mcc_fnc_curatordrawline": [
+"mcc/logistics/fnc/fn_cargoloadmodule.sqf"
+],
+"MCC_LOGISTICS_LOAD_TRUCK": [
+"mcc/logistics/fnc/fn_loadtruckui.sqf"
+],
+"../defines.sqf": [
+"mcc/logistics/fnc/fn_logisticsboxdeposit.sqf",
+"mcc/logistics/fnc/fn_logisticswithdrawbox.sqf",
+"mcc/logistics/fnc/fn_logtruckadd.sqf",
+"mcc/logistics/fnc/fn_logtruckrefresh.sqf"
+],
+"MCC_logisticsCargo": [
+"mcc/logistics/fnc/fn_logisticscargoinit.sqf"
+],
+"BIS_fnc_objectFromNetId": [
+"mcc/logistics/fnc/fn_logisticscargoload.sqf"
+],
+"mcc_fnc_logtruckrefresh": [
+"mcc/logistics/fnc/fn_logtruckadd.sqf",
+"mcc/logistics/scripts/mcc_logisticsloadtruck_init.sqf"
+],
+"mcc_fnc_logtruckadd": [
+"mcc/logistics/fnc/fn_logtruckrefresh.sqf",
+"mcc/logistics/scripts/mcc_logisticsloadtruck_init.sqf"
+],
+"mcc_fnc_wakeup": [
+"mcc/medic/fnc/fn_aiheal.sqf",
+"mcc/medic/fnc/fn_unconscious.sqf"
+],
+"MCC_fnc_medicChangeGear": [
+"mcc/medic/fnc/fn_initmedic.sqf"
+],
+"mcc_fnc_handledamage": [
+"mcc/medic/fnc/fn_initmedicxeh.sqf"
+],
+"mcc_fnc_mediceffects": [
+"mcc/medic/fnc/fn_initmedicxeh.sqf"
+],
+"mcc_fnc_initmedic": [
+"mcc/medic/fnc/fn_initmedicxeh.sqf"
+],
+"BIS_fnc_bloodEffect": [
+"mcc/medic/fnc/fn_mediceffects.sqf",
+"mcc/survive/fnc/fn_foodwaterconsumption.sqf"
+],
+"mcc_fnc_aiheal": [
+"mcc/medic/fnc/fn_mediceffects.sqf"
+],
+"mcc_fnc_medicprogressbar": [
+"mcc/medic/fnc/fn_medicuseitem.sqf"
+],
+"switchMove": [
+"mcc/medic/fnc/fn_unconscious.sqf"
+],
+"BIS_fnc_ambientAnimCombat": [
+"mcc/missionwizard/fnc/fn_buildroadblock.sqf"
+],
+"mcc_fnc_campaigngetborders": [
+"mcc/missionwizard/fnc/fn_campaigngetborders.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf"
+],
+"mcc_fnc_campaigngetnearesttile": [
+"mcc/missionwizard/fnc/fn_campaigngetborders.sqf",
+"mcc/missionwizard/fnc/fn_campaigngetnearesttile.sqf",
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_campaignspawnaiinit.sqf"
+],
+"mcc_fnc_findmarkers": [
+"mcc/missionwizard/fnc/fn_campaigngetnearesttile.sqf",
+"mcc/missionwizard/fnc/fn_campaignpaintmarkers.sqf"
+],
+"mcc_fnc_mwbuildlocations": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/survive/fnc/fn_spawncratesinhouses.sqf"
+],
+"BIS_fnc_randomPos": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/missionwizard/fnc/fn_mwfindmissioncenter.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"mcc_fnc_campaigninitmap": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf"
+],
+"mcc_fnc_campaignpaintmarkers": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/fnc/fn_customtasks.sqf"
+],
+"mcc_fnc_campaignspawnaiinit": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf"
+],
+"mcc_fnc_mwinitmission": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf"
+],
+"mcc_fnc_enemycas": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf"
+],
+"mcc_fnc_missiondone": [
+"mcc/missionwizard/fnc/fn_campaigninit.sqf"
+],
+"BIS_fnc_taskChildren": [
+"mcc/missionwizard/fnc/fn_customtasks.sqf"
+],
+"BIS_fnc_enemySides": [
+"mcc/missionwizard/fnc/fn_daycycle.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf",
+"mcc/undercover/fnc/fn_undercoverneartargets.sqf"
+],
+"mcc_fnc_mwattackbase": [
+"mcc/missionwizard/fnc/fn_daycycle.sqf"
+],
+"addRating": [
+"mcc/missionwizard/fnc/fn_missiondone.sqf"
+],
+"MCC_fnc_tranzEffect": [
+"mcc/missionwizard/fnc/fn_moviemaker.sqf"
+],
+"mcc_fnc_playbriefings": [
+"mcc/missionwizard/fnc/fn_moviemaker.sqf"
+],
+"mcc_fnc_paratroops": [
+"mcc/missionwizard/fnc/fn_mwattackbase.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"mcc_fnc_halt": [
+"mcc/missionwizard/fnc/fn_mwcreatetask.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/scripts/missionwizardinit.sqf"
+],
+"MCC_fnc_MWCreateTaskOriginal": [
+"mcc/missionwizard/fnc/fn_mwcreatetask.sqf"
+],
+"mcc_fnc_mwfindmissioncenter": [
+"mcc/missionwizard/fnc/fn_mwfindmissioncenter.sqf",
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwfindbuildingpos": [
+"mcc/missionwizard/fnc/fn_mwfindobjectivepos.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf"
+],
+"mcc_fnc_mwfindobjectivepos": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwgetstartlocation": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_buildrandomcomposition": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf"
+],
+"bis_fnc_taskDefend": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/pv_handling/mcc_pv_handler.sqf",
+"mcc/rts/fnc/fn_rtsscanresources.sqf"
+],
+"mcc_fnc_mwcreatetask": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf"
+],
+"mcc_fnc_populateobjective": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"bis_fnc_halt": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwobjectivedestroy": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwobjectivehvt": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwobjectiveintel": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwobjectiveclear": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_mwobjectivedisable": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_makebriefing": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf",
+"mcc/pop_menu/briefing.sqf"
+],
+"playSound": [
+"mcc/missionwizard/fnc/fn_mwinitmission.sqf"
+],
+"mcc_fnc_hideterrainobjectsarea": [
+"mcc/missionwizard/fnc/fn_mwobjectiveclear.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedestroy.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivedisable.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf",
+"mcc/missionwizard/fnc/fn_mwobjectiveintel.sqf"
+],
+"%mcc/general_scripts/hostages/create_hostage.sqf": [
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf"
+],
+"mcc/general_scripts/hostages/create_hostage.sqf": [
+"mcc/missionwizard/fnc/fn_mwobjectivehvt.sqf"
+],
+"bis_fnc_position": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"bis_fnc_mapSize": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"bis_fnc_colorCOnfigToRGBA": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"MCC_fnc_isUnitInBuilsing": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"mcc_fnc_moviemaker": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"BIS_fnc_colorRGBAtoHTML": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"mcc_fnc_mwmaptooltip": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"MCC_fnc_MWMapOpen_draw": [
+"mcc/missionwizard/fnc/fn_mwopenbriefing.sqf"
+],
+"mcc_fnc_dirtostring": [
+"mcc/missionwizard/fnc/fn_mwreinforcement.sqf"
+],
+"mcc_fnc_mwspawninzone": [
+"mcc/missionwizard/fnc/fn_mwspawninfantry.sqf",
+"mcc/missionwizard/fnc/fn_mwspawnvehicles.sqf"
+],
+"mcc_fnc_mwspawnstatic": [
+"mcc/missionwizard/fnc/fn_mwspawnstatic.sqf",
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_buildroadblock": [
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc_fnc_mwreinforcement": [
+"mcc/missionwizard/fnc/fn_populateobjective.sqf"
+],
+"mcc/general_scripts/delete/undo.sqf": [
+"mcc/pop_menu/3rd_placer.sqf"
+],
+"mcc/pop_menu/mcc_make_array_markers.sqf": [
+"mcc/pop_menu/mcc_init_menu.sqf"
+],
+"mcc/pop_menu/mcc_make_array_obj.sqf": [
+"mcc/pop_menu/mcc_init_menu.sqf"
+],
+"mcc/pop_menu/mcc_make_array_weaponsnoneace.sqf": [
+"mcc/pop_menu/mcc_init_menu.sqf"
+],
+"mcc/general_scripts/time.sqf": [
+"mcc/pop_menu/mission_settings.sqf"
+],
+"BIS_fnc_sunriseSunsetTime": [
+"mcc/pop_menu/mission_settings.sqf"
+],
+"BIS_fnc_timeToString": [
+"mcc/pop_menu/mission_settings.sqf"
+],
+"bis_fnc_taskSetState": [
+"mcc/pop_menu/tasks_req.sqf"
+],
+"mcc_fnc_maketask": [
+"mcc/pop_menu/tasks_req.sqf"
+],
+"mcc/pop_menu/simple_spawn.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc/pop_menu/fps_benchmark.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc/general_scripts/unitmanage/hc_server.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc/general_scripts/boxgen/box_spawn.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc/general_scripts/convoy/place_convoy.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc/general_scripts/convoy/start_convoy_execute.sqf": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"MCC_fnc_simpleSpawn": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"MCC_fnc_boxGenerator": [
+"mcc/pv_handling/mcc_extras_pv_handler.sqf"
+],
+"mcc_fnc_reinforcement": [
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"BIS_fnc_PosToGrid": [
+"mcc/pv_handling/mcc_pv_handler.sqf"
+],
+"mcc_fnc_vonradio": [
+"mcc/radio/fnc/fn_settingsradio.sqf",
+"mcc/settings/radiosettings.sqf"
+],
+"mcc_fnc_vonradiopressed": [
+"mcc/radio/fnc/fn_vonradio.sqf"
+],
+"mcc_fnc_vonradiofindchannel": [
+"mcc/radio/fnc/fn_vonradiopressed.sqf"
+],
+"BIS_fnc_endMission": [
+"mcc/radio/fnc/fn_vonradiopressed.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_vonradiobroadcast": [
+"mcc/radio/fnc/fn_vonradiopressed.sqf"
+],
+"mcc_fnc_roadnetworkfind": [
+"mcc/roads/fnc/fn_roadnetworkfind.sqf"
+],
+"mcc_fnc_additem": [
+"mcc/roleselection/fnc/fn_additem.sqf",
+"mcc/roleselection/fnc/fn_assigngear.sqf",
+"mcc/roleselection/fnc/fn_gearai.sqf"
+],
+"mcc_fnc_addweapon": [
+"mcc/roleselection/fnc/fn_addweapon.sqf",
+"mcc/roleselection/fnc/fn_assigngear.sqf",
+"mcc/roleselection/fnc/fn_gearai.sqf"
+],
+"lockDriver": [
+"mcc/roleselection/fnc/fn_alloweddrivers.sqf"
+],
+"BIS_fnc_setUnitInsignia": [
+"mcc/roleselection/fnc/fn_assigngear.sqf",
+"mcc/roleselection/fnc/fn_rsgearbuttonclicked.sqf"
+],
+"mcc_fnc_assigngear": [
+"mcc/roleselection/fnc/fn_assigngear.sqf",
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc_fnc_medicarea": [
+"mcc/roleselection/fnc/fn_buildspawnpoint.sqf"
+],
+"mcc_fnc_getgroupid": [
+"mcc/roleselection/fnc/fn_getgroupid.sqf"
+],
+"mcc_fnc_setvalue": [
+"mcc/roleselection/fnc/fn_getvariable.sqf",
+"mcc/roleselection/fnc/fn_setvalue.sqf"
+],
+"BIS_fnc_objectSide": [
+"mcc/roleselection/fnc/fn_handlekilled.sqf",
+"mcc/ui/rscommon/rscattributeowners.sqf"
+],
+"mcc_fnc_unlock": [
+"mcc/roleselection/fnc/fn_handlerating.sqf"
+],
+"mcc_fnc_setgear": [
+"mcc/roleselection/fnc/fn_roleclicked.sqf",
+"mcc/roleselection/fnc/fn_rsgearbuttonclicked.sqf",
+"mcc/roleselection/fnc/fn_rssquadcreate.sqf",
+"mcc/roleselection/fnc/fn_rssquadjoin.sqf",
+"mcc/roleselection/fnc/fn_rsunitselectedclicked.sqf",
+"mcc/roleselection/scripts/player_init.sqf"
+],
+"mcc_fnc_playerstats": [
+"mcc/roleselection/fnc/fn_roleclicked.sqf",
+"mcc/roleselection/fnc/fn_setgear.sqf",
+"mcc/roleselection/scripts/gearpanel_init.sqf"
+],
+"mcc_fnc_rsgearbuttonclicked": [
+"mcc/roleselection/fnc/fn_roleclicked.sqf"
+],
+"MCC_fnc_RSbuildGearButtons": [
+"mcc/roleselection/fnc/fn_roleclicked.sqf",
+"mcc/roleselection/fnc/fn_rsgearbuttonclicked.sqf"
+],
+"MCC_fnc_RSItemSelected": [
+"mcc/roleselection/fnc/fn_rsgearbuttonclicked.sqf"
+],
+"MCC_fnc_RSWeaponAttachmentSelected": [
+"mcc/roleselection/fnc/fn_rsgearbuttonclicked.sqf"
+],
+"mcc_fnc_setidctext": [
+"mcc/roleselection/fnc/fn_rssquadcreate.sqf",
+"mcc/roleselection/fnc/fn_rssquadrename.sqf",
+"mcc/roleselection/fnc/fn_rstakecommander.sqf",
+"mcc/roleselection/scripts/respawnpanel_cmd.sqf",
+"mcc/rts/fnc/fn_rtsaddartilleryammo.sqf",
+"mcc/rts/fnc/fn_rtsbuildingprogress.sqf",
+"mcc/rts/fnc/fn_rtsbuytickets.sqf",
+"mcc/rts/fnc/fn_rtscreategroup.sqf",
+"mcc/rts/fnc/fn_rtscreatemeds.sqf",
+"mcc/rts/fnc/fn_rtsevachelicopterbuy.sqf",
+"mcc/rts/fnc/fn_rtsloadresources.sqf",
+"mcc/rts/fnc/fn_rtsorderplacesatchel.sqf",
+"mcc/rts/fnc/fn_rtspopulatevehicle.sqf",
+"mcc/rts/fnc/fn_rtstakecontrol.sqf",
+"mcc/rts/fnc/fn_rtstradeforfood.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesadvanced.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesbasic.sqf"
+],
+"mcc_fnc_assignchannelserver": [
+"mcc/roleselection/fnc/fn_rstakecommander.sqf"
+],
+"mcc_fnc_vote": [
+"mcc/roleselection/fnc/fn_rstakecommander.sqf"
+],
+"mcc_fnc_rsunitselectedclicked": [
+"mcc/roleselection/fnc/fn_rsunitselected.sqf"
+],
+"%mcc/general_scripts/mcc_spawntoposition.sqf": [
+"mcc/roleselection/fnc/fn_rsunitselectedclicked.sqf",
+"mcc/ui/fnc/fn_cbakeybinds.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"mcc/roleselection/data/officer.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/ar.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/rifleman.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/at.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/corpsman.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/marksman.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/specialist.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/crew.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/data/pilot.paa": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc/roleselection/scripts/switchdialog.sqf": [
+"mcc/roleselection/fnc/fn_setgear.sqf"
+],
+"mcc_fnc_setgroupid": [
+"mcc/roleselection/fnc/fn_setgroupid.sqf"
+],
+"mcc_fnc_createcameraonplayer": [
+"mcc/roleselection/scripts/gearpanel_init.sqf"
+],
+"mcc_fnc_getactivesides": [
+"mcc/roleselection/scripts/gearpanel_init.sqf",
+"mcc/roleselection/scripts/respawnpanel_init.sqf",
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_roleclicked": [
+"mcc/roleselection/scripts/gearpanel_init.sqf"
+],
+"data/locked.paa": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"data/unlocked.paa": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc/roleselection/data/edit.paa": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"MCC_fnc_CPMapOpen_draw": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_rssquadjoin": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_rssquadlock": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_rssquadrename": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_rsunitselected": [
+"mcc/roleselection/scripts/respawnpanel_init.sqf"
+],
+"mcc_fnc_savecargobox": [
+"mcc/rts/fnc/fn_addvirtualitemcargo.sqf"
+],
+"mcc_fnc_addvirtualitemcargo": [
+"mcc/rts/fnc/fn_addvirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_addvirtualweaponcargo.sqf",
+"mcc/rts/fnc/fn_getvirtualitemcargo.sqf",
+"mcc/rts/fnc/fn_getvirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_getvirtualweaponcargo.sqf",
+"mcc/rts/fnc/fn_removevirtualitemcargo.sqf",
+"mcc/rts/fnc/fn_removevirtualmagazinecargo.sqf",
+"mcc/rts/fnc/fn_removevirtualweaponcargo.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_rtsupgrade": [
+"mcc/rts/fnc/fn_baseselected.sqf"
+],
+"mcc_fnc_baseactionentered": [
+"mcc/rts/fnc/fn_baseselected.sqf",
+"mcc/rts/fnc/fn_rtsbuilduicontainer.sqf"
+],
+"mcc_fnc_baseactionexit": [
+"mcc/rts/fnc/fn_baseselected.sqf",
+"mcc/rts/fnc/fn_rtsbuilduicontainer.sqf"
+],
+"mcc_fnc_getweaponcost": [
+"mcc/rts/fnc/fn_boxmakeweaponsarray.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerbuildcosttable.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_getvirtualweaponcargo": [
+"mcc/rts/fnc/fn_boxmakeweaponsarray.sqf"
+],
+"mcc_fnc_getvirtualitemcargo": [
+"mcc/rts/fnc/fn_boxmakeweaponsarray.sqf"
+],
+"mcc_fnc_getvirtualmagazinecargo": [
+"mcc/rts/fnc/fn_boxmakeweaponsarray.sqf"
+],
+"%mcc/rts/scripts/rtsmainbox_change.sqf": [
+"mcc/rts/fnc/fn_mainboxinit.sqf"
+],
+"mcc_fnc_boxmakeweaponsarray": [
+"mcc/rts/fnc/fn_mainboxinit.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"MCC_fnc_mainBoxInitRefreshBox": [
+"mcc/rts/fnc/fn_mainboxinit.sqf",
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"MCC_rtsMainBox": [
+"mcc/rts/fnc/fn_mainboxinit.sqf"
+],
+"mcc_fnc_rtsbuildingprogress": [
+"mcc/rts/fnc/fn_rtsbuytickets.sqf",
+"mcc/rts/fnc/fn_rtscreategroup.sqf",
+"mcc/rts/fnc/fn_rtscreatemeds.sqf",
+"mcc/rts/fnc/fn_rtsstartelectricity.sqf",
+"mcc/rts/fnc/fn_rtstradeforfood.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesadvanced.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesbasic.sqf"
+],
+"mcc_fnc_vehiclespawnerinitdialog": [
+"mcc/rts/fnc/fn_rtsbuyvehicle.sqf",
+"mcc/rts/fnc/fn_vehiclespawnerinit.sqf"
+],
+"mcc_fnc_rtsloadresources": [
+"mcc/rts/fnc/fn_rtsloadresourcesammo.sqf",
+"mcc/rts/fnc/fn_rtsloadresourcesfuel.sqf",
+"mcc/rts/fnc/fn_rtsloadresourcessupply.sqf"
+],
+"BIS_fnc_returnParents": [
+"mcc/rts/fnc/fn_rtsrespawnunits.sqf"
+],
+"mcc_fnc_rtsscanresources": [
+"mcc/rts/fnc/fn_rtsscanresourcescancel.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesadvanced.sqf",
+"mcc/rts/fnc/missions/fn_rtsscanresourcesbasic.sqf"
+],
+"mcc_fnc_getvehiclecost": [
+"mcc/rts/fnc/fn_vehiclespawnerbuildcosttable.sqf"
+],
+"MCC_VEHICLESPAWNER": [
+"mcc/rts/fnc/fn_vehiclespawnerinitdialog.sqf"
+],
+"mcc_fnc_baseopenconstmenu": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"bis_fnc_findNestedElement": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_rtsCreateUICtrl": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_highlightUICtrl": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_rtsSelectGroup": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_isGroupConsoleAllowed": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_basebuildborders": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_rtsDrawWpGroup": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"MCC_fnc_rtsMakeMarkers": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_buildingPositions": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"BIS_fnc_isBuildingEnterable": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf"
+],
+"mcc_fnc_daycycle": [
+"mcc/rts/scripts/mcc_logisticsbasebuild.sqf",
+"samplemissions/mcc_campaign.altis/init.sqf",
+"samplemissions/mcc_campaign.tanoa/init.sqf",
+"samplemissions/mcc_campaign_baf.abel/init.sqf",
+"samplemissions/mcc_campaign_baf.malden/init.sqf",
+"samplemissions/mcc_campaign_baf.noe/init.sqf",
+"samplemissions/mcc_campaign_csat.altis/init.sqf",
+"samplemissions/mcc_campaign_csat.tanoa/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_gu.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_gu.noe/init.sqf",
+"samplemissions/mcc_campaign_gu.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_gu.takistan/init.sqf",
+"samplemissions/mcc_campaign_rhs.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_gru.altis/init.sqf",
+"samplemissions/mcc_campaign_rhs_ru.altis/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_ru.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_ru.noe/init.sqf",
+"samplemissions/mcc_campaign_ru.sara_dbe1/init.sqf",
+"samplemissions/mcc_campaign_tk.takistan/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_summer/init.sqf",
+"samplemissions/mcc_campaign_usa.chernarus_winter/init.sqf",
+"samplemissions/mcc_campaign_usa.takistan/init.sqf",
+"samplemissions/mcc_campaign_usmc.chernarus/init.sqf",
+"samplemissions/mcc_campaign_usmc.sara_dbe1/init.sqf"
+],
+"mcc_fnc_addvirtualmagazinecargo": [
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_removevirtualmagazinecargo": [
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_addvirtualweaponcargo": [
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_removevirtualweaponcargo": [
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_removevirtualitemcargo": [
+"mcc/rts/scripts/rtsmainbox_change.sqf"
+],
+"mcc_fnc_ambientfireinit": [
+"mcc/settings/generalsettings.sqf"
+],
+"mcc_fnc_surviveitemclicked": [
+"mcc/survive/fnc/fn_handleinventoryclick.sqf"
+],
+"mcc_fnc_spawncratesinhouses": [
+"mcc/survive/fnc/fn_spawncratesinhousesinit.sqf"
+],
+"mcc_fnc_handleinventoryclick": [
+"mcc/survive/fnc/fn_survivalprogressbars.sqf"
+],
+"mcc_fnc_foodwaterconsumption": [
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_survivalprogressbars": [
+"mcc/survive/fnc/fn_surviveinit.sqf"
+],
+"mcc_fnc_interaction": [
+"mcc/ui/fnc/fn_cbainteractionkeybind.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"%mcc/dialogs/mcc_popupmenu.sqf": [
+"mcc/ui/fnc/fn_cbakeybinds.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"mcc_fnc_cbainteractionkeybind": [
+"mcc/ui/fnc/fn_cbakeybinds.sqf"
+],
+"mcc_fnc_interactself": [
+"mcc/ui/fnc/fn_cbakeybinds.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"mcc_fnc_vault": [
+"mcc/ui/fnc/fn_cbakeybinds.sqf",
+"mcc/ui/fnc/fn_keydown.sqf"
+],
+"../../script_component.hpp": [
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"BIS_fnc_garage": [
+"mcc/ui/fnc/fn_curatorinitline.sqf"
+],
+"mcc_fnc_help": [
+"mcc/ui/fnc/fn_help.sqf"
+],
+"mcc_fnc_undercoverneartargets": [
+"mcc/undercover/fnc/fn_undercoverinit.sqf"
+],
+"gaia_fnc_haslineofsight": [
+"mcc/undercover/fnc/fn_undercoverneartargets.sqf"
+],
+"a3/ui_f/hpp/definedikcodes.inc": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"a3/ui_f/hpp/defineresincldesign.inc": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"mcc_fnc_bisgarage": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_configExtremes": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_initVehicleCrew": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_vrHitpart": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_splitString": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_initVehicle": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_exportVehicle": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_saveVehicle": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_loadvehicle": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_textTiles": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"bis_fnc_getVehicleCustomization": [
+"mcc/vehicles/fnc/fn_bisgarage.sqf"
+],
+"BIS_fnc_getTurrets": [
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"mcc_fnc_vehicleservice": [
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"MCC_fnc_pylonUpdate": [
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"MCC_fnc_pylonApply": [
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"MCC_displayPylonChange": [
+"mcc/vehicles/fnc/fn_pylonschange.sqf"
+],
+"setDamage": [
+"mcc/vehicles/fnc/fn_vehicleservice.sqf"
+],
+"setFuel": [
+"mcc/vehicles/fnc/fn_vehicleservice.sqf"
+],
+"KEGsRscSpectate": [
+"spectator/specta.sqf"
+]
+}
