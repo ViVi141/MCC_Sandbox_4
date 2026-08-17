@@ -83,8 +83,11 @@ if (!_refresh) exitWith {};
 
  //If it's not first time refresh the menu
 if (!(missionNamespace getVariable ["mcc_firstTime",true])) then {
-	while {dialog} do {closeDialog 0};
-	nul=[nil,nil,nil,nil,0] execVM MCC_path + "mcc\Dialogs\mcc_PopupMenu.sqf";
+	//Only refresh when the GroupGen main dialog is open - don't close the Mission Wizard or other dialogs
+	if !(isNull (findDisplay 1000)) then {
+		while {dialog} do {closeDialog 0};
+		nul=[nil,nil,nil,nil,0] execVM MCC_path + "mcc\Dialogs\mcc_PopupMenu.sqf";
+	};
 } else {
 	missionNamespace setVariable ["mcc_firstTime",false];
 };

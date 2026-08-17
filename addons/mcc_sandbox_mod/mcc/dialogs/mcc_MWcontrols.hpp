@@ -76,7 +76,7 @@ class MCC_MWControls: MCC_RscControlsGroup
 		{
 			idc = FACTIONCOMBO;
 			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
-			onLBSelChanged = "mcc_sidename = (U_FACTIONS select (_this select 1)) select 1; mcc_faction = (U_FACTIONS select (_this select 1)) select 2; MCC_faction_index = _this select 1;";
+			onLBSelChanged = __EVAL("[0] execVM '"+MCCPATH+"mcc\pop_menu\mcc_guiTab1Change.sqf'");
 			onSetFocus = "((uiNamespace getVariable 'MCC_MWDialog') displayCtrl 0) ctrlSetText 'Who are we fighting here'";
 			onKillFocus = "((uiNamespace getVariable 'MCC_MWDialog') displayCtrl 0) ctrlSetText ''";
 
