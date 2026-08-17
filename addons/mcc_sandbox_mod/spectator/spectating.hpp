@@ -696,7 +696,7 @@ class KEGsRscSpectate {
 			type = 13;
 			idc = IDC_HELP;
 			x = SafeZoneX + BORDERXSIZE*3;y=SafeZoneY + BORDERSIZE*3; w = SafeZoneW-(2*BORDERXSIZE*3); h = SafeZoneH-(2*BORDERSIZE*2);
-			text = "Kegetys Spectating Script for ArmA 3<br/><br/>Click at the camera/target text at the top to open camera/target menus.<br/>Units on the map can be clicked to set the camera focus to them<br/><br/>Keyboard controls:<br/><br/>A/D - Previous/Next target<br/>1-4 - Direct camera change<br/>N - NV view: Toggle night vision/FLIR on/off<br/>N - Full map: Toggle marker text off/names/types<br/>T - Toggle unit tags on/off<br/>Y - Toggle unit combat awareness tags on/off<br/>F - Toggle AI menu filter on/off<br/>H - Toggle Map Markers Updates on/off<br/>M - Toggle map: minimap/full/off<br/>Numpad plus/minus - Increase/decrease full map marker size<br/>W,S,A,D,Q,Z keys - free camera movement<br/>Alt + W,S,A,D,Q,Z keys - increase speed free camera movement<br/>Ctrl + W,S,A,D keys - turbo speed free camera movement<br/>V - toggle Viewdistance 4x<br/>Alt + V - toggle Viewdistance up to 12km<br/>Ctrl + V - increase Viewdistance to 20km<br/>Tab - Toggle UI on/off<br/>Esc - Exit Spectator mode<br/><br/>Mouse controls:<br/><br/>Mousewheel - zoom in/out of units or map<br/>Alt + Mousewheel - increase speed free camera movement<br/>Ctrl + Mousewheel - turbo speed free camera movement<br/>Right button - Rotate camera (lock-on and free camera mode)<br/>Left button - Move camera<br/>Alt + Left and right button - change FOV<br/>Ctrl + Alt + Left and right button - reset FOV<br/><br/>Improvement modifications by Dwarden, ViperMaul, ShayGman, and Ollem</br>";
+			text = "$STR_MCC_HINT_SPECTATOR_HELP";
 			style = 2;
 			sizeEx = 0.025;
 			size = 0.025;
