@@ -114,7 +114,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 		{
 			idc = -1;
 			text =  __EVAL(MCCPATH +"data\IconAmmo.paa");
-			tooltip = "Ammo";
+			tooltip = "$STR_MCC_CONSOLE_AMMO";
 			colorText[] = { 0.9, 0, 0, 1 };
 
 			x = 0.368229 * safezoneW + safezoneX;
@@ -126,7 +126,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 		{
 			idc = -1;
 			text =  __EVAL(MCCPATH +"data\IconRepair.paa");
-			tooltip = "Materials";
+			tooltip = "$STR_MCC_CONSOLE_MATERIALS";
 			colorText[] = { 0, 0.5, 0.9, 1 };
 
 			x = 0.454167 * safezoneW + safezoneX;
@@ -138,7 +138,7 @@ class MCC_LOGISTICS_LOAD_TRUCK
 		{
 			idc = -1;
 			text =  __EVAL(MCCPATH +"data\IconFuel.paa");
-			tooltip = "Fuel";
+			tooltip = "$STR_MCC_CONSOLE_FUEL";
 			colorText[] = { 0, 0.9, 0.5, 1 };
 
 			x = 0.540104 * safezoneW + safezoneX;

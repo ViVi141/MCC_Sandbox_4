@@ -112,7 +112,7 @@ class mcc_consoleF2: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F2";
 	onButtonClick = __EVAL("[2] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleSwitchMenu.sqf'");
-	tooltip = "UAV Control";
+	tooltip = "$STR_MCC_CONSOLE_UAV_CONTROL";
 };
 class mcc_consoleF3: MCC_RscButton
 {
@@ -123,7 +123,7 @@ class mcc_consoleF3: MCC_RscButton
 	h = 0.0329871 * safezoneH;
 	text = "F3";
 	onButtonClick = __EVAL("[3] execVM '"+MCCPATH+"mcc\general_scripts\console\consoleSwitchMenu.sqf'");
-	tooltip = "AC-130 Control";
+	tooltip = "$STR_MCC_CONSOLE_AC130_CONTROL";
 };
 class mcc_consoleF4: MCC_RscButton
 {

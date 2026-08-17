@@ -59,7 +59,7 @@ class CP_GEARPANEL {
 				{
 					idc = -1;
 					text = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
-					tooltip = "Commander";
+					tooltip = "$STR_MCC_HINT_COMMANDER";
 					x = 0.00515628 * safezoneW;
 					y = 0.011 * safezoneH;
 					w = 0.04 * safezoneW;
@@ -80,7 +80,7 @@ class CP_GEARPANEL {
 				class commanderButton: CP_RscButtonMenu
 				{
 					idc = 919192;
-					text = "Take";
+					text = "$STR_MCC_HINT_TAKE";
 					style = 2;
 					action =  "0 spawn MCC_fnc_RSTakeCommander";
 					sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.4)";
@@ -96,7 +96,7 @@ class CP_GEARPANEL {
 					action = "endMission 'END1' ";
 
 					idc = 1006;
-					text = "Exit Game";
+					text = "$STR_MCC_HINT_EXIT_GAME";
 					x = 0.737343 * safezoneW;
 					y = 0.011 * safezoneH;
 					w = 0.0928125 * safezoneW;
@@ -261,7 +261,7 @@ class CP_GEARPANEL {
 						class MCC_Ammo: MCC_RscPicture
 						{
 							idc = 91;
-							tooltip = "Ammo";
+							tooltip = "$STR_MCC_CONSOLE_AMMO";
 							text =  __EVAL(MCCPATH +"data\IconAmmo.paa");
 							colorText[] = { 0.9, 0, 0, 1 };
 
@@ -273,7 +273,7 @@ class CP_GEARPANEL {
 						class MCC_Repair: MCC_RscPicture
 						{
 							idc = 92;
-							tooltip = "Materials";
+							tooltip = "$STR_MCC_CONSOLE_MATERIALS";
 							text = __EVAL(MCCPATH +"data\IconRepair.paa");
 							colorText[] = { 0, 0.5, 0.9, 1 };
 
@@ -285,7 +285,7 @@ class CP_GEARPANEL {
 						class MCC_Fuel: MCC_RscPicture
 						{
 							idc = 93;
-							tooltip = "Fuel";
+							tooltip = "$STR_MCC_CONSOLE_FUEL";
 							text = __EVAL(MCCPATH +"data\IconFuel.paa");
 							colorText[] = { 0, 0.9, 0.5, 1 };
 
@@ -297,7 +297,7 @@ class CP_GEARPANEL {
 						class MCC_FoodPic: MCC_RscPicture
 						{
 							idc = 94;
-							tooltip = "Food";
+							tooltip = "$STR_MCC_CONSOLE_FOOD";
 							text = __EVAL(MCCPATH +"data\IconFood.paa");
 							colorText[] = { 0.9, 0.5, 0, 1 };
 
@@ -309,7 +309,7 @@ class CP_GEARPANEL {
 						class MCC_MedPic: MCC_RscPicture
 						{
 							idc = 95;
-							tooltip = "Meds";
+							tooltip = "$STR_MCC_CONSOLE_MEDS";
 							text = __EVAL(MCCPATH +"data\IconMed.paa");
 							colorText[] = { 0, 0.9, 0.9, 1 };
 
@@ -321,7 +321,7 @@ class CP_GEARPANEL {
 						class MCC_ValorPic: MCC_RscPicture
 						{
 							idc = 96;
-							tooltip = "Credits";
+							tooltip = "$STR_MCC_CONSOLE_CREDITS";
 							text = __EVAL(MCCPATH +"mcc\rts\data\valorIcon.paa");
 							colorText[] = { 0.9, 0.9, 0, 1 };
 

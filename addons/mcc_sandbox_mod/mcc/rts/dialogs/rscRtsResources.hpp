@@ -74,7 +74,7 @@ class MCC_ResourcesControlsGroup: MCC_RscControlsGroupNoScrollbars
 			idc = -1;
 			colorText[] = { 0.9, 0, 0, 1 };
 			text =  __EVAL(MCCPATH +"data\IconAmmo.paa");
-			tooltip = "Ammo";
+			tooltip = "$STR_MCC_CONSOLE_AMMO";
 
 			x = 0.00515598 * safezoneW;
 			y = 0.011 * safezoneH;
@@ -86,7 +86,7 @@ class MCC_ResourcesControlsGroup: MCC_RscControlsGroupNoScrollbars
 			idc = -1;
 			colorText[] = { 0, 0.5, 0.9, 1 };
 			text = __EVAL(MCCPATH +"data\IconRepair.paa");
-			tooltip = "Materials";
+			tooltip = "$STR_MCC_CONSOLE_MATERIALS";
 
 			x = 0.00515598 * safezoneW;
 			y = 0.044 * safezoneH;
@@ -96,7 +96,7 @@ class MCC_ResourcesControlsGroup: MCC_RscControlsGroupNoScrollbars
 		class MCC_Fuel: MCC_RscPicture
 		{
 			idc = -1;
-			tooltip = "Fuel";
+			tooltip = "$STR_MCC_CONSOLE_FUEL";
 			text = __EVAL(MCCPATH +"data\IconFuel.paa");
 			colorText[] = { 0, 0.9, 0.5, 1 };
 
@@ -108,7 +108,7 @@ class MCC_ResourcesControlsGroup: MCC_RscControlsGroupNoScrollbars
 		class MCC_FoodPic: MCC_RscPicture
 		{
 			idc = -1;
-			tooltip = "Food";
+			tooltip = "$STR_MCC_CONSOLE_FOOD";
 			text = __EVAL(MCCPATH +"data\IconFood.paa");
 			colorText[] = { 0.9, 0.5, 0, 1 };
 
@@ -120,7 +120,7 @@ class MCC_ResourcesControlsGroup: MCC_RscControlsGroupNoScrollbars
 		class MCC_MedPic: MCC_RscPicture
 		{
 			idc = -1;
-			tooltip = "Meds";
+			tooltip = "$STR_MCC_CONSOLE_MEDS";
 			text = __EVAL(MCCPATH +"data\IconMed.paa");
 			colorText[] = { 0, 0.9, 0.9, 1 };
 

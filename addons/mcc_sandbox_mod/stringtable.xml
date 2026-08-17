@@ -6744,4 +6744,218 @@ Written by Bon_Inf*.</English>
             </Key>
         </Container>
     </Package>
+    <Package name="Hints6">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_COMMANDER">
+                <Original>Commander</Original>
+                <English>Commander</English>
+                <Chinesesimp>指挥官</Chinesesimp>
+                <Chinese>指揮官</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_TAKE">
+                <Original>Take</Original>
+                <English>Take</English>
+                <Chinesesimp>领取</Chinesesimp>
+                <Chinese>領取</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_EXIT_GAME">
+                <Original>Exit Game</Original>
+                <English>Exit Game</English>
+                <Chinesesimp>退出游戏</Chinesesimp>
+                <Chinese>退出遊戲</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CREATE_SQUAD">
+                <Original>Create Squad</Original>
+                <English>Create Squad</English>
+                <Chinesesimp>创建小队</Chinesesimp>
+                <Chinese>創建小隊</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PRIMARY">
+                <Original>Primary</Original>
+                <English>Primary</English>
+                <Chinesesimp>主武器</Chinesesimp>
+                <Chinese>主武器</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SECONDARY">
+                <Original>Secondary</Original>
+                <English>Secondary</English>
+                <Chinesesimp>副武器</Chinesesimp>
+                <Chinese>副武器</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_HANDGUNS">
+                <Original>Handguns</Original>
+                <English>Handguns</English>
+                <Chinesesimp>手枪</Chinesesimp>
+                <Chinese>手槍</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_MAGAZINES">
+                <Original>magazines</Original>
+                <English>magazines</English>
+                <Chinesesimp>弹匣</Chinesesimp>
+                <Chinese>彈匣</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_MISC_WEAPON">
+                <Original>Misc Weapon</Original>
+                <English>Misc Weapon</English>
+                <Chinesesimp>其他武器</Chinesesimp>
+                <Chinese>其他武器</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_WEAPON_ACCESSORIES">
+                <Original>Weapon Accessories</Original>
+                <English>Weapon Accessories</English>
+                <Chinesesimp>武器配件</Chinesesimp>
+                <Chinese>武器配件</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_UNIFORMS">
+                <Original>Uniforms</Original>
+                <English>Uniforms</English>
+                <Chinesesimp>制服</Chinesesimp>
+                <Chinese>制服</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_VESTS">
+                <Original>Vests</Original>
+                <English>Vests</English>
+                <Chinesesimp>防弹衣</Chinesesimp>
+                <Chinese>防彈衣</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_BACKPACKS">
+                <Original>Backpacks</Original>
+                <English>Backpacks</English>
+                <Chinesesimp>背包</Chinesesimp>
+                <Chinese>背包</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_HEADGEAR">
+                <Original>Headgear</Original>
+                <English>Headgear</English>
+                <Chinesesimp>头盔</Chinesesimp>
+                <Chinese>頭盔</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_ITEMS">
+                <Original>Items</Original>
+                <English>Items</English>
+                <Chinesesimp>物品</Chinesesimp>
+                <Chinese>物品</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_BUY">
+                <Original>Buy</Original>
+                <English>Buy</English>
+                <Chinesesimp>购买</Chinesesimp>
+                <Chinese>購買</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_SELL">
+                <Original>Sell</Original>
+                <English>Sell</English>
+                <Chinesesimp>出售</Chinesesimp>
+                <Chinese>出售</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_BUY_TO_BOX">
+                <Original>Buy to Box</Original>
+                <English>Buy to Box</English>
+                <Chinesesimp>购买至箱子</Chinesesimp>
+                <Chinese>購買至箱子</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_WATER">
+                <Original>Water</Original>
+                <English>Water</English>
+                <Chinesesimp>水</Chinesesimp>
+                <Chinese>水</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CAMERA">
+                <Original>Camera</Original>
+                <English>Camera</English>
+                <Chinesesimp>摄像机</Chinesesimp>
+                <Chinese>攝像機</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_TARGET">
+                <Original>Target</Original>
+                <English>Target</English>
+                <Chinesesimp>目标</Chinesesimp>
+                <Chinese>目標</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_UNKNOWN">
+                <Original>Unknown</Original>
+                <English>Unknown</English>
+                <Chinesesimp>未知</Chinesesimp>
+                <Chinese>未知</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_EMPTY">
+                <Original>Empty</Original>
+                <English>Empty</English>
+                <Chinesesimp>空</Chinesesimp>
+                <Chinese>空</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints7">
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_PLAYER">
+                <Original>Player</Original>
+                <English>Player</English>
+                <Chinesesimp>玩家</Chinesesimp>
+                <Chinese>玩家</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_HINT_CARGO">
+                <Original>Cargo</Original>
+                <English>Cargo</English>
+                <Chinesesimp>货物</Chinesesimp>
+                <Chinese>貨物</Chinese>
+            </Key>
+        </Container>
+    </Package>
+    <Package name="Hints8">
+        <Container name="item">
+            <Key ID="STR_MCC_CONSOLE_CREDITS">
+                <Original>Credits</Original>
+                <English>Credits</English>
+                <Chinesesimp>荣誉点</Chinesesimp>
+                <Chinese>榮譽點</Chinese>
+            </Key>
+        </Container>
+    </Package>
 </Project>

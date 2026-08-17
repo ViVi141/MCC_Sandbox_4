@@ -139,7 +139,7 @@ class HW_RscButton {
 	y = 0.475;
 	w = 0.2;
 	h = 0.05;
-	text = "Empty";
+	text = "$STR_MCC_HINT_EMPTY";
 	action = "";
 };
 

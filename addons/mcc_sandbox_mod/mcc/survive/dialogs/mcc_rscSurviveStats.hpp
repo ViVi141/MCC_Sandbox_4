@@ -34,7 +34,7 @@ class mcc_rscSurviveStats
 				class MCC_surviveStatsFoodText: MCC_RscText
 				{
 					idc = -1;
-					text = "Food";
+					text = "$STR_MCC_CONSOLE_FOOD";
 					sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
 
 					x = 0.0 * safezoneW;
@@ -67,7 +67,7 @@ class mcc_rscSurviveStats
 				class MCC_surviveStatsWaterText: MCC_RscText
 				{
 					idc = -1;
-					text = "Water";
+					text = "$STR_MCC_HINT_WATER";
 					sizeEx ="(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
 
 					x = 0.0 * safezoneW;

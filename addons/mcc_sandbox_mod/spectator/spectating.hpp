@@ -663,7 +663,7 @@ class KEGsRscSpectate {
 		class tCamera : KEGsRscActiveText {
 			idc = IDC_CAMERA;
 			x = SafeZoneX + BORDERXSIZE; y = SafeZoneY;	w = SafeZoneW-(2*BORDERXSIZE); h = BORDERSIZE;
-			text = "Camera";
+			text = "$STR_MCC_HINT_CAMERA";
 			style = 0;
 			sizeEx = 0.025;
 			color[] = {1.0, 1.0, 1.0, 0.9};
@@ -675,7 +675,7 @@ class KEGsRscSpectate {
 		};
 		class tTarget : tCamera {
 			idc = IDC_TARGET;
-			text = "Target";
+			text = "$STR_MCC_HINT_TARGET";
 			style = 1;
 			onMouseButtonUp = "[""ToggleTargetMenu"",0] call KEGs_fnc_spectateEvents";
 		};
@@ -684,7 +684,7 @@ class KEGsRscSpectate {
 		class tName : KEGsRscText {
 			idc = IDC_NAME;
 			x = SafeZoneX + BORDERXSIZE;y = SafeZoneY + SafeZoneH-BORDERSIZE; w = SafeZoneW-(BORDERXSIZE); h = BORDERSIZE;
-			text = "Unknown";
+			text = "$STR_MCC_HINT_UNKNOWN";
 			style = 0;
 			sizeEx = 0.025; //0.030
 			colorText[] = {1.0, 1.0, 1.0, 0.9};
