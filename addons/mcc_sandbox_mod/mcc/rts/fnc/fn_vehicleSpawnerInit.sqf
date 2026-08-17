@@ -25,8 +25,8 @@ if (_object isKindOf "mcc_sandbox_modulevehicleSpawner" || _object isKindOf "MCC
 
     //No synced Objects?
     if (count _syncedObjects <2) then {
-        _billboard = ["MCC_billboard", _object modelToWorld [0,5,0], 0] call MCC_fnc_createPooledVehicle;
-        _helipad = ["MCC_helipad", _object modelToWorld [0,15,0], 0] call MCC_fnc_createPooledVehicle;
+        _billboard = "Land_Noticeboard_F" createVehicle (_object modelToWorld [0,5,0]);
+        _helipad = "Land_HelipadEmpty_F" createVehicle (_object modelToWorld [0,15,0]);
     } else {
         _billboard = _syncedObjects select 0;
         _helipad = _syncedObjects select 1;

@@ -119,11 +119,11 @@ _missionItems pushBack _object;
 //Add effect using object pool
 switch (_scenario) do {
     case "stash": {
-    	_effect = ["Campfire_burning_F", getpos _object, 0] call MCC_fnc_createPooledVehicle;
+    	_effect = "Campfire_burning_F" createVehicle (getpos _object);
     };
 
     default {
-     	_effect = ["test_EmptyObjectForSmoke", getpos _object, 0] call MCC_fnc_createPooledVehicle;
+     	_effect = "test_EmptyObjectForSmoke" createVehicle (getpos _object);
     };
 };
 _effect setpos (getpos _object);

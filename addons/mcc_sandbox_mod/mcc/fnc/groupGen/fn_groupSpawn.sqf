@@ -17,13 +17,6 @@ if (!(isNull _pos) && !(isNull _unitsArray) && !(isNull _loc) && !(isNull _side)
 
 private ["_pos","_unitsArray","_side","_group","_loc","_isEmpty","_unitClass","_unitSim","_unit","_safePos","_waterSpawn","_cache"];
 
-// Check AI limits before spawning
-_maxAI = [MCC_aiOptimizationSettings, "maxAIUnits"] call MCC_fnc_getSetting;
-if (count MCC_aiUnits >= _maxAI) exitWith {
-	diag_log "MCC AI Optimizer: Maximum AI units reached, group spawn cancelled";
-	grpNull
-};
-
 _pos 		= _this select 0;
 _unitsArray = _this select 1;
 _loc 		= _this select 2;
@@ -89,10 +82,8 @@ if ( ( (isServer) && ( (_loc == 0) || !(MCC_isHC) ) ) || ( (MCC_isLocalHC) && (_
 			{
 				case "soldier":
 				{
-					_unit = [_unitClass, _pos, _group, 0.5] call MCC_fnc_smartAISpawn;
-					if (!isNull _unit) then {
-						{_x addCuratorEditableObjects [[_unit],false]} forEach allCurators;
-					};
+					_unit = _group createunit [_unitClass,_pos,[],0,"none"];
+					{_x addCuratorEditableObjects [[_unit],false]} forEach allCurators;
 				};
 				default
 				{
