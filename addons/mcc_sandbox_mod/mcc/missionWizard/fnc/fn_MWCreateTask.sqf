@@ -24,13 +24,13 @@ _this params [
 if (_task == "") then {
 	diag_log "MCC MW: Error - Task type is empty";
 	["MCC: Mission Wizard Error: Task type is empty"] spawn MCC_fnc_halt;
-	return [];
+	exitWith {[]};
 };
 
 // Validate position
 if (count _pos < 2) then {
 	diag_log "MCC MW: Error - Invalid position";
-	return [];
+	exitWith {[]};
 };
 
 //define contesting sides
@@ -279,7 +279,7 @@ _group = createGroup sideLogic;
 if (!isClass (configFile >> "CfgVehicles" >> "MCC_ModuleObjective_FCurator")) then {
 	diag_log "MCC MW: Error - MCC_ModuleObjective_FCurator class not found";
 	["MCC: Mission Wizard Error: Task module class not found"] spawn MCC_fnc_halt;
-	return [];
+	exitWith {[]};
 };
 
 if (_task == "clear_area") then {
@@ -289,7 +289,7 @@ if (_task == "clear_area") then {
     if (isNull _vehicle) then {
 		diag_log "MCC MW: Error - Failed to create task module";
 		["MCC: Mission Wizard Error: Failed to create task module"] spawn MCC_fnc_halt;
-		return [];
+		exitWith {[]};
 	};
 	
 	// 设置创建时间用于清理

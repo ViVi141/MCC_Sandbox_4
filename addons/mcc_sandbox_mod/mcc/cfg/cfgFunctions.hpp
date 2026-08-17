@@ -60,9 +60,9 @@ class general
     class makeBriefing {description = "STR_MCC_GENERAL_MAKEBRIEFING";};
     class handleAddaction {description = "STR_MCC_GENERAL_HANDLEADDACTION";};
     class ppEffects {description = "STR_MCC_GENERAL_PPEFFECTS";};
-    class SetPitchBankYaw {description = "STR_MCC_general_SetPitchBankYaw"};
-    class openArtillery {description = "STR_MCC_GENERAL_PPEFFECTS"};
-    class deleteBrush {description = "STR_MCC_GENERAL_PPEFFECTS"};
+    class SetPitchBankYaw {description = "STR_MCC_SETPITCHBANKYAW";};
+    class openArtillery {description = "STR_MCC_OPENARTILLERY";};
+    class deleteBrush {description = "STR_MCC_GENERAL_DELETEBRUSH";};
     class crewCount {description = "STR_MCC_GENERAL_CREWCOUNT";};
     class addVelocity {description = "STR_MCC_GENERAL_ADDVELOCITY";};
     class makeTask {description = "STR_MCC_GENERAL_MAKETASK";};

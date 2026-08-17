@@ -5008,6 +5008,12 @@
                 <Chinesesimp>请先创建区域</Chinesesimp>
                 <Chinese>請先創建區域</Chinese>
             </Key>
+            <Key ID="STR_MCC_GENERAL_DELETEBRUSH">
+                <Original>Delete Brush</Original>
+                <English>Delete Brush</English>
+                <Chinesesimp>删除笔刷</Chinesesimp>
+                <Chinese>刪除筆刷</Chinese>
+            </Key>
         </Container>
         <Container name="hint">
             <Key ID="STR_MCC_HINT_CRITICAL_FAIL_START_RUNING">

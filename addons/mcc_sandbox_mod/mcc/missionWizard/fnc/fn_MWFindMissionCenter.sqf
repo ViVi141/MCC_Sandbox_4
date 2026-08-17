@@ -76,7 +76,7 @@ if (_isBasedLocations) then {
 				_buildingsArray	= nearestObjects  [_newPos,["House","Ruins","Church","FuelStation","Strategic"],_minRadius];	//Let's find the buildings in the area
 				if ((count _buildingsArray > 0) && (!surfaceIsWater _newPos)) then
 					{
-						_buildingIndex = min [5, count _buildingsArray - 1];
+						_buildingIndex = (count _buildingsArray - 1) min 5;
 						if (_buildingIndex >= 0) then {
 							_newPos = getpos (_buildingsArray select _buildingIndex);
 							_centerFound = true;

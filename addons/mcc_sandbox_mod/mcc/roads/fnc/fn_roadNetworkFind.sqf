@@ -133,7 +133,7 @@ _results = [] call {
 	[ _explored, _ends,  _loops, _junctions, _availableRoads, _startTime]
 };
 
-_info =  format [ "explored : %1\n\n", count( _results select 0 ) ];
+_info =  format [ "explored : %1\n\n
 			   Ends : %2\n\n
 			   Loops : %3\n\n
 			   Junction : %4\n\n
