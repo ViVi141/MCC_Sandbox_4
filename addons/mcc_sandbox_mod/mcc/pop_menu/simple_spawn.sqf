@@ -172,9 +172,7 @@ if (!(isNull _dummy)) then {
     [[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 };
 						};
-if (!(isNull _dummy)) then {
-    [[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
-};
+[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 
 						//Curator
 						{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
@@ -199,13 +197,9 @@ if (!(isNull _dummy)) then {
 
 					if (_name != "") then
 					{
-if (!(isNull _dummy)) then {
-if (!(isNull _dummy)) then { [[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true]; };
+[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-if (!(isNull _dummy)) then {
 [[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
-};
-};
 
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
@@ -219,11 +213,9 @@ if (!(isNull _dummy)) then {
 					sleep 0.01;
 					if (_name != "") then
 					{
-if (!(isNull _dummy)) then { [[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true]; };
+[[netid _dummy,_dummy], _name] remoteExec ["MCC_fnc_setVehicleName", 0, true];
 					};
-if (!(isNull _dummy)) then {
-    [[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
-};
+[[netid _dummy,_dummy], _init] remoteExec ["MCC_fnc_setVehicleInit", 0, true];
 
 					//Curator
 					{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
