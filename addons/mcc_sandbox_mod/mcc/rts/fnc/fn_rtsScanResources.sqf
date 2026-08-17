@@ -94,7 +94,7 @@ _missionPos = [];
 
 //Find pos
 while {count _missionPos == 0} do {
-   _missionPos = [nil, ["water"], compile format ["_this distance %1 > 1500", _startLocation]] call BIS_fnc_randomPos;
+   _missionPos = [[_startLocation, 1500], ["water"], compile format ["_this distance %1 > 1500", _startLocation]] call BIS_fnc_randomPos;
 	_missionPos = _missionPos findEmptyPosition [0,100];
 	sleep 1;
 };

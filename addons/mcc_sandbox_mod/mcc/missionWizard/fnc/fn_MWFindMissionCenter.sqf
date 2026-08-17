@@ -61,7 +61,7 @@ if (_isBasedLocations) then {
 		_radius = _minRadius;
 		while {count _newPos <3 && time < _time} do
 		{
-			_newPos = [[[_pos,_radius]],["water"]] call BIS_fnc_randomPos;
+			_newPos = [[_pos,_radius],["water"]] call BIS_fnc_randomPos;
 			if (isNil "_newPos") then {_newPos = [0,0,0];};
 			_radius = _radius + 50;
 		};

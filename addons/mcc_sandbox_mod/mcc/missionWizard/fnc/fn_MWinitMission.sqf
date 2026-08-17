@@ -664,7 +664,7 @@ _objectives = [];
 					if (random 1 >0.5) then {
 						//Name the bomber.
 						_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
-						_pos = [[[_objPos,(_maxObjectivesDistance*0.7)]],["water"],{true}] call BIS_fnc_randomPos;
+						_pos = [[_objPos,(_maxObjectivesDistance*0.7)],["water"],{true}] call BIS_fnc_randomPos;
 
 						[_pos,_objectType,"large",floor (random 2),_sidePlayer] remoteExec ["MCC_fnc_SBSingle", 0, false];
 
@@ -688,7 +688,7 @@ _objectives = [];
 					if (random 1 >0.5) then {
 						//Name the AC.
 						_objectType = (_unitsArray call BIS_fnc_selectRandom) select 0;
-						_pos = [[[_objPos,(_maxObjectivesDistance*0.7)]],["water"],{true}] call BIS_fnc_randomPos;
+						_pos = [[_objPos,(_maxObjectivesDistance*0.7)],["water"],{true}] call BIS_fnc_randomPos;
 
 						[_pos,_objectType,_sidePlayer,"Armed Civilian",random 360] remoteExec ["MCC_fnc_ACSingle", 2];
 

@@ -85,13 +85,13 @@ for "_i" from 0 to _strength step 5 do {
 
 		//order attack
 		//TODO change to attack WP and use reinforcments
-		_pos = [[[_startLocation, 250]],[]] call BIS_fnc_randomPos;
+		_pos = [[_startLocation, 250],[]] call BIS_fnc_randomPos;
 		[1,_pos,[3,"NO CHANGE","NO CHANGE","FULL","AWARE","true", "",0],[_grp]] spawn MCC_fnc_manageWp;
 	};
 };
 
 //Add some reinforcments
 if (count _unitsArray > 0) then {
-	_pos = [[[_startLocation, 250]],[]] call BIS_fnc_randomPos;
+	_pos = [[_startLocation, 250],[]] call BIS_fnc_randomPos;
 	[_pos,_enemySide,(floor random 9),"","bisp","AWARE",_factionEnemy,nil] spawn MCC_fnc_paratroops;
 };
