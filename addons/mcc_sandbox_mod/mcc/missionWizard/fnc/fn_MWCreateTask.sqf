@@ -21,16 +21,16 @@ _this params [
 ];
 
 // Add error checking
-if (_task == "") then {
+if (_task == "") exitWith {
 	diag_log "MCC MW: Error - Task type is empty";
 	["MCC: Mission Wizard Error: Task type is empty"] spawn MCC_fnc_halt;
-	exitWith {[]};
+	[];
 };
 
 // Validate position
-if (count _pos < 2) then {
+if (count _pos < 2) exitWith {
 	diag_log "MCC MW: Error - Invalid position";
-	exitWith {[]};
+	[];
 };
 
 //define contesting sides
@@ -276,20 +276,20 @@ _missionName = _stringName;
 _group = createGroup sideLogic;
 
 // 检查任务模块类是否存在
-if (!isClass (configFile >> "CfgVehicles" >> "MCC_ModuleObjective_FCurator")) then {
+if (!isClass (configFile >> "CfgVehicles" >> "MCC_ModuleObjective_FCurator")) exitWith {
 	diag_log "MCC MW: Error - MCC_ModuleObjective_FCurator class not found";
 	["MCC: Mission Wizard Error: Task module class not found"] spawn MCC_fnc_halt;
-	exitWith {[]};
+	[];
 };
 
 if (_task == "clear_area") then {
     _vehicle = _group createunit ["MCC_ModuleObjective_FCurator", _pos,[],0.5,"NONE"];
     
     // 检查车辆是否成功创建
-    if (isNull _vehicle) then {
+    if (isNull _vehicle) exitWith {
 		diag_log "MCC MW: Error - Failed to create task module";
 		["MCC: Mission Wizard Error: Failed to create task module"] spawn MCC_fnc_halt;
-		exitWith {[]};
+		[];
 	};
 	
 	// 设置创建时间用于清理
