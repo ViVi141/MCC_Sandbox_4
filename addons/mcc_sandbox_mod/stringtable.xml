@@ -1783,7 +1783,7 @@
             <Key ID="STR_MCC_serverFPSTittle_text">
                 <Original>Server FPS:</Original>
                 <English>Server FPS:</English>
-                <Chinsesmp>服务器FPS：</Chinsesmp>
+                <Chinesesimp>服务器FPS：</Chinesesimp>
                 <Chinese>伺服器FPS：</Chinese>
             </Key>
         </container>
@@ -1800,7 +1800,7 @@
                 </Original>
                 <English>Once a trigger has been generated all the action done by MCC won't execute but will be saved
                     to the trigger until this button is pressed</English>
-                <Chinsesmp>一旦生成了触发器，MCC所做的所有操作都不会执行，但会保存到触发器，直到按下此按钮</Chinsesmp>
+                <Chinesesimp>一旦生成了触发器，MCC所做的所有操作都不会执行，但会保存到触发器，直到按下此按钮</Chinesesimp>
                 <Chinese>一旦生成了觸發器，MCC所做的所有操作都不會執行，但會保存到觸發器，直到按下此按鈕</Chinese>
             </Key>
             <Key ID="STR_MCC_cacheButton_text">
@@ -2360,10 +2360,10 @@
                 <Chinese>關閉</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_EMPTY">
-                <Original />
-                <English />
-                <Chinesesimp />
-                <Chinese />
+                <Original>None</Original>
+                <English>None</English>
+                <Chinesesimp>无</Chinesesimp>
+                <Chinese>無</Chinese>
             </Key>
             <Key ID="STR_MCC_LOGISTICS_X">
                 <Original>X</Original>
@@ -3669,48 +3669,13 @@
                 <Chinesesimp>行为:</Chinesesimp>
                 <Chinese>行為:</Chinese>
             </Key>
-            <Key ID="STR_MCC_AMMO_ICON">
-                <Original>\mcc_sandbox_mod\data\IconAmmo.paa</Original>
-                <English>\mcc_sandbox_mod\data\IconAmmo.paa</English>
-                <Chinesesimp>\mcc_sandbox_mod\data\IconAmmo.paa</Chinesesimp>
-                <Chinese>\mcc_sandbox_mod\data\IconAmmo.paa</Chinese>
-            </Key>
-            <Key ID="STR_MCC_AMMO_TOOLTIP">
-                <Original>Ammo</Original>
-                <English>Ammo</English>
-                <Chinesesimp>弹药</Chinesesimp>
-                <Chinese>彈藥</Chinese>
-            </Key>
-            <Key ID="STR_MCC_MATERIALS_ICON">
-                <Original>\mcc_sandbox_mod\data\IconRepair.paa</Original>
-                <English>\mcc_sandbox_mod\data\IconRepair.paa</English>
-                <Chinesesimp>\mcc_sandbox_mod\data\IconRepair.paa</Chinesesimp>
-                <Chinese>\mcc_sandbox_mod\data\IconRepair.paa</Chinese>
-            </Key>
-            <Key ID="STR_MCC_MATERIALS_TOOLTIP">
-                <Original>Materials</Original>
-                <English>Materials</English>
-                <Chinesesimp>材料</Chinesesimp>
-                <Chinese>材料</Chinese>
-            </Key>
-            <Key ID="STR_MCC_FUEL_ICON">
-                <Original>\mcc_sandbox_mod\data\IconFuel.paa</Original>
-                <English>\mcc_sandbox_mod\data\IconFuel.paa</English>
-                <Chinesesimp>\mcc_sandbox_mod\data\IconFuel.paa</Chinesesimp>
-                <Chinese>\mcc_sandbox_mod\data\IconFuel.paa</Chinese>
-            </Key>
-            <Key ID="STR_MCC_FUEL_TOOLTIP">
-                <Original>Fuel</Original>
-                <English>Fuel</English>
-                <Chinesesimp>燃料</Chinesesimp>
-                <Chinese>燃料</Chinese>
-            </Key>
-            <Key ID="STR_MCC_CREDITS_ICON">
-                <Original>\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa</Original>
-                <English>\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa</English>
-                <Chinesesimp>\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa</Chinesesimp>
-                <Chinese>\mcc_sandbox_mod\mcc\rts\data\valorIcon.paa</Chinese>
-            </Key>
+            
+            
+            
+            
+            
+            
+            
             <Key ID="STR_MCC_CREDITS_TOOLTIP">
                 <Original>Credits</Original>
                 <English>Credits</English>
@@ -3759,12 +3724,7 @@
                 <Chinesesimp>将此项添加到当前空投列表</Chinesesimp>
                 <Chinese>將此項添加到當前空投列表</Chinese>
             </Key>
-            <Key ID="STR_MCC_CLEAR">
-                <Original>Clear</Original>
-                <English>Clear</English>
-                <Chinesesimp>清除</Chinesesimp>
-                <Chinese>清除</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_CLEAR_TOOLTIP">
                 <Original>Clear the current airdrop list</Original>
                 <English>Clear the current airdrop list</English>
@@ -3987,12 +3947,7 @@
                 <Chinesesimp>阴天:</Chinesesimp>
                 <Chinese>陰天:</Chinese>
             </Key>
-            <Key ID="STR_MCC_TIME">
-                <Original>Time:</Original>
-                <English>Time:</English>
-                <Chinesesimp>时间:</Chinesesimp>
-                <Chinese>時間:</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_CONFIRM">
                 <Original>Confirm</Original>
                 <English>Confirm</English>
@@ -4029,12 +3984,7 @@
                 <Chinesesimp>激活:</Chinesesimp>
                 <Chinese>激活:</Chinese>
             </Key>
-            <Key ID="STR_MCC_CONDITION">
-                <Original>Condition:</Original>
-                <English>Condition:</English>
-                <Chinesesimp>条件:</Chinesesimp>
-                <Chinese>條件:</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_ON_DEA">
                 <Original>On Dea:</Original>
                 <English>On Dea:</English>
@@ -4233,12 +4183,7 @@
                 <Chinesesimp>插入:</Chinesesimp>
                 <Chinese>插入:</Chinese>
             </Key>
-            <Key ID="STR_MCC_START">
-                <Original>Start:</Original>
-                <English>Start:</English>
-                <Chinesesimp>开始:</Chinesesimp>
-                <Chinese>開始:</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_FOB_TOOLTIP">
                 <Original>If role selection is enabled, this position can be set as FOB (optional respawn location)</Original>
                 <English>If role selection is enabled, this position can be set as FOB (optional respawn location)</English>
@@ -4359,12 +4304,7 @@
                 <Chinesesimp>已禁用</Chinesesimp>
                 <Chinese>已禁用</Chinese>
             </Key>
-            <Key ID="STR_MCC_GIVE_TO_PLAYER_TOOLTIP">
-                <Original>Give the selected group to player control via M-Tac MCC handheld console</Original>
-                <English>Give the selected group to player control via M-Tac MCC handheld console</English>
-                <Chinesesimp>通过M-Tac MCC手持控制台将所选组交给玩家控制</Chinesesimp>
-                <Chinese>通過M-Tac MCC手持控制台將所選組交給玩家控制</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_CACHE_TOOLTIP">
                 <Original>Give the selected group to cache system</Original>
                 <English>Give the selected group to cache system</English>
@@ -4455,12 +4395,7 @@
                 <Chinesesimp>草地:</Chinesesimp>
                 <Chinese>草地:</Chinese>
             </Key>
-            <Key ID="STR_MCC_CLOSE">
-                <Original>关闭</Original>
-                <English>Close</English>
-                <Chinesesimp>关闭</Chinesesimp>
-                <Chinese>關閉</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_3D_LOAD_TOOLTIP">
                 <Original>将组合从配置文件名称空间加载到所选车辆的初始化行-首先从上述列表中选择一个插槽</Original>
                 <English>Load composition from config file namespace to selected vehicle's initialization line - first select a slot from the list above</English>
@@ -4617,12 +4552,7 @@
                 <Chinesesimp>航点:</Chinesesimp>
                 <Chinese>航點:</Chinese>
             </Key>
-            <Key ID="STR_MCC_ADD">
-                <Original>ADD</Original>
-                <English>ADD</English>
-                <Chinesesimp>添加</Chinesesimp>
-                <Chinese>添加</Chinese>
-            </Key>
+            
             <Key ID="STR_MCC_ADD_WAYPOINT_TOOLTIP">
                 <Original>Add a waypoint to all selected groups</Original>
                 <English>Add a waypoint to all selected groups</English>
@@ -4743,12 +4673,7 @@
                 <Chinesesimp>检测旧的createVehicle语法</Chinesesimp>
                 <Chinese>檢測舊的createVehicle語法</Chinese>
             </Key>
-            <Key ID="STR_MCC_ACTIVATE">
-                <Original>激活:</Original>
-                <English>Activate:</English>
-                <Chinesesimp>激活:</Chinesesimp>
-                <Chinese>激活:</Chinese>
-            </Key>
+            
         </Container>
     </Package>
     <Package name="HardcodedTextTranslations">
