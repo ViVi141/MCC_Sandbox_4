@@ -449,9 +449,7 @@ if (_store) then {
 	_dummy setObjectTexture [0,"\A3\boat_f\Boat_Armed_01\data\ui\Boat_Armed_01_minigun.paa"];
 	_dummy setObjectTexture [1,'#(rgb,8,8,3)color(0.5,0.5,0.5,0.1)'];
 	_dummy setObjectTexture [2,'#(rgb,8,8,3)color(0.5,0.5,0.5,0.1)'];
-if (!(isNull _dummy)) then {
-    [_dummy, ["<t color=\"#ff1111\">Ship Control</t>", format ["[0,%1,2] spawn MCC_fnc_LHDspawnMenuInit", _ships find _ship]]] remoteExec ["addAction", 0, true];
-};
+	[_dummy, ["<t color=""#ff1111"">Ship Control</t>", format ["[0,%1,2] spawn MCC_fnc_LHDspawnMenuInit", _ships find _ship]]] remoteExec ["addAction", 0, true];
 	//{_x addCuratorEditableObjects [[_dummy],false]} forEach allCurators;
 };
 

@@ -28,11 +28,11 @@ if !mcc_isloading then
 				if (MCC_capture_state) then	
 				{
 					MCC_capture_var = MCC_capture_var 
-						+ FORMAT ["HW_arti_types set [count HW_arti_types,[\"%1\", \"%2\"]];",_shellName, shelltype]
-						+ 		  "publicVariable \"HW_arti_types\";"
+						+ FORMAT ["HW_arti_types set [count HW_arti_types,[""%1"", ""%2""]];",_shellName, shelltype]
+						+ 		  "publicVariable ""HW_arti_types"";"
 						+ FORMAT ["HW_arti_number_shells_per_hour = HW_arti_number_shells_per_hour + %1;",nshell]
-						+ 		  "publicVariable \"HW_arti_number_shells_per_hour\";"
-						+ FORMAT ("[2,{[\"MCCNotifications\",[\"%1 %2 shells added\",\"%3data\ammo_icon.paa\",\"\"]] call bis_fnc_showNotification;}] remoteExec [\"MCC_fnc_globalExecute\", true, false];",_shellName,nshell,MCC_path);
+						+ 		  "publicVariable ""HW_arti_number_shells_per_hour"";"
+						+ FORMAT ("[2,{[""MCCNotifications"",[""%1 %2 shells added"",""%3data\\ammo_icon.paa"",""""]] call bis_fnc_showNotification;}] remoteExec [""MCC_fnc_globalExecute"", true, false];",_shellName,nshell,MCC_path);
 				} 
 				else 
 				{
