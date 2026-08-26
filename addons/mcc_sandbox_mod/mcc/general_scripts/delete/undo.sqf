@@ -23,7 +23,7 @@
 			
 			MCC_lastSpawn = MCC_lastSpawn select [0, (count MCC_lastSpawn)-1]; 
 		};
-	}] remoteExec ["MCC_fnc_globalExecute", 0, true];
+	}] remoteExec ["MCC_fnc_globalExecute", 0, false];
 	
  
  

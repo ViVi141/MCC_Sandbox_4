@@ -28,7 +28,7 @@ _objectivesMarkers = missionNamespace getVariable ["MCC_MWObjectiveMarkers",[]];
 _ambient = if (_isCQB) then {"houses + meadow "} else {"meadow + houses + hills "};
 
 //if it is the first time then find objective close to the center
-while {(count _availablePos) == 0 && (_range < (_maxObjectivesDistance*3)) && (_attempts < _maxAttempts)} do {
+while {(count _availablePos) == 0 && (_range <= _maxObjectivesDistance) && (_attempts < _maxAttempts)} do {
 
 	_availablePos = selectBestPlaces [_missionCenter, _range, _ambient, 10, 5];
 
@@ -48,17 +48,16 @@ while {(count _availablePos) == 0 && (_range < (_maxObjectivesDistance*3)) && (_
 	sleep 0.1;
 };
 
-// 如果仍然找不到位置，使用备用方案
+// 如果仍然找不到位置，使用备用方案（不超过传入的最大距离）
 if ((count _availablePos) == 0) then {
-	// 使用更宽松的条件重新搜索
-	_range = 200;
-	while {(count _availablePos) == 0 && (_range < 2000)} do {
+	_range = (_maxObjectivesDistance * 0.25) max 50;
+	while {(count _availablePos) == 0 && (_range <= _maxObjectivesDistance)} do {
 		_availablePos = selectBestPlaces [_missionCenter, _range, "meadow", 5, 3];
 		if (count _availablePos > 0) then {
 			_availablePos = (_availablePos select 0) select 0;
 			_availablePos set [2,0];
 		};
-		_range = _range + 200;
+		_range = _range + 100;
 		sleep 0.1;
 	};
 };
@@ -70,8 +69,7 @@ if (missionNamespace getVariable ["MCC_debug",false]) then {
 
 if (count _availablePos == 0) exitWith {
 	diag_log "MCC: Mission Wizard Error: No mission objective's postion found, make a bigger zone";
-	// 使用备用位置
-	_availablePos = [_missionCenter, 0, 1000, 10, 0, 0.3, 0] call BIS_fnc_findSafePos;
+	_availablePos = [_missionCenter, 0, _maxObjectivesDistance, 10, 0, 0.3, 0] call BIS_fnc_findSafePos;
 	if ((count _availablePos) == 0) then {
 		_availablePos = _missionCenter;
 	};

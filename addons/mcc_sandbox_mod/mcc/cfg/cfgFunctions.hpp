@@ -17,6 +17,10 @@ class general
     #endif
 
     class login {};
+    class isAuthorizedSender {description = "STR_MCC_GENERAL_ISAUTHORIZEDSENDER";};
+    class selectGroupLeader {description = "STR_MCC_GENERAL_SELECTGROUPLEADER";};
+    class broadcastWoosh {description = "STR_MCC_GENERAL_BROADCASTWOOSH";};
+    class FPS {description = "STR_MCC_GENERAL_FPS";};
     class activateAddons {preInit = 1; description = "STR_MCC_GENERAL_ACTIVATEADDONS";};
     class gear {preInit = 1; description = "STR_MCC_GENERAL_GEAR";};
 

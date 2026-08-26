@@ -22,7 +22,8 @@ _objType = switch (_this select 5) do
 				case "Destroy Vehicle": {["tanks","air"] call BIS_fnc_selectRandom};
 				case "Destroy AA": {"aa"};
 				case "Destroy Artillery": {"artillery"};
-				case "Destroy Weapon Cahce": {"cache"};
+				case "Destroy Weapon Cahce";
+				case "Destroy Weapon Cache": {"cache"};
 				case "Destroy Fuel Depot": {"fuel"};
 				case "Destroy Radar/Radio": {if (_campaignMission) then {"radio"} else {["radar","radio"] call BIS_fnc_selectRandom}};
 			};

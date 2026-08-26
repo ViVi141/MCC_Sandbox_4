@@ -99,7 +99,11 @@ _fnc_iedHandle = {
 	//delete IED marker
 	_dummyMarker = _dummy getvariable "iedMarkerName";
 	if (!isnil "_dummyMarker") then {
-		[2,compile format ["deletemarkerlocal '%1';",_dummyMarker]] remoteExec ["MCC_fnc_globalExecute",0];
+		if (_dummyMarker isEqualType "") then {
+			if (_dummyMarker != "") then {
+				_dummyMarker remoteExec ["deleteMarkerLocal", 0];
+			};
+		};
 	};
 
 	_armed 		= _dummy getvariable ["armed",false];

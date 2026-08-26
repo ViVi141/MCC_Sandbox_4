@@ -69,7 +69,7 @@ if (!isnull MCC_Prev_Group) then
 	{
 		if (isMultiplayer) then
 		{
-			[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group player), netID player]] remoteExec ["MCC_fnc_globalExecute", 0, false];
+			[netID (group player), netID player] remoteExec ["MCC_fnc_selectGroupLeader", 2, false];
 		}
 		else
 		{
@@ -99,7 +99,7 @@ if (MCC_Prev_HijackedGroupIsLeader) then
 {
 	if (isMultiplayer) then
 	{
-		[2, compile format ["(groupFromNetID '%1') selectLeader objectFromNetId '%2'",netID (group _preUnit), netID _preUnit]] remoteExec ["MCC_fnc_globalExecute", _preUnit, false];
+		[netID (group _preUnit), netID _preUnit] remoteExec ["MCC_fnc_selectGroupLeader", 2, false];
 	}
 	else
 	{

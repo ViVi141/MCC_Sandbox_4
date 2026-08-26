@@ -47,7 +47,7 @@ _isRoadblocks 		= [false,true,([true,false] call BIS_fnc_selectRandom)] select (
 _armor 				= [false,true,([true,false] call BIS_fnc_selectRandom)] select (profileNamespace getVariable ["MCC_MWArmorIndex",2]);
 _vehicles 			= [false,true,([true,false] call BIS_fnc_selectRandom)] select (profileNamespace getVariable ["MCC_MWVehiclesIndex",2]);
 _animals 			= [false,true,([true,false] call BIS_fnc_selectRandom)] select (profileNamespace getVariable ["MCC_MWAnimalsIndex",2]);
-_wholeMap 			= [true,false] select (profileNamespace getVariable ["MCC_MWAreaIndex",0]);
+_wholeMap 			= [true,false] select (profileNamespace getVariable ["MCC_MWAreaIndex",1]);
 _markers 			= [false,true] select (profileNamespace getVariable ["MCC_MWDebugIndex",0]);
 _preciseMarkers 	= [true,false] select (profileNamespace getVariable ["MCC_MWPreciseMarkersIndex",0]);
 

@@ -50,7 +50,7 @@
 //================================================================================================================================================================*/
 #define	MWinitMissionMusic	["LeadTrack01a_F","LeadTrack02_F","LeadTrack03_F","LeadTrack04a_F","LeadTrack05_F","LeadTrack06_F","AmbientTrack03_F","BackgroundTrack03_F","BackgroundTrack01_F","BackgroundTrack01a_F","BackgroundTrack02_F","LeadTrack01_F_EPA","LeadTrack02_F_EPA","EventTrack01_F_EPA","EventTrack01a_F_EPA","EventTrack03_F_EPA"]
 
-private ["_missionCenter","_missionCenterTrigger","_totalEnemyUnits","_isCQB","_objType","_objArray","_minObjectivesDistance","_maxObjectivesDistance","_objPos","_timeStart","_enemySide","_enemyfaction","_sidePlayer","_factionPlayer","_obj1","_obj2","_obj3","_pos","_center","_wholeMap","_armor","_vehicles","_stealth","_roadPositions","_script_handler","_isIED","_isAS","_isSB","_spawnbehavior","_isRoadblocks","_objectives","_isCiv","_weatherChange","_preciseMarkers","_reinforcement","_artillery","_civFaction","_playMusic","_animals","_markerName","_missionMaker","_campaignMission","_markers"];
+private ["_missionCenter","_missionCenterTrigger","_totalEnemyUnits","_isCQB","_objType","_objArray","_minObjectivesDistance","_maxObjectivesDistance","_objPos","_timeStart","_enemySide","_enemyfaction","_sidePlayer","_factionPlayer","_obj1","_obj2","_obj3","_pos","_center","_wholeMap","_armor","_vehicles","_stealth","_roadPositions","_script_handler","_isIED","_isAS","_isSB","_spawnbehavior","_isRoadblocks","_objectives","_isCiv","_weatherChange","_preciseMarkers","_reinforcement","_artillery","_civFaction","_playMusic","_animals","_markerName","_missionMaker","_campaignMission","_markers","_limitToZone","_objSearchMax","_opAreaRadius"];
 
 private ["_arrayGeneral","_arraySides","_arrayObjectives","_arrayDefines","_arrayAssets"];
 
@@ -69,6 +69,8 @@ if (count _arrayGeneral < 7) exitWith {
 };
 
 _wholeMap 				= _arrayGeneral param [0, false, [true]];
+_limitToZone			= false;
+_opAreaRadius			= 0;
 _totalEnemyUnits 		= _arrayGeneral param [1, 20, [0]];
 _minObjectivesDistance 	= _arrayGeneral param [2, 100, [0]];
 _maxObjectivesDistance	= _arrayGeneral param [3, 500, [0]];
@@ -94,6 +96,29 @@ _arrayObjectives	= _this param [2, [], [[]]];
 _obj1 					= _arrayObjectives param [0, "None", [""]];
 _obj2 					= _arrayObjectives param [1, "None", [""]];
 _obj3 					= _arrayObjectives param [2, "None", [""]];
+
+private _mwCanonize = {
+	params ["_t"];
+	if (_t == "Destroy Weapon Cahce") exitWith { "Destroy Weapon Cache" };
+
+	private _keys = missionNamespace getVariable ["MCC_MWMissionType", []];
+	if (_t in _keys) exitWith { _t };
+
+	private _locs = missionNamespace getVariable ["MCC_MWMissionTypeLoc", []];
+	private _resolved = _t;
+	{
+		if (_foreachindex < count _keys) then {
+			if (_t == localize _x) then {
+				_resolved = _keys select _foreachindex;
+			};
+		};
+	} forEach _locs;
+	_resolved
+};
+
+_obj1 = [_obj1] call _mwCanonize;
+_obj2 = [_obj2] call _mwCanonize;
+_obj3 = [_obj3] call _mwCanonize;
 
 _arrayDefines		= _this param [3, [], [[]]];
 if (count _arrayDefines < 10) exitWith {
@@ -126,25 +151,25 @@ if (_enemyfaction == "") then {_enemyfaction = "OPF_F"};
 // Initialize marker name early so it can be used in error handling
 _markerName = "";
 
-_objArray			 	= missionNamespace getVariable ["MCC_MWMissionType",[localize "STR_MCC_MW_MISSION_SECURE_HVT",
-																			   localize "STR_MCC_MW_MISSION_KILL_HVT",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_VEHICLE",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_AA",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_ARTILLERY",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_WEAPON_CACHE",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_FUEL_DEPOT",
-																			   localize "STR_MCC_MW_MISSION_DESTROY_RADAR_RADIO",
-																			   localize "STR_MCC_MW_MISSION_ACQUIRE_INTEL",
-																			   localize "STR_MCC_MW_MISSION_DOWNLOAD_INTEL",
-																			   localize "STR_MCC_MW_MISSION_CAPTURE_AREA",
-																			   localize "STR_MCC_MW_MISSION_DISARM_IED",
-																			   localize "STR_MCC_MW_MISSION_LOGISTICS"
+_objArray			 	= missionNamespace getVariable ["MCC_MWMissionType",["Secure HVT",
+																			   "Kill HVT",
+																			   "Destroy Vehicle",
+																			   "Destroy AA",
+																			   "Destroy Artillery",
+																			   "Destroy Weapon Cache",
+																			   "Destroy Fuel Depot",
+																			   "Destroy Radar/Radio",
+																			   "Acquire Intel",
+																			   "Download Intel",
+																			   "Capture Area",
+																			   "Disarm IED",
+																			   "Logistics"
 																			  ]];
 
 //Remove random and none
 {
 	_objArray = _objArray - [_x];
-} forEach [localize "STR_MCC_MW_MISSION_NONE", localize "STR_MCC_MW_MISSION_RANDOM"];
+} forEach ["None", "Random"];
 
 //Lets find the mission maker owner and make sure he'll get the zone markers too.
 private ["_missionMaker"];
@@ -188,7 +213,9 @@ if (typeName _wholeMap == typeName true ) then {
 			_mapSize = getnumber (_worldPath >> "mapSize");
 		if (_mapSize == 0) exitWith {
 			diag_log FORMAT ["MCC: Mission Wizard Error: mapSize param not defined for '%1'",worldname];
-			["mapSize param not defined for '%1'",worldname] remoteExec ["bis_fnc_halt", MCC_fnc_halt, false];
+			if (!isNil "_missionMaker") then {
+				[format ["mapSize param not defined for '%1'", worldname]] remoteExec ["MCC_fnc_halt", _missionMaker, false];
+			};
 			[[]] call MCC_MWCleanup;
 		};
 
@@ -235,6 +262,7 @@ if (typeName _wholeMap == typeName true ) then {
 			};
 			[[]] call MCC_MWCleanup;
 		};
+		_opAreaRadius = _maxObjectivesDistance * 2.5;
 	} else {
 		//--------------------------------------------------------------Create a ceneter trigger --------------------------------------------------------------------------
 		if (count mcc_zone_markposition == 0) exitWith {
@@ -248,10 +276,22 @@ if (typeName _wholeMap == typeName true ) then {
 		MWMissionArea = createtrigger ["emptydetector",mcc_zone_markposition];
 		MWMissionArea settriggerarea [mcc_zone_marker_X,mcc_zone_marker_Y,0,true];
 		MCC_worldArea = MWMissionArea;
+		_limitToZone = true;
 
 		private ["_markerPos","_radius"];
 		_radius = (mcc_zone_marker_X + mcc_zone_marker_Y)/2;
+		if (_radius < 100) then {
+			_radius = 100;
+		};
 		_markerPos = getpos MWMissionArea;
+
+		// Keep objectives / populate radius inside the user zone
+		if (_maxObjectivesDistance > _radius) then {
+			_maxObjectivesDistance = _radius;
+		};
+		if (_minObjectivesDistance > _maxObjectivesDistance) then {
+			_minObjectivesDistance = _maxObjectivesDistance * 0.5;
+		};
 
 		//Let's map the area
 		MCC_MWcityLocations     = [_markerPos,_radius,"city"] call MCC_fnc_MWbuildLocations;
@@ -297,6 +337,7 @@ if (typeName _wholeMap == typeName true ) then {
 			};
 			[[]] call MCC_MWCleanup;
 		};
+		_opAreaRadius = _radius;
 	};
 } else {
 	if (typeName _wholeMap == typeName []) then {
@@ -319,11 +360,15 @@ if (typeName _wholeMap == typeName true ) then {
 
 if (isNil "_missionCenter") exitWith {};
 
+if (_opAreaRadius <= 0) then {
+	_opAreaRadius = _maxObjectivesDistance * 2.5;
+};
+
 //Init the MW groups configs
 [_enemyfaction] call MCC_fnc_createConfigs;
 
 _missionCenterTrigger = createtrigger ["emptydetector",_missionCenter];
-_missionCenterTrigger settriggerarea [_maxObjectivesDistance*2.5,_maxObjectivesDistance*2.5,0,false];
+_missionCenterTrigger settriggerarea [_opAreaRadius,_opAreaRadius,0,false];
 MCC_MWmissionsCenter set [count MCC_MWmissionsCenter, _missionCenterTrigger];
 publicvariable "MCC_MWmissionsCenter";
 
@@ -332,7 +377,7 @@ diag_log format ["MCC Mission Wizard center = %1", _missionCenter];
 //Create the marker
 _markerName =  FORMAT ["MCCMW_operationMarker_%1",["MCCMW_operationMarker",1] call bis_fnc_counter];
 if (!_campaignMission) then {
-	[1, "ColorRed",[_maxObjectivesDistance*3,_maxObjectivesDistance*3], "ELLIPSE", "Border", "Empty",_markerName, _missionCenter] call MCC_fnc_makeMarker;
+	[1, "ColorRed",[_opAreaRadius,_opAreaRadius], "ELLIPSE", "Border", "Empty",_markerName, _missionCenter] call MCC_fnc_makeMarker;
 };
 
 //-------------------------------------Mission Name ------------------------------
@@ -448,25 +493,30 @@ _objectives = [];
 
 		//Random Mission
 		if (_objType == "Random") then {_objType = _objArray select (floor random count _objArray)};
+		_objType = [_objType] call _mwCanonize;
 
 
 		_objPos = [];
 		_timeStart = time;
 		_maxAttempts = 50;
 		_attempts = 0;
-		
+		_objSearchMax = _maxObjectivesDistance;
+		if (!_limitToZone) then {
+			_objSearchMax = _maxObjectivesDistance * 3;
+		};
+
 		while {(count _objPos == 0) && (time < _timeStart + 10) && (_attempts < _maxAttempts)} do {
-			_objPos = [_missionCenterTrigger,_isCQB, _minObjectivesDistance, _maxObjectivesDistance] call MCC_fnc_MWfindObjectivePos;
+			_objPos = [_missionCenter,_isCQB, _minObjectivesDistance, _maxObjectivesDistance] call MCC_fnc_MWfindObjectivePos;
 			if (isNil "_objPos") then {_objPos = []};
 			if (count _objPos < 3) then {_objPos = []};
 			_attempts = _attempts + 1;
 			sleep 0.1;
 		};
 
-		//Lets try again with relaxed conditions
+		//Lets try again with relaxed conditions (still inside the user zone when Current zone is selected)
 		if (count _objPos == 0 || count _objPos < 3) then {
 			_isCQB = false;
-			_objPos = [_missionCenter,_isCQB,0, _maxObjectivesDistance*3] call MCC_fnc_MWfindObjectivePos;
+			_objPos = [_missionCenter,_isCQB,0, _objSearchMax] call MCC_fnc_MWfindObjectivePos;
 			if (isNil "_objPos") then {_objPos = []};
 			if (count _objPos < 3) then {_objPos = []};
 		};
@@ -477,7 +527,7 @@ _objectives = [];
 			_objPos = nil;
 		};
 
-		if (!isNil "_objPos" && count _objPos >= 3 && ((_objPos distance2D _missionCenter) < (_maxObjectivesDistance*3))) then {
+		if (!isNil "_objPos" && count _objPos >= 3 && ((_objPos distance2D _missionCenter) < _objSearchMax)) then {
 
 			if (["Destroy", _objType] call BIS_fnc_inString) then {
 				[_objPos, _isCQB, _enemySide, _enemyfaction,_preciseMarkers,_objType,_campaignMission,_sidePlayer] remoteExec ["MCC_fnc_MWObjectiveDestroy",2];
@@ -594,6 +644,10 @@ _objectives = [];
 						//prevent spawning garrison in houses
 						_isCQB = false;
 					};
+
+					default {
+						diag_log format ["MCC: Mission Wizard Error: Unknown objective type '%1'", _objType];
+					};
 				};
 			};
 
@@ -636,7 +690,11 @@ _objectives = [];
 
 			//Lets create a zone
 			_zoneNumber = (count (missionNamespace getVariable ["MCC_zones_numbers",[]])) + 1;
-			_script_handler = [_zoneNumber,_objPos,_maxObjectivesDistance*(if (_campaignMission) then {1} else {2})] call MCC_fnc_MWUpdateZone;
+			_zoneSize = _maxObjectivesDistance;
+			if (!_limitToZone && !_campaignMission) then {
+				_zoneSize = _maxObjectivesDistance * 2;
+			};
+			_script_handler = [_zoneNumber,_objPos,_zoneSize] call MCC_fnc_MWUpdateZone;
 			waituntil {_script_handler};
 
 			//Spawn some Infantry groups

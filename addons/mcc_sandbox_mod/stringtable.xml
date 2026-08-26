@@ -5562,6 +5562,38 @@
             </Key>
         </Container>
         <Container name="item">
+            <Key ID="STR_MCC_GENERAL_ISAUTHORIZEDSENDER">
+                <Original>Is authorized sender</Original>
+                <English>Is authorized sender</English>
+                <Chinesesimp>是否为授权发送者</Chinesesimp>
+                <Chinese>是否為授權發送者</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_SELECTGROUPLEADER">
+                <Original>Select group leader</Original>
+                <English>Select group leader</English>
+                <Chinesesimp>选择组长</Chinesesimp>
+                <Chinese>選擇組長</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_BROADCASTWOOSH">
+                <Original>Broadcast woosh</Original>
+                <English>Broadcast woosh</English>
+                <Chinesesimp>广播提示音</Chinesesimp>
+                <Chinese>廣播提示音</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
+            <Key ID="STR_MCC_GENERAL_FPS">
+                <Original>FPS overlay</Original>
+                <English>FPS overlay</English>
+                <Chinesesimp>FPS 叠加层</Chinesesimp>
+                <Chinese>FPS 疊加層</Chinese>
+            </Key>
+        </Container>
+        <Container name="item">
             <Key ID="STR_MCC_GENERAL_GEAR">
                 <Original>Gear</Original>
                 <English>Gear</English>

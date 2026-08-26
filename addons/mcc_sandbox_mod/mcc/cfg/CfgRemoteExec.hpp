@@ -10,7 +10,9 @@ class MCC_fnc_bdWatch {allowedTargets=0;};
 class MCC_fnc_bdStart {allowedTargets=0;};
 class MCC_fnc_bdCreateManual {allowedTargets=0;};
 //General
-class MCC_fnc_login {allowedTargets=0;};
+class MCC_fnc_login {allowedTargets=2;};
+class MCC_fnc_selectGroupLeader {allowedTargets=0;};
+class MCC_fnc_broadcastWoosh {allowedTargets=0;};
 class MCC_fnc_activateAddons {allowedTargets=0;};
 class MCC_fnc_gear	{allowedTargets=0;};
 class MCC_fnc_mobileRespawn	{allowedTargets=0;};

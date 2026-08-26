@@ -514,20 +514,35 @@ if (isNil "MCC_MWArtillery") then {MCC_MWArtillery = ["B_MBT_01_arty_F","B_MBT_0
 
 
 MCC_MWDifficulty = ["Easy","Medium","Hard"];
-MCC_MWMissionType = [localize "STR_MCC_MW_MISSION_NONE",
-                     localize "STR_MCC_MW_MISSION_RANDOM",
-					 localize "STR_MCC_MW_MISSION_SECURE_HVT",
-					 localize "STR_MCC_MW_MISSION_KILL_HVT",
-					 localize "STR_MCC_MW_MISSION_DESTROY_VEHICLE",
-					 localize "STR_MCC_MW_MISSION_DESTROY_AA",
-					 localize "STR_MCC_MW_MISSION_DESTROY_ARTILLERY",
-					 localize "STR_MCC_MW_MISSION_DESTROY_WEAPON_CACHE",
-					 localize "STR_MCC_MW_MISSION_DESTROY_FUEL_DEPOT",
-					 localize "STR_MCC_MW_MISSION_DESTROY_RADAR_RADIO",
-					 localize "STR_MCC_MW_MISSION_ACQUIRE_INTEL",
-					 localize "STR_MCC_MW_MISSION_DOWNLOAD_INTEL",
-					 localize "STR_MCC_MW_MISSION_CAPTURE_AREA",
-					 localize "STR_MCC_MW_MISSION_DISARM_IED"//,localize "STR_MCC_MW_MISSION_LOGISTICS"
+MCC_MWMissionType = ["None",
+                     "Random",
+					 "Secure HVT",
+					 "Kill HVT",
+					 "Destroy Vehicle",
+					 "Destroy AA",
+					 "Destroy Artillery",
+					 "Destroy Weapon Cache",
+					 "Destroy Fuel Depot",
+					 "Destroy Radar/Radio",
+					 "Acquire Intel",
+					 "Download Intel",
+					 "Capture Area",
+					 "Disarm IED"
+					 ];
+MCC_MWMissionTypeLoc = ["STR_MCC_MW_MISSION_NONE",
+                     "STR_MCC_MW_MISSION_RANDOM",
+					 "STR_MCC_MW_MISSION_SECURE_HVT",
+					 "STR_MCC_MW_MISSION_KILL_HVT",
+					 "STR_MCC_MW_MISSION_DESTROY_VEHICLE",
+					 "STR_MCC_MW_MISSION_DESTROY_AA",
+					 "STR_MCC_MW_MISSION_DESTROY_ARTILLERY",
+					 "STR_MCC_MW_MISSION_DESTROY_WEAPON_CACHE",
+					 "STR_MCC_MW_MISSION_DESTROY_FUEL_DEPOT",
+					 "STR_MCC_MW_MISSION_DESTROY_RADAR_RADIO",
+					 "STR_MCC_MW_MISSION_ACQUIRE_INTEL",
+					 "STR_MCC_MW_MISSION_DOWNLOAD_INTEL",
+					 "STR_MCC_MW_MISSION_CAPTURE_AREA",
+					 "STR_MCC_MW_MISSION_DISARM_IED"
 					 ];
 
 MCC_MWMissionTypeIcons = ["",
@@ -769,9 +784,8 @@ if ( isServer ) then {
 
 		if ((MCC_server getVariable [format ["CP_commander%1",side player],""]) == _uid) then
 		{
-			_str = "<t size='1' font = 'puristaLight' color='#FFFFFF'>" + format ["%1 is no longer the commander",_name] + "</t>";
-			_command = format ['["MCC_woosh",true] spawn BIS_fnc_playSound; ["%1",0,0.2,5,1,0.0] spawn bis_fnc_dynamictext;',_str];
-			[2,compile _command] remoteExec ["MCC_fnc_globalExecute", true, false];
+			_str = format ["%1 is no longer the commander", _name];
+			[_str] remoteExec ["MCC_fnc_broadcastWoosh", 0, false];
 
 			MCC_server setVariable [format ["CP_commander%1",(player getVariable ["CP_side",  playerside])],"", true];
 		};
@@ -786,7 +800,7 @@ if ( isServer ) then {
 	_dummyObject setVariable ["mccIgnore",true];
 	_dummyObject setpos [-9999, -9999, -1];
 	_name = "MCC_respawnAnchor";
-	call compile (_name + " = _dummy");
+	call compile (_name + " = _dummyObject");
 	publicVariable _name;
 
 	//======================================= Mission EH ===========================================================================================================

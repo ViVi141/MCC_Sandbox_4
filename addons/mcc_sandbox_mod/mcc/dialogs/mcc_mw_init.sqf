@@ -99,8 +99,13 @@ _comboBox ctrlSetChecked [(profileNamespace getVariable ["MCC_MWDifficultyIndex"
 //Objective 1
 _comboBox = _mccdialog displayCtrl MCC_MWObjective1IDC;
 lbClear _comboBox;
+private _mwTypeLoc = missionNamespace getVariable ["MCC_MWMissionTypeLoc",[]];
 {
-	_index = _comboBox lbAdd _x;
+	private _label = _x;
+	if (_foreachindex < count _mwTypeLoc) then {
+		_label = localize (_mwTypeLoc select _foreachindex);
+	};
+	_index = _comboBox lbAdd _label;
 	_comboBox lbSetPictureRight [_index,(_missionTypeIcons) select _foreachindex]
 } foreach MCC_MWMissionType;
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWObjective1Index",0]);
@@ -109,7 +114,11 @@ _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWObjective1Index",0])
 _comboBox = _mccdialog displayCtrl MCC_MWObjective2IDC;
 lbClear _comboBox;
 {
-	_index = _comboBox lbAdd _x;
+	private _label = _x;
+	if (_foreachindex < count _mwTypeLoc) then {
+		_label = localize (_mwTypeLoc select _foreachindex);
+	};
+	_index = _comboBox lbAdd _label;
 	_comboBox lbSetPictureRight [_index,(_missionTypeIcons) select _foreachindex]
 } foreach MCC_MWMissionType;
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWObjective2Index",0]);
@@ -119,7 +128,11 @@ _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWObjective2Index",0])
 _comboBox = _mccdialog displayCtrl MCC_MWObjective3IDC;
 lbClear _comboBox;
 {
-	_index = _comboBox lbAdd _x;
+	private _label = _x;
+	if (_foreachindex < count _mwTypeLoc) then {
+		_label = localize (_mwTypeLoc select _foreachindex);
+	};
+	_index = _comboBox lbAdd _label;
 	_comboBox lbSetPictureRight [_index,(_missionTypeIcons) select _foreachindex]
 } foreach MCC_MWMissionType;
 _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWObjective3Index",0]);
@@ -185,4 +198,4 @@ _comboBox lbSetCurSel (profileNamespace getVariable ["MCC_MWWeatherIndex",1]);
 
 //Mission Area
 _comboBox = _mccdialog displayCtrl MCC_MCC_MWAreaComboIDC;
-_comboBox ctrlSetChecked [(profileNamespace getVariable ["MCC_MWAreaIndex",0]),true];
+_comboBox ctrlSetChecked [(profileNamespace getVariable ["MCC_MWAreaIndex",1]),true];

@@ -79,31 +79,35 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 		if (((_x distance _pos) < _killRadius) && (_random > 1))then
 		{
 			_x setdamage 0.7;
-			[2,compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['wheel_2_1_steering', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['motor', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass1', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass2', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass3', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass4', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass5', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['glass6', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
+			[_x, ["wheel_1_1_steering", 1]] remoteExec ["setHit", _x];
+			[_x, ["wheel_2_1_steering", 1]] remoteExec ["setHit", _x];
+			[_x, ["motor", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass1", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass2", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass3", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass4", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass5", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass6", 1]] remoteExec ["setHit", _x];
 			if (isServer) then {_x spawn _burningEffects};
-			sleep 15;
-			_x setdamage 1;
+			_x spawn {
+				sleep 15;
+				if (!isNull _this) then {
+					_this setdamage 1;
+				};
+			};
 		}
 		else
 		{
 			_x setdamage 0.4;
-			[2,compile format ["objectFromNetId '%1' setHit ['wheel_1_1_steering', 1]", netid _x]] remoteExec ["MCC_fnc_globalExecute", _x, false];
-			[2,compile format ["objectFromNetId '%1'  setHit ['wheel_2_1_steering', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['motor', 0.7]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass1', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass2', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass3', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass4', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass5', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['glass6', 1]", _x]] remoteExec ["MCC_fnc_globalExecute", netid _x, false];
+			[_x, ["wheel_1_1_steering", 1]] remoteExec ["setHit", _x];
+			[_x, ["wheel_2_1_steering", 1]] remoteExec ["setHit", _x];
+			[_x, ["motor", 0.7]] remoteExec ["setHit", _x];
+			[_x, ["glass1", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass2", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass3", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass4", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass5", 1]] remoteExec ["setHit", _x];
+			[_x, ["glass6", 1]] remoteExec ["setHit", _x];
 		}
 	};
 
@@ -112,12 +116,16 @@ _effected = +_effected + (vehicles inAreaArray [_pos, _hitRadius*2, _hitRadius*2
 		if (((_x distance _pos) < _killRadius) && (_random > 1))then
 		{
 			_x setdamage 0.7;
-			[2,compile format ["objectFromNetId '%1' setHit ['Ltrack', 1]",netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['Rtrack', 1]",netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
-			[2,compile format ["objectFromNetId '%1' setHit ['motor', 1]",netid _x]] remoteExec ["MCC_fnc_globalExecute", 0, false];
+			[_x, ["Ltrack", 1]] remoteExec ["setHit", _x];
+			[_x, ["Rtrack", 1]] remoteExec ["setHit", _x];
+			[_x, ["motor", 1]] remoteExec ["setHit", _x];
 			if (isServer) then {_x spawn _burningEffects};
-			sleep 15;
-			_x setdamage 1;
+			_x spawn {
+				sleep 15;
+				if (!isNull _this) then {
+					_this setdamage 1;
+				};
+			};
 		};
 	};
 } forEach _effected;

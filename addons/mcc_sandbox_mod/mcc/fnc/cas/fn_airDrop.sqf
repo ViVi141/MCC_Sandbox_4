@@ -178,10 +178,10 @@ if (tolower _planeType in ["west","east","guer","civ","logic"]) then  {
 			missionNamespace setVariable ["MCC_ACConsoleUp",objNull];
 			publicVariable "MCC_ACConsoleUp";
 
-			[2,compile format ['["MCCNotifications",["AC-130 Left the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
+			["MCCNotifications",["AC-130 Left the scene",format ["%1data\AC130_icon.paa",MCC_path],""]] remoteExec ["BIS_fnc_showNotification", playerSide, false];
 		} else {
 
-			[2,compile format ['["MCCNotifications",["AC-130 Entered the scene","%1data\AC130_icon.paa",""]] call bis_fnc_showNotification;',MCC_path]] remoteExec ["MCC_fnc_globalExecute", playerSide, false];
+			["MCCNotifications",["AC-130 Entered the scene",format ["%1data\AC130_icon.paa",MCC_path],""]] remoteExec ["BIS_fnc_showNotification", playerSide, false];
 			_pos set [2,(_pos select 2)+400];
 
 			//register AC-130
