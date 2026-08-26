@@ -16,7 +16,7 @@ class CfgPatches
 		author = "shay_gman";
 		name = "MCC Sandbox";
 		versionDesc = "MCC Sandbox 4 Community Edition";
-		version = "2.0.1";
+		version = "2.0.2";
 	};
 
 	class mcc_sandbox_curatorExp

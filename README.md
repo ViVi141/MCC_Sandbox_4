@@ -1,12 +1,12 @@
 
-# MCC Sandbox 4 社区维护版 v2.0.1 | MCC Sandbox 4 Community Edition v2.0.1
+# MCC Sandbox 4 社区维护版 v2.0.2 | MCC Sandbox 4 Community Edition v2.0.2
 
 [![Steam创意工坊](https://img.shields.io/badge/Steam-Workshop-1b2838?logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
 [![Github](https://img.shields.io/badge/github-ViVi141-brightgreen.svg)](https://github.com/ViVi141/MCC_Sandbox_4)
 [![AGPL-3.0协议](https://img.shields.io/badge/License-AGPLv3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![版本](https://img.shields.io/badge/Version-2.0.1-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
+[![版本](https://img.shields.io/badge/Version-2.0.2-orange.svg)](https://github.com/ViVi141/MCC_Sandbox_4/releases)
 
-> 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.1版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.1)
+> 基于原版MCC Sandbox 4模组的社区维护版本（当前为v2.0.2版本）| Community-maintained fork of original MCC Sandbox 4 mod (Currently v2.0.2)
 
 ---
 
@@ -18,7 +18,7 @@
 - 🛠️ 修复已知问题与崩溃
 - ✨ 添加社区建议的新功能
 - 📦 改善模组部署体验
-- 🚀 **v2.0.1重大更新**：本地化支持与稳定性修复
+- 🚀 **v2.0.2**：任务生成器区域生成、中文目标类型，以及远程执行鉴权
 
 **English Version:**  
 The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/?id=338988835) mod has been unmaintained since 2020. The original is released under **GPLv3**; this repo's LICENSE file is currently **AGPL-3.0** (license change should be reviewed for compliance). We created this community edition to:
@@ -27,7 +27,7 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - 🛠️ Fix known issues and crashes
 - ✨ Implement community-requested features
 - 📦 Improve mod deployment experience
-- 🚀 **v2.0.1 Major Update**: Localization support and stability fixes
+- 🚀 **v2.0.2**: Mission Wizard zone spawn, Chinese objective types, and remoteExec auth
 
 ### 🎯 v2.0.1 更新亮点 | v2.0.1 Update Highlights
 
@@ -59,7 +59,7 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 - ❌ 性能优化系统已移除 | Performance optimization system (removed)
 - ✅ 指挥官控制台修复 | Commander console fixes
 - ✅ 全面本地化支持 | Comprehensive localization support
-- ⚠️ **任务生成器（Mission Wizard）暂未正常使用** | **Mission Wizard is currently not functioning properly**
+- ✅ 任务生成器可在当前区域内生成任务 | Mission Wizard can generate missions inside the current zone
 
 ### 🆕 最新重大更新 | Latest Major Updates
 
@@ -101,6 +101,14 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 ---
 
 ## 📋 更新日志 | Changelog
+
+### v2.0.2 (2026-08-27) - 任务生成器与安全修复 | Mission Wizard & Security Fixes
+
+- 任务生成器在选定区域内寻找任务中心，不再落到地图原点/全图中心 | Mission Wizard finds a center inside the selected zone instead of the map origin
+- 中文界面下目标类型可正确创建（内部使用英文键）| Localized objective names now resolve to English keys so tasks spawn
+- 收紧 `globalExecute` / `setVehicleInit` / `login` 的远程执行鉴权 | Gate remoteExec for `globalExecute`, `setVehicleInit`, and `login`
+- 修复重生锚点、IED `setHit`、FPS 注册等 | Fix respawn anchor, IED `setHit`, and FPS registration
+- 任务生成器默认区域改为 Current zone | Default Mission Wizard area is Current zone
 
 ### v2.0.1 (2025-01-XX) - 本地化完善更新 | Localization Enhancement Update
 
@@ -199,8 +207,8 @@ The original [MCC Sandbox 4](https://steamcommunity.com/sharedfiles/filedetails/
 ## 📥 安装指南 | Installation
 
 > ⚠️ **重要提示** | **Important Notice**  
-> - 当前版本为 v2.0.1，任务生成器（Mission Wizard）功能暂未正常使用，我们正在修复中。  
-> - Current version is v2.0.1, Mission Wizard feature is currently not functioning properly and we are working on fixing it.
+> - 当前版本为 v2.0.2。任务生成器请勾选 **Current zone** 才会在你画的区域内生成。  
+> - Current version is v2.0.2. Select **Current zone** in the Mission Wizard to generate inside the drawn area.
 
 ### Steam订阅（推荐）| Steam Subscription (Recommended)
 1. 访问 [Steam创意工坊页面](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971) | Visit the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3439287971)
